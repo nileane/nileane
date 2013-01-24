@@ -1,0 +1,43 @@
+---
+layout: default
+lang: fr
+---
+<time class="top">{{ page.date | date_to_long_string }}</time>
+<article>
+
+{% if page.link %}
+<hgroup>
+	<h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
+</hgroup>
+{% else %}
+<hgroup>
+	<h1>{{ page.title }}</h1>
+</hgroup>
+{% endif %}
+
+<div id="post"{% if page.link %} class=link{% endif %}>
+	{{ content }}
+</div>
+
+<footer>
+    <span class="tags">
+    {% for tag in page.tags %}
+        <a href="/tag/{{ tag }}"><span>#</span>{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+    {% endfor %}
+    </span>
+</footer>
+
+</article>
+
+{%  if page.comments != false %}
+<div class="jskomment" id="comments"></div>
+<script src="/js/jskomment.js"></script>
+
+<noscript>
+    <p>
+        Il semble que vous ayez Javascript de désactivé !
+        Vous pouvez tout de même vous rendre sur <a href="http://talka.tv/comment/list/?url=http://schoewilliam.legtux.org{{ page.url }}">
+        la page de commentaires statique</a> afin de lire les commentaires, ou en poster.
+    </p>
+</noscript>
+{% endif %}

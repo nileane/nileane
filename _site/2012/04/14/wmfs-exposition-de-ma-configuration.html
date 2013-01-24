@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta charset="UTF-8">
+    <title>WMFS2 : ma configuration</title>
+    
+    <meta name="author" content="Schoewilliam &lt;schoewilliam@legtux.org&gt;">
+    <meta content='initial-scale=1.0' name='viewport'>
+
+    <link rel="icon" type="image/png" href="/images/fav.png">
+    
+  </head>
+  
+  <body>
+    <header id="top">
+	<a href="/" id="embleme"></a>
+	<div class="blog">
+	    <nav>
+		<ul>
+	    
+		<li><a href="/archives">archives</a></li>
+	    
+		<li><a href="/flux.xml">flux rss</a></li>
+	    
+		</ul>
+	    </nav>
+	</div>
+	<div class="sec">
+	    <nav>
+		<ul>
+	    
+		<li><a href="/minisch">minisch</a></li>
+	    
+		<li><a href="/apropos">à propos</a></li>
+	    
+		</ul>
+	    </nav>
+	</div>
+</header>
+
+
+    <time class="top">14 avril 2012</time>
+<article>
+
+
+<hgroup>
+	<h1>WMFS2 : ma configuration</h1>
+</hgroup>
+
+
+<div id="post">
+	<p>WMFS, est un tiling window manager très simple à configurer, au point qu&#8217;on n&#8217;ait en général qu&#8217;à personnaliser le schéma de couleurs. Le plus gros du boulot se situera principalement autour des statusbars. On s&#8217;attardera d&#8217;ailleurs sur ces dernières dans la seconde partie de ce billet.</p>
+
+<h2 id='comportement_et_couleurs'>Comportement et couleurs</h2>
+
+<p>WMFS tend davantage vers le <strong>twm manuel</strong>. C&#8217;est-à-dire que son <em>layout</em> (la disposition de son pavage) n&#8217;est pas fixe, et s&#8217;improvise au cours de l&#8217;utilisation. C&#8217;est un concept voilà très différent de celui de Awesome WM (par exemple), qui lui propose un certain nombre de disposition fixes.</p>
+
+<p>On ne jouera pas au guide, le <strong><a href='https://github.com/xorg62/wmfs/wiki'>wiki</a></strong> s&#8217;en charge déjà très bien. En revanche donc, il faudrait savoir que la section <code>[themes]</code>…<code>[/themes]</code> du fichier principal <code>~/.config/wmfsrc</code> permet justement de mettre WMFS à son goût.</p>
+
+<p>Du côté du lexique, <strong>bars</strong> désigne évidemment les barres d&#8217;informations, <code>tags</code> — ici — les boutons de chaque espace de travail, et enfin <code>client</code> désigne une fenêtre.<br />Les options se terminant par <code>_statusline</code> permettent d&#8217;afficher, grâce à <a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'>la syntaxe spécifique</a>, du contenu dans la zone souhaitée. C&#8217;est ainsi, par exemple, qu&#8217;un label « <strong>··· Actif</strong> » apparait sur mes clients qui ont le focus.</p>
+
+<ul>
+<li>Mon fichier wmfsrc est disponible en entier sur <a href='https://github.com/Schoewilliam/configs/blob/master/wmfs/wmfsrc'>mon dépôt git</a>.</li>
+</ul>
+
+<h2 id='statusbars'>Statusbars</h2>
+
+<p>Pour grossir le trait, avec la commande <code>$ wmfs -c status &quot;testbar BLABLA&quot;</code>, « BLABLA » apparaitra dans la zone <em>status</em> de la barre du nom « <em>testbar</em> ». Là où c&#8217;est intéressant, c&#8217;est qu&#8217;on peut donc s&#8217;en servir, pour afficher en temps réel, <strong>le résultat d&#8217;un script conky</strong> :</p>
+<div class='highlight'><pre><code class='bash'><span class='c'>#!/bin/sh  </span>
+conky -c ~/.config/wmfs/scripts/conkyrc_top | <span class='k'>while </span><span class='nb'>true</span>; <span class='nb'>read </span>line; <span class='k'>do </span>wmfs -c status <span class='s2'>&quot;testbar $line&quot;</span>; <span class='k'>done</span> &amp;
+</code></pre>
+</div>
+<p>Évidemment l&#8217;idéal serait de lancer tout cela au démarrage de la session X.</p>
+
+<p>Puisque conky nous permet de gratter facilement les informations dont on a besoin, grâce à ses fonctions, il ne nous manque plus qu&#8217;à y coupler <a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'>la syntaxe</a> :</p>
+<div class='highlight'><pre><code class='bash'>out_to_console yes
+out_to_x no
+background yes
+update_interval 1
+total_run_times 0
+no_buffers yes
+
+TEXT
+^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/clock.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; Uptime:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BDE077; <span class='nv'>$uptime_short</span><span class='o'>]</span><span class='se'>\</span>
+^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
+^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; HDD:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0; <span class='k'>${</span><span class='nv'>fs_used_perc</span><span class='p'> /</span><span class='k'>}</span>% <span class='o'>]</span> ^p<span class='o'>[</span>right;8;10;0;<span class='k'>${</span><span class='nv'>fs_used_perc</span><span class='p'> /</span><span class='k'>}</span>;100;<span class='se'>\#</span>445544;<span class='se'>\#</span>A6D4E0;ckyhdd<span class='o'>](</span>1;spawn;urxvt -e df -h<span class='o'>)</span><span class='se'>\</span>
+^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
+^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/ship.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; Kernel:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>FDA53C; <span class='nv'>$kernel</span><span class='o'>]</span><span class='se'>\</span>
+^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
+^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; IP:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>E8DD9E; <span class='k'>${</span><span class='nv'>addr</span><span class='p'> wlan0</span><span class='k'>}</span><span class='o'>](</span>1;spawn;urxvt -e wicd-curses<span class='o'>)</span><span class='se'>\</span>
+^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
+^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; Volume: <span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0;<span class='k'>${</span><span class='nv'>exec</span><span class='p'> amixer get Master | grep </span><span class='s2'>&quot;Mono: P&quot;</span><span class='p'> | awk </span><span class='s1'>&#39;{print $4}&#39;</span><span class='p'> | grep -oE </span><span class='s2'>&quot;[[:digit:]]{1,}&quot;</span><span class='p'>%</span><span class='k'>}</span> <span class='o'>](</span>1;spawn;urxvt -e alsamixer<span class='o'>)</span>  ^p<span class='o'>[</span>right;8;10;0;<span class='k'>${</span><span class='nv'>exec</span><span class='p'> amixer get Master | grep </span><span class='s2'>&quot;Mono: P&quot;</span><span class='p'> | awk </span><span class='s1'>&#39;{print $4}&#39;</span><span class='p'> | grep -oE </span><span class='s2'>&quot;[[:digit:]]{1,}&quot;</span><span class='k'>}</span>;100;<span class='se'>\#</span>445544;<span class='se'>\#</span>A6D4E0;ckyhdd<span class='o'>](</span>1;spawn;urxvt -e alsamixer<span class='o'>)</span><span class='se'>\</span>
+^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
+^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/clock.png<span class='o'>]</span><span class='se'>\ </span>^s<span class='o'>[</span>right;<span class='se'>\#</span>CCCCCC; <span class='k'>${</span><span class='nv'>time</span><span class='p'> %a %d %b</span><span class='k'>}</span><span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0; <span class='k'>${</span><span class='nv'>time</span><span class='p'> %H:%M</span><span class='k'>}</span>   <span class='o'>]</span><span class='se'>\</span>
+</code></pre>
+</div>
+<p>Voilà qui nous donne magnifiquement :</p>
+
+<p><a href='/images/wmfs/wmfs-status1.png'><img alt='Status Top' class='align' src='/images/wmfs/wmfs-status1.png' /></a></p>
+
+<p>C&#8217;est exact, puisque grâce à cette mystérieuse syntaxe, au-delà d&#8217;afficher des informations ô combien utiles, notre statusbar sera <strong>interactive</strong> aux clics de la souris.</p>
+
+<p><a href='/images/wmfs/wmfs-moc.png'><img alt='MOC intégré à la statusbar de WMFS' class='align' src='/images/wmfs/wmfs-moc.png' /></a></p>
+
+<p>(Dans le cas d&#8217;un script conky :)</p>
+<div class='highlight'><pre><code class='bash'><span class='k'>${</span><span class='nv'>if_running</span><span class='p'> mocp</span><span class='k'>}</span><span class='se'>\</span>
+<span class='k'>${</span><span class='nv'>if_match</span><span class='p'> </span><span class='s2'>&quot;${exec mocp -Q %state}&quot;</span><span class='p'> == </span><span class='s2'>&quot;PLAY&quot;</span><span class='k'>}</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>BDE077;<span class='o'>{</span> <span class='o'>]</span>^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/pause.png<span class='o'>](</span>1;spawn;mocp -G<span class='o'>)</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>BDE077; <span class='o'>}]</span><span class='nv'>$endif</span><span class='se'>\</span>
+<span class='k'>${</span><span class='nv'>if_match</span><span class='p'> </span><span class='s2'>&quot;${exec mocp -Q %state}&quot;</span><span class='p'> == </span><span class='s2'>&quot;PAUSE&quot;</span><span class='k'>}</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>FDA53C;<span class='o'>{</span> <span class='o'>]</span>^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/play.png<span class='o'>](</span>1;spawn;mocp -G<span class='o'>)</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>FDA53C; <span class='o'>}]</span><span class='nv'>$endif</span><span class='se'>\</span>
+<span class='k'>${</span><span class='nv'>if_match</span><span class='p'> </span><span class='s2'>&quot;${exec mocp -Q %state}&quot;</span><span class='p'> == </span><span class='s2'>&quot;STOP&quot;</span><span class='k'>}</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0;<span class='o'>{</span> <span class='o'>]</span>^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/stop.png<span class='o'>](</span>1;spawn;mocp -p<span class='o'>)</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0; <span class='o'>}</span>  <span class='o'>]</span><span class='nv'>$endif</span><span class='se'>\</span>
+<span class='nv'>$endif</span><span class='se'>\</span>
+</code></pre>
+</div>
+<p><strong>Littéralement</strong>; on vérifie si <em>mocp</em> est lancé (<strong>ligne 1</strong>);<br />si MOC est en mode PLAY, afficher l&#8217;image <code>~/.config/wmfs/icons/stat/pause.png</code> — cette même image, lancera la commande <code>mocp -G</code> (<em>toggle play/pause</em>) si elle est cliquée (<strong>ligne 2</strong>);<br />enfin, on réitère pour les actions Pause, et Stop (<strong>lignes 3 et 4</strong>) en changeant les éléments nécessaires.</p>
+
+<ul>
+<li>La totalité de mes conky sur mon <a href='https://github.com/Schoewilliam/configs/tree/master/wmfs/scripts'><strong>dépôt git</strong></a></li>
+</ul>
+
+<p>On terminera sur la fonctionnalité phare de cette syntaxe : les <strong>graphiques</strong>, et <strong>barres de progression</strong>. On n&#8217;a que trois éléments à fournir : les couleurs, la valeur actuelle, et la valeur maximale. Notre cher WMFS se charge du reste.</p>
+<div class='highlight'><pre><code class='bash'>^g<span class='o'>[</span>left;80;10;<span class='k'>${</span><span class='nv'>cpu</span><span class='k'>}</span>;100;<span class='se'>\#</span>333333;<span class='se'>\#</span>FDA53C;ckycpu<span class='o'>](</span>1;spawn;urxvt -e htop<span class='o'>)</span>
+</code></pre>
+</div>
+<p>Sur le modèle <code>^g[{alignement};{largeur};{hauteur};{valeur actuelle};{valeur maximale};{couleur BG};{couleur FG};{ID du graphe}](1;spawn;{commande à lancer au clic})</code>.</p>
+
+<h2 id='capture_finale'>Capture finale</h2>
+
+<p><a href='/images/captures/2012-04-14.png'><img alt='Capture finale' class='align center' src='/images/captures/2012-04-14.png' width='685px' /></a></p>
+
+<p>Puisqu&#8217;il aurait été évidemment un crime abominable, reconnu dans 20 pays occidentaux, de terminer ce petit billet sans même une capture d&#8217;écran.</p>
+</div>
+
+<footer>
+    <span class="tags">
+    
+        <a href="/tag/config"><span>#</span>config</a>, 
+    
+        <a href="/tag/wmfs"><span>#</span>wmfs</a>, 
+    
+        <a href="/tag/tiling"><span>#</span>tiling</a>.
+    
+    </span>
+</footer>
+
+</article>
+
+
+<div class="jskomment" id="comments"></div>
+<script src="/js/jskomment.js"></script>
+
+<noscript>
+    <p>
+        Il semble que vous ayez Javascript de désactivé !
+        Vous pouvez tout de même vous rendre sur <a href="http://talka.tv/comment/list/?url=http://schoewilliam.legtux.org/2012/04/14/wmfs-exposition-de-ma-configuration.html">
+        la page de commentaires statique</a> afin de lire les commentaires, ou en poster.
+    </p>
+</noscript>
+
+
+
+    <footer>
+	<div>
+		<div>
+			Carnets amis : 
+			
+			<a href="http://postblue.info" title="Postblue" target="_blank">Postblue</a>
+			
+			<a href="http://coreight.com" title="Coreight" target="_blank">Coreight</a>
+			
+			<a href="http://identitools.fr" title="Identitools" target="_blank">Identitools</a>
+			
+			<a href="http://id-libre.org/blogigor" title="BlogiGor" target="_blank">BlogiGor</a>
+			
+			<a href="http://tetedulinuxien.fr" title="Dans la tête du Linuxien" target="_blank">Dans la tête du Linuxien</a>
+			
+			<a href="http://septimochimaera.kegtux.org" title="Septimo Chimæra" target="_blank">Septimo Chimæra</a>
+			
+			<a href="http://fabienwang.kegtux.org" title="Fabienwang" target="_blank">Fabienwang</a>
+			
+		</div>
+		<div>Liens : 
+			
+			<a href="http://legtux.org" title="Legtux" target="_blank">Legtux</a>
+			
+			<a href="http://src.radiocampus.be/" title="Source, Radio Campus Bruxelles" target="_blank">Source, Radio Campus Bruxelles</a>
+			
+		</div>
+	</div>
+</footer>
+
+  </body>
+</html>

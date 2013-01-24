@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/syntax.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
+    <!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta charset="UTF-8">
+    <title>Monsterwm : configuration et joyeusetés</title>
+    
+    <meta name="author" content="Schoewilliam &lt;schoewilliam@legtux.org&gt;">
+    <meta content='initial-scale=1.0' name='viewport'>
+
+    <link rel="icon" type="image/png" href="/images/fav.png">
+    
+  </head>
+  
+  <body>
+    <header id="top">
+	<a href="/" id="embleme"></a>
+	<div class="blog">
+	    <nav>
+		<ul>
+	    
+		<li><a href="/archives">archives</a></li>
+	    
+		<li><a href="/flux.xml">flux rss</a></li>
+	    
+		</ul>
+	    </nav>
+	</div>
+	<div class="sec">
+	    <nav>
+		<ul>
+	    
+		<li><a href="/minisch">minisch</a></li>
+	    
+		<li><a href="/apropos">à propos</a></li>
+	    
+		</ul>
+	    </nav>
+	</div>
+</header>
+
+
+    <time class="top">11 janvier 2013</time>
+<article>
+
+
+<hgroup>
+	<h1>Monsterwm : configuration et joyeusetés</h1>
+</hgroup>
+
+
+<div id="post">
+	<p>Comme j&#8217;ai tendance à adorer le renouveau, je me suis mis en tête de tester autre chose que <a href='http://localhost:4000/2012/04/14/wmfs-exposition-de-ma-configuration.html'>WMFS</a>, que je n&#8217;avais pas quitté depuis mon arrivée sur Archlinux. Un Tiling Window Manager, c&#8217;est certain. <strong>monsterwm</strong> se présente comme « Tiny and monstrous ! ». Il n&#8217;a qu&#8217;un seul but : s&#8217;occuper de nos fenêtres. C&#8217;est ainsi qu&#8217;il n&#8217;inclut aucune barre d&#8217;emblée, et s&#8217;avère particulièrement léger.</p>
+
+<p>Deux choix se présentent alors à nous : gardons cet aspect minimaliste de monsterwm (sans quelconque barre supérieure ou inférieure), ou justement lui en enrichir. J&#8217;ai choisi cette seconde option dans un simple soucis de confort d&#8217;utilisation. En effet, j&#8217;ai vite ressenti le besoin de pouvoir me situer visuellement parmi mes bureaux virtuels.</p>
+
+<p>Concernant la configuration initale de monsterwm, je vous redirigerai volontiers vers mon <a href='https://github.com/Schoewilliam/configs/blob/master/monsterwm/config.h'>fichier de configuration personnel</a>.</p>
+
+<h2 id='objectif_'>Objectif ?</h2>
+
+<p>Afficher dans une sobre barre — ici <code>dzen2</code> — les bureaux disponibles, leur état (inoccupé/occupé et/ou actif), ainsi que l&#8217;agencement actuellement utilisé.</p>
+
+<p><a href='/images/monster/dzen2.png'><img alt='capture du coin supérieur droit de mon écran' class='align' src='/images/monster/dzen2.png' /></a></p>
+
+<p>À noter avant de continuer, que monsterwm fait du <strong>tiling automatique</strong> (à la manière de DWM, ou Awesome). C&#8217;est-à-dire qu&#8217;il propose plusieurs « layouts » (qu&#8217;on appellera <em>agencements</em> par soucis de chauvinisme inexpliqué) :</p>
+
+<ul>
+<li>le « Common Tiling mode » ; une fenêtre maîtresse est positionnée à gauche, tandis que les autres sont empilées à droite.</li>
+
+<li>la Grille ; les fenêtres sont toutes dimensionnées et disposées de manière égale.</li>
+
+<li>le « Bottom Stack tiling mode » ; idem que le premier sus-cité, la fenêtre maîtresse se trouvant en haut.</li>
+
+<li>le plein écran ; que j&#8217;affectionne particulièrement ; chaque fenêtre occupe la totalité de l&#8217;écran.</li>
+
+<li>le <em>Floating Mode</em> ; pour se débarasser de l&#8217;agencement automatique.</li>
+</ul>
+
+<h2 id='excution_personnalise'>Exécution personnalisée</h2>
+
+<p>Afin de parvenir à notre objectif, il va falloir créer un fichier qui contiendra une boucle — dont j&#8217;ignore, pour être honnête, tous les détails — exécutée au préalable du gestionnaire de fenêtre. Cela nous permettant de récolter les données nécessaires pour l&#8217;affichage de l&#8217;état de nos bureaux.</p>
+
+<p>Pour cela, au lieu de lancer &#8221;<code>monsterwm</code>&#8221; dans notre <code>.xinitrc</code> (ou autre moyen d&#8217;exécution de votre sessiong xorg), on exécutera ce fichier, que je nommerai personnellement <code>runmonster.exec</code> et qui aura pour contenu :</p>
+<div class='highlight'><pre><code class='bash'><span class='c'>#!/usr/bin/env bash</span>
+
+<span class='c'># First define colors</span>
+<span class='nv'>norm_fg</span><span class='o'>=</span><span class='s2'>&quot;#909090&quot;</span>
+<span class='nv'>norm_bg</span><span class='o'>=</span><span class='s2'>&quot;#1a1a1a&quot;</span>
+<span class='nv'>sel_fg</span><span class='o'>=</span><span class='s2'>&quot;#ffffff&quot;</span>
+<span class='nv'>sel_bg</span><span class='o'>=</span><span class='s2'>&quot;#3a3a3a&quot;</span> 
+<span class='nv'>err_fg</span><span class='o'>=</span><span class='s2'>&quot;#ffffff&quot;</span>
+<span class='nv'>err_bg</span><span class='o'>=</span><span class='s2'>&quot;#f2777a&quot;</span>
+
+: <span class='s2'>&quot;${wm:=&quot;</span>monsterwm<span class='s2'>&quot;}&quot;</span>
+: <span class='s2'>&quot;${ff:=&quot;</span>/tmp/monsterwm.fifo<span class='s2'>&quot;}&quot;</span>
+
+<span class='o'>[[</span> -p <span class='nv'>$ff</span> <span class='o'>]]</span> <span class='o'>||</span> mkfifo -m 600 <span class='s2'>&quot;$ff&quot;</span>
+
+<span class='k'>while </span><span class='nb'>read</span> -t 2 -r wmout <span class='o'>||</span> <span class='nb'>true</span>; <span class='k'>do</span>
+    <span class='c'># filter output to only what we want to match and parse</span>
+    <span class='k'>if</span> <span class='o'>[[</span> <span class='nv'>$wmout</span> <span class='o'>=</span>~ ^<span class='o'>(([[</span>:digit:<span class='o'>]]</span>+:<span class='o'>)</span>+<span class='o'>[[</span>:digit:<span class='o'>]]</span>+ ?<span class='o'>)</span>+.*<span class='nv'>$ </span><span class='o'>]]</span>; <span class='k'>then</span>
+<span class='k'>        </span><span class='nb'>read</span> -ra desktops &lt;&lt;&lt; <span class='s2'>&quot;$wmout&quot;</span> <span class='o'>&amp;&amp;</span> <span class='nb'>unset </span>r
+            <span class='k'>for </span>desktop in <span class='s2'>&quot;${desktops[@]}&quot;</span>; <span class='k'>do</span>
+                <span class='c'># set values for</span>
+                <span class='c'># d - the desktop id</span>
+                <span class='c'># w - number of windows in that desktop</span>
+                <span class='c'># m - tiling layout/mode for that desktop</span>
+                <span class='c'># c - whether that desktop is the current (1) or not (0)</span>
+                <span class='c'># u - whether a window in that desktop has an urgent hint set (1) or not (0)</span>
+                <span class='nv'>IFS</span><span class='o'>=</span><span class='s1'>&#39;:&#39;</span> <span class='nb'>read</span> -r d w m c u &lt;&lt;&lt; <span class='s2'>&quot;$desktop&quot;</span>
+                <span class='c'># Set the icon for desktops with windows</span>
+                <span class='nv'>ic</span><span class='o'>=</span><span class='s2'>&quot; &quot;</span>
+                <span class='o'>((</span>w<span class='o'>))</span> <span class='o'>&amp;&amp;</span> <span class='nv'>ic</span><span class='o'>=</span><span class='s2'>&quot; *&quot;</span>
+                <span class='c'># name each desktop</span>
+                      <span class='k'>case</span> <span class='nv'>$d</span> in
+                        0<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;u &quot;</span> ;;
+                        1<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;d &quot;</span> ;;
+                        2<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;t &quot;</span> ;;
+                        3<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;q &quot;</span> ;;
+                        4<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;c &quot;</span> ;;
+                        5<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;sx &quot;</span> ;;
+                        6<span class='o'>)</span> <span class='nv'>d</span><span class='o'>=</span><span class='s2'>&quot;sp &quot;</span> ;;
+                      <span class='k'>esac</span>
+                <span class='c'># we will also display the current desktop&#39;s tiling layout/mode</span>
+                      <span class='o'>((</span>c<span class='o'>))</span> <span class='o'>&amp;&amp;</span> <span class='nb'>fg</span><span class='o'>=</span><span class='s2'>&quot;$sel_fg&quot;</span> <span class='nb'>bg</span><span class='o'>=</span><span class='s2'>&quot;$sel_bg&quot;</span> <span class='o'>&amp;&amp;</span> <span class='k'>case</span> <span class='nv'>$m</span> in
+                          <span class='c'># name each layout/mode with a symbol</span>
+                          0<span class='o'>)</span> <span class='nv'>i</span><span class='o'>=</span><span class='s2'>&quot; [T]&quot;</span> ;;
+                          1<span class='o'>)</span> <span class='nv'>i</span><span class='o'>=</span><span class='s2'>&quot; [$w]&quot;</span> ;;
+                          2<span class='o'>)</span> <span class='nv'>i</span><span class='o'>=</span><span class='s2'>&quot; [b]&quot;</span> ;;
+                          3<span class='o'>)</span> <span class='nv'>i</span><span class='o'>=</span><span class='s2'>&quot; [G]&quot;</span> ;;
+                          4<span class='o'>)</span> <span class='nv'>i</span><span class='o'>=</span><span class='s2'>&quot; [F]&quot;</span> ;;
+                      <span class='k'>esac</span> <span class='o'>||</span> <span class='nb'>fg</span><span class='o'>=</span><span class='s2'>&quot;$norm_fg&quot;</span> <span class='nb'>bg</span><span class='o'>=</span><span class='s2'>&quot;$norm_bg&quot;</span>
+                      <span class='c'># if the desktop has an urgent hint its color should be err_fg/err_bg</span>
+                      <span class='o'>((</span>u<span class='o'>))</span> <span class='o'>&amp;&amp;</span> <span class='nb'>fg</span><span class='o'>=</span><span class='s2'>&quot;$err_fg&quot;</span> <span class='nb'>bg</span><span class='o'>=</span><span class='s2'>&quot;$err_bg&quot;</span>
+                      <span class='c'># print the desktop name</span>
+                      r+<span class='o'>=</span><span class='s2'>&quot;^bg($norm_bg)^bg($bg)^fg($fg)$ic$d^fg($norm_fg)^bg($norm_bg)&quot;</span>
+            <span class='k'>done</span>
+<span class='k'>    fi        </span>
+<span class='k'>    </span><span class='nb'>printf</span> <span class='s2'>&quot;%s%s\n&quot;</span> <span class='s2'>&quot;$r&quot;</span> <span class='s2'>&quot;$i&quot;</span>
+<span class='k'>done</span> &lt; <span class='s2'>&quot;$ff&quot;</span> | dzen2 -fg <span class='s2'>&quot;#cccccc&quot;</span> -bg <span class='s2'>&quot;#1a1a1a&quot;</span> -h 20 -fn <span class='s2'>&quot;-*-envypn-medium-*-*--13-*-*-*-*-*-*-*&quot;</span> -ta l -w 300 -e <span class='s2'>&quot;button2=stick&quot;</span> &amp;
+    
+<span class='k'>while</span> :; <span class='k'>do</span> <span class='s2'>&quot;$wm&quot;</span> <span class='o'>||</span> <span class='nb'>break</span>; <span class='k'>done</span> | tee -a <span class='s2'>&quot;$ff&quot;</span>
+</code></pre>
+</div>
+<p>Ce fichier permet au passage d&#8217;attribuer un nom, un symbole, ou autre, à chacun de ces bureaux, et des pavages, en plus des choix de couleurs pour dzen2.</p>
+
+<p>Mon <code>.xinitrc</code> aura donc l&#8217;apparence suivante :</p>
+<div class='highlight'><pre><code class='bash'><span class='c'># […]</span>
+setxkbmap -layout fr -variant bepo &amp;
+xsetroot -cursor_name <span class='s2'>&quot;arrow&quot;</span> &amp;
+numlockx on &amp;
+
+runmonster.exec
+</code></pre>
+</div>
+<h2 id='voil'><em>voilà</em></h2>
+<a href='http://schoewilliam.deviantart.com/art/MonsterWM-January-2013-archlinux-346452273' target='_blank'><img class='align right' src='/images/apropos/2013-01mini.png' /></a>
+<p>Si tout se déroule correctement, au prochain <code>$ startx</code>, une barre — dzen2 — se logera à la position et selon l&#8217;apparence définies, et vous permettra de vous situer <strong>visuellement</strong> parmi vos fenêtres, et vos bureaux virtuels.</p>
+
+<p>Pour en savoir davantage, rendez-vous sur <a href='https://bbs.archlinux.org/viewtopic.php?id=132122'>le sujet dédié sur les forums d&#8217;Archlinux.org</a>. C&#8217;est bien entendu à cet endroit que j&#8217;ai pu trouver bien des astuces, parmi lesquelles l&#8217;objet de ce billet.</p>
+</div>
+
+<footer>
+    <span class="tags">
+    
+        <a href="/tag/config"><span>#</span>config</a>, 
+    
+        <a href="/tag/monsterwm"><span>#</span>monsterwm</a>, 
+    
+        <a href="/tag/tiling"><span>#</span>tiling</a>.
+    
+    </span>
+</footer>
+
+</article>
+
+
+<div class="jskomment" id="comments"></div>
+<script src="/js/jskomment.js"></script>
+
+<noscript>
+    <p>
+        Il semble que vous ayez Javascript de désactivé !
+        Vous pouvez tout de même vous rendre sur <a href="http://talka.tv/comment/list/?url=http://schoewilliam.legtux.org/2013/01/11/monsterwm.html">
+        la page de commentaires statique</a> afin de lire les commentaires, ou en poster.
+    </p>
+</noscript>
+
+
+
+    <footer>
+	<div>
+		<div>
+			Carnets amis : 
+			
+			<a href="http://postblue.info" title="Postblue" target="_blank">Postblue</a>
+			
+			<a href="http://coreight.com" title="Coreight" target="_blank">Coreight</a>
+			
+			<a href="http://identitools.fr" title="Identitools" target="_blank">Identitools</a>
+			
+			<a href="http://id-libre.org/blogigor" title="BlogiGor" target="_blank">BlogiGor</a>
+			
+			<a href="http://tetedulinuxien.fr" title="Dans la tête du Linuxien" target="_blank">Dans la tête du Linuxien</a>
+			
+			<a href="http://septimochimaera.kegtux.org" title="Septimo Chimæra" target="_blank">Septimo Chimæra</a>
+			
+			<a href="http://fabienwang.kegtux.org" title="Fabienwang" target="_blank">Fabienwang</a>
+			
+		</div>
+		<div>Liens : 
+			
+			<a href="http://legtux.org" title="Legtux" target="_blank">Legtux</a>
+			
+			<a href="http://src.radiocampus.be/" title="Source, Radio Campus Bruxelles" target="_blank">Source, Radio Campus Bruxelles</a>
+			
+		</div>
+	</div>
+</footer>
+
+  </body>
+</html>

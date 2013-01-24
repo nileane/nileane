@@ -1,0 +1,80 @@
+safe: false
+auto: true
+server: false
+server_port: 4000
+base-url: /
+url: http://schoewilliam.legtux.org
+
+ftp_host: legtux.org
+ftp_dir: /
+ftp_username: schoewilliam
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+
+future:      true
+lsi:         false
+pygments:    true
+markdown:    maruku
+permalink:   date
+
+# Blog Menu
+navigation:
+- text: archives
+  url: /archives
+- text: flux rss
+  url: /flux.xml
+
+about:
+- text: minisch
+  url: /minisch
+- text: à propos
+  url: /apropos
+
+blogoliste:
+- text: Postblue
+  url: http://postblue.info
+- text: Coreight
+  url: http://coreight.com
+- text: Identitools
+  url: http://identitools.fr
+- text: BlogiGor
+  url: http://id-libre.org/blogigor
+- text: Dans la tête du Linuxien
+  url: http://tetedulinuxien.fr
+- text: Septimo Chimæra
+  url: http://septimochimaera.kegtux.org
+- text: Fabienwang
+  url: http://fabienwang.kegtux.org
+
+linkoliste:
+- text: Legtux
+  url: http://legtux.org
+- text: Source, Radio Campus Bruxelles
+  url: http://src.radiocampus.be/
+
+maruku:
+  use_tex:    false
+  use_divs:   false
+  png_engine: blahtex
+  png_dir:    images/latex
+  png_url:    /images/latex
+
+rdiscount:
+  extensions: []
+
+kramdown:
+  auto_ids: true,
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+  
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style

@@ -1,0 +1,14 @@
+{% if site.JB.tags_list.provider == "custom" %}
+  {% include custom/tags_list %}
+{% else %}
+  {% if tags_list.first[0] == null %}
+    {% for tag in tags_list %} 
+      <a href="/tag/{{ tag }}"><span>#</span>{{ tag }} <span>({{ site.tags[tag].size }})</span></a>{% if forloop.last %}.{% else %}, {% endif %}
+    {% endfor %}
+  {% else %}
+    {% for tag in tags_list %}
+      <a href="/tag/{{ tag[0] }}"><span>#</span>{{ tag[0] }} <span>({{ tag[1].size }})</span></a>{% if forloop.last %}.{% else %}, {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endif %}
+{% assign tags_list = null %}

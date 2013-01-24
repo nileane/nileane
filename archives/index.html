@@ -1,0 +1,29 @@
+---
+title: schoewilliam - archives
+description: Archives du carnet
+layout: default
+lang: fr
+---
+<section>
+<div class="index">
+
+  <ul class="posts" id="details">
+      <h2>archives</h2>
+      <span><a class=on href=#compact></a> <a class=off href=#details></a></span>
+    {% for post in site.posts %}
+      <li>
+	<a href="{{ post.url }}">
+	  <time>{{ post.date | date_to_string }}</time>
+	  <h3>{{ post.title }}</h3>
+	  <div>{{ post.content | strip_html | truncatewords: 25 }}</div>
+	</a>
+      </li>
+	
+    {% endfor %}
+  </ul>
+
+</div>
+</section>
+<style>
+@import url('/stylesheets/archives.css');
+</style>

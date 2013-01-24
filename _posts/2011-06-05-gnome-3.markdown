@@ -1,0 +1,28 @@
+---
+layout: post
+title: Somptueux GNOME 3
+tags:
+- fedora
+- GNOME
+- linux
+status: publish
+type: post
+published: true
+---
+Ils fleurissent tous ces articles sur le web à propos de GNOME 3, et sa nouvelle interface. Et c'est pour ça que je ne la décrirai pas, je te redirige ami lecteur vers [cette page](http://gnome.org) (parmi tant d'autres articles) qui t'en apprendra plus sur cette nouvelle interface.  
+Cela fait maintenant presque 1 mois que je me forge mon humble et ridicule avis.  
+
+![GNOME3](/images/gnome/logo.png){: class="align center"}
+
+Après avoir vaincu les ténèbres d'une mise à niveau ( Fedora 14 vers Fedora 15 beta ), je me décide à m'adapter à ce nouvel environnement. Comme il est critiqué le pauvre ! "Trop orienté tactile", "trop gros", "pas pratique", "trop gourmant", "incompréhensible", *et cetera*.  
+
+En étant sincère, je dois dire que mon avis était exactement le même à la vue du nouveau bureau. Mais... jour après jour, semaine après semaine, utilisation après utilisation, ce nouveau gnome me plaît. Bien sûr qu'il est **ergonomique**. La gestion des fenêtres est aussi délicieuse que ces plats de spaghettis du samedi soir, autant que ce somptueux thème (GTK3) simple et particulièrement élégant, *Adwaita*. Une nouvelle façon de penser qui s'adapte magnifiquement avec nos activités modernes, et notre manière de les gérer. 
+
+[![Capture d'écran — Fedora 15](/images/gnome/overview.png){: class="align center"}](/images/gnome/overview.png)
+
+Mais voyons, il ne plait pas à vue, « pourquoi ? » me diriez-vous. Parce qu'il **change** : c'est assez inhabituel d'avoir une telle ergonomie pour un ordinateur de bureau. Le changement radical ne plaît généralement pas.  
+Cependant, j'ai lu à travers le web. Et je soulèverais qu'approximativement (et selon une statistique précise et délicatement établie par mes globes oculaires), 2 blogueurs sur 3 reconnaissent avoir **aimé et adopté** le dernier gnome après utilisation. Car oui, GNOME Shell c'est plusieurs années de travail et de réflexion, contrairement à *un certain autre*.  
+
+*Cher [Unity](http://doc.ubuntu-fr.org/unity), Ô environnement spécialement développé pour/par Ubuntu, gare à tes arrières et à tes convictions. Ton intervention surprise en lieu et place <del datetime="2011-07-30T23:10:42+00:00">concurrentielle</del> de GNOME Shell aidera à ta perte de crédibilité.*  
+
+Tâchons simplement de profiter de ce nouveau gnome. Et rassurons-nous, les problèmes de jeunesses, peu soient-ils, ne survivent pas. Pointons du doigt le prochain horizon : **GNOME 3.2**.

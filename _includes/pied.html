@@ -1,0 +1,15 @@
+<footer>
+	<div>
+		<div>
+			Carnets amis : 
+			{% for link in site.blogoliste %}
+			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
+			{% endfor %}
+		</div>
+		<div>Liens : 
+			{% for link in site.linkoliste %}
+			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
+			{% endfor %}
+		</div>
+	</div>
+</footer>

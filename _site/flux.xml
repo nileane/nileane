@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>schoewilliam</title>
+ <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
+ <link href="http://schoewilliam.legtux.org/"/>
+ <updated>2013-01-24T20:57:45+04:00</updated>
+ <id>http://schoewilliam.legtux.org</id>
+ <author>
+   <name>Schoewilliam</name>
+ </author>
+ 
+ 
+ <entry>
+   <title>Monsterwm : configuration et joyeusetés</title>
+   <link href="http://schoewilliam.legtux.org/2013/01/11/monsterwm.html"/>
+   <updated>2013-01-11T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2013/01/11/monsterwm</id>
+   <content type="html">&lt;p&gt;Comme j&amp;#8217;ai tendance à adorer le renouveau, je me suis mis en tête de tester autre chose que &lt;a href='http://localhost:4000/2012/04/14/wmfs-exposition-de-ma-configuration.html'&gt;WMFS&lt;/a&gt;, que je n&amp;#8217;avais pas quitté depuis mon arrivée sur Archlinux. Un Tiling Window Manager, c&amp;#8217;est certain. &lt;strong&gt;monsterwm&lt;/strong&gt; se présente comme « Tiny and monstrous ! ». Il n&amp;#8217;a qu&amp;#8217;un seul but : s&amp;#8217;occuper de nos fenêtres. C&amp;#8217;est ainsi qu&amp;#8217;il n&amp;#8217;inclut aucune barre d&amp;#8217;emblée, et s&amp;#8217;avère particulièrement léger.&lt;/p&gt;
+
+&lt;p&gt;Deux choix se présentent alors à nous : gardons cet aspect minimaliste de monsterwm (sans quelconque barre supérieure ou inférieure), ou justement lui en enrichir. J&amp;#8217;ai choisi cette seconde option dans un simple soucis de confort d&amp;#8217;utilisation. En effet, j&amp;#8217;ai vite ressenti le besoin de pouvoir me situer visuellement parmi mes bureaux virtuels.&lt;/p&gt;
+
+&lt;p&gt;Concernant la configuration initale de monsterwm, je vous redirigerai volontiers vers mon &lt;a href='https://github.com/Schoewilliam/configs/blob/master/monsterwm/config.h'&gt;fichier de configuration personnel&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='objectif_'&gt;Objectif ?&lt;/h2&gt;
+
+&lt;p&gt;Afficher dans une sobre barre — ici &lt;code&gt;dzen2&lt;/code&gt; — les bureaux disponibles, leur état (inoccupé/occupé et/ou actif), ainsi que l&amp;#8217;agencement actuellement utilisé.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/monster/dzen2.png'&gt;&lt;img alt='capture du coin supérieur droit de mon écran' class='align' src='/images/monster/dzen2.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;À noter avant de continuer, que monsterwm fait du &lt;strong&gt;tiling automatique&lt;/strong&gt; (à la manière de DWM, ou Awesome). C&amp;#8217;est-à-dire qu&amp;#8217;il propose plusieurs « layouts » (qu&amp;#8217;on appellera &lt;em&gt;agencements&lt;/em&gt; par soucis de chauvinisme inexpliqué) :&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;le « Common Tiling mode » ; une fenêtre maîtresse est positionnée à gauche, tandis que les autres sont empilées à droite.&lt;/li&gt;
+
+&lt;li&gt;la Grille ; les fenêtres sont toutes dimensionnées et disposées de manière égale.&lt;/li&gt;
+
+&lt;li&gt;le « Bottom Stack tiling mode » ; idem que le premier sus-cité, la fenêtre maîtresse se trouvant en haut.&lt;/li&gt;
+
+&lt;li&gt;le plein écran ; que j&amp;#8217;affectionne particulièrement ; chaque fenêtre occupe la totalité de l&amp;#8217;écran.&lt;/li&gt;
+
+&lt;li&gt;le &lt;em&gt;Floating Mode&lt;/em&gt; ; pour se débarasser de l&amp;#8217;agencement automatique.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='excution_personnalise'&gt;Exécution personnalisée&lt;/h2&gt;
+
+&lt;p&gt;Afin de parvenir à notre objectif, il va falloir créer un fichier qui contiendra une boucle — dont j&amp;#8217;ignore, pour être honnête, tous les détails — exécutée au préalable du gestionnaire de fenêtre. Cela nous permettant de récolter les données nécessaires pour l&amp;#8217;affichage de l&amp;#8217;état de nos bureaux.&lt;/p&gt;
+
+&lt;p&gt;Pour cela, au lieu de lancer &amp;#8221;&lt;code&gt;monsterwm&lt;/code&gt;&amp;#8221; dans notre &lt;code&gt;.xinitrc&lt;/code&gt; (ou autre moyen d&amp;#8217;exécution de votre sessiong xorg), on exécutera ce fichier, que je nommerai personnellement &lt;code&gt;runmonster.exec&lt;/code&gt; et qui aura pour contenu :&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='c'&gt;#!/usr/bin/env bash&lt;/span&gt;
+
+&lt;span class='c'&gt;# First define colors&lt;/span&gt;
+&lt;span class='nv'&gt;norm_fg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#909090&amp;quot;&lt;/span&gt;
+&lt;span class='nv'&gt;norm_bg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#1a1a1a&amp;quot;&lt;/span&gt;
+&lt;span class='nv'&gt;sel_fg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;
+&lt;span class='nv'&gt;sel_bg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#3a3a3a&amp;quot;&lt;/span&gt; 
+&lt;span class='nv'&gt;err_fg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#ffffff&amp;quot;&lt;/span&gt;
+&lt;span class='nv'&gt;err_bg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;#f2777a&amp;quot;&lt;/span&gt;
+
+: &lt;span class='s2'&gt;&amp;quot;${wm:=&amp;quot;&lt;/span&gt;monsterwm&lt;span class='s2'&gt;&amp;quot;}&amp;quot;&lt;/span&gt;
+: &lt;span class='s2'&gt;&amp;quot;${ff:=&amp;quot;&lt;/span&gt;/tmp/monsterwm.fifo&lt;span class='s2'&gt;&amp;quot;}&amp;quot;&lt;/span&gt;
+
+&lt;span class='o'&gt;[[&lt;/span&gt; -p &lt;span class='nv'&gt;$ff&lt;/span&gt; &lt;span class='o'&gt;]]&lt;/span&gt; &lt;span class='o'&gt;||&lt;/span&gt; mkfifo -m 600 &lt;span class='s2'&gt;&amp;quot;$ff&amp;quot;&lt;/span&gt;
+
+&lt;span class='k'&gt;while &lt;/span&gt;&lt;span class='nb'&gt;read&lt;/span&gt; -t 2 -r wmout &lt;span class='o'&gt;||&lt;/span&gt; &lt;span class='nb'&gt;true&lt;/span&gt;; &lt;span class='k'&gt;do&lt;/span&gt;
+    &lt;span class='c'&gt;# filter output to only what we want to match and parse&lt;/span&gt;
+    &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='o'&gt;[[&lt;/span&gt; &lt;span class='nv'&gt;$wmout&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt;~ ^&lt;span class='o'&gt;(([[&lt;/span&gt;:digit:&lt;span class='o'&gt;]]&lt;/span&gt;+:&lt;span class='o'&gt;)&lt;/span&gt;+&lt;span class='o'&gt;[[&lt;/span&gt;:digit:&lt;span class='o'&gt;]]&lt;/span&gt;+ ?&lt;span class='o'&gt;)&lt;/span&gt;+.*&lt;span class='nv'&gt;$ &lt;/span&gt;&lt;span class='o'&gt;]]&lt;/span&gt;; &lt;span class='k'&gt;then&lt;/span&gt;
+&lt;span class='k'&gt;        &lt;/span&gt;&lt;span class='nb'&gt;read&lt;/span&gt; -ra desktops &amp;lt;&amp;lt;&amp;lt; &lt;span class='s2'&gt;&amp;quot;$wmout&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nb'&gt;unset &lt;/span&gt;r
+            &lt;span class='k'&gt;for &lt;/span&gt;desktop in &lt;span class='s2'&gt;&amp;quot;${desktops[@]}&amp;quot;&lt;/span&gt;; &lt;span class='k'&gt;do&lt;/span&gt;
+                &lt;span class='c'&gt;# set values for&lt;/span&gt;
+                &lt;span class='c'&gt;# d - the desktop id&lt;/span&gt;
+                &lt;span class='c'&gt;# w - number of windows in that desktop&lt;/span&gt;
+                &lt;span class='c'&gt;# m - tiling layout/mode for that desktop&lt;/span&gt;
+                &lt;span class='c'&gt;# c - whether that desktop is the current (1) or not (0)&lt;/span&gt;
+                &lt;span class='c'&gt;# u - whether a window in that desktop has an urgent hint set (1) or not (0)&lt;/span&gt;
+                &lt;span class='nv'&gt;IFS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;:&amp;#39;&lt;/span&gt; &lt;span class='nb'&gt;read&lt;/span&gt; -r d w m c u &amp;lt;&amp;lt;&amp;lt; &lt;span class='s2'&gt;&amp;quot;$desktop&amp;quot;&lt;/span&gt;
+                &lt;span class='c'&gt;# Set the icon for desktops with windows&lt;/span&gt;
+                &lt;span class='nv'&gt;ic&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; &amp;quot;&lt;/span&gt;
+                &lt;span class='o'&gt;((&lt;/span&gt;w&lt;span class='o'&gt;))&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nv'&gt;ic&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; *&amp;quot;&lt;/span&gt;
+                &lt;span class='c'&gt;# name each desktop&lt;/span&gt;
+                      &lt;span class='k'&gt;case&lt;/span&gt; &lt;span class='nv'&gt;$d&lt;/span&gt; in
+                        0&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;u &amp;quot;&lt;/span&gt; ;;
+                        1&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;d &amp;quot;&lt;/span&gt; ;;
+                        2&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;t &amp;quot;&lt;/span&gt; ;;
+                        3&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;q &amp;quot;&lt;/span&gt; ;;
+                        4&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;c &amp;quot;&lt;/span&gt; ;;
+                        5&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;sx &amp;quot;&lt;/span&gt; ;;
+                        6&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;d&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;sp &amp;quot;&lt;/span&gt; ;;
+                      &lt;span class='k'&gt;esac&lt;/span&gt;
+                &lt;span class='c'&gt;# we will also display the current desktop&amp;#39;s tiling layout/mode&lt;/span&gt;
+                      &lt;span class='o'&gt;((&lt;/span&gt;c&lt;span class='o'&gt;))&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nb'&gt;fg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;$sel_fg&amp;quot;&lt;/span&gt; &lt;span class='nb'&gt;bg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;$sel_bg&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='k'&gt;case&lt;/span&gt; &lt;span class='nv'&gt;$m&lt;/span&gt; in
+                          &lt;span class='c'&gt;# name each layout/mode with a symbol&lt;/span&gt;
+                          0&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;i&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; [T]&amp;quot;&lt;/span&gt; ;;
+                          1&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;i&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; [$w]&amp;quot;&lt;/span&gt; ;;
+                          2&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;i&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; [b]&amp;quot;&lt;/span&gt; ;;
+                          3&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;i&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; [G]&amp;quot;&lt;/span&gt; ;;
+                          4&lt;span class='o'&gt;)&lt;/span&gt; &lt;span class='nv'&gt;i&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; [F]&amp;quot;&lt;/span&gt; ;;
+                      &lt;span class='k'&gt;esac&lt;/span&gt; &lt;span class='o'&gt;||&lt;/span&gt; &lt;span class='nb'&gt;fg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;$norm_fg&amp;quot;&lt;/span&gt; &lt;span class='nb'&gt;bg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;$norm_bg&amp;quot;&lt;/span&gt;
+                      &lt;span class='c'&gt;# if the desktop has an urgent hint its color should be err_fg/err_bg&lt;/span&gt;
+                      &lt;span class='o'&gt;((&lt;/span&gt;u&lt;span class='o'&gt;))&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nb'&gt;fg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;$err_fg&amp;quot;&lt;/span&gt; &lt;span class='nb'&gt;bg&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;$err_bg&amp;quot;&lt;/span&gt;
+                      &lt;span class='c'&gt;# print the desktop name&lt;/span&gt;
+                      r+&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;^bg($norm_bg)^bg($bg)^fg($fg)$ic$d^fg($norm_fg)^bg($norm_bg)&amp;quot;&lt;/span&gt;
+            &lt;span class='k'&gt;done&lt;/span&gt;
+&lt;span class='k'&gt;    fi        &lt;/span&gt;
+&lt;span class='k'&gt;    &lt;/span&gt;&lt;span class='nb'&gt;printf&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;%s%s\n&amp;quot;&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;$r&amp;quot;&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;$i&amp;quot;&lt;/span&gt;
+&lt;span class='k'&gt;done&lt;/span&gt; &amp;lt; &lt;span class='s2'&gt;&amp;quot;$ff&amp;quot;&lt;/span&gt; | dzen2 -fg &lt;span class='s2'&gt;&amp;quot;#cccccc&amp;quot;&lt;/span&gt; -bg &lt;span class='s2'&gt;&amp;quot;#1a1a1a&amp;quot;&lt;/span&gt; -h 20 -fn &lt;span class='s2'&gt;&amp;quot;-*-envypn-medium-*-*--13-*-*-*-*-*-*-*&amp;quot;&lt;/span&gt; -ta l -w 300 -e &lt;span class='s2'&gt;&amp;quot;button2=stick&amp;quot;&lt;/span&gt; &amp;amp;
+    
+&lt;span class='k'&gt;while&lt;/span&gt; :; &lt;span class='k'&gt;do&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;$wm&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;||&lt;/span&gt; &lt;span class='nb'&gt;break&lt;/span&gt;; &lt;span class='k'&gt;done&lt;/span&gt; | tee -a &lt;span class='s2'&gt;&amp;quot;$ff&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ce fichier permet au passage d&amp;#8217;attribuer un nom, un symbole, ou autre, à chacun de ces bureaux, et des pavages, en plus des choix de couleurs pour dzen2.&lt;/p&gt;
+
+&lt;p&gt;Mon &lt;code&gt;.xinitrc&lt;/code&gt; aura donc l&amp;#8217;apparence suivante :&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='c'&gt;# […]&lt;/span&gt;
+setxkbmap -layout fr -variant bepo &amp;amp;
+xsetroot -cursor_name &lt;span class='s2'&gt;&amp;quot;arrow&amp;quot;&lt;/span&gt; &amp;amp;
+numlockx on &amp;amp;
+
+runmonster.exec
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id='voil'&gt;&lt;em&gt;voilà&lt;/em&gt;&lt;/h2&gt;
+&lt;a href='http://schoewilliam.deviantart.com/art/MonsterWM-January-2013-archlinux-346452273' target='_blank'&gt;&lt;img class='align right' src='/images/apropos/2013-01mini.png' /&gt;&lt;/a&gt;
+&lt;p&gt;Si tout se déroule correctement, au prochain &lt;code&gt;$ startx&lt;/code&gt;, une barre — dzen2 — se logera à la position et selon l&amp;#8217;apparence définies, et vous permettra de vous situer &lt;strong&gt;visuellement&lt;/strong&gt; parmi vos fenêtres, et vos bureaux virtuels.&lt;/p&gt;
+
+&lt;p&gt;Pour en savoir davantage, rendez-vous sur &lt;a href='https://bbs.archlinux.org/viewtopic.php?id=132122'&gt;le sujet dédié sur les forums d&amp;#8217;Archlinux.org&lt;/a&gt;. C&amp;#8217;est bien entendu à cet endroit que j&amp;#8217;ai pu trouver bien des astuces, parmi lesquelles l&amp;#8217;objet de ce billet.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Minisch, mon thème pour Wordpress</title>
+   <link href="http://schoewilliam.legtux.org/2013/01/07/minisch.html"/>
+   <updated>2013-01-07T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2013/01/07/minisch</id>
+   <content type="html">&lt;p&gt;Il me fallait un thème simple, sobre, clair (très clair), et bien sûr totalement original. Ainsi est né Minisch. Évidemment gratuit, ouvert, et n&amp;#8217;est soumis à aucune restriction. Faisons-en le tour, dans la joie et la bonne humeur s&amp;#8217;il vous plait /o/. Oh et je tâcherai de fournir un bloc-exemple pour chacune des sections, en véritable HTML+CSS (bouh aux captures d&amp;#8217;écran).&lt;/p&gt;
+&lt;p style='text-align:center;'&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch/archive/master.zip'&gt;télécharger minisch .zip&lt;/a&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch' style='background-color: #777;'&gt;dépôt sur Github&lt;/a&gt;&lt;/p&gt;&lt;nav&gt;&lt;strong&gt;Sommaire&lt;/strong&gt;: &lt;a href='#la_navigation'&gt;la navigation&lt;/a&gt; &lt;a href='#lindex'&gt;l'index&lt;/a&gt; &lt;a href='#une_structure_adaptative'&gt;une structure adaptative&lt;/a&gt; &lt;a href='#la_clart_des_billets'&gt;la clarté des billets&lt;/a&gt; &lt;a href='#les_commentaires'&gt;les commentaires&lt;/a&gt; &lt;a href='#personnalisable'&gt;personnalisable&lt;/a&gt;&lt;/nav&gt;
+&lt;h2 id='la_navigation'&gt;La navigation&lt;/h2&gt;
+
+&lt;p&gt;Le menu est simple de premier abord mais cache nombre de possibilités. Il gère les hierarchies jusqu&amp;#8217;à 6 niveaux, et offre, en plus des fonctionnalités par défaut de Wordpress, l&amp;#8217;option d&amp;#8217;afficher de manière détaillée les flux RSS disponibles pour vos visiteurs. Enfin, il est agrémenté d&amp;#8217;un champ de recherche.&lt;/p&gt;
+&lt;section class='minisch nav'&gt;
+&lt;div class='wrap'&gt;
+&lt;nav&gt;&lt;form id='searchform'&gt;  &lt;input id='s' placeholder='Recherche' type='text' /&gt; &lt;/form&gt;&lt;li class='home'&gt; &lt;a class='home' href='#'&gt; &lt;span&gt;  &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;&lt;div class='menu-menu-du-haut-container'&gt;&lt;li class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1748' id='menu-item-1748'&gt;&lt;a href='#'&gt;Archives&lt;/a&gt;&lt;/li&gt;&lt;/div&gt;&lt;li&gt; &lt;a class='follow rss' href='#'&gt;&lt;span&gt;    &lt;/span&gt;RSS&lt;/a&gt;&lt;ul class='sub-menu'&gt;&lt;li&gt;&lt;a class='follow rss' href='#'&gt;  RSS 0.92&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class='follow rss' href='#'&gt;Flux RSS 2.0&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class='follow rss' href='#'&gt;Flux Atom&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a class='follow rss' href='#'&gt;Commentaires&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt; &lt;/nav&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;h2 id='lindex'&gt;L&amp;#8217;index&lt;/h2&gt;
+
+&lt;p&gt;Pensé pour être fonctionnel. Intègre l&amp;#8217;image à la Une, choisie par l&amp;#8217;auteur lors de la rédaction du billet, affiche de manière élégante le nombre de commentaires, un petit extrait introducteur, ainsi que la classification (catégories et mots-clefs).&lt;/p&gt;
+&lt;section class='minisch index'&gt;
+&lt;div class='wrap'&gt;
+&lt;article class='post-1559 post type-post status-publish format-standard hentry category-applications category-clients-social category-linux tag-application tag-linux tag-terminal tag-twitter' id='post-1559'&gt;&lt;header class='entry-header'&gt; &lt;span class='comments-link'&gt;&lt;a href='#' title='Commentaire sur Earthquake, un (beau) client Twitter pour la console.'&gt;10&lt;/a&gt;&lt;/span&gt;&lt;h1 class='entry-title'&gt;&lt;a href='#' rel='bookmark' title='Permalien: Earthquake, un (beau) client Twitter pour la console.'&gt;Earthquake, un (beau) client Twitter pour la console.&lt;/a&gt;&lt;/h1&gt;&lt;div class='entry-meta'&gt; &lt;time class='entry-date'&gt;&lt;a href='#'&gt;6 janvier 2012&lt;/a&gt;&lt;/time&gt; &lt;span class='cat-links'&gt; &lt;a href='#' rel='category tag' title='Voir tous les articles dans Applications'&gt;Applications&lt;/a&gt;, &lt;a href='#' rel='category tag' title='Voir tous les articles dans Clients Sociaux'&gt;Clients Sociaux&lt;/a&gt;, &lt;a href='#' rel='category tag' title='Voir tous les articles dans Linux'&gt;Linux&lt;/a&gt; • &lt;/span&gt; &lt;span class='tag-links'&gt; &lt;a href='#' rel='tag'&gt;application&lt;/a&gt;, &lt;a href='#' rel='tag'&gt;Linux&lt;/a&gt;, &lt;a href='#' rel='tag'&gt;terminal&lt;/a&gt;, &lt;a href='#' rel='tag'&gt;twitter&lt;/a&gt; &lt;/span&gt;&lt;/div&gt; &lt;/header&gt; &lt;/article&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;h2 id='une_structure_adaptative'&gt;Une structure adaptative&lt;/h2&gt;
+
+&lt;p&gt;Ne surtout pas hésiter à pousser Minisch à ses limites, il s&amp;#8217;adaptera automatiquement et intelligemment sur tous les écrans. Des plus petits de 200px de large aux grands écrans larges de 1920px (fourchette non-exhaustive :D). À noter d&amp;#8217;ailleurs que la colonne latérale sur les écrans fins se métamorphosera en un panneau coulissant.&lt;/p&gt;
+
+&lt;h2 id='la_clart_des_billets'&gt;La clarté des billets&lt;/h2&gt;
+
+&lt;p&gt;Dans sa configuration par défaut, Minisch se débarasse des distractions à la lecture de vos billets. Ceux-ci sont centrés sur la page, profitent de l&amp;#8217;espace disponible, tout en optimisant le confort de lecture. La présentation d&amp;#8217;images de grands formats sera d&amp;#8217;ailleurs des plus agréables.&lt;/p&gt;
+
+&lt;h2 id='les_commentaires'&gt;Les commentaires&lt;/h2&gt;
+
+&lt;p&gt;Là encore, je les ai pensés afin que la hierarchie des discussions puisse être facilement suivie, de façon claire et ordonnée, et toujours dans la ligne de design de Minisch.&lt;/p&gt;
+&lt;section class='minisch comments'&gt;
+&lt;div class='wrap'&gt;
+&lt;ol class='commentlist'&gt;
+&lt;li class='comment even thread-even bypostauthor depth-1' id='li-comment-224'&gt;
+&lt;article class='comment' id='comment-224'&gt;
+&lt;header&gt;
+&lt;div class='comment-author vcard'&gt;
+&lt;cite class='fn'&gt;&lt;a class='url' href='#' rel='external nofollow'&gt;William&lt;/a&gt;,&lt;/cite&gt;&lt;/div&gt;
+&lt;div class='comment-meta commentmetadata'&gt;
+&lt;a href='#'&gt;&lt;time&gt;
+le &lt;strong&gt;27 avril 2012&lt;/strong&gt; à &lt;strong&gt;16 h 19 min&lt;/strong&gt;&lt;/time&gt;&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;/header&gt;
+&lt;div class='comment-content'&gt;&lt;p&gt;Les gravatars sont un choix utilisateur — depuis l’administration de WordPress. J’ai personnellement décidé de les désactiver (histoire d’accentuer le caractère libre de mon petit blog), mais Minisch les supporte parfaitement s’ils sont activés ;).&lt;/p&gt;&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;ul class='children'&gt;
+
+	&lt;li class='comment odd alt depth-3' id='li-comment-366'&gt;
+	&lt;article class='comment' id='comment-366'&gt;
+
+	&lt;header&gt;
+	&lt;div class='comment-author vcard'&gt;
+	&lt;cite class='fn'&gt;&lt;a class='url' href='http://blog.postblue.info' rel='external nofollow'&gt;PostBlue&lt;/a&gt;,&lt;/cite&gt;&lt;/div&gt;
+				
+	&lt;div class='comment-meta commentmetadata'&gt;
+	&lt;a href='#'&gt;&lt;time datetime='2012-05-05T07:15:34+00:00' pubdate=''&gt;
+	le &lt;strong&gt;5 mai 2012&lt;/strong&gt; à &lt;strong&gt;7 h 15 min&lt;/strong&gt;&lt;/time&gt;&lt;/a&gt;&lt;/div&gt;
+	&lt;/header&gt;
+	&lt;div class='comment-content'&gt;&lt;p&gt;Les gravatars c’est le mal.&lt;/p&gt;&lt;/div&gt;
+	&lt;/article&gt;
+	&lt;/li&gt;
+
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;h2 id='personnalisable'&gt;Personnalisable&lt;/h2&gt;
+
+&lt;p&gt;Depuis l&amp;#8217;administration de Wordpress, la page « Options du thème » embarquée avec Minisch permettra de le moduler à sa manière. Ainsi l&amp;#8217;utilisation de champs spéciaux, la position des éléments primordiaux (article, colonne latérale, menu, pied de page, …), et autres choix esthétiques passeront par là. Il en va de même pour l&amp;#8217;apparence et le comportement des index, qui se trouvent être très maléables à nos souhaits.&lt;/p&gt;
+
+&lt;h2 id='enfin'&gt;Enfin&lt;/h2&gt;
+
+&lt;p&gt;Évidemment, on ne peut se faire une idée qu&amp;#8217;après avoir testé, ce que j&amp;#8217;encourage vivement /o/. Sur &lt;a href='http://schoewilliam.github.com/Minisch'&gt;Github&lt;/a&gt; se trouvent sources et fichiers de traductions, ainsi qu&amp;#8217;archives à télécharger. Bon vent à vous !&lt;/p&gt;
+
+&lt;p&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch/archive/master.zip'&gt;Télécharger &lt;strong&gt;minisch&lt;/strong&gt; .zip&lt;/a&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch' style='background-color: #777;'&gt;dépôt sur Github&lt;/a&gt; &lt;style&gt;
+@import url(/stylesheets/minisch.css);
+&lt;/style&gt;&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>WMFS2 : ma configuration</title>
+   <link href="http://schoewilliam.legtux.org/2012/04/14/wmfs-exposition-de-ma-configuration.html"/>
+   <updated>2012-04-14T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2012/04/14/wmfs-exposition-de-ma-configuration</id>
+   <content type="html">&lt;p&gt;WMFS, est un tiling window manager très simple à configurer, au point qu&amp;#8217;on n&amp;#8217;ait en général qu&amp;#8217;à personnaliser le schéma de couleurs. Le plus gros du boulot se situera principalement autour des statusbars. On s&amp;#8217;attardera d&amp;#8217;ailleurs sur ces dernières dans la seconde partie de ce billet.&lt;/p&gt;
+
+&lt;h2 id='comportement_et_couleurs'&gt;Comportement et couleurs&lt;/h2&gt;
+
+&lt;p&gt;WMFS tend davantage vers le &lt;strong&gt;twm manuel&lt;/strong&gt;. C&amp;#8217;est-à-dire que son &lt;em&gt;layout&lt;/em&gt; (la disposition de son pavage) n&amp;#8217;est pas fixe, et s&amp;#8217;improvise au cours de l&amp;#8217;utilisation. C&amp;#8217;est un concept voilà très différent de celui de Awesome WM (par exemple), qui lui propose un certain nombre de disposition fixes.&lt;/p&gt;
+
+&lt;p&gt;On ne jouera pas au guide, le &lt;strong&gt;&lt;a href='https://github.com/xorg62/wmfs/wiki'&gt;wiki&lt;/a&gt;&lt;/strong&gt; s&amp;#8217;en charge déjà très bien. En revanche donc, il faudrait savoir que la section &lt;code&gt;[themes]&lt;/code&gt;…&lt;code&gt;[/themes]&lt;/code&gt; du fichier principal &lt;code&gt;~/.config/wmfsrc&lt;/code&gt; permet justement de mettre WMFS à son goût.&lt;/p&gt;
+
+&lt;p&gt;Du côté du lexique, &lt;strong&gt;bars&lt;/strong&gt; désigne évidemment les barres d&amp;#8217;informations, &lt;code&gt;tags&lt;/code&gt; — ici — les boutons de chaque espace de travail, et enfin &lt;code&gt;client&lt;/code&gt; désigne une fenêtre.&lt;br /&gt;Les options se terminant par &lt;code&gt;_statusline&lt;/code&gt; permettent d&amp;#8217;afficher, grâce à &lt;a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'&gt;la syntaxe spécifique&lt;/a&gt;, du contenu dans la zone souhaitée. C&amp;#8217;est ainsi, par exemple, qu&amp;#8217;un label « &lt;strong&gt;··· Actif&lt;/strong&gt; » apparait sur mes clients qui ont le focus.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Mon fichier wmfsrc est disponible en entier sur &lt;a href='https://github.com/Schoewilliam/configs/blob/master/wmfs/wmfsrc'&gt;mon dépôt git&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id='statusbars'&gt;Statusbars&lt;/h2&gt;
+
+&lt;p&gt;Pour grossir le trait, avec la commande &lt;code&gt;$ wmfs -c status &amp;quot;testbar BLABLA&amp;quot;&lt;/code&gt;, « BLABLA » apparaitra dans la zone &lt;em&gt;status&lt;/em&gt; de la barre du nom « &lt;em&gt;testbar&lt;/em&gt; ». Là où c&amp;#8217;est intéressant, c&amp;#8217;est qu&amp;#8217;on peut donc s&amp;#8217;en servir, pour afficher en temps réel, &lt;strong&gt;le résultat d&amp;#8217;un script conky&lt;/strong&gt; :&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='c'&gt;#!/bin/sh  &lt;/span&gt;
+conky -c ~/.config/wmfs/scripts/conkyrc_top | &lt;span class='k'&gt;while &lt;/span&gt;&lt;span class='nb'&gt;true&lt;/span&gt;; &lt;span class='nb'&gt;read &lt;/span&gt;line; &lt;span class='k'&gt;do &lt;/span&gt;wmfs -c status &lt;span class='s2'&gt;&amp;quot;testbar $line&amp;quot;&lt;/span&gt;; &lt;span class='k'&gt;done&lt;/span&gt; &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Évidemment l&amp;#8217;idéal serait de lancer tout cela au démarrage de la session X.&lt;/p&gt;
+
+&lt;p&gt;Puisque conky nous permet de gratter facilement les informations dont on a besoin, grâce à ses fonctions, il ne nous manque plus qu&amp;#8217;à y coupler &lt;a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'&gt;la syntaxe&lt;/a&gt; :&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;out_to_console yes
+out_to_x no
+background yes
+update_interval 1
+total_run_times 0
+no_buffers yes
+
+TEXT
+^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/clock.png&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BBBBBB; Uptime:&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BDE077; &lt;span class='nv'&gt;$uptime_short&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;444444;   |   &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BBBBBB; HDD:&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0; &lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;fs_used_perc&lt;/span&gt;&lt;span class='p'&gt; /&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;% &lt;span class='o'&gt;]&lt;/span&gt; ^p&lt;span class='o'&gt;[&lt;/span&gt;right;8;10;0;&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;fs_used_perc&lt;/span&gt;&lt;span class='p'&gt; /&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;;100;&lt;span class='se'&gt;\#&lt;/span&gt;445544;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0;ckyhdd&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;urxvt -e df -h&lt;span class='o'&gt;)&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;444444;   |   &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/ship.png&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BBBBBB; Kernel:&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;FDA53C; &lt;span class='nv'&gt;$kernel&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;444444;   |   &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BBBBBB; IP:&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;E8DD9E; &lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;addr&lt;/span&gt;&lt;span class='p'&gt; wlan0&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;urxvt -e wicd-curses&lt;span class='o'&gt;)&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;444444;   |   &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BBBBBB; Volume: &lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0;&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;exec&lt;/span&gt;&lt;span class='p'&gt; amixer get Master | grep &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Mono: P&amp;quot;&lt;/span&gt;&lt;span class='p'&gt; | awk &lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;{print $4}&amp;#39;&lt;/span&gt;&lt;span class='p'&gt; | grep -oE &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;[[:digit:]]{1,}&amp;quot;&lt;/span&gt;&lt;span class='p'&gt;%&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt; &lt;span class='o'&gt;](&lt;/span&gt;1;spawn;urxvt -e alsamixer&lt;span class='o'&gt;)&lt;/span&gt;  ^p&lt;span class='o'&gt;[&lt;/span&gt;right;8;10;0;&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;exec&lt;/span&gt;&lt;span class='p'&gt; amixer get Master | grep &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;Mono: P&amp;quot;&lt;/span&gt;&lt;span class='p'&gt; | awk &lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;{print $4}&amp;#39;&lt;/span&gt;&lt;span class='p'&gt; | grep -oE &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;[[:digit:]]{1,}&amp;quot;&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;;100;&lt;span class='se'&gt;\#&lt;/span&gt;445544;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0;ckyhdd&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;urxvt -e alsamixer&lt;span class='o'&gt;)&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;444444;   |   &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/clock.png&lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\ &lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;CCCCCC; &lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;time&lt;/span&gt;&lt;span class='p'&gt; %a %d %b&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;&lt;span class='o'&gt;]&lt;/span&gt; ^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0; &lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;time&lt;/span&gt;&lt;span class='p'&gt; %H:%M&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;   &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Voilà qui nous donne magnifiquement :&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/wmfs/wmfs-status1.png'&gt;&lt;img alt='Status Top' class='align' src='/images/wmfs/wmfs-status1.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;C&amp;#8217;est exact, puisque grâce à cette mystérieuse syntaxe, au-delà d&amp;#8217;afficher des informations ô combien utiles, notre statusbar sera &lt;strong&gt;interactive&lt;/strong&gt; aux clics de la souris.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/wmfs/wmfs-moc.png'&gt;&lt;img alt='MOC intégré à la statusbar de WMFS' class='align' src='/images/wmfs/wmfs-moc.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(Dans le cas d&amp;#8217;un script conky :)&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;if_running&lt;/span&gt;&lt;span class='p'&gt; mocp&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;if_match&lt;/span&gt;&lt;span class='p'&gt; &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;${exec mocp -Q %state}&amp;quot;&lt;/span&gt;&lt;span class='p'&gt; == &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;PLAY&amp;quot;&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BDE077;&lt;span class='o'&gt;{&lt;/span&gt; &lt;span class='o'&gt;]&lt;/span&gt;^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/pause.png&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;mocp -G&lt;span class='o'&gt;)&lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;BDE077; &lt;span class='o'&gt;}]&lt;/span&gt;&lt;span class='nv'&gt;$endif&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;if_match&lt;/span&gt;&lt;span class='p'&gt; &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;${exec mocp -Q %state}&amp;quot;&lt;/span&gt;&lt;span class='p'&gt; == &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;PAUSE&amp;quot;&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;FDA53C;&lt;span class='o'&gt;{&lt;/span&gt; &lt;span class='o'&gt;]&lt;/span&gt;^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/play.png&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;mocp -G&lt;span class='o'&gt;)&lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;FDA53C; &lt;span class='o'&gt;}]&lt;/span&gt;&lt;span class='nv'&gt;$endif&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;if_match&lt;/span&gt;&lt;span class='p'&gt; &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;${exec mocp -Q %state}&amp;quot;&lt;/span&gt;&lt;span class='p'&gt; == &lt;/span&gt;&lt;span class='s2'&gt;&amp;quot;STOP&amp;quot;&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0;&lt;span class='o'&gt;{&lt;/span&gt; &lt;span class='o'&gt;]&lt;/span&gt;^i&lt;span class='o'&gt;[&lt;/span&gt;right;0;0;/home/william/.config/wmfs/icons/stat/stop.png&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;mocp -p&lt;span class='o'&gt;)&lt;/span&gt;^s&lt;span class='o'&gt;[&lt;/span&gt;right;&lt;span class='se'&gt;\#&lt;/span&gt;A6D4E0; &lt;span class='o'&gt;}&lt;/span&gt;  &lt;span class='o'&gt;]&lt;/span&gt;&lt;span class='nv'&gt;$endif&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+&lt;span class='nv'&gt;$endif&lt;/span&gt;&lt;span class='se'&gt;\&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Littéralement&lt;/strong&gt;; on vérifie si &lt;em&gt;mocp&lt;/em&gt; est lancé (&lt;strong&gt;ligne 1&lt;/strong&gt;);&lt;br /&gt;si MOC est en mode PLAY, afficher l&amp;#8217;image &lt;code&gt;~/.config/wmfs/icons/stat/pause.png&lt;/code&gt; — cette même image, lancera la commande &lt;code&gt;mocp -G&lt;/code&gt; (&lt;em&gt;toggle play/pause&lt;/em&gt;) si elle est cliquée (&lt;strong&gt;ligne 2&lt;/strong&gt;);&lt;br /&gt;enfin, on réitère pour les actions Pause, et Stop (&lt;strong&gt;lignes 3 et 4&lt;/strong&gt;) en changeant les éléments nécessaires.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;La totalité de mes conky sur mon &lt;a href='https://github.com/Schoewilliam/configs/tree/master/wmfs/scripts'&gt;&lt;strong&gt;dépôt git&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;On terminera sur la fonctionnalité phare de cette syntaxe : les &lt;strong&gt;graphiques&lt;/strong&gt;, et &lt;strong&gt;barres de progression&lt;/strong&gt;. On n&amp;#8217;a que trois éléments à fournir : les couleurs, la valeur actuelle, et la valeur maximale. Notre cher WMFS se charge du reste.&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;^g&lt;span class='o'&gt;[&lt;/span&gt;left;80;10;&lt;span class='k'&gt;${&lt;/span&gt;&lt;span class='nv'&gt;cpu&lt;/span&gt;&lt;span class='k'&gt;}&lt;/span&gt;;100;&lt;span class='se'&gt;\#&lt;/span&gt;333333;&lt;span class='se'&gt;\#&lt;/span&gt;FDA53C;ckycpu&lt;span class='o'&gt;](&lt;/span&gt;1;spawn;urxvt -e htop&lt;span class='o'&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Sur le modèle &lt;code&gt;^g[{alignement};{largeur};{hauteur};{valeur actuelle};{valeur maximale};{couleur BG};{couleur FG};{ID du graphe}](1;spawn;{commande à lancer au clic})&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id='capture_finale'&gt;Capture finale&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href='/images/captures/2012-04-14.png'&gt;&lt;img alt='Capture finale' class='align center' src='/images/captures/2012-04-14.png' width='685px' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Puisqu&amp;#8217;il aurait été évidemment un crime abominable, reconnu dans 20 pays occidentaux, de terminer ce petit billet sans même une capture d&amp;#8217;écran.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Adoption du clavier BÉPO : 8 mois après.</title>
+   <link href="http://schoewilliam.legtux.org/2012/03/10/adoption-du-clavier-bepo-8-mois-apres.html"/>
+   <updated>2012-03-10T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2012/03/10/adoption-du-clavier-bepo-8-mois-apres</id>
+   <content type="html">&lt;p&gt;Il y a 8 mois environ, je parlais de ma décision de &lt;a href='/2011/07/08/adoption-du-clavier-bepo.html'&gt;changer radicalement de disposition de clavier&lt;/a&gt;. Quel petit fou étais-je ?&lt;br /&gt;Il faut savoir que BÉPO est une disposition conçue selon &lt;strong&gt;la méthode Dvorak&lt;/strong&gt;. Cette dernière pense et conçoit une disposition de clavier de façon ergonomique et logique ; mais &lt;a href='http://bepo.fr/wiki/Accueil'&gt;&lt;strong&gt;le site du projet&lt;/strong&gt;&lt;/a&gt; vous en apprendra davantage.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;L&amp;#8217;intérêt ?&lt;/strong&gt; BÉPO est à la fois bien &lt;strong&gt;mieux adaptée à la langue française&lt;/strong&gt; — grâce à sa palette de caractères accentués et spéciaux typiques du français — et bien plus &lt;strong&gt;ergonomique&lt;/strong&gt; (cf. mon &lt;a href='/2011/07/08/adoption-du-clavier-bepo.html'&gt;billet explicatif&lt;/a&gt;). Que vous me croyiez ou non, je fais bien moins de fautes de frappe et suis &lt;strong&gt;bien plus à l&amp;#8217;aise&lt;/strong&gt; qu&amp;#8217;à la vieille époque de la AZERTY.&lt;/p&gt;
+
+&lt;h2 id='je_vais_bien_tout_va_bien'&gt;Je vais bien. Tout va bien.&lt;/h2&gt;
+
+&lt;p&gt;Non je ne suis pas mort. Les 3 - 4 premières semaines ont été sacrément difficiles — dur de revenir subitement à une vitesse de frappe digne d&amp;#8217;un escargot en fauteuil roulant, dont les roues sont mal huilées.&lt;/p&gt;
+
+&lt;p&gt;Aujourd&amp;#8217;hui, je n&amp;#8217;utilise &lt;strong&gt;aucun autocollant, aucun clavier particulier&lt;/strong&gt;, mais bel et bien mon clavier classique AZERTY accompagné de &lt;strong&gt;la totalité de mes 10 doigts&lt;/strong&gt;. Car finalement, écrire à l&amp;#8217;aveugle en BÉPO est particulièrement suffisant et tout aussi agréable. Certes, je tiens secret un petit pense-bête sous la main, en cas de léger trou de mémoire.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Il ne sagit que dun choix' class='align center' src='/images/bepo/bepo-gnome.png' /&gt;&lt;/p&gt;
+
+&lt;h2 id='recommand_'&gt;Recommandé !&lt;/h2&gt;
+
+&lt;p&gt;J&amp;#8217;aurais bien voulu faire l&amp;#8217;un de ces tests de rapidité et d&amp;#8217;efficacité de frappe, mais puisque je n&amp;#8217;en ai fait aucun il y a 8 mois à titre comparatif, l&amp;#8217;expérience perd tout intérêt évocateur.&lt;br /&gt;&lt;strong&gt;Mais&lt;/strong&gt; j&amp;#8217;aimerais que l&amp;#8217;on réfléchisse tout de même à la disposition majoritairement utilisée. AZERTY — ou même QWERTY — ont été conçues par des sadiques. Absolument aucune logique et aucun avantage particulier ne justifient leur utilisation de masse.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Il suffit d&amp;#8217;essayer.&lt;/strong&gt; — Car on n&amp;#8217;est finalement pas seul : une documentation enrichie d&amp;#8217;astuces et d&amp;#8217;exercices quotidiens à pratiquer nous motive. Évidemment, le changement peut être radical, mais à moyen terme, voire à court terme, il ne peut être autre que bénéfique.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Earthquake, un client Twitter pour le terminal.</title>
+   <link href="http://schoewilliam.legtux.org/2012/01/06/earthquake-un-beau-client-twitter-pour-la-console.html"/>
+   <updated>2012-01-06T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2012/01/06/earthquake-un-beau-client-twitter-pour-la-console</id>
+   <content type="html">&lt;p&gt;Dans la série applications coups de cœur, il y a &lt;a href='https://github.com/jugyo/earthquake' target='_blank' title='Le Github de Earthquake'&gt;Earthquake &lt;em&gt;(le github pour tout savoir sur son mode d'emploi)&lt;/em&gt;&lt;/a&gt;. Écrit en ruby, ce client Twitter pour le terminal, a tout pour plaire : élégance, fonctionnalités, et fabuleusement pratique. J&amp;#8217;en avais déjà testé un certain nombre (Tyrs, pour n&amp;#8217;en citer qu&amp;#8217;un), mais aucun ne proposait une telle fiabilité, et surtout, une mise à jour &lt;strong&gt;automatique&lt;/strong&gt; de la timeline. Et comme si tout cela ne suffisait pas, Earthquake est extensible grâce à des &lt;a href='https://github.com/jugyo/earthquake/wiki' target='_blank'&gt;plugins&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/earthquake.png'&gt;&lt;img alt='Flux Earthquake' class='align' src='/images/earthquake.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;L&amp;#8217;installation est simple comme deux lignes de commandes;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;On télécharge la source&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone git://github.com/jugyo/earthquake.git&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Vérifions les dépendances&lt;/strong&gt;&lt;br /&gt;Il nous faudra ici les paquets &lt;code&gt;openssl&lt;/code&gt; et &lt;code&gt;readline&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Et enfin&lt;/strong&gt;, on installe. :D&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install earthquake
+$ ./earthquake/bin/earthquake&lt;/code&gt;&lt;/pre&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Adoption du clavier BÉPO</title>
+   <link href="http://schoewilliam.legtux.org/2011/07/08/adoption-du-clavier-bepo.html"/>
+   <updated>2011-07-08T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2011/07/08/adoption-du-clavier-bepo</id>
+   <content type="html">&lt;p&gt;On connait bien sûr la disposition de clavier standard francophone AZERTY. Celui-ci contient la plupart des caractères essentiels à l&amp;#8217;écriture d&amp;#8217;un Français correct (dans une très certaine limite). Eh bien mon ami, sache qu&amp;#8217;il en existe d&amp;#8217;autres qui ne manquent pas d&amp;#8217;avantages, dont la &lt;a href='http://bepo.fr/wiki/Accueil'&gt;disposition BÉPO&lt;/a&gt;. Et c&amp;#8217;est à partir de ce moment que je prends le rôle de promoteur non-corrompu.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Un clavier à la disposition BÉPO' class='align center' src='/images/bepo/clavier.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Cette fameuse disposition a été conçue &lt;strong&gt;selon la méthode Dvorak&lt;/strong&gt; ; elle utilise une ergonomie des plus ingénieuses. En plaçant les lettres les plus usuelles de l&amp;#8217;alphabet sur la ligne centrale du clavier, et en concentrant les voyelles sur la gauche, une réelle logique se met en place et permet une frappe à dix doigts facilitée. (&lt;em&gt;image explicative ci-dessous&lt;/em&gt;)&lt;br /&gt;Ah mais ce n&amp;#8217;est pas tout, puisque BÉPO contient de manière simple tous ces caractères que nous avons toujours eu du mal à taper : les guillemets &lt;code&gt;«&lt;/code&gt; et &lt;code&gt;»&lt;/code&gt; — les majuscules particulières &lt;code&gt;É&lt;/code&gt; &lt;code&gt;È Ë À Ầ Æ Œ Ö Ù&lt;/code&gt; et notamment &lt;code&gt;Ç&lt;/code&gt; (qui nous manque souvent cruellement) — Le tiret &lt;em&gt;quadratin&lt;/em&gt; &lt;code&gt;—&lt;/code&gt; — les symboles monétaires — et autres moins courants pour nous francophone… Enfin, il faut savoir que &lt;strong&gt;la disposition BÉPO est libre de droits&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aimant me qualifier de francophile, je me suis décidé et me suis lancé dans l&amp;#8217;apprentissage.&lt;br /&gt;Avant toute chose, il nous faudrait le matériel, dirait chacun. Or, cette disposition est configurable sur &lt;strong&gt;n&amp;#8217;importe quel système d&amp;#8217;exploitation&lt;/strong&gt;, et surtout utilisable avec &lt;strong&gt;n&amp;#8217;importe quel clavier&lt;/strong&gt;. Étonnant n&amp;#8217;est-ce pas ? Oui, l&amp;#8217;objectif principal est bien sûr de pouvoir taper à l&amp;#8217;aveugle, sans avoir à regarder son clavier. Mais nous sommes durs en affaires ; il suffira alors soit de quelques minutes pour transformer votre clavier actuel (autocollants maison, collages et découpages), soit de 4 petits euros pour acheter &lt;a href='https://catalogue-ca.beaujoie.com/produits/21-Changer_la_langue_d_un_clavier_d_ordinateur/96-BEPO/'&gt;des autocollants pré-faits&lt;/a&gt;, et si votre argent vous encombre de trop vous pourriez éventuellement acheter directement un &lt;a href='http://bepo.fr/wiki/P%C3%A9riph%C3%A9riques'&gt;clavier&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='Comparaison dutilisation entre la disposition AZERTY et la disposition ergonomique BÉPO' class='align center' src='/images/bepo/bepo-stats.png' width='300' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Il est indiqué que l&amp;#8217;apprentissage et l&amp;#8217;adaptation totale (= vitesse de frappe habituelle retrouvée) peuvent s&amp;#8217;installer en &lt;strong&gt;4 à 8 semaines&lt;/strong&gt;.&lt;br /&gt;Les &lt;a href='http://bepo.fr/wiki/Exercices'&gt;exercices de frappe&lt;/a&gt; proposés m&amp;#8217;auront permis de m&amp;#8217;en sortir et de mémoriser la disposition des touches intuitivement. Aujourd&amp;#8217;hui et après 5 semaines, je suis capable d&amp;#8217;écrire sans regarder mon clavier en utilisant &lt;strong&gt;10 doigts&lt;/strong&gt;, ou presque (le terrible symptôme du doigt qui tombe à coté).&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Somptueux GNOME 3</title>
+   <link href="http://schoewilliam.legtux.org/2011/06/05/gnome-3.html"/>
+   <updated>2011-06-05T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2011/06/05/gnome-3</id>
+   <content type="html">&lt;p&gt;Ils fleurissent tous ces articles sur le web à propos de GNOME 3, et sa nouvelle interface. Et c&amp;#8217;est pour ça que je ne la décrirai pas, je te redirige ami lecteur vers &lt;a href='http://gnome.org'&gt;cette page&lt;/a&gt; (parmi tant d&amp;#8217;autres articles) qui t&amp;#8217;en apprendra plus sur cette nouvelle interface.&lt;br /&gt;Cela fait maintenant presque 1 mois que je me forge mon humble et ridicule avis.&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt='GNOME3' class='align center' src='/images/gnome/logo.png' /&gt;&lt;/p&gt;
+
+&lt;p&gt;Après avoir vaincu les ténèbres d&amp;#8217;une mise à niveau ( Fedora 14 vers Fedora 15 beta ), je me décide à m&amp;#8217;adapter à ce nouvel environnement. Comme il est critiqué le pauvre ! &amp;#8220;Trop orienté tactile&amp;#8221;, &amp;#8220;trop gros&amp;#8221;, &amp;#8220;pas pratique&amp;#8221;, &amp;#8220;trop gourmant&amp;#8221;, &amp;#8220;incompréhensible&amp;#8221;, &lt;em&gt;et cetera&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;En étant sincère, je dois dire que mon avis était exactement le même à la vue du nouveau bureau. Mais&amp;#8230; jour après jour, semaine après semaine, utilisation après utilisation, ce nouveau gnome me plaît. Bien sûr qu&amp;#8217;il est &lt;strong&gt;ergonomique&lt;/strong&gt;. La gestion des fenêtres est aussi délicieuse que ces plats de spaghettis du samedi soir, autant que ce somptueux thème (GTK3) simple et particulièrement élégant, &lt;em&gt;Adwaita&lt;/em&gt;. Une nouvelle façon de penser qui s&amp;#8217;adapte magnifiquement avec nos activités modernes, et notre manière de les gérer.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/gnome/overview.png'&gt;&lt;img alt='Capture décran — Fedora 15' class='align center' src='/images/gnome/overview.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mais voyons, il ne plait pas à vue, « pourquoi ? » me diriez-vous. Parce qu&amp;#8217;il &lt;strong&gt;change&lt;/strong&gt; : c&amp;#8217;est assez inhabituel d&amp;#8217;avoir une telle ergonomie pour un ordinateur de bureau. Le changement radical ne plaît généralement pas.&lt;br /&gt;Cependant, j&amp;#8217;ai lu à travers le web. Et je soulèverais qu&amp;#8217;approximativement (et selon une statistique précise et délicatement établie par mes globes oculaires), 2 blogueurs sur 3 reconnaissent avoir &lt;strong&gt;aimé et adopté&lt;/strong&gt; le dernier gnome après utilisation. Car oui, GNOME Shell c&amp;#8217;est plusieurs années de travail et de réflexion, contrairement à &lt;em&gt;un certain autre&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Cher &lt;a href='http://doc.ubuntu-fr.org/unity'&gt;Unity&lt;/a&gt;, Ô environnement spécialement développé pour/par Ubuntu, gare à tes arrières et à tes convictions. Ton intervention surprise en lieu et place &lt;del datetime='2011-07-30T23:10:42+00:00'&gt;concurrentielle&lt;/del&gt; de GNOME Shell aidera à ta perte de crédibilité.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Tâchons simplement de profiter de ce nouveau gnome. Et rassurons-nous, les problèmes de jeunesses, peu soient-ils, ne survivent pas. Pointons du doigt le prochain horizon : &lt;strong&gt;GNOME 3.2&lt;/strong&gt;.&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
+
+

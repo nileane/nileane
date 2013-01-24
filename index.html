@@ -1,0 +1,33 @@
+---
+title: "schoewilliam · carnet d'un habitant de la banquise GNU/Linuxienne"
+description: "Carnet web d'un habitant de la banquise GNU/Linuxienne — William Dorffer, schoewilliam."
+layout: default
+role: home
+lang: fr
+---
+<section>
+{% assign first_post = site.posts.first %}
+<time class="top" style="margin:0;">{{ first_post.date | date_to_long_string }}</time>
+<article>
+
+{% if first_post.link %}
+        <h1><a target=_blank href="{{ first_post.link | escape }}">{{ first_post.title }}</a>&nbsp;→</h1>
+{% else %}
+        <h1><a style="color: #525252" href="{{ first_post.url }}">{{ first_post.title }}</a></h1> 
+{% endif %}
+
+<div id="post"{% if page.link %} class="link"{% endif %}>
+        {{ first_post.content }}
+</div>
+
+<footer>
+    <span class="tags">
+    {% for tag in first_post.tags %}
+        <a href="/tag/{{ tag }}"><span>#</span>{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+    {% endfor %}
+    </span><br>
+	<a href="{{ first_post.url }}#comments">Laisser un commentaire &rarr;</a>
+</footer>
+</article>
+
+</section>
