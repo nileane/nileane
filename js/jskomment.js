@@ -713,7 +713,7 @@ JSKOMMENT.createAddCommentElement = function () {
     elem.find('.jskomment_previous').show();
     elem.find('.jskomment_previous').attr('add_comment', true);
     var title = elem.attr('_title');
-    var name='votre pseudonyme';
+    var name='';
     try { name = localStorage.getItem('jskomment_username') || name; } catch (e) {}
     var form = $('<form class="jskomment_form jskomment_add_comment">'
     +'<input id="title" type="hidden" name="title" value="'+title+'"/>'

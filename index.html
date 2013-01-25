@@ -26,8 +26,7 @@ lang: fr
         <a href="/tag/{{ tag }}"><span>#</span>{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
     {% endfor %}
     </span><br>
-	<a href="{{ first_post.url }}#comments">Laisser un commentaire &rarr;</a>
 </footer>
 </article>
-
+<a href="{{ first_post.url }}#comments" class="jskomment_add_comment">Discussion / Laisser un commentaire &rarr;</a>
 </section>

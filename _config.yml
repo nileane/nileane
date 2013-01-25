@@ -32,6 +32,20 @@ about:
 - text: à propos
   url: /apropos
 
+ailleurs:
+- text: Github
+  url: https://github.com/Schoewilliam
+- text: StatusNet
+  url: http://identi.ca/schoewilliam
+- text: reddit
+  url: http://www.reddit.com/user/schoelcher/
+- text: Diaspora*
+  url: https://joindiaspora.com/u/schoewilliam
+- text: Twitter
+  url: http://twitter.com/schoewilliam
+- text: DeviantArt
+  url: http://schoewilliam.deviantart.com/
+
 blogoliste:
 - text: Postblue
   url: http://postblue.info

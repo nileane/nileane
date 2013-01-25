@@ -4,12 +4,40 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-01-24T21:03:05+04:00</updated>
+ <updated>2013-01-25T19:46:37+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
  </author>
  
+ 
+ <entry>
+   <title>Expérience avec Jekyll</title>
+   <link href="http://schoewilliam.legtux.org/2013/01/25/experience-avec-jekyll.html"/>
+   <updated>2013-01-25T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2013/01/25/experience-avec-jekyll</id>
+   <content type="html">&lt;p&gt;On a, il y a quelques jours, métamorphosé cet espace sur le web.&lt;br /&gt;Le principal motivateur de cette migration se trouve au cœur même du blog, ainsi que ma manière de le gérer.&lt;/p&gt;
+
+&lt;p&gt;À raison d&amp;#8217;un rythme de publication léger, et d&amp;#8217;un classement linéaire (chronologique), la véritable machine qu&amp;#8217;est Wordpress finit par logiquement paraitre surdimensionnée. J&amp;#8217;ai donc opté pour le fameux &lt;strong&gt;Jekyll, générateur de blog statique, en ruby&lt;/strong&gt; !&lt;/p&gt;
+
+&lt;h2 id='avantages_tout_a'&gt;Avantages, tout ça.&lt;/h2&gt;
+
+&lt;p&gt;Pour en expliquer le contexte ; les fichiers source sont en local, de là Jekyll génère un site &lt;strong&gt;statique&lt;/strong&gt;, qu&amp;#8217;il ne reste plus qu&amp;#8217;à mettre à disposition sur le serveur (dans mon cas, à téléverser via FTP *¹). Et qui dit statique, dit très léger, et très rapide à charger.&lt;br /&gt;Enfin, &lt;strong&gt;comble des avantages : pouvoir rédiger ses articles en markdown, avec vim.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;*¹&lt;/strong&gt; &lt;em&gt;J&amp;#8217;utilise par ailleurs pour ce téléversement via FTP, l&amp;#8217;outil &lt;strong&gt;glynn&lt;/strong&gt;. Son fonctionnement est simple : on exécute la commande &lt;code&gt;glynn&lt;/code&gt; à la racine de notre source, entre les identifiants FTP, et glynn se charge du reste ; c&amp;#8217;est-à-dire mettre à jour la génération statique, et la téléverser&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Puisque statique, un tel blog ne peut intégrer de commentaires, si ce n&amp;#8217;est en javascript. J&amp;#8217;ai rapidement testé &lt;a href='http://talka.tv'&gt;Talkatv&lt;/a&gt;, maaaaais… non. Un peu radotant, et nécessite aux lecteures d&amp;#8217;avoir à s&amp;#8217;incrire sur l&amp;#8217;instance. Ce sera donc, sous le conseil d&amp;#8217;&lt;a href='https://olivier.dossmann.net/'&gt;Olivier&lt;/a&gt; — que je salue — &lt;a href='http://code.google.com/p/jskomment/'&gt;&lt;strong&gt;JSkomment&lt;/strong&gt;&lt;/a&gt;. Il se trouve être très efficace et simple, et juste parfait pour mon utilisation.&lt;/p&gt;
+
+&lt;h2 id='cela_reste_joli'&gt;Cela reste joli&lt;/h2&gt;
+
+&lt;p&gt;Du moins, je l&amp;#8217;espère. Question apparence, on m&amp;#8217;a répondu « &lt;em&gt;Eh bien, tu n&amp;#8217;as pas peur du minimalisme !&lt;/em&gt; ». Voilà qui résume magnifiquement.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/captures/blog-solarized.png'&gt;&lt;img alt='capture décran Juin 2012' class='align' src='/images/captures/blog-solarized-mini.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;En bonus enfin, ci-dessus, la capture d&amp;#8217;écran de l&amp;#8217;un de mes premiers essais de Jekyll, datant de Juin 2012… Gare aux yeux, &lt;a href='http://ethanschoonover.com/solarized'&gt;ça pique&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aussi, comme à mon habitude, tout est très loin d&amp;#8217;être réservé. Les fichiers source de mon carnet sont à retrouver sur &lt;a href='https://github.com/Schoewilliam/schoewilliam.legtux.org'&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/a&gt;, y compris styles, structures, sources de mes billets (en markdown), et j&amp;#8217;en passe. Libre aux langoustes de s&amp;#8217;en inspirer !&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Monsterwm : configuration et joyeusetés</title>

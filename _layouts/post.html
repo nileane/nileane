@@ -30,14 +30,6 @@ lang: fr
 </article>
 
 {%  if page.comments != false %}
-<div class="jskomment" id="comments"></div>
+<div class="jskomment" id="comments" title="{{ site.url }}{{ page.url }}"></div>
 <script src="/js/jskomment.js"></script>
-
-<noscript>
-    <p>
-        Il semble que vous ayez Javascript de désactivé !
-        Vous pouvez tout de même vous rendre sur <a href="http://talka.tv/comment/list/?url=http://schoewilliam.legtux.org{{ page.url }}">
-        la page de commentaires statique</a> afin de lire les commentaires, ou en poster.
-    </p>
-</noscript>
 {% endif %}

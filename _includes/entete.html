@@ -12,6 +12,13 @@
 	<div class="sec">
 	    <nav>
 		<ul>
+		<li><a href="#">ailleurs…</a>
+			<ul>
+		     {% for link in site.ailleurs %}
+			<li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+		     {% endfor %}
+			</ul>
+		</li>
 	    {% for link in site.about %}
 		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
 	    {% endfor %}
