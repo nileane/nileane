@@ -963,7 +963,7 @@ JSKOMMENT.mainContinue = function () {
   JSKOMMENT.disableForms = function() {
     var submit = $('.jskomment input[type="submit"]');
     submit.attr("disabled", true);
-    submit.after($('<img class="modal-ajax-wait" src="'+JSKOMMENT.url+'/modal-ajax-wait.gif"/>'));
+    submit.after($('<img class="modal-ajax-wait" src="/images/loading_140x59.gif" />'));
   }
   
   /**  re-enables the submit form */
