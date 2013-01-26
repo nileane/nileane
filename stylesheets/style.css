@@ -480,6 +480,11 @@ a.jskomment_add_comment:hover {
     background-color: #2E3740;
     color: #ccc;
 }
+.modal-ajax-wait {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
 
 
 

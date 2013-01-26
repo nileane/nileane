@@ -4,7 +4,7 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-01-25T20:03:45+04:00</updated>
+ <updated>2013-01-26T18:58:23+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
@@ -18,7 +18,9 @@
    <id>http://schoewilliam.legtux.org/2013/01/25/experience-avec-jekyll</id>
    <content type="html">&lt;p&gt;On a, il y a quelques jours, métamorphosé cet espace sur le web.&lt;br /&gt;Le principal motivateur de cette migration se trouve au cœur même du blog, ainsi que ma manière de le gérer.&lt;/p&gt;
 
-&lt;p&gt;À raison d&amp;#8217;un rythme de publication léger, et d&amp;#8217;un classement linéaire (chronologique), la véritable machine qu&amp;#8217;est Wordpress finit par logiquement paraitre surdimensionnée. J&amp;#8217;ai donc opté pour le fameux &lt;strong&gt;Jekyll, générateur de blog statique, en ruby&lt;/strong&gt; !&lt;/p&gt;
+&lt;p&gt;&lt;a href='http://en.wikipedia.org/wiki/File:Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg'&gt;&lt;img alt='Dr. Jekyll and Mr. Hyde' class='align right' src='/images/drjekyllmrhyde.jpg' width='350px' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;À raison d&amp;#8217;un rythme de publication léger, et d&amp;#8217;un classement linéaire (chronologique), la véritable machine qu&amp;#8217;est Wordpress finit par logiquement paraitre surdimensionnée. J&amp;#8217;ai donc opté pour le fameux &lt;strong&gt;&lt;a href='https://github.com/mojombo/jekyll'&gt;Jekyll&lt;/a&gt;, générateur de blog statique, en ruby&lt;/strong&gt; !&lt;/p&gt;
 
 &lt;h2 id='avantages_tout_a'&gt;Avantages, tout ça.&lt;/h2&gt;
 
@@ -32,7 +34,7 @@
 
 &lt;p&gt;Du moins, je l&amp;#8217;espère. Question apparence, on m&amp;#8217;a répondu « &lt;em&gt;Eh bien, tu n&amp;#8217;as pas peur du minimalisme !&lt;/em&gt; ». Voilà qui résume magnifiquement.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href='/images/captures/blog-solarized.png'&gt;&lt;img alt='capture décran Juin 2012' class='align' src='/images/captures/blog-solarized-mini.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href='/images/captures/blog-solarized.png'&gt;&lt;img alt='capture décran Juin 2012' class='align center' src='/images/captures/blog-solarized-mini.png' /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;En bonus enfin, ci-dessus, la capture d&amp;#8217;écran de l&amp;#8217;un de mes premiers essais de Jekyll, datant de Juin 2012… Gare aux yeux, &lt;a href='http://ethanschoonover.com/solarized'&gt;ça pique&lt;/a&gt;.&lt;/p&gt;
 

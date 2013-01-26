@@ -9,7 +9,9 @@ tags:
 On a, il y a quelques jours, métamorphosé cet espace sur le web.  
 Le principal motivateur de cette migration se trouve au cœur même du blog, ainsi que ma manière de le gérer.
 
-À raison d'un rythme de publication léger, et d'un classement linéaire (chronologique), la véritable machine qu'est Wordpress finit par logiquement paraitre surdimensionnée. J'ai donc opté pour le fameux **Jekyll, générateur de blog statique, en ruby** !
+[![Dr. Jekyll and Mr. Hyde](/images/drjekyllmrhyde.jpg){: class="align right" width="350px"}](http://en.wikipedia.org/wiki/File:Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg)
+
+À raison d'un rythme de publication léger, et d'un classement linéaire (chronologique), la véritable machine qu'est Wordpress finit par logiquement paraitre surdimensionnée. J'ai donc opté pour le fameux **[Jekyll](https://github.com/mojombo/jekyll), générateur de blog statique, en ruby** !
 
 ## Avantages, tout ça.
 Pour en expliquer le contexte ; les fichiers source sont en local, de là Jekyll génère un site **statique**, qu'il ne reste plus qu'à mettre à disposition sur le serveur (dans mon cas, à téléverser via FTP \*¹). Et qui dit statique, dit très léger, et très rapide à charger.  
@@ -22,7 +24,7 @@ Puisque statique, un tel blog ne peut intégrer de commentaires, si ce n'est en 
 ## Cela reste joli
 Du moins, je l'espère. Question apparence, on m'a répondu « *Eh bien, tu n'as pas peur du minimalisme !* ». Voilà qui résume magnifiquement.  
 
-[![capture d'écran Juin 2012](/images/captures/blog-solarized-mini.png){: class="align"}](/images/captures/blog-solarized.png)
+[![capture d'écran Juin 2012](/images/captures/blog-solarized-mini.png){: class="align center"}](/images/captures/blog-solarized.png)
 
 En bonus enfin, ci-dessus, la capture d'écran de l'un de mes premiers essais de Jekyll, datant de Juin 2012… Gare aux yeux, [ça pique](http://ethanschoonover.com/solarized){: target="blank"}.
 
