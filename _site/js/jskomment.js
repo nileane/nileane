@@ -753,7 +753,7 @@ JSKOMMENT.init = function (elem) {
   // setting the title in _title
   // because the browser uses this field as tooltip
   $(elem).attr('_title',title);
-  $(elem).attr('title','Les commentaires pour ce billet');
+  $(elem).attr('title',' ');
   
   var jskomment_header = $('<div class="jskomment_header"></div>');
   jskomment_header.click(function() {$(elem).find('.jskomment_previous, .jskomment_add_comment').toggle();});
