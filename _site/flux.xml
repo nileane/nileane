@@ -4,12 +4,38 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-01-28T18:27:07+04:00</updated>
+ <updated>2013-02-16T18:24:52+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
  </author>
  
+ 
+ <entry>
+   <title>dunst: notifications minimalistes et élégantes</title>
+   <link href="http://schoewilliam.legtux.org/2013/02/16/dunst-notifications-minimalistes-et-elegantes.html"/>
+   <updated>2013-02-16T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2013/02/16/dunst-notifications-minimalistes-et-elegantes</id>
+   <content type="html">&lt;p&gt;On a découvert &lt;strong&gt;dunst&lt;/strong&gt; récemment, qui est un daemon de notifications qui conviendra aux utilisateurs de Tiling Window Managers — en particulier — car d&amp;#8217;un aspect magnifiquement simpliste et agréablement léger.&lt;br /&gt;Et lorsque les couleurs sont bien choisies, obtenir de très jolis résultats devient un véritable délice :3. Petite démonstration ?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/dunst/dunst.gif'&gt;&lt;img alt='démonstration de Dunst' class='align center' src='/images/dunst/dunst.gif' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;S&amp;#8217;il y a plusieurs avantages à retenir je dirais successivement : affichage de &lt;strong&gt;plusieurs notifications simultanément&lt;/strong&gt; (tel que sur l&amp;#8217;image ci-dessus), &lt;strong&gt;personnalisation poussée&lt;/strong&gt; (soit le choix des couleurs en fonction du niveau d&amp;#8217;urgence de la notification, le choix de la taille, la position, et autres concernant le comportement), et la possibilité de &lt;strong&gt;définir un délai d&amp;#8217;inactivité&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Concernant ce dernier point, c&amp;#8217;est magique. Si défini à 40s dans le fichier de configuration (&lt;code&gt;dunstrc&lt;/code&gt;), toutes les notifications qui apparaitront après un tel délai d&amp;#8217;inactivité (du clavier et de la souris) ne disparaîtront pas. Elles resteront affichées à l&amp;#8217;écran, jusqu&amp;#8217;à votre retour (soit le délai par défaut d&amp;#8217;affichage d&amp;#8217;une notification après un nouveau signe d&amp;#8217;activité).&lt;/p&gt;
+
+&lt;p&gt;Pour ce qui est de son fonctionnement, dunst écoute bien évidemment le fameux &lt;code&gt;notify-send&lt;/code&gt;. Et l&amp;#8217;on est d&amp;#8217;ailleurs en mesure, via cette commande, de &lt;strong&gt;choisir à la volée une couleur de fond/de texte&lt;/strong&gt;, tout comme une icône symbolique ; comme suit :&lt;/p&gt;
+&lt;div class='highlight'&gt;&lt;pre&gt;&lt;code class='bash'&gt;&lt;span class='nv'&gt;$ &lt;/span&gt;notify-send &lt;span class='s2'&gt;&amp;quot;Personnalisation&amp;quot;&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;de belles couleurs en perspective&amp;quot;&lt;/span&gt; -h string:bgcolor:#3B6B29 -h string:fgcolor:#D9FFCB
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;qui donnerait…&lt;/p&gt;
+
+&lt;p&gt;&lt;a href='/images/dunst/notify-colors.png'&gt;&lt;img alt='notify-send permet le choix de couleurs à la volée' class='align center' src='/images/dunst/notify-colors.png' /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mon fichier de configuration &lt;code&gt;dunstrc&lt;/code&gt; est donc à retrouver &lt;a href='https://github.com/Schoewilliam/configs/blob/master/dunst/dunstrc'&gt;sur Github&lt;/a&gt;, si vous souhaitez retrouver mes couleurs ou mes choix de positionnement.&lt;/p&gt;
+
+&lt;p&gt;Je vous invite enfin, bien évidemment, à consulter &lt;a href='https://github.com/knopwob/dunst'&gt;la documentation&lt;/a&gt; qui n&amp;#8217;est pas bien sorcière, je vous l&amp;#8217;assure. À noter finalement, pour nos amis Archlinuxien, que son installation ne demandera pas davantage qu&amp;#8217;un &lt;code&gt;pacman -S dunst&lt;/code&gt; ; ou, pour les plus téméraires &lt;code&gt;yaourt -S dunst-git&lt;/code&gt;.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Expérience avec Jekyll</title>
@@ -28,7 +54,7 @@
 
 &lt;p&gt;&lt;strong&gt;*¹&lt;/strong&gt; &lt;em&gt;J&amp;#8217;utilise par ailleurs pour ce téléversement via FTP, l&amp;#8217;outil &lt;strong&gt;glynn&lt;/strong&gt;. Son fonctionnement est simple : on exécute la commande &lt;code&gt;glynn&lt;/code&gt; à la racine de notre source, entre les identifiants FTP, et glynn se charge du reste ; c&amp;#8217;est-à-dire mettre à jour la génération statique, et la téléverser&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Puisque statique, un tel blog ne peut intégrer de commentaires, si ce n&amp;#8217;est en javascript. J&amp;#8217;ai rapidement testé &lt;a href='http://talka.tv'&gt;Talkatv&lt;/a&gt;, maaaaais… non. Un peu radotant, et nécessite aux lecteures d&amp;#8217;avoir à s&amp;#8217;incrire sur l&amp;#8217;instance. Ce sera donc, sous le conseil d&amp;#8217;&lt;a href='https://olivier.dossmann.net/'&gt;Olivier&lt;/a&gt; — que je salue — &lt;a href='http://code.google.com/p/jskomment/'&gt;&lt;strong&gt;JSkomment&lt;/strong&gt;&lt;/a&gt;. Il se trouve être très efficace et simple, et juste parfait pour mon utilisation.&lt;/p&gt;
+&lt;p&gt;Puisque statique, un tel blog ne peut intégrer de commentaires, si ce n&amp;#8217;est en javascript. J&amp;#8217;ai rapidement testé &lt;a href='http://talka.tv'&gt;Talkatv&lt;/a&gt;, maaaaais… non. Un peu radotant, et nécessite aux lecteurs d&amp;#8217;avoir à s&amp;#8217;incrire sur l&amp;#8217;instance. Ce sera donc, sous le conseil d&amp;#8217;&lt;a href='https://olivier.dossmann.net/'&gt;Olivier&lt;/a&gt; — que je salue — &lt;a href='http://code.google.com/p/jskomment/'&gt;&lt;strong&gt;JSkomment&lt;/strong&gt;&lt;/a&gt;. Il se trouve être très efficace et simple, et juste parfait pour mon utilisation.&lt;/p&gt;
 
 &lt;h2 id='cela_reste_joli'&gt;Cela reste joli&lt;/h2&gt;
 
@@ -48,7 +74,7 @@
    <id>http://schoewilliam.legtux.org/2013/01/11/monsterwm</id>
    <content type="html">&lt;p&gt;Comme j&amp;#8217;ai tendance à adorer le renouveau, je me suis mis en tête de tester autre chose que &lt;a href='http://localhost:4000/2012/04/14/wmfs-exposition-de-ma-configuration.html'&gt;WMFS&lt;/a&gt;, que je n&amp;#8217;avais pas quitté depuis mon arrivée sur Archlinux. Un Tiling Window Manager, c&amp;#8217;est certain. &lt;strong&gt;monsterwm&lt;/strong&gt; se présente comme « Tiny and monstrous ! ». Il n&amp;#8217;a qu&amp;#8217;un seul but : s&amp;#8217;occuper de nos fenêtres. C&amp;#8217;est ainsi qu&amp;#8217;il n&amp;#8217;inclut aucune barre d&amp;#8217;emblée, et s&amp;#8217;avère particulièrement léger.&lt;/p&gt;
 
-&lt;p&gt;Deux choix se présentent alors à nous : gardons cet aspect minimaliste de monsterwm (sans quelconque barre supérieure ou inférieure), ou justement lui en enrichir. J&amp;#8217;ai choisi cette seconde option dans un simple soucis de confort d&amp;#8217;utilisation. En effet, j&amp;#8217;ai vite ressenti le besoin de pouvoir me situer visuellement parmi mes bureaux virtuels.&lt;/p&gt;
+&lt;p&gt;Deux choix se présentent alors à nous : gardons cet aspect minimaliste de monsterwm (sans quelconque barre supérieure ou inférieure), ou justement lui en enrichir. J&amp;#8217;ai choisi cette seconde option dans un simple souci de confort d&amp;#8217;utilisation. En effet, j&amp;#8217;ai vite ressenti le besoin de pouvoir me situer visuellement parmi mes bureaux virtuels.&lt;/p&gt;
 
 &lt;p&gt;Concernant la configuration initale de monsterwm, je vous redirigerai volontiers vers mon &lt;a href='https://github.com/Schoewilliam/configs/blob/master/monsterwm/config.h'&gt;fichier de configuration personnel&lt;/a&gt;.&lt;/p&gt;
 
@@ -95,7 +121,7 @@
 &lt;span class='k'&gt;while &lt;/span&gt;&lt;span class='nb'&gt;read&lt;/span&gt; -t 2 -r wmout &lt;span class='o'&gt;||&lt;/span&gt; &lt;span class='nb'&gt;true&lt;/span&gt;; &lt;span class='k'&gt;do&lt;/span&gt;
     &lt;span class='c'&gt;# filter output to only what we want to match and parse&lt;/span&gt;
     &lt;span class='k'&gt;if&lt;/span&gt; &lt;span class='o'&gt;[[&lt;/span&gt; &lt;span class='nv'&gt;$wmout&lt;/span&gt; &lt;span class='o'&gt;=&lt;/span&gt;~ ^&lt;span class='o'&gt;(([[&lt;/span&gt;:digit:&lt;span class='o'&gt;]]&lt;/span&gt;+:&lt;span class='o'&gt;)&lt;/span&gt;+&lt;span class='o'&gt;[[&lt;/span&gt;:digit:&lt;span class='o'&gt;]]&lt;/span&gt;+ ?&lt;span class='o'&gt;)&lt;/span&gt;+.*&lt;span class='nv'&gt;$ &lt;/span&gt;&lt;span class='o'&gt;]]&lt;/span&gt;; &lt;span class='k'&gt;then&lt;/span&gt;
-&lt;span class='k'&gt;        &lt;/span&gt;&lt;span class='nb'&gt;read&lt;/span&gt; -ra desktops &amp;lt;&amp;lt;&amp;lt; &lt;span class='s2'&gt;&amp;quot;$wmout&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nb'&gt;unset &lt;/span&gt;r
+&lt;span class='k'&gt;        &lt;/span&gt;&lt;span class='nb'&gt;read&lt;/span&gt; -ra desktops &lt;span class='o'&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;$wmout&amp;quot;&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nb'&gt;unset &lt;/span&gt;r
             &lt;span class='k'&gt;for &lt;/span&gt;desktop in &lt;span class='s2'&gt;&amp;quot;${desktops[@]}&amp;quot;&lt;/span&gt;; &lt;span class='k'&gt;do&lt;/span&gt;
                 &lt;span class='c'&gt;# set values for&lt;/span&gt;
                 &lt;span class='c'&gt;# d - the desktop id&lt;/span&gt;
@@ -103,7 +129,7 @@
                 &lt;span class='c'&gt;# m - tiling layout/mode for that desktop&lt;/span&gt;
                 &lt;span class='c'&gt;# c - whether that desktop is the current (1) or not (0)&lt;/span&gt;
                 &lt;span class='c'&gt;# u - whether a window in that desktop has an urgent hint set (1) or not (0)&lt;/span&gt;
-                &lt;span class='nv'&gt;IFS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;:&amp;#39;&lt;/span&gt; &lt;span class='nb'&gt;read&lt;/span&gt; -r d w m c u &amp;lt;&amp;lt;&amp;lt; &lt;span class='s2'&gt;&amp;quot;$desktop&amp;quot;&lt;/span&gt;
+                &lt;span class='nv'&gt;IFS&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s1'&gt;&amp;#39;:&amp;#39;&lt;/span&gt; &lt;span class='nb'&gt;read&lt;/span&gt; -r d w m c u &lt;span class='o'&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class='s2'&gt;&amp;quot;$desktop&amp;quot;&lt;/span&gt;
                 &lt;span class='c'&gt;# Set the icon for desktops with windows&lt;/span&gt;
                 &lt;span class='nv'&gt;ic&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; &amp;quot;&lt;/span&gt;
                 &lt;span class='o'&gt;((&lt;/span&gt;w&lt;span class='o'&gt;))&lt;/span&gt; &lt;span class='o'&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class='nv'&gt;ic&lt;/span&gt;&lt;span class='o'&gt;=&lt;/span&gt;&lt;span class='s2'&gt;&amp;quot; *&amp;quot;&lt;/span&gt;

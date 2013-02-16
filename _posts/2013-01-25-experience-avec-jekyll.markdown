@@ -19,7 +19,7 @@ Enfin, **comble des avantages : pouvoir rédiger ses articles en markdown, avec 
 
 **\*¹** *J'utilise par ailleurs pour ce téléversement via FTP, l'outil __glynn__. Son fonctionnement est simple : on exécute la commande `glynn` à la racine de notre source, entre les identifiants FTP, et glynn se charge du reste ; c'est-à-dire mettre à jour la génération statique, et la téléverser*.
 
-Puisque statique, un tel blog ne peut intégrer de commentaires, si ce n'est en javascript. J'ai rapidement testé [Talkatv](http://talka.tv){: target="\_blank"}, maaaaais… non. Un peu radotant, et nécessite aux lecteures d'avoir à s'incrire sur l'instance. Ce sera donc, sous le conseil d'[Olivier](https://olivier.dossmann.net/) — que je salue — [**JSkomment**](http://code.google.com/p/jskomment/). Il se trouve être très efficace et simple, et juste parfait pour mon utilisation.
+Puisque statique, un tel blog ne peut intégrer de commentaires, si ce n'est en javascript. J'ai rapidement testé [Talkatv](http://talka.tv){: target="\_blank"}, maaaaais… non. Un peu radotant, et nécessite aux lecteurs d'avoir à s'incrire sur l'instance. Ce sera donc, sous le conseil d'[Olivier](https://olivier.dossmann.net/) — que je salue — [**JSkomment**](http://code.google.com/p/jskomment/). Il se trouve être très efficace et simple, et juste parfait pour mon utilisation.
 
 ## Cela reste joli
 Du moins, je l'espère. Question apparence, on m'a répondu « *Eh bien, tu n'as pas peur du minimalisme !* ». Voilà qui résume magnifiquement.  

@@ -75,7 +75,7 @@
 <div id="post">
 	<p>Comme j&#8217;ai tendance à adorer le renouveau, je me suis mis en tête de tester autre chose que <a href='http://localhost:4000/2012/04/14/wmfs-exposition-de-ma-configuration.html'>WMFS</a>, que je n&#8217;avais pas quitté depuis mon arrivée sur Archlinux. Un Tiling Window Manager, c&#8217;est certain. <strong>monsterwm</strong> se présente comme « Tiny and monstrous ! ». Il n&#8217;a qu&#8217;un seul but : s&#8217;occuper de nos fenêtres. C&#8217;est ainsi qu&#8217;il n&#8217;inclut aucune barre d&#8217;emblée, et s&#8217;avère particulièrement léger.</p>
 
-<p>Deux choix se présentent alors à nous : gardons cet aspect minimaliste de monsterwm (sans quelconque barre supérieure ou inférieure), ou justement lui en enrichir. J&#8217;ai choisi cette seconde option dans un simple soucis de confort d&#8217;utilisation. En effet, j&#8217;ai vite ressenti le besoin de pouvoir me situer visuellement parmi mes bureaux virtuels.</p>
+<p>Deux choix se présentent alors à nous : gardons cet aspect minimaliste de monsterwm (sans quelconque barre supérieure ou inférieure), ou justement lui en enrichir. J&#8217;ai choisi cette seconde option dans un simple souci de confort d&#8217;utilisation. En effet, j&#8217;ai vite ressenti le besoin de pouvoir me situer visuellement parmi mes bureaux virtuels.</p>
 
 <p>Concernant la configuration initale de monsterwm, je vous redirigerai volontiers vers mon <a href='https://github.com/Schoewilliam/configs/blob/master/monsterwm/config.h'>fichier de configuration personnel</a>.</p>
 
@@ -122,7 +122,7 @@
 <span class='k'>while </span><span class='nb'>read</span> -t 2 -r wmout <span class='o'>||</span> <span class='nb'>true</span>; <span class='k'>do</span>
     <span class='c'># filter output to only what we want to match and parse</span>
     <span class='k'>if</span> <span class='o'>[[</span> <span class='nv'>$wmout</span> <span class='o'>=</span>~ ^<span class='o'>(([[</span>:digit:<span class='o'>]]</span>+:<span class='o'>)</span>+<span class='o'>[[</span>:digit:<span class='o'>]]</span>+ ?<span class='o'>)</span>+.*<span class='nv'>$ </span><span class='o'>]]</span>; <span class='k'>then</span>
-<span class='k'>        </span><span class='nb'>read</span> -ra desktops &lt;&lt;&lt; <span class='s2'>&quot;$wmout&quot;</span> <span class='o'>&amp;&amp;</span> <span class='nb'>unset </span>r
+<span class='k'>        </span><span class='nb'>read</span> -ra desktops <span class='o'>&lt;&lt;&lt;</span> <span class='s2'>&quot;$wmout&quot;</span> <span class='o'>&amp;&amp;</span> <span class='nb'>unset </span>r
             <span class='k'>for </span>desktop in <span class='s2'>&quot;${desktops[@]}&quot;</span>; <span class='k'>do</span>
                 <span class='c'># set values for</span>
                 <span class='c'># d - the desktop id</span>
@@ -130,7 +130,7 @@
                 <span class='c'># m - tiling layout/mode for that desktop</span>
                 <span class='c'># c - whether that desktop is the current (1) or not (0)</span>
                 <span class='c'># u - whether a window in that desktop has an urgent hint set (1) or not (0)</span>
-                <span class='nv'>IFS</span><span class='o'>=</span><span class='s1'>&#39;:&#39;</span> <span class='nb'>read</span> -r d w m c u &lt;&lt;&lt; <span class='s2'>&quot;$desktop&quot;</span>
+                <span class='nv'>IFS</span><span class='o'>=</span><span class='s1'>&#39;:&#39;</span> <span class='nb'>read</span> -r d w m c u <span class='o'>&lt;&lt;&lt;</span> <span class='s2'>&quot;$desktop&quot;</span>
                 <span class='c'># Set the icon for desktops with windows</span>
                 <span class='nv'>ic</span><span class='o'>=</span><span class='s2'>&quot; &quot;</span>
                 <span class='o'>((</span>w<span class='o'>))</span> <span class='o'>&amp;&amp;</span> <span class='nv'>ic</span><span class='o'>=</span><span class='s2'>&quot; *&quot;</span>
