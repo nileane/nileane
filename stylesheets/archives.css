@@ -1,8 +1,8 @@
 
 ul.posts > span {
     display: block;
-    margin: 0 0 10px;
-    text-align: right;
+    margin: 0 0 30px;
+    text-align: center;
 }
 ul.posts > span a {
     color: #94BCD3;
@@ -45,7 +45,6 @@ ul#details:target > span a.off {
 
 ul#details:target h3 {
     margin: 0 0 10px;
-    font-weight: bold;
 }
 ul#details:target div {
     display: block;

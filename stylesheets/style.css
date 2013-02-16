@@ -191,9 +191,16 @@ body > footer div a {
     color: #ccc;
     opacity: 0.8;
     margin-right:5px;
+    border-color: transparent;
 }
 body > footer div div {
     margin: 0;
+}
+body > footer div.labels a {
+    margin-right: 0;
+}
+body > footer div.labels img {
+    box-shadow: 0 3px rgba(0, 0, 0, 0.3);
 }
 /* fin footer */
 

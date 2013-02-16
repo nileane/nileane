@@ -1,7 +1,6 @@
 <footer>
 	<div>
-		<div>
-			Carnets amis : 
+		<div>Carnets amis : 
 			{% for link in site.blogoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
 			{% endfor %}
@@ -10,6 +9,9 @@
 			{% for link in site.linkoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
 			{% endfor %}
+		</div>
+		<div style="margin-top: 20px; text-align: center;" class="labels">
+			{% include 8015labels.html %}
 		</div>
 	</div>
 </footer>
