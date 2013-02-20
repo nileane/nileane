@@ -25,13 +25,16 @@ body {
     font: 12pt/1.5 "Cantarell", "Droid Sans", arial, sans-serif;
     color: #ddd;
     margin: 0;
-    background-image: url("/images/cassiopeia.png");
-    background-repeat: no-repeat;
     background-color: #102837;
-    background-position: 90% 15px;
-    background-size: 100px auto;
 }
-
+@media screen and (min-width:500px) {
+    body {
+	background-image: url("/images/cassiopeia.png");
+	background-repeat: no-repeat;
+	background-position: 90% 15px;
+	background-size: 100px auto;
+    }
+}
 @media screen and (min-width:860px) {
     body {
 	font-size: 13pt;
@@ -108,17 +111,20 @@ header nav > ul > li {
     display: inline-block;
 }
 header nav a {
-    color: #ddd;
+    color: rgb(203, 229, 255);
     margin: 0 6px;
+    transition: all .2s;
 }
 header nav li > ul {
-    background-color: #2e3740;
+    background-color: #102837;
     box-shadow: 0 2px rgba(0, 0, 0, 0.3);
     display: none;
     list-style: none outside none;
     padding: 5px 10px;
     position: absolute;
     z-index: 2000;
+    text-align: left;
+    margin-left: -10px;
 }
 header nav li:hover > ul {
     display: block;
@@ -142,10 +148,13 @@ header#top > div.blog:before {
     top: 10px;
 }
 header#top > div.sec {
-    background-color: #2e3740;
+    background-color: transparent;
+    box-shadow: 0 0;
     margin: 0 -6px 10px;
 }
-
+header#top > div.sec a {
+    color: #ddd;
+}
 @media screen and (min-width:400px) {
 	header#top > div {
 		margin: 0 0 10px 10px;
@@ -320,8 +329,10 @@ article footer {
     -o-hyphens: auto;
     -ms-hyphens: auto;
 }
+@media screen and (min-width: 700px) {
 #post > p {
     text-indent: 40px;
+}
 }
 
 article #post img {
@@ -564,7 +575,7 @@ h2.last {
 }
 
 ul.posts h3 {
-    color: #ccc;
+    color: rgb(203, 229, 255);
     display: inline-block;
     font-weight: normal;
     margin: 0;

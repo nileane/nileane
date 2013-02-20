@@ -58,7 +58,7 @@ ul.posts time {
     float: none;
     font-size: 80%;
     margin-top: 5px;
-    color: #ccc;
+    color: #eee;
     text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
 }
 @media screen and (min-width:680px) {
@@ -66,4 +66,8 @@ ul.posts time {
 	display: inline;
 	float: right;
     }
+}
+footer > div > div:first-of-type,
+footer > div > div:nth-of-type(2) {
+    display: none;
 }
