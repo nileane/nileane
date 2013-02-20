@@ -1,11 +1,11 @@
 <footer>
 	<div>
-		<div>Carnets amis : 
+		<div><span style="margin-right:5px">Carnets amis</span>
 			{% for link in site.blogoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
 			{% endfor %}
 		</div>
-		<div>Liens : 
+		<div><span style="margin-right:5px">Liens</span>
 			{% for link in site.linkoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
 			{% endfor %}

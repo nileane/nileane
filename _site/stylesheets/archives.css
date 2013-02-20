@@ -2,7 +2,7 @@
 ul.posts > span {
     display: block;
     margin: 0 0 30px;
-    text-align: center;
+    text-align: right;
 }
 ul.posts > span a {
     color: #94BCD3;
