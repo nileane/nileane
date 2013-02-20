@@ -188,7 +188,7 @@ body > footer div {
     font-size: 11pt;
 }
 body > footer div a {
-    color: #ccc;
+    color: #CBE5FF;
     opacity: 0.8;
     margin-right:5px;
     border-color: transparent;
@@ -262,6 +262,7 @@ time.top {
     padding: 0 5px;
     text-align: right;
     font-size: 110%;
+    color:#CBE5FF;
 }
 
 article h1 {
