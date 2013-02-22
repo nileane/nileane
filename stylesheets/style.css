@@ -1,26 +1,3 @@
-@font-face {
-  font-family: "Cantarell";
-  src: url("/fonts/cantarell/Cantarell-Regular.ttf");
-}
-@font-face {
-  font-family: "Cantarell";
-  src: url("/fonts/cantarell/Cantarell-Bold.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Cantarell";
-  src: url("/fonts/cantarell/Cantarell-Oblique.ttf");
-  font-style: italic;
-}
-@font-face {
-  font-family: "Cantarell";
-  src: url("/fonts/cantarell/Cantarell-BoldOblique.ttf");
-  font-style: italic;
-  font-weight: bold;
-}
-
-
-
 body {
     font: 12pt/1.5 "Cantarell", "Droid Sans", arial, sans-serif;
     color: #ddd;
@@ -96,7 +73,7 @@ header {
     }
 }
 header nav a {
-    border-width: 2px;
+    border-color: transparent;
 }
 header nav {
     display: inline-block;
@@ -127,7 +104,6 @@ header nav li > ul {
     z-index: 2000;
     text-align: left;
     margin-left: -10px;
-    margin-top: 1px;
 }
 header nav li:hover > ul {
     display: block;
@@ -154,9 +130,6 @@ header#top > div.sec {
     background-color: transparent;
     box-shadow: 0 0;
     margin: 0 -6px 10px;
-}
-header#top > div.sec a {
-    color: #ddd;
 }
 @media screen and (min-width:400px) {
 	header#top > div {
@@ -591,4 +564,25 @@ ul.posts div {
     padding: 20px;
     background: #2E3740;
     box-shadow: inset 0 2px rgba(0, 0, 0, 0.2);
+}
+
+@font-face {
+  font-family: "Cantarell";
+  src: url("/fonts/cantarell/Cantarell-Regular.ttf");
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("/fonts/cantarell/Cantarell-Bold.ttf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("/fonts/cantarell/Cantarell-Oblique.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Cantarell";
+  src: url("/fonts/cantarell/Cantarell-BoldOblique.ttf");
+  font-style: italic;
+  font-weight: bold;
 }

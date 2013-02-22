@@ -96,7 +96,7 @@ header {
     }
 }
 header nav a {
-    border-width: 2px;
+    border-color: transparent;
 }
 header nav {
     display: inline-block;
@@ -153,9 +153,6 @@ header#top > div.sec {
     background-color: transparent;
     box-shadow: 0 0;
     margin: 0 -6px 10px;
-}
-header#top > div.sec a {
-    color: #ddd;
 }
 @media screen and (min-width:400px) {
 	header#top > div {
