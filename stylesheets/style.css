@@ -95,7 +95,9 @@ header {
 	text-align: left;
     }
 }
-
+header nav a {
+    border-width: 2px;
+}
 header nav {
     display: inline-block;
     font-size: 100%;
@@ -125,6 +127,7 @@ header nav li > ul {
     z-index: 2000;
     text-align: left;
     margin-left: -10px;
+    margin-top: 1px;
 }
 header nav li:hover > ul {
     display: block;

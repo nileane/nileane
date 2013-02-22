@@ -4,7 +4,7 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-02-20T17:18:18+04:00</updated>
+ <updated>2013-02-22T18:24:11+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
@@ -188,7 +188,7 @@ runmonster.exec
    <updated>2013-01-07T00:00:00+04:00</updated>
    <id>http://schoewilliam.legtux.org/2013/01/07/minisch</id>
    <content type="html">&lt;p&gt;Il me fallait un thème simple, sobre, clair (très clair), et bien sûr totalement original. Ainsi est né Minisch. Évidemment gratuit, ouvert, et n&amp;#8217;est soumis à aucune restriction. Faisons-en le tour, dans la joie et la bonne humeur s&amp;#8217;il vous plait /o/. Oh et je tâcherai de fournir un bloc-exemple pour chacune des sections, en véritable HTML+CSS (bouh aux captures d&amp;#8217;écran).&lt;/p&gt;
-&lt;p style='text-align:center;'&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch/archive/master.zip'&gt;télécharger minisch .zip&lt;/a&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch' style='background-color: #777;'&gt;dépôt sur Github&lt;/a&gt;&lt;/p&gt;&lt;nav&gt;&lt;strong&gt;Sommaire&lt;/strong&gt;: &lt;a href='#la_navigation'&gt;la navigation&lt;/a&gt; &lt;a href='#lindex'&gt;l'index&lt;/a&gt; &lt;a href='#une_structure_adaptative'&gt;une structure adaptative&lt;/a&gt; &lt;a href='#la_clart_des_billets'&gt;la clarté des billets&lt;/a&gt; &lt;a href='#les_commentaires'&gt;les commentaires&lt;/a&gt; &lt;a href='#personnalisable'&gt;personnalisable&lt;/a&gt;&lt;/nav&gt;
+&lt;p style='text-align:left;'&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch/archive/master.zip'&gt;télécharger minisch .zip&lt;/a&gt;&lt;a class='bouton' href='https://github.com/Schoewilliam/Minisch' style='background-color: #777;'&gt;dépôt sur Github&lt;/a&gt;&lt;/p&gt;&lt;nav&gt;&lt;strong&gt;Sommaire&lt;/strong&gt;: &lt;a href='#la_navigation'&gt;la navigation&lt;/a&gt; &lt;a href='#lindex'&gt;l'index&lt;/a&gt; &lt;a href='#une_structure_adaptative'&gt;une structure adaptative&lt;/a&gt; &lt;a href='#la_clart_des_billets'&gt;la clarté des billets&lt;/a&gt; &lt;a href='#les_commentaires'&gt;les commentaires&lt;/a&gt; &lt;a href='#personnalisable'&gt;personnalisable&lt;/a&gt;&lt;/nav&gt;
 &lt;h2 id='la_navigation'&gt;La navigation&lt;/h2&gt;
 
 &lt;p&gt;Le menu est simple de premier abord mais cache nombre de possibilités. Il gère les hierarchies jusqu&amp;#8217;à 6 niveaux, et offre, en plus des fonctionnalités par défaut de Wordpress, l&amp;#8217;option d&amp;#8217;afficher de manière détaillée les flux RSS disponibles pour vos visiteurs. Enfin, il est agrémenté d&amp;#8217;un champ de recherche.&lt;/p&gt;

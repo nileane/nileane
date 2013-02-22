@@ -95,7 +95,9 @@ header {
 	text-align: left;
     }
 }
-
+header nav a {
+    border-width: 2px;
+}
 header nav {
     display: inline-block;
     font-size: 100%;
