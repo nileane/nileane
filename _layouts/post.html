@@ -2,7 +2,7 @@
 layout: default
 lang: fr
 ---
-<time class="top">{{ page.date | date_to_long_string }}</time>
+<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | date_to_long_string }}</time>
 <article>
 
 {% if page.link %}

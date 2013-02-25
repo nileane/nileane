@@ -7,7 +7,7 @@ lang: fr
 ---
 <section>
 {% assign first_post = site.posts.first %}
-<time class="top" style="margin:0;">{{ first_post.date | date_to_long_string }}</time>
+<time datetime='{{ first_post.date | date: "%Y-%m-%d" }}' class="top" style="margin:0;">{{ first_post.date | date_to_long_string }}</time>
 <article>
 
 {% if first_post.link %}

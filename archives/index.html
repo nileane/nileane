@@ -3,6 +3,7 @@ title: schoewilliam - archives
 description: Archives du carnet
 layout: default
 lang: fr
+styles: "@import url('/stylesheets/archives.css')"
 ---
 <section>
 <div class="index">
@@ -13,8 +14,11 @@ lang: fr
     {% for post in site.posts %}
       <li>
 	<a href="{{ post.url }}">
-	  <time>{{ post.date | date_to_string }}</time>
+	  <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date_to_string }}</time>
 	  <h3>{{ post.title }}</h3>
+	{% if post.link %}
+	  <span class="label">marque-page</span>
+	{% endif %}
 	  <div>{{ post.content | strip_html | truncatewords: 25 }}</div>
 	</a>
       </li>
