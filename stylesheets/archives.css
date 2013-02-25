@@ -67,6 +67,15 @@ ul.posts time {
 	float: right;
     }
 }
+ul.posts li span {
+    display: inline-block;
+    padding: 1px 5px;
+    margin-left: 8px;
+    opacity: 0.75;
+    background-color:#CBE5FF;
+    color: #102837;
+    font-size: 80%;
+}
 footer > div > div:first-of-type,
 footer > div > div:nth-of-type(2) {
     display: none;
