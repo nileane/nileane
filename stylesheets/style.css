@@ -324,6 +324,7 @@ article #post img {
 .align,
 .align.center {
     display: block;
+    margin: 0 auto;
 }
 .align.center {
     margin: 0 auto;
