@@ -4,7 +4,7 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-03-03T15:36:46+04:00</updated>
+ <updated>2013-03-03T15:59:55+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
@@ -16,7 +16,7 @@
    <link href="http://schoewilliam.legtux.org/2013/02/27/salutations-dune-patate-chauvine.html"/>
    <updated>2013-02-27T00:00:00+04:00</updated>
    <id>http://schoewilliam.legtux.org/2013/02/27/salutations-dune-patate-chauvine</id>
-   <content type="html">&lt;p&gt;&lt;img alt='Suddenly, potatoes.' class='align right' src='/images/potatoes.jpg' style='width:350px;' /&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;a href='/images/potatoes.jpg'&gt;&lt;img alt='Suddenly, potatoes.' class='align right' src='/images/potatoes.jpg' style='width:300px;' /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Malheur sur moi, on m&amp;#8217;a appelé à participer au &lt;strong&gt;jeu de la patate chaude&lt;/strong&gt; (ceci est une phrase on ne peut plus sérieuse). La faute à &lt;a href='http://tetedulinuxien.fr/2013/02/potato-or-not/'&gt;Ypnose&lt;/a&gt;, qui a requis ma participation :D, que j&amp;#8217;offre tout de même malgré un moment d&amp;#8217;hésitation. Rapidement dit, le principe s&amp;#8217;avère simple, et le jeu régulé ainsi :&lt;/p&gt;
 
