@@ -7,7 +7,7 @@ tags:
 - HS
 - patate
 ---
-![Suddenly, potatoes.](/images/potatoes.jpg){: width="360px" class="align right"}
+![Suddenly, potatoes.](/images/potatoes.jpg){: class="align right" style="width:350px;"}
 
 Malheur sur moi, on m'a appelé à participer au **jeu de la patate chaude** (ceci est une phrase on ne peut plus sérieuse). La faute à [Ypnose](http://tetedulinuxien.fr/2013/02/potato-or-not/), qui a requis ma participation :D, que j'offre tout de même malgré un moment d'hésitation. Rapidement dit, le principe s'avère simple, et le jeu régulé ainsi :
 * Poster les règles sur le blog

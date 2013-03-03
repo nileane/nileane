@@ -9,7 +9,7 @@ tags:
 On a, il y a quelques jours, métamorphosé cet espace sur le web.  
 Le principal motivateur de cette migration se trouve au cœur même du blog, ainsi que ma manière de le gérer.
 
-[![Dr. Jekyll and Mr. Hyde](/images/drjekyllmrhyde.jpg){: class="align right" width="350px"}](http://en.wikipedia.org/wiki/File:Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg)
+[![Dr. Jekyll and Mr. Hyde](/images/drjekyllmrhyde.jpg){: class="align right" style="width:350px;"}](http://en.wikipedia.org/wiki/File:Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg)
 
 À raison d'un rythme de publication léger, et d'un classement linéaire (chronologique), la véritable machine qu'est Wordpress finit par logiquement paraitre surdimensionnée. J'ai donc opté pour le fameux **[Jekyll](https://github.com/mojombo/jekyll), générateur de blog statique, en ruby** !
 
