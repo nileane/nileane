@@ -8,19 +8,19 @@ body {
     body {
 	background-image: url("/images/cassiopeia.png");
 	background-repeat: no-repeat;
-	background-position: 90% 15px;
+	background-position: 90% 25px;
 	background-size: 100px auto;
     }
 }
 @media screen and (min-width:860px) {
     body {
 	font-size: 13pt;
-	background-position: 80% 15px;
+	background-position: 80% 25px;
     }
 }
 @media screen and (min-width:1250px) {
     body {
-	background-position: 65% 15px;
+	background-position: 65% 25px;
     }
 }
 a {
