@@ -1,10 +1,12 @@
 ---
-title: "schoewilliam · carnet d'un habitant de la banquise GNU/Linuxienne"
-description: "Carnet web d'un habitant de la banquise GNU/Linuxienne — William Dorffer, schoewilliam."
+title: "schoewilliam · carnet d'un prétendant à la liberté."
+description: "Carnet web d'un habitant de la banquise GNU/Linuxienne, prétendant à la liberté — William Dorffer, schoewilliam."
 layout: default
 role: home
 lang: fr
 ---
+{% include schh.html %}
+
 <section>
 {% assign first_post = site.posts.first %}
 <time datetime='{{ first_post.date | date: "%Y-%m-%d" }}' class="top" style="margin:0;">{{ first_post.date | date_to_long_string }}</time>

@@ -27,8 +27,6 @@ navigation:
   url: /flux.xml
 
 about:
-- text: minisch
-  url: /minisch
 - text: à propos
   url: /apropos
 
