@@ -11,7 +11,10 @@
 	</div>
 	<div class="sec">
 	    <nav>
-		<ul>
+		<ul>	
+	    {% for link in site.about %}
+		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
+	    {% endfor %}
 		<li><a href="#">ailleurs…</a>
 			<ul>
 		     {% for link in site.ailleurs %}
@@ -19,9 +22,6 @@
 		     {% endfor %}
 			</ul>
 		</li>
-	    {% for link in site.about %}
-		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
-	    {% endfor %}
 		</ul>
 	    </nav>
 	</div>

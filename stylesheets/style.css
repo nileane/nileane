@@ -156,10 +156,15 @@ a#embleme:hover {
 
 .schh {
     color: #CCCCCC;
-    margin: 10px auto 0;
+    margin: 2px auto 0;
     max-width: 780px;
     padding: 0 20px;
-    text-align: left;
+    text-align: center;
+}
+@media screen and (min-width:750px) {
+    .schh {
+	text-align:left;
+    }
 }
 
 /* fin header */

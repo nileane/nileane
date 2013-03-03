@@ -23,12 +23,12 @@ permalink:   date
 navigation:
 - text: archives
   url: /archives
-- text: flux rss
-  url: /flux.xml
-
-about:
 - text: à propos
   url: /apropos
+
+about:
+- text: rss
+  url: /flux.xml 
 
 ailleurs:
 - text: Github
