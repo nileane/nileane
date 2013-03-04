@@ -158,11 +158,6 @@ a#embleme:hover {
     padding: 0 20px;
     text-align: center;
 }
-@media screen and (min-width:750px) {
-    .schh {
-	text-align:left;
-    }
-}
 
 /* fin header */
 
