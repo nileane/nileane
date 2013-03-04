@@ -6,10 +6,7 @@ body {
 }
 @media screen and (min-width:500px) {
     body {
-	background-image: url("/images/cassiopeia.png");
-	background-repeat: no-repeat;
-	background-position: 90% 25px;
-	background-size: 100px auto;
+	background: #102837 url("/images/cassiopeia.png") no-repeat 90% 25px / 100px auto;
     }
 }
 @media screen and (min-width:860px) {
@@ -142,8 +139,8 @@ a#embleme {
     background-size: 100% auto;
     background-image: url('/images/embleme.png');
     background-position: center center;
-    height: 35px;
-    width: 82px;
+    height: 30px;
+    width: 70px;
     transition: background-position 3.5s, box-shadow .15s;
     box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.1) inset, 0 3px rgba(0, 0, 0, 0.3);
     border: 0;
