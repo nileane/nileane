@@ -2,6 +2,7 @@
 layout: default
 lang: fr
 ---
+<section>
 {% include schh.html %}
 
 <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | date_to_long_string }}</time>
@@ -35,3 +36,5 @@ lang: fr
 <div class="jskomment" id="comments" title="{{ site.url }}{{ page.url }}"></div>
 <script src="/js/jskomment.js"></script>
 {% endif %}
+
+</section>
