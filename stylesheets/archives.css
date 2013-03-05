@@ -1,7 +1,7 @@
 
 ul.posts > span {
     display: block;
-    margin: 0 0 30px;
+    margin: 0 0 15px;
     text-align: right;
 }
 ul.posts > span a {
