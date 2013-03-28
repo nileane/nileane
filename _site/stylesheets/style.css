@@ -85,14 +85,31 @@ header nav > ul {
 }
 header nav > ul > li {
     display: inline-block;
+    margin: 0 6px;
 }
 header nav a {
     color: rgb(203, 229, 255);
-    margin: 0 6px;
     transition: all .2s;
 }
+.menu:before {
+    border-bottom: 9px solid #CBE5FF;
+    border-right: 8px solid transparent;
+    content: " ";
+    transition: all .2s;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 11px;
+}
+.menu:hover:before {
+    transform: rotate(90deg);
+}
+.menu {
+    padding-right: 15px;
+    position: relative;
+}
 header nav li > ul {
-    background-color: #102837;
+    background-color: #294765;
     box-shadow: 0 2px rgba(0, 0, 0, 0.3);
     display: none;
     list-style: none outside none;

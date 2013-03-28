@@ -4,17 +4,22 @@
 		<ul>
 	    {% for link in site.navigation %}
 		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
-	    {% endfor %}	
-	    {% for link in site.about %}
-		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
 	    {% endfor %}
-		<li><a href="#">ailleurs…</a>
+		<li>&#10087;</li>
+		<li class="menu"><a href="#">ailleurs</a>
 			<ul>
 		     {% for link in site.ailleurs %}
 			<li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
 		     {% endfor %}
 			</ul>
 		</li>
+                <li class="menu"><a href="#">réalisations</a>
+                        <ul>
+                     {% for link in site.realisations %}
+                        <li><a href="{{ link.url }}" target="_blank">{{ link.text }}</a></li>
+                     {% endfor %}
+                        </ul>
+                </li>
 		</ul>
 	    </nav>
 	</div><br>
