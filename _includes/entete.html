@@ -1,17 +1,10 @@
 <header id="top">
-	<a href="/" id="embleme"></a>
 	<div class="blog">
 	    <nav>
 		<ul>
 	    {% for link in site.navigation %}
 		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
-	    {% endfor %}
-		</ul>
-	    </nav>
-	</div>
-	<div class="sec">
-	    <nav>
-		<ul>	
+	    {% endfor %}	
 	    {% for link in site.about %}
 		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
 	    {% endfor %}
@@ -24,5 +17,6 @@
 		</li>
 		</ul>
 	    </nav>
-	</div>
+	</div><br>
+	<a href="/" id="embleme"></a>
 </header>
