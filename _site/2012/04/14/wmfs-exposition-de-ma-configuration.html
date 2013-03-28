@@ -20,7 +20,6 @@
   
   <body>
     <header id="top">
-	<a href="/" id="embleme"></a>
 	<div class="blog">
 	    <nav>
 		<ul>
@@ -28,13 +27,7 @@
 		<li><a href="/archives">archives</a></li>
 	    
 		<li><a href="/apropos">à propos</a></li>
-	    
-		</ul>
-	    </nav>
-	</div>
-	<div class="sec">
-	    <nav>
-		<ul>	
+	    	
 	    
 		<li><a href="/flux.xml">rss</a></li>
 	    
@@ -57,13 +50,14 @@
 		</li>
 		</ul>
 	    </nav>
-	</div>
+	</div><br>
+	<a href="/" id="embleme"></a>
 </header>
 
 
     <section>
 <div class="schh">
-<span style="font-size:140%;">schh.</span></div>
+<span style="font-size:140%;">schh. ici William.</span></div>
 
 
 <time datetime='' class="top">14 avril 2012</time>
@@ -93,34 +87,15 @@
 <h2 id='statusbars'>Statusbars</h2>
 
 <p>Pour grossir le trait, avec la commande <code>$ wmfs -c status &quot;testbar BLABLA&quot;</code>, « BLABLA » apparaitra dans la zone <em>status</em> de la barre du nom « <em>testbar</em> ». Là où c&#8217;est intéressant, c&#8217;est qu&#8217;on peut donc s&#8217;en servir, pour afficher en temps réel, <strong>le résultat d&#8217;un script conky</strong> :</p>
-<div class='highlight'><pre><code class='bash'><span class='c'>#!/bin/sh  </span>
-conky -c ~/.config/wmfs/scripts/conkyrc_top | <span class='k'>while </span><span class='nb'>true</span>; <span class='nb'>read </span>line; <span class='k'>do </span>wmfs -c status <span class='s2'>&quot;testbar $line&quot;</span>; <span class='k'>done</span> &amp;
-</code></pre>
-</div>
+
+<p>Liquid error: Failed to get header.</p>
+
 <p>Évidemment l&#8217;idéal serait de lancer tout cela au démarrage de la session X.</p>
 
 <p>Puisque conky nous permet de gratter facilement les informations dont on a besoin, grâce à ses fonctions, il ne nous manque plus qu&#8217;à y coupler <a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'>la syntaxe</a> :</p>
-<div class='highlight'><pre><code class='bash'>out_to_console yes
-out_to_x no
-background yes
-update_interval 1
-total_run_times 0
-no_buffers yes
 
-TEXT
-^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/clock.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; Uptime:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BDE077; <span class='nv'>$uptime_short</span><span class='o'>]</span><span class='se'>\</span>
-^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
-^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; HDD:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0; <span class='k'>${</span><span class='nv'>fs_used_perc</span><span class='p'> /</span><span class='k'>}</span>% <span class='o'>]</span> ^p<span class='o'>[</span>right;8;10;0;<span class='k'>${</span><span class='nv'>fs_used_perc</span><span class='p'> /</span><span class='k'>}</span>;100;<span class='se'>\#</span>445544;<span class='se'>\#</span>A6D4E0;ckyhdd<span class='o'>](</span>1;spawn;urxvt -e df -h<span class='o'>)</span><span class='se'>\</span>
-^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
-^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/ship.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; Kernel:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>FDA53C; <span class='nv'>$kernel</span><span class='o'>]</span><span class='se'>\</span>
-^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
-^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; IP:<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>E8DD9E; <span class='k'>${</span><span class='nv'>addr</span><span class='p'> wlan0</span><span class='k'>}</span><span class='o'>](</span>1;spawn;urxvt -e wicd-curses<span class='o'>)</span><span class='se'>\</span>
-^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
-^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png<span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>BBBBBB; Volume: <span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0;<span class='k'>${</span><span class='nv'>exec</span><span class='p'> amixer get Master | grep </span><span class='s2'>&quot;Mono: P&quot;</span><span class='p'> | awk </span><span class='s1'>&#39;{print $4}&#39;</span><span class='p'> | grep -oE </span><span class='s2'>&quot;[[:digit:]]{1,}&quot;</span><span class='p'>%</span><span class='k'>}</span> <span class='o'>](</span>1;spawn;urxvt -e alsamixer<span class='o'>)</span>  ^p<span class='o'>[</span>right;8;10;0;<span class='k'>${</span><span class='nv'>exec</span><span class='p'> amixer get Master | grep </span><span class='s2'>&quot;Mono: P&quot;</span><span class='p'> | awk </span><span class='s1'>&#39;{print $4}&#39;</span><span class='p'> | grep -oE </span><span class='s2'>&quot;[[:digit:]]{1,}&quot;</span><span class='k'>}</span>;100;<span class='se'>\#</span>445544;<span class='se'>\#</span>A6D4E0;ckyhdd<span class='o'>](</span>1;spawn;urxvt -e alsamixer<span class='o'>)</span><span class='se'>\</span>
-^s<span class='o'>[</span>right;<span class='se'>\#</span>444444;   |   <span class='o'>]</span><span class='se'>\</span>
-^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/clock.png<span class='o'>]</span><span class='se'>\ </span>^s<span class='o'>[</span>right;<span class='se'>\#</span>CCCCCC; <span class='k'>${</span><span class='nv'>time</span><span class='p'> %a %d %b</span><span class='k'>}</span><span class='o'>]</span> ^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0; <span class='k'>${</span><span class='nv'>time</span><span class='p'> %H:%M</span><span class='k'>}</span>   <span class='o'>]</span><span class='se'>\</span>
-</code></pre>
-</div>
+<p>Liquid error: Failed to get header.</p>
+
 <p>Voilà qui nous donne magnifiquement :</p>
 
 <p><a href='/images/wmfs/wmfs-status1.png'><img alt='Status Top' class='align' src='/images/wmfs/wmfs-status1.png' /></a></p>
@@ -130,13 +105,9 @@ TEXT
 <p><a href='/images/wmfs/wmfs-moc.png'><img alt='MOC intégré à la statusbar de WMFS' class='align' src='/images/wmfs/wmfs-moc.png' /></a></p>
 
 <p>(Dans le cas d&#8217;un script conky :)</p>
-<div class='highlight'><pre><code class='bash'><span class='k'>${</span><span class='nv'>if_running</span><span class='p'> mocp</span><span class='k'>}</span><span class='se'>\</span>
-<span class='k'>${</span><span class='nv'>if_match</span><span class='p'> </span><span class='s2'>&quot;${exec mocp -Q %state}&quot;</span><span class='p'> == </span><span class='s2'>&quot;PLAY&quot;</span><span class='k'>}</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>BDE077;<span class='o'>{</span> <span class='o'>]</span>^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/pause.png<span class='o'>](</span>1;spawn;mocp -G<span class='o'>)</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>BDE077; <span class='o'>}]</span><span class='nv'>$endif</span><span class='se'>\</span>
-<span class='k'>${</span><span class='nv'>if_match</span><span class='p'> </span><span class='s2'>&quot;${exec mocp -Q %state}&quot;</span><span class='p'> == </span><span class='s2'>&quot;PAUSE&quot;</span><span class='k'>}</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>FDA53C;<span class='o'>{</span> <span class='o'>]</span>^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/play.png<span class='o'>](</span>1;spawn;mocp -G<span class='o'>)</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>FDA53C; <span class='o'>}]</span><span class='nv'>$endif</span><span class='se'>\</span>
-<span class='k'>${</span><span class='nv'>if_match</span><span class='p'> </span><span class='s2'>&quot;${exec mocp -Q %state}&quot;</span><span class='p'> == </span><span class='s2'>&quot;STOP&quot;</span><span class='k'>}</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0;<span class='o'>{</span> <span class='o'>]</span>^i<span class='o'>[</span>right;0;0;/home/william/.config/wmfs/icons/stat/stop.png<span class='o'>](</span>1;spawn;mocp -p<span class='o'>)</span>^s<span class='o'>[</span>right;<span class='se'>\#</span>A6D4E0; <span class='o'>}</span>  <span class='o'>]</span><span class='nv'>$endif</span><span class='se'>\</span>
-<span class='nv'>$endif</span><span class='se'>\</span>
-</code></pre>
-</div>
+
+<p>Liquid error: Failed to get header.</p>
+
 <p><strong>Littéralement</strong>; on vérifie si <em>mocp</em> est lancé (<strong>ligne 1</strong>);<br />si MOC est en mode PLAY, afficher l&#8217;image <code>~/.config/wmfs/icons/stat/pause.png</code> — cette même image, lancera la commande <code>mocp -G</code> (<em>toggle play/pause</em>) si elle est cliquée (<strong>ligne 2</strong>);<br />enfin, on réitère pour les actions Pause, et Stop (<strong>lignes 3 et 4</strong>) en changeant les éléments nécessaires.</p>
 
 <ul>
@@ -144,9 +115,9 @@ TEXT
 </ul>
 
 <p>On terminera sur la fonctionnalité phare de cette syntaxe : les <strong>graphiques</strong>, et <strong>barres de progression</strong>. On n&#8217;a que trois éléments à fournir : les couleurs, la valeur actuelle, et la valeur maximale. Notre cher WMFS se charge du reste.</p>
-<div class='highlight'><pre><code class='bash'>^g<span class='o'>[</span>left;80;10;<span class='k'>${</span><span class='nv'>cpu</span><span class='k'>}</span>;100;<span class='se'>\#</span>333333;<span class='se'>\#</span>FDA53C;ckycpu<span class='o'>](</span>1;spawn;urxvt -e htop<span class='o'>)</span>
-</code></pre>
-</div>
+
+<p>Liquid error: Failed to get header.</p>
+
 <p>Sur le modèle <code>^g[{alignement};{largeur};{hauteur};{valeur actuelle};{valeur maximale};{couleur BG};{couleur FG};{ID du graphe}](1;spawn;{commande à lancer au clic})</code>.</p>
 
 <h2 id='capture_finale'>Capture finale</h2>
