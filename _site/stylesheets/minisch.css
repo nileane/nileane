@@ -9,7 +9,7 @@ section.minisch {
     min-width: 650px;
     position: relative;
 }
-.wrap * { white-space: normal;} 
+.wrap * { white-space: normal; text-align:left; } 
 
 section.minisch a {
     border: 0;
