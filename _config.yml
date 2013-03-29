@@ -29,22 +29,24 @@ navigation:
   url: /flux.xml 
 
 ailleurs:
-- text: Github
-  url: https://github.com/Schoewilliam
-  desc: "Sources du carnet, fichiers de configurations, dotfiles, …"
-- text: StatusNet
-  url: http://identi.ca/schoewilliam
-  desc: "Discussions et réactions (bientôt sur le réseau pumpio)."
-- text: reddit
-  url: http://www.reddit.com/user/schoelcher/
-  desc: "Partage et recommandations de liens."
-- text: Diaspora*
-  url: https://joindiaspora.com/u/schoewilliam
-- text: Twitter
-  url: http://twitter.com/schoewilliam
+- text: Arch Linux Forums
+  url: https://bbs.archlinux.org/profile.php?id=55538
 - text: DeviantArt
   url: http://schoewilliam.deviantart.com/
   desc: "Captures d'écran commentées."
+- text: Diaspora*
+  url: https://joindiaspora.com/u/schoewilliam
+- text: Github
+  url: https://github.com/Schoewilliam
+  desc: "Sources du carnet, fichiers de configurations, dotfiles, …"
+- text: reddit
+  url: http://www.reddit.com/user/schoelcher/
+  desc: "Partage et recommandations de liens."
+- text: StatusNet
+  url: http://identi.ca/schoewilliam
+  desc: "Discussions et réactions (bientôt sur le réseau pumpio)."
+- text: Twitter
+  url: http://twitter.com/schoewilliam
 
 realisations:
 - text: Minisch
