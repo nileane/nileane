@@ -52,6 +52,9 @@ realisations:
 - text: Minisch
   url: http://schoewilliam.legtux.org/minisch
   desc: "Un thème élégant et fonctionnel pour Wordpress"
+- text: Expérimentation
+  url: /experiments
+  desc: "Tests et brouillons en tout genre"
 
 blogoliste:
 - text: BlogiGor
