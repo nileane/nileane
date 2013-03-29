@@ -58,14 +58,13 @@ pre code {
 header {
     max-width: 810px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0;
     text-align: center;
     position: relative;
 }
 
 @media screen and (min-width:750px) {
     header {
-	padding: 0;
 	max-width: 820px;
     }
 }
