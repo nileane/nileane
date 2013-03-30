@@ -4,12 +4,34 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-03-29T16:48:36+04:00</updated>
+ <updated>2013-03-30T12:54:52+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
  </author>
  
+ 
+ <entry>
+   <title>MPD, mon copain pour la musique.</title>
+   <link href="http://schoewilliam.legtux.org/2013/03/30/mpd-mon-copain-pour-la-musique.html"/>
+   <updated>2013-03-30T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2013/03/30/mpd-mon-copain-pour-la-musique</id>
+   <content type="html">&lt;p&gt;Un petit problème se posait à moi il y a quelques jours ( semaines ? ) : mon poste A commençait à être limité quant à son espace disque. &lt;em&gt;Objectif&lt;/em&gt; donc : transférer ma bibliothèque musicale sur un poste B ( soient l&amp;#8217;équivalent de quelques 14Go ). &lt;em&gt;Souci&lt;/em&gt; : pouvoir continuer d&amp;#8217;écouter le contenu de cette bibliothèque depuis le poste A.&lt;br /&gt;&lt;strong&gt;Solution&lt;/strong&gt; : utiliser la fonctionnalité implémentée par essence dans MPD ( Music Player Daemon ), qui permet le streaming de la musique.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#39;/images/mpd/ncmpcpp.png&#39;&gt;&lt;img alt=&#39;NCMPC++ personnel&#39; class=&#39;align center&#39; src=&#39;/images/mpd/ncmpcpp.png&#39; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;À quoi ressemblerait donc mon installation ?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Une instance MPD configurée sur le poste B pour émettre sa lecture dans un flux sur &lt;code&gt;http://192.168.2.x:8000&lt;/code&gt; ( voir &lt;a href=&#39;https://wiki.archlinux.org/index.php/MPD/Tips_and_Tricks#HTTP_Streaming&#39;&gt;cette section du Archwiki&lt;/a&gt;, décommenter quelques lignes suffit. )&lt;/li&gt;
+
+&lt;li&gt;Une instance MPD sur le poste A pour lire ledit flux ( j&amp;#8217;aurais pu utiliser n&amp;#8217;importe quel lecteur audio qui puisse lire un flux HTTP ).&lt;/li&gt;
+
+&lt;li&gt;Un client pour MPD ( ncmpc++ dans mon cas ) sur le poste A, qui sera connecté à l&amp;#8217;instance MPD du poste B. ( &lt;code&gt;$ ncmpcpp -h 192.168.2.x -p 6600&lt;/code&gt; )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;En définitif, je suis en mesure de contrôler ma bibliothèque, ainsi que de l&amp;#8217;écouter, depuis mon poste A favori sans avoir à manipuler le poste B, sur lequel est stockée cette bibliothèque.&lt;br /&gt;Rien d&amp;#8217;exceptionnel, rien de complexe. Juste une astuce qui provoque un agréable coup de cœur.&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>Salutations d'une patate chauvine</title>

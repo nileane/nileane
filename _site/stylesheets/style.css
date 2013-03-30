@@ -58,14 +58,13 @@ pre code {
 header {
     max-width: 810px;
     margin: 0 auto;
-    padding: 0 5px;
+    padding: 0;
     text-align: center;
     position: relative;
 }
 
 @media screen and (min-width:750px) {
     header {
-	padding: 0;
 	max-width: 820px;
     }
 }
@@ -88,7 +87,7 @@ header nav > ul > li {
     margin: 0 6px;
 }
 header nav a {
-    color: rgb(203, 229, 255);
+    color: #CBE5FF;
     transition: all .2s;
 }
 .menu:before {
@@ -269,7 +268,7 @@ time.top {
     padding: 0 5px;
     text-align: right;
     font-size: 90%;
-    color:#CBE5FF;
+    color: #CBE5FF;
 }
 
 article h1 {
@@ -436,7 +435,7 @@ a.jskomment_add_comment {
     background-color: rgba(41, 71, 101, 0.7);
     border: 0 none;
     box-shadow: 0 3px rgba(0, 0, 0, 0.3);
-    color: #CCCCCC;
+    color: #CBE5FF;
     display: block;
     margin: 0;
     padding: 10px 20px;

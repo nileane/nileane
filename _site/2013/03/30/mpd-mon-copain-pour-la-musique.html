@@ -9,7 +9,7 @@
     <![endif]-->
 
     <meta charset="UTF-8">
-    <title>archives pour &quot; twitter &quot;</title>
+    <title>MPD, mon copain pour la musique.</title>
     
     <meta name="author" content="Schoewilliam &lt;schoewilliam@legtux.org&gt;">
     <meta content='initial-scale=1.0' name='viewport'>
@@ -96,103 +96,50 @@
 
 
     <section>
-<div class="index">
-
-<ul class="posts" id="details">
-      <h2><span style="opacity:0.4">archives ></span> #twitter</h2>
-      <span><a class=on href=#compact></a> <a class=off href=#details></a></span>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-      <li>
-        <a href="/2012/01/06/earthquake-un-beau-client-twitter-pour-la-console.html">
-          <time>6 janv. 2012</time>
-          <h3>Earthquake, un client Twitter pour le terminal.</h3>
-          <div>Dans la série applications coups de cœur, il y a Earthquake (le github pour tout savoir sur son mode d'emploi). Écrit en ruby, ce client...</div>
-        </a>
-      </li>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </ul>
+<div class="schh">
+<span style="font-size:140%;">schh</span></div>
 
 
+<time datetime='' class="top">30 mars 2013</time>
+<article>
+
+
+<hgroup>
+	<h1>MPD, mon copain pour la musique.</h1>
+</hgroup>
+
+
+<div id="post">
+	<p>Un petit problème se posait à moi il y a quelques jours ( semaines ? ) : mon poste A commençait à être limité quant à son espace disque. <em>Objectif</em> donc : transférer ma bibliothèque musicale sur un poste B ( soient l&#8217;équivalent de quelques 14Go ). <em>Souci</em> : pouvoir continuer d&#8217;écouter le contenu de cette bibliothèque depuis le poste A.<br /><strong>Solution</strong> : utiliser la fonctionnalité implémentée par essence dans MPD ( Music Player Daemon ), qui permet le streaming de la musique.</p>
+
+<p><a href='/images/mpd/ncmpcpp.png'><img alt='NCMPC++ personnel' class='align center' src='/images/mpd/ncmpcpp.png' /></a></p>
+
+<p>À quoi ressemblerait donc mon installation ?</p>
+
+<ul>
+<li>Une instance MPD configurée sur le poste B pour émettre sa lecture dans un flux sur <code>http://192.168.2.x:8000</code> ( voir <a href='https://wiki.archlinux.org/index.php/MPD/Tips_and_Tricks#HTTP_Streaming'>cette section du Archwiki</a>, décommenter quelques lignes suffit. )</li>
+
+<li>Une instance MPD sur le poste A pour lire ledit flux ( j&#8217;aurais pu utiliser n&#8217;importe quel lecteur audio qui puisse lire un flux HTTP ).</li>
+
+<li>Un client pour MPD ( ncmpc++ dans mon cas ) sur le poste A, qui sera connecté à l&#8217;instance MPD du poste B. ( <code>$ ncmpcpp -h 192.168.2.x -p 6600</code> )</li>
+</ul>
+
+<p>En définitif, je suis en mesure de contrôler ma bibliothèque, ainsi que de l&#8217;écouter, depuis mon poste A favori sans avoir à manipuler le poste B, sur lequel est stockée cette bibliothèque.<br />Rien d&#8217;exceptionnel, rien de complexe. Juste une astuce qui provoque un agréable coup de cœur.</p>
 </div>
-<style>
-@import url('/stylesheets/archives.css');
-</style>
+
+<footer>
+    <span class="tags">
+    
+    </span>
+</footer>
+
+</article>
+
+
+<div class="jskomment" id="comments" title="http://schoewilliam.legtux.org/2013/03/30/mpd-mon-copain-pour-la-musique.html"></div>
+<script src="/js/jskomment.js"></script>
+
+
 </section>
 
 
