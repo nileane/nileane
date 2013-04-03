@@ -117,7 +117,7 @@ header nav li > ul {
     z-index: 2000;
     text-align: left;
     margin-left: -10px;
-    min-width: 140px;
+    min-width: 150px;
 }
 header nav li:hover > ul {
     display: block;
@@ -197,7 +197,6 @@ body > footer div {
 }
 body > footer div a {
     color: #CBE5FF;
-    opacity: 0.8;
     margin-right:5px;
     border-color: transparent;
 }
