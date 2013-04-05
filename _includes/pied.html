@@ -4,12 +4,12 @@
 		</div>
 		<div><span style="margin-right:5px">Carnets amis</span>
 			{% for link in site.blogoliste %}
-			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
+			<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>
 			{% endfor %}
 		</div>
 		<div><span style="margin-right:5px">Liens</span>
 			{% for link in site.linkoliste %}
-			<a href="{{ link.url }}" title="{{ link.text }}" target="_blank">{{ link.text }}</a>
+			<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>
 			{% endfor %}
 		</div>
 		<div style="margin-top: 20px; text-align: center;" class="labels">
