@@ -92,7 +92,7 @@ header nav a {
 }
 .menu:before {
     border-bottom: 9px solid #CBE5FF;
-    border-right: 8px solid transparent;
+    border-left: 9px solid transparent;
     content: " ";
     transition: all .2s;
     cursor: pointer;
