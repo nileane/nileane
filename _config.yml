@@ -38,7 +38,7 @@ ailleurs:
   url: https://joindiaspora.com/u/schoewilliam
 - text: Github
   url: https://github.com/Schoewilliam
-  desc: "Sources du carnet, fichiers de configurations, dotfiles, …"
+  desc: "Sources du carnet, configurations et dotfiles, …"
 - text: reddit
   url: http://www.reddit.com/user/schoelcher/
   desc: "Partage et recommandations de liens."
