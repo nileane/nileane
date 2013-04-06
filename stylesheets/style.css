@@ -1,5 +1,5 @@
 body {
-    font: 12pt/1.5 "Cantarell", "Droid Sans", arial, sans-serif;
+    font: 12pt/1.5 "Cantarell", sans-serif;
     color: #ddd;
     margin: 0;
     background-color: #102837;
@@ -599,8 +599,8 @@ ul.posts div {
   font-family: 'Cantarell';
   font-style: normal;
   font-weight: 400;
-  src:	url(/fonts/cantarell/Cantarell-Regular.woff) format('woff'),
-	url(/fonts/cantarell/Cantarell-Regular.tff) format('tff'),
+  src:	url(/fonts/cantarell/Cantarell-Regular.ttf) format('truetype'),
+	url(/fonts/cantarell/Cantarell-Regular.woff) format('woff'),
 	local('Cantarell Regular'),
 	local('Cantarell-Regular');
 }
@@ -608,8 +608,8 @@ ul.posts div {
   font-family: 'Cantarell';
   font-style: normal;
   font-weight: 700;
-  src:	url(/fonts/cantarell/Cantarell-Bold.woff) format('woff'),
-	url(/fonts/cantarell/Cantarell-Bold.tff) format('tff'),
+  src:	url(/fonts/cantarell/Cantarell-Bold.ttf) format('trutype'),
+	url(/fonts/cantarell/Cantarell-Bold.woff) format('woff'),
 	local('Cantarell Bold'),
 	local('Cantarell-Bold');
 }
@@ -617,8 +617,8 @@ ul.posts div {
   font-family: 'Cantarell';
   font-style: italic;
   font-weight: 400;
-  src:	url(/fonts/cantarell/Cantarell-Oblique.woff) format('woff'),
-	url(/fonts/cantarell/Cantarell-Oblique.tff) format('tff'),
+  src:	url(/fonts/cantarell/Cantarell-Oblique.ttf) format('truetype'),
+	url(/fonts/cantarell/Cantarell-Oblique.woff) format('woff'),
 	local('Cantarell Oblique'),
 	local('Cantarell-Oblique');
 }
@@ -626,8 +626,8 @@ ul.posts div {
   font-family: 'Cantarell';
   font-style: italic;
   font-weight: 700;
-  src:	url(/fonts/cantarell/Cantarell-BoldOblique.woff) format('woff'),
-	url(/fonts/cantarell/Cantarell-BoldOblique.tff) format('tff'),
+  src:	url(/fonts/cantarell/Cantarell-BoldOblique.tff) format('truetype'),
+	url(/fonts/cantarell/Cantarell-BoldOblique.woff) format('woff'),
 	local('Cantarell Bold Oblique'),
 	local('Cantarell-BoldOblique');
 }
