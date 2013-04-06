@@ -599,23 +599,35 @@ ul.posts div {
   font-family: 'Cantarell';
   font-style: normal;
   font-weight: 400;
-  src: url(/fonts/cantarell/Cantarell-Regular.woff) format('woff'), local('Cantarell Regular'), local('Cantarell-Regular');
+  src:	url(/fonts/cantarell/Cantarell-Regular.woff) format('woff'),
+	url(/fonts/cantarell/Cantarell-Regular.tff) format('tff'),
+	local('Cantarell Regular'),
+	local('Cantarell-Regular');
 }
 @font-face {
   font-family: 'Cantarell';
   font-style: normal;
   font-weight: 700;
-  src: url(/fonts/cantarell/Cantarell-Bold.woff) format('woff'), local('Cantarell Bold'), local('Cantarell-Bold');
+  src:	url(/fonts/cantarell/Cantarell-Bold.woff) format('woff'),
+	url(/fonts/cantarell/Cantarell-Bold.tff) format('tff'),
+	local('Cantarell Bold'),
+	local('Cantarell-Bold');
 }
 @font-face {
   font-family: 'Cantarell';
   font-style: italic;
   font-weight: 400;
-  src: url(/fonts/cantarell/Cantarell-Oblique.woff) format('woff'), local('Cantarell Oblique'), local('Cantarell-Oblique');
+  src:	url(/fonts/cantarell/Cantarell-Oblique.woff) format('woff'),
+	url(/fonts/cantarell/Cantarell-Oblique.tff) format('tff'),
+	local('Cantarell Oblique'),
+	local('Cantarell-Oblique');
 }
 @font-face {
   font-family: 'Cantarell';
   font-style: italic;
   font-weight: 700;
-  src: url(/fonts/cantarell/Cantarell-BoldOblique.woff) format('woff'), local('Cantarell Bold Oblique'), local('Cantarell-BoldOblique');
+  src:	url(/fonts/cantarell/Cantarell-BoldOblique.woff) format('woff'),
+	url(/fonts/cantarell/Cantarell-BoldOblique.tff) format('tff'),
+	local('Cantarell Bold Oblique'),
+	local('Cantarell-BoldOblique');
 }
