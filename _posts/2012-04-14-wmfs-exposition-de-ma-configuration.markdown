@@ -25,36 +25,32 @@ Les options se terminant par `_statusline` permettent d'afficher, grâce à [la 
 ## Statusbars
 Pour grossir le trait, avec la commande `$ wmfs -c status "testbar BLABLA"`, « BLABLA » apparaitra dans la zone *status* de la barre du nom « *testbar* ». Là où c'est intéressant, c'est qu'on peut donc s'en servir, pour afficher en temps réel, **le résultat d'un script conky** :
 
-{% highlight bash %}
-#!/bin/sh  
-conky -c ~/.config/wmfs/scripts/conkyrc_top | while true; read line; do wmfs -c status "testbar $line"; done &
-{% endhighlight %}
+	#!/bin/sh  
+	conky -c ~/.config/wmfs/scripts/conkyrc_top | while true; read line; do wmfs -c status "testbar $line"; done &
 
 Évidemment l'idéal serait de lancer tout cela au démarrage de la session X.
 
 Puisque conky nous permet de gratter facilement les informations dont on a besoin, grâce à ses fonctions,  il ne nous manque plus qu'à y coupler [la syntaxe](https://github.com/xorg62/wmfs/wiki/statusbar_fr) :
 
-{% highlight bash %}
-out_to_console yes
-out_to_x no
-background yes
-update_interval 1
-total_run_times 0
-no_buffers yes
-
-TEXT
-^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png] ^s[right;\#BBBBBB; Uptime:] ^s[right;\#BDE077; $uptime_short]\
-^s[right;\#444444;   |   ]\
-^i[right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png] ^s[right;\#BBBBBB; HDD:] ^s[right;\#A6D4E0; ${fs_used_perc /}% ] ^p[right;8;10;0;${fs_used_perc /};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e df -h)\
-^s[right;\#444444;   |   ]\
-^i[right;0;0;/home/william/.config/wmfs/icons/stat/ship.png] ^s[right;\#BBBBBB; Kernel:] ^s[right;\#FDA53C; $kernel]\
-^s[right;\#444444;   |   ]\
-^i[right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png] ^s[right;\#BBBBBB; IP:] ^s[right;\#E8DD9E; ${addr wlan0}](1;spawn;urxvt -e wicd-curses)\
-^s[right;\#444444;   |   ]\
-^i[right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png] ^s[right;\#BBBBBB; Volume: ] ^s[right;\#A6D4E0;${exec amixer get Master | grep "Mono: P" | awk '{print $4}' | grep -oE "[[:digit:]]{1,}"%} ](1;spawn;urxvt -e alsamixer)  ^p[right;8;10;0;${exec amixer get Master | grep "Mono: P" | awk '{print $4}' | grep -oE "[[:digit:]]{1,}"};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e alsamixer)\
-^s[right;\#444444;   |   ]\
-^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png]\ ^s[right;\#CCCCCC; ${time %a %d %b}] ^s[right;\#A6D4E0; ${time %H:%M}   ]\
-{% endhighlight %}
+	out_to_console yes
+	out_to_x no
+	background yes
+	update_interval 1
+	total_run_times 0
+	no_buffers yes
+	
+	TEXT
+	^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png] ^s[right;\#BBBBBB; Uptime:] ^s[right;\#BDE077; $uptime_short]\
+	^s[right;\#444444;   |   ]\
+	^i[right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png] ^s[right;\#BBBBBB; HDD:] ^s[right;\#A6D4E0; ${fs_used_perc /}% ] ^p[right;8;10;0;${fs_used_perc /};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e df -h)\
+	^s[right;\#444444;   |   ]\
+	^i[right;0;0;/home/william/.config/wmfs/icons/stat/ship.png] ^s[right;\#BBBBBB; Kernel:] ^s[right;\#FDA53C; $kernel]\
+	^s[right;\#444444;   |   ]\
+	^i[right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png] ^s[right;\#BBBBBB; IP:] ^s[right;\#E8DD9E; ${addr wlan0}](1;spawn;urxvt -e wicd-curses)\
+	^s[right;\#444444;   |   ]\
+	^i[right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png] ^s[right;\#BBBBBB; Volume: ] ^s[right;\#A6D4E0;${exec amixer get Master | grep "Mono: P" | awk '{print $4}' | grep -oE "[[:digit:]]{1,}"%} ](1;spawn;urxvt -e alsamixer)  ^p[right;8;10;0;${exec amixer get Master | grep "Mono: P" | awk '{print $4}' | grep -oE "[[:digit:]]{1,}"};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e alsamixer)\
+	^s[right;\#444444;   |   ]\
+	^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png]\ ^s[right;\#CCCCCC; ${time %a %d %b}] ^s[right;\#A6D4E0; ${time %H:%M}   ]\
 
 Voilà qui nous donne magnifiquement :
  
@@ -66,13 +62,11 @@ C'est exact, puisque grâce à cette mystérieuse syntaxe, au-delà d'afficher d
 
 (Dans le cas d'un script conky :)
 
-{% highlight bash %}
-${if_running mocp}\
-${if_match "${exec mocp -Q %state}" == "PLAY"}^s[right;\#BDE077;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/pause.png](1;spawn;mocp -G)^s[right;\#BDE077; }]$endif\
-${if_match "${exec mocp -Q %state}" == "PAUSE"}^s[right;\#FDA53C;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/play.png](1;spawn;mocp -G)^s[right;\#FDA53C; }]$endif\
-${if_match "${exec mocp -Q %state}" == "STOP"}^s[right;\#A6D4E0;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/stop.png](1;spawn;mocp -p)^s[right;\#A6D4E0; }  ]$endif\
-$endif\
-{% endhighlight %}
+	${if_running mocp}\
+	${if_match "${exec mocp -Q %state}" == "PLAY"}^s[right;\#BDE077;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/pause.png](1;spawn;mocp -G)^s[right;\#BDE077; }]$endif\
+	${if_match "${exec mocp -Q %state}" == "PAUSE"}^s[right;\#FDA53C;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/play.png](1;spawn;mocp -G)^s[right;\#FDA53C; }]$endif\
+	${if_match "${exec mocp -Q %state}" == "STOP"}^s[right;\#A6D4E0;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/stop.png](1;spawn;mocp -p)^s[right;\#A6D4E0; }  ]$endif\
+	$endif\
 
 **Littéralement**; on vérifie si *mocp* est lancé (**ligne 1**);  
 si MOC est en mode PLAY, afficher l'image `~/.config/wmfs/icons/stat/pause.png` — cette même image, lancera la commande `mocp -G` (*toggle play/pause*) si elle est cliquée (**ligne 2**);  
@@ -82,9 +76,7 @@ enfin, on réitère pour les actions Pause, et Stop (**lignes 3 et 4**) en chang
 
 On terminera sur la fonctionnalité phare de cette syntaxe : les **graphiques**, et **barres de progression**. On n'a que trois éléments à fournir : les couleurs, la valeur actuelle, et la valeur maximale. Notre cher WMFS se charge du reste.
 
-{% highlight bash %}
-^g[left;80;10;${cpu};100;\#333333;\#FDA53C;ckycpu](1;spawn;urxvt -e htop)
-{% endhighlight %}
+	^g[left;80;10;${cpu};100;\#333333;\#FDA53C;ckycpu](1;spawn;urxvt -e htop)
 
 Sur le modèle `^g[{alignement};{largeur};{hauteur};{valeur actuelle};{valeur maximale};{couleur BG};{couleur FG};{ID du graphe}](1;spawn;{commande à lancer au clic})`.
 

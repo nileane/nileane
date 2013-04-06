@@ -31,79 +31,76 @@ Afin de parvenir à notre objectif, il va falloir créer un fichier qui contiend
 
 Pour cela, au lieu de lancer "`monsterwm`" dans notre `.xinitrc` (ou autre moyen d'exécution de votre sessiong xorg), on exécutera ce fichier, que je nommerai personnellement `runmonster.exec` et qui aura pour contenu :
 
-{% highlight bash %}
-#!/usr/bin/env bash
-
-# First define colors
-norm_fg="#909090"
-norm_bg="#1a1a1a"
-sel_fg="#ffffff"
-sel_bg="#3a3a3a" 
-err_fg="#ffffff"
-err_bg="#f2777a"
-
-: "${wm:="monsterwm"}"
-: "${ff:="/tmp/monsterwm.fifo"}"
-
-[[ -p $ff ]] || mkfifo -m 600 "$ff"
-
-while read -t 2 -r wmout || true; do
-    # filter output to only what we want to match and parse
-    if [[ $wmout =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+.*$ ]]; then
-        read -ra desktops <<< "$wmout" && unset r
-            for desktop in "${desktops[@]}"; do
-                # set values for
-                # d - the desktop id
-                # w - number of windows in that desktop
-                # m - tiling layout/mode for that desktop
-                # c - whether that desktop is the current (1) or not (0)
-                # u - whether a window in that desktop has an urgent hint set (1) or not (0)
-                IFS=':' read -r d w m c u <<< "$desktop"
-                # Set the icon for desktops with windows
-                ic=" "
-                ((w)) && ic=" *"
-                # name each desktop
-                      case $d in
-                        0) d="u " ;;
-                        1) d="d " ;;
-                        2) d="t " ;;
-                        3) d="q " ;;
-                        4) d="c " ;;
-                        5) d="sx " ;;
-                        6) d="sp " ;;
-                      esac
-                # we will also display the current desktop's tiling layout/mode
-                      ((c)) && fg="$sel_fg" bg="$sel_bg" && case $m in
-                          # name each layout/mode with a symbol
-                          0) i=" [T]" ;;
-                          1) i=" [$w]" ;;
-                          2) i=" [b]" ;;
-                          3) i=" [G]" ;;
-                          4) i=" [F]" ;;
-                      esac || fg="$norm_fg" bg="$norm_bg"
-                      # if the desktop has an urgent hint its color should be err_fg/err_bg
-                      ((u)) && fg="$err_fg" bg="$err_bg"
-                      # print the desktop name
-                      r+="^bg($norm_bg)^bg($bg)^fg($fg)$ic$d^fg($norm_fg)^bg($norm_bg)"
-            done
-    fi        
-    printf "%s%s\n" "$r" "$i"
-done < "$ff" | dzen2 -fg "#cccccc" -bg "#1a1a1a" -h 20 -fn "-*-envypn-medium-*-*--13-*-*-*-*-*-*-*" -ta l -w 300 -e "button2=stick" &
-    
-while :; do "$wm" || break; done | tee -a "$ff"
-{% endhighlight %}
+	#!/usr/bin/env bash
+	
+	# First define colors
+	norm_fg="#909090"
+	norm_bg="#1a1a1a"
+	sel_fg="#ffffff"
+	sel_bg="#3a3a3a" 
+	err_fg="#ffffff"
+	err_bg="#f2777a"
+	
+	: "${wm:="monsterwm"}"
+	: "${ff:="/tmp/monsterwm.fifo"}"
+	
+	[[ -p $ff ]] || mkfifo -m 600 "$ff"
+	
+	while read -t 2 -r wmout || true; do
+	    # filter output to only what we want to match and parse
+	    if [[ $wmout =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+.*$ ]]; then
+	        read -ra desktops <<< "$wmout" && unset r
+	            for desktop in "${desktops[@]}"; do
+	                # set values for
+	                # d - the desktop id
+	                # w - number of windows in that desktop
+	                # m - tiling layout/mode for that desktop
+	                # c - whether that desktop is the current (1) or not (0)
+	                # u - whether a window in that desktop has an urgent hint set (1) or not (0)
+	                IFS=':' read -r d w m c u <<< "$desktop"
+	                # Set the icon for desktops with windows
+	                ic=" "
+	                ((w)) && ic=" *"
+	                # name each desktop
+	                      case $d in
+	                        0) d="u " ;;
+	                        1) d="d " ;;
+	                        2) d="t " ;;
+	                        3) d="q " ;;
+	                        4) d="c " ;;
+	                        5) d="sx " ;;
+	                        6) d="sp " ;;
+	                      esac
+	                # we will also display the current desktop's tiling layout/mode
+	                      ((c)) && fg="$sel_fg" bg="$sel_bg" && case $m in
+	                          # name each layout/mode with a symbol
+	                          0) i=" [T]" ;;
+	                          1) i=" [$w]" ;;
+	                          2) i=" [b]" ;;
+	                          3) i=" [G]" ;;
+	                          4) i=" [F]" ;;
+	                      esac || fg="$norm_fg" bg="$norm_bg"
+	                      # if the desktop has an urgent hint its color should be err_fg/err_bg
+	                      ((u)) && fg="$err_fg" bg="$err_bg"
+	                      # print the desktop name
+	                      r+="^bg($norm_bg)^bg($bg)^fg($fg)$ic$d^fg($norm_fg)^bg($norm_bg)"
+	            done
+	    fi        
+	    printf "%s%s\n" "$r" "$i"
+	done < "$ff" | dzen2 -fg "#cccccc" -bg "#1a1a1a" -h 20 -fn "-*-envypn-medium-*-*--13-*-*-*-*-*-*-*" -ta l -w 300 -e "button2=stick" &
+	    
+	while :; do "$wm" || break; done | tee -a "$ff"
 
 Ce fichier permet au passage d'attribuer un nom, un symbole, ou autre, à chacun de ces bureaux, et des pavages, en plus des choix de couleurs pour dzen2.
 
 Mon `.xinitrc` aura donc l'apparence suivante :
-{% highlight bash %}
-# […]
-setxkbmap -layout fr -variant bepo &
-xsetroot -cursor_name "arrow" &
-numlockx on &
 
-runmonster.exec
-{% endhighlight %}
+	# […]
+	setxkbmap -layout fr -variant bepo &
+	xsetroot -cursor_name "arrow" &
+	numlockx on &
+	
+	runmonster.exec
 
 ## *voilà*
 
