@@ -10,7 +10,7 @@
                         <ul>
                      {% for link in site.realisations %}
                         <li><a href="{{ link.url }}">{{ link.text }}
-				{% if link.desc %}<span class="desc"><span style="opacity:0.5;">&#10095;</span> {{ link.desc }}</span>{% endif %}
+				{% if link.desc %}<span class="desc"><span style="opacity:0.5;">»</span> {{ link.desc }}</span>{% endif %}
 			    </a>
 			</li>
 		</li>
@@ -21,7 +21,7 @@
 			<ul>
 		     {% for link in site.ailleurs %}
 			<li><a href="{{ link.url }}" target="_blank">{{ link.text }}
-                                {% if link.desc %}<span class="desc"><span style="opacity:0.5">&#10095;</span> {{ link.desc }}</span>{% endif %}
+                                {% if link.desc %}<span class="desc"><span style="opacity:0.5">»</span> {{ link.desc }}</span>{% endif %}
 			    </a>
 			</li>
 		     {% endfor %}
