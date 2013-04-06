@@ -25,8 +25,9 @@ navigation:
   url: /archives
 - text: à propos
   url: /apropos
-- text: rss
-  url: /flux.xml 
+- text: me contacter
+  url: /mecontacter
+
 
 ailleurs:
 - text: Arch Linux Forums
