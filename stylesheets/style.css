@@ -101,8 +101,8 @@ header nav a {
     transition: all .2s;
 }
 .menu:after {
-    border-bottom: 9px solid #CBE5FF;
-    border-left: 9px solid transparent;
+    border-bottom: 8px solid #CBE5FF;
+    border-left: 8px solid transparent;
     content: " ";
     transition: all .2s;
     display: inline-block;
