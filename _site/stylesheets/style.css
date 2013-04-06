@@ -73,7 +73,7 @@ header#top > div {
     box-shadow: 0 3px rgba(0, 0, 0, 0.3);
     display: inline-block;
     margin: 0;
-    padding: 0 15px;
+    padding: 0 10px;
     position: relative;
     vertical-align: top;
 }
@@ -100,55 +100,67 @@ header nav a {
     color: #CBE5FF;
     transition: all .2s;
 }
-header nav li > ul {
-    background-color: #294765;
-    box-shadow: 0 2px rgba(0, 0, 0, 0.3);
-    display: none;
-    list-style: none outside none;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 2000;
-    text-align: left;
-    margin: 0 0 0 -10px;
-    min-width: 150px;
-}
-header nav li.menu:hover > ul {
-    display: block;
-}
-header nav li > ul li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 0 8px;
-    padding: 0 0 10px;
-}
-header nav li > ul li:first-child {
-    margin-top: 6px;
-}
-header nav li > ul li:last-child {
-    border-bottom: 0 none;
-    margin-bottom: 0;
-    padding-bottom: 6px;
-}
-header nav li ul a .desc {
-    color: #DDDDDD;
-    display: block;
-    text-decoration: none;
-    font-size: 80%;
-}
-.menu:before {
+.menu:after {
     border-bottom: 9px solid #CBE5FF;
     border-left: 9px solid transparent;
     content: " ";
     transition: all .2s;
-    position: absolute;
-    right: 0;
-    top: 16px;
+    display: inline-block;
+    vertical-align:middle;
+    margin-left: 2px;
 }
-.menu:hover:before {
+.menu:hover:after {
     transform: rotate(90deg);
 }
-.menu {
-    padding-right: 15px;
-    position: relative;
+header nav li > ul {
+    background-color: #213B54;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.3), inset 0 3px rgba(0, 0, 0, 0.2);
+    display: none;
+    list-style: none outside none;
+    padding: 0 15px;
+    position: absolute;
+    z-index: 2000;
+    text-align: left;
+    right:0;
+    left:0;
+    margin-top:4px;
+}
+header nav li.menu:hover > ul {
+    display: block;
+}
+
+@media screen and (min-width:700px) {
+	header nav li.menu:hover > ul {
+	    animation: 200ms fondu;
+	}
+}
+
+header nav li > ul li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+    padding: 0;
+}
+header nav li > ul li:first-child a {
+    padding-top: 10px;
+}
+header nav li > ul li:last-child {
+    border-bottom: 0;
+}
+header nav li > ul li:last-child a {
+    padding-bottom: 10px;
+}
+header nav li ul a {
+    display: block;
+    padding: 8px 0;
+}
+header nav li ul a:hover {
+    background-color: #192E42;
+    border-bottom-color: transparent;
+    box-shadow: 15px 0 #192E42, -15px 0 #192E42;
+}
+header nav li ul a .desc {
+    color: #DDDDDD;
+    text-decoration: none;
+    font-size: 80%;
 }
 a#embleme {
     display: inline-block;
@@ -180,7 +192,8 @@ a#embleme:hover {
 body > footer {
     max-width: 800px;
     margin: 60px auto 0;
-    padding: 0 10px 20px
+    padding: 0 10px 20px;
+    text-align:center;
 }
 @media screen and (min-width:830px) {
     body > footer {
@@ -578,7 +591,10 @@ ul.posts div {
     background: #2E3740;
     box-shadow: inset 0 2px rgba(0, 0, 0, 0.2);
 }
-
+@keyframes fondu {
+0% { opacity: 0; margin-top: -4px; }
+100% { opacity: 1; margin-top: 4px; }
+}
 @font-face {
   font-family: "Cantarell";
   src: url("/fonts/cantarell/Cantarell-Regular.ttf");

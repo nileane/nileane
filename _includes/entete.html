@@ -6,27 +6,27 @@
 		<li><a href="{{ link.url }}">{{ link.text }}</a></li>
 	    {% endfor %}
 		<li>&#10087;</li>
-		<li class="menu"><a href="#">ailleurs</a>
-			<ul>
-		     {% for link in site.ailleurs %}
-			<li><a href="{{ link.url }}" target="_blank">{{ link.text }}
-                                {% if link.desc %}<span class="desc">{{ link.desc }}</span>{% endif %}
-			    </a>
-			</li>
-		     {% endfor %}
-			</ul>
-		</li>
                 <li class="menu"><a href="#">réalisations</a>
                         <ul>
                      {% for link in site.realisations %}
                         <li><a href="{{ link.url }}">{{ link.text }}
-				{% if link.desc %}<span class="desc">{{ link.desc }}</span>{% endif %}
+				{% if link.desc %}<span class="desc"><span style="opacity:0.5;">&#10095;</span> {{ link.desc }}</span>{% endif %}
 			    </a>
 			</li>
 		</li>
                      {% endfor %}
                         </ul>
                 </li>
+		<li class="menu"><a href="#">ailleurs</a>
+			<ul>
+		     {% for link in site.ailleurs %}
+			<li><a href="{{ link.url }}" target="_blank">{{ link.text }}
+                                {% if link.desc %}<span class="desc"><span style="opacity:0.5">&#10095;</span> {{ link.desc }}</span>{% endif %}
+			    </a>
+			</li>
+		     {% endfor %}
+			</ul>
+		</li>
 		</ul>
 	    </nav>
 	</div><br>

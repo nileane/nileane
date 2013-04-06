@@ -31,6 +31,7 @@ navigation:
 ailleurs:
 - text: Arch Linux Forums
   url: https://bbs.archlinux.org/profile.php?id=55538
+  desc: "Participations aux discussions de la distribution."
 - text: DeviantArt
   url: http://schoewilliam.deviantart.com/
   desc: "Captures d'écran commentées."
@@ -44,7 +45,7 @@ ailleurs:
   desc: "Partage et recommandations de liens."
 - text: StatusNet
   url: http://identi.ca/schoewilliam
-  desc: "Discussions et réactions (bientôt sur le réseau pumpio)."
+  desc: "Discussions et réactions."
 - text: Twitter
   url: http://twitter.com/schoewilliam
 
