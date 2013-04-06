@@ -4,7 +4,7 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-04-06T18:21:06+04:00</updated>
+ <updated>2013-04-06T19:07:14+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
@@ -248,11 +248,76 @@
 
 &lt;p&gt;Pour cela, au lieu de lancer &amp;#8221;&lt;code&gt;monsterwm&lt;/code&gt;&amp;#8221; dans notre &lt;code&gt;.xinitrc&lt;/code&gt; (ou autre moyen d&amp;#8217;exécution de votre sessiong xorg), on exécutera ce fichier, que je nommerai personnellement &lt;code&gt;runmonster.exec&lt;/code&gt; et qui aura pour contenu :&lt;/p&gt;
 
-&lt;p&gt;Liquid error: Failed to get header.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env bash
+
+# First define colors
+norm_fg=&amp;quot;#909090&amp;quot;
+norm_bg=&amp;quot;#1a1a1a&amp;quot;
+sel_fg=&amp;quot;#ffffff&amp;quot;
+sel_bg=&amp;quot;#3a3a3a&amp;quot; 
+err_fg=&amp;quot;#ffffff&amp;quot;
+err_bg=&amp;quot;#f2777a&amp;quot;
+
+: &amp;quot;${wm:=&amp;quot;monsterwm&amp;quot;}&amp;quot;
+: &amp;quot;${ff:=&amp;quot;/tmp/monsterwm.fifo&amp;quot;}&amp;quot;
+
+[[ -p $ff ]] || mkfifo -m 600 &amp;quot;$ff&amp;quot;
+
+while read -t 2 -r wmout || true; do
+    # filter output to only what we want to match and parse
+    if [[ $wmout =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+.*$ ]]; then
+        read -ra desktops &amp;lt;&amp;lt;&amp;lt; &amp;quot;$wmout&amp;quot; &amp;amp;&amp;amp; unset r
+            for desktop in &amp;quot;${desktops[@]}&amp;quot;; do
+                # set values for
+                # d - the desktop id
+                # w - number of windows in that desktop
+                # m - tiling layout/mode for that desktop
+                # c - whether that desktop is the current (1) or not (0)
+                # u - whether a window in that desktop has an urgent hint set (1) or not (0)
+                IFS=&amp;#39;:&amp;#39; read -r d w m c u &amp;lt;&amp;lt;&amp;lt; &amp;quot;$desktop&amp;quot;
+                # Set the icon for desktops with windows
+                ic=&amp;quot; &amp;quot;
+                ((w)) &amp;amp;&amp;amp; ic=&amp;quot; *&amp;quot;
+                # name each desktop
+                      case $d in
+                        0) d=&amp;quot;u &amp;quot; ;;
+                        1) d=&amp;quot;d &amp;quot; ;;
+                        2) d=&amp;quot;t &amp;quot; ;;
+                        3) d=&amp;quot;q &amp;quot; ;;
+                        4) d=&amp;quot;c &amp;quot; ;;
+                        5) d=&amp;quot;sx &amp;quot; ;;
+                        6) d=&amp;quot;sp &amp;quot; ;;
+                      esac
+                # we will also display the current desktop&amp;#39;s tiling layout/mode
+                      ((c)) &amp;amp;&amp;amp; fg=&amp;quot;$sel_fg&amp;quot; bg=&amp;quot;$sel_bg&amp;quot; &amp;amp;&amp;amp; case $m in
+                          # name each layout/mode with a symbol
+                          0) i=&amp;quot; [T]&amp;quot; ;;
+                          1) i=&amp;quot; [$w]&amp;quot; ;;
+                          2) i=&amp;quot; [b]&amp;quot; ;;
+                          3) i=&amp;quot; [G]&amp;quot; ;;
+                          4) i=&amp;quot; [F]&amp;quot; ;;
+                      esac || fg=&amp;quot;$norm_fg&amp;quot; bg=&amp;quot;$norm_bg&amp;quot;
+                      # if the desktop has an urgent hint its color should be err_fg/err_bg
+                      ((u)) &amp;amp;&amp;amp; fg=&amp;quot;$err_fg&amp;quot; bg=&amp;quot;$err_bg&amp;quot;
+                      # print the desktop name
+                      r+=&amp;quot;^bg($norm_bg)^bg($bg)^fg($fg)$ic$d^fg($norm_fg)^bg($norm_bg)&amp;quot;
+            done
+    fi        
+    printf &amp;quot;%s%s\n&amp;quot; &amp;quot;$r&amp;quot; &amp;quot;$i&amp;quot;
+done &amp;lt; &amp;quot;$ff&amp;quot; | dzen2 -fg &amp;quot;#cccccc&amp;quot; -bg &amp;quot;#1a1a1a&amp;quot; -h 20 -fn &amp;quot;-*-envypn-medium-*-*--13-*-*-*-*-*-*-*&amp;quot; -ta l -w 300 -e &amp;quot;button2=stick&amp;quot; &amp;amp;
+    
+while :; do &amp;quot;$wm&amp;quot; || break; done | tee -a &amp;quot;$ff&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Ce fichier permet au passage d&amp;#8217;attribuer un nom, un symbole, ou autre, à chacun de ces bureaux, et des pavages, en plus des choix de couleurs pour dzen2.&lt;/p&gt;
 
-&lt;p&gt;Mon &lt;code&gt;.xinitrc&lt;/code&gt; aura donc l&amp;#8217;apparence suivante : Liquid error: Failed to get header.&lt;/p&gt;
+&lt;p&gt;Mon &lt;code&gt;.xinitrc&lt;/code&gt; aura donc l&amp;#8217;apparence suivante :&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# […]
+setxkbmap -layout fr -variant bepo &amp;amp;
+xsetroot -cursor_name &amp;quot;arrow&amp;quot; &amp;amp;
+numlockx on &amp;amp;
+
+runmonster.exec&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#39;voil&#39;&gt;&lt;em&gt;voilà&lt;/em&gt;&lt;/h2&gt;
 &lt;a href=&#39;http://schoewilliam.deviantart.com/art/MonsterWM-January-2013-archlinux-346452273&#39; target=&#39;_blank&#39;&gt;&lt;img class=&#39;align right&#39; src=&#39;/images/apropos/2013-01mini.png&#39; /&gt;&lt;/a&gt;
@@ -371,13 +436,32 @@ le &lt;strong&gt;27 avril 2012&lt;/strong&gt; à &lt;strong&gt;16 h 19 min&lt;/s
 
 &lt;p&gt;Pour grossir le trait, avec la commande &lt;code&gt;$ wmfs -c status &amp;quot;testbar BLABLA&amp;quot;&lt;/code&gt;, « BLABLA » apparaitra dans la zone &lt;em&gt;status&lt;/em&gt; de la barre du nom « &lt;em&gt;testbar&lt;/em&gt; ». Là où c&amp;#8217;est intéressant, c&amp;#8217;est qu&amp;#8217;on peut donc s&amp;#8217;en servir, pour afficher en temps réel, &lt;strong&gt;le résultat d&amp;#8217;un script conky&lt;/strong&gt; :&lt;/p&gt;
 
-&lt;p&gt;Liquid error: Failed to get header.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/sh  
+conky -c ~/.config/wmfs/scripts/conkyrc_top | while true; read line; do wmfs -c status &amp;quot;testbar $line&amp;quot;; done &amp;amp;&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Évidemment l&amp;#8217;idéal serait de lancer tout cela au démarrage de la session X.&lt;/p&gt;
 
 &lt;p&gt;Puisque conky nous permet de gratter facilement les informations dont on a besoin, grâce à ses fonctions, il ne nous manque plus qu&amp;#8217;à y coupler &lt;a href=&#39;https://github.com/xorg62/wmfs/wiki/statusbar_fr&#39;&gt;la syntaxe&lt;/a&gt; :&lt;/p&gt;
 
-&lt;p&gt;Liquid error: Failed to get header.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;out_to_console yes
+out_to_x no
+background yes
+update_interval 1
+total_run_times 0
+no_buffers yes
+
+TEXT
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png] ^s[right;\#BBBBBB; Uptime:] ^s[right;\#BDE077; $uptime_short]\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png] ^s[right;\#BBBBBB; HDD:] ^s[right;\#A6D4E0; ${fs_used_perc /}% ] ^p[right;8;10;0;${fs_used_perc /};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e df -h)\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/ship.png] ^s[right;\#BBBBBB; Kernel:] ^s[right;\#FDA53C; $kernel]\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png] ^s[right;\#BBBBBB; IP:] ^s[right;\#E8DD9E; ${addr wlan0}](1;spawn;urxvt -e wicd-curses)\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png] ^s[right;\#BBBBBB; Volume: ] ^s[right;\#A6D4E0;${exec amixer get Master | grep &amp;quot;Mono: P&amp;quot; | awk &amp;#39;{print $4}&amp;#39; | grep -oE &amp;quot;[[:digit:]]{1,}&amp;quot;%} ](1;spawn;urxvt -e alsamixer)  ^p[right;8;10;0;${exec amixer get Master | grep &amp;quot;Mono: P&amp;quot; | awk &amp;#39;{print $4}&amp;#39; | grep -oE &amp;quot;[[:digit:]]{1,}&amp;quot;};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e alsamixer)\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png]\ ^s[right;\#CCCCCC; ${time %a %d %b}] ^s[right;\#A6D4E0; ${time %H:%M}   ]\&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Voilà qui nous donne magnifiquement :&lt;/p&gt;
 
@@ -389,7 +473,11 @@ le &lt;strong&gt;27 avril 2012&lt;/strong&gt; à &lt;strong&gt;16 h 19 min&lt;/s
 
 &lt;p&gt;(Dans le cas d&amp;#8217;un script conky :)&lt;/p&gt;
 
-&lt;p&gt;Liquid error: Failed to get header.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;${if_running mocp}\
+${if_match &amp;quot;${exec mocp -Q %state}&amp;quot; == &amp;quot;PLAY&amp;quot;}^s[right;\#BDE077;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/pause.png](1;spawn;mocp -G)^s[right;\#BDE077; }]$endif\
+${if_match &amp;quot;${exec mocp -Q %state}&amp;quot; == &amp;quot;PAUSE&amp;quot;}^s[right;\#FDA53C;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/play.png](1;spawn;mocp -G)^s[right;\#FDA53C; }]$endif\
+${if_match &amp;quot;${exec mocp -Q %state}&amp;quot; == &amp;quot;STOP&amp;quot;}^s[right;\#A6D4E0;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/stop.png](1;spawn;mocp -p)^s[right;\#A6D4E0; }  ]$endif\
+$endif\&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;Littéralement&lt;/strong&gt;; on vérifie si &lt;em&gt;mocp&lt;/em&gt; est lancé (&lt;strong&gt;ligne 1&lt;/strong&gt;);&lt;br /&gt;si MOC est en mode PLAY, afficher l&amp;#8217;image &lt;code&gt;~/.config/wmfs/icons/stat/pause.png&lt;/code&gt; — cette même image, lancera la commande &lt;code&gt;mocp -G&lt;/code&gt; (&lt;em&gt;toggle play/pause&lt;/em&gt;) si elle est cliquée (&lt;strong&gt;ligne 2&lt;/strong&gt;);&lt;br /&gt;enfin, on réitère pour les actions Pause, et Stop (&lt;strong&gt;lignes 3 et 4&lt;/strong&gt;) en changeant les éléments nécessaires.&lt;/p&gt;
 
@@ -399,7 +487,7 @@ le &lt;strong&gt;27 avril 2012&lt;/strong&gt; à &lt;strong&gt;16 h 19 min&lt;/s
 
 &lt;p&gt;On terminera sur la fonctionnalité phare de cette syntaxe : les &lt;strong&gt;graphiques&lt;/strong&gt;, et &lt;strong&gt;barres de progression&lt;/strong&gt;. On n&amp;#8217;a que trois éléments à fournir : les couleurs, la valeur actuelle, et la valeur maximale. Notre cher WMFS se charge du reste.&lt;/p&gt;
 
-&lt;p&gt;Liquid error: Failed to get header.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;^g[left;80;10;${cpu};100;\#333333;\#FDA53C;ckycpu](1;spawn;urxvt -e htop)&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Sur le modèle &lt;code&gt;^g[{alignement};{largeur};{hauteur};{valeur actuelle};{valeur maximale};{couleur BG};{couleur FG};{ID du graphe}](1;spawn;{commande à lancer au clic})&lt;/code&gt;.&lt;/p&gt;
 

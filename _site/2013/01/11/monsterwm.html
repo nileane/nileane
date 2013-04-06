@@ -140,11 +140,76 @@
 
 <p>Pour cela, au lieu de lancer &#8221;<code>monsterwm</code>&#8221; dans notre <code>.xinitrc</code> (ou autre moyen d&#8217;exécution de votre sessiong xorg), on exécutera ce fichier, que je nommerai personnellement <code>runmonster.exec</code> et qui aura pour contenu :</p>
 
-<p>Liquid error: Failed to get header.</p>
+<pre><code>#!/usr/bin/env bash
+
+# First define colors
+norm_fg=&quot;#909090&quot;
+norm_bg=&quot;#1a1a1a&quot;
+sel_fg=&quot;#ffffff&quot;
+sel_bg=&quot;#3a3a3a&quot; 
+err_fg=&quot;#ffffff&quot;
+err_bg=&quot;#f2777a&quot;
+
+: &quot;${wm:=&quot;monsterwm&quot;}&quot;
+: &quot;${ff:=&quot;/tmp/monsterwm.fifo&quot;}&quot;
+
+[[ -p $ff ]] || mkfifo -m 600 &quot;$ff&quot;
+
+while read -t 2 -r wmout || true; do
+    # filter output to only what we want to match and parse
+    if [[ $wmout =~ ^(([[:digit:]]+:)+[[:digit:]]+ ?)+.*$ ]]; then
+        read -ra desktops &lt;&lt;&lt; &quot;$wmout&quot; &amp;&amp; unset r
+            for desktop in &quot;${desktops[@]}&quot;; do
+                # set values for
+                # d - the desktop id
+                # w - number of windows in that desktop
+                # m - tiling layout/mode for that desktop
+                # c - whether that desktop is the current (1) or not (0)
+                # u - whether a window in that desktop has an urgent hint set (1) or not (0)
+                IFS=&#39;:&#39; read -r d w m c u &lt;&lt;&lt; &quot;$desktop&quot;
+                # Set the icon for desktops with windows
+                ic=&quot; &quot;
+                ((w)) &amp;&amp; ic=&quot; *&quot;
+                # name each desktop
+                      case $d in
+                        0) d=&quot;u &quot; ;;
+                        1) d=&quot;d &quot; ;;
+                        2) d=&quot;t &quot; ;;
+                        3) d=&quot;q &quot; ;;
+                        4) d=&quot;c &quot; ;;
+                        5) d=&quot;sx &quot; ;;
+                        6) d=&quot;sp &quot; ;;
+                      esac
+                # we will also display the current desktop&#39;s tiling layout/mode
+                      ((c)) &amp;&amp; fg=&quot;$sel_fg&quot; bg=&quot;$sel_bg&quot; &amp;&amp; case $m in
+                          # name each layout/mode with a symbol
+                          0) i=&quot; [T]&quot; ;;
+                          1) i=&quot; [$w]&quot; ;;
+                          2) i=&quot; [b]&quot; ;;
+                          3) i=&quot; [G]&quot; ;;
+                          4) i=&quot; [F]&quot; ;;
+                      esac || fg=&quot;$norm_fg&quot; bg=&quot;$norm_bg&quot;
+                      # if the desktop has an urgent hint its color should be err_fg/err_bg
+                      ((u)) &amp;&amp; fg=&quot;$err_fg&quot; bg=&quot;$err_bg&quot;
+                      # print the desktop name
+                      r+=&quot;^bg($norm_bg)^bg($bg)^fg($fg)$ic$d^fg($norm_fg)^bg($norm_bg)&quot;
+            done
+    fi        
+    printf &quot;%s%s\n&quot; &quot;$r&quot; &quot;$i&quot;
+done &lt; &quot;$ff&quot; | dzen2 -fg &quot;#cccccc&quot; -bg &quot;#1a1a1a&quot; -h 20 -fn &quot;-*-envypn-medium-*-*--13-*-*-*-*-*-*-*&quot; -ta l -w 300 -e &quot;button2=stick&quot; &amp;
+    
+while :; do &quot;$wm&quot; || break; done | tee -a &quot;$ff&quot;</code></pre>
 
 <p>Ce fichier permet au passage d&#8217;attribuer un nom, un symbole, ou autre, à chacun de ces bureaux, et des pavages, en plus des choix de couleurs pour dzen2.</p>
 
-<p>Mon <code>.xinitrc</code> aura donc l&#8217;apparence suivante : Liquid error: Failed to get header.</p>
+<p>Mon <code>.xinitrc</code> aura donc l&#8217;apparence suivante :</p>
+
+<pre><code># […]
+setxkbmap -layout fr -variant bepo &amp;
+xsetroot -cursor_name &quot;arrow&quot; &amp;
+numlockx on &amp;
+
+runmonster.exec</code></pre>
 
 <h2 id='voil'><em>voilà</em></h2>
 <a href='http://schoewilliam.deviantart.com/art/MonsterWM-January-2013-archlinux-346452273' target='_blank'><img class='align right' src='/images/apropos/2013-01mini.png' /></a>
