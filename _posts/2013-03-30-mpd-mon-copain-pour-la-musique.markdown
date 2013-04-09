@@ -3,6 +3,9 @@ layout: post
 published: true
 comments: true
 title: "MPD, mon copain pour la musique."
+tags:
+- mpd
+- musique
 ---
 Un petit problème se posait à moi il y a quelques jours ( semaines ? ) : mon poste A commençait à être limité quant à son espace disque. *Objectif* donc : transférer ma bibliothèque musicale sur un poste B ( soient l'équivalent de quelques 14Go ). *Souci* : pouvoir continuer d'écouter le contenu de cette bibliothèque depuis le poste A.  
 **Solution** : utiliser la fonctionnalité implémentée par essence dans MPD ( Music Player Daemon ), qui permet le streaming de la musique.
