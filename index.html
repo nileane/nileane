@@ -6,7 +6,7 @@ role: home
 lang: fr
 ---
 <section>
-{% include schh.html %}
+{% include noteindex.html %}
 
 {% assign first_post = site.posts.first %}
 <time datetime='{{ first_post.date | date: "%Y-%m-%d" }}' class="top">{{ first_post.date | date_to_long_string }}</time>

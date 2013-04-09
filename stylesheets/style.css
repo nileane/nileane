@@ -181,7 +181,6 @@ a#embleme:hover {
 .schh {
     color: #CCCCCC;
     margin: 0;
-    max-width: 820px;
     text-align: center;
 }
 
@@ -269,7 +268,8 @@ div#talkatv-comments {
     padding: 25px 20px;
 }
 
-time.top {
+time.top,
+span.top {
     display: block;
     margin: 0;
     opacity: 0.75;
