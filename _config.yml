@@ -36,8 +36,6 @@ ailleurs:
 - text: DeviantArt
   url: http://schoewilliam.deviantart.com/
   desc: "Captures d'écran commentées."
-- text: Diaspora*
-  url: https://joindiaspora.com/u/schoewilliam
 - text: Github
   url: https://github.com/Schoewilliam
   desc: "Sources du carnet, configurations et dotfiles, …"
@@ -52,7 +50,7 @@ ailleurs:
 
 realisations:
 - text: Minisch
-  url: http://schoewilliam.legtux.org/minisch
+  url: /minisch
   desc: "Un thème élégant et fonctionnel pour Wordpress"
 - text: Expérimentations
   url: /experiments
