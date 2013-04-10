@@ -3,7 +3,7 @@ auto: false
 server: false
 server_port: 4000
 base-url: /
-url: http://schoewilliam.fr
+url: http://schoewilliam.legtux.org
 
 ftp_host: legtux.org
 ftp_dir: /
