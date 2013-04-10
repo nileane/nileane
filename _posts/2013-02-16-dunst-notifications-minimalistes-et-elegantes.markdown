@@ -19,9 +19,7 @@ Concernant ce dernier point, c'est magique. Si défini à 40s dans le fichier de
 
 Pour ce qui est de son fonctionnement, dunst écoute bien évidemment le fameux `notify-send`. Et l'on est d'ailleurs en mesure, via cette commande, de **choisir à la volée une couleur de fond/de texte**, tout comme une icône symbolique ; comme suit :
 
-{% highlight bash %}
-$ notify-send "Personnalisation" "de belles couleurs en perspective" -h string:bgcolor:#3B6B29 -h string:fgcolor:#D9FFCB
-{% endhighlight %}
+	$ notify-send "Personnalisation" "de belles couleurs en perspective" -h string:bgcolor:#3B6B29 -h string:fgcolor:#D9FFCB
 
 qui donnerait…
 
