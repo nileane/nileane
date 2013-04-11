@@ -410,6 +410,20 @@ a.bouton:hover {
 	-ms-transform: translate(0, -3px);
 }
 
+blockquote p:last-child:after {
+    content: "»";
+    font-style: normal;
+    margin-left: 10px;
+}
+blockquote p:first-child:before {
+    content: "«";
+    font-style: normal;
+    margin-right: 10px;
+}
+blockquote {
+    font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
+    font-style: italic;
+}
 
 /* commentaires */
 
