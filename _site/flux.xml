@@ -4,7 +4,7 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-04-11T22:45:02+04:00</updated>
+ <updated>2013-04-11T22:48:00+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
@@ -13,9 +13,9 @@
  
  <entry>
    <title>« Je ne savais pas qu'on avait de tels barjots dans ce lycée. »</title>
-   <link href="http://schoewilliam.legtux.org/2013/04/11/-je-ne-savais-pas-qu-on-avait-de-tels-barjots-dans-ce-lyc%C3%A9e-.html"/>
+   <link href="http://schoewilliam.legtux.org/2013/04/11/je-ne-savais-pas-qu-on-avait-de-tels-barjots-dans-ce-lyc%C3%A9e.html"/>
    <updated>2013-04-11T00:00:00+04:00</updated>
-   <id>http://schoewilliam.legtux.org/2013/04/11/-je-ne-savais-pas-qu-on-avait-de-tels-barjots-dans-ce-lycée-</id>
+   <id>http://schoewilliam.legtux.org/2013/04/11/je-ne-savais-pas-qu-on-avait-de-tels-barjots-dans-ce-lycée</id>
    <content type="html">&lt;p&gt;Une citation de l&amp;#8217;administrateur réseau du lycée.&lt;/p&gt;
 
 &lt;p&gt;Il en est venu à me dire ça lorsque je me suis rendu dans son antre afin de lui demander s&amp;#8217;il avait un écran 4/3 sous le coude. Mon seul objet était de tester un script qui adapte la résolution d&amp;#8217;écran lorsqu&amp;#8217;un câble VGA est connecté (quelques conditions et des appels de &lt;code&gt;xrandr&lt;/code&gt;, donc.), ce afin d&amp;#8217;être certain que celui-ci fonctionnerait le lendemain pour un projecteur en 1024*768px. Car tout bonnement, en ce lendemain était prévu un examen oral durant lequel je réaliserais une présentation ( accompagnée du très beau &lt;a href=&#39;http://bartaz.github.io/impress.js&#39; title=&#39;Un framework HTML5 pour des présentations originales et modernes&#39;&gt;Impress.js&lt;/a&gt;, soit dit en passant ! ) pour mon projet dans le cadre des T.P.E..&lt;/p&gt;
