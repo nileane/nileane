@@ -445,7 +445,7 @@ blockquote {
 .jskomment_previous .jskomment_commentval {
     display: block;
     background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px rgba(0, 0, 0, 0.1) inset;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
     color: #333333;
     padding: 10px 15px;
 }
