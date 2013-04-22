@@ -330,6 +330,7 @@ article footer {
 
 #post {
     color: #525252;
+    line-height: 1.65;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
@@ -341,7 +342,7 @@ article footer {
 }
 @media screen and (min-width: 700px) {
     #post > p {
-        text-indent: 40px;
+        text-indent: 55px;
     }
     #post ul {
         padding-left: 40px;
