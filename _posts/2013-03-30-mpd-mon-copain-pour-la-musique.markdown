@@ -3,6 +3,7 @@ layout: post
 published: true
 comments: true
 title: "MPD, mon copain pour la musique."
+column: true
 tags:
 - mpd
 - musique

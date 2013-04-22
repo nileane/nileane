@@ -3,6 +3,7 @@ layout: post
 published: true
 comments: true
 title: « Je ne savais pas qu'on avait de tels barjots dans ce lycée. »
+column: true
 tags:
 - humeur
 ---

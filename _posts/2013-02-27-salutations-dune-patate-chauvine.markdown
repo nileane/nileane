@@ -3,6 +3,7 @@ layout: post
 published: true
 comments: true
 title: Salutations d'une patate chauvine
+column: false
 tags:
 - HS
 - patate
