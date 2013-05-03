@@ -7,3 +7,4 @@ RewriteRule ^blog / [R]
 RewriteRule ^minisch /2013/01/07/minisch.html [R]
 RewriteRule ^rss /flux.xml [R]
 ErrorDocument 404 /oups/404.html
+AddType application/x-web-app-manifest+json .manifest

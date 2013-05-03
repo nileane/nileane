@@ -12,7 +12,7 @@ body {
 @media screen and (min-width:860px) {
     body {
 	font-size: 13pt;
-	background-position: 80% 60px;
+	background-position: 30% 60px;
     }
     #post {
     	font-size:110%;
@@ -20,7 +20,7 @@ body {
 }
 @media screen and (min-width:1250px) {
     body {
-	background-position: 65% 60px;
+	background-position: 35% 60px;
     }
 }
 a {
@@ -330,6 +330,7 @@ article footer {
 
 #post {
     color: #525252;
+    line-height: 1.6;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
@@ -341,7 +342,7 @@ article footer {
 }
 @media screen and (min-width: 700px) {
     #post > p {
-        text-indent: 40px;
+        text-indent: 55px;
     }
     #post ul {
         padding-left: 40px;
