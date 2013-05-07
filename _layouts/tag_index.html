@@ -13,9 +13,9 @@ lang: fr
   {% if tag == page.tag %}
       <li>
         <a href="{{ post.url }}">
-          <time>{{ post.date | date_to_string }}</time>
+          <time>{{ post.date | localize: ":default" }}</time>
           <h3>{{ post.title }}</h3>
-          <div>{{ post.content | strip_html | truncatewords: 25 }}</div>
+          <div>{{ post.content | strip_html | truncatewords: 30 }}</div>
         </a>
       </li>
   {% endif %}

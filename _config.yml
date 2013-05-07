@@ -1,6 +1,4 @@
 safe: false
-auto: false
-server: false
 server_port: 4000
 base-url: /
 url: http://schoewilliam.legtux.org
@@ -52,6 +50,9 @@ realisations:
 - text: Minisch
   url: /minisch
   desc: "Un thème élégant et fonctionnel pour Wordpress"
+- text: Schoses
+  url: http://schoses.schoewilliam.fr
+  desc: ""
 - text: Expérimentations
   url: /experiments
 

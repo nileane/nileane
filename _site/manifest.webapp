@@ -1,9 +1,8 @@
 {
 	"version": "0.1",
 	"name": "schoewilliam",
-	"description": "don't mind i'm testing app manifest for firefox os",
-	"launch_path": "/index.html",
-	"appcache_path": "/offline.appcache",
+	"description": "don't mind testing app manifest for firefox os",
+	"launch_path": "/",
 	"icons": {
 		"16": "/images/schapp.png",
 		"48": "/images/schapp.png",
@@ -16,7 +15,7 @@
 	"installs_allowed_from": ["*"],
 	"locales": {
 		"fr": {
-			"description": "Magnifique baguette de pain ornée de marinières.",
+			"description": "Magnifique baguette",
 			"developer": {
 				"url": "http://schoewilliam.fr"
 			}

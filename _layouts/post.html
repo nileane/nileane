@@ -5,7 +5,8 @@ lang: fr
 <section>
 {% include schh.html %}
 
-<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | date_to_long_string }}</time>
+<!-- <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | date_to_long_string }}</time> -->
+<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | localize: ":medium" }}</time>
 <article>
 
 {% if page.link %}
