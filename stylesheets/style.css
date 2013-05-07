@@ -72,7 +72,8 @@ header {
     }
 }
 header#top > div {
-    background-color: #294765;
+    background-color:	/* blue #294765; */
+			/* purple */ #2F2965;
     box-shadow: 0 3px rgba(0, 0, 0, 0.3);
     display: inline-block;
     margin: 0;
@@ -100,11 +101,13 @@ header nav > ul > li {
     padding: 5px 0;
 }
 header nav a {
-    color: #CBE5FF;
+    color:	/* blue #CBE5FF; */
+		/* purple */ #dad3ff;
     transition: all .2s;
 }
 .menu:after {
-    border-bottom: 8px solid #CBE5FF;
+    border-bottom: 8px solid	/* blue #CBE5FF; */
+				/* purple */ #dad3ff;
     border-left: 8px solid transparent;
     content: " ";
     transition: all .2s;
@@ -116,7 +119,8 @@ header nav a {
     transform: rotate(90deg);
 }
 header nav li > ul {
-    background-color: #213B54;
+    background-color:	/* blue #213B54; */
+			/* purple */ #262154;
     box-shadow: 0 2px rgba(0, 0, 0, 0.3), inset 0 3px rgba(0, 0, 0, 0.2);
     display: none;
     list-style: none outside none;
@@ -156,9 +160,11 @@ header nav li ul a {
     padding: 8px 0;
 }
 header nav li ul a:hover {
-    background-color: #192E42;
+    background-color:	/* blue #192E42; */
+			/* purple */ #1d1942;
     border-bottom-color: transparent;
-    box-shadow: 15px 0 #192E42, -15px 0 #192E42;
+    box-shadow:	/* blue 15px 0 #192E42, -15px 0 #192E42; */
+		/* purple */ 15px 0 #1d1942, -15px 0 #1d1942;
 }
 header nav li ul a .desc {
     color: #DDDDDD;
