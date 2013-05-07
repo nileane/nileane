@@ -52,7 +52,7 @@ realisations:
   desc: "Un thème élégant et fonctionnel pour Wordpress"
 - text: Schoses
   url: http://schoses.schoewilliam.fr
-  desc: ""
+  desc: "Une application minimaliste pour la saisie de listes de pensées, de notes, de <em>schoses</em>… <span style='color:#fff;padding:0 5px; background-color:#B95656;'>beta</span>"
 - text: Expérimentations
   url: /experiments
 
