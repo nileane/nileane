@@ -1,5 +1,5 @@
 safe: false
-server_port: 4000
+port: 4000
 base-url: /
 url: http://schoewilliam.legtux.org
 
@@ -41,7 +41,7 @@ ailleurs:
   url: http://www.reddit.com/user/schoelcher/
   desc: "Partage et recommandations de liens."
 - text: StatusNet
-  url: http://identi.ca/schoewilliam
+  url: https://status.vinilox.eu/schoewilliam
   desc: "Discussions et réactions."
 - text: Twitter
   url: http://twitter.com/schoewilliam

@@ -4,12 +4,44 @@
  <title>schoewilliam</title>
  <link href="http://schoewilliam.legtux.org/flux.xml" rel="self"/>
  <link href="http://schoewilliam.legtux.org/"/>
- <updated>2013-05-07T15:23:29+04:00</updated>
+ <updated>2013-05-29T21:19:24+04:00</updated>
  <id>http://schoewilliam.legtux.org</id>
  <author>
    <name>Schoewilliam</name>
  </author>
  
+ 
+ <entry>
+   <title>Petites de mes nouvelles : Boot2Gecko, StatusNet …</title>
+   <link href="http://schoewilliam.legtux.org/2013/05/29/petites-nouvelles-statusnet-boot2gecko.html"/>
+   <updated>2013-05-29T00:00:00+04:00</updated>
+   <id>http://schoewilliam.legtux.org/2013/05/29/petites-nouvelles-statusnet-boot2gecko</id>
+   <content type="html">&lt;p&gt;&lt;em&gt;Le ciel est clair, et les petits changements ne se bousculent pas. Maaaais, voilà tout de même une petite mise à jour avant la régularité retrouvée de l&amp;#8217;été prochain.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#39;/images/b2g/peakboxed.jpg&#39;&gt;&lt;img alt=&#39;Geeksphone Peak tout beau, tout emballé&#39; class=&#39;align right&#39; src=&#39;/images/b2g/peakboxed.jpg&#39; style=&#39;width:300px;&#39; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#39;geektphone_peak_firefox_os_et_boot2gecko&#39;&gt;Geektphone Peak, Firefox OS et Boot2Gecko.&lt;/h2&gt;
+
+&lt;p&gt;J&amp;#8217;étais parmi les files d&amp;#8217;attente virtuelles pour accéder aux commandes en ligne des &lt;a href=&#39;http://www.geeksphone.com/&#39;&gt;Geeksphone&lt;/a&gt; (premiers smartphones livrés avec Firefox OS, à destination des développeurs d&amp;#8217;applications, en premier lieu). Je ne vous cache d&amp;#8217;ailleurs pas que c&amp;#8217;était très difficile de pouvoir enfin passer à la caisse (aucun problème à signaler pour la livraison, et je salue en passant le support très réactif et très sympathique.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#39;/images/b2g/peakhandon.jpg&#39;&gt;&lt;img alt=&#39;Geeksphone Peak en main !&#39; class=&#39;align right&#39; src=&#39;/images/b2g/peakhandon.jpg&#39; style=&#39;width:300px;&#39; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bref, je vous confie avoir vite remplacé Firefox OS par &lt;a href=&#39;https://github.com/mozilla-b2g/B2G&#39;&gt;Boot2Gecko&lt;/a&gt;, afin d&amp;#8217;être le plus à jour possible (je suis actuellement sur la branche master, soient les prémices de Boot2Gecko 2.0.0). J&amp;#8217;ai commencé à bidouiller, et vous en dirai des nouvelles sur ce même carnet !&lt;/p&gt;
+
+&lt;h2 id=&#39;petit_dmnagement&#39;&gt;Petit déménagement.&lt;/h2&gt;
+
+&lt;p&gt;L&amp;#8217;instance la plus mythique du réseau StatusNet (microblogging), &lt;em&gt;identi.ca&lt;/em&gt;, va passer à toute autre chose chose, puisque sera à compter du premier juin prochain un des &lt;em&gt;pods&lt;/em&gt; du tout jeunot &lt;a href=&#39;http://pump.io&#39;&gt;&lt;strong&gt;pump.io&lt;/strong&gt;&lt;/a&gt;. Mon avis quant à ce dernier est simple : très prometteur, mais n&amp;#8217;est pas encore à mon goût, ni me semble &lt;em&gt;a minima&lt;/em&gt; prêt.&lt;/p&gt;
+
+&lt;p&gt;Et c&amp;#8217;est ainsi qu&amp;#8217;intervient le valeureux &lt;a href=&#39;http://vinilox.eu&#39;&gt;&lt;strong&gt;Vinilox&lt;/strong&gt;&lt;/a&gt; ! Ce dernier m&amp;#8217;a très gentiment proposé de venir m&amp;#8217;installer sur son instance StatusNet, offre que j&amp;#8217;ai acceptée avec plaisir. Ainsi chers suiveurs, vous me trouverez désormais du côté de &lt;a href=&#39;https://status.vinilox.eu/schoewilliam&#39;&gt;status.vinilox.eu/schoewilliam&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#39;nouveau_matriel&#39;&gt;Nouveau matériel.&lt;/h2&gt;
+
+&lt;p&gt;Je vais bientôt recevoir une configuration matérielle toute neuve, et reverrai pour l&amp;#8217;occasion ma configuration logicielle de bureau. Je ne cache pas envisager un retour à GNOME, ou alors peut-être tester un nouveau &lt;em&gt;tiling window manager&lt;/em&gt; (on ne s&amp;#8217;en lasse jamais.)&lt;/p&gt;
+
+&lt;p&gt;Enfin, j&amp;#8217;aimerais acquérir pour de bon mon indépendance sur les internœuds, et m&amp;#8217;autohéberger. À la maison ? À voir. J&amp;#8217;envisage un serveur dédié. Rien de décidé, quoiqu&amp;#8217;il en soit, mais ma volonté se montre fortement présente pour me pousser à trouver une solution.&lt;/p&gt;
+
+&lt;p&gt;Sur ce, je vis, et au prochain billet !&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>« Je ne savais pas qu'on avait de tels barjots dans ce lycée. »</title>
