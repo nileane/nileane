@@ -11,7 +11,7 @@ tags:
 
 [![Geeksphone Peak tout beau, tout emballé](/images/b2g/peakboxed.jpg){: class="align right" style="width:300px;"}](/images/b2g/peakboxed.jpg)
 
-## Geektphone Peak, Firefox OS et Boot2Gecko.
+## Geeksphone Peak, Firefox OS et Boot2Gecko.
 
 J'étais parmi les files d'attente virtuelles pour accéder aux commandes en ligne des [Geeksphone](http://www.geeksphone.com/) (premiers smartphones livrés avec Firefox OS, à destination des développeurs d'applications, en premier lieu). Je ne vous cache d'ailleurs pas que c'était très difficile de pouvoir enfin passer à la caisse (aucun problème à signaler pour la livraison, et je salue en passant le support très réactif et très sympathique.)
 
