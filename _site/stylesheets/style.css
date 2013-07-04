@@ -175,7 +175,14 @@ section.index #archives p {
 	padding: 20px;
 	text-align: left;
 }
-section.index #archives a {
+section.index #archives a.rss {
+	display: inline-block;
+	background-color: #D56C3B;
+	border-radius: 2px;
+	padding: 0 8px;
+	color: #fff;
+}
+section.index #archives div > a {
 	display: block;
 	color: #333;
 	font-weight: bold;
@@ -184,7 +191,7 @@ section.index #archives a {
 	box-shadow: 0 0;
 	text-align: left;
 }
-section.index #archives a:hover {
+section.index #archives div > a:hover {
 	background-color: #eee;
 }
 section.index #archives a time {
