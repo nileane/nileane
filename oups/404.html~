@@ -1,0 +1,28 @@
+---
+title: Page introuvable
+description: "Erreur 404."
+layout: default
+---
+<section style="text-align:center;">
+<div style="padding: 0 20px;color:#fff;">
+  <h1 style="margin-bottom:0;">Mmh… page introuvable.</h1>
+	<div>Autrement dit, il serait judicieux de repasser par le joli menu de navigation.<br>
+	<em>Dans le besoin, les Cuties Mark Crusaders guêtent en votre faveur.</em></div>
+</div>
+<h2 style="padding: 0 20px;" id="error">404</h2>
+</section>
+
+<div id="bandeauponies" style="text-align:center;">
+	<img src="/images/loading.gif" style="max-width:100%;">
+</div>
+
+
+<style>
+body > footer { display: none}
+#bandeauponies {
+    background-color: #FFFFFF;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.3), 0 -5px #6F2B1A inset;
+    margin: 0 auto;
+    max-width: 820px;
+}
+</style>

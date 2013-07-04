@@ -1,0 +1,41 @@
+---
+layout: default
+lang: fr
+---
+<section class="article">
+
+<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | localize: ":medium" }}</time>
+<article>
+
+{% if page.link %}
+<hgroup>
+	<h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
+</hgroup>
+{% else %}
+<hgroup>
+	<h1>{{ page.title }}</h1>
+</hgroup>
+{% endif %}
+
+<div id="post"{% if page.link %} class=link{% endif %}>
+	{{ content }}
+</div>
+
+<footer>
+    <span class="tags">
+    {% for tag in page.tags %}
+        <a href="/tag/{{ tag }}"><span>#</span>{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+    {% endfor %}
+    </span>
+</footer>
+
+</article>
+
+</section>
+
+{%  if page.comments != false %}
+<section class="comments">
+<div class="jskomment" id="comments" title="{{ site.url }}{{ page.url }}"></div>
+<script src="/js/jskomment.js"></script>
+</section>
+{% endif %}

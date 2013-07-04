@@ -1,33 +1,49 @@
 ---
 title: "schoewilliam · carnet d'un prétendant à la liberté."
 description: "Carnet web d'un habitant de la banquise GNU/Linuxienne, prétendant à la liberté — William Dorffer, schoewilliam."
-layout: default
+layout: home
 role: home
 lang: fr
 ---
-<section>
-{% include schh.html %}
-{% assign first_post = site.posts.first %}
-<time datetime='{{ first_post.date | date: "%Y-%m-%d" }}' class="top">{{ first_post.date | localize: ":medium" }}</time>
-<article>
 
-{% if first_post.link %}
-        <h1><a target=_blank href="{{ first_post.link | escape }}">{{ first_post.title }}</a>&nbsp;→</h1>
-{% else %}
-        <h1><a style="color: #525252" href="{{ first_post.url }}">{{ first_post.title }}</a></h1> 
-{% endif %}
 
-<div id="post">
-        {{ first_post.content }}
+<section class="index home">
+<div id="carnet">
+<div id="moi">
+
+
+	<figure class="emb">
+	<a href="#">
+		<img id="cassiopeia" src="/images/photosmall.jpg">
+		<h1>schoewilliam</h1>
+	</a>
+
+	<nav>
+		<a class="lien carnet" href="#carnet">carnet</a>
+		<a class="lien apropos" href="#moi">à propos</a>
+	</nav>
+	</figure>
+
+	<div id="archives">
+	   <div>
+		<h2 style="display: inline">archives <span style="opacity: 0.4">//</span></h2>
+		<p>Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes.</p>
+	   {% for post in site.posts %}
+		<a href="{{ post.url }}">
+		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
+		{{ post.title }}
+		{% if post.link %}
+		  <span class="label">marque-page</span>
+		{% endif %}
+		</a>
+ 	   {% endfor %}
+	   </div>
+	</div>
+
+	<div id="apropos">
+		{% include moi.html %}
+	</div>
+
 </div>
-
-<footer>
-    <span class="tags">
-    {% for tag in first_post.tags %}
-        <a href="/tag/{{ tag }}"><span>#</span>{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-    {% endfor %}
-    </span><br>
-</footer>
-</article>
-<a href="{{ first_post.url }}#comments" class="jskomment_add_comment">Discussion / Laisser un commentaire &rarr;</a>
+</div>
 </section>

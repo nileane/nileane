@@ -1,0 +1,13 @@
+<section class="index post">
+	<figure class="emb">
+	<a href="#">
+		<img id="cassiopeia" src="/images/photosmall.jpg">
+		<h1>schoewilliam</h1>
+	</a>
+
+	<nav>
+		<a class="lien carnet" href="/#carnet">carnet</a>
+		<a class="lien apropos" href="/#moi">à propos</a>
+	</nav>
+	</figure>
+</section>

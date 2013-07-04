@@ -2,8 +2,7 @@
 layout: default
 lang: fr
 ---
-<section>
-{% include schh.html %}
+<section class="article">
 
 <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | localize: ":medium" }}</time>
 <article>
@@ -22,19 +21,13 @@ lang: fr
 	{{ content }}
 </div>
 
-<footer>
-    <span class="tags">
-    {% for tag in page.tags %}
-        <a href="/tag/{{ tag }}"><span>#</span>{{ tag }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-    {% endfor %}
-    </span>
-</footer>
-
 </article>
 
+</section>
+
 {%  if page.comments != false %}
+<section class="comments">
 <div class="jskomment" id="comments" title="{{ site.url }}{{ page.url }}"></div>
 <script src="/js/jskomment.js"></script>
-{% endif %}
-
 </section>
+{% endif %}

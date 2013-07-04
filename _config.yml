@@ -17,16 +17,6 @@ pygments:    true
 markdown:    maruku
 permalink:   date
 
-# Blog Menu
-navigation:
-- text: archives
-  url: /archives
-- text: à propos
-  url: /apropos
-- text: me contacter
-  url: /mecontacter
-
-
 ailleurs:
 - text: Arch Linux Forums
   url: https://bbs.archlinux.org/profile.php?id=55538

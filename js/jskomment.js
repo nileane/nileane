@@ -720,7 +720,7 @@ JSKOMMENT.createAddCommentElement = function () {
     +'<div class="jskomment_input1">Nouveau commentaire de <input type="text" name="name" size="20" placeholder="votre pseudonyme" value="'+name+'"/></div>'
     +'<div class="jskomment_commentval"><textarea class="jskomment_input2" rows="2" cols="32" name="comment" value="votre commentaire" placeholder="Écrivez votre commentaire…" /></div>'
     +'<div class="jskomment_submit"><input class="jskomment_button" name="submit" type="submit" value="Envoyer"/></div>'
-    +'<div class="jskomment_note" style="margin-top: 15px;"><strong>Note</strong> : Afin de mettre en forme votre texte, vous pouvez utiliser des balises HTML simples. Du texte en <code>&lt;b&gt;gras&lt;/b&gt;</code>, en <code>&lt;i&gt;italique&lt;/i&gt;</code>, et du <code>&lt;code&gt;code&lt;/code&gt;</code>.<br>Ou l\'insertion de <code>&lt;a href="#"&gt;liens&lt;/a&gt;</code>.</div>'
+    +'<div class="jskomment_note" style="margin-top: 15px;"><strong>Note</strong> : Afin de mettre en forme votre texte, vous pouvez utiliser des balises HTML simples. Du texte en <strong>&lt;b&gt;gras&lt;/b&gt;</strong>, en <strong>&lt;i&gt;italique&lt;/i&gt;</strong>, et du <strong>&lt;code&gt;code&lt;/code&gt;</strong>.<br>Ou l\'insertion de <strong>&lt;a href="#"&gt;liens&lt;/a&gt;</strong>.</div>'
     +'</form>');   
     
     form.submit(
@@ -1007,3 +1007,4 @@ JSKOMMENT.mainContinue = function () {
   }
 
 JSKOMMENT.main();
+
