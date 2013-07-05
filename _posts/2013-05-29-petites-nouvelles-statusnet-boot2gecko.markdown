@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: "Petites de mes nouvelles : Boot2Gecko, StatusNet …"
+title: "Petites de mes nouvelles : Boot2Gecko, StatusNet …"
 tags:
 - nouvelles
 - B2G
@@ -29,4 +29,5 @@ Je vais bientôt recevoir une configuration matérielle toute neuve, et reverrai
 
 Enfin, j'aimerais acquérir pour de bon mon indépendance sur les internœuds, et m'autohéberger. À la maison ? À voir. J'envisage un serveur dédié. Rien de décidé, quoiqu'il en soit, mais ma volonté se montre fortement présente pour me pousser à trouver une solution. 
 
-Sur ce, je vis, et au prochain billet !
+Sur ce, je vis, et au prochain billet !
+

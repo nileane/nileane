@@ -178,6 +178,7 @@ section.index #archives p {
 section.index #archives a.rss {
 	display: inline-block;
 	background-color: #D56C3B;
+	border-radius: 2px;
 	padding: 0 8px;
 	color: #fff;
 }
