@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
+
+    <meta charset="UTF-8">
+    <title>WMFS2 : ma configuration</title>
+    
+    <meta name="author" content="Schoewilliam &lt;schoewilliam@legtux.org&gt;">
+    <meta content='initial-scale=1.0' name='viewport'>
+
+    <link rel="icon" type="image/png" href="/images/fav.png">
+    
+  </head>
+  
+  <body>
+    <section class="index post">
+	<figure class="emb">
+	<a href="/">
+		<img id="cassiopeia" src="/images/photosmall.jpg">
+		<h1>schoewilliam</h1>
+	</a>
+
+	<nav>
+		<a class="lien carnet" href="/#carnet">carnet</a>
+		<a class="lien apropos" href="/#moi">à propos</a>
+	</nav>
+	</figure>
+</section>
+
+
+    <section class="article">
+
+<time datetime='' class="top">14 avril 2012</time>
+<article>
+
+
+<hgroup>
+	<h1>WMFS2 : ma configuration</h1>
+</hgroup>
+
+
+<div id="post">
+	<p>WMFS, est un tiling window manager très simple à configurer, au point qu&#8217;on n&#8217;ait en général qu&#8217;à personnaliser le schéma de couleurs. Le plus gros du boulot se situera principalement autour des statusbars. On s&#8217;attardera d&#8217;ailleurs sur ces dernières dans la seconde partie de ce billet.</p>
+
+<h2 id='comportement_et_couleurs'>Comportement et couleurs</h2>
+
+<p>WMFS tend davantage vers le <strong>twm manuel</strong>. C&#8217;est-à-dire que son <em>layout</em> (la disposition de son pavage) n&#8217;est pas fixe, et s&#8217;improvise au cours de l&#8217;utilisation. C&#8217;est un concept voilà très différent de celui de Awesome WM (par exemple), qui lui propose un certain nombre de disposition fixes.</p>
+
+<p>On ne jouera pas au guide, le <strong><a href='https://github.com/xorg62/wmfs/wiki'>wiki</a></strong> s&#8217;en charge déjà très bien. En revanche donc, il faudrait savoir que la section <code>[themes]</code>…<code>[/themes]</code> du fichier principal <code>~/.config/wmfsrc</code> permet justement de mettre WMFS à son goût.</p>
+
+<p>Du côté du lexique, <strong>bars</strong> désigne évidemment les barres d&#8217;informations, <code>tags</code> — ici — les boutons de chaque espace de travail, et enfin <code>client</code> désigne une fenêtre.<br />Les options se terminant par <code>_statusline</code> permettent d&#8217;afficher, grâce à <a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'>la syntaxe spécifique</a>, du contenu dans la zone souhaitée. C&#8217;est ainsi, par exemple, qu&#8217;un label « <strong>··· Actif</strong> » apparait sur mes clients qui ont le focus.</p>
+
+<ul>
+<li>Mon fichier wmfsrc est disponible en entier sur <a href='https://github.com/Schoewilliam/configs/blob/master/wmfs/wmfsrc'>mon dépôt git</a>.</li>
+</ul>
+
+<h2 id='statusbars'>Statusbars</h2>
+
+<p>Pour grossir le trait, avec la commande <code>$ wmfs -c status &quot;testbar BLABLA&quot;</code>, « BLABLA » apparaitra dans la zone <em>status</em> de la barre du nom « <em>testbar</em> ». Là où c&#8217;est intéressant, c&#8217;est qu&#8217;on peut donc s&#8217;en servir, pour afficher en temps réel, <strong>le résultat d&#8217;un script conky</strong> :</p>
+
+<pre><code>#!/bin/sh  
+conky -c ~/.config/wmfs/scripts/conkyrc_top | while true; read line; do wmfs -c status &quot;testbar $line&quot;; done &amp;</code></pre>
+
+<p>Évidemment l&#8217;idéal serait de lancer tout cela au démarrage de la session X.</p>
+
+<p>Puisque conky nous permet de gratter facilement les informations dont on a besoin, grâce à ses fonctions, il ne nous manque plus qu&#8217;à y coupler <a href='https://github.com/xorg62/wmfs/wiki/statusbar_fr'>la syntaxe</a> :</p>
+
+<pre><code>out_to_console yes
+out_to_x no
+background yes
+update_interval 1
+total_run_times 0
+no_buffers yes
+
+TEXT
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png] ^s[right;\#BBBBBB; Uptime:] ^s[right;\#BDE077; $uptime_short]\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/fs_01.png] ^s[right;\#BBBBBB; HDD:] ^s[right;\#A6D4E0; ${fs_used_perc /}% ] ^p[right;8;10;0;${fs_used_perc /};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e df -h)\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/ship.png] ^s[right;\#BBBBBB; Kernel:] ^s[right;\#FDA53C; $kernel]\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/netdown.png] ^s[right;\#BBBBBB; IP:] ^s[right;\#E8DD9E; ${addr wlan0}](1;spawn;urxvt -e wicd-curses)\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/spkr_01.png] ^s[right;\#BBBBBB; Volume: ] ^s[right;\#A6D4E0;${exec amixer get Master | grep &quot;Mono: P&quot; | awk &#39;{print $4}&#39; | grep -oE &quot;[[:digit:]]{1,}&quot;%} ](1;spawn;urxvt -e alsamixer)  ^p[right;8;10;0;${exec amixer get Master | grep &quot;Mono: P&quot; | awk &#39;{print $4}&#39; | grep -oE &quot;[[:digit:]]{1,}&quot;};100;\#445544;\#A6D4E0;ckyhdd](1;spawn;urxvt -e alsamixer)\
+^s[right;\#444444;   |   ]\
+^i[right;0;0;/home/william/.config/wmfs/icons/stat/clock.png]\ ^s[right;\#CCCCCC; ${time %a %d %b}] ^s[right;\#A6D4E0; ${time %H:%M}   ]\</code></pre>
+
+<p>Voilà qui nous donne magnifiquement :</p>
+
+<p><a href='/images/wmfs/wmfs-status1.png'><img alt='Status Top' class='align' src='/images/wmfs/wmfs-status1.png' /></a></p>
+
+<p>C&#8217;est exact, puisque grâce à cette mystérieuse syntaxe, au-delà d&#8217;afficher des informations ô combien utiles, notre statusbar sera <strong>interactive</strong> aux clics de la souris.</p>
+
+<p><a href='/images/wmfs/wmfs-moc.png'><img alt='MOC intégré à la statusbar de WMFS' class='align' src='/images/wmfs/wmfs-moc.png' /></a></p>
+
+<p>(Dans le cas d&#8217;un script conky :)</p>
+
+<pre><code>${if_running mocp}\
+${if_match &quot;${exec mocp -Q %state}&quot; == &quot;PLAY&quot;}^s[right;\#BDE077;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/pause.png](1;spawn;mocp -G)^s[right;\#BDE077; }]$endif\
+${if_match &quot;${exec mocp -Q %state}&quot; == &quot;PAUSE&quot;}^s[right;\#FDA53C;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/play.png](1;spawn;mocp -G)^s[right;\#FDA53C; }]$endif\
+${if_match &quot;${exec mocp -Q %state}&quot; == &quot;STOP&quot;}^s[right;\#A6D4E0;{ ]^i[right;0;0;/home/william/.config/wmfs/icons/stat/stop.png](1;spawn;mocp -p)^s[right;\#A6D4E0; }  ]$endif\
+$endif\</code></pre>
+
+<p><strong>Littéralement</strong>; on vérifie si <em>mocp</em> est lancé (<strong>ligne 1</strong>);<br />si MOC est en mode PLAY, afficher l&#8217;image <code>~/.config/wmfs/icons/stat/pause.png</code> — cette même image, lancera la commande <code>mocp -G</code> (<em>toggle play/pause</em>) si elle est cliquée (<strong>ligne 2</strong>);<br />enfin, on réitère pour les actions Pause, et Stop (<strong>lignes 3 et 4</strong>) en changeant les éléments nécessaires.</p>
+
+<ul>
+<li>La totalité de mes conky sur mon <a href='https://github.com/Schoewilliam/configs/tree/master/wmfs/scripts'><strong>dépôt git</strong></a></li>
+</ul>
+
+<p>On terminera sur la fonctionnalité phare de cette syntaxe : les <strong>graphiques</strong>, et <strong>barres de progression</strong>. On n&#8217;a que trois éléments à fournir : les couleurs, la valeur actuelle, et la valeur maximale. Notre cher WMFS se charge du reste.</p>
+
+<pre><code>^g[left;80;10;${cpu};100;\#333333;\#FDA53C;ckycpu](1;spawn;urxvt -e htop)</code></pre>
+
+<p>Sur le modèle <code>^g[{alignement};{largeur};{hauteur};{valeur actuelle};{valeur maximale};{couleur BG};{couleur FG};{ID du graphe}](1;spawn;{commande à lancer au clic})</code>.</p>
+
+<h2 id='capture_finale'>Capture finale</h2>
+
+<p><a href='/images/captures/2012-04-14.png'><img alt='Capture finale' class='align center' src='/images/captures/2012-04-14.png' width='685px' /></a></p>
+
+<p>Puisqu&#8217;il aurait été évidemment un crime abominable, reconnu dans 20 pays occidentaux, de terminer ce petit billet sans même une capture d&#8217;écran.</p>
+</div>
+
+</article>
+
+</section>
+
+
+<section class="comments">
+<div class="jskomment" id="comments" title="http://schoewilliam.legtux.org/2012/04/14/wmfs-exposition-de-ma-configuration.html"></div>
+<script src="/js/jskomment.js"></script>
+</section>
+
+
+
+    <footer>
+	<div>
+		<div><span style="margin-right:5px;opacity:0.3;">William Dorffer.</span>
+		</div>
+		<div><span style="margin-right:5px;opacity:0.3;">Carnets amis //</span>
+			
+			<a href="http://id-libre.org/blogigor" title="BlogiGor">BlogiGor</a>
+			
+			<a href="http://coreight.com" title="Coreight">Coreight</a>
+			
+			<a href="http://tetedulinuxien.fr" title="Dans la tête du Linuxien">Dans la tête du Linuxien</a>
+			
+			<a href="http://identitools.fr" title="Identitools">Identitools</a>
+			
+			<a href="http://postblue.info" title="Postblue">Postblue</a>
+			
+		</div>
+		<div><span style="margin-right:5px;opacity:0.3;">Liens //</span>
+			
+			<a href="http://legtux.org/" title="<strong>Legtux</strong>"><strong>Legtux</strong></a>
+			
+			<a href="http://mart-e.be" title="mart-e">mart-e</a>
+			
+			<a href="http://lehollandaisvolant.net/" title="Le Hollandais Volant">Le Hollandais Volant</a>
+			
+			<a href="http://src.radiocampus.be/" title="Source, Radio Campus Bruxelles">Source, Radio Campus Bruxelles</a>
+			
+		</div>
+	</div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+  <head>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
+
+    <meta charset="UTF-8">
+    <title>MPD, mon copain pour la musique.</title>
+    
+    <meta name="author" content="Schoewilliam &lt;schoewilliam@legtux.org&gt;">
+    <meta content='initial-scale=1.0' name='viewport'>
+
+    <link rel="icon" type="image/png" href="/images/fav.png">
+    
+  </head>
+  
+  <body>
+    <section class="index post">
+	<figure class="emb">
+	<a href="/">
+		<img id="cassiopeia" src="/images/photosmall.jpg">
+		<h1>schoewilliam</h1>
+	</a>
+
+	<nav>
+		<a class="lien carnet" href="/#carnet">carnet</a>
+		<a class="lien apropos" href="/#moi">à propos</a>
+	</nav>
+	</figure>
+</section>
+
+
+    <section class="article">
+
+<time datetime='' class="top">30 mars 2013</time>
+<article>
+
+
+<hgroup>
+	<h1>MPD, mon copain pour la musique.</h1>
+</hgroup>
+
+
+<div id="post">
+	<p>Un petit problème se posait à moi il y a quelques jours ( semaines ? ) : mon poste A commençait à être limité quant à son espace disque. <em>Objectif</em> donc : transférer ma bibliothèque musicale sur un poste B ( soient l&#8217;équivalent de quelques 14Go ). <em>Souci</em> : pouvoir continuer d&#8217;écouter le contenu de cette bibliothèque depuis le poste A.<br /><strong>Solution</strong> : utiliser la fonctionnalité implémentée par essence dans MPD ( Music Player Daemon ), qui permet le streaming de la musique.</p>
+
+<p><a href='/images/mpd/ncmpcpp.png'><img alt='NCMPC++ personnel' class='align center' src='/images/mpd/ncmpcpp.png' /></a></p>
+
+<p>À quoi ressemblerait donc mon installation ?</p>
+
+<ul>
+<li>Une instance MPD configurée sur le poste B pour émettre sa lecture dans un flux sur <code>http://192.168.2.x:8000</code> ( voir <a href='https://wiki.archlinux.org/index.php/MPD/Tips_and_Tricks#HTTP_Streaming'>cette section du Archwiki</a>, décommenter quelques lignes suffit. )</li>
+
+<li>Une instance MPD sur le poste A pour lire ledit flux ( j&#8217;aurais pu utiliser n&#8217;importe quel lecteur audio qui puisse lire un flux HTTP ).</li>
+
+<li>Un client pour MPD ( ncmpc++ dans mon cas ) sur le poste A, qui sera connecté à l&#8217;instance MPD du poste B. ( <code>$ ncmpcpp -h 192.168.2.x -p 6600</code> )</li>
+</ul>
+
+<p>En définitif, je suis en mesure de contrôler ma bibliothèque, ainsi que de l&#8217;écouter, depuis mon poste A favori sans avoir à manipuler le poste B, sur lequel est stockée cette bibliothèque.<br />Rien d&#8217;exceptionnel, rien de complexe. Juste une astuce qui provoque un agréable coup de cœur.</p>
+</div>
+
+</article>
+
+</section>
+
+
+<section class="comments">
+<div class="jskomment" id="comments" title="http://schoewilliam.legtux.org/2013/03/30/mpd-mon-copain-pour-la-musique.html"></div>
+<script src="/js/jskomment.js"></script>
+</section>
+
+
+
+    <footer>
+	<div>
+		<div><span style="margin-right:5px;opacity:0.3;">William Dorffer.</span>
+		</div>
+		<div><span style="margin-right:5px;opacity:0.3;">Carnets amis //</span>
+			
+			<a href="http://id-libre.org/blogigor" title="BlogiGor">BlogiGor</a>
+			
+			<a href="http://coreight.com" title="Coreight">Coreight</a>
+			
+			<a href="http://tetedulinuxien.fr" title="Dans la tête du Linuxien">Dans la tête du Linuxien</a>
+			
+			<a href="http://identitools.fr" title="Identitools">Identitools</a>
+			
+			<a href="http://postblue.info" title="Postblue">Postblue</a>
+			
+		</div>
+		<div><span style="margin-right:5px;opacity:0.3;">Liens //</span>
+			
+			<a href="http://legtux.org/" title="<strong>Legtux</strong>"><strong>Legtux</strong></a>
+			
+			<a href="http://mart-e.be" title="mart-e">mart-e</a>
+			
+			<a href="http://lehollandaisvolant.net/" title="Le Hollandais Volant">Le Hollandais Volant</a>
+			
+			<a href="http://src.radiocampus.be/" title="Source, Radio Campus Bruxelles">Source, Radio Campus Bruxelles</a>
+			
+		</div>
+	</div>
+</footer>
+
+  </body>
+</html>
