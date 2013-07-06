@@ -182,6 +182,7 @@ section.index #archives a.rss {
 	border-radius: 2px;
 	padding: 0 8px;
 	color: #fff;
+	font-size: 70%;
 }
 section.index #archives div > a {
 	display: block;
