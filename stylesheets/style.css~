@@ -64,6 +64,7 @@ section.index figure h1 {
     margin: 20px 0 0;
     border-radius: 50%;
     box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    border: 0;
     vertical-align: middle;
     width: 60px;
     transition: all .3s;
@@ -340,13 +341,13 @@ article h3 {
 }
 @media screen and (min-width:750px) {
     article h1 {
-	font-size: 300%;
+        font-size: 300%;
     }
     article h2 {
-	font-size: 190%;
+        font-size: 190%;
     }
     article h3 {
-	font-size: 170%;
+        font-size: 170%;
     }
 }
 
@@ -398,12 +399,12 @@ article #post img {
 
 @media screen and (min-width:700px) {
     .align.right {
-	float: right;
-	margin: 10px 0 10px 10px;
+        float: right;
+        margin: 10px 0 10px 10px;
     }
     .align.left {
-	float: left;
-	margin: 10px 10px 10px 0;
+        float: left;
+        margin: 10px 10px 10px 0;
     }
 }
 
@@ -431,8 +432,8 @@ a.bouton:hover {
     transform: translate(0, -3px);
     	-webkit-transform: translate(0, -3px);
     	-moz-transform: translate(0, -3px);
-	-o-transform: translate(0, -3px);
-	-ms-transform: translate(0, -3px);
+        -o-transform: translate(0, -3px);
+        -ms-transform: translate(0, -3px);
 }
 
 blockquote p:last-child:after {
@@ -507,11 +508,11 @@ a.jskomment_add_comment:hover {
 @media screen and (min-width:750px){
     .jskomment_add_comment,
     .jskomment_button {
-    transition: all .15s;
-    -webkit-transition: all .15s;
-    -moz-transition: all .15s;
-    -o-transition: all .15s;
-    -ms-transition: all .15s;
+        transition: all .15s;
+            -webkit-transition: all .15s;
+            -moz-transition: all .15s;
+            -o-transition: all .15s;
+            -ms-transition: all .15s;
     }
 }
 .jskomment_input1 {
@@ -555,10 +556,6 @@ a.jskomment_add_comment:hover {
     text-align: center;
 }
 
-
-
-/* pages */
-
 #post nav {
     background-color: #eee;
     color:#666;
@@ -573,60 +570,64 @@ a.jskomment_add_comment:hover {
     box-shadow: 0 -8px 15px -15px currentColor inset;
 }
 
+/* animations */
+
 @keyframes fondu {
-0% { opacity: 0; }
-100% { opacity: 1; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 @-webkit-keyframes fondu {
-0% { opacity: 0; }
-100% { opacity: 1; }
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 @keyframes colorful {
-0% { background-color: #2F2965; }
-20% { background-color: #652945; }
-40% { background-color: #3F6529; }
-60% { background-color: #296557; }
-80% { background-color: #294265; }
-100% { background-color: #382965; }
+    0% { background-color: #2F2965; }
+    20% { background-color: #652945; }
+    40% { background-color: #3F6529; }
+    60% { background-color: #296557; }
+    80% { background-color: #294265; }
+    100% { background-color: #382965; }
 }
 @-webkit-keyframes colorful {
-0% { background-color: #2F2965; }
-20% { background-color: #652945; }
-40% { background-color: #3F6529; }
-60% { background-color: #296557; }
-80% { background-color: #294265; }
-100% { background-color: #382965; }
+    0% { background-color: #2F2965; }
+    20% { background-color: #652945; }
+    40% { background-color: #3F6529; }
+    60% { background-color: #296557; }
+    80% { background-color: #294265; }
+    100% { background-color: #382965; }
+}
+
+/* polices */
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/opensans/OpenSans-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(/fonts/opensans/OpenSans-Bold.ttf) format('trutype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 400;
+    src: url(/fonts/opensans/OpenSans-Italic.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: 700;
+    src: url(/fonts/opensans/OpenSans-BoldItalic.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src:	url(/fonts/opensans/OpenSans-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src:	url(/fonts/opensans/OpenSans-Bold.ttf) format('trutype'),;
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src:	url(/fonts/opensans/OpenSans-Italic.ttf) format('truetype'),
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src:	url(/fonts/opensans/OpenSans-BoldItalic.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Open Sans Light';
-  font-style: normal;
-  font-weight: 400;
-  src:	url(/fonts/opensans/OpenSans-Light.ttf) format('truetype');
+    font-family: 'Open Sans Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/fonts/opensans/OpenSans-Light.ttf) format('truetype');
 }

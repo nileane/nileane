@@ -610,7 +610,7 @@ a.jskomment_add_comment:hover {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/opensans/OpenSans-Bold.ttf) format('trutype');
+    src: url(/fonts/opensans/OpenSans-Bold.ttf) format('truetype');
 }
 @font-face {
     font-family: 'Open Sans';
