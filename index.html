@@ -26,8 +26,8 @@ lang: fr
 
 	<div id="archives">
 	   <div>
-		<h2 style="display: inline">archives <span style="opacity: 0.4">//</span></h2>
-		<p>Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes. <a class="rss" href="/rss">RSS</a></p>
+		<h2 style="display: inline">archives <span style="opacity: 0.4">//</span> <a class="rss" style="font-size:70%" href="/rss">RSS</a></h2>
+		<p>Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes.</p>
 	   {% for post in site.posts %}
 		<a href="{{ post.url }}">
 		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
