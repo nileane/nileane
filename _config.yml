@@ -17,34 +17,6 @@ pygments:    true
 markdown:    maruku
 permalink:   date
 
-ailleurs:
-- text: Arch Linux Forums
-  url: https://bbs.archlinux.org/profile.php?id=55538
-  desc: "Participations aux discussions de la distribution."
-- text: DeviantArt
-  url: http://schoewilliam.deviantart.com/
-  desc: "Captures d'écran commentées."
-- text: Github
-  url: https://github.com/Schoewilliam
-  desc: "Sources du carnet, configurations et dotfiles, …"
-- text: reddit
-  url: http://www.reddit.com/user/schoelcher/
-  desc: "Partage et recommandations de liens."
-- text: "StatusNet"
-  url: https://status.vinilox.eu/schoewilliam
-  desc: "Discussions et réactions."
-- text: Twitter
-  url: http://twitter.com/schoewilliam
-
-realisations:
-- text: Minisch
-  url: /minisch
-  desc: "Un thème élégant et fonctionnel pour Wordpress"
-- text: Schoses
-  url: http://schoses.schoewilliam.fr
-  desc: "Une application minimaliste pour la saisie de listes de pensées, de notes, de <em>schoses</em>… <span style='color:#fff;padding:0 5px; background-color:#B95656;'>beta</span>"
-- text: Expérimentations
-  url: /experiments
 
 blogoliste:
 - text: BlogiGor
@@ -53,6 +25,8 @@ blogoliste:
   url: http://coreight.com
 - text: Dans la tête du Linuxien
   url: http://tetedulinuxien.fr
+- text: fabienwang
+  url: http://fabienwang.fr
 - text: Identitools
   url: http://identitools.fr
 - text: Postblue
