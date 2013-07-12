@@ -27,7 +27,7 @@ lang: fr
 
 {%  if page.comments != false %}
 <section class="comments">
-<div class="jskomment" id="comments" title="{{ site.url }}{{ page.url }}"></div>
+<div class="jskomment" id="comments" title="{% if page.commentsid %}{{ page.commentsid }}{% else %}{{ site.url }}{{ page.url }}{% endif %}"></div>
 <script src="/js/jskomment.js"></script>
 </section>
 {% endif %}
