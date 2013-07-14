@@ -182,6 +182,7 @@ section.index #archives a.rss {
 	border-radius: 2px;
 	padding: 0 8px;
 	color: #fff;
+	font-size: 70%;
 }
 section.index #archives div > a {
 	display: block;
@@ -453,108 +454,147 @@ blockquote {
 
 /* commentaires */
 
-.jskomment_header {
+.comments {
+    background-color: #EEEEEE;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 25px;
+    text-align: center;
+}
+
+.comments_header {
     margin: 0;
     font-family: "Open Sans Light", Cantarell, sans-serif;
 }
-.jskomment_header a {
+.comments_header a {
     font-size: 200%;
     color: #525252;
 }
-.jskomment_previous .jskomment_commentval {
-    display: block;
-    background-color: rgba(0, 0, 0, 0.06);
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
-    color: #333333;
-    padding: 10px 15px;
-    border-radius: 3px;
-    line-height: 1.6;
-}
-.jskomment_comment {
+
+.comment {
     color: #727272;
     margin: 0 0 30px;
 }
-.jskomment_user {
-    display: block;
-    text-align: right;
-    font-weight: bold;
-}
-.jskomment_comment:last-child {
+.comment:last-child {
     padding-bottom: 25px;
 }
-a.jskomment_add_comment {
-    background-color: #555;
-    border: 0;
-    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
-    color: #eee;
+
+.comment_user {
     display: block;
+    font-weight: bold;
+    text-align: right;
+}
+
+.comment_message {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    display: block;
+    line-height: 1.6;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.comment_addcomment {
+    background-color: #555555;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    color: #EEEEEE;
+    display: block;
+    font-size: 110%;
     margin: 0;
     padding: 10px 20px;
-    text-align: center;
-    font-size: 110%;
+    
+    text-decoration: none;
 }
-a.jskomment_add_comment:hover {
-    background-color: #333;
-}
-.jskomment_form {
+
+.comment_form {
     background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 3px 3px 3px 3px;
     box-shadow: 0 3px rgba(0, 0, 0, 0.1);
-    border-radius: 3px;
     color: #444444;
     margin: 0;
     padding: 20px;
 }
-@media screen and (min-width:750px){
-    .jskomment_add_comment,
-    .jskomment_button {
-        transition: all .15s;
-            -webkit-transition: all .15s;
-            -moz-transition: all .15s;
-            -o-transition: all .15s;
-            -ms-transition: all .15s;
-    }
-}
-.jskomment_input1 {
+
+.comment_inputuser {
     margin: 0 0 10px;
-    font-size: 90%;
     text-align: center;
 }
-.jskomment_input1 > input {
+
+.comment_inputuser > input {
     background-color: #FFFFFF;
     border: 0 none;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     padding: 4px 10px;
 }
-.jskomment_input2 {
+
+.comment_inputmessage {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    display: block;
+    line-height: 1.6;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.comment_inputmessage > textarea {
     background-color: #FFFFFF;
     border: 0 none;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-    font-family: "Open Sans", Cantarell, sans-serif;
+    font-family: "Open Sans",Cantarell,sans-serif;
+    font-size: 100%;
     padding: 10px;
     width: 97.2%;
-    font-size: 100%;
 }
-.jskomment_button {
-    background-color:#fff;
-    color: #444;
-    border:0;
-    font-size: 90%;
+
+.comment_recaptcha {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
+    color: #333333;
+    display: block;
+    line-height: 1.6;
+    padding: 10px 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.comment_recaptcha > input {
+    background-color: #FFFFFF;
+    border: 0 none;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    font-family: "Open Sans",Cantarell,sans-serif;
+    font-size: 100%;
+    height: 30px;
+    padding: 10px;
+    vertical-align: top;
+    width: 150px;
+    margin-right: 5px;
+}
+
+.comment_submit {
+    margin-top: 20px;
+}
+
+.comment_submit > input {
+    background-color: #FFFFFF;
+    border: 0 none;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    color: #444444;
+    cursor: pointer;
+    display: block;
+    font-size: 90%;
     margin: -3px auto 0;
     padding: 2px 8px;
-    display: block;
-    cursor: pointer;
 }
-.jskomment_button:hover {
-    background-color: #2E3740;
-    color: #ccc;
-}
-.modal-ajax-wait {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
+
+/* Fin commentaires */
+
 
 #post nav {
     background-color: #eee;

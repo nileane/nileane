@@ -27,7 +27,10 @@ lang: fr
 
 {%  if page.comments != false %}
 <section class="comments">
-<div class="jskomment" id="comments" title="{% if page.commentsid %}{{ site.url }}{{ page.url }}{% endif %}"></div>
-<script src="/js/jskomment.js"></script>
+	<div id="comments" class="comments">
+		<img src="loading.gif" alt="Loading comments…"/>
+	</div>
 </section>
+<script src="/js/jquery.min.js" type="text/javascript"></script>
+<script src="/comments/commentcava.js" type="text/javascript"></script>
 {% endif %}
