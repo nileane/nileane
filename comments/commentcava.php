@@ -1,8 +1,11 @@
 <?php
 
-session_start();
-
+//Settings 
 $db = './commentcava.sqlite';
+$allow_html = 1;
+
+//Initiate session
+session_start();
 
 //Get comments
 if (isset($_GET['a']) && $_GET['a'] == 'g') {
@@ -88,7 +91,12 @@ if (isset($_GET['a']) && $_GET['a'] == 'p') {
         $query = $pdo->prepare('INSERT INTO comments (post, author, message)  VALUES (:post, :author, :message);');
         $query->bindValue(':post', $_POST['url'], PDO::PARAM_STR);
         $query->bindValue(':author', $_POST['name'], PDO::PARAM_STR);
-        $query->bindValue(':message', htmlentities($_POST['comment'], ENT_QUOTES, "UTF-8"), PDO::PARAM_STR);
+        if (isset($allow_html) && $allow_html == 1) {
+        	$query->bindValue(':message', $_POST['comment'], PDO::PARAM_STR);
+        }
+        else {
+        	$query->bindValue(':message', htmlentities($_POST['comment'], ENT_QUOTES, "UTF-8"), PDO::PARAM_STR);
+        }
         $query->execute();
 	}
 	//redirect to the url
