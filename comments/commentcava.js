@@ -4,7 +4,7 @@ $(function() {
 	* Use a relative or a full path if you prefer
 	* a full path will work better if you do some url rewriting
 	*/
-	var gurl = "http://schoewilliam.fr/comments/commentcava.php";
+	var gurl = "/comments/commentcava.php";
 
 	$.ajax({
 
@@ -32,7 +32,7 @@ $(function() {
 	},
 
 	error: function( xhr, status ) {
-		$('#comments').html('Erreur au chargement des commentaires');
+		$('#comments').html('<div class="comment">Erreur au chargement des commentaires</div>');
 	},
 
 	complete: function( xhr, status ) {
