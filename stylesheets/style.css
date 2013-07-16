@@ -575,7 +575,6 @@ section.comments {
 .comment_recaptcha img {
     border-radius: 2px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-    height: 30px;
 }
 
 .comment_submit {
