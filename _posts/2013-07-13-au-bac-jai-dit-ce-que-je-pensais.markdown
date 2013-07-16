@@ -3,7 +3,6 @@ layout: post
 published: true
 comments: true
 title: "Au BAC de français, j'ai dit ce que je pensais."
-commentsid: "http://www.schoewilliam.fr/2013/07/13/au-bac-jai-dit-ce-que-je-pensais.html"
 ---
 *Et l'on le sait, voilà une bien mauvaise idée.*
 
