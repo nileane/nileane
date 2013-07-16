@@ -40,6 +40,13 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
+.serif article h1,
+.serif #post,
+.serif time.top,
+blockquote {
+    font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
+}
+
 section.index {
     margin: 0 auto;
     text-align: center;
@@ -301,9 +308,17 @@ section.article {
     background-color: #fff;
     padding: 30px 0;
 }
+section.article.serif {
+    background-image: url(/images/bgtr.png);
+    background-color: #eee;
+}
 section.comments {
     background-color: #eee;
+    text-align: center;
     padding: 30px 0;
+}
+section.comments.serif {
+    background-color: #fff;
 }
 article,
 div#comments {
@@ -320,12 +335,21 @@ time.top {
     max-width: 200px;
     margin: 0 auto;
 }
+.serif time.top {
+    color: #888;
+}
 
 article h1 {
     color: #525252;
     font-size: 240%;
     margin: 0 5px 35px 0;
     font-weight: normal;
+}
+.serif article h1 {
+     font-style: italic;
+}
+.serif.centered article h1 {
+     text-align: center;
 }
 article h1 a:hover {
     box-shadow: 0 0;
@@ -369,6 +393,12 @@ pre {
     -webkit-hyphens:  auto;
     -o-hyphens: auto;
     -ms-hyphens: auto;
+}
+.serif #post {
+    font-size: 135%;
+}
+.serif.centered #post {
+    text-align: center;
 }
 @media screen and (min-width:750px) {
 	#post {
@@ -436,7 +466,6 @@ a.bouton:hover {
         -o-transform: translate(0, -3px);
         -ms-transform: translate(0, -3px);
 }
-
 blockquote p:last-child:after {
     content: "»";
     font-style: normal;
@@ -448,16 +477,10 @@ blockquote p:first-child:before {
     margin-right: 10px;
 }
 blockquote {
-    font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
     font-style: italic;
 }
 
 /* commentaires */
-
-section.comments {
-    background-color: #EEEEEE;
-    text-align: center;
-}
 
 .comments_header {
     margin: 0;
