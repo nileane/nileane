@@ -454,11 +454,8 @@ blockquote {
 
 /* commentaires */
 
-.comments {
+section.comments {
     background-color: #EEEEEE;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 25px;
     text-align: center;
 }
 
@@ -506,8 +503,12 @@ blockquote {
     font-size: 110%;
     margin: 0;
     padding: 10px 20px;
-    
     text-decoration: none;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+.comment_addcomment:hover {
+    background-color: #222;
 }
 
 .comment_form {
@@ -521,31 +522,30 @@ blockquote {
 
 .comment_inputuser {
     margin: 0 0 10px;
-    text-align: center;
+    color: #323232;
+    font-style: italic;
 }
 
 .comment_inputuser > input {
     background-color: #FFFFFF;
     border: 0 none;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
     padding: 4px 10px;
+    margin-left: 10px;
 }
 
 .comment_inputmessage {
-    background-color: rgba(0, 0, 0, 0.06);
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
     color: #333333;
     display: block;
     line-height: 1.6;
-    padding: 10px 15px;
-    text-align: left;
 }
 
 .comment_inputmessage > textarea {
     background-color: #FFFFFF;
     border: 0 none;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
     font-family: "Open Sans",Cantarell,sans-serif;
     font-size: 100%;
     padding: 10px;
@@ -553,20 +553,16 @@ blockquote {
 }
 
 .comment_recaptcha {
-    background-color: rgba(0, 0, 0, 0.06);
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
     color: #333333;
     display: block;
     line-height: 1.6;
-    padding: 10px 15px;
     margin-top: 20px;
-    text-align: left;
 }
 
 .comment_recaptcha > input {
     background-color: #FFFFFF;
     border: 0 none;
+    border-radius: 2px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     font-family: "Open Sans",Cantarell,sans-serif;
     font-size: 100%;
@@ -576,21 +572,32 @@ blockquote {
     width: 150px;
     margin-right: 5px;
 }
+.comment_recaptcha img {
+    border-radius: 2px;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    height: 30px;
+}
 
 .comment_submit {
     margin-top: 20px;
 }
 
 .comment_submit > input {
-    background-color: #FFFFFF;
+    background-color: #555555;
     border: 0 none;
+    border-radius: 2px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-    color: #444444;
+    color: #fff;
     cursor: pointer;
     display: block;
     font-size: 90%;
     margin: -3px auto 0;
     padding: 2px 8px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+.comment_submit > input:hover {
+    background-color: #222;
 }
 
 /* Fin commentaires */

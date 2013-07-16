@@ -28,7 +28,7 @@ lang: fr
 {%  if page.comments != false %}
 <section class="comments">
 	<div id="comments" class="comments">
-		<img src="loading.gif" alt="Loading comments…"/>
+		<img src="/comments/loading.gif" alt="Loading comments…"/>
 	</div>
 </section>
 <script src="/js/jquery.min.js" type="text/javascript"></script>
