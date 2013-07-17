@@ -43,6 +43,7 @@ h1, h2, h3 {
 .serif article h1,
 .serif #post,
 .serif time.top,
+section.index #archives div li > a.serif,
 blockquote {
     font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
 }
@@ -191,7 +192,16 @@ section.index #archives a.rss {
 	color: #fff;
 	font-size: 70%;
 }
-section.index #archives div > a {
+section.index #archives div ul {
+	margin: 0;
+	padding: 0;
+}
+section.index #archives div li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+section.index #archives div li > a {
 	display: block;
 	color: #333;
 	font-weight: bold;
@@ -200,7 +210,11 @@ section.index #archives div > a {
 	box-shadow: 0 0;
 	text-align: left;
 }
-section.index #archives div > a:hover {
+section.index #archives div li > a.serif {
+	font-style: italic;
+	font-size: 110%;
+}
+section.index #archives div li > a:hover {
 	background-color: #eee;
 }
 section.index #archives a time {
@@ -522,7 +536,7 @@ blockquote {
     border-radius: 3px 3px 3px 3px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     color: #EEEEEE;
-    display: block;
+    display: inline-block;
     font-size: 110%;
     margin: 0;
     padding: 10px 20px;

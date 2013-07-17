@@ -28,15 +28,19 @@ lang: fr
 	   <div>
 		<h2 style="display: inline">archives <span style="opacity: 0.4">//</span> <a href="/flux.xml" class="rss">RSS</a></h2>
 		<p>Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes.</p>
+
+		<ul>
 	   {% for post in site.posts %}
-		<a href="{{ post.url }}">
-		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
-		{{ post.title }}
-		{% if post.link %}
-		  <span class="label">marque-page</span>
-		{% endif %}
-		</a>
+		    <li>
+			<a {% if post.layout == "postserif" %}class="serif"{% endif %} href="{{ post.url }}"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
+			{{ post.title }}
+			{% if post.link %}
+		  		<span class="label">marque-page</span>
+			{% endif %}
+			</a>
+		   </li>
  	   {% endfor %}
+		</ul>
 	   </div>
 	</div>
 
