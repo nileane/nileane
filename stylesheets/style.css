@@ -539,7 +539,7 @@ blockquote {
     display: inline-block;
     font-size: 110%;
     margin: 0;
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-decoration: none;
     transition: all .2s;
     -webkit-transition: all .2s;

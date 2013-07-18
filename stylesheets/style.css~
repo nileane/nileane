@@ -536,7 +536,7 @@ blockquote {
     border-radius: 3px 3px 3px 3px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     color: #EEEEEE;
-    display: block;
+    display: inline-block;
     font-size: 110%;
     margin: 0;
     padding: 10px 20px;
