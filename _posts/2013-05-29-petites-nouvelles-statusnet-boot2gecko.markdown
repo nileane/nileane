@@ -9,13 +9,13 @@ tags:
 ---
 *Le ciel est clair, et les petits changements ne se bousculent pas. Maaaais, voilà tout de même une petite mise à jour avant la régularité retrouvée de l'été prochain.*
 
-[![Geeksphone Peak tout beau, tout emballé](/images/b2g/peakboxed.jpg){: class="align right" style="width:300px;"}](/images/b2g/peakboxed.jpg)
+[![Geeksphone Peak tout beau, tout emballé](/images/b2g/peakboxed.jpg){: class="align"}](/images/b2g/peakboxed.jpg)
 
 ## Geeksphone Peak, Firefox OS et Boot2Gecko.
 
 J'étais parmi les files d'attente virtuelles pour accéder aux commandes en ligne des [Geeksphone](http://www.geeksphone.com/) (premiers smartphones livrés avec Firefox OS, à destination des développeurs d'applications, en premier lieu). Je ne vous cache d'ailleurs pas que c'était très difficile de pouvoir enfin passer à la caisse (aucun problème à signaler pour la livraison, et je salue en passant le support très réactif et très sympathique.)
 
-[![Geeksphone Peak en main !](/images/b2g/peakhandon.jpg){: class="align right" style="width:300px;"}](/images/b2g/peakhandon.jpg)
+[![Geeksphone Peak en main !](/images/b2g/peakhandon.jpg){: class="align"}](/images/b2g/peakhandon.jpg)
 
 Bref, je vous confie avoir vite remplacé Firefox OS par [Boot2Gecko](https://github.com/mozilla-b2g/B2G), afin d'être le plus à jour possible (je suis actuellement sur la branche master, soient les prémices de Boot2Gecko 2.0.0). J'ai commencé à bidouiller, et vous en dirai des nouvelles sur ce même carnet !
 

@@ -10,6 +10,8 @@ L'épreuve orale de français du baccalauréat est un plaisir, n'est-il pas ? Po
 
 Cette épreuve se décline en deux étapes successives : l'**exposé** tout d'abord, durant lequel vous réalisez le commentaire du texte imposé, et préalablement sujet d'entrainement de votre part, puis l'**entretien** où vous réalisez le même exercice, en déglutinant vos capacités de récitation, mais cette fois-ci en répondant aux questions au rôle fantôche de votre examinateur.
 
+---
+
 L'exposé se passa « bien ». Mais à l'heure de l'entretien…  
 *Le récit de la scène ci-dessous est fait selon mes souvenirs, il est donc possible qu'elle soit enrichie, ou au contraire appauvrie par rapport à la réalité.*
 

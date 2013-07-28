@@ -1,11 +1,11 @@
 body {
-    font: 11pt/1.5 "Open Sans", Cantarell, sans-serif;
+    font: 11pt/1.5 "Feura Sans", Cantarell, sans-serif;
     margin: 0;
     background-color: #2F2965;
 	animation: 200s infinite colorful;
 	-webkit-animation: 200s infinite colorful;
 }
-@media screen and (min-width:920px) {
+@media screen and (min-width:750px) {
 	body {
 		font-size: 13pt;
 	}
@@ -15,13 +15,14 @@ article a { font-weight: bold; color: #4E43C8;}
 p a:hover { text-decoration: underline; }
 
 pre, code {
-    background-color: #2E3740;
-    color: #DFEACE;
+    background-color: #333;
+    color: #eee;
     border-radius: 2px;
 }
 
 code {
     padding: 0 5px;
+    font-size: 90%;
     hyphens: none;
     -moz-hyphens: none;
     -webkit-hyphens:  none;
@@ -34,9 +35,18 @@ pre code {
     padding: 0;
 }
 
+hr {
+    border: 1px solid #DEDEDC;
+    display: block;
+    margin: 20px auto;
+    width: 20%;
+}
+#post hr {
+    margin: 50px auto;
+}
 
 h1, h2, h3 {
-    font-family: "Open Sans Light", Cantarell, sans-serif;
+    font-family: "Feura Sans", Cantarell, sans-serif;
     font-weight: normal;
 }
 
@@ -51,6 +61,8 @@ blockquote {
 section.index {
     margin: 0 auto;
     text-align: center;
+}
+section.index.home {
 	animation: 3s fondu;
 	-webkit-animation: 3s fondu;
 }
@@ -68,17 +80,25 @@ section.index figure h1 {
     -webkit-transition: all .3s;
     opacity: 1;
 }
+section.index.post {
+    background-color: #FFFFFF;
+    margin-top: 30px;
+}
+section.index.post figure h1 {
+    color: #444444;
+    font-size: 210%;
+}
 #cassiopeia {
     margin: 20px 0 0;
     border-radius: 50%;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 0;
     vertical-align: middle;
     width: 60px;
     transition: all .3s;
     -webkit-transition: all .3s;
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:449px) {
 	section.index figure h1 {
 		margin: 10px 0 20px;
 	}
@@ -87,14 +107,13 @@ section.index figure h1 {
 	section.index figure h1 {
 		display: inline-block;
 	}
-	section.index.home figure h1 {
-		font-size: 280%;
-	}
 	section.index #cassiopeia {
 		margin: 0 20px 0 0;
 	}
-	section.index.home #cassiopeia {
-		width: 80px;
+}
+@media screen and (min-width:750px) {
+	.index #cassiopeia {
+		width: 70px;
 	}
 }
 section.index figure h1 small {
@@ -107,18 +126,13 @@ section.index figure h1 small {
 section.index figure.emb {
     padding: 0;
     display: inline-block;
-    margin: 0 40px 17px;
     transition: all 1.5s;
     -webkit-transition: all 1.5s;
 }
-section.index.post figure.emb {
-	margin-top: 0;
-}
-
-@media screen and (min-height:400px) {
+@media screen and (min-height:300px) {
 	section.index figure.emb,
 	section.index.post figure.emb {
-		margin-top: 30px;
+		margin-top: 25px;
 	}
 }
 @media screen and (min-height:520px) {
@@ -209,10 +223,10 @@ section.index #archives div li > a {
 	border: 0;
 	box-shadow: 0 0;
 	text-align: left;
+	font-size: 110%;
 }
 section.index #archives div li > a.serif {
 	font-style: italic;
-	font-size: 110%;
 }
 section.index #archives div li > a:hover {
 	background-color: #eee;
@@ -245,7 +259,7 @@ section.index #archives a time {
 	-webkit-animation: 2s fondu;
 }
 #carnet:target figure.emb {
-	margin-top: 0;
+	margin-top: 30px;
 }
 @media screen and (min-width:920px) {
 	#carnet:target figure.emb {
@@ -260,20 +274,31 @@ section.index #archives a time {
 		margin-top: 70px;
 	}
 }
-
+@media screen and (min-width:450px) and (max-width:1049px) {
+	#moi:target figure.emb nav {
+		padding-left: 30px;
+	}
+}
 
 #moi:target #cassiopeia {
 	width: 80px;
-	transform: translate(0,70px);
-	-webkit-transform: translate(0,70px);
-	-moz-transform: translate(0,70px);
+	transform: translate(0,55px);
+	-webkit-transform: translate(0,55px);
+	-moz-transform: translate(0,55px);
+}
+@media screen and (min-width:750px) {
+	#moi:target #cassiopeia {
+		width: 90px;
+		margin-top: 20px;
+	}
 }
 @media screen and (min-width:1050px) {
 	#moi:target #cassiopeia {
 		width: 120px;
-		transform: translate(-280px,70px);
-		-webkit-transform: translate(-280px,70px);
-		-moz-transform: translate(-280px,70px);
+		margin-top: 0;
+		transform: translate(-280px,55px);
+		-webkit-transform: translate(-280px,55px);
+		-moz-transform: translate(-280px,55px);
 	}
 }
 #moi:target figure h1 {
@@ -322,22 +347,15 @@ section.article {
     background-color: #fff;
     padding: 30px 0;
 }
-section.article.serif {
-    background-image: url(/images/bgtr.png);
-    background-color: #eee;
-}
 section.comments {
     background-color: #eee;
     text-align: center;
     padding: 30px 0;
 }
-section.comments.serif {
-    background-color: #fff;
-}
 article,
 div#comments {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 750px;
     padding: 0 25px;
 }
 
@@ -354,15 +372,17 @@ time.top {
 }
 
 article h1 {
-    color: #525252;
-    font-size: 240%;
+    color: #333332;
+    font-size: 220%;
     margin: 0 5px 35px 0;
-    font-weight: normal;
+    font-weight: bold;
+    font-family: "Feura Sans","Lucida Sans",Geneva,Verdana,sans-serif
 }
 .serif article h1 {
      font-style: italic;
 }
-.serif.centered article h1 {
+.serif.centered article h1,
+.serif.centered #post {
      text-align: center;
 }
 article h1 a:hover {
@@ -400,8 +420,8 @@ pre {
 }
 
 #post {
-    color: #525252;
-    line-height: 1.6;
+    color: #333332;
+    font-size: 120%;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
@@ -416,22 +436,16 @@ pre {
 }
 @media screen and (min-width:750px) {
 	#post {
-		font-size: 110%;
+		font-size: 130%;
+		line-height: 1.6;
 	}
 }
-#post ul {
-    padding-left: 15px;
-}
-
 article #post img {
     max-width:100%;
 }
 
 #post a img {
     border: 0 none;
-}
-#post a img.align {
-    box-shadow: 0 3px rgba(0, 0, 0, 0.2);
 }
 .align,
 .align.center {
@@ -455,12 +469,6 @@ article #post img {
 
 ul {
     list-style: outside square;
-}
-
-
-article hr {
-    border: 2px solid #dedede;
-    margin: 20px 0;
 }
 
 a.bouton {
@@ -498,7 +506,7 @@ blockquote {
 
 .comments_header {
     margin: 0;
-    font-family: "Open Sans Light", Cantarell, sans-serif;
+    font-family: "Feura Sans", Cantarell, sans-serif;
 }
 .comments_header a {
     font-size: 200%;
@@ -583,7 +591,7 @@ blockquote {
     border: 0 none;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
-    font-family: "Open Sans",Cantarell,sans-serif;
+    font-family: "Feura Sans",Cantarell,sans-serif;
     font-size: 100%;
     padding: 10px;
     width: 97.2%;
@@ -601,7 +609,7 @@ blockquote {
     border: 0 none;
     border-radius: 2px;
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
-    font-family: "Open Sans",Cantarell,sans-serif;
+    font-family: "Feura Sans",Cantarell,sans-serif;
     font-size: 100%;
     height: 30px;
     padding: 10px;
@@ -684,33 +692,14 @@ blockquote {
 /* polices */
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Feura Sans';
     font-style: normal;
     font-weight: 400;
-    src: url(/fonts/opensans/OpenSans-Regular.ttf) format('truetype');
+    src: url(/fonts/feurasans/FeuraSans-Regular.ttf) format('truetype');
 }
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Feura Sans';
     font-style: normal;
     font-weight: 700;
-    src: url(/fonts/opensans/OpenSans-Bold.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 400;
-    src: url(/fonts/opensans/OpenSans-Italic.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Open Sans';
-    font-style: italic;
-    font-weight: 700;
-    src: url(/fonts/opensans/OpenSans-BoldItalic.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Open Sans Light';
-    font-style: normal;
-    font-weight: 400;
-    src: url(/fonts/opensans/OpenSans-Light.ttf) format('truetype');
+    src: url(/fonts/feurasans/FeuraSans-Bold.ttf) format('truetype');
 }
