@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+jekyll build && rsync -avz --delete _site/ /var/www/carnet
+ln -s /var/www/commentcava.sqlite /var/www/carnet/comments/commentcava.sqlite
