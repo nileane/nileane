@@ -50,10 +50,6 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
-.serif article h1,
-.serif #post,
-.serif time.top,
-section.index #archives div li > a.serif,
 blockquote {
     font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
 }
@@ -81,11 +77,9 @@ section.index figure h1 {
     opacity: 1;
 }
 section.index.post {
-    background-color: #FFFFFF;
     margin-top: 30px;
 }
 section.index.post figure h1 {
-    color: #444444;
     font-size: 210%;
 }
 #cassiopeia {
@@ -436,7 +430,7 @@ pre {
 }
 @media screen and (min-width:750px) {
 	#post {
-		font-size: 130%;
+		font-size: 125%;
 		line-height: 1.6;
 	}
 }
@@ -645,21 +639,6 @@ blockquote {
 }
 
 /* Fin commentaires */
-
-
-#post nav {
-    background-color: #eee;
-    color:#666;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
-    padding: 5px 15px;
-}
-#post nav a {
-    margin: 0 0 0 10px;
-    transition: all .2s;
-}
-#post nav a:hover {
-    box-shadow: 0 -8px 15px -15px currentColor inset;
-}
 
 /* animations */
 

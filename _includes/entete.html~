@@ -5,6 +5,10 @@
 		<h1>schoewilliam</h1>
 	</a>
 
-	<hr style="border-color: #666; margin: 0 auto;">
+	<nav>
+		<a class="lien carnet" href="/#carnet">carnet</a>
+		<a class="lien apropos" href="/#moi">à propos</a>
+	</nav>
+	<hr style="border-color: #eee; margin: 0 auto;">
 	</figure>
 </section>

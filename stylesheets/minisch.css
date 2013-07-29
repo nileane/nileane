@@ -3,6 +3,7 @@ section.minisch {
     border:1px dashed #ccc;
     overflow-x: auto;
     white-space: nowrap;
+    padding: 0;
 }
 .minisch .wrap {
     padding: 10px 20px;
@@ -27,6 +28,9 @@ section.minisch a:hover {
 .minisch.index .entry-header {
     min-height: 60px;
     padding: 15px 20px;
+}
+.minisch .comment:last-child {
+    padding: 0;
 }
 .minisch.index .comments-link {
     display: inline-block;
