@@ -17,7 +17,7 @@ task :post do
       file.puts "---"
     end
   end
-  system `urxvt -e vim #{path}`
+  system `gedit #{path}`
 
   exit 1
 end
