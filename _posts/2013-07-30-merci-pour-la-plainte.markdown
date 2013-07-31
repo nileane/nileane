@@ -10,5 +10,5 @@ Aujourd'hui encore l'on construit une argumentation enragée à l'encontre de ce
 
 Tu te plains.
 
-Chaque jour : « *si cela t'énerve tant de lire ces sotises publiées sur le* "réseau" *à l'entête bleue, pourquoi FICHTRE continues-tu de les lire ?* »
+Chaque jour : « *si cela t'énerve tant de lire ces sotises publiées sur le* "réseau" *à l'entête bleu, pourquoi FICHTRE continues-tu de les lire ?* »
 J'attends toujours une réponse sensée.
