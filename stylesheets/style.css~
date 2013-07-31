@@ -50,10 +50,6 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
-.serif article h1,
-.serif #post,
-.serif time.top,
-section.index #archives div li > a.serif,
 blockquote {
     font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
 }

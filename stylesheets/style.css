@@ -434,7 +434,8 @@ pre {
 		line-height: 1.6;
 	}
 }
-article #post img {
+article #post img,
+article #post iframe {
     max-width:100%;
 }
 
