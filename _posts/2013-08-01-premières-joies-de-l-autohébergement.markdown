@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 comments: true
 title: Premières joies de l'autohébergement
 ---
