@@ -11,6 +11,7 @@ tags:
 ---
 
 ![music.schoewilliam.fr](/images/mpd/music.schoewilliam.png){: class="align right" style="border-radius:3px;"}
+
 Je m'ennuyais, tout à fait. Alors je me suis dit que je devrais peut-être faire une jolie petite page statique pour mon stream *MPD* — dont je parle dans mon [billet d'hier](/2013/08/01/premières-joies-de-l-autohébergement.html).
 
 [Le résultat](http://music.schoewilliam.fr){: target="_blank"} correspond à ce que j'avais imaginé, et dispose même d'une fonctionnalité supplémentaire à mon idée de base : l'affichage de l'artiste et du titre de la piste en cours de diffusion.
