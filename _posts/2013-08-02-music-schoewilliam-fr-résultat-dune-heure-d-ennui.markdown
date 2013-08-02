@@ -96,7 +96,7 @@ Nous voilà alors de retour sur notre jolie page web. On y appelle notre `nowpla
 		$(document).ready(function() {
 		    setInterval(function(){
 			   $("#current-track").load("nowplaying.php");
-		    }, 10 * 1000);
+		    }, 10000);
 		});
 	</script>
 
