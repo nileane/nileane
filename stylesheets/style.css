@@ -72,8 +72,6 @@ section.index figure h1 {
     vertical-align: middle;
     color: #fff;
     font-size: 220%;
-    transition: all .3s;
-    -webkit-transition: all .3s;
     opacity: 1;
 }
 section.index.post {
@@ -89,8 +87,6 @@ section.index.post figure h1 {
     border: 0;
     vertical-align: middle;
     width: 60px;
-    transition: all .3s;
-    -webkit-transition: all .3s;
 }
 @media screen and (max-width:449px) {
 	section.index figure h1 {
@@ -106,7 +102,13 @@ section.index.post figure h1 {
 	}
 }
 @media screen and (min-width:750px) {
+	section.index figure h1 {
+	        transition: all .3s;
+	        -webkit-transition: all .3s;
+	}
 	.index #cassiopeia {
+		transition: all .3s;
+		-webkit-transition: all .3s;
 		width: 70px;
 	}
 }
@@ -120,8 +122,6 @@ section.index figure h1 small {
 section.index figure.emb {
     padding: 0;
     display: inline-block;
-    transition: all 1.5s;
-    -webkit-transition: all 1.5s;
 }
 @media screen and (min-height:300px) {
 	section.index figure.emb,
@@ -137,6 +137,12 @@ section.index figure.emb {
 @media screen and (min-height:600px) {
 	section.index figure.emb {
 		margin-top: 200px;
+	}
+}
+@media screen and (min-width:750px) {
+	section.index figure.emb {	
+	        transition: all 1.5s;
+	        -webkit-transition: all 1.5s;
 	}
 }
 section.index nav a {
@@ -391,6 +397,15 @@ article h3 {
 article h2,
 article h3 {
     font-weight: normal;
+}
+@media screen and (max-width:749px) {
+	article h1 {
+		hyphens: auto;
+		-moz-hyphens: auto;
+		-webkit-hyphens:  auto;
+		-o-hyphens: auto;
+		-ms-hyphens: auto;
+	}
 }
 @media screen and (min-width:750px) {
     article h1 {
