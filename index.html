@@ -9,17 +9,19 @@ lang: fr
 
 <section class="index home">
 <div id="carnet">
+<div id="realisations">
 <div id="moi">
 
 
 	<figure class="emb">
 	<a href="#">
 		<img id="cassiopeia" src="/images/photosmall.jpg">
-		<h1>schoewilliam</h1>
+		<h1>schh<span style="opacity: 0.6;">h</span><span style="opacity: 0.3;">h</span></h1>
 	</a>
 
 	<nav>
 		<a class="lien carnet" href="#carnet">carnet</a>
+		<a class="lien real" href="#realisations">réalisations</a>
 		<a class="lien apropos" href="#moi">à propos</a>
 	</nav>
 	</figure>
@@ -44,10 +46,15 @@ lang: fr
 	   </div>
 	</div>
 
+	<div id="projets">
+		{% include projets.html %}
+	</div>
+
 	<div id="apropos">
 		{% include moi.html %}
 	</div>
 
+</div>
 </div>
 </div>
 </section>

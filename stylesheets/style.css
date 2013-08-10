@@ -70,11 +70,6 @@ section.index.home {
 	animation: 3s fondu;
 	-webkit-animation: 3s fondu;
 }
-section.index figure a,
-section.index figure a:hover {
-	border: 0;
-	box-shadow: 0 0;
-}
 section.index figure h1 {
     font-weight: normal;
     vertical-align: middle;
@@ -165,7 +160,8 @@ section.index nav a:hover {
 }
 
 section.index #archives,
-section.index #apropos {
+section.index #apropos,
+section.index #projets {
 	display: none;
 }
 
@@ -181,10 +177,12 @@ section.index #apropos {
 section.index #archives {
 	padding-bottom: 50px;
 }
-section.index #apropos {
+section.index #apropos,
+section.index #projets {
 	max-width: 850px;
 	text-align: left;
 	color: #444;
+	margin: 0 auto;
 }
 section.index #apropos h2,
 section.index #apropos h3 {
@@ -259,17 +257,20 @@ section.index #archives a time {
 }
 
 #carnet:target .lien.carnet,
-#moi:target .lien.apropos {
+#moi:target .lien.apropos,
+#realisations:target .lien.real {
 	font-weight: bold;
 	color: #fff;
 }
 #carnet:target #archives,
-#moi:target #apropos {
+#moi:target #apropos,
+#realisations:target #projets {
 	display: block;
 	animation: 2s fondu;
 	-webkit-animation: 2s fondu;
 }
-#carnet:target figure.emb {
+#carnet:target figure.emb,
+#realisations:target figure.emb {
 	margin-top: 30px;
 }
 @media screen and (min-width:920px) {
@@ -281,13 +282,14 @@ section.index #archives a time {
 	margin-top: -40px;
 }
 @media screen and (min-width:920px) {
-	#moi:target figure.emb {
+	#moi:target figure.emb,
+	#realisations:target figure.emb {
 		margin-top: 70px;
 	}
 }
 @media screen and (min-width:450px) and (max-width:1049px) {
 	#moi:target figure.emb nav {
-		padding-left: 30px;
+		padding-left: 120px;
 	}
 }
 
@@ -314,6 +316,48 @@ section.index #archives a time {
 }
 #moi:target figure h1 {
 	opacity: 0;
+}
+
+#realisations:target #projets {
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 1px 0;
+    border-radius: 3px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+}
+#projets > div {
+    margin: 0 auto;
+    max-width: 850px;
+}
+#projets section {
+    background-color: #fff;
+    padding: 12px 20px;
+    border-radius: 3px;
+    margin: 10px auto;
+}
+#projets section h3 {
+    margin: 0;
+    display: inline;
+    font-size: 190%;
+    font-weight: bold;
+}
+#projets section img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin: 5px 20px 5px 0;
+    border-radius: 50%;
+}
+#projets section p {
+    margin: 0;
+}
+#projets section aside {
+    clear: both;
+    text-align: center;
+    margin: 10px 0 0;
+}
+#projets section a {
+    font-weight: bold;
 }
 
 /* fin header */
