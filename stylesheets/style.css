@@ -295,9 +295,16 @@ section.index #archives a time {
 
 #moi:target #cassiopeia {
 	width: 80px;
-	transform: translate(-60px,55px);
-	-webkit-transform: translate(-60px,55px);
-	-moz-transform: translate(-60px,55px);
+	transform: translate(0,55px);
+	-webkit-transform: translate(0,55px);
+	-moz-transform: translate(0,55px);
+}
+@media screen and (min-width:450px) {
+    #moi:target #cassiopeia {    
+    	transform: translate(-60px,55px);
+    	-webkit-transform: translate(-60px,55px);
+    	-moz-transform: translate(-60px,55px);
+    }
 }
 @media screen and (min-width:750px) {
 	#moi:target #cassiopeia {
