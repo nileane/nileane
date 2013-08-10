@@ -295,9 +295,9 @@ section.index #archives a time {
 
 #moi:target #cassiopeia {
 	width: 80px;
-	transform: translate(0,55px);
-	-webkit-transform: translate(0,55px);
-	-moz-transform: translate(0,55px);
+	transform: translate(-60px,55px);
+	-webkit-transform: translate(-60px,55px);
+	-moz-transform: translate(-60px,55px);
 }
 @media screen and (min-width:750px) {
 	#moi:target #cassiopeia {
@@ -309,9 +309,9 @@ section.index #archives a time {
 	#moi:target #cassiopeia {
 		width: 120px;
 		margin-top: 0;
-		transform: translate(-280px,55px);
-		-webkit-transform: translate(-280px,55px);
-		-moz-transform: translate(-280px,55px);
+		transform: translate(-330px,55px);
+		-webkit-transform: translate(-330px,55px);
+		-moz-transform: translate(-330px,55px);
 	}
 }
 #moi:target figure h1 {
