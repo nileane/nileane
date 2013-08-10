@@ -54,6 +54,14 @@ blockquote {
     font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
 }
 
+.label {
+    font-size: 80%;
+    padding: 2px 8px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+}
+
 section.index {
     margin: 0 auto;
     text-align: center;
@@ -389,7 +397,7 @@ article h1 {
      text-align: center;
 }
 article h1 a:hover {
-    box-shadow: 0 0;
+    text-decoration:underline;
 }
 article h2 {
     font-size: 170%;
