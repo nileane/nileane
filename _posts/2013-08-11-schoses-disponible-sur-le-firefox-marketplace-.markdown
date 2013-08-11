@@ -7,7 +7,7 @@ title: Schoses disponible sur le Firefox Marketplace.
 
 ![Schoses](/images/schoses/icon-128.png){: class="align right"}
 
-J'ai récemment achevé la mise à ma sauce d'une application de prise de notes simpliste et minimaliste, tout bonnement appelée « *Minimalist* » dont le style me déplaisait (beaucoup.). Renommée « **Schoses** », en déformation de *chose*, elle permet de noter à la voler des trucs et autres dont on voudrait se souvenir, des listes de tâches, ou pourquoi pas de courses.
+J'ai récemment achevé la mise à ma sauce d'une application de prise de notes simpliste et minimaliste, tout bonnement appelée « *Minimalist* » dont le style me déplaisait (beaucoup.). Renommée « **Schoses** », en déformation de *chose*, elle permet de noter à la volée des trucs et autres dont on voudrait se souvenir, des listes de tâches, ou pourquoi pas de courses.
 
 [![Schoses sur un écran de bureau](/images/schoses/wide.png){: class="align center"}](/images/schoses/wide.png)
 
