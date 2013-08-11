@@ -327,6 +327,7 @@ section.index #archives a time {
 
 #realisations:target #projets {
     background-color: #FFFFFF;
+    max-width: 100%;
     margin: 0 auto;
     padding: 1px 0;
     border-radius: 3px;
@@ -360,7 +361,6 @@ section.index #archives a time {
 }
 #projets section aside {
     clear: both;
-    text-align: center;
     margin: 10px 0 0;
 }
 #projets section a {
@@ -548,17 +548,15 @@ a.bouton {
     border-bottom: 0 !important;
     box-shadow: 0 2px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
-    padding: 5px 8px;
+    padding: 3px 10px;
     display: inline-block;
     text-indent: 0;
+    text-decoration: none;
+    border-radius: 3px;
+    
 }
 a.bouton:hover {
-    box-shadow: 0 5px rgba(0, 0, 0, 0.2) !important;
-    transform: translate(0, -3px);
-    	-webkit-transform: translate(0, -3px);
-    	-moz-transform: translate(0, -3px);
-        -o-transform: translate(0, -3px);
-        -ms-transform: translate(0, -3px);
+    text-decoration: underline;
 }
 blockquote p:last-child:after {
     content: "»";
