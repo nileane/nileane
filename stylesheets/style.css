@@ -549,6 +549,7 @@ a.bouton {
     box-shadow: 0 2px rgba(0, 0, 0, 0.2);
     color: #FFFFFF;
     padding: 3px 10px;
+    margin: 0 0 5px;
     display: inline-block;
     text-indent: 0;
     text-decoration: none;
