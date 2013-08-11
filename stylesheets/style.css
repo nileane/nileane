@@ -363,6 +363,11 @@ section.index #archives a time {
     clear: both;
     margin: 10px 0 0;
 }
+@media screen and (min-width:620px) {
+	#projets section aside {
+	    margin-left: 110px;
+	}
+}
 #projets section a {
     font-weight: bold;
 }
