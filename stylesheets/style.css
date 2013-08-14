@@ -264,6 +264,7 @@ section.index #archives a time {
 }
 #carnet:target #archives,
 #moi:target #apropos,
+#moi:target #prairial,
 #realisations:target #projets {
 	display: block;
 	animation: 2s fondu;
@@ -370,6 +371,14 @@ section.index #archives a time {
 }
 #projets section a {
     font-weight: bold;
+}
+
+#prairial {
+    color: #FFFFFF;
+    display: none;
+    font-style: italic;
+    margin: 30px 0;
+    text-shadow: 0 0 20px #FFFFFF, 0 1px rgba(0, 0, 0, 0.3);
 }
 
 /* fin header */
