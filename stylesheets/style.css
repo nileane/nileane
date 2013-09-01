@@ -192,18 +192,6 @@ section.index figure.emb {
 	    -webkit-transform: translate(0,0);
     z-index: 1;
 }
-.emb nav:before {
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    content: " ";
-    display: block;
-    height: 12px;
-    left: 50%;
-    margin-left: -6px;
-    position: absolute;
-    top: -6px;
-    width: 12px;
-}
 .not {
     bottom: 15px;
     color: rgba(255, 255, 255, 0.6);
