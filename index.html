@@ -21,29 +21,36 @@ lang: fr
 
 	<nav>
 		<a class="lien carnet" href="#carnet">carnet</a>
-		<a class="lien real" href="#realisations">réalisations</a>
-		<a class="lien apropos" href="#moi">à propos</a>
+		<a class="lien real" href="#realisations">things I made</a>
+		<a class="lien apropos" href="#moi">about me</a>
 	</nav>
 	</figure>
 
 	<div id="archives">
 	   <div>
-		<h2 style="display: inline">archives <a href="/flux.xml" class="rss">RSS</a></h2>
-		<p>Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes.</p>
+		<h2 style="display: inline">Carnet <a href="/flux.xml" class="rss">RSS</a></h2>
+		<p><span class="label grey">fr</span> Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes, consolidés par l'envie de papoter.<br><br>
+		<span class="label grey">en</span> <em>This weblog is almost french-only, sorry. My rare english posts will however be flagged with a "<strong>en</strong>" label, so you can easily spot them.</em></p>
 
 		<ul>
 	   {% for post in site.posts %}
 		    <li>
-			<a {% if post.layout == "postserif" %}class="serif"{% endif %} href="{{ post.url }}"><time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
+			<a {% if post.layout == "postserif" %}class="serif"{% endif %} href="{{ post.url }}">
+			<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
 			{{ post.title }}
 			{% if post.link %}
-		  		<span class="label">marque-page</span>
+		  		<span class="label black">marque-page</span>
+			{% endif %}
+			{% if post.en %}
+		  		<span class="label grey">en</span>
 			{% endif %}
 			</a>
 		   </li>
  	   {% endfor %}
 		</ul>
 	   </div>
+	   <hr>
+	    {% include pied.html %}
 	</div>
 
 	<div id="projets">
@@ -53,7 +60,7 @@ lang: fr
 	<div id="apropos">
 		{% include moi.html %}
 	</div>
-	<div id="prairial">Quartidi 24 Prairial de l'an CCXXI. &hearts;</div>
+	<div id="prairial">Quartidi 24 Prairial de l'an CCXXI.</div>
 
 </div>
 </div>

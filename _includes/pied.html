@@ -2,12 +2,12 @@
 	<div>
 		<div><span style="margin-right:5px;opacity:0.3;">William Dorffer.</span>
 		</div>
-		<div><span style="margin-right:5px;opacity:0.3;">Carnets amis</span>
+		<div>
 			{% for link in site.blogoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>
 			{% endfor %}
 		</div>
-		<div><span style="margin-right:5px;opacity:0.3;">Liens</span>
+		<div>
 			{% for link in site.linkoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>
 			{% endfor %}
