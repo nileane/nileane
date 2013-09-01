@@ -1,0 +1,28 @@
+---
+layout: page
+title: Carnet
+---
+
+<div id="archives">
+   <div>
+	<p><span class="label grey">fr</span> Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes, consolidés par l'envie de papoter. 
+	<a href="/flux.xml" class="bouton" style="padding: 1px 10px; background-color:#D56C3B;">RSS</a></p>
+
+	<ul>
+   {% for post in site.posts %}
+	    <li>
+		<a {% if post.layout == "postserif" %}class="serif"{% endif %} href="{{ post.url }}">
+		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
+		{{ post.title }}
+		{% if post.link %}
+	  		<span class="label black">marque-page</span>
+		{% endif %}
+		{% if post.en %}
+	  		<span class="label grey">en</span>
+		{% endif %}
+		</a>
+	   </li>
+   {% endfor %}
+	</ul>
+   </div>
+</div>

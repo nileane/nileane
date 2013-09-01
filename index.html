@@ -1,5 +1,5 @@
 ---
-title: "schoewilliam, prétendant à la liberté."
+title: schoewilliam, prétendant à la liberté.
 description: "Carnet web d'un habitant de la banquise GNU/Linuxienne, prétendant à la liberté — William Dorffer, schoewilliam."
 layout: home
 role: home
@@ -8,11 +8,7 @@ lang: fr
 
 
 <section class="index home">
-<div id="carnet">
-<div id="realisations">
 <div id="moi">
-
-
 	<figure class="emb">
 	<a href="#">
 		<img id="cassiopeia" src="/images/photosmall.jpg">
@@ -20,51 +16,15 @@ lang: fr
 	</a>
 
 	<nav>
-		<a class="lien carnet" href="#carnet">carnet</a>
-		<a class="lien real" href="#realisations">things I made</a>
+		<a class="lien carnet" href="/carnet">carnet</a>
+		<a class="lien real" href="/whatimade">things I made</a>
 		<a class="lien apropos" href="#moi">about me</a>
 	</nav>
-		<span class="not carnet">carnet</span>
-		<span class="not real">things I made</span>
-		<span class="not apropos">about me</span>
 	</figure>
-
-	<div id="archives">
-	   <div>
-		<h2 style="display: inline">Carnet <a href="/flux.xml" class="rss">RSS</a></h2>
-		<p><span class="label grey">fr</span> Quelques billets sans prétention au gré de mes humeurs, expériences, et tentatives d'expression malignes, consolidés par l'envie de papoter.</p>
-
-		<ul>
-	   {% for post in site.posts %}
-		    <li>
-			<a {% if post.layout == "postserif" %}class="serif"{% endif %} href="{{ post.url }}">
-			<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
-			{{ post.title }}
-			{% if post.link %}
-		  		<span class="label black">marque-page</span>
-			{% endif %}
-			{% if post.en %}
-		  		<span class="label grey">en</span>
-			{% endif %}
-			</a>
-		   </li>
- 	   {% endfor %}
-		</ul>
-	   </div>
-	   <hr>
-	    {% include pied.html %}
-	</div>
-
-	<div id="projets">
-		{% include projets.html %}
-	</div>
 
 	<div id="apropos">
 		{% include moi.html %}
 	</div>
 	<div id="prairial">Quartidi 24 Prairial de l'an CCXXI.</div>
-
-</div>
-</div>
 </div>
 </section>

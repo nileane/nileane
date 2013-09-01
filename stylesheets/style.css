@@ -5,6 +5,9 @@ body {
 	animation: 200s infinite colorful;
 	-webkit-animation: 200s infinite colorful;
 }
+body.post {
+    background-color: #fff;
+}
 @media screen and (min-width:750px) {
 	body {
 		font-size: 13pt;
@@ -156,91 +159,25 @@ section.index figure.emb {
 	        -webkit-transition: all 1.5s;
 	}
 }
-.emb > a:after {
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    bottom: 12px;
-    content: " ";
-    display: block;
-    height: 8px;
-    left: 50%;
-    margin-left: -4px;
-    position: absolute;
-    width: 8px;
-}
 .emb > a {
     display: inline-block;
     position: relative;
 }
-.emb nav {
-    background-color: #FFFFFF;
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.2);
-    padding: 6px 20px;
-    opacity:0;
-    z-index:-1;
-    transform: translate(0,-5px);
-	    -moz-transform: translate(0,-5px);
-	    -webkit-transform: translate(0,-5px);
-	transition: all .5s;
-	-webkit-transition: all .5s;
-}
-.emb:hover nav {
-    opacity:1;
-    transform: translate(0,0);
-	    -moz-transform: translate(0,0);
-	    -webkit-transform: translate(0,0);
-    z-index: 1;
-}
-.not {
-    bottom: 15px;
-    color: rgba(255, 255, 255, 0.6);
-    display: none;
-    left: 50%;
-    margin-left: -100px;
-    position: absolute;
-    width: 200px;
-    z-index: -1;
-}
-@media screen and (max-width:449px) {
-	.not {
-	    display: none !important;
-	}
-	.emb nav {
-	    opacity: 1;
-	    background-color: transparent;
-	    padding: 0;
-	    transform: translate(0,0);
-		    -moz-transform: translate(0,0);
-		    -webkit-transform: translate(0,0);
-	}
-	.emb nav a {
-	    padding: 5px 0;
-	    color: #fff;
-	}
-}
-#carnet:target .not.carnet,
-#realisations:target .not.real,
-#moi:target .not.apropos,
-.not.displayed {
-	display: inline-block;
-}
 section.index nav a {
 	margin: 0 4px;
 	display: inline-block;
+	color: rgba(255, 255, 255, 0.3);
 	font-size: 110%;
 	transition: all .2s;
 	-webkit-transition: all .2s;
 }
-
-section.index #archives,
-section.index #apropos,
-section.index #projets {
+section.index nav a:hover {
+	color: #fff;
+}
+section.index #apropos {
 	display: none;
 }
 
-section.index #archives,
-section.index #projets,
 section.index #apropos {
     padding: 20px;
     background-color: #fff;
@@ -249,11 +186,7 @@ section.index #apropos {
     box-shadow: 0 4px rgba(0, 0, 0, 0.2);
     border-radius: 2px;
 }
-section.index #archives {
-	padding-bottom: 50px;
-}
-section.index #apropos,
-section.index #projets {
+section.index #apropos {
 	color: #444;
 	max-width: 850px;
 	text-align: left;
@@ -265,23 +198,22 @@ section.index #apropos h3 {
 	font-weight: bold;
 	margin: 0;
 }
-section.index #archives > div {
+#archives > div {
     max-width: 850px;
     margin: 0 auto;
 }
-section.index #archives h2,
-section.index #projets h2 {
+#archives h2 {
     margin: 0px 0px 20px;
     color: rgb(34, 34, 34);
     font-weight: bold;
     font-size: 160%;
 }
-section.index #archives p {
+#archives p {
 	color: #aaa;
 	padding: 20px;
 	text-align: left;
 }
-section.index #archives a.rss {
+#archives a.rss {
 	display: inline-block;
 	background-color: #D56C3B;
 	vertical-align: middle;
@@ -290,16 +222,16 @@ section.index #archives a.rss {
 	color: #fff;
 	font-size: 60%;
 }
-section.index #archives div ul {
+#archives div ul {
 	margin: 0;
 	padding: 0;
 }
-section.index #archives div li {
+#archives div li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-section.index #archives div li > a {
+#archives div li > a {
 	display: block;
 	color: #333;
 	font-weight: bold;
@@ -309,59 +241,45 @@ section.index #archives div li > a {
 	text-align: left;
 	font-size: 110%;
 }
-section.index #archives div li > a:link {
-    color: #4E43C8;
+#archives div li > a:link {
+	color: #4E43C8;
 }
-section.index #archives div li > a.serif {
+#archives div li > a.serif {
 	font-style: italic;
 }
-section.index #archives div li > a:hover {
+#archives div li > a:hover {
 	background-color: #eee;
 	border-radius: 3px;
 	box-shadow: 0 2px rgba(0, 0, 0, 0.1);
 }
-section.index #archives a time {
+#archives a time {
 	color: #bbb;
 	display: block;
 	font-size: 80%;
 	font-weight: normal;
 }
 @media screen and (min-width:450px) {
-	section.index #archives {
-		padding: 20px 30px;
-	}
-	section.index #archives a time {
+	#archives a time {
 		float: right;
 		display: inline;
 	}
 }
 
-#carnet:target .lien.carnet,
-#moi:target .lien.apropos,
-#realisations:target .lien.real {
+#moi:target .lien.apropos {
 	font-weight: bold;
+	color: #fff;
 }
-#carnet:target #archives,
 #moi:target #apropos,
-#moi:target #prairial,
-#realisations:target #projets {
+#moi:target #prairial {
 	display: block;
 	animation: 2s fondu;
 	-webkit-animation: 2s fondu;
 }
-#carnet:target figure.emb,
-#realisations:target figure.emb,
 #moi:target figure.emb {
 	margin-top: 30px;
 }
 @media screen and (min-width:920px) {
-	#carnet:target figure.emb {
-		margin-top: 70px;
-	}
-}
-@media screen and (min-width:920px) {
-	#moi:target figure.emb,
-	#realisations:target figure.emb {
+	#moi:target figure.emb {
 		margin-top: 70px;
 	}
 }
@@ -371,20 +289,10 @@ section.index #archives a time {
 	}
 }
 
-#realisations:target #projets {
-    background-color: #FFFFFF;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 3px;
-    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
-}
-#projets > div {
-    margin: 0 auto;
-    max-width: 850px;
-}
+
 #projets section {
     background-color: #fff;
-    padding: 12px 20px;
+    padding: 12px 0;
     border-radius: 3px;
     margin: 10px auto;
 }
@@ -449,11 +357,10 @@ body > footer div {
     font-size: 11pt;
 }
 footer div a {
-    color: rgba(255, 255, 255, 0.7);
     margin-right:5px;
+    color: rgba(255, 255, 255, 0.7);
 }
 body > footer div a:hover {
-    color: #fff;
     text-decoration: underline;
 }
 body > footer div div {
@@ -487,6 +394,7 @@ div#comments {
     margin: 0 auto;
     max-width: 750px;
     padding: 0 25px;
+    color: #333332;
 }
 
 time.top {
