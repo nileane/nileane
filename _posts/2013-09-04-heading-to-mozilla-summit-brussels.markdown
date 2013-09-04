@@ -1,7 +1,7 @@
 ---
 layout: post
-published: false
-comments: false
+published: true
+comments: true
 title: Heading to the Mozilla Summit 2013
 en: true
 ---
