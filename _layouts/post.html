@@ -5,7 +5,8 @@ bodyclass: post
 ---
 <section class="article">
 
-<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{{ page.date | localize: ":medium" }}</time>
+<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{% if page.en %}{{ page.date | date_to_long_string }}{% else %}
+{{ page.date | localize: ":medium" }}{% endif %}</time>
 <article>
 
 {% if page.link %}
@@ -29,9 +30,17 @@ bodyclass: post
 {%  if page.comments != false %}
 <section class="comments">
 	<div id="comments" class="comments">
-		<img src="/comments/loading.gif" alt="Chargement des commentaires…"/>
+		{% if page.en %}
+			<img src="/comments/loading.gif" alt="Loading comments…"/>
+		{% else %}
+			<img src="/comments/loading.gif" alt="Chargement des commentaires…"/>
+		{% endif %}
 	</div>
 </section>
 <script src="/js/jquery.min.js" type="text/javascript"></script>
-<script src="/comments/commentcava.js" type="text/javascript"></script>
+	{% if page.en %}
+		<script src="/comments/commentcava.en.js" type="text/javascript"></script>
+	{% else %}
+		<script src="/comments/commentcava.js" type="text/javascript"></script>
+	{% endif %}
 {% endif %}
