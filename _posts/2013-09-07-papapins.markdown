@@ -1,6 +1,6 @@
 ---
 layout: postserif
-published: false
+published: true
 comments: true
 title: Papapins
 centered: true
