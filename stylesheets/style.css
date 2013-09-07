@@ -522,7 +522,7 @@ ul {
 a.bouton {
     background-color: #2E3740;
     border-bottom: 0 !important;
-    box-shadow: 0 -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3px rgba(0, 0, 0, 0.3) inset;
     color: #FFFFFF;
     padding: 3px 10px;
     margin: 0 0 5px;
@@ -589,7 +589,7 @@ blockquote {
     background-color: #555555;
     border: 0 none;
     border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 -3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3px rgba(0, 0, 0, 0.3) inset;
     color: #EEEEEE;
     display: inline-block;
     font-size: 110%;
