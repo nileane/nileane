@@ -25,15 +25,10 @@ end
 task :build do
    desc "runs jekyll to generate _site/"
    system "jekyll build"
+   sh "ln -s /var/www/commentcava.sqlite /var/www/schoewilliam.fr/_site/comments/commentcava.sqlite"
 end
 
 task :serve do
    desc "runs jekyll server with autoregen enabled"
    system "jekyll serve --watch"
-end
-
-task :deploy do
-   desc "generates _site and sends it on remote server, also symlinks the comments database"
-   sh "jekyll build && rsync -avz --delete _site/ /var/www/carnet"
-   sh "ln -s /var/www/commentcava.sqlite /var/www/carnet/comments/commentcava.sqlite"
 end
