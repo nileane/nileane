@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: music.schoewilliam.fr, résultat d'une petite heure d'ennui.
+title: music.schh, résultat d'une petite heure d'ennui.
 tags:
 - php
 - mpd
