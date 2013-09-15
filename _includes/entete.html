@@ -2,13 +2,17 @@
 	<figure class="emb">
 	<a href="/">
 		<img id="cassiopeia" src="/images/photosmall.jpg">
-		<h1>schh<span style="opacity: 0.6;">h</span><span style="opacity: 0.3;">h</span></h1>
 	</a>
 
-	<nav>
-		<a class="lien carnet" href="/carnet">carnet</a>
-		<a class="lien real" href="/whatimade">things I made</a>
-		<a class="lien apropos" href="/#moi">about me</a>
-	</nav>
+	{% if page.en %}
+		<p>I am <strong>William Dorffer<br>~</strong> <a href="#"><strong>schoewilliam</strong></a>.</p>
+		<p>Living in Réunion Island, wandering on the floe, GNU/Linux lover, and a bit involved with Mozilla.</p>
+		<p>There wanders my <a href="/carnet"><strong>weblog</strong></a> (<a href="/flux.xml">RSS</a>). When I think out loud.</p>
+	{% else %}
+		<p>Je suis <strong>William Dorffer<br>~</strong> <a href="#"><strong>schoewilliam</strong></a>.</p>
+		<p>Habitant l'île de la Réunion, domicilié sur la Banquise, timide adorateur de GNU/Linux, et quelque peu obsédé par Mozilla.</p>
+		<p>Par ici traîne mon <a href="/carnet"><strong>carnet</strong></a> (<a href="/flux.xml">RSS</a>). Lorsque je pense tout haut.</p>
+	{% endif %}
+
 	</figure>
 </section>

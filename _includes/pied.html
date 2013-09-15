@@ -1,13 +1,11 @@
 <footer>
 	<div>
-		<div><span style="margin-right:5px;opacity:0.3;">William Dorffer.</span>
-		</div>
-		<div>
+		<div><strong style="font-size:110%;">Amis</strong>
 			{% for link in site.blogoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>
 			{% endfor %}
 		</div>
-		<div>
+		<div><strong style="font-size:110%;">liens</strong>
 			{% for link in site.linkoliste %}
 			<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>
 			{% endfor %}

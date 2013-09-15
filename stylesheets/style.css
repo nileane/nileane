@@ -1,20 +1,15 @@
 body {
     font: 11pt/1.5 "Feura Sans", Cantarell, sans-serif;
     margin: 0;
-    background-color: #2F2965;
-	animation: 200s infinite colorful;
-	-webkit-animation: 200s infinite colorful;
-}
-body.post {
-    background-color: #fff;
+    background: rgb(238, 238, 238);
 }
 @media screen and (min-width:750px) {
 	body {
 		font-size: 13pt;
 	}
 }
-a { text-decoration: none; color: #4E43C8; }
-article a { font-weight: bold; color: #4E43C8;}
+a { text-decoration: none; color: #1abc9c; }
+article a { font-weight: bold; color: #1abc9c;}
 p a:hover { text-decoration: underline; }
 
 pre, code {
@@ -73,85 +68,60 @@ blockquote {
 }
 
 section.index {
-    margin: 0 auto;
+    margin-top: 0;
     text-align: center;
 }
 section.index.home {
-	animation: 3s fondu;
-	-webkit-animation: 3s fondu;
+    margin-top: 10%;
 }
-section.index figure h1 {
-    font-weight: normal;
-    vertical-align: middle;
-    color: #fff;
-    font-size: 220%;
-    opacity: 1;
-}
-section.index.post {
-    margin-top: 30px;
-}
-section.index.post figure h1 {
-    font-size: 210%;
+section.index.home .emb {
+    max-width: 600px;
 }
 #cassiopeia {
-    margin: 20px 0 0;
+    margin: 50px 0 0;
     border-radius: 50%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 0;
     vertical-align: middle;
     width: 60px;
 }
-@media screen and (max-width:449px) {
-	section.index figure h1 {
-		margin: 10px 0 20px;
+section.index.home #cassiopeia {
+    margin: 0;
+}
+.index.home .emb p {
+    color: #333333;
+    font-style: normal;
+}
+@media screen and (max-width:849px) {
+	section.index {
+	    font-size: 110%;
+	}
+	.index.post .emb > p:nth-child(3) {
+	    display: none;
 	}
 }
-@media screen and (min-width:450px) {
-	section.index figure h1 {
-		display: inline-block;
+@media screen and (min-width:850px) {
+	section.index.post {
+	    display: inline-block;
+	    left: 0;
+	    width: 220px;
+	    padding-top: 80px;
+	    position: absolute;
+	    text-align: left;
+	    background: transparent;
 	}
-	section.index #cassiopeia {
-		margin: 0 20px 0 0;
+	#cassiopeia {
+	    width: 70px;
+	    margin: 0;
 	}
-}
-@media screen and (min-width:750px) {
-	section.index figure h1 {
-	        transition: all .3s;
-	        -webkit-transition: all .3s;
-	}
-	.index #cassiopeia {
-		transition: all .3s;
-		-webkit-transition: all .3s;
-		width: 70px;
-	}
-}
-section.index figure h1 small {
-    display: block;
-    font-size: 40%;
-    text-align: left;
-    color: rgb(153, 153, 153);
 }
 
 section.index figure.emb {
     padding: 0;
     display: inline-block;
     position: relative;
-}
-@media screen and (min-height:300px) {
-	section.index figure.emb,
-	section.index.post figure.emb {
-		margin-top: 25px;
-	}
-}
-@media screen and (min-height:520px) {
-	section.index figure.emb {
-		margin-top: 100px;
-	}
-}
-@media screen and (min-height:600px) {
-	section.index figure.emb {
-		margin-top: 200px;
-	}
+    margin: 20px;
+    color: #333;
 }
 @media screen and (min-width:750px) {
 	section.index figure.emb {	
@@ -164,9 +134,10 @@ section.index figure.emb {
     position: relative;
 }
 section.index nav a {
-	margin: 0 4px;
+	margin: 0 2px;
 	display: inline-block;
 	color: rgba(255, 255, 255, 0.3);
+	text-shadow: 0 2px rgba(0, 0, 0, 0.2);
 	font-size: 110%;
 	transition: all .2s;
 	-webkit-transition: all .2s;
@@ -174,6 +145,18 @@ section.index nav a {
 section.index nav a:hover {
 	color: #fff;
 }
+.emb p {
+    font-size: 90%;
+    font-style: italic;
+}
+@media screen and (min-width:850px) {
+	section.index nav a {
+	    margin: 5px 0;
+	    font-size: 130%;
+	    display: block;
+	}
+}
+
 section.index #apropos {
 	display: none;
 }
@@ -341,53 +324,66 @@ section.index #apropos h3 {
 
 /* footer */
 
-body > footer {
-    max-width: 800px;
-    margin: 60px auto 0;
-    padding: 0 10px 20px;
-    text-align:center;
-    color: #ccc;
+footer {
+    color: #333333;
+    margin: 0 auto;
+    font-size: 90%;
+    max-width: 750px;
+    padding: 30px 25px;
+    text-align: center;
 }
-@media screen and (min-width:830px) {
-    body > footer {
-	padding: 0 0 20px;
-    }
+@media screen and (min-width:850px) {
+	footer {
+	    padding-left: 230px;
+	}
 }
-body > footer div {
-    font-size: 11pt;
+@media screen and (min-width:1250px) {
+	footer {
+	    padding-left: 0;
+	}
 }
 footer div a {
-    margin-right:5px;
-    color: rgba(255, 255, 255, 0.7);
+    margin-right: 5px;
 }
-body > footer div a:hover {
+footer div a:hover {
     text-decoration: underline;
 }
-body > footer div div {
-    margin: 0;
-}
-
-#moi footer {
-    font-size: 11pt;
-    margin: 25px 0 10px;
-}
-#moi footer a {
-    color: inherit;
+footer div > strong {
+    margin: 0 4px 0 0;
 }
 /* fin footer */
 
 
 /* article */
 
-
 section.article {
-    background-color: #fff;
+    background-color: #FFFFFF;
+    display: block;
+    margin: 0 auto;
     padding: 30px 0;
+    vertical-align: top;
 }
 section.comments {
     background-color: #eee;
     text-align: center;
     padding: 30px 0;
+}
+@media screen and (min-width:850px) {
+	section.article {
+	    padding-left: 230px;
+	    padding-top: 80px;
+	}
+	section.comments {
+	    padding-left: 230px;
+	}
+}
+@media screen and (min-width:1250px) {
+	section.article {
+	    padding-left: 0;
+	}
+	section.comments {
+	    padding-left: 0;
+	}
 }
 article,
 div#comments {

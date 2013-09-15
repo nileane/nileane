@@ -1,5 +1,5 @@
 safe: false
-port: 4500
+port: 4000
 base-url: /
 url: http://schoewilliam.legtux.org
 
@@ -31,6 +31,8 @@ blogoliste:
   url: http://identitools.fr
 - text: Postblue
   url: http://postblue.info
+- text: Vinilox
+  url: http://vinilox.eu
 
 linkoliste:
 - text: <strong>Legtux</strong>
