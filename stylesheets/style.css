@@ -225,7 +225,7 @@ section.index #apropos h3 {
 	font-size: 110%;
 }
 #archives div li > a:link {
-	color: #4E43C8;
+	color:#1abc9c;
 }
 #archives div li > a.serif {
 	font-style: italic;
