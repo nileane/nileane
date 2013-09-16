@@ -564,7 +564,9 @@ blockquote {
     margin: 0;
     padding: 30px 0;
 }
-
+.comment.none {
+    display: none;
+}
 .comment:first-of-type {
     border-top: 0 none;
     padding-top: 0;
