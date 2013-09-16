@@ -19,10 +19,9 @@
   </head>
   
   <body{% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
-    {% include entete.html %}
 
     {{ content }}
 
-    {% include pied.html %}
+    {% include entete.html %}
   </body>
 </html>

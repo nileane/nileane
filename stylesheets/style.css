@@ -8,8 +8,8 @@ body {
 		font-size: 13pt;
 	}
 }
-a { text-decoration: none; color: #1abc9c; }
-article a { font-weight: bold; color: #1abc9c;}
+a { text-decoration: none; color: #8e44ad; }
+article a { font-weight: bold;}
 p a:hover { text-decoration: underline; }
 
 pre, code {
@@ -78,11 +78,9 @@ section.index.home .emb {
     max-width: 600px;
 }
 #cassiopeia {
-    margin: 50px 0 0;
+    margin: 10px 20px 0 0;
     border-radius: 50%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     border: 0;
-    vertical-align: middle;
     width: 60px;
 }
 section.index.home #cassiopeia {
@@ -92,18 +90,32 @@ section.index.home #cassiopeia {
     color: #333333;
     font-style: normal;
 }
+.emb > div {
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+}
+@media screen and (max-width:749px) {
+	section.index {
+	    font-size: 110%;
+	}
+}
 @media screen and (max-width:849px) {
 	section.index {
 	    font-size: 110%;
 	}
-	.index.post .emb > p:nth-child(3) {
+	section.index hr {
 	    display: none;
+	}
+	.emb > div {
+	    max-width: 70%;
 	}
 }
 @media screen and (min-width:850px) {
 	section.index.post {
 	    display: inline-block;
 	    left: 0;
+	    top: 0;
 	    width: 220px;
 	    padding-top: 80px;
 	    position: absolute;
@@ -145,8 +157,14 @@ section.index nav a {
 section.index nav a:hover {
 	color: #fff;
 }
+
+.emb p:first-of-type {
+    color: #333333;
+    font-size: 100%;
+}
 .emb p {
-    font-size: 90%;
+    color: #666665;
+    font-size: 80%;
     font-style: italic;
 }
 @media screen and (min-width:850px) {
@@ -327,7 +345,7 @@ section.index #apropos h3 {
 footer {
     color: #333333;
     margin: 0 auto;
-    font-size: 90%;
+    font-size: 80%;
     max-width: 750px;
     padding: 30px 25px;
     text-align: center;
@@ -364,6 +382,7 @@ section.article {
     vertical-align: top;
 }
 section.comments {
+    background-color: #fff;
     text-align: center;
     padding: 30px 0;
 }
@@ -392,7 +411,7 @@ div#comments {
     color: #333332;
 }
 
-time.top {
+.top {
     display: block;
     text-align: center;
     font-size: 90%;
@@ -568,8 +587,6 @@ blockquote {
     display: none !important;
 }
 .comment:first-of-type {
-    border-top: 0 none;
-    padding-top: 0;
 }
 
 .comment_user {
