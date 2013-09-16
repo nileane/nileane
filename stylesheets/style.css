@@ -647,7 +647,6 @@ blockquote {
     display: block;
     line-height: 1.6;
     margin-top: 20px;
-    text-align: center;
 }
 
 .comment_recaptcha > input {
