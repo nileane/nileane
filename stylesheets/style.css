@@ -364,7 +364,6 @@ section.article {
     vertical-align: top;
 }
 section.comments {
-    background-color: #eee;
     text-align: center;
     padding: 30px 0;
 }
@@ -557,27 +556,28 @@ blockquote {
 }
 
 .comment {
+    border-top: 3px solid rgba(0, 0, 0, 0.1);
     color: #727272;
-    margin: 0 0 30px;
+    margin: 0;
+    padding: 30px 0;
 }
-.comment:last-child {
-    padding-bottom: 25px;
+
+.comment:first-of-type {
+    border-top: 0 none;
+    padding-top: 0;
 }
 
 .comment_user {
+    color: #000000;
     display: block;
+    font-size: 120%;
     font-weight: bold;
-    text-align: right;
+    text-align: left;
 }
 
 .comment_message {
-    background-color: rgba(0, 0, 0, 0.06);
-    border-radius: 3px 3px 3px 3px;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1);
     color: #333333;
-    display: block;
     line-height: 1.6;
-    padding: 10px 15px;
     text-align: left;
 }
 
