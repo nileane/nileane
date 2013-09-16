@@ -546,6 +546,9 @@ blockquote {
 
 /* commentaires */
 
+#comments div {
+    text-align:left;
+}
 .comments_header {
     margin: 0;
     font-family: "Feura Sans", Cantarell, sans-serif;
@@ -620,7 +623,6 @@ blockquote {
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     padding: 4px 10px;
-    margin-left: 10px;
 }
 
 .comment_inputmessage {
@@ -645,6 +647,7 @@ blockquote {
     display: block;
     line-height: 1.6;
     margin-top: 20px;
+    text-align: center;
 }
 
 .comment_recaptcha > input {
