@@ -559,7 +559,7 @@ blockquote {
 }
 
 .comment {
-    border-top: 3px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     color: #727272;
     margin: 0;
     padding: 30px 0;
