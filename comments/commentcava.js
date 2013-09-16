@@ -27,7 +27,7 @@ $(function() {
 			}
 		}
 		if (json.length == 0) {
-			$('#comments').html('<div class="comment" style="font-size:200%;line-height:0.5;display:none">~</div>');
+			$('#comments').html('<div class="comment none">~</div>');
 		}
 	},
 
