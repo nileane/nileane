@@ -181,6 +181,9 @@ section.index nav a:hover {
 	    font-size: 130%;
 	    display: block;
 	}
+	.emb p:first-of-type {
+	    margin-top: 0;
+	}
 }
 
 section.index #apropos {
