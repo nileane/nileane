@@ -8,6 +8,11 @@ body {
 		font-size: 13pt;
 	}
 }
+@media screen and (min-width:850px) {
+	body.home section.article {
+		background-color:transparent;
+	}
+}
 a { text-decoration: none; color: #8e44ad; }
 article a { font-weight: bold;}
 p a:hover { text-decoration: underline; }
@@ -71,14 +76,14 @@ section.index {
     margin-top: 0;
     text-align: center;
 }
+
 section.index.home {
-    margin-top: 10%;
-}
-section.index.home .emb {
-    max-width: 600px;
+    color: #444444;
+    font-size: 160%;
+    text-align: left;
 }
 #cassiopeia {
-    margin: 10px 20px 0 0;
+    margin: 10px 0 0;
     border-radius: 50%;
     border: 0;
     width: 60px;
@@ -108,7 +113,10 @@ section.index.home #cassiopeia {
 	    display: none;
 	}
 	.emb > div {
-	    max-width: 70%;
+	    max-width: 55%;
+	}
+	.emb > div:nth-child(2) {
+	    margin-left: 15px;
 	}
 }
 @media screen and (min-width:850px) {
@@ -240,7 +248,7 @@ section.index #apropos h3 {
 	border: 0;
 	box-shadow: 0 0;
 	text-align: left;
-	font-size: 110%;
+	font-size: 115%;
 }
 #archives div li > a:link {
 	color:#1abc9c;
@@ -259,10 +267,12 @@ section.index #apropos h3 {
 	font-size: 80%;
 	font-weight: normal;
 }
-@media screen and (min-width:450px) {
+@media screen and (min-width:600px) {
 	#archives a time {
-		float: right;
-		display: inline;
+	    display: inline-block;
+	    margin-right: 10px;
+	    min-width: 130px;
+	    text-align: right;
 	}
 }
 
@@ -389,7 +399,7 @@ section.comments {
 @media screen and (min-width:850px) {
 	section.article {
 	    padding-left: 230px;
-	    padding-top: 80px;
+	    padding-top: 100px;
 	}
 	section.comments {
 	    padding-left: 230px;
@@ -421,6 +431,11 @@ div#comments {
 }
 .serif time.top {
     color: #888;
+}
+@media screen and (min-width:850px) {
+    .top.schh {
+	display: none;
+    }
 }
 
 article h1 {
