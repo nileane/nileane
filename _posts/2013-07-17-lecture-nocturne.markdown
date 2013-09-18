@@ -1,9 +1,10 @@
 ---
-layout: postserif
+layout: post
 published: true
 comments: true
 title: "Lecture nocturne."
 centered: true
+serif: true
 ---
 Cette nuit fuit la pluie et suit cette poursuite  
 Une poursuite poursuivie du Temps où j'ose lire  

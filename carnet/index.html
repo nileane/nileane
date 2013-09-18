@@ -9,7 +9,7 @@ role: index
 	<ul>
    {% for post in site.posts %}
 	    <li>
-		<a {% if post.layout == "postserif" %}class="serif"{% endif %} href="{{ post.url }}">
+		<a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
 		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
 		{{ post.title }}
 		{% if post.link %}

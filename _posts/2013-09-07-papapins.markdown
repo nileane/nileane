@@ -1,8 +1,9 @@
 ---
-layout: postserif
+layout: post
 published: true
 comments: true
 title: Papapins
+serif: true
 centered: true
 ---
 Oh papapin voilà enfin  

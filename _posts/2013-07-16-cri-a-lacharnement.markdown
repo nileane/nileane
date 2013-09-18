@@ -1,7 +1,8 @@
 ---
-layout: postserif
+layout: post
 published: true
 comments: true
+serif: true
 title: "Cri à l'acharnement."
 ---
 La consistante, constituante de ce vacarme acharné à modéliser le Temps,  
