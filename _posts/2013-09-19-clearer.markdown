@@ -1,0 +1,22 @@
+---
+layout: post
+published: true
+comments: true
+en: true
+title: "Clearer."
+---
+> « Uh, this is black on white. », a friend said.
+
+Said this way, doesn't seem really exciting, right. I'd love to discuss a bit about the evolution my weblog had.
+
+But no matter how it looked, after all. The thing is that today, I threw off colors. Centered everything, cleared both header and footer. What was left then ? The content.
+
+Please, show us your content.
+
+Let's admit it, I went the extreme way. But that's exactly what I wanted. I wanted you to figure out that, at first sight, I passed by to write down words.
+
+--
+
+> Words are an interface.
+
+An interface between you and the writer. Please, writers of any sort, remove any other interface which add layers that keep you away from the ones you want to reach. Think of the web as a book, a paper. Make it clean, beautiful, and pleasant. I would then spend hours and hours reading you.

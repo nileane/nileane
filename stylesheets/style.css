@@ -522,9 +522,6 @@ pre {
     -o-hyphens: auto;
     -ms-hyphens: auto;
 }
-.serif #post {
-    font-size: 135%;
-}
 .serif.centered #post {
     text-align: center;
 }
@@ -581,16 +578,6 @@ a.bouton {
 }
 a.bouton:hover {
     text-decoration: underline;
-}
-blockquote p:last-child:after {
-    content: "»";
-    font-style: normal;
-    margin-left: 10px;
-}
-blockquote p:first-child:before {
-    content: "«";
-    font-style: normal;
-    margin-right: 10px;
 }
 blockquote {
     font-style: italic;
