@@ -215,10 +215,7 @@ section.index #apropos h3 {
     margin: 0 auto;
 }
 #archives h2 {
-    margin: 0px 0px 20px;
-    color: rgb(34, 34, 34);
-    font-weight: bold;
-    font-size: 160%;
+	font-weight: bold;
 }
 #archives p {
 	color: #aaa;
@@ -245,7 +242,6 @@ section.index #apropos h3 {
 }
 #archives div li > a {
 	display: block;
-	color: #333;
 	font-weight: bold;
 	padding: 10px 20px;
 	border: 0;
@@ -432,6 +428,7 @@ div#comments {
     max-width: 200px;
     margin: 0 auto;
 }
+.top a { color: #1abc9c; }
 .serif time.top {
     color: #888;
 }

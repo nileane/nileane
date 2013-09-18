@@ -17,6 +17,15 @@ pygments:    true
 markdown:    maruku
 permalink:   date
 
+nodes:
+- text: Arch Linux Forums
+  url: https://bbs.archlinux.org/profile.php?id=55538
+- text: DeviantArt
+  url: http://schoewilliam.deviantart.com/
+- text: Mozillians
+  url: https://mozillians.org/en-US/u/schoewilliam/
+- text: StatusNET
+  url: https://status.vinilox.eu/schoewilliam
 
 blogoliste:
 - text: BlogiGor
@@ -35,7 +44,7 @@ blogoliste:
   url: http://vinilox.eu
 
 linkoliste:
-- text: <strong>Legtux</strong>
+- text: Legtux
   url: http://legtux.org/
 - text: mart-e
   url: http://mart-e.be
