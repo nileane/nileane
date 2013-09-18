@@ -224,6 +224,9 @@ section.index #apropos h3 {
     max-width: 850px;
     margin: 0 auto;
 }
+body.indexen #archives li a:not(.en) {
+	opacity: 0.45;
+}
 #archives h2 {
 	font-weight: bold;
 }

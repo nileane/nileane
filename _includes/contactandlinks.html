@@ -1,0 +1,28 @@
+<section id="archives">
+
+		<div><h2>{% if page.en %}Where you'll find me…{% else %}Là où vous me trouverez …{% endif %}</h2>
+			<ul>
+			{% for link in site.nodes %}
+			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
+			{% endfor %}
+			<li><a href="#"><span style="color:#333">Email</span><br>schoewilliam[at]legtux[dot]org</a></li>
+			</ul>
+		</div>
+
+		<div><h2>{% if page.en %}Friends{% else %}Amis{% endif %}</h2>
+			<ul>
+			{% for link in site.blogoliste %}
+			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+
+		<div><h2>{% if page.en %}Bookmarks{% else %}Liens{% endif %}</h2>
+			<ul>
+			{% for link in site.linkoliste %}
+			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
+			{% endfor %}
+			</ul>
+		</div>
+
+</section>
