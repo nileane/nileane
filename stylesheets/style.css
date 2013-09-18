@@ -101,7 +101,6 @@ section.index.home #cassiopeia {
 }
 .emb > div {
     display: inline-block;
-    text-align: left;
     vertical-align: top;
 }
 @media screen and (max-width:749px) {
@@ -118,6 +117,7 @@ section.index.home #cassiopeia {
 	}
 	.emb > div {
 	    max-width: 55%;
+	    text-align: left;
 	}
 	.emb > div:nth-child(2) {
 	    margin-left: 15px;
@@ -131,12 +131,18 @@ section.index.home #cassiopeia {
 	    width: 220px;
 	    padding-top: 80px;
 	    position: absolute;
-	    text-align: left;
+	    text-align: right;
 	    background: transparent;
 	}
 	#cassiopeia {
 	    width: 70px;
 	    margin: 0;
+	}
+}
+@media screen and (min-width:1300px) {
+	section.index.post {
+	    margin-left: -640px;
+	    left:50%;
 	}
 }
 
@@ -368,7 +374,7 @@ footer {
 	    padding-left: 230px;
 	}
 }
-@media screen and (min-width:1250px) {
+@media screen and (min-width:1300px) {
 	footer {
 	    padding-left: 0;
 	}
@@ -402,6 +408,11 @@ section.comments {
     text-align: center;
     padding: 30px 0;
 }
+@media screen and (min-width:850px) and (max-width:1299px) {
+	article, div#comments, .top {
+	    margin: 0 !important;
+	}
+}
 @media screen and (min-width:850px) {
 	section.article {
 	    padding-left: 230px;
@@ -411,7 +422,7 @@ section.comments {
 	    padding-left: 230px;
 	}
 }
-@media screen and (min-width:1250px) {
+@media screen and (min-width:1300px) {
 	section.article {
 	    padding-left: 0;
 	}
