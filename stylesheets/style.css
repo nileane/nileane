@@ -1,7 +1,7 @@
 body {
     font: 11pt/1.5 "Feura Sans", Cantarell, sans-serif;
     margin: 0;
-    background: url(/images/noise.png) repeat rgb(238, 238, 238);
+    background: url(/images/noise.png) repeat #eee;
 }
 @media screen and (min-width:750px) {
 	body {
@@ -9,6 +9,9 @@ body {
 	}
 }
 @media screen and (min-width:850px) {
+	body {
+	    background: url(/images/noise.png) repeat #fff;
+	}
 	body.home section.article {
 		background: none;
 	}
