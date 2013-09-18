@@ -3,7 +3,6 @@ layout: postserif
 published: true
 comments: true
 title: "Cri à l'acharnement."
-centered: true
 ---
 La consistante, constituante de ce vacarme acharné à modéliser le Temps,  
 Pénètre la Constitution d'un *état* malheureux bien constipant.  
