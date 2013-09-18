@@ -184,7 +184,7 @@ section.index nav a:hover {
     color: #666665;
     font-size: 80%;
 }
-.emb p:last-of-type {
+.emb p:nth-of-type(3) {
     font-style: italic;
 }
 @media screen and (min-width:850px) {
