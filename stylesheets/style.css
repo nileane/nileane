@@ -1,7 +1,7 @@
 body {
     font: 11pt/1.5 "Feura Sans", Cantarell, sans-serif;
     margin: 0;
-    background: rgb(238, 238, 238);
+    background: url(/images/noise.png) repeat rgb(238, 238, 238);
 }
 @media screen and (min-width:750px) {
 	body {
@@ -10,7 +10,7 @@ body {
 }
 @media screen and (min-width:850px) {
 	body.home section.article {
-		background-color:transparent;
+		background: none;
 	}
 }
 a { text-decoration: none; color: #8e44ad; }
@@ -18,9 +18,10 @@ article a { font-weight: bold;}
 p a:hover { text-decoration: underline; }
 
 pre, code {
-    background-color: #333;
-    color: #eee;
+    background-color: #FAF8F2;
+    color: #777;
     border-radius: 2px;
+    font-size: 90%;
 }
 
 code {
@@ -383,15 +384,18 @@ footer div > strong {
 
 /* article */
 
+section.article,
+section.comments {
+    background: url(/images/noise.png) repeat #fff;
+}
 section.article {
-    background-color: #FFFFFF;
+    background: url(/images/noise.png) repeat #fff;
     display: block;
     margin: 0 auto;
     padding: 30px 0;
     vertical-align: top;
 }
 section.comments {
-    background-color: #fff;
     text-align: center;
     padding: 30px 0;
 }
@@ -492,7 +496,7 @@ pre:hover {
 
 pre {
     overflow-x: hidden;
-    padding: 10px;
+    padding: 30px;
 }
 
 #post {
