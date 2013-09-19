@@ -6,9 +6,9 @@ bodyclass: post
 <section class="article {% if page.serif %}serif {%  if page.centered == true %}centered{% endif %}{% endif %}">
 <span class="top schh" style="font-weight: bold; font-size: 120%;">~<a href="/">schoewilliam</a></span>
 <hr class="top schh" style="margin: 10px auto 30px; max-width: 60px;">
+<article>
 <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{% if page.en %}{{ page.date | date_to_long_string }}{% else %}
 {{ page.date | localize: ":medium" }}{% endif %}</time>
-<article>
 
 {% if page.link %}
 <hgroup>
