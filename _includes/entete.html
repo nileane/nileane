@@ -7,16 +7,19 @@
 	   </div>
 
 	   <div>
+			<p><strong>William Dorffer</strong></p>
 		{% if page.en %}
-			<p><strong>William Dorffer</strong>, schoewilliam.</p>
-			<p>Living in Réunion Island, wandering on the floe, GNU/Linux lover, and a bit involved with Mozilla.</p>
-			{% if page.role == "home" %} {% else %}<hr style="margin:10px 0 10px auto;"><p>There wanders my <a href="/weblog"><strong>weblog</strong></a> (<a href="/flux.xml">RSS</a>). When I think out loud.
-			<br><a href="/en/links.html">Contact and links</a>.</p>{% endif %}
+			<p>I am <a href="/en"><strong>schoewilliam</strong></a>. Wandering on the floe, supporting GNU things, and also a bit involved with Mozilla. <em>On <a href="/weblog">this weblog</a> (<a href="/flux.xml">RSS</a>) I write thoughts</em>.</p>
+			{% if page.role != "home" %}
+				<hr style="margin:10px 0 10px auto;">
+				<p><a href="/en/links.html">Contact and links</a>.</p>
+			{% endif %}
 		{% else %}
-			<p><strong>William Dorffer</strong>, schoewilliam.</p>
-			<p>Habitant l'île de la Réunion, domicilié sur la Banquise, timide adorateur de GNU/Linux, et quelque peu obsédé par Mozilla.</p>
-			{% if page.role == "home" %} {% else %}<hr style="margin:10px 0 10px auto;"><p>Par ici traîne mon <a href="/carnet"><strong>carnet</strong></a> (<a href="/flux.xml">RSS</a>). Lorsque je pense tout haut.
-			<br><a href="/liens.html">Contact et liens</a>.</p>{% endif %}
+			<p>Je suis <a href="/"><strong>schoewilliam</strong></a>. Vagabondant sur la Banquise, défenseur GNU, et quelque peu Mozillien. <em>Sur <a href="/carnet">ce carnet</a> (<a href="/flux.xml">RSS</a>) s'écrivent mes pensées</em>.</p>
+			{% if page.role != "home" %}
+				<hr style="margin:10px 0 10px auto;">
+				<p><a href="/liens.html">Contact et liens</a>.</p>
+			{% endif %}
 		{% endif %}
 	    </div>
 
