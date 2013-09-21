@@ -179,6 +179,7 @@ section.index nav a:hover {
 .emb p:first-of-type {
     color: #333333;
     font-size: 100%;
+    font-weight: bold;
 }
 .emb p {
     color: #666665;
@@ -194,7 +195,10 @@ section.index nav a:hover {
 	    display: block;
 	}
 	.emb p:first-of-type {
-	    margin-top: 0;
+	    margin: 0;
+	}
+	.emb p:nth-of-type(2) {
+	    margin-top:0;
 	}
 }
 
