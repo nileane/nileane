@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: Au fil du retour.
+title: Au fil du retour #1 : le Fil.
 serif: true
 ---
 Au fil du retour, je constate que ma vie s'agrège en une multitude de petits points vaniteux. Je viens de mourir. En fait, je viens de croire que je mourrais. Mais voilà ce fil. Ce retour. Non je ne raconterai pas le point de cette « mort ». Pas intéressant. Rien comparé à ce qui vient. Rien comparé à la destination de ce grappin composé sous la forme d'un fil. Au fil du retour, j'admire ma vie. Voici ma dernière naissance. Voici la dernière fois que je vis. Car je vivrai toujours. C'est lui qui me l'a dit.  
