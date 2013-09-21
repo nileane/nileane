@@ -128,7 +128,7 @@ section.index.home #cassiopeia {
 	    display: inline-block;
 	    left: 0;
 	    top: 0;
-	    width: 220px;
+	    width: 180px;
 	    padding-top: 80px;
 	    position: absolute;
 	    text-align: right;
@@ -141,7 +141,7 @@ section.index.home #cassiopeia {
 }
 @media screen and (min-width:1300px) {
 	section.index.post {
-	    margin-left: -640px;
+	    margin-left: -600px;
 	    left:50%;
 	}
 }
@@ -321,7 +321,7 @@ section.comments {
 }
 @media screen and (min-width:850px) {
 	section.article {
-	    padding-left: 230px;
+	    padding-left: 200px;
 	    padding-top: 100px;
 	}
 	section.comments {
