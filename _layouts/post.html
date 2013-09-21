@@ -10,15 +10,15 @@ bodyclass: post
 <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{% if page.en %}{{ page.date | date_to_long_string }}{% else %}
 {{ page.date | localize: ":medium" }}{% endif %}</time>
 
+<hgroup>
 {% if page.link %}
-<hgroup>
 	<h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
-</hgroup>
+{% elsif page.series %}
+	<h1><a href="{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
 {% else %}
-<hgroup>
 	<h1>{{ page.title }}</h1>
-</hgroup>
 {% endif %}
+</hgroup>
 
 <div id="post"{% if page.link %} class=link{% endif %}>
 	{{ content }}

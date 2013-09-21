@@ -3,9 +3,11 @@ layout: post
 published: true
 comments: true
 title: "Petites de mes nouvelles : Boot2Gecko, StatusNet …"
-tags:
-- nouvelles
-- B2G
+series:
+  name: "Petites de mes nouvelles"
+  episode: "Boot2Gecko, StatusNet …"
+  index: 1
+  url: "/carnet/petitesdemesnouvelles"
 ---
 *Le ciel est clair, et les petits changements ne se bousculent pas. Maaaais, voilà tout de même une petite mise à jour avant la régularité retrouvée de l'été prochain.*
 

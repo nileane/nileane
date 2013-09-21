@@ -1,8 +1,10 @@
 <div id="archives">
 	{% if page.en %}
 		<p style="text-align: center; padding: 0;"><a href="./" style="color:#333">en</a> / <a href="/carnet" style="font-weight:normal;">fr</a></p>
+		<p style="padding: 0 20px;">Series : {% for link in site.series %}<a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %} </p>
 	{% else %}
 		<p style="text-align: center; padding: 0;"><a href="/weblog" style="font-weight:normal;">en</a> / <a href="./" style="color:#333">fr</a></p>
+		<p style="padding: 0 20px;">Billets épisodés : {% for link in site.series %}<a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %} </p>
 	{% endif %}
    <div>
 	<ul>
@@ -11,12 +13,6 @@
 		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
 		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
 		{{ post.title }}
-		{% if post.link %}
-	  		<span class="label black">{% if page.en %}bookmark{% else %}marque-page{% endif %}</span>
-		{% endif %}
-		{% if post.en %}
-	  		<span class="label grey">en</span>
-		{% endif %}
 		</a>
 	   </li>
    {% endfor %}

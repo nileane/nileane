@@ -16,7 +16,7 @@ body {
 		background: none;
 	}
 }
-a { text-decoration: none; color: #1abc9c; }
+a { text-decoration: none; color: #27ae60; }
 article a { font-weight: bold;}
 p a:hover { text-decoration: underline; }
 
@@ -237,7 +237,6 @@ body.indexen #archives li a:not(.en) {
 	font-weight: bold;
 }
 #archives p {
-	color: #aaa;
 	padding: 20px;
 	text-align: left;
 }
@@ -249,6 +248,12 @@ body.indexen #archives li a:not(.en) {
 	padding: 0 8px;
 	color: #fff;
 	font-size: 60%;
+}
+#archives .desc {
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 110%;
+    margin: 20px;
 }
 #archives div ul {
 	margin: 0;
@@ -263,8 +268,6 @@ body.indexen #archives li a:not(.en) {
 	display: block;
 	font-weight: bold;
 	padding: 10px 20px;
-	border: 0;
-	box-shadow: 0 0;
 	text-align: left;
 	font-size: 115%;
 }
@@ -275,9 +278,8 @@ body.indexen #archives li a:not(.en) {
 	font-style: italic;
 }
 #archives div li > a:hover {
-	background-color: #eee;
+	background-color: #ededed;
 	border-radius: 3px;
-	box-shadow: 0 2px rgba(0, 0, 0, 0.1);
 }
 #archives a time {
 	color: #bbb;
@@ -288,9 +290,8 @@ body.indexen #archives li a:not(.en) {
 @media screen and (min-width:600px) {
 	#archives a time {
 	    display: inline-block;
-	    margin-right: 10px;
-	    min-width: 130px;
-	    text-align: right;
+	    margin-left:10px;
+	    float:right;
 	}
 }
 
@@ -348,16 +349,13 @@ div#comments {
     display: block;
     text-align: center;
     font-size: 90%;
-    color: #bbb;
+    color: #888;
     max-width: 200px;
     margin: 0 auto;
 }
-.serif time.top {
-    color: #888;
-}
 @media screen and (min-width:850px) {
     .top.schh {
-	display: none;
+    	display: none;
     }
 }
 
@@ -368,8 +366,10 @@ article h1 {
     font-weight: bold;
     text-align: center;
 }
-.serif article h1 {
-     font-style: italic;
+@media screen and (min-width:850px) {
+    article h1 {
+        text-align: left;
+    }
 }
 .serif.centered article h1,
 .serif.centered #post {

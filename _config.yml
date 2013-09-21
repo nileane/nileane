@@ -65,6 +65,12 @@ linkoliste:
 - text: Source, Radio Campus Bruxelles
   url: http://src.radiocampus.be/
 
+series:
+- text: Au Fil du retour
+  url: /carnet/aufilduretour
+- text: Petites de mes nouvelles
+  url: /carnet/petitesdemesnouvelles
+
 maruku:
   use_tex:    false
   use_divs:   false

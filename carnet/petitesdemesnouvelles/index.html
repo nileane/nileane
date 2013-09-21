@@ -1,0 +1,22 @@
+---
+layout: page
+title: "Petites de mes nouvelles"
+schh: true
+role: index
+---
+<div id="archives">
+   <div>
+	<ul>
+   {% for post in site.posts %}
+	{% if post.series.name == "Petites de mes nouvelles" %}
+	    <li>
+		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
+		{{ post.title }}
+		</a>
+	   </li>
+	{% endif %}
+   {% endfor %}
+	</ul>
+   </div>
+</div>

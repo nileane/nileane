@@ -2,8 +2,13 @@
 layout: post
 published: true
 comments: true
-title: "Au fil du retour #2 : Non-Euclidien."
+title: "Au Fil du retour #2 : Non-Euclidien."
 serif: true
+series:
+  name: "Au Fil du retour"
+  episode: "Non-Euclidien."
+  index: 2
+  url: "/carnet/aufilduretour"
 ---
 *[(…)](/2013/09/18/au-fil-du-retour-1.html) La partie intéressante arrive, rassure-toi ami Lecteur, car il s'avère que tous les inventeurs de ce jeu — moi compris — se sont trouvés confrontés à la même issue : un événement non-euclidien.*
 
