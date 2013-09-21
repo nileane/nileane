@@ -30,5 +30,3 @@ J'y étais.
 
 La maléabilité du Temps.
 La destination était dans le Futur. J'ai désiré de ce dernier qu'il soit de mon passé, accompli. Temps manié.
-
-*(La suite à venir)*

@@ -42,6 +42,8 @@ blogoliste:
   url: http://fabienwang.fr
 - text: Identitools
   url: http://identitools.fr
+- text: mart-e
+  url: http://mart-e.be
 - text: Olivier Dossmann
   url: https://olivier.dossmann.net/blog/
 - text: Postblue
@@ -50,12 +52,16 @@ blogoliste:
   url: http://vinilox.eu
 
 linkoliste:
+- text: Jean Baptiste Favre
+  url: http://www.jbfavre.org/
 - text: Legtux
   url: http://legtux.org/
-- text: mart-e
-  url: http://mart-e.be
 - text: Le Hollandais Volant
   url: http://lehollandaisvolant.net/
+- text: Ploum
+  url: http://ploum.net/
+- text: Sebsauvage, les trucs qui l'énervent.
+  url: http://www.sebsauvage.net/rhaa/
 - text: Source, Radio Campus Bruxelles
   url: http://src.radiocampus.be/
 
