@@ -29,7 +29,7 @@ Avant cela, retournons-y sur mon Fil. J'avais l'impression que le voyage durait 
 > — D'accord.  
 > — C'est tout. »
 
-Sa voix n'aura plus raisonné durant le voyage. C'en était plus qu'assez. Je suis devenu, pour la première fois, impatient. J'ai hurlé. Je veux y être !
+Sa voix n'aura plus résonné durant le voyage. C'en était plus qu'assez. Je suis devenu, pour la première fois, impatient. J'ai hurlé. Je veux y être !
 
 J'y étais.
 
