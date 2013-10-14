@@ -9,14 +9,23 @@
 	   <div>
 			<p><strong>William Dorffer</strong></p>
 		{% if page.en %}
-			<p>I am <a href="/en"><strong>schoewilliam</strong></a>. Wandering on the floe, supporting GNU things, and also a bit involved with Mozilla. <br><em>On <a href="/weblog">this weblog</a> (<a href="/flux.xml">RSS</a>) I write thoughts</em>.</p>
-			{% if page.role != "home" %}
-				<p><a href="/en/links.html">Contact and links</a>.</p>
+			<p>I am <a href="/en"><strong>schoewilliam</strong></a>. Wandering on the floe, supporting GNU things, and also a bit involved with Mozilla.</p>
+			<p><a href="/weblog">Weblog</a> (<a href="/flux.xml">RSS</a>).</p>
+			<p><a href="/en/links.html">Contact & links</a>.</p>
+
+			{% if page.role == "home" %}
+				<p style="font-size:80%"><a href="/en" style="color:#bbb">en</a> / <a href="/">fr</a></p>
+			{% elsif page.role == "index" %}
+				<p style="font-size:80%"><a href="/weblog" style="color:#bbb">en</a> / <a href="/carnet">fr</a></p>
 			{% endif %}
 		{% else %}
-			<p>Je suis <a href="/"><strong>schoewilliam</strong></a>. Vagabondant sur la Banquise, défenseur GNU, et quelque peu Mozillien.<br><em>Sur <a href="/carnet">ce carnet</a> (<a href="/flux.xml">RSS</a>) s'écrivent mes pensées</em>.</p>
-			{% if page.role != "home" %}
-				<p><a href="/liens.html">Contact et liens</a>.</p>
+			<p>Je suis <a href="/"><strong>schoewilliam</strong></a>. Vagabondant sur la Banquise, défenseur GNU, et quelque peu Mozillien.
+			<p><a href="/carnet">Carnet</a> (<a href="/flux.xml">RSS</a>).</p>
+			<p><a href="/liens.html">Contact et liens</a>.</p>
+			{% if page.role == "home" %}
+				<p style="font-size:80%"><a href="/en">en</a> / <a href="/" style="color:#bbb">fr</a></p>
+			{% elsif page.role == "index" %}
+				<p style="font-size:80%"><a href="/weblog">en</a> / <a href="/carnet" style="color:#bbb">fr</a></p>
 			{% endif %}
 		{% endif %}
 	    </div>

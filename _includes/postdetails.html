@@ -1,0 +1,23 @@
+<section class="article {% if page.serif %}serif {%  if page.centered == true %}centered{% endif %}{% endif %}">
+	{% include schh.html %}
+<article>
+<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{% if page.en %}{{ page.date | date_to_long_string }}{% else %}
+{{ page.date | localize: ":medium" }}{% endif %}</time>
+
+<hgroup>
+{% if page.link %}
+	<h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
+{% elsif page.series %}
+	<h1><a href="{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
+{% else %}
+	<h1>{{ page.title }}</h1>
+{% endif %}
+</hgroup>
+
+<div id="post"{% if page.link %} class=link{% endif %}>
+	{{ content }}
+</div>
+
+</article>
+</section>
+
