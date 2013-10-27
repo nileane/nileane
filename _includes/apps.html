@@ -1,0 +1,55 @@
+<section id="archives">
+
+		<div>
+			<ul>
+			<li><a id="installselfoss" href="#">Install Selfoss</a></li>
+			<li><a id="installmusic" href="#">Install Music.Schh</a></li>
+			</ul>
+		</div>
+ 
+		<script>
+		(function(){
+		  function installselfoss(ev) {
+		    ev.preventDefault();
+		    // define the manifest URL
+		    var manifesto_url = "http://rss.schoewilliam.fr/manifest.webapp";
+		    // install the app
+		    var myappo = navigator.mozApps.install(manifesto_url);
+		    myappo.onsuccess = function(data) {
+		      // App is installed, remove button
+		      this.parentNode.removeChild(this);
+		    };
+		    myappo.onerror = function() {
+		      // App wasn't installed, info is in this.error.name
+		      console.log('Install failed, error: ' + this.error.name);
+		     };
+		  };
+		  // get a reference to the button and call installselfoss() on click
+		  var buttono = document.getElementById('installselfoss');
+		  buttono.addEventListener('click', installselfoss, false);
+		})();
+		</script>
+
+		<script>
+		(function(){
+		  function installmusic(ev) {
+		    ev.preventDefault();
+		    // define the manifest URL
+		    var manifestt_url = "http://music.schoewilliam.fr/manifest.webapp";
+		    // install the app
+		    var myappt = navigator.mozApps.install(manifestt_url);
+		    myappt.onsuccess = function(data) {
+		      // App is installed, remove button
+		      this.parentNode.removeChild(this);
+		    };
+		    myappt.onerror = function() {
+		      // App wasn't installed, info is in this.error.name
+		      console.log('Install failed, error: ' + this.error.name);
+		     };
+		  };
+		  // get a reference to the button and call installselfoss() on click
+		  var buttont = document.getElementById('installmusic');
+		  buttont.addEventListener('click', installmusic, false);
+		})();
+		</script>
+</section>
