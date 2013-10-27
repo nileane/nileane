@@ -28,7 +28,7 @@ nodes:
   url: https://mozillians.org/en-US/u/schoewilliam/
 - text: reddit
   url: http://www.reddit.com/user/schoelcher/
-- text: StatusNET
+- text: GNU Social (StatusNET)
   url: https://status.vinilox.eu/schoewilliam
 
 blogoliste:
