@@ -4,7 +4,7 @@ title: ! 'Web social: je me cherche.'
 tags: ! '["diaspora", "identica", "reddit", "social", "web"]'
 status: publish
 type: post
-published: true
+published: false
 ---
 Ces temps-ci je me cherche un style vestimentaire. Fichue et fameuse question *"chemise ou polo ?"*. Mais je connais le même dilemme sur le monde parallèle de la toile. Car oui, j'ai récemment découvert le libre. Cette découverte sera **fatale** pour mon compte facebook. *L'ambiance thriller, fait*.
 
