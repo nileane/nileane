@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: music.schh, résultat d'une petite heure d'ennui.
+title: Schmusic, résultat d'une petite heure d'ennui.
 tags: ! '["php", "mpd", "icecast", "stream"]'
 ---
 ![music.schoewilliam.fr](/images/mpd/music.schoewilliam.png){: class="align right" style="border-radius:3px;"}
