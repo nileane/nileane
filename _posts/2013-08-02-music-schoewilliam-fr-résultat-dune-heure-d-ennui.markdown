@@ -3,13 +3,8 @@ layout: post
 published: true
 comments: true
 title: music.schh, résultat d'une petite heure d'ennui.
-tags:
-- php
-- mpd
-- icecast
-- stream
+tags: ! '["php", "mpd", "icecast", "stream"]'
 ---
-
 ![music.schoewilliam.fr](/images/mpd/music.schoewilliam.png){: class="align right" style="border-radius:3px;"}
 
 Je m'ennuyais, tout à fait. Alors je me suis dit que je devrais peut-être faire une jolie petite page statique pour mon stream *MPD* — dont je parle dans mon [billet d'hier](/2013/08/01/premières-joies-de-l-autohébergement.html).
