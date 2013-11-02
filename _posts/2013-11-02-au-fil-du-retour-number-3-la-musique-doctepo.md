@@ -2,6 +2,9 @@
 title: ! 'Au Fil du retour #3 : la Musique d''Octepo.'
 layout: post
 published: false
+series: ! '{"name"=>"Au Fil du retour", "episode"=>"la Musique d''Octepo", "index"=>3,
+  "url"=>"/carnet/aufilduretour"}'
+comments: true
 ---
 Jusque là assez étoilé, mystique, et magique comme cadre. Mais voilà précisément les trois mots que j'utiliserais pour caractériser le reste de mon histoire.
 Étoiles. Mystique. Magie.
