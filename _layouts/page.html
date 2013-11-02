@@ -12,7 +12,7 @@ lang: fr
 </hgroup>
 {% else %}
 <hgroup>
-<h1 {% if page.role == "index" %}style="text-align:center;margin-bottom:20px"{% endif %}>{{ page.title }} {% if page.titleen %}<span style="font-size: 80%; opacity: 0.3;">· {{ page.titleen }}</span>{% endif %}</h1>
+	<h1 {% if page.role == "index" %}style="text-align:center;margin-bottom:20px"{% endif %}>{{ page.title }} {% if page.titleen %}<span style="opacity: 0.3;"> {{ page.titleen }}</span>{% endif %} {% if page.role == "index" %}<a href="/rss" style="font-weight: normal; color:#D48600; border-bottom: 2px dashed currentColor;">rss</a>{% endif %}</h1>
 </hgroup>
 {% endif %}
 
