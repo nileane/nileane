@@ -1,23 +1,11 @@
 body {
     font: 11pt/1.5 "Feura Sans", Cantarell, sans-serif;
     margin: 0;
-    background: #2F2965;
-	animation: 200s infinite colorful;
-    -webkit-animation: 200s infinite colorful;
+    background: #ecf0f1;
 }
 @media screen and (min-width:750px) {
 	body {
 		font-size: 13pt;
-	}
-}
-@media screen and (min-width:850px) {
-	body {
-	    background: #ecf0f1;
-	    animation: none;
-	    -webkit-animation: none;
-	}
-	body.home section.article {
-		background: none;
 	}
 }
 a { text-decoration: none; color: #4E43C8; }
@@ -80,176 +68,72 @@ blockquote {
     background-color: #bbb;
 }
 
-section.index {
-    margin-top: 0;
+body > header {
     text-align: center;
+    margin: 0 auto;
+    padding: 80px 20px 30px;
+    max-width: 600px;
 }
-
-section.index.home {
-    color: #444444;
-    font-size: 160%;
+body > header > div {
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: middle;
+}
+body > header > div > nav {
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .2s;
+    transform: translate(0, 0);
+    font-size: 120%;
+}
+body > header:hover > div > nav {
+    opacity: 1;
+    transform: translate(0, -25px);
+}
+body > header > div > nav a {
+    display: inline-block;
     text-align: left;
 }
+body > header > div > nav a span {
+    display: block;
+    line-height: 0.8;
+    opacity: 0.5;
+    font-size: 80%;
+}
+body > header > div > nav a:nth-of-type(2) {
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+body > header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: bold;
+    margin: 0;
+    opacity: 1;
+    transform: translate(0, 22px);
+    transition: all .2s;
+    color: #333332;
+}
+@media screen and (min-width:750px) {
+    body > header h1 {
+        transform: translate(0, 25px);
+    }
+}
+body > header:hover h1 {
+    opacity: 0;
+    transform: translate(0, -20px)
+}
+
 #cassiopeia {
-    margin: 10px 0 0;
     border-radius: 50%;
     border: 0;
     width: 60px;
-}
-section.index.home #cassiopeia {
-    margin: 0;
-}
-.index.home .emb p {
-    color: #333333;
-    font-style: normal;
-}
-.emb > div {
-    display: inline-block;
-    vertical-align: top;
-}
-@media screen and (max-width:749px) {
-	section.index {
-	    font-size: 110%;
-	}
-}
-@media screen and (max-width:849px) {
-	section.index {
-	    font-size: 110%;
-	}
-	section.index hr {
-	    display: none;
-	}
-	.emb > div {
-	    max-width: 55%;
-	    text-align: left;
-	}
-	.emb > div:nth-child(2) {
-	    margin-left: 15px;
-	}
-}
-@media screen and (min-width:850px) {
-	section.index.post {
-	    display: inline-block;
-	    right: 0;
-	    top: 0;
-	    bottom: 0;
-	    width: 180px;
-	    padding-top: 80px;
-	    position: fixed;
-	    text-align: right;
-	    background: #2F2965;
-	    animation: 200s infinite colorful;
-        -webkit-animation: 200s infinite colorful;
-	}
-	#cassiopeia {
-	    width: 70px;
-	    margin: 0;
-	}
+    vertical-align: middle;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2)
 }
 
-@media screen and (min-width:850px) and (max-height:550px) {
-	section.index.post:before {
-	   position: fixed;
-	   content: " ";
-	   top: 0;
-	   right: 0;
-	   bottom: 0; 
-	   width: 180px;
-	   background: #2F2965;
-	   animation: 200s infinite colorful;
-       -webkit-animation: 200s infinite colorful;
-	   z-index: 0;
-	}
-	section.index.post {
-	   position: absolute;
-	   background: transparent;
-	}
-}
-
-section.index figure.emb {
-    padding: 0;
-    display: inline-block;
-    position: relative;
-    margin: 20px;
-    color: #333;
-}
-@media screen and (min-width:750px) {
-	section.index figure.emb {	
-	        transition: all 1.5s;
-	        -webkit-transition: all 1.5s;
-	}
-}
-.emb > a {
-    display: inline-block;
-    position: relative;
-}
-section.index nav a {
-	margin: 0 2px;
-	display: inline-block;
-	color: rgba(255, 255, 255, 0.3);
-	text-shadow: 0 2px rgba(0, 0, 0, 0.2);
-	font-size: 110%;
-	transition: all .2s;
-	-webkit-transition: all .2s;
-}
-section.index nav a:hover {
-	color: #fff;
-}
-
-.emb p:first-of-type {
-    color: #333333;
-    font-size: 100%;
-    font-weight: bold;
-}
-.emb p {
-    color: #bbb;
-    font-size: 80%;
-}
-.emb a, .emb strong {
-    color: #fff;
-    font-weight:bold;
-}
-.emb p:nth-of-type(3) a, .emb p:nth-of-type(4) a {
-    font-size: 120%;
-}
-@media screen and (min-width:850px) {
-	section.index nav a {
-	    margin: 5px 0;
-	    font-size: 130%;
-	    display: block;
-	}
-	.emb p:first-of-type {
-	    margin: 0;
-	}
-	.emb p:nth-of-type(2) {
-	    margin-top:0;
-	}
-}
-
-section.index #apropos {
-	display: none;
-}
-
-section.index #apropos {
-    padding: 20px;
-    background-color: #fff;
-    margin: auto;
-    position: relative;
-    box-shadow: 0 4px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-}
-section.index #apropos {
-	color: #444;
-	max-width: 850px;
-	text-align: left;
-	margin: 0 auto;
-}
-section.index #apropos h2,
-section.index #apropos h3 {
-	color: #222;
-	font-weight: bold;
-	margin: 0;
-}
 #archives > div {
     max-width: 850px;
     margin: 0 auto;
@@ -295,9 +179,6 @@ body.indexen #archives li a:not(.en) {
 	text-align: left;
 	font-size: 115%;
 }
-#archives div li > a.serif {
-	font-style: italic;
-}
 #archives div li > a:hover {
 	color: #34495e;
 	text-decoration: underline;
@@ -334,20 +215,6 @@ section.comments {
     text-align: center;
     padding: 30px 0;
 }
-@media screen and (min-width:850px) and (max-width:1199px) {
-	article, div#comments {
-	    margin: 0 !important;
-	}
-}
-@media screen and (min-width:850px) {
-	section.article {
-	    padding-right: 200px;
-	    padding-top: 100px;
-	}
-	section.comments {
-	    padding-right: 200px;
-	}
-}
 article,
 div#comments {
     margin: 0 auto;
@@ -363,24 +230,6 @@ div#comments {
     color: #888;
     max-width: 200px;
     margin: 0 auto;
-}
-.top.schh:before {
-    content: " ";
-    position: absolute;
-    display: block;
-    width: 100%;
-    top:0;
-    left:0;
-    right;0;
-    height:15px;
-    background-color: #2F2965;
-    animation: 200s infinite colorful;
-    -webkit-animation: 200s infinite colorful;
-}
-@media screen and (min-width:850px) {
-    .top.schh {
-    	display: none;
-    }
 }
 
 article h1 {
