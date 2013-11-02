@@ -2,14 +2,13 @@
 title: ! 'Au Fil du retour #3 : la Musique d''Octepo.'
 layout: post
 published: true
-series: 
-  name: "Au Fil du retour"
-  episode: "la Musique d'Octepo."
-  index: 3
-  url: "/carnet/aufilduretour"
+series: ! '{"name"=>"Au Fil du retour", "episode"=>"la Musique d''Octepo.", "index"=>3,
+  "url"=>"/carnet/aufilduretour"}'
 comments: true
 serif: true
 ---
+*[(...)](/2013/09/21/au-fil-du-retour-2.html) La maléabilité du Temps. La destination était dans le Futur. J’ai désiré de ce dernier qu’il soit de mon passé, accompli. Temps manié.*
+
 Jusque là assez étoilé, mystique, et magique comme cadre. Mais voilà précisément les trois mots que j'utiliserais pour caractériser le reste de mon histoire.
 Étoiles. Mystique. Magie.
 
