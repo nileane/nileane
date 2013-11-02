@@ -1,5 +1,5 @@
 ---
-title: ! 'Au Fil du retour #3 : la Musique d''Octepo.'
+title: "Au Fil du retour #3 : la Musique d'Octepo."
 layout: post
 published: true
 series: 
@@ -10,10 +10,12 @@ series:
 comments: true
 serif: true
 ---
+*[(...)](/2013/09/21/au-fil-du-retour-2.html) La maléabilité du Temps. La destination était dans le Futur. J’ai désiré de ce dernier qu’il soit de mon passé, accompli. Temps manié.*
+
 Jusque là assez étoilé, mystique, et magique comme cadre. Mais voilà précisément les trois mots que j'utiliserais pour caractériser le reste de mon histoire.
 Étoiles. Mystique. Magie.
 
-En attendant… Laissons-nous porter vers un moment absolument récent, vécu aujourd'hier. Me suis rendu là où tout sonnait majestueux. Et qui dit majestueux en ce lieu, dit musique. Et qui Musique Majestueuse, dit Octepo.
+En attendant… Laissons-nous porter vers un moment absolument récent, vécu aujourd'hier. Me suis rendu là où tout sonnait majestueux. Et qui dit majestueux en ce lieu, dit musique. Et qui Musique Majestueuse, dit Octepo.  
 Octepo est le nom de ce monde. Ou du moins, le nom que je lui donne. Par la diversité naturelle des langues qui règne merveilleusement par ici, il serait à vrai dire quelque peu impossible d'établir un nom universel. Octepo est le mien… et dois être honnête et admettre que j'adorerais en expliquer le choix… plus tard. Pour l'instant, sonnons majestueusement.
 
 Le lieu est d'un blanc originel. Autrement dit, ce que le blanc s'avère être : la multitude entière des couleurs. Le blanc qui étincelle sobrement de ses mille lueurs.
