@@ -6,7 +6,7 @@ title: Alors alors
 ---
 Alors alors  
 Peste la soif de mots  
-Aucun ne sut suffir aux exosaisons  
+Aucun ne sut suffire aux exosaisons  
 Fête si belle aux creux d'un cœur chanté  
 À la lueur d'une portée flûtée…  
 Autant de verts et de bleus  
