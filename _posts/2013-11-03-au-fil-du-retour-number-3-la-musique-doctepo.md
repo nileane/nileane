@@ -1,9 +1,12 @@
 ---
-title: ! 'Au Fil du retour #3 : la Musique d''Octepo.'
+title: "Au Fil du retour #3 : la Musique d'Octepo."
 layout: post
 published: true
-series: ! '{"name"=>"Au Fil du retour", "episode"=>"la Musique d''Octepo.", "index"=>3,
-  "url"=>"/carnet/aufilduretour"}'
+series: 
+  name: "Au Fil du retour"
+  episode: "la Musique d'Octepo."
+  index: 3
+  url: "/carnet/aufilduretour"
 comments: true
 serif: true
 ---
