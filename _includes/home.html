@@ -3,11 +3,13 @@
 {% include postdetails.html %}
 
 {% assign last = site.posts.first %}
+{% if last.comments == "true" %}
 <section class="comments">
 	<div id="comments" class="comments">
 		<a class="comment_addcomment" href="{{ last.url }}">{% if last.en %}Comments{% else %}Réponses{% endif %} &rarr;</a>
 	</div>
 </section>
+{% endif %}
 
 <div class="readnext">
 {% if page.previous.url %}
