@@ -49,7 +49,8 @@ h1, h2, h3 {
     font-weight: normal;
 }
 
-blockquote {
+blockquote,
+.readnext a > span {
     font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
 }
 
@@ -83,16 +84,23 @@ body > header > div > nav {
     white-space: nowrap;
     opacity: 0;
     transform: translate(0, 30px);
+    -webkit-transform: translate(0, 30px);
+    -moz-transform: translate(0, 30px);
     transition: all .2s;
     font-size: 120%;
+    z-index: -1;
 }
 body > header:hover > div > nav {
     opacity: 1;
+    z-index: 1;
     transform: translate(0, -25px);
+    -webkit-transform: translate(0, -25px);
+    -moz-transform: translate(0, -25px)
 }
 body > header > div > nav a {
     display: inline-block;
     text-align: left;
+    font-weight: bold;
 }
 body > header > div > nav a span {
     display: block;
@@ -102,7 +110,7 @@ body > header > div > nav a span {
 }
 body > header > div > nav a:nth-of-type(2) {
     border-left: 1px solid #ccc;
-    padding-left: 10px;
+    padding-left: 15px;
     padding-bottom: 5px;
     margin-left: 10px;
 }
@@ -113,17 +121,23 @@ body > header h1 {
     margin: 0;
     opacity: 1;
     transform: translate(0, 22px);
+    -webkit-transform: translate(0, 22px);
+    -moz-transform: translate(0, 22px);
     transition: all .2s;
     color: #333332;
 }
 @media screen and (min-width:750px) {
     body > header h1 {
         transform: translate(0, 25px);
+        -webkit-transform: translate(0, 25px);
+        -moz-transform: translate(0, 25px);
     }
 }
 body > header:hover h1 {
     opacity: 0;
-    transform: translate(0, -20px)
+    transform: translate(0, -20px);
+    -webkit-transform: translate(0, -20px);
+    -moz-transform: translate(0, -20px);
 }
 
 #cassiopeia {
@@ -238,8 +252,8 @@ article h1 {
     margin: 0 5px 35px 0;
     font-weight: bold;
 }
-.serif.centered article h1,
-.serif.centered #post {
+.centered article h1,
+.centered #post {
      text-align: center;
 }
 article h1 a:hover {
@@ -294,7 +308,7 @@ pre {
     -o-hyphens: auto;
     -ms-hyphens: auto;
 }
-.serif.centered #post {
+.centered #post {
     text-align: center;
 }
 @media screen and (min-width:750px) {
@@ -377,8 +391,6 @@ blockquote {
 }
 .comment.none {
     display: none !important;
-}
-.comment:first-of-type {
 }
 
 .comment_user {
@@ -498,6 +510,38 @@ blockquote {
 }
 .comment_submit > input:hover {
     background-color: #222;
+}
+
+.readnext {
+    padding: 30px 20px;
+}
+.readnext a {
+    display: block;
+    margin: 0px auto;
+    max-width: 600px;
+    text-align: center;
+}
+.readnext:hover a {
+    opacity: 1;
+}
+.readnext a > span {
+    display: block;
+    text-align: center;
+    margin-top: 60px;
+    font-style: italic;
+}
+.readnext a > h1 {
+    line-height: 1.1;
+    margin: 5px 0 15px;
+    font-size: 180%;
+    font-weight: bold;
+    opacity: 0.5;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+}
+.readnext a:hover > h1 {
+    opacity: 1;
 }
 
 /* Fin commentaires */

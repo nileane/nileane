@@ -3,6 +3,7 @@ layout: post
 published: true
 comments: true
 title: Alors alors
+centered: true
 ---
 Alors alors  
 Peste la soif de mots  

@@ -8,3 +8,11 @@
 		<a class="comment_addcomment" href="{{ last.url }}">{% if last.en %}Comments{% else %}Réponses{% endif %} &rarr;</a>
 	</div>
 </section>
+
+<div class="readnext">
+{% if page.previous.url %}
+<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
+	<span>Précédemment… <span>Previously…</span></span>
+	<h1>{{page.previous.title}}</h1></a>
+{% endif %}
+</div> 

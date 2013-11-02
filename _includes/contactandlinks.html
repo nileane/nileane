@@ -1,6 +1,6 @@
 <section id="archives">
 
-		<div><h2>{% if page.en %}Where you'll find me…{% else %}Où l'on me trouvera …{% endif %}</h2>
+		<div><h2>Find me there…</h2>
 			<ul>
 			{% for link in site.nodes %}
 			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
@@ -9,7 +9,7 @@
 			</ul>
 		</div>
 
-		<div><h2>{% if page.en %}Friends{% else %}Amis{% endif %}</h2>
+		<div><h2>Friends</h2>
 			<ul>
 			{% for link in site.blogoliste %}
 			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
@@ -17,7 +17,7 @@
 			</ul>
 		</div>
 
-		<div><h2>{% if page.en %}Bookmarks{% else %}Liens{% endif %}</h2>
+		<div><h2>Bookmarks</h2>
 			<ul>
 			{% for link in site.linkoliste %}
 			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
