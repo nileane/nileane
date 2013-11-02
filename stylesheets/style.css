@@ -175,7 +175,7 @@ body.indexen #archives li a:not(.en) {
     margin-bottom: 30px;
     color: #555;
     font-size: 110%;
-    margin: 15px;
+    margin: 0 0 25px;
 }
 #archives div ul {
 	margin: 0;
