@@ -5,7 +5,6 @@
 			{% for link in site.nodes %}
 			<li><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a></li>
 			{% endfor %}
-			<li><a href="#"><span style="color:#333">Email</span><br>schoewilliam[at]legtux[dot]org</a></li>
 			</ul>
 		</div>
 
@@ -28,8 +27,10 @@
 </section>
 
 <style>
-#archives div li > a {
+#archives div li {
 	display: inline-block;
+}
+#archives div li > a {
 	padding: 5px 10px;
 }
 </style>
