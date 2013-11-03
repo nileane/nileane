@@ -5,7 +5,7 @@ published: true
 en: true
 comments: true
 ---
-One small question… that I ask myself everyday. I feel like tired. And guess something ; I told myself the other day : "*What a shame to feel tired at seventeen…*"
+One small question… that I ask myself everyday. I feel like tired. And guess something ; I told myself the other day : *"What a shame to feel tired at seventeen…"*
 
 Something really wrong gets over me each time that I hear about studies, society life, the future which I "have to think of". How am I supposed to dream?
 
