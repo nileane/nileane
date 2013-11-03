@@ -99,16 +99,24 @@ body > header:hover > div > nav {
 }
 body > header > div > nav a {
     display: inline-block;
+    vertical-align: top;
     text-align: left;
     font-weight: bold;
+}
+body > header > div > nav a:hover span {
+    opacity: 1;
 }
 body > header > div > nav a span {
     display: block;
     line-height: 0.8;
     opacity: 0.5;
     font-size: 80%;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
 }
-body > header > div > nav a:nth-of-type(2) {
+body > header > div > nav a:nth-of-type(2),
+body > header > div > nav a:nth-of-type(3) {
     border-left: 1px solid #ccc;
     padding-left: 15px;
     padding-bottom: 5px;
@@ -367,6 +375,17 @@ a.bouton:hover {
 }
 blockquote {
     font-style: italic;
+}
+
+.aboutme {
+	text-align: left;
+}
+.aboutme p:first-of-type,
+.aboutme p:nth-of-type(2) {
+    font-size: 140%;
+}
+.aboutme .en {
+	color: #777;
 }
 
 /* commentaires */

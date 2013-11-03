@@ -1,0 +1,22 @@
+---
+title: À propos
+titleen: About me
+mainindex: true
+layout: page
+center: true
+---
+<div class="aboutme">
+	<p>Je suis <strong>William Dorffer</strong></a>. Vagabondant sur la Banquise, défenseur GNU, et quelque peu <a href="https://mozillians.org/en-US/u/schoewilliam/" target="_blank">Mozillien</a>.</p>
+	<p class="en">Wandering on the floe, supporting GNU things, and also a bit involved with <a href="https://mozillians.org/en-US/u/schoewilliam/" target="_blank">Mozilla</a>.</p>
+
+	<br><hr><br>
+
+	<p>On me trouvera par là …  <span class="en">Find me there…</span><br>
+	{% for link in site.nodes %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
+
+	<p>Quelques amis …  <span class="en">Friends …</span><br>
+	{% for link in site.blogoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
+
+	<p>Liens …  <span class="en">Some links …</span><br>
+	{% for link in site.linkoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
+</div>
