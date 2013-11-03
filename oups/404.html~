@@ -1,8 +1,0 @@
----
-title: 404
-description: "Page introuvable."
-layout: page
----
-<section class="article" style="text-align:center">
-	<img src="/images/loading.gif" style="max-width:100%;">
-</section>
