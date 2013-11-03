@@ -3,7 +3,7 @@
 {% include postdetails.html %}
 
 {% assign last = site.posts.first %}
-{% if last.comments == "true" %}
+{% if last.comments != "false" %}
 <section class="comments">
 	<div id="comments" class="comments">
 		<a class="comment_addcomment" href="{{ last.url }}">{% if last.en %}Comments{% else %}Réponses{% endif %} &rarr;</a>
