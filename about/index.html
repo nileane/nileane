@@ -11,12 +11,15 @@ center: true
 
 	<br><hr><br>
 
+	<p><strong>Me contacter …  <span class="en">Contact me…</span></strong>
+	<a href=#>schoewilliam[at]legtux[dot]org</a></p>
+
 	<p>On me trouvera par là …  <span class="en">Find me there…</span><br>
 	{% for link in site.nodes %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
 
-	<p>Quelques amis …  <span class="en">Friends …</span><br>
+	<p>Quelques amis …  <span class="en">Some Friends…</span><br>
 	{% for link in site.blogoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
 
-	<p>Liens …  <span class="en">Some links …</span><br>
+	<p>Liens …  <span class="en">Links…</span><br>
 	{% for link in site.linkoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
 </div>
