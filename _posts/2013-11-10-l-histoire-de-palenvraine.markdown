@@ -12,3 +12,5 @@ Pourquoi autant accablée ? L'on pourrait lister les torts et stupidités de ce 
 Il arriva qu'un jour, elle disparut, et ne fut plus jamais revue. Âgée alors de 14 ans, elle laissa suspendue au plafond de sa « chambre » (le choix était sien de mettre les termes qu'elle jugeait stupidement caractéristiques d'un monde stupide entre guillemets) quelques termes alignés ainsi … : « *Ne suis née ici que pour remettre les couleurs à l'endroit.* »  
 À ce papier était attaché un fil de 8,88 mètres. Précisément. le Fil. le 8.
 Tout concorde : elle a su remettre les couleurs à l'endroit.
+
+*À la douce cherchant à dormir…*
