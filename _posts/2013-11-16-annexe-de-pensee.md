@@ -1,7 +1,7 @@
 ---
 title: Annexe de pensée.
 layout: post
-published: true
+published: false
 comments: true
 ---
 [![Cette annexe à l'origine](/images/annexe1.jpg){: style="max-height:600px; float: right; margin-left: 10px"}](/images/annexe1.jpg)
