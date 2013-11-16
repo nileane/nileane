@@ -228,6 +228,7 @@ section.article {
     vertical-align: top;
 }
 section.comments {
+    clear: both;
     text-align: center;
     padding: 30px 0;
 }
@@ -527,6 +528,7 @@ blockquote {
 
 .readnext {
     padding: 30px 20px;
+    clear: both;
 }
 .readnext a {
     display: block;
