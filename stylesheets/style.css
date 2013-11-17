@@ -201,6 +201,13 @@ body.indexen #archives li a:not(.en) {
 	text-align: left;
 	font-size: 115%;
 }
+#archives div li > a.en:before {
+    content: "en";
+    font-variant: small-caps;
+    color: #555;
+    margin-right: 8px;
+    float: left;
+}
 #archives div li > a:hover {
 	color: #34495e;
 	text-decoration: underline;
