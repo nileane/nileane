@@ -52,7 +52,8 @@ h1, h2, h3 {
 }
 
 blockquote,
-.readnext a > span {
+.readnext a > span,
+.top {
     font-family: 'charissil', Georgia, serif;
 }
 
@@ -320,11 +321,6 @@ pre {
 }
 .centered #post {
     text-align: center;
-}
-@media screen and (min-width:750px) {
-	#post {
-		font-size: 140%;
-	}
 }
 article #post img,
 article #post iframe {
