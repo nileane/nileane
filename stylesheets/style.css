@@ -249,7 +249,6 @@ div#comments {
 .top {
     display: block;
     text-align: center;
-    font-size: 90%;
     color: #888;
     max-width: 200px;
     margin: 0 auto;
@@ -315,6 +314,7 @@ pre {
     font-family: 'charissil', Georgia, serif;
     line-height: 1.4;
     text-indent: 5%;
+    text-align: justify;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
@@ -377,9 +377,8 @@ blockquote {
     text-indent: 0;
     border-left: 3px solid #4E43C8;
     margin: 22px 0;
-    padding-left: 6%;
+    padding-left: 4.5%;
 }
-
 .aboutme {
 	text-align: left;
 }
