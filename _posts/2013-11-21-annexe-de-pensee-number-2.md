@@ -1,7 +1,7 @@
 ---
 title: ! 'Annexe de pensée. #2'
 layout: post
-published: true
+published: false
 ---
 _« *Il te faut faire un choix entre vie scolaire, et vie sociale* ». Il le dit en guise de réponse à un avis que je lui portais, dans une bête discussion de vie scolaire de professeur à élèves, et d'élèves à professeur. Le thème sur lequel je m'exprimais, et suggéré par lui-même, était « *la quantité et le rythme de travail* ». Ce qui suit est ma pensée, celle qui m'est venue à l'esprit et m'a fait l'écrire, aussi décousue est-elle…_
 
