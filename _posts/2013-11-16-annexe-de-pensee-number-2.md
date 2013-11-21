@@ -3,7 +3,7 @@ title: ! 'Annexe de pensée. #2'
 layout: post
 published: false
 ---
-_« *Il te faut faire un choix entre vie scolaire, et vie sociale* ». Il le dit en guise de réponse à un avis que je lui portais, dans une bête discussion de vie scolaire de professeur à élèves, et d'élèves à professeur. Le thème sur lequel je m'exprimais, et suggéré par lui-même, était « *la quantité et le rythme de travail* ». Ce qui suit est ma pensée, celle qui m'est venue à l'esprit et m'a fait l'écrire._
+_« *Il te faut faire un choix entre vie scolaire, et vie sociale* ». Il le dit en guise de réponse à un avis que je lui portais, dans une bête discussion de vie scolaire de professeur à élèves, et d'élèves à professeur. Le thème sur lequel je m'exprimais, et suggéré par lui-même, était « *la quantité et le rythme de travail* ». Ce qui suit est ma pensée, celle qui m'est venue à l'esprit et m'a fait l'écrire, aussi décousue est-elle…_
 
 La superficialité du travail des élèves, rapporté comme vous le dites par vos collègues professeurs n'aurait-elle pas un rapport de près ou de loin avec l'accablement que l'on porte au lycéen ? Il est à considérer que celui-ci alloue dix-sept à dix-huit heures de ses jours au travail scolaire, dans la mesure où la majeure partie de celui-ci se fait hors des horaires d'ouverture d'un lycée. L'éducation nationale renonce-t-elle à son principe fondamental qu'est l'égalité ? Il est bien une chose qui soit certaine : allouer la majeure partie de la tâche de l'élève dans ses heures libres les plus privées et les moins nombreuses de son temps ruine absolument tout rapport d'égalité. Alors on m'a menti ? Ce mot paré d'un *É* majuscule sur le fronton de l'établissement ne serait là que pour me convaincre de la justice de tout ça ?
 
