@@ -253,6 +253,7 @@ div#comments {
     color: #888;
     max-width: 200px;
     margin: 0 auto;
+    font-style: italic;
 }
 
 article h1 {
