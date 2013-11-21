@@ -1,3 +1,5 @@
+@import url('/stylesheets/fonts.css');
+
 body {
     font: 11pt/1.5 "Feura Sans", Cantarell, sans-serif;
     margin: 0;
@@ -51,7 +53,7 @@ h1, h2, h3 {
 
 blockquote,
 .readnext a > span {
-    font-family: Georgia,"Bookman Old Style",Bookman,"New Century Schoolbook","Bookman Antiqua",Palatino,"Utopia","New York","Times New Roman",Times,serif;
+    font-family: 'charissil', Georgia, serif;
 }
 
 .label {
@@ -306,7 +308,10 @@ pre {
 
 #post {
     color: #333332;
-    font-size: 120%;
+    font-size: 130%;
+    font-family: 'charissil', Georgia, serif;
+    line-height: 1.4;
+    text-indent: 5%;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
@@ -318,8 +323,7 @@ pre {
 }
 @media screen and (min-width:750px) {
 	#post {
-		font-size: 125%;
-		line-height: 1.6;
+		font-size: 140%;
 	}
 }
 article #post img,
@@ -606,21 +610,4 @@ blockquote {
     60% { background-color: #296557; }
     80% { background-color: #294265; }
     100% { background-color: #382965; }
-}
-
-
-
-/* polices */
-
-@font-face {
-    font-family: 'Feura Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(/fonts/feurasans/FeuraSans-Regular.ttf) format('truetype');
-}
-@font-face {
-    font-family: 'Feura Sans';
-    font-style: normal;
-    font-weight: 700;
-    src: url(/fonts/feurasans/FeuraSans-Bold.ttf) format('truetype');
 }
