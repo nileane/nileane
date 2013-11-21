@@ -373,6 +373,10 @@ a.bouton:hover {
 }
 blockquote {
     font-style: italic;
+    text-indent: 0;
+    border-left: 3px solid #4E43C8;
+    margin: 22px 0;
+    padding-left: 6%;
 }
 
 .aboutme {
