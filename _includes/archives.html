@@ -3,8 +3,7 @@
 	   {% for link in site.series %}
 	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
 	   {% endfor %}
-	   <br><br>
-   <div>
+   </div>
 	<ul>
    {% for post in site.posts %}
 	    <li>
