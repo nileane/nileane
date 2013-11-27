@@ -14,4 +14,5 @@ Je me balance sur le flanc. M'étale sur le sol à leurs côtés. Leurs idées s
 Je précipite chacune de mes mains sur mes oreilles. Presse de toutes mes forces. La douleur qui s'en dégage n'est pas importante. Ne souhaite entendre qu'une unique chose. Mais ils sont toujours là, trop rapides.
 Cette pression sur mon ouïe s'entrainait elle-même, davantage qu'au gré de ma seule volonté.
 
-Le temps d'un instant paru éternel, j'ai su ne me restreindre qu'à lui, finalement. *Mon souffle*.
+… Le temps d'un instant paru éternel, j'ai su ne me restreindre qu'à lui, finalement. *Mon souffle*.  
+Le plus merveilleux des reculs m'a semblé si douloureux tout d'abord, si paisible enfin.
