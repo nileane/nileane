@@ -341,11 +341,11 @@ article #post iframe {
 @media screen and (min-width:700px) {
     .align.right {
         float: right;
-        margin: 10px 0 10px 10px;
+        margin: 10px 0 10px 30px;
     }
     .align.left {
         float: left;
-        margin: 10px 10px 10px 0;
+        margin: 10px 30px 10px 0;
     }
 }
 
