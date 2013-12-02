@@ -1,6 +1,6 @@
 /* polices */
 
-@font-face {
+/* @font-face {
     font-family: 'Feura Sans';
     font-style: normal;
     font-weight: 400;
@@ -11,7 +11,7 @@
     font-style: normal;
     font-weight: 700;
     src: url(/fonts/feurasans/FeuraSans-Bold.ttf) format('truetype');
-}
+} */
 
 @font-face {
     font-family: 'charissil';
