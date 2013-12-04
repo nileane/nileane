@@ -197,10 +197,11 @@ body.indexen #archives li a:not(.en) {
 	padding: 8px 0;
 	text-align: left;
 	font-size: 115%;
+	font-style: italic;
 }
 #archives div li > a.en:before {
     content: "en";
-    font-variant: small-caps;
+    opacity: 0.6;
     color: #555;
     margin-right: 8px;
     float: left;
