@@ -17,4 +17,17 @@ La vitesse me fit un bien fou.
 Je traversai des champs aux couleurs et aux formes qui ma foi auraient fait trembler toute une communauté scientifique sur Terre.
 
 Oh, voilà enfin un être, droit devant moi. Aussi humain que moi semblait-il. Son air gai héritait très certainement des beaux fruits qu'il cueillait au sol.  
-Cela dit… peut-être m'approchais-je trop vite… Absolument trop vite. Mince.
+Cela dit… peut-être m'approchais-je trop vite… Absolument trop vite. Mince. Peut-être faudrait-il que j'investigue sur un moyen de ralentir avant qu… Ah. Mince. Mince. Je l'ai percuté.
+
+--
+
+> « Tout va bien monsieur ? Pardon… je viens d'arriver… et je découvre à peine cet engin… Vous allez trouver cela ridicule mais je n'avais toujours pas saisi comment l'arrêter. À part peut-être en percutant un être…
+> — Ça va ça va… Mmh.
+> — Sûr… ?
+> — Certain. Vous avez ruiné mes belles ravies, mais par la bonté des fraicheurs de ces journées, il n'en manque pas.
+> — Qu'est-ce que "vos belles ravies" ?
+> — Ces fruits. Oh, vous êtes nouveau, une belle question de nouveau que celle-ci. Dites-moi donc, j'aimerais me rendre au Cœur, afin d'assister à la Grande Assemblée, et force physique est de constater que vous avez su dénicher un moyen de nous y rendre… »
+
+Son clin d'œil n'aurait pu être plus explicite.
+
+> « La réponse est oui : je répondrai à vos questions, on a le temps du trajet pour cela. Oh, et laissez-moi guider la rouleuse, éviter une autre égratignure ne serait pas une mauvaise idée.
