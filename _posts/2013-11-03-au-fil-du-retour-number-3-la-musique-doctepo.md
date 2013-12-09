@@ -25,4 +25,4 @@ Vous auriez vu cet endroit… Le Théâtre. Là où l'on jouait la musique lorsq
 Le Théâtre est un dôme immatériel… formé par la foule elle-même ; car s'il est un point en cet Univers où la gravité n'était qu'une commodité exercée avec peine, c'était là, au Théâtre octepoyen. Ainsi… la foule de spectateurs formait un dôme autour de la scène, ma pensée en vint à me sonner de ne plus croire ma vue, c'était insensé. Insensé.
 Jón nous a choisi sa position préférée : au sommet du dôme, il y estimait la meilleure acoustique, et la vue la plus douce. Et quelle vue donc ! Il donnait l'air de dormir tout aussi longuement que la musique filait. 
 
-> « Je la respecte. Je la respecte en lui sacrifiant tous mes sens étrangers… Essaie donc. Ne sens plus rien, si ce n'est la musique d'Octepo. Rare et précieuse. »
+« Je la respecte. Je la respecte en lui sacrifiant tous mes sens étrangers… Essaie donc. Ne sens plus rien, si ce n'est la musique d'Octepo. Rare et précieuse. »
