@@ -8,6 +8,8 @@ series:
   index: 4
   url: "/carnet/aufilduretour"
 ---
+[(…)](/2013/11/03/au-fil-du-retour-number-3-la-musique-doctepo.html)
+
 *Le moment est venu, mon ami. Le moment où je me replonge dans ma petite histoire… mon arrivée ici, couronnée d'un merveilleux bien-être, me permet à l'heure, toujours et encore, d'incarner le désir profond que celui de me détendre.*
 
 Au lendemain de ce jeu auquel je jouais sur ce Fil, inversant toutes couleurs et sens, de ce dialogue avec Papa, de ce voyage, j'apercevais un mont. Il rayonnait sur l'implicite horizon d'un cosmos, qui ne changeait plus tant je m'y étais accoutumé. Il rayonnait et émettait des pulsations de lumière. Et à mesure que je m'en approchais, il éblouissait encore davantage.  
