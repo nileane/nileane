@@ -16,4 +16,5 @@ Je fonce.
 La vitesse me fit un bien fou.  
 Je traversai des champs aux couleurs et aux formes qui ma foi auraient fait trembler toute une communauté scientifique sur Terre.
 
-Oh, voilà enfin un être
+Oh, voilà enfin un être, droit devant moi. Aussi humain que moi semblait-il. Son air gai héritait très certainement des beaux fruits qu'il cueillait au sol.  
+Cela dit… peut-être m'approchais-je trop vite… Absolument trop vite. Mince.
