@@ -17,10 +17,10 @@ Une fois plus proche encore, j'apercevais un monde immense, se dessinant sur sa 
 
 « Octepo, douzième porte. », lisai-je intuitivement. *Je vous l'ai dit, ce nom m'est venu, tout comme un nom est venu à chaque Octepoyen. Lire ce panneau était un secret magique, dont chacun de nous a le pouvoir de partage, mais aussi le mystère*. Un comptoir. M'y avançant, contemplant, il me vient à l'esprit l'image de ces colonnades qui m'entouraient, et qui, par toute divinité, ne touchaient pas le sol. Au comptoir, derrière lequel est assise une femme satinée et sereine, j'ose la parole :
 
-> « Bonjour…  
-> — Bonjour !  
-> — La… suite… ?  
-> — Par ici, bon séjour. »  
+« Bonjour…  
+— Bonjour !  
+— La… suite… ?  
+— Par ici, bon séjour. »  
 
 La satinée pointa une ouverture particulièrement lumineuse au sein de deux des colonnes flottantes — d'ailleurs mieux garnies que les autres.  
 Je m'y exécutai et pris la peine de retirer mes chaussu… Bon sang, sur quoi marchais-je depuis tout ce temps ? Sous mes pieds… un blanc profond. Un blanc qui n'a rien d'aveuglant.
