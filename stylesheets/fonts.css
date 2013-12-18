@@ -14,6 +14,16 @@
 } */
 
 @font-face {
+    font-family: "Tengwar";
+    font-weight: 400;
+    src: url('/fonts/tengwar/tngani.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Tengwar";
+    font-weight: 700;
+    src: url('/fonts/tengwar/tnganbi.ttf') format('truetype');
+}
+@font-face {
     font-family: 'charissil';
     font-style: normal;
     font-weight: 400;
