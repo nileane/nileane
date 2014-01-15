@@ -1,12 +1,37 @@
 <section id="archives">
 
 		<div>
+		<div>I'm hosting these on my own webserver. They can be installed on you openwebapp device (that includes for now : Firefox OS, Firefox for Android, and Firefox.)<br><br></div>
 			<ul>
+			<li><a id="installschoses" href="#">Install Schoses</a><br>
+				<small>&rarr; <a href="https://marketplace.firefox.com/app/schoses">Also as a packaged app for Firefox OS</a></small></li>
 			<li><a id="installselfoss" href="#">Install Selfoss</a></li>
-			<li><a id="installmusic" href="#">Install Music.Schh</a></li>
+			<li><a id="installmusic" href="#">Install Schmusic</a></li>
 			</ul>
 		</div>
- 
+ 		<script>
+		(function(){
+		  function installschoses(ev) {
+		    ev.preventDefault();
+		    // define the manifest URL
+		    var manifestb_url = "http://schoses.schoewilliam.fr/manifest.webapp";
+		    // install the app
+		    var myappb = navigator.mozApps.install(manifestb_url);
+		    myappb.onsuccess = function(data) {
+		      // App is installed, remove button
+		      this.parentNode.removeChild(this);
+		    };
+		    myappb.onerror = function() {
+		      // App wasn't installed, info is in this.error.name
+		      console.log('Install failed, error: ' + this.error.name);
+		     };
+		  };
+		  // get a reference to the button and call installselfoss() on click
+		  var buttonb = document.getElementById('installschoses');
+		  buttonb.addEventListener('click', installschoses, false);
+		})();
+		</script>
+
 		<script>
 		(function(){
 		  function installselfoss(ev) {
