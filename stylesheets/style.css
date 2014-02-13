@@ -61,9 +61,6 @@ blockquote,
     font-family: 'charissil', Georgia, serif;
 }
 
-.tengwar {
-    font-family: "Tengwar";
-}
 body > header nav .tengwar {
     font-size:110%;
     opacity:1;
