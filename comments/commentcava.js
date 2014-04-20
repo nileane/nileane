@@ -21,19 +21,19 @@ $(function() {
 
 		for (var i=0; i<json.length; i++) {
 			if (i == 0) {
-				$('#comments').html('<div class="comment" style="display:none"><div><span class="comment_user">'+ json[i].author + '</span><span class="comment_date">'+ json[i].date + '</span></div><div class="comment_message">'+ json[i].message + '</div></div>');
+				$('#comments').html('<div class="comment" style="display:none"><div><span class="comment_user">'+ json[i].author + '</span></div><div class="comment_message">'+ json[i].message + '</div></div>');
 			}
 			else {
-				$('#comments').append('<div class="comment" style="display:none"><div><span class="comment_user">'+ json[i].author + '</span><span class="comment_date">'+ json[i].date + '</span></div><div class="comment_message">'+ json[i].message + '</div></div>');	
+				$('#comments').append('<div class="comment" style="display:none"><div><span class="comment_user">'+ json[i].author + '</span></div><div class="comment_message">'+ json[i].message + '</div></div>');	
 			}
 		}
 		if (json.length == 0) {
-			$('#comments').html('<div class="comment">No comment</div>');
+			$('#comments').html('<div class="comment"><span class="sep">Aucune réponse pour l\'instant…<br><em>No comment for now…</em></span></div>');
 		}
 	},
 
 	error: function( xhr, status ) {
-		$('#comments').html('<div class="comment">No comment</div>');
+		$('#comments').html('<div class="comment"><span class="sep">Aucune réponse pour l\'instant…<br><em>No comment for now…</em></span></div>');
 	},
 
 	complete: function( xhr, status ) {

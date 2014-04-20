@@ -401,8 +401,19 @@ blockquote {
 
 /* commentaires */
 
+#comments {
+    display: none;
+}
+#comments:target {
+    margin-top: -17px;
+    display: block;
+}
 #comments div {
     text-align:left;
+}
+.comment .sep {
+    display: block;
+    text-align: center;
 }
 .comments_header {
     margin: 0;
@@ -465,7 +476,6 @@ blockquote {
 
 .comment_inputuser {
     margin: 0 0 10px;
-    color: #323232;
     font-style: italic;
 }
 
@@ -475,6 +485,8 @@ blockquote {
     box-shadow: 0 2px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     padding: 4px 10px;
+    margin-left: 15px;
+    font-family: "charissil",Georgia,serif;
 }
 
 .comment_inputmessage {
@@ -490,6 +502,7 @@ blockquote {
     border-radius: 2px;
     font-size: 100%;
     padding: 10px;
+    font-family: "charissil",Georgia,serif;
     width: 97.2%;
 }
 
@@ -511,6 +524,7 @@ blockquote {
     vertical-align: top;
     width: 150px;
     margin-right: 5px;
+    font-family: "charissil",Georgia,serif;
 }
 .comment_recaptcha img {
     border-radius: 2px;
