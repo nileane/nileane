@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: "Écrire avec les tengwar"
+title: "Écrire avec les tengwar."
 ---
 *Ai découvert il y a quelques temps les [__tengwar__](http://fr.wikipedia.org/wiki/Tengwar), qui sont une forme fictive de manuscrit inventée par Tolkien pour son œuvre.  
 Il y a à savoir une simple chose : je les trouve extrêmement beaux.*
