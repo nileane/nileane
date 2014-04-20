@@ -6,10 +6,13 @@ bodyclass: post
 {% include postdetails.html %}
 
 {%  if page.comments != false %}
+<section class="comments">
+    <a href="#comments" class="comment_addcomment">Réponses <em>Comments</em> &#10552;</a>
     <div id="comments">
       <img src="loading.gif" alt="Loading comments…"/>
     </div>
     <script src="/comments/commentcava.js" type="text/javascript"></script>
+</section>
 {% endif %}
 
 <div class="readnext">
