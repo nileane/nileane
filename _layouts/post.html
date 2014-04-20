@@ -6,21 +6,30 @@ bodyclass: post
 {% include postdetails.html %}
 
 {%  if page.comments != false %}
-<section class="comments">
-	<div id="comments" class="comments">
-		{% if page.en %}
-			<img src="/comments/loading.gif" alt="Loading comments…"/>
-		{% else %}
-			<img src="/comments/loading.gif" alt="Chargement des commentaires…"/>
-		{% endif %}
-	</div>
-</section>
-<script src="/js/jquery.min.js" type="text/javascript"></script>
-	{% if page.en %}
-		<script src="/comments/commentcava.en.js" type="text/javascript"></script>
-	{% else %}
-		<script src="/comments/commentcava.js" type="text/javascript"></script>
-	{% endif %}
+    <div id="comments">
+      <?php
+      	require '/comments/commentcava.class.php';
+      	$ccv = new commentcava('/comments/commentcava.sqlite');
+
+      	$comments = $ccv->getComments($_SERVER['SCRIPT_NAME']);
+
+        if (!$comments)
+        {
+          //Show NO comments
+          echo '<div class="comment">No comment</div>';
+        }
+        else
+        {
+          //Show comments
+          foreach ($comments as $key => $comment) {
+            echo '<div class="comment" style=""><div><span class="comment_user">'.$comment->author.'</span><span class="comment_date">'.$comment->date.'</span></div><div class="comment_message">'.$comment->message.'</div></div>';
+          }
+        }
+        
+        //Show form to add a comment
+      	echo $ccv->generateForm($_SERVER['SCRIPT_NAME'], '/comments/commentcava.php');
+      ?>
+    </div>
 {% endif %}
 
 
