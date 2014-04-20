@@ -4,7 +4,7 @@ Class commentcava
 {
 
 	//Constants
-	const default_db = './commentcava.sqlite';
+	const default_db = '/comments/commentcava.sqlite';
 
 	//commentcava.php path for generating comment form
 	const post_uri   = '';
