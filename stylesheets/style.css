@@ -146,6 +146,14 @@ body > header h1 {
     transition: all .2s;
     color: #333332;
 }
+body > header h1 .hovertip {
+    font-size: 50%;
+    font-weight: normal;
+    position: absolute;
+    bottom: -17px;
+    right: 0px;
+    opacity: 0.3;
+}
 @media screen and (min-width:750px) {
     body > header h1 {
         transform: translate(0, 25px);
