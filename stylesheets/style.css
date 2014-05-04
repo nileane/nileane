@@ -279,9 +279,11 @@ article h1 a:hover {
 }
 article h2 {
     font-size: 170%;
+    text-align: left;
 }
 article h3 {
     font-size: 150%;
+    text-align: left;
 }
 article h2,
 article h3 {
@@ -347,6 +349,10 @@ article #post iframe {
 }
 .align.center {
     margin: 0 auto;
+}
+.align.inline {
+    display: inline-block;
+    margin: 0 -5px 0 0;
 }
 
 @media screen and (min-width:700px) {
