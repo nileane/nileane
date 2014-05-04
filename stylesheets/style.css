@@ -418,7 +418,7 @@ blockquote {
 #comments {
     display: none;
 }
-#comments:target {
+#comments.displayed {
     margin-top: -17px;
     display: block;
 }
