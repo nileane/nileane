@@ -38,5 +38,5 @@ L'initiative *open web apps* fait du web une plateforme à un potentiel nouveau.
 
 ### Alors le web, c'est magique ?
 
-Presque ! Je me laisse à rêver qu'il s'agit là du véritable espoir d'une plateforme vaste, sans limites, et surtout **ouverte**. Après avoir rejoint les *App Reviewers* du [Firefox Marketplace](https://marketplace.firefox.com/), je croise et teste chaque jour toujours davantage d'applications, aussi variées que innovantes, chacune voyant un succès croissant.  
+Presque ! Je me laisse à rêver qu'il s'agit là du véritable espoir d'une plateforme vaste, sans limites, et surtout **ouverte**. Après avoir rejoint les *App Reviewers* du [Firefox Marketplace](https://marketplace.firefox.com/), je croise et teste chaque jour toujours davantage d'applications, aussi variées qu'innovantes, chacune voyant un succès croissant.  
 Mon bilan d'expérience ne peut être plus enthousiaste.
