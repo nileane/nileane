@@ -29,7 +29,7 @@ On aborde alors un aspect important du principe : l'universalité du web. Comme 
 
 ### Shyhome, expérience du potentiel du web.
 
-Shyhome est un écran d'accueil pour Firefox OS. Un écran d'accueil. Je suis peut-être toujours trop enthousiaste, mais me dire qu'il s'agit d'un écran d'accueil entièrement réalisé avec les technologies du web me fait trouver cela génial. Ces technologies ne se limitent plus à de simples pages, ou de simples applications tournant dans le navigateur.  
+[Shyhome](https://github.com/Schoewilliam/Shyhome) est un écran d'accueil pour Firefox OS. Un écran d'accueil. Je suis peut-être toujours trop enthousiaste, mais me dire qu'il s'agit d'un écran d'accueil entièrement réalisé avec les technologies du web me fait trouver cela génial. Ces technologies ne se limitent plus à de simples pages, ou de simples applications tournant dans le navigateur.  
 L'initiative *open web apps* fait du web une plateforme à un potentiel nouveau. Et l'interface [Gaia](https://github.com/mozilla-b2g/gaia), devéloppée pour Firefox OS m'impressionne pour ces raisons.
 
 [![Shyhome, un écran d'accueil minimaliste pour Firefox OS](/images/openwebapps/shyhome.png){: class="align inline" style="max-width:32.3%;"}](/images/openwebapps/shyhome.png)
