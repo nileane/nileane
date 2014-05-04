@@ -7,7 +7,7 @@ bodyclass: post
 
 {%  if page.comments != false %}
 <section class="comments">
-    <a href="#comments" class="comment_addcomment">Réponses <em>Comments</em> &#10552;</a>
+    <a style="cursor:pointer;" onclick="document.getElementById('comments').className = 'displayed';" class="comment_addcomment">Réponses <em>Comments</em> &#10552;</a>
     <div id="comments">
       <img src="loading.gif" alt="Loading comments…"/>
     </div>
