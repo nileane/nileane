@@ -3,10 +3,11 @@
 		<div>
 		<div>I'm hosting these on my own webserver. They can be installed on you openwebapp device (that includes for now : Firefox OS, Firefox for Android, and Firefox.)<br><br></div>
 			<ul>
-			<li><a id="installschoses" href="#">Install Schoses</a><br>
-				<small>&rarr; <a href="https://marketplace.firefox.com/app/schoses">Also as a packaged app for Firefox OS</a></small></li>
-			<li><a id="installselfoss" href="#">Install Selfoss</a></li>
-			<li><a id="installmusic" href="#">Install Schmusic</a></li>
+				<li><a id="installschoses" href="#">Install Schoses</a><br>
+					<small>&rarr; <a href="https://marketplace.firefox.com/app/schoses">Also as a packaged app on the Firefox Marketplace</a></small></li>
+				<li><a id="installselfoss" href="#">Install Selfoss</a></li>
+				<li><a id="installmusic" href="#">Install Schmusic</a></li>
+				<li><a id="installjourrep" href="#">Install Au Jour Républicain</a></li>
 			</ul>
 		</div>
  		<script>
@@ -14,21 +15,21 @@
 		  function installschoses(ev) {
 		    ev.preventDefault();
 		    // define the manifest URL
-		    var manifestb_url = "http://schoses.schoewilliam.fr/manifest.webapp";
+		    var schoses_manurl = "http://schoses.schoewilliam.fr/manifest.webapp";
 		    // install the app
-		    var myappb = navigator.mozApps.install(manifestb_url);
-		    myappb.onsuccess = function(data) {
+		    var schoses_ins = navigator.mozApps.install(schoses_manurl);
+		    schoses_ins.onsuccess = function(data) {
 		      // App is installed, remove button
 		      this.parentNode.removeChild(this);
 		    };
-		    myappb.onerror = function() {
+		    schoses_ins.onerror = function() {
 		      // App wasn't installed, info is in this.error.name
 		      console.log('Install failed, error: ' + this.error.name);
 		     };
 		  };
 		  // get a reference to the button and call installselfoss() on click
-		  var buttonb = document.getElementById('installschoses');
-		  buttonb.addEventListener('click', installschoses, false);
+		  var schoses_but = document.getElementById('installschoses');
+		  schoses_but.addEventListener('click', installschoses, false);
 		})();
 		</script>
 
@@ -37,21 +38,21 @@
 		  function installselfoss(ev) {
 		    ev.preventDefault();
 		    // define the manifest URL
-		    var manifesto_url = "http://rss.schoewilliam.fr/manifest.webapp";
+		    var selfoss_manurl = "http://rss.schoewilliam.fr/manifest.webapp";
 		    // install the app
-		    var myappo = navigator.mozApps.install(manifesto_url);
-		    myappo.onsuccess = function(data) {
+		    var selfoss_ins = navigator.mozApps.install(selfoss_manurl);
+		    selfoss_ins.onsuccess = function(data) {
 		      // App is installed, remove button
 		      this.parentNode.removeChild(this);
 		    };
-		    myappo.onerror = function() {
+		    selfoss_ins.onerror = function() {
 		      // App wasn't installed, info is in this.error.name
 		      console.log('Install failed, error: ' + this.error.name);
 		     };
 		  };
 		  // get a reference to the button and call installselfoss() on click
-		  var buttono = document.getElementById('installselfoss');
-		  buttono.addEventListener('click', installselfoss, false);
+		  var selfoss_but = document.getElementById('installselfoss');
+		  selfoss_but.addEventListener('click', installselfoss, false);
 		})();
 		</script>
 
@@ -60,21 +61,38 @@
 		  function installmusic(ev) {
 		    ev.preventDefault();
 		    // define the manifest URL
-		    var manifestt_url = "http://music.schoewilliam.fr/manifest.webapp";
+		    var schmusic_manurl = "http://music.schoewilliam.fr/manifest.webapp";
 		    // install the app
-		    var myappt = navigator.mozApps.install(manifestt_url);
-		    myappt.onsuccess = function(data) {
+		    var schmusic_ins = navigator.mozApps.install(schmusic_manurl);
+		    schmusic_ins.onsuccess = function(data) {
 		      // App is installed, remove button
 		      this.parentNode.removeChild(this);
 		    };
-		    myappt.onerror = function() {
+		    schmusic_ins.onerror = function() {
 		      // App wasn't installed, info is in this.error.name
 		      console.log('Install failed, error: ' + this.error.name);
 		     };
 		  };
 		  // get a reference to the button and call installselfoss() on click
-		  var buttont = document.getElementById('installmusic');
-		  buttont.addEventListener('click', installmusic, false);
+		  var schmusic_but = document.getElementById('installmusic');
+		  schmusic_but.addEventListener('click', installmusic, false);
+		})();
+		</script>
+
+        <script>
+ 		(function(){
+		  function installjourrep(ev) {
+              ev.preventDefault();
+              var jourrep_manurl = 'http://apps.schoewilliam.fr/aujourrepublicain/package.manifest';
+              var jourrep_ins = navigator.mozApps.installPackage(jourrep_manurl);
+              jourrep_ins.onsuccess = function() {
+                alert(this.result.origin);
+              };
+              jourrep_ins.onerror = function() {
+                alert(this.error.name);
+              };
+		  var jourrep_but = document.getElementById('installjourrep');
+		  jourrep_but.addEventListener('click', installjourrep, false);
 		})();
 		</script>
 </section>
