@@ -83,7 +83,7 @@
  		(function(){
 		  function installjourrep(ev) {
               ev.preventDefault();
-              var jourrep_manurl = 'http://apps.schoewilliam.fr/aujourrepublicain/package.manifest';
+              var jourrep_manurl = 'http://apps.schoewilliam.fr/aujourrepublicain/package.json';
               var jourrep_ins = navigator.mozApps.installPackage(jourrep_manurl);
               jourrep_ins.onsuccess = function() {
                 alert(this.result.origin);
