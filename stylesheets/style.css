@@ -12,7 +12,7 @@ body {
 }
 a { text-decoration: none; color: #4E43C8; }
 article a { font-weight: bold;}
-p a:hover { text-decoration: underline; }
+article a:hover { text-decoration: underline; }
 
 pre, code {
     background-color: #FAF8F2;

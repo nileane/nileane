@@ -3,6 +3,7 @@
 	   {% for link in site.series %}
 	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
 	   {% endfor %}
+	   <a href="/rss" style="float:right;font-style:italic">Flux RSS</a>
    </div>
    <div>
 	<ul>
