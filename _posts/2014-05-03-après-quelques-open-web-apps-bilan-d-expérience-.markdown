@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: "Quant aux open web apps, bilan d'expérience."
+title: "Quant aux open web apps, petit bilan d'expérience."
 ---
 > « *Open web apps are essentially no different to standard websites or web apps. They are built using standard open web technologies (…) and can be accessed using a web browser. The main differences lie in their ability to be installed on devices and work offline, access to advanced APIs that allow interaction with device features such as camera, gyroscope and address book, (…). Generally, they provide users with an "app experience", while still being based on open, cross platform technologies.* »  
 — [Mozilla Developer Network, Quickstart](https://developer.mozilla.org/en-US/Apps/Quickstart)
