@@ -10,7 +10,7 @@ body {
 		font-size: 13pt;
 	}
 }
-a { text-decoration: none; color: #4E43C8; }
+a { text-decoration: none; color: #4E43C8; cursor: pointer;}
 article a { font-weight: bold;}
 article a:hover { text-decoration: underline; }
 
