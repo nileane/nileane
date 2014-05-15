@@ -89,7 +89,7 @@ body > header {
 }
 body > header > div {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 30px;
     vertical-align: middle;
 }
 body > header > div > nav {
