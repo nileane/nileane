@@ -54,6 +54,6 @@ Soyez déçus de Netflix et ses amis (ce qui inclut, de manière surprenante, la
 
 Soyez déçus de vos élus qui créent un environnement où il est potentiellement illégal de dire quoi que ce soit à propos des DRM.
 
-Maintenant sortez, éduquez les utilisateurs à propos de ce que DRM peut bien signifier, pourquoi est-ce que c'est mauvais. Utilisez Firefox, et donnez de votre temps ou de votre argent à Mozilla afin de lui fournir l'influence dont elle a besoin. Soutenez des organisations (EFF, ORG, FSF, FSFE) et les partis politiques qui représentent vos points de vue sur les DRM et la réforme du droit d'auteur.
+Maintenant sortez, éduquez les utilisateurs à propos de ce que DRM peut bien signifier, et pourquoi est-ce que c'est mauvais. Utilisez Firefox, et donnez de votre temps ou de votre argent à Mozilla afin de lui fournir l'influence dont elle a besoin. Soutenez des organisations (EFF, ORG, FSF, FSFE) et les partis politiques qui représentent vos points de vue sur les DRM et la réforme du droit d'auteur.
 
 Ce n'est en aucun cas la fin de la bataille contre les DRM et le droit d'auteur — ce n'est que le commencement.
