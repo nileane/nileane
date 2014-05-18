@@ -36,7 +36,7 @@ Google est une compagnie à but lucratif qui existe pour exploiter les données 
 
 La seule chose, et la plus simple, que vous puissiez faire pour soutenir Mozilla est d'utiliser Firefox. Cela donne à Mozilla l'influence dont elle a besoin.
 
-## 3. Les gens qui pensent que Mozilla peut à elle-seule « changer l'industrie »
+## 3. Les gens qui pensent que Mozilla peut à elle seule « changer l'industrie »
 
 Je déteste les DRM autant que vous et je pense que les droits d'auteur sont fondamentalement obsolètes — c'est pourquoi je suis un membre du Parti Pirate, c'est pourquoi je donne à l'ORG (*[the Open Rights Group](http://openrightsgroup.org/), une organisation à but non-lucratif basé au Royaume-Uni, n.d.t.*) et à l'EFF, et c'est ainsi que je m'attends à du vrai changement.
 
