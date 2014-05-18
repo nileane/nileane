@@ -44,18 +44,18 @@ Mozilla ne peut changer l'industrie qu'avec le soutien des utilisateurs. Et les 
 
 Il y a du pain sur la planche, mais ce ne sera pas possible si Mozilla perd de son influence, et ça ne pourra se faire qu'avec le *soutien* d'autres organisations.
 
-Les utilisateurs veulent les DRM. Alors nous devrions leur donner les DRM. Ça ne veut pas dire que Mozilla soutient les DRM. Et ça ne veut pas dire que Mozilla ne peut éduquer les utilisateurs sur ce que signifient les DRM (et il y a de [très bons signes qui montrent que cela passe bientôt partie de Webmaker](https://twitter.com/remixmanifesto/status/466664657814818818).)
+Les utilisateurs veulent les DRM. Alors nous devrions leur donner les DRM. Ça ne veut pas dire que Mozilla soutient les DRM. Et ça ne veut pas dire que Mozilla ne peut éduquer les utilisateurs sur ce que signifient les DRM (et il y a de [très bons signes qui montrent que cela fasse bientôt partie de Webmaker](https://twitter.com/remixmanifesto/status/466664657814818818).)
 
-## En conclusion
+## En conclusion
 
 Ne soyez pas déçus de Mozilla.
 
-Soyez déçus de Google, Microsoft, et Apple pour avoir l'implémenté en premier, et d'avoir forcer la main à Mozilla.
+Soyez déçus de Google, Microsoft, et Apple pour l'avoir implémenté en premier, et pour avoir forcé la main à Mozilla.
 
-Soyez déçus de Netflix et ses amis (ce qui inclut, de manière surprenante, la BBC!) qui soutiennent et poussent les DRM.
+Soyez déçus de Netflix et ses amis (ce qui inclut, de manière surprenante, la BBC !) qui soutiennent et poussent le support des DRM sur le web.
 
 Soyez déçus de vos élus qui créent un environnement où il est potentiellement illégal de dire quoi que ce soit à propos des DRM.
 
-Maintenant sortez, éduquez les utilisateurs à propos de ce que DRM peut bien signifier, et pourquoi est-ce que c'est mauvais. Utilisez Firefox, et donnez de votre temps ou de votre argent à Mozilla afin de lui fournir l'influence dont elle a besoin. Soutenez des organisations (EFF, ORG, FSF, FSFE) et les partis politiques qui représentent vos points de vue sur les DRM et la réforme du droit d'auteur.
+Maintenant sortez, éduquez les utilisateurs à propos de ce que DRM peut bien signifier, et de pourquoi est-ce que c'est **mauvais**. Utilisez Firefox, et donnez de votre [temps](https://www.mozilla.org/en-US/contribute/) ou de votre [argent](https://sendto.mozilla.org/page/contribute/) à Mozilla afin de lui fournir l'influence dont elle a besoin. Soutenez des organisations ([EFF](https://www.eff.org/), [ORG](https://www.openrightsgroup.org/), [FSF](https://www.fsf.org/), [FSFE](https://fsfe.org/)) et les partis politiques qui représentent vos points de vue sur les DRM et la réforme du droit d'auteur.
 
 Ce n'est en aucun cas la fin de la bataille contre les DRM et le droit d'auteur — ce n'est que le commencement.
