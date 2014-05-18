@@ -20,17 +20,17 @@ La majorité des critiques vient de ceux qui ne se sont même pas embêtés à l
 
 Comme vous le savez après avoir lu ces deux articles, tout ce qui va se passer, c'est que le CDM d'Adobe (*Content Decryption Module, n.d.t.*) va être implémenté à la manière d'un plugin particulier, optionnel, et contrôlé.
 
-Je dirais que ce n'est pas bien différent de Flash, mais ça le sera. Ce sera plus sécurisé, et vraisemblablement beaucoup moins bugué (étant une "fonctionnalité" de Firefox). Une fois que Firefox aura implémenté l'EME, il n'y aura vraiment plus de raison pour que Flash ou Silverlight continuent à exister. Bien sûr, cette manière de faire craint. Mais je pense que Flash craint encore plus.
+Je dirais que ce n'est pas bien différent de Flash, mais ça le sera. Ce sera plus sécurisé, et vraisemblablement beaucoup moins bugué (étant une « fonctionnalité » de Firefox). Une fois que Firefox aura implémenté l'EME, il n'y aura vraiment plus de raison pour que Flash ou Silverlight continuent d'exister. Bien sûr, cette manière de faire craint. Mais je pense que Flash craint encore plus.
 
 Quant à Mozilla qui « renoncerait » : Mozilla ne peut être influente, que si elle a de l'influence. La source principale de l'influence que peut exercer Mozilla est le nombre d'utilisateur de Firefox, qui n'est actuellement pas très élevé. Ne pas implémenter EME n'y aidera en rien. Comme d'autres l'ont dit, ce n'est pas sur cet obstacle qu'il faut buter (*this is not the hill to die on, v.o.*).
 
 Tout cela me mène à mon second point :
 
-## 2 Les gens qui utilisent Chrome
+## 2. Les gens qui utilisent Chrome
 
 L'un des meilleurs tweets que j'ai pu trouvé sur le sujet était celui de quelqu'un menaçant de passer à Google Chrome à cause de cela. Je pense que l'ironie est évidente ici.
 
-Et encore, ce qui m'étonne le plus n'est pas ces gens qui menaçent de passer de Firefox à Chrome, mais ceux qui utilisent déjà Chrome et qui veulent que Mozilla protège leurs droits.
+Et encore, ce qui m'étonne le plus n'est pas tant ces gens qui menaçent de passer de Firefox à Chrome, mais plutôt ceux qui utilisent déjà Chrome et qui veulent que Mozilla protège leurs droits.
 
 Google est une compagnie à but lucratif qui existe pour exploiter les données des utilisateurs. Google a collaboré avec la NSA. Google, avec Microsoft et Netflix a aidé à l'adoption de l'EME. Pourquoi, alors, voudriez-vous donner votre soutien à Google en utilisant Chrome ?
 
