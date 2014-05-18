@@ -10,13 +10,13 @@ Tout compte fait, je vous propose ci-dessous une traduction d'[un billet](http:/
 
 ---
 
-La réaction de la plupart des gens quant à la déblace *Mozilla et les DRM* me donne envie de me cogner fermement, encore et encore, la tête contre la surface de mon bureau — ce qui n'est pas une très bonne idée quand on est submergé par les examens. J'expliquerai pourquoi dans une minute, mais d'abord, si vous ne l'avez pas déjà fait, vous devriez *vraiment* prendre un instant et lire les articles [de Mitchell \[Baker\] sur le blog de Mozilla](https://blog.mozilla.org/blog/2014/05/14/drm-and-the-challenge-of-serving-users/), et [d'Andreas \[Gal\] sur Mozilla Hacks](https://hacks.mozilla.org/2014/05/reconciling-mozillas-mission-and-w3c-eme/).
+La réaction de la plupart des gens quant à la débacle *Mozilla et les DRM* me donne envie de me cogner fermement, encore et encore, la tête contre la surface de mon bureau — ce qui n'est pas une très bonne idée quand on est submergé par les examens. J'expliquerai pourquoi dans une minute, mais d'abord, si vous ne l'avez pas déjà fait, vous devriez *vraiment* prendre un instant et lire les articles [de Mitchell \[Baker\] sur le blog de Mozilla](https://blog.mozilla.org/blog/2014/05/14/drm-and-the-challenge-of-serving-users/), et [d'Andreas \[Gal\] sur Mozilla Hacks](https://hacks.mozilla.org/2014/05/reconciling-mozillas-mission-and-w3c-eme/).
 
 Ça y est ? Bien. Maintenant allons-y pour les raisons qui me poussent à vouloir me cogner moi-même.
 
 ## 1. Les gens qui ne lisent pas (ou qui ne prennent même pas la peine de lire)
 
-La majorité des critiques viennent de ceux qui ne se sont même pas embêtés à lire et comprendre ce que Mozilla a écrit sur le sujet. S'ils l'avaient fait, nous n'aurions aucune plaintes concernant Mozilla qui forcerait les utilisateurs à utiliser les DRM, qui intégrerait du code propriétaire, ou qui « renoncerait » à la liberté des utilisateurs et leurs droits.
+La majorité des critiques vient de ceux qui ne se sont même pas embêtés à lire et comprendre ce que Mozilla a écrit sur le sujet. S'ils l'avaient fait, nous n'aurions aucune plainte concernant Mozilla qui forcerait les utilisateurs à utiliser les DRM, qui intégrerait du code propriétaire, ou qui « renoncerait » à la liberté des utilisateurs et leurs droits.
 
 Comme vous le savez après avoir lu ces deux articles, tout ce qui va se passer, c'est que le CDM d'Adobe (*Content Decryption Module, n.d.t.*) va être implémenté à la manière d'un plugin particulier, optionnel, et contrôlé.
 
