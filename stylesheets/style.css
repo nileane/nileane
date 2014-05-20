@@ -418,6 +418,7 @@ blockquote {
 .form-wrapper {
     margin-right: 0 !important;
     width: auto !important;
+    float: none !important;
 }
 .isso-comment .text-wrapper .isso-follow-up {
     margin-left: 8%;
@@ -428,6 +429,7 @@ blockquote {
 .isso-comment > div.text-wrapper > .isso-comment-footer {
     padding-bottom: 15px;
     padding-top: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
 }
 
