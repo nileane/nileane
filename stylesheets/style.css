@@ -250,9 +250,9 @@ section.comments, #isso-root {
 article,
 div#comments,
 #isso-thread {
-    margin: 0 auto;
+    margin: 0 auto !important;
     max-width: 750px;
-    padding: 0 25px;
+    padding: 0 25px !important;
     color: #333332;
 }
 
@@ -424,6 +424,11 @@ blockquote {
 }
 .isso-comment {
     text-align:left;
+}
+.isso-comment > div.text-wrapper > .isso-comment-footer {
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-bottom: 25px;
 }
 
 .comment {
