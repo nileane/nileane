@@ -425,8 +425,18 @@ blockquote {
 }
 .isso-comment {
     text-align:left;
+    margin: 0.35em 0 !important;
 }
-.isso-comment > div.text-wrapper > .isso-comment-footer {
+.isso-comment-header {
+    font-family: "charissil", Georgia, serif !important;
+    font-style: italic;
+}
+.isso-comment-header .author {
+    color: #000 !important;
+    font-size: 120% !important;;
+    font-weight: bold !important;;
+}
+.isso-comment-footer {
     padding-bottom: 15px;
     padding-top: 15px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
