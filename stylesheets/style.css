@@ -125,7 +125,7 @@ body > header > div > nav a span {
     font-size: 90%;
     font-style: italic;
     transition: all .2s;
-    -webkit-transition: all .2s;
+    -webkit-transition:Â all .2s;
     -moz-transition: all .2s;
 }
 body > header > div > nav a:not(:first-of-type) {
@@ -242,13 +242,14 @@ section.article {
     padding: 30px 0;
     vertical-align: top;
 }
-section.comments {
+section.comments, #isso-root {
     clear: both;
     text-align: center;
     padding: 30px 0;
 }
 article,
-div#comments {
+div#comments,
+#isso-thread {
     margin: 0 auto;
     max-width: 750px;
     padding: 0 25px;
@@ -407,26 +408,22 @@ blockquote {
 
 /* commentaires */
 
-#comments {
-    display: none;
+.avatar {
+    display: none !important;
 }
-#comments.displayed {
-    margin-top: -17px;
-    display: block;
+.form-wrapper {
+    float: none !important;
 }
-#comments div {
+.isso-comment > div.text-wrapper,
+.form-wrapper {
+    margin-right: 0 !important;
+    width: auto !important;
+}
+.isso-comment .text-wrapper .isso-follow-up {
+    margin-left: 8%;
+}
+.isso-comment {
     text-align:left;
-}
-.comment .sep {
-    display: block;
-    text-align: center;
-}
-.comments_header {
-    margin: 0;
-}
-.comments_header a {
-    font-size: 200%;
-    color: #525252;
 }
 
 .comment {
