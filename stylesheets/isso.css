@@ -21,7 +21,7 @@
 }
 .postbox .textarea {
     background-color: #fff;
-    color: #444;
+    color: #bbb;
     padding: 10px 15px;
     margin: 0 0 5px;
     font-style: italic;
@@ -33,6 +33,7 @@
 .postbox .textarea:not(.placeholder) {
     background-color: #fff;
     min-height: 100px;
+    color: #333332;
     font-style: normal;
 }
 .postbox .auth-section .input-wrapper {
