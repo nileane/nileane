@@ -78,8 +78,11 @@
 .isso-comment .text p:first-of-type {
     margin-top: 5px;
 }
-.isso-comment-header {
+#isso-root > .isso-comment:not(:first-of-type) > .text-wrapper > .isso-comment-header,
+.isso-follow-up .isso-comment-header {
     font-style: italic;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
 }
 .isso-comment-header .author {
     color: #000;
@@ -87,8 +90,6 @@
     font-weight: bold;
 }
 .isso-comment-footer {
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
 }
 
