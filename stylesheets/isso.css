@@ -1,0 +1,104 @@
+/* Personal Isso stylesheet
+   Isso is a self-hosted commenting system http://posativ.org/isso/ */
+
+.avatar,
+.isso-comment-footer .upvote,
+.isso-comment-footer .downvote,
+.isso-comment-footer .spacer {
+    display: none;
+}
+#isso-thread h4 {
+    color: #333332;
+    font-size: 175%;
+    margin: 0.9em 0;
+    font-style: italic;
+    text-align: center;
+}
+.isso-comment > div.text-wrapper,
+.form-wrapper {
+    margin: 0;
+}
+.postbox .textarea {
+    background-color: #fff;
+    color: #444;
+    padding: 10px 15px;
+    margin: 0 0 5px;
+    font-style: italic;
+    border-radius: 3px;
+    outline: 0;
+    transition: all .2s;
+    border: 2px dashed rgba(0, 0, 0, 0.1);
+}
+.postbox .textarea:not(.placeholder) {
+    background-color: #fff;
+    min-height: 100px;
+    font-style: normal;
+}
+.postbox .auth-section .input-wrapper {
+    display: inline-block;
+    margin: 5px 0;
+}
+.postbox .auth-section input {
+    padding: 5px 15px;
+    border-radius: 3px;
+    border: 0;
+    background: rgba(0, 0, 0, 0.05);
+}
+.postbox .auth-section .post-action {
+    float: right;
+    margin: 5px 0;
+}
+.postbox .auth-section .post-action input, .reply {
+    background-color: #333;
+    padding: 4px 15px;
+    border-radius: 3px;
+    color: #fff;
+    font-style: italic;
+    cursor: pointer;
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+.reply {
+    font-size: 80%;
+    padding: 2px 10px;
+}
+.postbox .auth-section .post-action input:hover,
+.reply:hover {
+    background-color: #111;
+}
+.isso-comment .text-wrapper .isso-follow-up {
+    margin-left: 8%;
+}
+.isso-comment {
+    text-align:left;
+    margin: 0.35em 0;
+}
+.isso-comment-header {
+    font-style: italic;
+}
+.isso-comment-header .author {
+    color: #000;
+    font-size: 120%;
+    font-weight: bold;
+}
+.isso-comment-footer {
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+#isso-root > .isso-comment:last-of-type .isso-comment-footer {
+    border-bottom: 0;
+}
+
+@media screen and (max-width: 630px) {
+    .isso-comment .text,
+    .postbox .textarea {
+        font-size: 110%;
+    }
+    .postbox .auth-section .input-wrapper {
+        display: block;
+    }
+    .postbox .auth-section .input-wrapper input {
+        width: calc(100% - 30px);
+    }
+}
