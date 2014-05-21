@@ -4,7 +4,8 @@
 .avatar,
 .isso-comment-footer .upvote,
 .isso-comment-footer .downvote,
-.isso-comment-footer .spacer {
+.isso-comment-footer .spacer,
+.isso-comment-footer .votes {
     display: none;
 }
 #isso-thread h4 {
