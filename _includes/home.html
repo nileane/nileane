@@ -3,12 +3,13 @@
 {% include postdetails.html %}
 
 {% assign last = site.posts.first %}
-<section class="comments">
-	<script src="//comments.schoewilliam.fr/js/count.min.js"></script>
-	<div id="comments" class="comments" style="display:block;">
-		<a class="comment_addcomment" href="{{ last.url }}#isso-thread">Comments</a>
-	</div>
-</section>
+{%  if site.posts.first.comments != false %}
+<hr class="wide">
+<script data-isso="//comments.schoewilliam.fr" data-isso-css="false" data-isso-reply-to-self="true" src="//comments.schoewilliam.fr/js/embed.min.js"></script>
+<section data-isso-id="{{ last.url }}" id="isso-thread"></section>
+
+{% endif %}
+
 
 <div class="readnext">
 {% if page.previous.url %}
