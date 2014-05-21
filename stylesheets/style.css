@@ -1,4 +1,5 @@
 @import url('/stylesheets/fonts.css');
+@import url('/stylesheets/isso.css');
 
 body,input {
     font: 11pt/1.5 "charissil", Georgia, serif;

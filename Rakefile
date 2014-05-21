@@ -25,7 +25,6 @@ end
 task :build do
    desc "runs jekyll to generate _site/"
    system "jekyll build"
-   sh "ln -s /var/www/commentcava.sqlite /var/www/schoewilliam.fr/_site/comments/commentcava.sqlite"
 end
 
 task :serve do
