@@ -49,6 +49,8 @@ hr {
 }
 hr.wide {
     width: 100%;
+    max-width: 750px;
+    border-width: 2px;
 }
 #post hr {
     margin: 50px auto;
