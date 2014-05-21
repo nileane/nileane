@@ -91,9 +91,6 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
 }
-#isso-root > .isso-comment:last-of-type .isso-comment-footer {
-    border-bottom: 0;
-}
 
 @media screen and (max-width: 630px) {
     .isso-comment .text,
