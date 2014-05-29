@@ -1,5 +1,11 @@
 /* Personal Isso stylesheet
-   Isso is a self-hosted commenting system http://posativ.org/isso/ */
+   Isso is a self-hosted commenting system http://posatpoiv.org/isso/ */
+
+#isso-thread * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 .isso-comment-footer .upvote,
 .isso-comment-footer .downvote,
@@ -38,11 +44,15 @@
 .isso-postbox .auth-section .input-wrapper {
     display: inline-block;
     margin: 5px 5px 0 0;
+    position: relative;
+    max-width: 25%;
+    overflow: hidden;
 }
 .isso-postbox .auth-section input {
     padding: 5px 15px;
     border-radius: 3px;
     border: 0;
+    max-width: 100%;
     background: rgba(0, 0, 0, 0.05);
 }
 .isso-postbox .auth-section .post-action {
