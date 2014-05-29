@@ -18,7 +18,7 @@
 .form-wrapper {
     margin: 0;
 }
-.isso-isso-postbox .textarea {
+.isso-postbox .textarea {
     background-color: #fff;
     color: #bbb;
     padding: 10px 15px;
@@ -37,7 +37,7 @@
 }
 .isso-postbox .auth-section .input-wrapper {
     display: inline-block;
-    margin: 5px 0;
+    margin: 5px 5px 0 0;
 }
 .isso-postbox .auth-section input {
     padding: 5px 15px;
@@ -85,7 +85,7 @@
     border-top: 2px solid rgba(0, 0, 0, 0.1);
     padding-top: 15px;
 }
-.isso-follow-up .isso-comment-header {
+.isso-comment-header {
     font-style: italic;
 }
 .isso-comment-header .author {
