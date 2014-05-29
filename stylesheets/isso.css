@@ -114,8 +114,10 @@
     }
     .isso-postbox .auth-section .input-wrapper {
         display: block;
+        margin: 5px 0;
+        max-width: 100%
     }
     .isso-postbox .auth-section .input-wrapper input {
-        width: calc(100% - 30px);
+        width: 100%;
     }
 }
