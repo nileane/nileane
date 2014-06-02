@@ -403,10 +403,8 @@ blockquote {
 .aboutme {
 	text-align: left;
 }
-.aboutme p:first-of-type,
-.aboutme p:nth-of-type(2),
-.aboutme p:nth-of-type(3) {
-    font-size: 140%;
+.aboutme p {
+    font-size: 125%;
 }
 .aboutme .en {
 	color: #777;
@@ -478,38 +476,4 @@ blockquote {
 @-webkit-keyframes fondu {
     0% { opacity: 0; }
     100% { opacity: 1; }
-}
-
-@keyframes colorful {
-    0% { background-color: #2F2965; }
-    20% { background-color: #652945; }
-    40% { background-color: #3F6529; }
-    60% { background-color: #296557; }
-    80% { background-color: #294265; }
-    100% { background-color: #382965; }
-}
-@-webkit-keyframes colorful {
-    0% { background-color: #2F2965; }
-    20% { background-color: #652945; }
-    40% { background-color: #3F6529; }
-    60% { background-color: #296557; }
-    80% { background-color: #294265; }
-    100% { background-color: #382965; }
-}
-
-@keyframes colorful {
-    0% { background-color: #2F2965; }
-    20% { background-color: #652945; }
-    40% { background-color: #3F6529; }
-    60% { background-color: #296557; }
-    80% { background-color: #294265; }
-    100% { background-color: #382965; }
-}
-@-webkit-keyframes colorful {
-    0% { background-color: #2F2965; }
-    20% { background-color: #652945; }
-    40% { background-color: #3F6529; }
-    60% { background-color: #296557; }
-    80% { background-color: #294265; }
-    100% { background-color: #382965; }
 }

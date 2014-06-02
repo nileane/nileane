@@ -20,22 +20,20 @@ permalink:   date
 nodes:
 - text: Arch Linux Forums
   url: https://bbs.archlinux.org/profile.php?id=55538
-- text: DeviantArt
-  url: http://schoewilliam.deviantart.com/
+- text: Diaspora*
+  url: https://diaspora-fr.org/u/schoewilliam
 - text: Github
   url: https://github.com/Schoewilliam
 - text: Mozillians
   url: https://mozillians.org/en-US/u/schoewilliam/
 - text: reddit
   url: http://www.reddit.com/user/schoelcher/
-- text: GNU Social (StatusNET)
+- text: GNU Social
   url: https://status.vinilox.eu/schoewilliam
 
 blogoliste:
 - text: BlogiGor
   url: http://id-libre.org/blogigor
-- text: Coreight
-  url: http://coreight.com
 - text: Dans la tête du Linuxien
   url: http://tetedulinuxien.fr
 - text: fabienwang
