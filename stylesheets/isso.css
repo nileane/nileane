@@ -60,18 +60,19 @@
     margin: 5px 0;
 }
 .isso-postbox .auth-section .post-action input, .reply {
-    background-color: #333;
-    padding: 4px 15px;
-    border-radius: 3px;
+    background-color: #201B57;
+    padding: 4px 20px;
+    border-radius: 2em;
     color: #fff;
     font-style: italic;
     cursor: pointer;
-    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.5);
-    font-weight: bold;
+    box-shadow: inset 0 -3px rgba(0, 0, 0, .3),
+        0 2px rgba(0, 0, 0, .2);
+    font-weight: 400;
 }
 #isso-thread .reply {
     font-size: 80%;
-    padding: 2px 10px;
+    padding: 2px 20px;
 }
 #isso-thread .spacer {
     margin: 0 8px;

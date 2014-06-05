@@ -105,7 +105,6 @@ body > header h1 {
     font-style: italic;
     margin: 0;
     font-size: 130%;
-    text-shadow: 0 3px rgba(0, 0, 0, .3);
 }
 body > header nav a {
     color: #8B85D7;
@@ -244,19 +243,6 @@ article h2 {
 article h3 {
     font-size: 150%;
     text-align: left;
-}
-article h2,
-article h3 {
-    font-weight: normal;
-}
-@media screen and (max-width:749px) {
-	article h1 {
-		hyphens: auto;
-		-moz-hyphens: auto;
-		-webkit-hyphens:  auto;
-		-o-hyphens: auto;
-		-ms-hyphens: auto;
-	}
 }
 @media screen and (min-width:750px) {
     article h1 {
