@@ -6,13 +6,13 @@ center: true
 <div class="aboutme">
 	<p>Je suis un passionné du web, et suis ainsi un évangéliste Mozillien depuis plusieurs années maintenant. Aujourd'hui, mon temps libre de jeunot enthousiaste se partage entre ma modeste contribution mozillienne, mes écrits divers, ou encore mes expérimentations avec les technologies du web, et les logiciels libres.<br>
 	Oh et, je rêve de l'Islande.</p>
-	<p class="en">I am <strong>William Dorffer</strong>. I am a web enthusiast, and have therefore been a Mozilla supporter for years now. Today, as a young fellow, my spare time is shared between my modest contribution to Mozilla, my various writings, and my experiments with web technologies and free softwares.<br>
+	<p class="en"><span style="font-style:italic;color:#333332;">I am <strong>William Dorffer</strong>…</span> I am a web enthusiast, and have therefore been a Mozilla supporter for years now. Today, as a young fellow, my spare time is shared between my modest contribution to Mozilla, my various writings, and my experiments with web technologies and free softwares.<br>
 	Oh and, I dream about Iceland.</p>
 
 	<br><hr><br>
 
-	<p><strong>Me contacter …  <span class="en">Contact me…</span></strong>
-	<a href=#>schoewilliam[at]legtux[dot]org</a></p>
+	<p><strong>Me contacter …  <span class="en">Contact me…</span></strong><br>
+	<a href=#>schoewilliam(at)legtux(dot)org</a></p>
 
 	<p>On me trouvera par là …  <span class="en">Find me there…</span><br>
 	{% for link in site.nodes %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>

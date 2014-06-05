@@ -67,11 +67,6 @@ blockquote,
     font-family: 'charissil', Georgia, serif;
 }
 
-body > header nav .tengwar {
-    font-size:110%;
-    opacity:1;
-    line-height:1.5;
-}
 .label {
     font-size: 80%;
     padding: 2px 8px;
@@ -89,55 +84,23 @@ body > header nav .tengwar {
 
 body > header {
     text-align: center;
-    margin: 0 auto;
-    padding: 80px 20px 30px;
-    max-width: 600px;
+    margin: 0 auto 50px;
+    padding: 80px 20px 50px;
+    background: #201B57;
+    color: #ccc;
 }
 body > header > div {
-    display: inline-block;
-    margin: 0 30px;
+    text-align: center;
+    display: block;
+    margin: 0 15px;
     vertical-align: middle;
 }
-body > header > div > nav {
-    white-space: nowrap;
-    opacity: 0;
-    transform: translate(0, 30px);
-    -webkit-transform: translate(0, 30px);
-    -moz-transform: translate(0, 30px);
-    transition: all .2s;
-    font-size: 120%;
-    z-index: -1;
-}
-body > header:hover > div > nav {
-    opacity: 1;
-    z-index: 1;
-    transform: translate(0, -25px);
-    -webkit-transform: translate(0, -25px);
-    -moz-transform: translate(0, -25px)
-}
-body > header > div > nav a {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
-    font-weight: bold;
-}
-body > header > div > nav a:hover span {
-    opacity: 1;
-}
-body > header > div > nav a span {
-    display: block;
-    line-height: 0.8;
-    opacity: 0.5;
-    font-size: 90%;
-    font-style: italic;
-    transition: all .2s;
-    -webkit-transition:Â all .2s;
-    -moz-transition: all .2s;
-}
-body > header > div > nav a:not(:first-of-type) {
-    padding-left: 15px;
-    padding-bottom: 5px;
-    margin-left: 10px;
+@media screen and (min-width: 400px) {
+    body > header > div {
+        text-align: left;
+        margin: 0 0 0 30px;
+        display: inline-block;
+    }
 }
 body > header h1 {
     display: inline-block;
@@ -145,25 +108,25 @@ body > header h1 {
     font-weight: bold;
     font-style: italic;
     margin: 0;
-    opacity: 1;
-    transform: translate(0, 22px);
-    -webkit-transform: translate(0, 22px);
-    -moz-transform: translate(0, 22px);
-    transition: all .2s;
-    color: #333332;
+    text-shadow: 0 3px rgba(0, 0, 0, .3);
 }
-@media screen and (min-width:750px) {
-    body > header h1 {
-        transform: translate(0, 25px);
-        -webkit-transform: translate(0, 25px);
-        -moz-transform: translate(0, 25px);
-    }
+body > header > nav {
+    margin: 10px 0 0;
 }
-body > header:hover h1 {
-    opacity: 0;
-    transform: translate(0, -20px);
-    -webkit-transform: translate(0, -20px);
-    -moz-transform: translate(0, -20px);
+body > header > nav a {
+    color: #8B85D7;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 2px rgba(0, 0, 0, 0.3);
+}
+body > header > nav a:hover {
+    text-decoration: underline;
+}
+body > header > nav .en {
+    opacity: .6;
+}
+body > header > nav .spacer {
+    margin: 0 4px;
 }
 
 #cassiopeia {
@@ -378,7 +341,7 @@ ul {
 }
 
 a.bouton {
-    background-color: #2E3740;
+    background-color: #201B57;
     border-bottom: 0 !important;
     box-shadow: 0 -3px rgba(0, 0, 0, .3) inset,
         0 2px rgba(0, 0, 0, .2);

@@ -1,9 +1,10 @@
 <div id="archives">
-   <div class="desc">Series :
+   <div class="desc">
+       Series :
 	   {% for link in site.series %}
 	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
 	   {% endfor %}
-	   <a href="/rss" style="float:right;font-style:italic">Flux RSS</a>
+	   <a class="bouton" style="float:right" href="/rss">Flux RSS</a>
    </div>
    <div>
 	<ul>
