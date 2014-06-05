@@ -380,18 +380,25 @@ ul {
 a.bouton {
     background-color: #2E3740;
     border-bottom: 0 !important;
-    box-shadow: 0 -3px rgba(0, 0, 0, 0.3) inset;
+    box-shadow: 0 -3px rgba(0, 0, 0, .3) inset,
+        0 2px rgba(0, 0, 0, .2);
     color: #FFFFFF;
-    padding: 3px 10px;
+    padding: 5px 20px;
     margin: 0 0 5px;
     display: inline-block;
     text-indent: 0;
     text-decoration: none;
-    border-radius: 3px;
+    border-radius: 2em;
+    font-style: italic;
     
 }
 a.bouton:hover {
-    text-decoration: underline;
+    text-decoration: none;
+}
+a.bouton:active {
+    text-decoration: none;
+    box-shadow: 0 3px rgba(0, 0, 0, .3) inset;
+    color: rgba(255, 255, 255, .4);
 }
 blockquote {
     font-style: italic;
@@ -408,6 +415,10 @@ blockquote {
 }
 .aboutme .en {
 	color: #777;
+}
+.aboutme h2 {
+    text-align: center;
+    margin-bottom: -18px;
 }
 
 .comment_addcomment {

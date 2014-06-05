@@ -3,4 +3,109 @@ title: Apps
 layout: page
 schh: true
 ---
-{% include apps.html %}
+<div class="aboutme">
+
+        <div style="text-align: center;">
+            <h2>Schoses</h2>
+            <p>Une simple application de listes et de notes.<br><span class="en">A simple lists and notes application.</span></p>
+                <a class="bouton" href="http://schoses.schoewilliam.fr"><em>Launch</em></a>
+                <a class="bouton" href="https://marketplace.firefox.com/app/schoses">Install Schoses</a>
+        </div>
+
+            <br>
+            <hr>
+
+        <div style="text-align: center;">
+            <h2>Schmusic</h2>
+            <p>Petite webradio musicale personnelle.<br><span class="en">A little webradio of mine.</span></p>
+                <a class="bouton" href="http://music.schoewilliam.fr"><em>Launch</em></a>
+                <a class="bouton" id="installmusic">Install Schmusic</a>
+        </div>
+
+            <br>
+            <hr>
+
+        <div style="text-align: center;">
+            <h2>Au Jour Républicain</h2>
+            <p>Affiche la date du jour selon le calendrier républicain.<br><span class="en">Displays the date according to the French republican calendar</span></p>
+                <a class="bouton" href="http://apps.schoewilliam.fr/aujourrepublicain" ><em>Launch</em></a>
+                <a class="bouton" id="installjourrep">Install Au Jour Républicain</a>
+        </div>
+
+            <br>
+            <hr>
+
+        <div style="text-align: center;">
+            <h2>Schelfoss</h2>
+            <p>Mon outil de procrastination, propulsé par <a href="http://selfoss.aditu.de/">Selfoss</a>.<br><span class="en">My procastination tool, powered by <a href="http://selfoss.aditu.de/">Selfoss</a></span></p>
+                <a class="bouton" href="http://rss.schoewilliam.fr"><em>Launch</em></a>
+                <a class="bouton" id="installselfoss">Install Schelfoss</a>
+        </div>
+
+
+		</div>
+
+		<script>
+		(function(){
+		  function installselfoss(ev) {
+		    ev.preventDefault();
+		    // define the manifest URL
+		    var selfoss_manurl = "http://rss.schoewilliam.fr/manifest.webapp";
+		    // install the app
+		    var selfoss_ins = navigator.mozApps.install(selfoss_manurl);
+		    selfoss_ins.onsuccess = function(data) {
+		      // App is installed, remove button
+		      this.parentNode.removeChild(this);
+		    };
+		    selfoss_ins.onerror = function() {
+		      // App wasn't installed, info is in this.error.name
+		      console.log('Install failed, error: ' + this.error.name);
+		     };
+		  };
+		  // get a reference to the button and call installselfoss() on click
+		  var selfoss_but = document.getElementById('installselfoss');
+		  selfoss_but.addEventListener('click', installselfoss, false);
+		})();
+		</script>
+
+		<script>
+		(function(){
+		  function installmusic(ev) {
+		    ev.preventDefault();
+		    // define the manifest URL
+		    var schmusic_manurl = "http://music.schoewilliam.fr/manifest.webapp";
+		    // install the app
+		    var schmusic_ins = navigator.mozApps.install(schmusic_manurl);
+		    schmusic_ins.onsuccess = function(data) {
+		      // App is installed, remove button
+		      this.parentNode.removeChild(this);
+		    };
+		    schmusic_ins.onerror = function() {
+		      // App wasn't installed, info is in this.error.name
+		      console.log('Install failed, error: ' + this.error.name);
+		     };
+		  };
+		  // get a reference to the button and call installselfoss() on click
+		  var schmusic_but = document.getElementById('installmusic');
+		  schmusic_but.addEventListener('click', installmusic, false);
+		})();
+		</script>
+
+        <script>
+ 		(function(){
+		  function installjourrep(ev) {
+              ev.preventDefault();
+              var jourrep_manurl = 'http://apps.schoewilliam.fr/aujourrepublicain/package.webapp';
+              var jourrep_ins = navigator.mozApps.installPackage(jourrep_manurl);
+              jourrep_ins.onsuccess = function() {
+                alert(this.result.origin);
+              };
+              jourrep_ins.onerror = function() {
+                alert(this.error.name);
+              };
+		  };
+		  var jourrep_but = document.getElementById('installjourrep');
+		  jourrep_but.addEventListener('click', installjourrep, false);
+		})();
+		</script>
+		<style>article h1 { text-align: center; }</style>
