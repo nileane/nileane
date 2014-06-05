@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-comments: false
+comments: true
 title: "À Sýna."
 ---
 Mmh s'il fallait construire un ensemble de petits jouets qui puissent avoir la capacité de faire sourire tout enfant, je le ferais sans même établir de plans. Et d'ailleurs, il est rare qu'établir des plans soit une manière efficace de bout en bout. Oui, en effet, il faut des outils, et des matériaux, ou en bref, toutes sortes de matières pour rendre ces plans concrets et palpables. Mais le plan est ennuyant.  
