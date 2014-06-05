@@ -370,6 +370,9 @@ blockquote {
 	color: #777;
 }
 .aboutme h2 {
+    margin-top: 0;
+}
+.aboutme h2 {
     text-align: center;
     margin-bottom: -18px;
 }
