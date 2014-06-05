@@ -84,19 +84,26 @@ blockquote,
 
 body > header {
     text-align: center;
-    margin: 0 auto 50px;
-    padding: 80px 20px 50px;
+    margin: 0 auto 30px;
+    padding: 50px 20px;
     background: #201B57;
     color: #ccc;
 }
 body > header > div {
+    max-width: 750px;
+    margin: 0 auto;
+}
+body > header > div > div {
     text-align: center;
     display: block;
     margin: 0 15px;
     vertical-align: middle;
 }
 @media screen and (min-width: 400px) {
-    body > header > div {
+    body > header {
+        text-align: left;
+    }
+    body > header > div > div {
         text-align: left;
         margin: 0 0 0 30px;
         display: inline-block;
@@ -108,24 +115,18 @@ body > header h1 {
     font-weight: bold;
     font-style: italic;
     margin: 0;
+    font-size: 130%;
     text-shadow: 0 3px rgba(0, 0, 0, .3);
 }
-body > header > nav {
-    margin: 10px 0 0;
-}
-body > header > nav a {
+body > header nav a {
     color: #8B85D7;
     font-style: italic;
     font-weight: bold;
-    text-shadow: 0 2px rgba(0, 0, 0, 0.3);
 }
-body > header > nav a:hover {
+body > header nav a:hover {
     text-decoration: underline;
 }
-body > header > nav .en {
-    opacity: .6;
-}
-body > header > nav .spacer {
+body > header nav .spacer {
     margin: 0 4px;
 }
 
