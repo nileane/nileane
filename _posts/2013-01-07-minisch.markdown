@@ -12,7 +12,7 @@ Faisons-en le tour, dans la joie et la bonne humeur s'il vous plait /o/. Oh et j
 
 <p><a href="https://github.com/Schoewilliam/Minisch/archive/master.zip" class="bouton">&darr; Télécharger minisch .zip</a></p>
 
-<p><a href="https://github.com/Schoewilliam/Minisch" class="bouton" style="background-color: #777;">&rarr; Sources</a></p>
+<p><a href="https://github.com/Schoewilliam/Minisch" class="bouton">&rarr; Sources</a></p>
 
 ---
 
@@ -94,7 +94,7 @@ Depuis l'administration de Wordpress, la page « Options du thème » embarquée
 
 <p><a href="https://github.com/Schoewilliam/Minisch/archive/master.zip" class="bouton">&darr; Télécharger minisch .zip</a></p>
 
-<p><a href="https://github.com/Schoewilliam/Minisch" class="bouton" style="background-color: #777;">&rarr; Sources</a></p>
+<p><a href="https://github.com/Schoewilliam/Minisch" class="bouton">&rarr; Sources</a></p>
 <style>
 @import url(/stylesheets/minisch.css);
 </style>

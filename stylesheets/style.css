@@ -321,11 +321,8 @@ ul {
 }
 
 a.bouton {
-    background-color: #201B57;
-    border-bottom: 0 !important;
-    box-shadow: 0 -3px rgba(0, 0, 0, .3) inset,
-        0 2px rgba(0, 0, 0, .2);
-    color: #FFFFFF;
+    border: 1px solid currentcolor;
+    box-shadow: 0 2px rgba(0, 0, 0, .2);
     padding: 5px 20px;
     margin: 0 0 5px;
     display: inline-block;
@@ -334,14 +331,17 @@ a.bouton {
     border-radius: 2em;
     font-weight: 400;
     font-style: italic;
-    
+    outline: 0;    
 }
 a.bouton:hover {
+    background-color: #4E43C8;
+    border-color: #4e43c8;
+    color: #ddd;
     text-decoration: none;
 }
 a.bouton:active {
     text-decoration: none;
-    box-shadow: 0 3px rgba(0, 0, 0, .3) inset;
+    box-shadow: 0 1px rgba(0, 0, 0, .3) inset;
     color: rgba(255, 255, 255, .4);
 }
 blockquote {
