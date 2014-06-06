@@ -12,7 +12,6 @@ body,input {
 	}
 }
 a { text-decoration: none; color: #4E43C8; cursor: pointer;}
-article a { font-weight: bold;}
 article a:hover { text-decoration: underline; }
 
 pre, code {
@@ -167,7 +166,6 @@ body.indexen #archives li a:not(.en) {
 }
 #archives div li > a {
 	display: inline-block;
-	font-weight: bold;
 	padding: 8px 0;
 	text-align: left;
 	font-size: 115%;
@@ -189,6 +187,7 @@ body.indexen #archives li a:not(.en) {
 }
 @media screen and (min-width:600px) {
 	#archives a time {
+	    font-style: italic;
 	    display: inline-block;
 	    margin-left:10px;
 	    float:right;

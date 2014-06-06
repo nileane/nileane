@@ -14,7 +14,7 @@ La réaction de la plupart des gens quant à la débacle *Mozilla et les DRM* me
 
 Ça y est ? Bien. Maintenant allons-y pour les raisons qui me poussent à vouloir me cogner moi-même.
 
-## 1. Les gens qui ne lisent pas (ou qui ne prennent même pas la peine de lire)
+### 1. Les gens qui ne lisent pas (ou qui ne prennent même pas la peine de lire)
 
 La majorité des critiques vient de ceux qui ne se sont même pas embêtés à lire et comprendre ce que Mozilla a écrit sur le sujet. S'ils l'avaient fait, nous n'aurions aucune plainte concernant Mozilla qui forcerait les utilisateurs à utiliser les DRM, qui intégrerait du code propriétaire, ou qui « renoncerait » à la liberté des utilisateurs et leurs droits.
 
@@ -26,7 +26,7 @@ Quant à Mozilla qui « renoncerait » : Mozilla ne peut être influente, que si
 
 Tout cela me mène à mon second point :
 
-## 2. Les gens qui utilisent Chrome
+### 2. Les gens qui utilisent Chrome
 
 L'un des meilleurs tweets que j'ai pu trouvé sur le sujet était celui de quelqu'un menaçant de passer à Google Chrome à cause de cela. Je pense que l'ironie est évidente ici.
 
@@ -36,7 +36,7 @@ Google est une compagnie à but lucratif qui existe pour exploiter les données 
 
 La seule chose, et la plus simple, que vous puissiez faire pour soutenir Mozilla est d'utiliser Firefox. Cela donne à Mozilla l'influence dont elle a besoin.
 
-## 3. Les gens qui pensent que Mozilla peut à elle seule « changer l'industrie »
+### 3. Les gens qui pensent que Mozilla peut à elle seule « changer l'industrie »
 
 Je déteste les DRM autant que vous et je pense que les droits d'auteur sont fondamentalement obsolètes — c'est pourquoi je suis un membre du Parti Pirate, c'est pourquoi je donne à l'ORG (*[the Open Rights Group](http://openrightsgroup.org/), une organisation à but non-lucratif basé au Royaume-Uni, n.d.t.*) et à l'EFF, et c'est ainsi que je m'attends à du vrai changement.
 
@@ -46,7 +46,7 @@ Il y a du pain sur la planche, mais ce ne sera pas possible si Mozilla perd de s
 
 Les utilisateurs veulent les DRM. Alors nous devrions leur donner les DRM. Ça ne veut pas dire que Mozilla soutient les DRM. Et ça ne veut pas dire que Mozilla ne peut éduquer les utilisateurs sur ce que signifient les DRM (et il y a de [très bons signes qui montrent que cela fasse bientôt partie de Webmaker](https://twitter.com/remixmanifesto/status/466664657814818818).)
 
-## En conclusion
+### En conclusion
 
 Ne soyez pas déçus de Mozilla.
 
