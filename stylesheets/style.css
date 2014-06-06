@@ -76,7 +76,7 @@ body > header {
     margin: 0 auto 30px;
     padding: 50px 20px;
     background: #201B57;
-    color: #ccc;
+    color: #ddd;
 }
 body > header > div {
     max-width: 750px;
@@ -105,6 +105,12 @@ body > header h1 {
     font-style: italic;
     margin: 0;
     font-size: 130%;
+}
+body > header h1 a {
+    color: #ddd;
+}
+body > header h1 a:hover {
+    text-decoration: underline;
 }
 body > header nav a {
     color: #8B85D7;
