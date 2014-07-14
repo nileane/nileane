@@ -5,13 +5,6 @@ bodyclass: post
 ---
 {% include postdetails.html %}
 
-{%  if page.comments != false %}
-<hr class="wide">
-<script data-isso="//comments.schoewilliam.fr" data-isso-css="false" data-isso-avatar="false" data-isso-reply-to-self="true" src="//comments.schoewilliam.fr/js/embed.min.js"></script>
-<section id="isso-thread"></section>
-
-{% endif %}
-
 <div class="readnext">
 {% if page.previous.url %}
 <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
