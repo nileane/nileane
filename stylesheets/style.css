@@ -72,30 +72,17 @@ hr.wide {
 
 body > header {
     text-align: center;
-    margin: 0 auto 30px;
+    margin: 0 auto;
     padding: 50px 20px;
-    background: #201B57;
-    color: #ddd;
 }
 body > header > div {
     max-width: 750px;
     margin: 0 auto;
 }
 body > header > div > div {
-    text-align: center;
     display: block;
-    margin: 0 15px;
+    margin: 10px 15px;
     vertical-align: middle;
-}
-@media screen and (min-width: 400px) {
-    body > header {
-        text-align: left;
-    }
-    body > header > div > div {
-        text-align: left;
-        margin: 0 0 0 30px;
-        display: inline-block;
-    }
 }
 body > header h1 {
     display: inline-block;
@@ -105,14 +92,10 @@ body > header h1 {
     margin: 0;
     font-size: 130%;
 }
-body > header h1 a {
-    color: #ddd;
-}
 body > header h1 a:hover {
     text-decoration: underline;
 }
 body > header nav a {
-    color: #8B85D7;
     font-style: italic;
     font-weight: bold;
 }
