@@ -1,1 +1,1 @@
-# Sources files of my jekyll-powered weblog.
+# Source files of my jekyll-powered weblog.
