@@ -10,7 +10,7 @@ body,input {
 		font-size: 13pt;
 	}
 }
-a { text-decoration: none; color: #F94F4F; cursor: pointer;}
+a { text-decoration: none; color: #1681A5; cursor: pointer;}
 article a:hover { text-decoration: underline; }
 
 pre, code {
@@ -311,7 +311,7 @@ a.bouton:active {
 blockquote {
     font-style: italic;
     text-indent: 0;
-    border-left: 3px solid #F94F4F;
+    border-left: 3px solid #1681A5;
     margin: 22px 0;
     padding-left: 4.5%;
 }
