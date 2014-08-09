@@ -85,13 +85,11 @@ body > header h1 {
 }
 body > header h1 a {
     color: #333332;
+    font-weight: 200;
+    font-style: italic;
 }
 body > header h1 a:hover {
     text-decoration: none;
-}
-body > header nav a {
-    font-style: italic;
-    font-weight: bold;
 }
 body > header nav a:hover {
     text-decoration: underline;
