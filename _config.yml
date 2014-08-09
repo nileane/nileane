@@ -3,10 +3,6 @@ port: 4000
 base-url: /
 url: http://schoewilliam.legtux.org
 
-ftp_host: legtux.org
-ftp_dir: /
-ftp_username: schoewilliam
-
 source:      .
 destination: ./_site
 plugins:     ./_plugins
@@ -69,19 +65,8 @@ series:
 - text: Au Fil du retour
   url: /carnet/aufilduretour
 - text: Petites de mes nouvelles
-  url: /carnet/petitesdemesnouvelles
+  url: /carnet/petitesdemesnouvelleskramdown
 
-maruku:
-  use_tex:    false
-  use_divs:   false
-  png_engine: blahtex
-  png_dir:    images/latex
-  png_url:    /images/latex
-
-rdiscount:
-  extensions: []
-
-kramdown:
   auto_ids: true,
   footnote_nr: 1
   entity_output: as_char

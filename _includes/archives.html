@@ -1,6 +1,6 @@
 <div id="archives">
    <div class="desc">
-	   <a href="/rss"><em>Flux RSS</em></a> ·
+	   <a href="/flux.xml"><em>Flux RSS</em></a> ·
        Series :
 	   {% for link in site.series %}
 	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
@@ -11,7 +11,7 @@
    {% for post in site.posts %}
 	    <li>
 		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
-		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | localize: ":default" }}</time>
+		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
 		{{ post.title }}
 		</a>
 	   </li>
