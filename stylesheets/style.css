@@ -10,7 +10,7 @@ body,input {
 		font-size: 13pt;
 	}
 }
-a { text-decoration: none; color: #1681A5; cursor: pointer;}
+a { text-decoration: none; color: #F94F4F; cursor: pointer;}
 article a:hover { text-decoration: underline; }
 
 pre, code {
@@ -79,14 +79,15 @@ body > header > div {
     margin: 0 auto;
 }
 body > header h1 {
-    display: inline-block;
     vertical-align: middle;
-    font-weight: 300;
-    font-style: italic;
+    font-weight: 800;
     margin: 0;
 }
+body > header h1 a {
+    color: #333332;
+}
 body > header h1 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 body > header nav a {
     font-style: italic;
@@ -95,17 +96,10 @@ body > header nav a {
 body > header nav a:hover {
     text-decoration: underline;
 }
-body > header nav .spacer {
-    margin: 0 4px;
+body > header nav > span {
+    display:block;
 }
 
-#cassiopeia {
-    border-radius: 50%;
-    border: 0;
-    width: 60px;
-    vertical-align: middle;
-    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2)
-}
 body.indexen #archives li a:not(.en) {
 	opacity: 0.45;
 }
@@ -127,7 +121,6 @@ body.indexen #archives li a:not(.en) {
 }
 #archives .desc {
     margin-bottom: 30px;
-    color: #555;
     font-size: 110%;
     margin: 0 0 25px;
 }
@@ -153,7 +146,6 @@ body.indexen #archives li a:not(.en) {
     float: left;
 }
 #archives div li > a:hover {
-	color: #34495e;
 	text-decoration: underline;
 }
 #archives a time {
@@ -321,7 +313,7 @@ a.bouton:active {
 blockquote {
     font-style: italic;
     text-indent: 0;
-    border-left: 3px solid #4E43C8;
+    border-left: 3px solid #F94F4F;
     margin: 22px 0;
     padding-left: 4.5%;
 }
