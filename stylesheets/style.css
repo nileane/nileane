@@ -85,7 +85,7 @@ body > header h1 {
 }
 body > header h1 a {
     color: #333332;
-    font-weight: 200;
+    font-weight: 300;
     font-style: italic;
 }
 body > header h1 a:hover {
@@ -95,15 +95,7 @@ body > header nav a:hover {
     text-decoration: underline;
 }
 body > header nav {
-    font-style: italic;
-    font-size: 85%;
     color: #333332;
-}
-
-@media screen and (min-width:750px) {
-    body > header nav {
-        font-size: 90%;
-    }
 }
 
 .archives h2 {
