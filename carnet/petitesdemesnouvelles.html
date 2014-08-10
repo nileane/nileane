@@ -1,20 +1,21 @@
-<div id="archives">
-   <div class="desc">
-	   <a href="/flux.xml"><em>Flux RSS</em></a> ·
-       Series :
-	   {% for link in site.series %}
-	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-	   {% endfor %}
-   </div>
+---
+layout: page
+title: "Petites de mes nouvelles"
+schh: true
+role: index
+---
+<div class="archives">
    <div>
 	<ul>
    {% for post in site.posts %}
+	{% if post.series.name == "Petites de mes nouvelles" %}
 	    <li>
 		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
 		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
 		{{ post.title }}
 		</a>
 	   </li>
+	{% endif %}
    {% endfor %}
 	</ul>
    </div>

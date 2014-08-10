@@ -8,7 +8,7 @@ series:
   name: "Au Fil du retour"
   episode: "le Fil."
   index: 1
-  url: "/carnet/aufilduretour"
+  url: "/carnet/aufilduretour.html"
 ---
 Au fil du retour, je constate que ma vie s'agrège en une multitude de petits points vaniteux. Je viens de mourir. En fait, je viens de croire que je mourrais. Mais voilà ce fil. Ce retour. Non je ne raconterai pas le point de cette « mort ». Pas intéressant. Rien comparé à ce qui vient. Rien comparé à la destination de ce grappin composé sous la forme d'un fil. Au fil du retour, j'admire ma vie. Voici ma dernière naissance. Voici la dernière fois que je vis. Car je vivrai toujours. C'est lui qui me l'a dit.  
 Qui donc ? Mon père. Ha je savais que je le rencontrerai un jour. Aussi ravi de me rendre compte que le père fantôche de ma morte vie (ainsi je nommerai ce qui précédait ma mort désormais.) n'était qu'un Rien, que ravi d'être ravi. Ravi de naviguer sur ce fil. Au passage… je découvre un nouveau ciel. Depuis la pauvre bille, voilà 2.4 milliards d'années que les êtres y admirent le même ciel. Au cours d'un voyage en son travers, il se redessine sans cesse. Toujours et encore un ciel nouveau autour de moi, à mesure que j'avance sur le fil.  

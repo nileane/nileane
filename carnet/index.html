@@ -1,8 +1,27 @@
 ---
 layout: page
-title: Carnet
-titleen: Weblog
+title: All posts
 role: index
-mainindex: true
 ---
-{% include archives.html %}
+
+<div class="archives">
+   <!-- <div class="desc">
+	   <a href="/flux.xml"><em>Flux RSS</em></a> ·
+       Series :
+	   {% for link in site.series %}
+	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+	   {% endfor %}
+   </div> -->
+   <div>
+	<ul>
+   {% for post in site.posts %}
+	    <li>
+		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+		{{ post.title }}
+		</a>
+	   </li>
+   {% endfor %}
+	</ul>
+   </div>
+</div>

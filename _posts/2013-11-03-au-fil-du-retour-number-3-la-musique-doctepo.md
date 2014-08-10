@@ -6,7 +6,7 @@ series:
   name: "Au Fil du retour"
   episode: "la Musique d'Octepo."
   index: 3
-  url: "/carnet/aufilduretour"
+  url: "/carnet/aufilduretour.html"
 comments: true
 serif: true
 ---

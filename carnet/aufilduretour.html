@@ -1,14 +1,17 @@
 ---
 layout: page
-title: "Petites de mes nouvelles"
+title: "Au Fil du retour"
 schh: true
 role: index
 ---
-<div id="archives">
+<div class="archives">
+   <blockquote class="desc">
+	« Je me suis mis à l'idée de raconter mon arrivée ici. À tenter de communiquer sur ce monde… cette… chose qui nous englobe et qui nous fait réinventer ses lois physiques chaque jour. »
+   </blockquote>
    <div>
 	<ul>
    {% for post in site.posts %}
-	{% if post.series.name == "Petites de mes nouvelles" %}
+	{% if post.series.name == "Au Fil du retour" %}
 	    <li>
 		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
 		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>

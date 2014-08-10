@@ -63,9 +63,9 @@ linkoliste:
 
 series:
 - text: Au Fil du retour
-  url: /carnet/aufilduretour
+  url: /carnet/aufilduretour.html
 - text: Petites de mes nouvelles
-  url: /carnet/petitesdemesnouvelles
+  url: /carnet/petitesdemesnouvelles.html
 
   auto_ids: true,
   footnote_nr: 1
