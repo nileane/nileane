@@ -10,7 +10,7 @@ body,input {
 		font-size: 13pt;
 	}
 }
-a { text-decoration: none; color: #1681A5; cursor: pointer;}
+a { text-decoration: none; color: #F06051; cursor: pointer;}
 article a:hover { text-decoration: underline; }
 
 pre, code {
@@ -72,6 +72,7 @@ hr.wide {
 body > header {
     margin: 0 auto;
     padding: 50px 20px;
+    text-align: center;
 }
 body > header > div {
     max-width: 750px;
@@ -84,7 +85,7 @@ body > header h1 {
 }
 body > header h1 a {
     color: #333332;
-    font-weight: normal;
+    font-weight: 200;
     font-style: italic;
 }
 body > header h1 a:hover {
@@ -306,7 +307,7 @@ a.bouton:active {
 blockquote {
     font-style: italic;
     text-indent: 0;
-    border-left: 3px solid #1681A5;
+    border-left: 3px solid #F06051;
     margin: 22px 0;
     padding-left: 4.5%;
 }
