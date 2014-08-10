@@ -1,8 +1,10 @@
 ---
-title: Hæ.
+title: schoewilliam.
 description: "Carnet web d'un habitant de la banquise GNU/Linuxienne, prétendant à la liberté — William Dorffer, schoewilliam."
-layout: default
+layout: home
 role: home
 bodyclass: home
 ---
-{% include home.html %}
+{% assign page = site.posts.first %}
+{% assign content = page.content %}
+{% include postdetails.html %}

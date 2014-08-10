@@ -3,10 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
-    <!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
+    
     <meta charset="UTF-8">
     <title>{{ page.title | replace:'&nbsp;',' ' | escape }}</title>
     {% if page.description %}
@@ -21,7 +18,10 @@
     {% endif %}
   </head>
   
-  <body>
+  <body id="nav" {% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
+
+    {% include entete.html %}
+    
     {{ content }}
   </body>
 </html>
