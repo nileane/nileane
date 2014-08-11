@@ -1,26 +1,27 @@
 <section class="article {%  if page.centered == true %}centered{% endif %}">
-<article>
-<time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{% if page.en %}{{ page.date | date: "%-d %B %Y" }}{% else %}
-{{ page.date | date: "%-d %B %Y" }}{% endif %}</time>
+    <article>
+    <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top">{% if page.en %}{{ page.date | date: "%-d %B %Y" }}{% else %}
+    {{ page.date | date: "%-d %B %Y" }}{% endif %}</time>
 
-<hgroup>
-{% if page.link %}
-	<h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
-{% elsif page.series %}
-	<h1><a href="{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
-{% else %}
-	<h1>{{ page.title }}</h1>
-{% endif %}
-</hgroup>
+    <hgroup>
+    {% if page.link %}
+        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
+    {% elsif page.series %}
+        <h1><a href="{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
+    {% else %}
+        <h1>{{ page.title }}</h1>
+    {% endif %}
+    </hgroup>
 
-<div id="post"{% if page.link %} class=link{% endif %}>
-	{{ content }}
-</div>
+    <div id="post"{% if page.link %} class=link{% endif %}>
+        {{ content }}
+    </div>
 
-</article>
+    </article>
+
+    <div class="invitation">
+    <hr class="wide">If you have any thought, any reaction, any feedback you would like me to read, please don't hesitate to send them over to schoewilliam[at]legtux[dot]org, or to my <a href="http://diaspora-fr.org/u/schoewilliam">diaspora*</a> inbox !</div>
 </section>
-<div class="invitation">
-<hr class="wide">If you have any thought, any reaction, any feedback you would like me to read, please don't hesitate to send them over to schoewilliam[at]legtux[dot]org, or to my <a href="http://diaspora-fr.org/u/schoewilliam">diaspora*</a> inbox !</div>
 
 <div class="readnext">
 {% if page.previous.url %}

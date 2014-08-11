@@ -8,9 +8,11 @@ body,input {
 @media screen and (min-width:750px) {
 	body {
 		font-size: 13pt;
+    text-align: center;
+    margin-top: 50px;
 	}
 }
-a { text-decoration: none; color: #F06051; cursor: pointer;}
+a { text-decoration: none; color: #F06051; cursor: pointer; outline:0;}
 article a:hover { text-decoration: underline; }
 
 pre, code {
@@ -71,8 +73,10 @@ hr.wide {
 
 body > header {
     margin: 0 auto;
-    padding: 50px 20px;
-    text-align: center;
+    padding: 30px 20px;
+    display: inline-block;
+    text-align: right;
+    max-width: 220px;
 }
 body > header > div {
     max-width: 750px;
@@ -81,7 +85,8 @@ body > header > div {
 body > header h1 {
     vertical-align: middle;
     font-weight: 800;
-    margin: 0;
+    margin: 0 0 20px;
+    line-height: 1;
 }
 body > header h1 a {
     color: #333332;
@@ -92,10 +97,21 @@ body > header h1 a:hover {
     text-decoration: none;
 }
 body > header nav a:hover {
-    text-decoration: underline;
+    background-color: #F06051;
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.2);
+    color: #fff;
 }
 body > header nav {
     color: #333332;
+}
+body > header nav a {
+    display: inline-block;
+    padding: 5px 20px;
+    margin-right: -20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: box-shadow .2s,
+        background .2s;
 }
 
 .archives h2 {
@@ -155,10 +171,11 @@ body > header nav {
 
 /* article */
 section.article {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     padding: 30px 0;
     vertical-align: top;
+    text-align: left;
 }
 article,
 .invitation {
@@ -176,7 +193,7 @@ article,
     text-align: center;
     color: #888;
     max-width: 200px;
-    margin: 0 auto;
+    margin: -30px auto 0;
     font-style: italic;
 }
 
