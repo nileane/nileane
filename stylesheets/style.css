@@ -15,7 +15,17 @@ body {
     margin-top: 50px;
 	}
 }
-a { text-decoration: none; color: #F06051; cursor: pointer; outline:0;}
+a {
+    text-decoration: none;
+    color: #6EB68B;
+    cursor: pointer;
+    outline:0;
+    animation: 90s rainbow infinite;
+    -webkit-animation: 90s rainbow infinite;
+}
+a:hover {
+    color: #000 !important;
+}
 article a:hover { text-decoration: underline; }
 
 pre, code {
@@ -170,17 +180,19 @@ body > header > div > div {
 	padding: 8px 0;
 	text-align: left;
 	font-size: 115%;
+  font-weight: bold;
 }
 .archives div li > a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+  color: #000;
 }
 .archives a time {
-    color: #333332;
+    color: #818181;
+    font-weight:normal;
     display: block;
 }
 @media screen and (min-width:600px) {
 	.archives a time {
-	    font-style: italic;
 	    display: inline-block;
 	    margin-left:10px;
 	    float:right;
@@ -337,7 +349,7 @@ a.bouton:active {
 blockquote {
     font-style: italic;
     text-indent: 0;
-    border-left: 3px solid #F06051;
+    border-left: 3px solid #6EB68B;
     margin: 22px 0;
     padding-left: 4.5%;
 }
@@ -424,4 +436,25 @@ blockquote {
 @-webkit-keyframes fondu {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+@keyframes rainbow {
+    0% { color: #16a085; }
+    15% { color: #27ae60; }
+    30% { color: #2980b9; }
+    45% { color: #8e44ad; }
+    60% { color: #f39c12; }
+    75% { color: #d35400; }
+    90% { color: #c0392b; }
+    100% { color: #16a085; }
+}
+@-webkit-keyframes rainbow {
+    0% { color: #16a085; }
+    15% { color: #27ae60; }
+    30% { color: #2980b9; }
+    45% { color: #8e44ad; }
+    60% { color: #f39c12; }
+    75% { color: #d35400; }
+    90% { color: #c0392b; }
+    100% { color: #16a085; }
 }
