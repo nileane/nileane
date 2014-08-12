@@ -17,7 +17,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: #6EB68B;
+    color: #297FFF;
     cursor: pointer;
     outline:0;
     animation: 90s rainbow infinite;
@@ -418,10 +418,6 @@ blockquote {
     margin: 5px 0 15px;
     font-size: 180%;
     font-weight: bold;
-    opacity: 0.5;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
 }
 .readnext a:hover > h1 {
     opacity: 1;
