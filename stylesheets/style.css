@@ -351,7 +351,7 @@ a.bouton:active {
 blockquote {
     font-style: italic;
     text-indent: 0;
-    border-left: 3px solid #6EB68B;
+    border-left: 3px solid #000;
     margin: 22px 0;
     padding-left: 4.5%;
 }
