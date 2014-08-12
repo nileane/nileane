@@ -5,13 +5,9 @@ role: index
 ---
 
 <div class="archives">
-   <!-- <div class="desc">
-	   <a href="/flux.xml"><em>Flux RSS</em></a> ·
-       Series :
-	   {% for link in site.series %}
-	   <a href="{{ link.url }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-	   {% endfor %}
-   </div> -->
+   <div class="desc">
+	   <a href="/flux.xml"><em>Flux RSS</em></a>
+   </div>
    <div>
 	<ul>
    {% for post in site.posts %}
