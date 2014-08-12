@@ -18,7 +18,7 @@ ou plus hallucinant encore :
 
 Ce dernier vous intime que même votre dernière version de Firefox, d'Opéra, ou que sais-je encore, n'est pas à la hauteur de ce contenu.  
 Si on a de tels messages aujourd'hui, c'est parce que les développeurs sont tombés dans un travers hérité des années 2000 sous la domination d'Internet Explorer : on développe pour des navigateurs, au lieu de développer pour le web.  
-Avec une telle façon de penser viennent plusieurs manies, comme celle de ne pas de soucier des standards et d'utiliser des propriétés CSS préfixées et uniquement supportées à l'échelle d'un ou deux navigateurs, ou plus largement celle d'utiliser des technologies expérimentales soutenues par un seul acteur du web. C'est en cela qu'une phrase que je répète beaucoup prend tout son sens : 
+Avec une telle façon de penser viennent plusieurs manies, comme celle de ne pas se soucier des standards et d'utiliser des propriétés CSS préfixées et uniquement supportées à l'échelle d'un ou deux navigateurs, ou plus largement celle d'utiliser des technologies expérimentales soutenues par un seul acteur du web. C'est en cela qu'une phrase que je répète beaucoup prend tout son sens : 
 
 > **le web est la plateforme**.
 
