@@ -65,6 +65,14 @@ hr.wide {
     max-width: 750px;
     border-width: 2px;
 }
+hr.menu {
+    margin: 0 auto;
+}
+@media screen and (min-width:1070px) {
+    hr.menu {
+        margin: 20px 0 20px auto;
+    }
+}
 #post hr {
     margin: 50px auto;
 }
@@ -137,6 +145,7 @@ body > header > div > div {
         display: block;
     }
     body > header nav a {
+        display: block;
         padding: 5px 20px;
         margin-right: -20px;
     }
