@@ -162,9 +162,8 @@ body > header > div > div {
 	font-size: 60%;
 }
 .archives .desc {
-    margin-bottom: 30px;
     font-size: 110%;
-    margin: 0 0 25px;
+    margin: 0;
 }
 .archives div ul {
 	margin: 0;
