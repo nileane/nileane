@@ -24,7 +24,7 @@ a {
     -webkit-transition: all .2s;
 }
 a:hover {
-    color: #333 !important;;
+    color: #333 !important;
 }
 article a:hover { text-decoration: underline; }
 
