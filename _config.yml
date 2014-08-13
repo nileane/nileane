@@ -14,16 +14,12 @@ markdown:    kramdown
 permalink:   date
 
 nodes:
-- text: Arch Linux Forums
-  url: https://bbs.archlinux.org/profile.php?id=55538
-- text: Diaspora*
+- text: diaspora*
   url: https://diaspora-fr.org/u/schoewilliam
 - text: Github
   url: https://github.com/Schoewilliam
 - text: Mozillians
   url: https://mozillians.org/en-US/u/schoewilliam/
-- text: reddit
-  url: http://www.reddit.com/user/schoelcher/
 - text: GNU Social
   url: https://status.vinilox.eu/schoewilliam
 
@@ -72,11 +68,3 @@ series:
   entity_output: as_char
   toc_levels: 1..6
   use_coderay: false
-  
-  coderay:
-    coderay_wrap: div
-    coderay_line_numbers: inline
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: style

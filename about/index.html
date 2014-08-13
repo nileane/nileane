@@ -1,24 +1,22 @@
 ---
-title: "Je suis William Dorffer…"
+title: "À Propos"
 layout: page
 ---
 <div class="aboutme">
-	<p>Je suis un passionné du web. Aujourd'hui, mon temps libre de jeunot enthousiaste se partage entre ma modeste contribution mozillienne, mes écrits divers, ou encore mes expérimentations avec les technologies du web, et les logiciels libres.<br>
-	Oh et, je rêve de l'Islande.</p>
-	<p class="en"><span style="font-style:italic;color:#333332;">I am <strong>William Dorffer</strong>…</span> I am a web enthusiast. Today, as a young fellow, my spare time is shared between my modest contribution to Mozilla, my various writings, and my experiments with web technologies and free softwares.<br>
-	Oh and, I dream about Iceland.</p>
+	<p>Je suis William Dorffer, et suis un passionné du web. Mon temps libre consiste essentiellement en mon expérience du logiciel libre, mes écrits divers et variés, et ma contribution mozillienne.<br>
+	Oh et puis, je rêve de l'Islande parfois.</p>
+	<p class="en">I am William Dorffer, and I am a web enthusiast. I essentially spend my free time experimenting with free software, my various writings, or contributing to Mozilla's misson.<br>
+	Also, I happen to dream about Iceland.</p>
 
 	<br><hr><br>
 
-	<p><strong>Me contacter …  <span class="en">Contact me…</span></strong><br>
-	<a href=#>schoewilliam(at)legtux(dot)org</a></p>
+	<p><strong>Contact me</strong><br>
+	<a href="mailto:schoewilliam@legtux.org">schoewilliam[at]legtux[dot]org</a> ·
+	{% for link in site.nodes %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
 
-	<p>On me trouvera par là …  <span class="en">Find me there…</span><br>
-	{% for link in site.nodes %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
+	<p>Some Friends on the Internets<br>
+	{% for link in site.blogoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
 
-	<p>Quelques amis …  <span class="en">Some Friends…</span><br>
-	{% for link in site.blogoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
-
-	<p>Liens …  <span class="en">Links…</span><br>
-	{% for link in site.linkoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}.{% else %}, {% endif %}{% endfor %}</p>
+	<p>A few links I feel like sharing<br>
+	{% for link in site.linkoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
 </div>
