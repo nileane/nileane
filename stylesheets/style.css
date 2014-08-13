@@ -10,9 +10,9 @@ body {
 }
 @media screen and (min-width:750px) {
 	body {
-		font-size: 13pt;
-    text-align: center;
-    margin-top: 50px;
+          font-size: 13pt;
+          text-align: center;
+          margin-top: 50px;
 	}
 }
 a {
