@@ -5,7 +5,7 @@
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
 
     <meta charset="UTF-8">
-    <title>{{ page.title | replace:'&nbsp;',' ' | escape }} - schoewilliam</title>
+    <title>{{ page.title | replace:'&nbsp;',' ' | escape }} - Schoewilliam</title>
     {% if page.description %}
     <meta name="description" content="{{ page.description | escape }}">
     {% endif %}
@@ -23,5 +23,7 @@
     {% include entete.html %}
 
     {{ content }}
+
+    {% include pied.html %}
   </body>
 </html>

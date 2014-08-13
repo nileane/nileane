@@ -20,11 +20,11 @@ a {
     color: #297FFF;
     cursor: pointer;
     outline:0;
-    animation: 90s rainbow infinite;
-    -webkit-animation: 90s rainbow infinite;
+    transition: all .2s;
+    -webkit-transition: all .2s;
 }
 a:hover {
-    color: #000 !important;
+    color: #333 !important;;
 }
 article a:hover { text-decoration: underline; }
 
@@ -115,9 +115,6 @@ body > header nav a {
     padding: 5px;
     text-transform: uppercase;
     font-weight: 800;
-}
-body > header nav a:hover {
-    color: #000;
 }
 body > header > div > div {
     display: none;
@@ -436,23 +433,19 @@ blockquote {
     100% { opacity: 1; }
 }
 
-@keyframes rainbow {
-    0% { color: #16a085; }
-    15% { color: #27ae60; }
-    30% { color: #2980b9; }
-    45% { color: #8e44ad; }
-    60% { color: #f39c12; }
-    75% { color: #d35400; }
-    90% { color: #c0392b; }
-    100% { color: #16a085; }
-}
-@-webkit-keyframes rainbow {
-    0% { color: #16a085; }
-    15% { color: #27ae60; }
-    30% { color: #2980b9; }
-    45% { color: #8e44ad; }
-    60% { color: #f39c12; }
-    75% { color: #d35400; }
-    90% { color: #c0392b; }
-    100% { color: #16a085; }
-}
+/* couleurs */
+
+.turquoise {
+    color: #16a085; }
+.vert {
+    color: #27ae60; }
+.bleu {
+    color: #2980b9; }
+.violet {
+    color: #8e44ad; }
+.jaune {
+    color: #f39c12; }
+.orange {
+    color: #d35400; }
+.rouge {
+    color: #c0392b; }
