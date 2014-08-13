@@ -5,5 +5,5 @@ var i,
     allLinks = document.getElementsByTagName("a"),
     total = allLinks.length;
 for (i = 0; i < total; i++) {
-    allLinks[i].className = colorpicked;
+    allLinks[i].classList.add(colorpicked);
 }
