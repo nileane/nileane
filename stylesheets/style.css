@@ -108,7 +108,7 @@ body > header h1 {
     line-height: 1;
 }
 body > header h1 a {
-    color: #333332;
+    color: #333332 !important;
     font-weight: 300;
     font-style: italic;
 }
@@ -366,7 +366,8 @@ blockquote {
 .aboutme p {
     font-size: 125%;
 }
-.aboutme .en {
+.aboutme .en,
+.apps .en {
 	color: #777;
 }
 .aboutme h2 {
