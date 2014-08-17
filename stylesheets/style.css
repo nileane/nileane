@@ -136,6 +136,7 @@ body > header > div > div {
         max-width: 220px;
         display: inline-block;
         text-align: right;
+        padding: 30px 20px 0 0;
     }
     body > header h1 {
         margin: 20px 0;
@@ -184,11 +185,12 @@ body > header > div > div {
 	padding: 0;
 }
 .archives div li > a {
-	display: inline-block;
-	padding: 8px 0;
-	text-align: left;
-	font-size: 115%;
-  font-weight: bold;
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 8px 0;
+    text-align: left;
+    font-size: 115%;
+    font-weight: bold;
 }
 .archives div li > a:hover {
 	text-decoration: none;
