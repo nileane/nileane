@@ -45,53 +45,7 @@ code {
     hyphens: none;
     -moz-hyphens: none;
     -webkit-hyphens:  none;
-    -o-hyphens: none;
-    -ms-hyphens: none;
 }
-
-pre code {
-    box-shadow: 0 0;
-    padding: 0;
-}
-
-hr {
-    border: 1px solid #DEDEDC;
-    display: block;
-    margin: 20px auto;
-    width: 20%;
-}
-hr.wide {
-    width: 100%;
-    max-width: 750px;
-    border-width: 2px;
-}
-hr.menu {
-    margin: 0 auto;
-}
-@media screen and (min-width:1070px) {
-    hr.menu {
-        margin: 20px 0 20px auto;
-    }
-}
-#post hr {
-    margin: 50px auto;
-}
-
-.label {
-    font-size: 80%;
-    padding: 2px 8px;
-    background-color: #ddd;
-    font-weight: bold;
-    color: #fff;
-    border-radius: 3px;
-}
-.label.black {
-    background-color: #333;
-}
-.label.grey {
-    background-color: #bbb;
-}
-
 body > header {
     margin: 0 auto 20px;
     padding: 30px 20px;
@@ -108,7 +62,6 @@ body > header h1 {
     line-height: 1;
 }
 body > header h1 a {
-    color: #333332 !important;
     font-weight: 300;
     font-style: italic;
 }
