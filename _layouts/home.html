@@ -13,6 +13,23 @@
     <meta content='initial-scale=1.0' name='viewport'>
 
     <link rel="icon" type="image/png" href="/images/fav.png">
+        <style>
+      body > header nav ul li:first-of-type a {
+	  color: #333332;
+	  position: relative;
+	  cursor: default;
+	  transform: translate(-8px, 0);
+      }
+      body > header nav ul li:first-of-type a:after {
+	  content: "●";
+	  position: absolute;
+	  right: -25px;
+	  top: 50%;
+	  line-height: 10px;
+	  margin-top: -5px;
+	  font-size: 120%;
+      }
+    </style>
     {% if page.styles %}
     <style type="text/css" media="screen">{{ page.styles }}</style>
     {% endif %}

@@ -26,14 +26,12 @@ nodes:
 blogoliste:
 - text: BlogiGor
   url: http://id-libre.org/blogigor
-- text: Dans la tête du Linuxien
-  url: http://tetedulinuxien.fr
+- text: Ypnose
+  url: http://ywstd.fr/
 - text: fabienwang
   url: http://fabienwang.eliteheberg.fr
 - text: Identitools
   url: http://identitools.fr
-- text: mart-e
-  url: http://mart-e.be
 - text: Olivier Dossmann
   url: https://olivier.dossmann.net/blog/
 - text: Postblue
@@ -44,6 +42,8 @@ blogoliste:
   url: http://younishd.fr/
 
 linkoliste:
+- text: Blog de dada
+  url: http://www.dadall.info/blog/
 - text: Jean Baptiste Favre
   url: http://www.jbfavre.org/
 - text: Legtux
@@ -54,8 +54,8 @@ linkoliste:
   url: http://ploum.net/
 - text: Sebsauvage, les trucs qui l'énervent.
   url: http://www.sebsauvage.net/rhaa/
-- text: Source, Radio Campus Bruxelles
-  url: http://src.radiocampus.be/
+- text: 22decembre
+  url: http://www.22decembre.eu/
 
 series:
 - text: Au Fil du retour

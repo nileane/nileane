@@ -71,6 +71,14 @@ hr.menu {
    hr.menu {
       margin: 20px 0 20px auto;
    }
+   .mobileon {
+     display: none;
+   }
+}
+@media screen and (max-width:1069px) {
+   .mobileoff {
+     display: none;
+   }
 }
 #post hr {
    margin: 50px auto;
@@ -104,10 +112,15 @@ body > header h1 {
     font-weight: 800;
     margin: 0 0 5px;
     line-height: 1;
+    transition: all .2s;
+}
+body > header h1:hover {
+    transform: translate(-8px, 0);
 }
 body > header h1 a {
     font-weight: 300;
     font-style: italic;
+    color: #333332 !important;
 }
 body > header h1 a:hover {
     text-decoration: none;
@@ -118,8 +131,45 @@ body > header nav {
 body > header nav a {
     display: inline-block;
     padding: 5px;
-    text-transform: uppercase;
     font-weight: 800;
+    text-transform: uppercase;
+}
+body > header nav ul {
+    list-style: none;
+    hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    padding: 0;
+    margin: 0;
+}
+body > header nav ul a {
+    text-transform: none;
+    margin: 0 0 8px;
+    transition: all .2s;
+}
+body > header nav ul a:not(.active):hover {
+    transform: translate(-8px, 0);
+}
+body > header nav ul a.active {
+    color: #333332;
+    position: relative;
+    cursor: default;
+    transform: translate(-8px, 0);
+}
+body > header nav ul a.active:after {
+    content: "●";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    line-height: 10px;
+    margin-top: -5px;
+    font-size: 120%;
+}
+body > header nav ul time {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    font-size: 80%;
+    display: block;
 }
 body > header > div > div {
     display: none;
@@ -136,16 +186,14 @@ body > header > div > div {
         padding: 30px 20px 0 0;
     }
     body > header h1 {
-        margin: 20px 0;
+        margin: 8px 0;
     }
     body > header > div > div {
         margin: 0 0 20px;
         display: block;
     }
     body > header nav a {
-        display: block;
-        padding: 5px 20px;
-        margin-right: -20px;
+        padding: 5px 0 5px 5px;
     }
     section.article {
         display: inline-block;
