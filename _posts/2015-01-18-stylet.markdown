@@ -7,15 +7,16 @@ title: "Heureux de mon stylet."
 
 Cela fait maintenant plusieurs mois que j'ai décidé de gérer ma vie et mes outils universitaires de manière totalement numérique. C'est plutôt simple après tout : une petite instance d'ownCloud pour synchroniser mes fichiers, et un calendrier/agenda, une syntaxe simpliste pour la prise de notes (markdown), et… une tablette. (Eh oui)
 
-Lors des premiers jours, c'était évidemment mon ordinateur portable que j'amenais partout avec moi. Il ne quittait pas ma sacoche de tous les jours, et ce même si, sur mon bureau chez moi, j'avais une Nexus 10 que j'allumais de temps à autres pour y mettre à jour Firefox Nightly et aussitôt la poser pour l'oublier à nouveau pendant quelques jours (elle a une sacrée autonomie en veille).
+Lors des premiers jours, c'était évidemment mon ordinateur portable que j'amenais partout avec moi. Il ne quittait pas ma sacoche de tous les jours, et ce même si, sur mon bureau chez moi, j'avais une **Nexus 10** que j'allumais de temps à autres pour y mettre à jour Firefox Nightly et aussitôt la poser pour l'oublier à nouveau pendant quelques jours (elle a une sacrée autonomie en veille).
 
 En bref, par la suite, mon ordinateur portable me semblait de plus en plus encombrant. Et aussi, je ne m'en servais que  pour la moitié de mes cours (ceux les plus magistraux — avoir un ordinateur pour mes cours de langue me donnait comme l'impression de m'y aliener. Alors, j'ai voulu tenter de rendre cette tablette utile.
 
 ## Mais comment rendre ma tablette utilisable ?
 
 Oui oui, c'est une vraie question que je me pose et dont la réponse irait facilement de soi.
-C'est un appareil (la *Nexus 10*, pour rappel) qui cumule les bons points. Elle est légère, possède un très bel écran, réalise de belles performances graphiques, robuste. Sauf qu'il y a deux points qui, pour moi, l'avait éliminée d'office pour l'utiliser au quotidien dans ma vie universitaire (entre autres) :
-* **sa seule interface est un écran tactile**,
+C'est un appareil qui cumule les bons points. Elle est légère, possède un très bel écran, réalise de belles performances graphiques, robuste. Sauf qu'il y a deux points qui, pour moi, l'avait éliminée d'office pour l'utiliser au quotidien dans ma vie universitaire (entre autres) :
+
+* sa seule interface est un écran tactile,
 * elle tourne sur Android.
 
 ### Un clavier … ? …
@@ -39,7 +40,9 @@ C'est peut-être étrange, mais le choix du stylet comme interface essentielle d
 ### … Yup.
 
 Si je devais faire une toute petite liste des bons points que j'accorderais au stylet :
+
 * carrément plus léger qu'un clavier,
 * moins consommateur qu'un clavier (qui nécessite le bluetooth — sur Android),
 * des utilisations créatrices infiniment variées (du dessin à la productivité, en passant par la calligraphie),
-* vraiment léger (#2, parce que c'est important).
+* vraiment léger (#2, parce que c'est important),
+* écrire sur une tablette avec la même gestuelle que celle d'un cahier ou d'un bloc-notes m'a débarassé de cette impression de distance prise avec mon/mes interlocuteur(s).
