@@ -30,7 +30,7 @@ En me baladant à la FNAC, sans même le rechercher, j'ai croisé un stylet, le 
 
 Il ne coutait pas si cher. Alors je l'ai essayé par simple curiosité. C'était plutôt amusant, de pouvoir dessiner en vectoriel, de pouvoir utiliser mon écriture manuscrite dans le monde numérique (ce que l'on fait assez rarement, il faut le dire).
 
-J'ai fini par trouver de formidables applications de prise de notes pensées pour l'écriture manuscrite (mon choix s'est porté sur [**Inkredible**](http://www.inkredibleapp.com/, duquel j'exporte mes écrits en pdf, avant de les synchroniser).  
+J'ai fini par trouver de formidables applications de prise de notes pensées pour l'écriture manuscrite (mon choix s'est porté sur [**Inkredible**](http://www.inkredibleapp.com/), duquel j'exporte mes écrits en pdf, avant de les synchroniser).  
 (*L'expérience de l'écriture avec un stylet est très dépendante du logiciel et de l'application avec lesquels on l'utilise. Elle peut ainsi être très bonne comme très mauvaise en fonction de cela — c'est pourquoi je vous conseille de ne pas hésiter à en tester plusieurs avant de vous faire un avis.*)
 
 [![**Photo de la tablette et de l'application Inkredible**](/images/stylet2.jpg)](/images/stylet2.jpg)
