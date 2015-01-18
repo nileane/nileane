@@ -122,7 +122,7 @@ body > header h1 a:hover {
     text-decoration: none;
 }
 body > header h1 a img {
-    max-width: 100%;
+    max-width: 220px;
     height: auto;
 }
 body > header nav {
