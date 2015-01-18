@@ -13,7 +13,7 @@ En bref, par la suite, mon ordinateur portable me semblait de plus en plus encom
 
 ## Mais comment rendre ma tablette utilisable ?
 
-Oui oui, c'est une vraie question que je me pose et dont la réponse irait facilement de soi.
+Oui oui, c'est une vraie question que je me pose et dont la réponse irait facilement de soi.  
 C'est un appareil qui cumule les bons points. Elle est légère, possède un très bel écran, réalise de belles performances graphiques, robuste. Sauf qu'il y a deux points qui, pour moi, l'avait éliminée d'office pour l'utiliser au quotidien dans ma vie universitaire (entre autres) :
 
 * sa seule interface est un écran tactile,
@@ -22,7 +22,7 @@ C'est un appareil qui cumule les bons points. Elle est légère, possède un tr�
 ### Un clavier … ? …
 Et c'est dans cet état d'esprit que **ma première mesure pour arriver à l'utiliser au quotidien a été de lui acheter un clavier**. Et avec ça, je suis même allé jusqu'à acheter une souris. Aussi, je m'étais mis à la recherche de bons éditeurs de markdown pour Android.
 
-Le résultat était mitigé. J'ai essayé deux claviers. Le premier était pratique et pouvait se clipser à la tablette — je gardais donc la portabilité de la Nexus 10 qui me plait tant. Sauf que ses touches étaient beaucoup trop petites et peu confortables. Quant au second, c'est un clavier de bureau connecté en bluetooth que j'ai fini par acheter en remplacement du premier – c'était juste détestable d'avoir à le faire entrer dans ma sacoche (et pourtant, ce n'est pas un bien gros clavier, bien au contraire).
+Le résultat était mitigé. J'ai essayé deux claviers. Le premier était pratique et pouvait se clipser à la tablette — je gardais donc la portabilité de la Nexus 10 qui me plait tant. Sauf que ses touches étaient beaucoup trop petites et peu confortables. Quant au second, c'est un clavier de bureau connecté en bluetooth que j'ai fini par acheter en remplacement du premier – c'était juste détestable d'avoir à le faire entrer dans ma sacoche (et pourtant, ce n'est pas un bien gros clavier, bien au contraire).  
 *Le problème est donc bien au niveau de l'interface et de sa praticité. Du côté de l'édition, et de la synchronisation, j'étais et je suis plutôt content.*
 
 ### … Nope. Un stylet… ? …
@@ -30,7 +30,7 @@ En me baladant à la FNAC, sans même le rechercher, j'ai croisé un stylet, le 
 
 Il ne coutait pas si cher. Alors je l'ai essayé par simple curiosité. C'était plutôt amusant, de pouvoir dessiner en vectoriel, de pouvoir utiliser mon écriture manuscrite dans le monde numérique (ce que l'on fait assez rarement, il faut le dire).
 
-J'ai fini par trouver de formidables applications de prise de notes pensées pour l'écriture manuscrite (mon choix s'est porté sur [**Inkredible**](http://www.inkredibleapp.com/, duquel j'exporte mes écrits en pdf, avant de les synchroniser).
+J'ai fini par trouver de formidables applications de prise de notes pensées pour l'écriture manuscrite (mon choix s'est porté sur [**Inkredible**](http://www.inkredibleapp.com/, duquel j'exporte mes écrits en pdf, avant de les synchroniser).  
 (*L'expérience de l'écriture avec un stylet est très dépendante du logiciel et de l'application avec lesquels on l'utilise. Elle peut ainsi être très bonne comme très mauvaise en fonction de cela — c'est pourquoi je vous conseille de ne pas hésiter à en tester plusieurs avant de vous faire un avis.*)
 
 [![**Photo de la tablette et de l'application Inkredible**](/images/stylet2.jpg)](/images/stylet2.jpg)
@@ -46,3 +46,5 @@ Si je devais faire une toute petite liste des bons points que j'accorderais au s
 * des utilisations créatrices infiniment variées (du dessin à la productivité, en passant par la calligraphie),
 * vraiment léger (#2, parce que c'est important),
 * écrire sur une tablette avec la même gestuelle que celle d'un cahier ou d'un bloc-notes m'a débarassé de cette impression de distance prise avec mon/mes interlocuteur(s).
+
+Je ne pensais pas que j'aurais de quoi m'exprimer sur un *stylet* un jour. Mais il est vrai, cet objet me plait.
