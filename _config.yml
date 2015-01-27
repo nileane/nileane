@@ -34,7 +34,7 @@ use_coderay: false
 maintitle: Schoewilliam<span>.fr</span>
 
 # Enter below a short description that will sit next to your title.
-maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about><span class=oi data-glyph=info></span> About me</a>
+maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about.html><span class=oi data-glyph=info></span> About me</a>
 
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
