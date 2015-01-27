@@ -226,7 +226,6 @@ hr.menu {
 #ntitle .nlinks {
     font-weight: 800;
     text-transform: uppercase;
-    max-width: 200px;
     text-align: right;
     padding: 0 0 0 10px;
     float: right;
