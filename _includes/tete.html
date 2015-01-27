@@ -1,0 +1,10 @@
+<nav id="ntitle">
+<div>
+  <a href="/"><h1>{{ site.maintitle }}</h1></a>
+  <div class="desc">{{ site.maindesc }}</div>
+  <div class="nlinks">{% for link in site.menus %}<span><a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last == false %} <span class="mobileoff">·</span> {% endif %}</span> {% endfor %}
+  </div>
+  
+  <span class="oi mobileon menumarker" data-glyph="menu"></span>
+</div>
+</nav>

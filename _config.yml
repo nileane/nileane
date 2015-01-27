@@ -16,7 +16,7 @@ permalink:   date
 # Enter below the title of your weblog/website (use <span></span> to nicely fade out some part of it)
 maintitle: Schoewilliam<span>.fr</span>
 # Enter below a short description that will sit next to your title.
-maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about><span class=oi data-glyph=info></span></a>
+maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about><span class=oi data-glyph=info></span> About me</a>
 
 # Enter below the items of your main menu
 menus:
@@ -26,8 +26,6 @@ menus:
   url: /carnet/aufilduretour.html
 - text: Apps
   url: /apps
-- text: À propos
-  url: /about
 
 nodes:
 - text: diaspora*

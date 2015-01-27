@@ -28,8 +28,9 @@
   
   <body {% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
 
+    {% include tete.html %}
+    
     {{ content }}
 
-    {% include pied.html %}
   </body>
 </html>
