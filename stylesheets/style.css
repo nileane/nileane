@@ -230,12 +230,7 @@ hr.menu {
 #ntitle .nlinks a {
     display: inline-block;
 }
-#ntitle .menumarker {
-    cursor: pointer;
-    float: right;
-    position: absolute;
-    top: 6px;
-    right: 25px;
+#ntitle .button {
     font-size: 100%;
     width: 35px;
     height: 35px;
@@ -243,6 +238,19 @@ hr.menu {
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
+    cursor: pointer;
+    display: inline-block;
+}
+#ntitle .button.menumarker {
+    float: right;
+    position: absolute;
+    top: 6px;
+    right: 25px;
+}
+#ntitle .button.rss {
+    float: right;
+    margin-top: 6px;
+    margin-left: 8px;
 }
 @media screen and (max-width:799px) {
    #ntitle {
