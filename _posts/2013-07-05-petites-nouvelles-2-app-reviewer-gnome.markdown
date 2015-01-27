@@ -7,7 +7,7 @@ series:
   name: "Petites de mes nouvelles"
   episode: "retour à GNOME, app reviewer, du beau CSS."
   index: 2
-  url: "/carnet/petitesdemesnouvelles.html"
+  url: "/archive/petitesdemesnouvelles.html"
 ---
 *Les heures d'ennui peuvent toujours se rendre utiles. Pour preuve, me voici avec un carnet tout neuf tout beau, fruit de quelques amusements avec CSS3.*
 

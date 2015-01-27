@@ -6,7 +6,7 @@ series:
   name: "Au Fil du retour"
   episode: "le blanc des entrées."
   index: 4
-  url: "/carnet/aufilduretour.html"
+  url: "/archive/aufilduretour.html"
 ---
 [(…)](/2013/11/03/au-fil-du-retour-number-3-la-musique-doctepo.html)
 

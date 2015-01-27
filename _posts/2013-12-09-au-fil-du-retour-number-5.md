@@ -6,7 +6,7 @@ series:
   name: "Au Fil du retour"
   episode: "petite chute dans la Plaine Bleue."
   index: 5
-  url: "/carnet/aufilduretour.html"
+  url: "/archive/aufilduretour.html"
 ---
 [(...)](/2013/12/04/au-fil-du-retour-number-4-le-blanc-des-entrees.html) *Je passe l’ouverture. Voici Octepo.*
 

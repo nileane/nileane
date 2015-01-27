@@ -7,7 +7,7 @@ series:
   name: "Petites de mes nouvelles"
   episode: "Boot2Gecko, StatusNet …"
   index: 1
-  url: "/carnet/petitesdemesnouvelles.html"
+  url: "/archive/petitesdemesnouvelles.html"
 ---
 *Le ciel est clair, et les petits changements ne se bousculent pas. Maaaais, voilà tout de même une petite mise à jour avant la régularité retrouvée de l'été prochain.*
 

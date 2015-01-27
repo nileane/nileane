@@ -6,7 +6,7 @@ series:
   name: "Petites de mes nouvelles"
   episode: "vers Lyon !"
   index: 4
-  url: "/carnet/petitesdemesnouvelles.html"
+  url: "/archive/petitesdemesnouvelles.html"
 ---
 *Durant ce mois d'août ainsi que celui de septembre prochain, **je déménage**. Ciao à l'île de la Réunion de l'enfance et de l'adolescence. Je serai dès le 1er septembre prochain à Lyon. Pas mal de changements à prévoir donc.*
 
