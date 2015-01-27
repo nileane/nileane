@@ -6,14 +6,15 @@
 
 # Global
 safe: false
-url: http://schoewilliam.fr # Important to have the links work (leave a trailing /)
+url: http://schoewilliam.fr 
 source:      .
 destination: ./_site
 plugins:     ./_plugins
 
 # Server
 port: 4000
-base-url: /
+base-url: http://schoewilliam.fr/ # Important to have the links work (leave a trailing /)
+#base-url: http://localhost:4000/ # Important to have the links work (leave a trailing /)
 
 # Build options
 future:      true
