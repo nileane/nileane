@@ -1,9 +1,10 @@
 @import url('/fonts/Fira/fira.css');
+@import url('/fonts/openiconic/css/open-iconic.css');
 
 body,input {
     font: 11pt/1.5 "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
-    margin: 0;
-    background: #FAF8F2;
+    margin: 0 0 70px;
+    background: #fff;
 }
 body {
     margin-top: 30px;
@@ -17,7 +18,7 @@ body {
 }
 a {
     text-decoration: none;
-    color: #297FFF;
+    color: #16a085;
     cursor: pointer;
     outline:0;
     transition: all .2s;
@@ -71,13 +72,34 @@ hr.menu {
    hr.menu {
       margin: 20px 0 20px auto;
    }
+}
+@media screen and (min-width:750px) {
    .mobileon {
-     display: none;
+     display: none !important;
    }
 }
-@media screen and (max-width:1069px) {
+@media screen and (max-width:749px) {
    .mobileoff {
+     display: none !important;
+   }
+   #ntitle {
+     font-size: 100% !important;
+     transition: all .5s;
+     z-index:300;
+     -webkit-transition: all .5s;
+   }
+   #ntitle:hover {
+     height: 200px;
+     box-shadow: 0px -2px rgba(255, 255, 255, 0.92), 0px -3px rgba(0, 0, 0, 0.05), 0 0 0 3000px rgba(0, 0, 0, .4) !important;
+     background-color: #fff;
+   }
+   #ntitle:hover .oi.mobileon {
      display: none;
+   }
+   #ntitle .nlinks {
+     display: block;
+     float: none !important;
+     max-width: none !important;
    }
 }
 #post hr {
@@ -98,103 +120,7 @@ hr.menu {
    background-color: #bbb;
 }
 
-body > header {
-    margin: 0 auto 20px;
-    padding: 30px 20px;
-    text-align: center;
-}
-body > header > div {
-    max-width: 750px;
-    margin: 0 auto;
-}
-body > header h1 {
-    vertical-align: middle;
-    font-weight: 800;
-    margin: 0 0 5px;
-    line-height: 1;
-}
-body > header h1 a {
-    font-weight: 300;
-    font-style: italic;
-    color: #333332 !important;
-}
-body > header h1 a:hover {
-    text-decoration: none;
-}
-body > header h1 a img {
-    max-width: 220px;
-    height: auto;
-}
-body > header nav {
-    color: #333332;
-}
-body > header nav a {
-    display: inline-block;
-    padding: 5px;
-    font-weight: 800;
-    text-transform: uppercase;
-}
-body > header nav ul {
-    list-style: none;
-    hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    padding: 0;
-    margin: 0;
-}
-body > header nav ul a {
-    text-transform: none;
-    margin: 0 0 8px;
-    transition: all .2s;
-}
-body > header nav ul a:not(.active):hover {
-    transform: translate(-8px, 0);
-}
-body > header nav ul a.active {
-    color: #333332;
-    position: relative;
-    cursor: default;
-    transform: translate(-8px, 0);
-}
-body > header nav ul a.active:after {
-    content: "●";
-    position: absolute;
-    right: -25px;
-    top: 50%;
-    line-height: 10px;
-    margin-top: -5px;
-    font-size: 120%;
-}
-body > header nav ul time {
-    color: rgba(0, 0, 0, 0.6);
-    font-weight: normal;
-    font-size: 80%;
-    display: block;
-}
-body > header > div > div {
-    display: none;
-    font-style: italic;
-    font-size: 90%;
-    margin: 0px 0px 5px;
-    color: #818181;
-}
 @media screen and (min-width:1070px) {
-    body > header {
-        max-width: 220px;
-        display: inline-block;
-        text-align: right;
-        padding: 30px 20px 0 0;
-    }
-    body > header h1 {
-        margin: 8px 0;
-    }
-    body > header > div > div {
-        margin: 0 0 20px;
-        display: block;
-    }
-    body > header nav a {
-        padding: 5px 0 5px 5px;
-    }
     section.article {
         display: inline-block;
     }
@@ -219,10 +145,12 @@ body > header > div > div {
 .archives .desc {
     font-size: 110%;
     margin: 0 0 10px;
+    text-align: center;
 }
 .archives div ul {
 	margin: 0;
 	padding: 0;
+	text-align: left;
 }
 .archives div li {
 	list-style: none;
@@ -245,17 +173,94 @@ body > header > div > div {
     color: #818181;
     font-weight:normal;
     display: block;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 70%;
+    letter-spacing: 2px;
 }
 @media screen and (min-width:600px) {
 	.archives a time {
 	    display: inline-block;
 	    margin-left:10px;
+	    padding-top: 6px;
 	    float:right;
 	}
 }
 
-/* fin header */
-
+/* Ntitle (Navigation Title) */
+#ntitle {
+    height: 50px;
+    position: fixed;
+    font-size: 85%;
+    width: calc(100% - 50px);
+    bottom: 0px;
+    display: block;
+    background-color: rgba(255, 255, 255, .92);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 0 25px;
+    text-align: left;
+    box-shadow: 0px -2px rgba(255, 255, 255, .92), 0px -3px rgba(0, 0, 0, 0.05);
+    animation: slideup .5s 1;
+    -webkit-animation: slideup .5s 1;
+}
+#ntitle > div {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+}
+#ntitle > div > * {
+    line-height: 50px;
+    max-height: 50px;
+    display: inline-block;
+    text-align: left;
+}
+#ntitle h1 {
+    margin: 0px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    font-size: 120%;
+    transition: all .2s;
+}
+#ntitle h1:hover {
+    opacity: .75;
+}
+#ntitle h1 span {
+    text-transform: none;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    padding-left: 2px;
+}
+#ntitle .desc {
+    font-style: italic;
+    font-size: 95%;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 18px;
+    max-width: 280px;
+    vertical-align: top;
+    padding: 7px 0 0 10px;
+}
+#ntitle .nlinks {
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 18px;
+    max-width: 200px;
+    text-align: right;
+    padding: 7px 0px 0px 10px;
+    float: right;
+    color: #888;
+}
+#ntitle .nlinks a {
+    display: inline-block;
+}
+#ntitle .nlinks a:after:not(:last-of-type) {
+    content: " · ";
+    color: #000;
+    opacity: .7;
+}
 
 /* article */
 section.article {
@@ -273,22 +278,36 @@ article,
 }
 .invitation {
     font-style: italic;
+    color: #888;
 }
 
-.top {
+.top  {
     display: block;
     text-align: center;
     color: #888;
-    max-width: 200px;
-    margin: -30px auto 0;
-    font-style: italic;
+    margin: 0px auto;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 70%;
+    font-weight: 500;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 25px;
+    line-height: 26px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0px 2px rgba(255, 255, 255, 0.92), 0px 3px rgba(0, 0, 0, 0.05);
+    animation: slidedown .5s 1;
+    -webkit-animation: slidedown .5s 1;
 }
-
 article h1 {
     color: #333332;
     font-size: 220%;
     margin: 0 5px 35px 0;
     line-height: 1.1;
+    text-align: center;
 }
 .centered article h1,
 .centered #post {
@@ -330,7 +349,6 @@ pre {
     color: #333332;
     font-size: 130%;
     line-height: 1.4;
-    text-align: justify;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
@@ -406,6 +424,8 @@ blockquote {
     border-left: 3px solid #000;
     margin: 22px 0;
     padding-left: 4.5%;
+    font-weight: 300;
+    font-size: 105%;
 }
 .aboutme {
 	text-align: left;
@@ -463,8 +483,11 @@ blockquote {
 .readnext a > span {
     display: block;
     text-align: center;
-    margin-top: 60px;
-    font-style: italic;
+    color: #888;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 70%;
+    letter-spacing: 3px;
 }
 .readnext a > h1 {
     line-height: 1.1;
@@ -488,20 +511,19 @@ blockquote {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-
-/* couleurs */
-
-.turquoise {
-    color: #16a085; }
-.vert {
-    color: #27ae60; }
-.bleu {
-    color: #2980b9; }
-.violet {
-    color: #8e44ad; }
-.jaune {
-    color: #f39c12; }
-.orange {
-    color: #d35400; }
-.rouge {
-    color: #c0392b; }
+@keyframes slideup {
+    0% { transform: translate(0, 60px); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+}
+@-webkit-keyframes slideup {
+    0% { -webkit-transform: translate(0, 60px); opacity: 0; }
+    100% { -webkit-transform: translate(0, 0); opacity: 1; }
+}
+@keyframes slidedown {
+    0% { transform: translate(0, -60px); opacity: 0; }
+    100% { transform: translate(0, 0); opacity: 1; }
+}
+@-webkit-keyframes slidedown {
+    0% { -webkit-transform: translate(0, -60px); opacity: 0; }
+    100% { -webkit-transform: translate(0, 0); opacity: 1; }
+}

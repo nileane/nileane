@@ -1,7 +1,7 @@
 safe: false
 port: 4000
 base-url: /
-url: http://schoewilliam.legtux.org
+url: http://schoewilliam.fr
 
 source:      .
 destination: ./_site
@@ -12,6 +12,22 @@ lsi:         false
 highlighter: pygments
 markdown:    kramdown
 permalink:   date
+
+# Enter below the title of your weblog/website (use <span></span> to nicely fade out some part of it)
+maintitle: Schoewilliam<span>.fr</span>
+# Enter below a short description that will sit next to your title.
+maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about><span class=oi data-glyph=info></span></a>
+
+# Enter below the items of your main menu
+menus:
+- text: Carnet
+  url: /carnet
+- text: Au Fil du retour
+  url: /carnet/aufilduretour.html
+- text: Apps
+  url: /apps
+- text: À propos
+  url: /about
 
 nodes:
 - text: diaspora*

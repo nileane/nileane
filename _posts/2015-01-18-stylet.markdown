@@ -3,8 +3,6 @@ layout: post
 published: true
 title: "Heureux de mon stylet."
 ---
-[![**Ou comment j'ai pu être productif avec une tablette.**](/images/stylet_title.png)](/images/stylet_title.png)
-
 Cela fait maintenant plusieurs mois que j'ai décidé de gérer ma vie et mes outils universitaires de manière totalement numérique. C'est plutôt simple après tout : une petite instance d'ownCloud pour synchroniser mes fichiers, et un calendrier/agenda, une syntaxe simpliste pour la prise de notes (markdown), et… une tablette. (Eh oui)
 
 Lors des premiers jours, c'était évidemment mon ordinateur portable que j'amenais partout avec moi. Il ne quittait pas ma sacoche de tous les jours, et ce même si, sur mon bureau chez moi, j'avais une **Nexus 10** que j'allumais de temps à autres pour y mettre à jour Firefox Nightly et aussitôt la poser pour l'oublier à nouveau pendant quelques jours (elle a une sacrée autonomie en veille).
