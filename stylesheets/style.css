@@ -247,19 +247,20 @@ hr.menu {
 @media screen and (max-width:799px) {
    #ntitle {
      font-size: 100% !important;
-     transition: all .5s;
      z-index:300;
-     -webkit-transition: all .5s;
-     -webkit-transform: translateX(0%);
-     transform: translateX(0%);
      top: 0;
      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+     transition: all .5s;
+     -webkit-transition: all .5s;
+     transform: translateX(0%);
+     -webkit-transform: translateX(0%);
      animation: slidedown .5s 1;
      -webkit-animation: slidedown .5s 1;
+     box-shadow: 0 0 0 3000px transparent !important;
    }
    #ntitle:hover {
      height: 320px;
-     box-shadow: 0px -2px rgba(255, 255, 255, 0.92), 0px -3px rgba(0, 0, 0, 0.05), 0 0 0 3000px rgba(0, 0, 0, .4) !important;
+     box-shadow: 0 0 0 3000px rgba(0, 0, 0, .4) !important;
      background-color: #fff;
    }
    #ntitle:hover .oi.mobileon {
