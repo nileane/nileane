@@ -19,6 +19,10 @@
     <meta name="description" content="{{ site.description | escape }}">
     {% endif %}
     
+    {% if site.url %}
+    <base href="{{ site.url }}">
+    {% endif %}
+    
     <meta name="author" content="{{ site.author }}">
     <meta content='initial-scale=1.0' name='viewport'>
 

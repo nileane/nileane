@@ -1,8 +1,12 @@
 ## Configuration file for Jekyll & Schrift template
 
+#
+# Jekyll configuration
+#
+
 # Global
 safe: false
-url: http://schoewilliam.fr
+url: http://schoewilliam.fr # Important to have the links work (leave a trailing /)
 source:      .
 destination: ./_site
 plugins:     ./_plugins
