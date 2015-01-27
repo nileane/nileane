@@ -39,7 +39,7 @@ maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/abou
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
-- text: Carnet
+- text: Archive
   url: /archive
 - text: Au Fil du retour
   url: /archive/aufilduretour.html
