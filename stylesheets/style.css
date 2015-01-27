@@ -126,7 +126,7 @@ hr.menu {
 .archives .desc {
     font-size: 110%;
     margin: 0 0 10px;
-    text-align: center;
+    text-align: left;
 }
 .archives div ul {
 	margin: 0;
