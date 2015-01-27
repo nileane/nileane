@@ -82,25 +82,6 @@ hr.menu {
    .mobileoff {
      display: none !important;
    }
-   #ntitle {
-     font-size: 100% !important;
-     transition: all .5s;
-     z-index:300;
-     -webkit-transition: all .5s;
-   }
-   #ntitle:hover {
-     height: 200px;
-     box-shadow: 0px -2px rgba(255, 255, 255, 0.92), 0px -3px rgba(0, 0, 0, 0.05), 0 0 0 3000px rgba(0, 0, 0, .4) !important;
-     background-color: #fff;
-   }
-   #ntitle:hover .oi.mobileon {
-     display: none;
-   }
-   #ntitle .nlinks {
-     display: block;
-     float: none !important;
-     max-width: none !important;
-   }
 }
 #post hr {
    margin: 50px auto;
@@ -253,6 +234,9 @@ hr.menu {
     float: right;
     color: #888;
 }
+#ntitle .nlinks span {
+    display: inline;
+}
 #ntitle .nlinks a {
     display: inline-block;
 }
@@ -260,6 +244,35 @@ hr.menu {
     content: " · ";
     color: #000;
     opacity: .7;
+}
+@media screen and (max-width:749px) {
+   #ntitle {
+     font-size: 100% !important;
+     transition: all .5s;
+     z-index:300;
+     -webkit-transition: all .5s;
+     -webkit-transform: translateX(0%);
+     transform: translateX(0%);
+   }
+   #ntitle:hover {
+     height: 320px;
+     box-shadow: 0px -2px rgba(255, 255, 255, 0.92), 0px -3px rgba(0, 0, 0, 0.05), 0 0 0 3000px rgba(0, 0, 0, .4) !important;
+     background-color: #fff;
+   }
+   #ntitle:hover .oi.mobileon {
+     display: none;
+   }
+   #ntitle .nlinks {
+     display: block;
+     float: none !important;
+     max-width: none !important;
+   }
+   #ntitle .nlinks span {
+     display: block !important;
+   }
+   #ntitle .nlinks span a {
+     padding: 8px 0 8px 30px;
+   }
 }
 
 /* article */
