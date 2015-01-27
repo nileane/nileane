@@ -260,11 +260,12 @@ hr.menu {
      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
      transition: all .5s;
      -webkit-transition: all .5s;
+     box-shadow: 0 0 0 3000px transparent !important;
+   }
+   #ntitle.anim {
      transform: translateX(0%);
      -webkit-transform: translateX(0%);
      animation: slidedown .5s 1;
-     -webkit-animation: slidedown .5s 1;
-     box-shadow: 0 0 0 3000px transparent !important;
    }
    #ntitle:hover {
      height: 320px;
@@ -290,8 +291,9 @@ hr.menu {
    #ntitle {
      border-top: 1px solid rgba(0, 0, 0, 0.05);
      bottom: 0;
+   }
+   #ntitle.anim {
      animation: slideup .5s 1;
-     -webkit-animation: slideup .5s 1;
    }
 }
 
@@ -550,10 +552,6 @@ blockquote {
 @keyframes slideup {
     0% { transform: translate(0, 60px); opacity: 0; }
     100% { transform: translate(0, 0); opacity: 1; }
-}
-@-webkit-keyframes slideup {
-    0% { -webkit-transform: translate(0, 60px); opacity: 0; }
-    100% { -webkit-transform: translate(0, 0); opacity: 1; }
 }
 @keyframes slidedown {
     0% { transform: translate(0, -60px); opacity: 0; }
