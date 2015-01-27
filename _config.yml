@@ -1,24 +1,43 @@
-safe: false
-port: 4000
-base-url: /
-url: http://schoewilliam.fr
+## Configuration file for Jekyll & Schrift template
 
+# Global
+safe: false
+url: http://schoewilliam.fr
 source:      .
 destination: ./_site
 plugins:     ./_plugins
 
+# Server
+port: 4000
+base-url: /
+
+# Build options
 future:      true
 lsi:         false
 highlighter: pygments
 markdown:    kramdown
 permalink:   date
 
-# Enter below the title of your weblog/website (use <span></span> to nicely fade out some part of it)
+auto_ids: true,
+footnote_nr: 1
+entity_output: as_char
+toc_levels: 1..6
+use_coderay: false
+
+
+#
+# Schrift template configuration
+#
+
+# Enter below the title of your weblog/website
+#    | you use <span></span> to nicely fade out some part of it
 maintitle: Schoewilliam<span>.fr</span>
+
 # Enter below a short description that will sit next to your title.
 maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about><span class=oi data-glyph=info></span> About me</a>
 
 # Enter below the items of your main menu
+#    | Keep it a small amount. It is designed for a small menu.
 menus:
 - text: Carnet
   url: /carnet
@@ -76,9 +95,3 @@ series:
   url: /carnet/aufilduretour.html
 - text: Petites de mes nouvelles
   url: /carnet/petitesdemesnouvelles.html
-
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
