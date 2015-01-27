@@ -1,5 +1,7 @@
 @import url('/fonts/Fira/fira.css');
 @import url('/fonts/openiconic/css/open-iconic.css');
+@import url('/fonts/charissil/charissil.css');
+
 
 body,input {
     font: 11pt/1.5 "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
@@ -413,7 +415,11 @@ article #post img,
 article #post iframe {
     max-width:100%;
 }
-
+#post p,
+#post ul,
+#post blockquote {
+    font-family: "Charis SIL", Bitstream Charter, Georgia, "Fira Sans", serif;
+}
 #post a img {
     border: 0 none;
 }
