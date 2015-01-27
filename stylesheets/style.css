@@ -241,16 +241,22 @@ hr.menu {
     cursor: pointer;
     display: inline-block;
 }
+#ntitle .button:hover {
+    border-color: rgba(0, 0, 0, .6);
+}
 #ntitle .button.menumarker {
     float: right;
     position: absolute;
     top: 6px;
     right: 25px;
 }
+#ntitle .button.home {
+    margin-right:5px;
+}
 #ntitle .button.rss {
     float: right;
     margin-top: 6px;
-    margin-left: 8px;
+    margin-left: 5px;
 }
 @media screen and (max-width:799px) {
    #ntitle {
@@ -272,9 +278,6 @@ hr.menu {
      box-shadow: 0 0 0 3000px rgba(0, 0, 0, .4) !important;
      background-color: #fff;
    }
-   #ntitle:hover .oi.mobileon {
-     display: none;
-   }
    #ntitle .nlinks {
      display: block;
      float: none !important;
@@ -285,6 +288,15 @@ hr.menu {
    }
    #ntitle .nlinks > span a {
      padding: 0 0 0 30px;
+   }
+   #ntitle .button.home {
+     position: fixed;
+     right: 62px;
+     top: 6px;
+   }
+   #ntitle:hover .button.menumarker.mobileon {
+     opacity: .5;
+     pointer-events: none;
    }
 }
 @media screen and (min-width:800px) {
@@ -303,6 +315,7 @@ section.article {
     padding: 30px 0;
     vertical-align: top;
     text-align: left;
+
 }
 article,
 .invitation {
@@ -330,7 +343,7 @@ article,
     animation: slidedown .5s 1;
     -webkit-animation: slidedown .5s 1;
 }
-@media screen and (min-width:1020px) {
+@media screen and (min-width:1090px) {
     .top {
       bottom: 14px;
       position: fixed;
