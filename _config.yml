@@ -40,9 +40,9 @@ maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/abou
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
 - text: Carnet
-  url: /carnet
+  url: /archive
 - text: Au Fil du retour
-  url: /carnet/aufilduretour.html
+  url: /archive/aufilduretour.html
 - text: Apps
   url: /apps
 
@@ -92,6 +92,6 @@ linkoliste:
 
 series:
 - text: Au Fil du retour
-  url: /carnet/aufilduretour.html
+  url: /archive/aufilduretour.html
 - text: Petites de mes nouvelles
-  url: /carnet/petitesdemesnouvelles.html
+  url: /archive/petitesdemesnouvelles.html
