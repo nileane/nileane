@@ -186,7 +186,6 @@ hr.menu {
     -webkit-animation: slideup .5s 1;
 }
 #ntitle > div {
-    max-width: 800px;
     margin: 0 auto;
     padding: 0;
 }
@@ -227,10 +226,9 @@ hr.menu {
 #ntitle .nlinks {
     font-weight: 800;
     text-transform: uppercase;
-    line-height: 18px;
     max-width: 200px;
     text-align: right;
-    padding: 7px 0px 0px 10px;
+    padding: 0 0 0 10px;
     float: right;
     color: #888;
 }
