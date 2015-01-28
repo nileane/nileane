@@ -24,6 +24,4 @@ On a donc changé d'arme : au lieu de GIMP, j'ai saisi le **grand CSS**. Je n'av
 À noter enfin qu'elle peut se mettre totalement en cache, pour pouvoir être *complètement utilisable sans connexion internet*.  
 En espérant qu'elle plaise, et puisse être utile.
 
-<p><a class="bouton" href="https://marketplace.firefox.com/app/schoses" style="background-color:#B74738">&rarr; <em>Schoses</em> sur le Firefox Marketplace</a></p>
-
-<p><a class="bouton" href="http://schoses.schoewilliam.fr">&rarr; schoses.schoewilliam.fr</a></p>
+* [*Schoses* sur le Firefox Marketplace](https://marketplace.firefox.com/app/schoses)

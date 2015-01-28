@@ -51,8 +51,8 @@ menus:
   url: /archive/aufilduretour.html
 - text: Petite de mes nouvelles
   url: /archive/petitesdemesnouvelles.html
-- text: Apps
-  url: /apps
+- text: Projects
+  url: /projects
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment

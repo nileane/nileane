@@ -250,6 +250,7 @@ hr.menu {
 }
 #ntitle .nlinks a {
     display: inline-block;
+    margin: 0 5px;
 }
 #ntitle .button {
     font-size: 100%;
@@ -450,7 +451,8 @@ article #post iframe {
 }
 #post p,
 #post ul,
-#post blockquote {
+#post blockquote,
+.article.page p {
     font-family: "Charis SIL", Bitstream Charter, Georgia, "Fira Sans", serif;
 }
 #post a img {
