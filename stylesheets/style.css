@@ -185,7 +185,7 @@ hr.menu {
     -webkit-transition: max-height .8s, box-shadow .8s;
 }
 #ntitle.expanded {
-    max-height: 800px;
+    max-height: 200px;
     z-index: 3;
     background-color: #fff;
     border-color: #bbb;
@@ -319,6 +319,7 @@ hr.menu {
      animation: slidedown .5s 1;
    }
    #ntitle.expanded {
+     max-height: 800px;
      box-shadow: 0 0 0 3000px rgba(0, 0, 0, .4) !important;
    }
    #ntitle .nlinks {
