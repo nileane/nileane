@@ -361,7 +361,10 @@ article,
     font-style: italic;
     color: #888;
 }
-
+#isso-thread {
+    max-width: 750px;
+    padding: 0 25px !important;
+}
 .top  {
     display: block;
     text-align: center;
