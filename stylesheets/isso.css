@@ -1,0 +1,31 @@
+
+#isso-thread {
+    max-width: 750px;
+    margin: 20px auto 0 !important;
+    padding: 0 25px !important;
+    text-align: left;
+}
+#isso-thread h4 {
+    display: none !important;
+}
+.isso-postbox > .form-wrapper > .auth-section .post-action > input {
+    padding: calc(0.3em - 1px) 16px !important;
+    border-radius: 999em !important;
+    background-color: #fff !important;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #16a085 !important;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+}
+.isso-postbox > .form-wrapper > .auth-section .post-action > input:hover {
+    border-color: rgba(0, 0, 0, .6);
+    background-color: #fff;
+    color: #333 !important;
+}
+.isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
+    box-shadow: 0 1px rgba(0, 0, 0, .2) !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    font-style: italic;
+}

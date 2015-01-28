@@ -1,7 +1,23 @@
 ---
 layout: default
 role: home
+bodyclass: home
 ---
 {% assign page = site.posts.first %}
 {% assign content = page.content %}
 {% include postdetails.html %}
+
+    {% if site.invitationmsg %}
+    <div class="invitation">
+        <hr class="wide"><span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> If you have any reaction, any feedback you would like me to read, please don't hesitate to <a href="{{ page.url }}#isso-thread"><strong>leave a comment</strong></a>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
+    </div>
+    {% endif %}
+</section>
+
+<div class="readnext">
+{% if page.previous.url %}
+<a href=".{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
+	<span><span class="oi" data-glyph="timer"></span> Previously</span>
+	<h1>{{page.previous.title}}</h1></a>
+{% endif %}
+</div> 

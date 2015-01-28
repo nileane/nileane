@@ -1,6 +1,7 @@
 @import url('../fonts/Fira/fira.css');
 @import url('../fonts/openiconic/css/open-iconic.css');
 @import url('../fonts/charissil/charissil.css');
+@import url('./isso.css');
 
 
 body,input {
@@ -179,6 +180,7 @@ hr.menu {
     overflow: hidden;
     padding: 0 25px;
     text-align: left;
+    z-index: 2;
     transition: max-height .8s, box-shadow .8s;
     -webkit-transition: max-height .8s, box-shadow .8s;
 }
@@ -231,7 +233,7 @@ hr.menu {
     font-size: 95%;
     color: rgba(0, 0, 0, 0.6);
     line-height: 18px;
-    max-width: 280px;
+    max-width: 245px;
     vertical-align: top;
     padding: 7px 0 0 10px;
 }
@@ -295,10 +297,11 @@ hr.menu {
 }
 #ntitle .button .name {
     margin: 0 0 0 8px;
-    font-style: italic;
     transform: translate(0,-1px);
     -webkit-transform: translate(0,-1px);
     display: inline-block;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 @media screen and (max-width:799px) {
    #ntitle {
@@ -360,10 +363,6 @@ article,
 .invitation {
     font-style: italic;
     color: #888;
-}
-#isso-thread {
-    max-width: 750px;
-    padding: 0 25px !important;
 }
 .top  {
     display: block;

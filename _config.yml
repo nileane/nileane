@@ -57,7 +57,7 @@ menus:
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment
 #    | {optional}
-invitationmsg: If you have any thought, any reaction, any feedback you would like me to read, please don't hesitate to send them over to <a href=mailto:schoewilliam@legtux.org>schoewilliam[at]legtux[dot]org</a>, or to my <a href=http://diaspora-fr.org/u/schoewilliam>diaspora*</a> inbox !
+invitationmsg: If you have any reaction, any feedback you would like me to read, please don't hesitate to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
 
 nodes:
 - text: diaspora*
