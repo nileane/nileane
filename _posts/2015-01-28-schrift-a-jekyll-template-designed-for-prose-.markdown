@@ -8,7 +8,7 @@ title: Introducing Schrift, a Jekyll template designed for prose.
 * Download it from the [git repository](https://github.com/Schoewilliam/Schrift),
 * Have a look at the [demo site](http://schoewilliam.github.io/Schrift/). (my own weblog is a good demo too)
 
-![Schrift screenshot](./images/schrift/schriftscr1.png){: class="align center"}
+![Schrift screenshot](/images/schrift/schriftscr1.png){: class="align center"}
 
 Also, the idea being that it can be used as-is, I have included some options in the [`_config.yml`](https://github.com/Schoewilliam/Schrift/blob/master/_config.yml) file. This way one can start using the template in 4 steps :
 
