@@ -46,13 +46,13 @@ maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/abou
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
 - text: Archive
-  url: ./archive
+  url: /archive
 - text: Au Fil du retour
-  url: ./archive/aufilduretour.html
+  url: /archive/aufilduretour.html
 - text: Petite de mes nouvelles
-  url: ./archive/petitesdemesnouvelles.html
+  url: /archive/petitesdemesnouvelles.html
 - text: Apps
-  url: ./apps
+  url: /apps
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment

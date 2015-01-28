@@ -2,13 +2,13 @@
     <article>
     <time datetime='{{ post.date | date: "%Y-%m-%d" }}' class="top"><span class="oi" data-glyph="bookmark"></span> {% if page.en %}{{ page.date | date: "%-d %B %Y" }}{% else %}
     {{ page.date | date: "%-d %B %Y" }}{% endif %}
-    <br><a href="./archive"><span class="oi" data-glyph="timer"></span> Archive</a></time>
+    <br><a href="/archive"><span class="oi" data-glyph="timer"></span> Archive</a></time>
 
     <hgroup>
     {% if page.link %}
         <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
     {% elsif page.series %}
-        <h1><a href=".{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
+        <h1><a href="{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
     {% else %}
         <h1>{{ page.title }}</h1>
     {% endif %}
