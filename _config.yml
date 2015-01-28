@@ -49,6 +49,8 @@ menus:
   url: ./archive
 - text: Au Fil du retour
   url: ./archive/aufilduretour.html
+- text: Petite de mes nouvelles
+  url: ./archive/petitesdemesnouvelles.html
 - text: Apps
   url: ./apps
   
