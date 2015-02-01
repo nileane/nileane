@@ -6,7 +6,7 @@ title: Du climat détestable qui règne encore en France…
 *… semble ressortir une dérive politique qui tend vers l'autoritarisme, à coups de mesures sécuritaires.*
 
 C'est un message qui m'a tout d'abord été inspiré par Patrick Béja dans [son émission *Le Rendez-vous Tech*](http://frenchspin.fr/2015/01/le-rdv-tech-150-ces-2015/), peu après l'événement de Charlie Hebdo. Un message si simple qu'il semble presque embarassant pour moi comme pour chacun de le rappeler et de le partager.  
-Un message qui appelle à la prudence, et surtout à **la raison**.
+Un message qui appelle à la **prudence**, et surtout à **la raison**.
 Il est extrêmement important pour chacun de nous de prendre du recul, et d'avoir une vision **critique** de ce qu'il nous arrive.
 
 Pour entrer dans le détail de ma pensée, **je crains une dérive de la politique de l'État français vers un autoritarisme qui serait très populairement soutenu**, et donc imparable.
