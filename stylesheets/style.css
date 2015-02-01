@@ -557,6 +557,7 @@ blockquote {
     padding: 30px 25px;
     clear: both;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
 .readnext a {
     display: block;
