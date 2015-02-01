@@ -21,3 +21,7 @@ Pour me résumer en quelques points…
 Aussi simple que cela puisse être dit, sous couvert de défendre la liberté d'expression, on risque de la restreindre.
 
 **Bien sûr**, la question d'une balance idéale entre *liberté* et *sécurité* est épineuse et sujette à débat. Mais **il est essentiel de garder à l'esprit que cette question doit rester présente dans le débat.**
+
+---
+
+*En annexe, je vous renvoie vers une infographie de la Quadrature du Net intitulée « [stop-autoritarisme](/images/stop-autoritarisme.png) », qui parodie la campagne du gouvernement « [stop-djihadisme](http://www.stop-djihadisme.gouv.fr/decrypter.html) ».*
