@@ -45,16 +45,21 @@ maindesc: Open web enthusiast. <a href=/about.html><span class=oi data-glyph=inf
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
-- text: <span class=oi data-glyph=timer></span> Archive
+- text: Archive
   url: /archive
-- text: <span class=oi data-glyph=pencil></span> Au Fil du retour
+  openiconic: book
+- text: Au Fil du retour
   url: /archive/aufilduretour.html
-- text: <span class=oi data-glyph=pencil></span> Petites de mes nouvelles
+  openiconic: script
+- text: Petites de mes nouvelles
   url: /archive/petitesdemesnouvelles.html
-- text: <span class=oi data-glyph=code></span> Projects
+  openiconic: script
+- text: Projects
   url: /projects.html
-- text: <span class=oi data-glyph=link-intact></span> Links
+  openiconic: code
+- text: Links
   url: /links.html
+  openiconic: link-intact
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment

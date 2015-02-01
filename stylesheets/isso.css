@@ -1,9 +1,13 @@
 
 #isso-thread {
-    max-width: 750px;
-    margin: 20px auto 0 !important;
-    padding: 0 25px !important;
+    margin: 0 auto 0 !important;
+    padding: 40px 25px !important;
     text-align: left;
+    background-color: #fafafa !important;
+}
+#isso-thread > * {
+    margin: 0 auto;
+    max-width: 750px;
 }
 #isso-thread h4 {
     display: none !important;
@@ -14,7 +18,8 @@
     background-color: #fff !important;
     text-transform: uppercase;
     font-weight: 500;
-    color: #16a085 !important;
+    color: #57AD68 !important;
+    border-color: #57AD68 !important;
     transition: all .2s;
     -webkit-transition: all .2s;
 }
@@ -24,10 +29,11 @@
     color: #333 !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
-    box-shadow: 0 1px rgba(0, 0, 0, .2) !important;
+    box-shadow: 0 1px rgba(0, 0, 0, .05) !important;
     border: 0 !important;
     border-radius: 0 !important;
     font-style: italic;
+    background-color: #fafafa !important;
 }
 .isso-comment:not(:first-of-type), .isso-follow-up .isso-comment {
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
