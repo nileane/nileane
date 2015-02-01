@@ -267,6 +267,10 @@ hr.menu {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
 }
+#ntitle .nlinks a .oi {
+  color: rgba(0, 0, 0, 0.8);
+  margin-right: 5px;
+}
 #ntitle .button.rss {
     float: right;
     margin-top: 6px;
@@ -355,10 +359,6 @@ hr.menu {
    }
    #ntitle.expanded .nlinks {
       right: 0;
-   }
-   #ntitle .nlinks a .oi {
-      color: rgba(0, 0, 0, 0.8);
-      margin-right: 5px;
    }
 }
 
