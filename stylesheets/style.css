@@ -181,23 +181,8 @@ hr.menu {
     padding: 0 25px;
     text-align: left;
     z-index: 2;
-    transition: max-height .8s, box-shadow .8s;
-    -webkit-transition: max-height .8s, box-shadow .8s;
-}
-#ntitle.expanded {
-    max-height: 200px;
-    z-index: 3;
-    background-color: #fff;
-    border-color: #bbb;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, .1);
-}
-#navoff {
-    position: fixed;
-    z-index: -1;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 1px;
+    transition: max-height .8s, bottom .8s;
+    -webkit-transition: max-height .8s, bottom .8s;
 }
 #ntitle > div {
     margin: 0 auto;
@@ -209,7 +194,7 @@ hr.menu {
     text-align: left;
 }
 #ntitle h1 {
-    margin: 0px;
+    margin: 0 10px 0 0;
     font-weight: 800;
     color: rgba(0, 0, 0, 0.8);
     letter-spacing: -1px;
@@ -232,25 +217,29 @@ hr.menu {
     font-style: italic;
     font-size: 95%;
     color: rgba(0, 0, 0, 0.6);
-    line-height: 18px;
+    line-height: 50px;
     max-width: 245px;
     vertical-align: top;
-    padding: 7px 0 0 10px;
+    padding: 0;
 }
 #ntitle .nlinks {
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: right;
     padding: 0 0 0 10px;
     color: #888;
     display: block;
 }
-#ntitle .nlinks > span {
-    display: inline;
-}
 #ntitle .nlinks a {
-    display: inline-block;
-    margin: 0 5px;
+    display: block;
+    margin: 0px 5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 90%;
+}
+#ntitle .nlinks a:not(:last-of-type) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+#ntitle .nlinks a:hover {
+    background-color: #eee;
+    box-shadow: -20px 0 0 0 #eee, 20px 0 0 0 #eee;
 }
 #ntitle .button {
     font-size: 100%;
@@ -271,25 +260,12 @@ hr.menu {
     margin-top: 6px;
     width: auto;
     padding: 0 16px;
-}
-#ntitle.expanded .button.menumarker.mobileoff .oi {
-    transform: rotate(180deg) translate(0, 3px);
-    -webkit-transform: rotate(180deg) translate(0, 3px);
-    display: inline-block;
+    overflow: hidden;
+    color: rgba(0, 0, 0, .8);
 }
 #ntitle.expanded .button.menumarker {
-    color: #333;
-    background-color: rgba(0, 0, 0, .02);
-}
-#ntitle.expanded .button.menumarker.on,
-#ntitle .button.menumarker.off {
-    display: none;
-}
-#ntitle.expanded .button.menumarker.off {
-    display: inline-block;
-}
-#ntitle .button.home {
-    margin-right:5px;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
 }
 #ntitle .button.rss {
     float: right;
@@ -320,16 +296,26 @@ hr.menu {
      animation: slidedown .5s 1;
    }
    #ntitle.expanded {
-     max-height: 800px;
+     max-height: 500px;
      box-shadow: 0 0 0 3000px rgba(0, 0, 0, .4) !important;
+     z-index: 3;
+     background-color: #fff;
+     border-color: #bbb;
+     box-shadow: 0 -2px 15px rgba(0, 0, 0, .1);
    }
    #ntitle .nlinks {
      display: block;
      float: none !important;
      max-width: none !important;
+     padding: 0;
+     margin: 16px 0;
    }
-   #ntitle .nlinks > span a {
-     padding: 0 15px 0 15px;
+   #ntitle .nlinks a {
+     padding: 0;
+     display: block;
+     line-height: 40px;
+     text-align: left;
+     margin: 0;
    }
    #ntitle .button.menumarker {
      position: fixed;
@@ -344,6 +330,35 @@ hr.menu {
    }
    #ntitle {
      animation: slideup .5s 1;
+   }
+   #ntitle .nlinks {
+      position: fixed;
+      bottom: 50px;
+      width: 220px;
+      right: -280px;
+      top: 0px;
+      transition: all .5s;
+      -webkit-transition: all .5s;
+   }
+   #ntitle .nlinks > div {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: rgba(255, 255, 255, .92);
+      border-left: 1px solid rgba(0, 0, 0, .1);
+      border-top: 1px solid rgba(0, 0, 0, .1);
+      border-top-left-radius: 5px;
+      overflow: hidden;
+   }
+   #ntitle.expanded .nlinks {
+      right: 0;
+   }
+   #ntitle .nlinks a .oi {
+      color: rgba(0, 0, 0, 0.8);
+      margin-right: 5px;
    }
 }
 

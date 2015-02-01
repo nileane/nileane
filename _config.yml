@@ -40,19 +40,21 @@ maintitle: Schoewilliam<span>.fr</span>
 
 # Enter below a short description that will sit next to your head title.
 #    | {optional}
-maindesc: Open web enthusiast, non-writer writer, Iceland dreamer. <a href=/about.html><span class=oi data-glyph=info></span> About me</a>
+maindesc: Open web enthusiast. <a href=/about.html><span class=oi data-glyph=info></span> About me</a>
 
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
-- text: Archive
+- text: <span class=oi data-glyph=timer></span> Archive
   url: /archive
-- text: Au Fil du retour
+- text: <span class=oi data-glyph=pencil></span> Au Fil du retour
   url: /archive/aufilduretour.html
-- text: Petite de mes nouvelles
+- text: <span class=oi data-glyph=pencil></span> Petites de mes nouvelles
   url: /archive/petitesdemesnouvelles.html
-- text: Projects
-  url: /projects
+- text: <span class=oi data-glyph=code></span> Projects
+  url: /projects.html
+- text: <span class=oi data-glyph=link-intact></span> Links
+  url: /links.html
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment
