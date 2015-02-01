@@ -8,12 +8,15 @@ bodyclass: home
 {% include postdetails.html %}
 </section>
 
-{% if site.invitationmsg %}
-<div class="invitation">
-  <div>
-      <span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> If you have any reaction, any feedback you would like me to read, please don't hesitate to <a href="{{ page.url }}#isso-thread"><strong>leave a comment</strong></a>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
-  </div>
-</div>
+{% if page.comments == false %}
+{% else %}
+    {% if site.invitationmsg %}
+    <div class="invitation">
+      <div>
+	  <span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> If you have any reaction, any feedback you would like me to read, please don't hesitate to <a href="{{ page.url }}#isso-thread"><strong>leave a comment</strong></a>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
+      </div>
+    </div>
+    {% endif %}
 {% endif %}
     
     
