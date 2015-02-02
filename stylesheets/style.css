@@ -202,7 +202,6 @@ hr.menu {
     margin: 0 10px 0 0;
     font-weight: 800;
     color: rgba(0, 0, 0, 0.8);
-    letter-spacing: -1px;
     text-transform: uppercase;
     font-size: 120%;
     transition: all .2s;
@@ -557,12 +556,16 @@ a.bouton:active {
 }
 blockquote {
     font-style: italic;
-    text-indent: 0;
-    border-left: 3px solid #000;
     margin: 22px 0;
-    padding-left: 4.5%;
     font-weight: 300;
-    font-size: 105%;
+    font-size: 120%;
+    color: rgba(0, 0, 0, .9);
+    text-align: center;
+}
+@media screen and (min-width:920px) {
+    blockquote {
+        margin: 22px -80px;
+    }
 }
 .page {
 	text-align: left;
