@@ -57,7 +57,10 @@ pre code {
    padding: 0;
 }
 hr {
-   border: 1px solid #DEDEDC;
+   border-top: 1px solid #DEDEDC;
+   border-bottom: 0;
+   border-left: 0;
+   border-right: 0;
    display: block;
    margin: 20px auto;
    width: 20%;
@@ -387,7 +390,7 @@ article {
     margin: 0 auto !important;
     max-width: 750px;
     padding: 0 25px !important;
-    color: #333332;
+    color: rgba(0, 0, 0, .7);
 }
 .invitation {
     font-style: italic;
@@ -415,7 +418,7 @@ article {
 }
 @media screen and (min-width:1090px) {
     .top {
-      top: 9px;
+      top: 16px;
       position: fixed;
       left: 0px;
       right: 0px;
@@ -467,13 +470,14 @@ pre {
 }
 
 #post {
-    color: #333332;
+    color: rgba(0, 0, 0, .7);
     font-size: 120%;
-    line-height: 1.4;
+    line-height: 1.5;
+    letter-spacing: 0.01rem;
+    text-rendering: optimizelegibility;
     hyphens: auto;
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
-    -o-hyphens: auto;
     -ms-hyphens: auto;
 }
 .centered #post {
@@ -488,6 +492,13 @@ article #post iframe {
 #post blockquote,
 .article.page p {
     font-family: "Charis SIL", Bitstream Charter, Georgia, "Fira Sans", serif;
+}
+#post p {
+    margin-bottom: 30px;
+}
+#post a {
+    color: rgba(0, 0, 0, .7);
+    text-decoration: underline;
 }
 #post a img {
     border: 0 none;

@@ -47,7 +47,7 @@ maindesc: Open web enthusiast. <a href=/about.html><span class=oi data-glyph=inf
 menus:
 - text: Archive
   url: /archive
-  openiconic: book
+  openiconic: list
 - text: Au Fil du retour
   url: /archive/aufilduretour.html
   openiconic: script

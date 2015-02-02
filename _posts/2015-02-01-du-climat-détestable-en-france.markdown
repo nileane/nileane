@@ -10,6 +10,8 @@ C'est un message qui m'a tout d'abord été inspiré par Patrick Béja dans [son
 Un message qui appelle à la prudence, et surtout à la raison.
 Il est extrêmement important pour chacun de nous de prendre du recul, et d'avoir une vision critique de ce qu'il nous arrive.
 
+---
+
 Pour entrer dans le détail de ma pensée, je crains une dérive de la politique de l'État français vers un autoritarisme qui serait très populairement soutenu, et donc imparable.
 Pour me résumer en quelques points…
 
@@ -22,7 +24,5 @@ Pour me résumer en quelques points…
 Aussi simple que cela puisse être dit, sous couvert de défendre la liberté d'expression, on risque de la restreindre.
 
 *Bien sûr*, la question d'une balance idéale entre *liberté* et *sécurité* est épineuse et sujette à débat. Mais il est essentiel de garder à l'esprit que cette question doit rester présente dans le débat.
-
----
 
 *En annexe, je vous renvoie vers une infographie de la Quadrature du Net intitulée « [stop-autoritarisme](/images/stop-autoritarisme.png) », qui parodie la campagne du gouvernement « [stop-djihadisme](http://www.stop-djihadisme.gouv.fr/decrypter.html) ».*
