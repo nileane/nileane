@@ -40,7 +40,7 @@ maintitle: Schoewilliam<span>.fr</span>
 
 # Enter below a short description that will sit next to your head title.
 #    | {optional}
-maindesc: Open web enthusiast. <a href=/about.html><span class=oi data-glyph=info></span> About me</a>
+maindesc: Open web enthusiast.
 
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
@@ -60,6 +60,9 @@ menus:
 - text: Links
   url: /links.html
   openiconic: link-intact
+- text: About me
+  url: /about.html
+  openiconic: info
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment

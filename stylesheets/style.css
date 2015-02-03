@@ -177,6 +177,7 @@ hr.menu {
 #ntitle {
     max-height: 50px;
     position: fixed;
+    top: 0;
     font-size: 85%;
     width: calc(100% - 50px);
     display: block;
@@ -186,7 +187,6 @@ hr.menu {
     text-align: left;
     z-index: 2;
     animation: slidedown .5s 1;
-      -webkit-animation: slidedown .5s 1;
     transition: max-height .8s, bottom .8s;
       -webkit-transition: max-height .8s, bottom .8s;
 }
@@ -227,15 +227,43 @@ hr.menu {
     vertical-align: top;
     padding: 0;
 }
+@media screen and (max-width: 480px) {
+    #ntitle .desc {
+       display: none;
+    }
+}
 #ntitle .nlinks {
     padding: 0 0 0 10px;
     color: #888;
     display: block;
     background-color: #FAFAFA;
-    backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    perspective: 1000;
-      -webkit-perspective: 1000;
+    position: fixed;
+    top: 50px;
+    width: 220px;
+    right: 0;
+    bottom: 0;
+    min-height: 300px;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) inset;
+    transition: all .5s;
+      -webkit-transition: all .5s;
+    transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+}
+#ntitle .nlinks > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+#ntitle.expanded .nlinks {
+    transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
 }
 #ntitle .nlinks a {
     display: block;
@@ -248,6 +276,11 @@ hr.menu {
 }
 #ntitle .nlinks a:not(:last-of-type) {
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+#ntitle .nlinks a span {
+    display: inline-block;
+    max-width: 75%;
+    vertical-align: middle;
 }
 #ntitle .nlinks a .oi {
     transition: all .2s;
@@ -303,93 +336,13 @@ hr.menu {
 }
 @media screen and (max-width:799px) {
    #ntitle {
-     font-size: 100% !important;
-     z-index:300;
-     top: 0;
-     overflow: hidden;
-     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-	0 0 0 3000px transparent;
-     transition: all .5s;
-       -webkit-transition: all .5s;
-     transform: translateZ(0);
-       -webkit-transform: translateZ(0);
-       -ms-transform: translateZ(0);
+      font-size: 100%;
    }
-   #ntitle {
-     animation: slidedown .5s 1;
-   }
-   #ntitle.expanded {
-     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-	0 0 0 3000px rgba(0, 0, 0, .4);
-     z-index: 3;
-     background-color: #fff;
-     border-color: #333;
-     max-height: 100%;
+   #ntitle:not(.expanded) .nlinks {
+      box-shadow: -200px 1000px 0 1000px transparent;
    }
    #ntitle.expanded .nlinks {
-   }
-   #ntitle .nlinks {
-     display: block;
-     padding: 0;
-     margin: 0;
-     box-shadow: -25px 0 #fafafa,
-       25px 0 #fafafa;
-     transition: all .5s;
-       -webkit-transition: all .5s;
-   }
-   #ntitle .nlinks a {
-     padding: 4px 0;
-     display: block;
-     line-height: 40px;
-     text-align: left;
-     margin: 0;
-   }
-   #ntitle .button.menumarker {
-     position: fixed;
-     right: 25px;
-     top: 0;
-   }
-}
-@media screen and (min-width:800px) {
-   #ntitle {
-     top: 0;
-   }
-   #ntitle {
-     animation: slidedown .5s 1;
-   }
-   #ntitle .nlinks {
-      position: fixed;
-      top: 51px;
-      width: 220px;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      border-left: 1px solid rgba(0, 0, 0, 0.05);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) inset;
-      transition: all .5s;
-        -webkit-transition: all .5s;
-      transform: translateX(235px) translateZ(0);
-        -webkit-transform: translateX(235px) translateZ(0);
-        -ms-transform: translateX(235px) translateZ(0);
-   }
-   #ntitle .nlinks > div {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      padding-left: 10px;
-      padding-right: 10px;
-      overflow: hidden;
-   }
-   #ntitle.expanded .nlinks {
-      transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-   }
-   #ntitle .nlinks a span {
-      display: inline-block;
-      max-width: 75%;
-      vertical-align: middle;
+      box-shadow: -200px 1000px 0 1000px rgba(0, 0, 0, .4);
    }
 }
 
@@ -429,12 +382,12 @@ article {
     font-size: 70%;
     font-weight: 500;
     animation: slideup .5s 1;
-    -webkit-animation: slideup .5s 1;
 }
 @media screen and (min-width:1090px) {
     .top {
-      top: 16px;
+      top: 0;
       position: fixed;
+      line-height: 50px;
       left: 0px;
       right: 0px;
       z-index: 2;
@@ -636,15 +589,7 @@ blockquote {
     0% { transform: translate(0, 60px); opacity: 0; }
     100% { transform: translate(0, 0); opacity: 1; }
 }
-@-webkit-keyframes slideup {
-    0% { -webkit-transform: translate(0, 60px); opacity: 0; }
-    100% { -webkit-transform: translate(0, 0); opacity: 1; }
-}
 @keyframes slidedown {
     0% { transform: translate(0, -60px); opacity: 0; }
     100% { transform: translate(0, 0); opacity: 1; }
-}
-@-webkit-keyframes slidedown {
-    0% { -webkit-transform: translate(0, -60px); opacity: 0; }
-    100% { -webkit-transform: translate(0, 0); opacity: 1; }
 }
