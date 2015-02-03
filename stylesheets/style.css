@@ -338,12 +338,6 @@ hr.menu {
    #ntitle {
       font-size: 100%;
    }
-   #ntitle:not(.expanded) .nlinks {
-      box-shadow: -200px 1000px 0 1000px transparent;
-   }
-   #ntitle.expanded .nlinks {
-      box-shadow: -200px 1000px 0 1000px rgba(0, 0, 0, .4);
-   }
 }
 
 /* article */
