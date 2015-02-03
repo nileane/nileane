@@ -182,12 +182,13 @@ hr.menu {
     display: block;
     background-color: rgba(255, 255, 255, .92);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
     padding: 0 25px;
     text-align: left;
     z-index: 2;
+    animation: slidedown .5s 1;
+      -webkit-animation: slidedown .5s 1;
     transition: max-height .8s, bottom .8s;
-    -webkit-transition: max-height .8s, bottom .8s;
+      -webkit-transition: max-height .8s, bottom .8s;
 }
 #ntitle > div {
     margin: 0 auto;
@@ -205,7 +206,7 @@ hr.menu {
     text-transform: uppercase;
     font-size: 120%;
     transition: all .2s;
-    -webkit-transition: all .2s;
+      -webkit-transition: all .2s;
 }
 #ntitle h1:hover {
     opacity: .75;
@@ -231,6 +232,10 @@ hr.menu {
     color: #888;
     display: block;
     background-color: #FAFAFA;
+    backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    perspective: 1000;
+      -webkit-perspective: 1000;
 }
 #ntitle .nlinks a {
     display: block;
@@ -246,7 +251,7 @@ hr.menu {
 }
 #ntitle .nlinks a .oi {
     transition: all .2s;
-    -webkit-transition: all .2s;
+      -webkit-transition: all .2s;
 }
 #ntitle .nlinks a:hover .oi {
     background-color: #57AD68;
@@ -277,7 +282,7 @@ hr.menu {
 }
 #ntitle.expanded .button.menumarker {
     transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
 }
 #ntitle .nlinks a .oi {
     margin-right: 5px;
@@ -301,31 +306,36 @@ hr.menu {
      font-size: 100% !important;
      z-index:300;
      top: 0;
+     overflow: hidden;
      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
 	0 0 0 3000px transparent;
      transition: all .5s;
-     -webkit-transition: all .5s;
+       -webkit-transition: all .5s;
+     transform: translateZ(0);
+       -webkit-transform: translateZ(0);
+       -ms-transform: translateZ(0);
    }
    #ntitle {
-     transform: translateX(0%);
-     -webkit-transform: translateX(0%);
      animation: slidedown .5s 1;
    }
    #ntitle.expanded {
-     max-height: 500px;
      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
 	0 0 0 3000px rgba(0, 0, 0, .4);
      z-index: 3;
      background-color: #fff;
      border-color: #333;
+     max-height: 100%;
+   }
+   #ntitle.expanded .nlinks {
    }
    #ntitle .nlinks {
      display: block;
-     float: none !important;
-     max-width: none !important;
      padding: 0;
-     margin: 16px 0 0;
-     box-shadow: -25px 0 #fafafa, 25px 0 #fafafa;
+     margin: 0;
+     box-shadow: -25px 0 #fafafa,
+       25px 0 #fafafa;
+     transition: all .5s;
+       -webkit-transition: all .5s;
    }
    #ntitle .nlinks a {
      padding: 4px 0;
@@ -351,12 +361,16 @@ hr.menu {
       position: fixed;
       top: 51px;
       width: 220px;
-      right: -280px;
+      right: 0;
       bottom: 0;
+      height: 100%;
       border-left: 1px solid rgba(0, 0, 0, 0.05);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) inset;
       transition: all .5s;
-      -webkit-transition: all .5s;
+        -webkit-transition: all .5s;
+      transform: translateX(235px) translateZ(0);
+        -webkit-transform: translateX(235px) translateZ(0);
+        -ms-transform: translateX(235px) translateZ(0);
    }
    #ntitle .nlinks > div {
       position: absolute;
@@ -368,7 +382,9 @@ hr.menu {
       overflow: hidden;
    }
    #ntitle.expanded .nlinks {
-      right: 0;
+      transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
    }
    #ntitle .nlinks a span {
       display: inline-block;
