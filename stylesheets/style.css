@@ -181,8 +181,8 @@ hr.menu {
     font-size: 85%;
     width: calc(100% - 50px);
     display: block;
-    background-color: rgba(255, 255, 255, .92);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    background-color: rgba(250, 250, 250, .92);
+    box-shadow: 0 1px rgba(0, 0, 0, .05), 0 2px 2px rgba(0, 0, 0, 0.05);
     padding: 0 25px;
     text-align: left;
     z-index: 2;
@@ -397,6 +397,7 @@ article {
 }
 article h1 {
     color: #333332;
+    font-weight: 300;
     font-size: 220%;
     margin: 0 5px 35px 0;
     line-height: 1.1;
