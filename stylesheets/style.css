@@ -229,11 +229,10 @@ hr.menu {
     font-style: italic;
     color: rgba(0, 0, 0, 0.8);
     line-height: 50px;
-    max-width: 245px;
     vertical-align: top;
     padding: 0;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 499px) {
     #ntitle .desc {
        display: none;
     }
