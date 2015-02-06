@@ -222,8 +222,7 @@ hr.menu {
     transition: all .2s;
 }
 #ntitle h1 img:hover {
-    transform: scale(1.3);
-      -webkit-transform: scale(1.3);
+    opacity: .7;
 }
 #ntitle .desc {
     font-style: italic;
