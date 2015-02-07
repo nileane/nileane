@@ -48,12 +48,12 @@ menus:
 - text: Archive
   url: /archive
   openiconic: list
-- text: Au Fil du retour
-  url: /archive/aufilduretour.html
-  openiconic: script
-- text: Petites de mes nouvelles
-  url: /archive/petitesdemesnouvelles.html
-  openiconic: script
+#- text: Au Fil du retour
+#  url: /archive/aufilduretour.html
+#  openiconic: script
+#- text: Petites de mes nouvelles
+#  url: /archive/petitesdemesnouvelles.html
+#  openiconic: script
 - text: Projects
   url: /projects.html
   openiconic: code
