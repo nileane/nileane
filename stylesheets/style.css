@@ -6,14 +6,14 @@
 
 body,input {
     font: 20px/1.5 "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
-    background: #470055;
+    background: #2D465A;
     color: rgba(0, 0, 0, 0.8);
 }
 body {
     margin: 0;
 }
 a {
-    color: #9533FF;
+    color: #346EC5;
     transition: all .2s;
     cursor: pointer;
     text-decoration: none;
@@ -88,7 +88,7 @@ hr.wide {
 }
 
 #wrapper > header {
-    padding: 0 10%;
+    padding: 2.5em 10% 0;
 }
 #wrapper > header h1 {
     margin: 0px;
@@ -112,7 +112,7 @@ hr.wide {
     margin-left: -10px;
 }
 #wrapper > nav > a:hover {
-    box-shadow: inset 0 -7px #9533FF;
+    box-shadow: inset 0 -7px #346EC5;
     color: #fff;
 }
 #wrapper > nav .oi {
@@ -127,6 +127,14 @@ hr.wide {
     color: rgba(255, 255, 255, .7);
 }
 
+
+
+h2.smalltitle {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
 .archives h2 {
 	font-weight: bold;
 }
@@ -164,18 +172,14 @@ hr.wide {
     padding: 8px 0;
     text-align: left;
     font-size: 115%;
-    font-weight: bold;
 }
 .archives div li > a:hover {
 	text-decoration: none;
   color: #000;
 }
 .archives a time {
-    color: rgba(0, 0, 0, .8);
-    font-weight:normal;
+    font-weight:400;
     display: block;
-    font-weight: 500;
-    text-transform: uppercase;
     font-size: 70%;
     letter-spacing: 2px;
 }
@@ -200,6 +204,9 @@ section.article {
     max-width: calc(1000px - 20%);
     animation: slideup .5s 1;
 }
+.home section.article {
+    margin-bottom: 1.7em;
+}
 article {
     margin: 0 auto;
     padding: 0;
@@ -217,16 +224,14 @@ article {
     font-weight: 300;
     font-style: italic;
 }
-article h1 {
+article h1,
+.home article h3,
+.home .article.recent h4 {
     font-size: 3.2em;
     line-height: 1.1;
     font-weight: 300;
     color: #121212;
     margin: 20px 5px 35px 0;
-}
-.centered article h1,
-.centered #post {
-     text-align: center;
 }
 article h1 a:hover {
     text-decoration:underline;
@@ -239,6 +244,40 @@ article h3 {
     font-size: 150%;
     text-align: left;
 }
+.home article h3 {
+    margin-top: 0;
+    color: inherit;
+}
+.home .article.recent h4 {
+    font-size: 1.9em;
+    margin: 0 0 15px;
+    color: inherit;
+}
+.home .article.recent > article > div:not(:last-of-type) {
+    margin-bottom: 50px;
+}
+
+.readbloc {
+    background: #FAFAFA;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    z-index: 3;
+    padding: 0.5em 12%;
+    position: relative;
+    margin: 0px -12% -2.5em;
+    font-style: italic;
+}
+.readbloc:before {
+    content: " ";
+    position: absolute;
+    top: -165px;
+    height: 130px;
+    width: 100%;
+    left:0;
+    right:0;
+    background: linear-gradient(to top, #fff, transparent);
+    box-shadow: 0 20px #fff;
+}
 
 pre:hover {
     overflow-x: auto;
@@ -249,7 +288,8 @@ pre {
     padding: 30px;
 }
 
-#post {
+#post,
+.excerpt {
     font-size: 110%;
     line-height: 1.5;
     letter-spacing: 0.01rem;
@@ -258,6 +298,9 @@ pre {
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
     -ms-hyphens: auto;
+}
+.excerpt {
+    font-style: italic;
 }
 .centered #post {
     text-align: center;
@@ -269,6 +312,7 @@ article #post iframe {
 #post p,
 #post ul,
 #post blockquote,
+.excerpt,
 .article.page p {
     font-family: "Charis SIL", Bitstream Charter, Georgia, "Fira Sans", serif;
 }
@@ -276,7 +320,6 @@ article #post iframe {
     margin-bottom: 30px;
 }
 #post a {
-    color: rgba(0, 0, 0, .7);
     box-shadow: 0px -4px #FFF inset, 0px -6px #CCC inset;
 }
 #post a:hover {
@@ -314,30 +357,6 @@ ul {
     list-style: outside square;
 }
 
-a.bouton {
-    border: 1px solid currentcolor;
-    box-shadow: 0 2px rgba(0, 0, 0, .2);
-    padding: 5px 20px;
-    margin: 0 0 5px;
-    display: inline-block;
-    text-indent: 0;
-    text-decoration: none;
-    border-radius: 2em;
-    font-weight: 400;
-    font-style: italic;
-    outline: 0;    
-}
-a.bouton:hover {
-    background-color: #4E43C8;
-    border-color: #4e43c8;
-    color: #ddd;
-    text-decoration: none;
-}
-a.bouton:active {
-    text-decoration: none;
-    box-shadow: 0 1px rgba(0, 0, 0, .3) inset;
-    color: rgba(255, 255, 255, .4);
-}
 blockquote {
     font-style: italic;
     margin: 22px 0;
@@ -348,7 +367,7 @@ blockquote {
 }
 @media screen and (min-width:920px) {
     blockquote {
-        margin: 22px -80px;
+        margin: 22px -70px;
     }
 }
 .page {
@@ -394,15 +413,17 @@ blockquote {
     color: rgba(255, 255, 255, .9);
 }
 
-/* Fin commentaires */
 
+
+/* General media queries */
 
 @media (max-width: 979px) {
   body {
     font-size: 18px;
   }
 
-  article h1 {
+  article h1,
+  .home article h3 {
     font-size: 2.5em;
   }
 }
@@ -411,17 +432,14 @@ blockquote {
     font-size: 16px;
   }
 
-  article h1 {
+  article h1,
+  .home article h3 {
     font-size: 2em;
   }
 }
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-}
 
-/* animations */
+/* Animations */
+
 @keyframes slideup {
     0% { transform: translate(0, 60px); opacity: 0; }
     100% { transform: translate(0, 0); opacity: 1; }

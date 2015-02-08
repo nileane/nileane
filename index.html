@@ -3,27 +3,63 @@ layout: default
 role: home
 bodyclass: home
 ---
-{% assign page = site.posts.first %}
-{% assign content = page.content %}
-{% include postdetails.html %}
+<section class="article">
+    <article>
+        <div>
+            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Most recent post</h2>
+            
+               {% for post in site.posts limit:1 %}
+                <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+                    <h3>{{ post.title }}</h3>
+                </a>
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    <div id="post">
+                        {{ post.content | truncatewords: 90 }}
+                    </div>
+               {% endfor %}
+        </div>
+    </article>
+    
+    {% for post in site.posts limit:1 %}
+    <a href="{{ post.url }}"><div class="readbloc">
+        Read post
+    </div></a>
+    {% endfor %}
 </section>
 
-{% if page.comments == false %}
-{% else %}
-    {% if site.invitationmsg %}
-    <div class="invitation">
-      <div>
-	  <span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> If you have any reaction, any feedback you would like me to read, please don't hesitate to <a href="{{ page.url }}#isso-thread"><strong>leave a comment</strong></a>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
-      </div>
-    </div>
-    {% endif %}
-{% endif %}
-    
-    
-<div class="readnext">
-{% if page.previous.url %}
-<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
-	<span><span class="oi" style="margin-right:12px" data-glyph="script"></span> Read next</span>
-	<h1>{{page.previous.title}}</h1></a>
-{% endif %}
-</div> 
+<section class="article recent">
+    <article>
+            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Recent posts</h2><br>
+            
+               {% for post in site.posts limit:3 offset:1 %}
+               <div>
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+                        <h4>{{ post.title }}</h4>
+                    </a>
+                    <div class="excerpt">
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                    </div>
+               </div>
+               {% endfor %}
+    </article>
+</section>
+
+<section class="article archives" id="archive">
+    <article>
+            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="box"></span> Older posts</h2><br>
+            
+            <div>
+            <ul>
+   {% for post in site.posts offset:4 %}
+                <li>
+                    <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    {{ post.title }}
+                    </a>
+                </li>
+   {% endfor %}
+            </ul>
+            </div>
+    </article>
+</section>

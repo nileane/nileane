@@ -4,25 +4,3 @@ lang: fr
 bodyclass: post
 ---
 {% include postdetails.html %}
-</section>
-    
-{% if page.comments == false %}
-{% else %}
-      {% if site.invitationmsg %}
-      <div class="invitation">
-	      <span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> {{ site.invitationmsg }}
-      </div>
-      {% endif %}
-
-      <script data-isso="//comments.schoewilliam.fr/" data-isso-avatar="false" data-isso-vote="false"
-	  src="//comments.schoewilliam.fr/js/embed.min.js"></script>
-      <section id="isso-thread"></section>
-{% endif %}
-
-<div class="readnext">
-{% if page.previous.url %}
-<a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
-	<span><span class="oi" style="margin-right:12px" data-glyph="script"></span> Read next</span>
-	<h1>{{page.previous.title}}</h1></a>
-{% endif %}
-</div> 

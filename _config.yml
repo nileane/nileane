@@ -45,9 +45,9 @@ maindesc: Open web enthusiast.
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
-- text: Archive
-  url: /archive
-  openiconic: list
+- text: Home
+  url: /
+  openiconic: home
 #- text: Au Fil du retour
 #  url: /archive/aufilduretour.html
 #  openiconic: script
