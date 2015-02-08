@@ -33,10 +33,10 @@ bodyclass: home
             
                {% for post in site.posts limit:3 offset:1 %}
                <div>
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
                     <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
                         <h4>{{ post.title }}</h4>
                     </a>
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
                     <div class="excerpt">
                         {{ post.excerpt | strip_html | truncatewords: 30 }}
                     </div>

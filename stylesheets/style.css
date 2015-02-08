@@ -97,10 +97,12 @@ hr.wide {
     letter-spacing: 3px;
     text-transform: uppercase;
     font-weight: 500;
+    animation: slidedown .5s 1;
 }
 #wrapper > nav {
     font-size: 90%;
     padding: 0 10%;
+    animation: slideup .5s 1;
 }
 #wrapper > nav > a {
     display: inline-block;
@@ -253,7 +255,7 @@ article h3 {
     margin: 0 0 15px;
     color: inherit;
 }
-.home .article.recent > article > div:not(:last-of-type) {
+.home .article.recent > article > div {
     margin-bottom: 50px;
 }
 
@@ -435,6 +437,15 @@ blockquote {
   article h1,
   .home article h3 {
     font-size: 2em;
+  }
+}
+@media (max-width:500px) {
+  #wrapper nav > a:first-of-type {
+    display: none;
+  }
+  #wrapper nav > a {
+    padding: .9em 0;
+    margin-right: 6px;
   }
 }
 
