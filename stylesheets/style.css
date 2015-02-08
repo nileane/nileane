@@ -300,8 +300,7 @@ article h3 {
     width: 100%;
     left:0;
     right:0;
-    background: linear-gradient(to top, #fff, transparent);
-    box-shadow: 0 20px #fff;
+    box-shadow: 0px 20px #FFF, 0px -90px 61px -28px #FFF inset;
 }
 
 pre:hover {
