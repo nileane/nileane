@@ -48,19 +48,13 @@ menus:
 - text: Home
   url: /
   openiconic: home
-#- text: Au Fil du retour
-#  url: /archive/aufilduretour.html
-#  openiconic: script
-#- text: Petites de mes nouvelles
-#  url: /archive/petitesdemesnouvelles.html
-#  openiconic: script
 - text: Projects
   url: /projects.html
   openiconic: code
 - text: Links
   url: /links.html
   openiconic: link-intact
-- text: About me
+- text: About
   url: /about.html
   openiconic: info
   

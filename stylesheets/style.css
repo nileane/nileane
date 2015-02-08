@@ -104,11 +104,13 @@ hr.wide {
 }
 #wrapper > header h1 {
     animation: slidedown .5s 1;
+        -webkit-animation: slidedown .5s 1;
 }
 #wrapper > nav {
     font-size: 90%;
     padding: 0 10%;
     animation: slideup .5s 1;
+        -webkit-animation: slideup .5s 1;
 }
 #wrapper > nav > a {
     display: inline-block;
@@ -136,8 +138,22 @@ hr.wide {
 }
 
 
+.jumpto {
+    background-color: #fafafa;
+    padding: 0 .9em;
+    box-shadow: inset 0 -2px rgba(0, 0, 0, 0.05);
+}
+.smalltitle:target:before {
+    content: "→";
+    position: absolute;
+    margin-top: -20px;
+    margin-left: -50px;
+    font-size: 300%;
+    animation: .5s slidedown 1;
+        -webkit-animation: .5s slidedown 1;
+}
 
-h2.smalltitle {
+.smalltitle {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 500;
@@ -203,6 +219,7 @@ section.article {
     background-color: #FFF;
     max-width: calc(1000px - 20%);
     animation: slideup .5s 1;
+        -webkit-animation: slideup .5s 1;
 }
 .home section.article {
     margin-bottom: 1.7em;
@@ -456,4 +473,13 @@ blockquote {
 @keyframes slidedown {
     0% { transform: translate(0, -60px); opacity: 0; }
     100% { transform: translate(0, 0); opacity: 1; }
+}
+
+@-webkit-keyframes slideup {
+    0% { -webkit-transform: translate(0, 60px); opacity: 0; }
+    100% { -webkit-transform: translate(0, 0); opacity: 1; }
+}
+@-webkit-keyframes slidedown {
+    0% { -webkit-transform: translate(0, -60px); opacity: 0; }
+    100% { -webkit-transform: translate(0, 0); opacity: 1; }
 }

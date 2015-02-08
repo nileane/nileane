@@ -5,8 +5,16 @@ bodyclass: home
 ---
 <section class="article">
     <article>
+        <nav class="jumpto smalltitle">
+            <h2 class="smalltitle" style="display: inline-block;">Jump to // </h2>
+            <a href="#mostrecent">Most recent post</a> /
+            <a href="#recent">Recent posts</a> /
+            <a href="#all">Older posts</a>
+        </nav>
+        <br><br>
+    
         <div>
-            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Most recent post</h2>
+            <h2 class="smalltitle" id="mostrecent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Most recent post</h2>
             
                {% for post in site.posts limit:1 %}
                 <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
@@ -29,7 +37,7 @@ bodyclass: home
 
 <section class="article recent">
     <article>
-            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Recent posts</h2><br>
+            <h2 class="smalltitle" id="recent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Recent posts</h2><br>
             
                {% for post in site.posts limit:3 offset:1 %}
                <div>
@@ -47,7 +55,7 @@ bodyclass: home
 
 <section class="article archives" id="archive">
     <article>
-            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="box"></span> Older posts</h2><br>
+            <h2 class="smalltitle" id="all"><span class="oi" style="margin-right:12px" data-glyph="box"></span> Older posts</h2><br>
             
             <div>
             <ul>

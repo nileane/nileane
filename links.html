@@ -2,8 +2,10 @@
 title: "Friends & Links"
 layout: page
 ---
-<p><em>Some Friends on the Internets</em><br>
-{% for link in site.blogoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
+<h2 class="smalltitle">Some Friends on the Internets</h2>
+<p>{% for link in site.blogoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
 
-<p><em>A few links I feel like sharing</em><br>
-{% for link in site.linkoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
+<hr>
+
+<h2 class="smalltitle">A few links I feel like sharing</h2>
+<p>{% for link in site.linkoliste %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
