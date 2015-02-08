@@ -36,7 +36,7 @@ title: Schoewilliam  # Appears in the window title of the browser. Stands alone 
 
 # Enter below the head title of your weblog/website
 #    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
-maintitle: Schoewilliam<span>.fr</span>
+maintitle: Schoewilliam<em style="opacity:.5">.fr</em>
 
 # Enter below a short description that will sit next to your head title.
 #    | {optional}
