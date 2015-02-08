@@ -8,7 +8,7 @@ layout: page
 	<p class="en"><em>I am William Dorffer</em> [aka <em>Schoewilliam</em>], and I am an open web enthusiast. I essentially spend my free time experimenting with free software, my various writings, or contributing to Mozilla's misson.<br>
 	Also, I happen to dream about Iceland.</p>
 	
-	<p style="font-style:italic; text-align:center;"><span class="oi" data-glyph="envelope-open"></span> <strong>Contact</strong><br>
+	<p><span class="oi" data-glyph="envelope-open"></span> <strong>Contact</strong><br>
 	<a href="mailto:schoewilliam@schoewilliam.fr">schoewilliam[at]schoewilliam[dot]fr</a><br>
 	{% for link in site.nodes %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}</p>
 </div>
