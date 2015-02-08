@@ -14,7 +14,7 @@ role: index
 	{% if post.series.name == "Petites de mes nouvelles" %}
 	    <li>
 		<a {% if post.en %}class="en"{% endif %}{% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
-		<time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+		<time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
 		{{ post.title }}
 		</a>
 	   </li>
