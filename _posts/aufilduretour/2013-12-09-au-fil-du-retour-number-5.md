@@ -2,6 +2,7 @@
 title: ! 'Au Fil du retour #5 : petite chute dans la Plaine Bleue.'
 layout: post
 published: true
+category: "Au Fil du retour"
 series:
   name: "Au Fil du retour"
   episode: "petite chute dans la Plaine Bleue."

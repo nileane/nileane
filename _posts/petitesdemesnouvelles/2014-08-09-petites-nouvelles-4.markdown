@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: "Petites de mes nouvelles #4 : vers Lyon !"
+category: "Petites de mes nouvelles"
 series:
   name: "Petites de mes nouvelles"
   episode: "vers Lyon !"

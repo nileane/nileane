@@ -149,6 +149,8 @@ hr.wide {
 }
 .jumpto a {
     display: inline-block;
+    letter-spacing: 1px;
+    padding: 4px 0;
 }
 .smalltitle:target:before {
     content: "→";
@@ -212,6 +214,13 @@ hr.wide {
     display: block;
     font-size: 70%;
     letter-spacing: 2px;
+}
+.catbloc:target {
+    animation: slidedown .5s 1;
+       -webkit-animation: slidedown .5s 1;
+}
+.catbloc:not(:target) {
+    display: none;
 }
 
 
@@ -463,6 +472,9 @@ blockquote {
 }
 @media (max-width:500px) {
   #wrapper > nav > a:first-of-type {
+    margin-left: 0;
+  }
+  #wrapper > nav > a:nth-of-type(3) {
     display: none;
   }
   #wrapper > nav > a {

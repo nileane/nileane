@@ -5,16 +5,56 @@ role: index
 ---
 
 <div class="archives">
-  <div>
-	<ul>
-   {% for post in site.posts %}
-	    <li>
-		<a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
-		<time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
-		{{ post.title }}
-		</a>
-	   </li>
+
+            <nav class="jumpto smalltitle">
+                <h2 class="smalltitle" style="display: inline-block;">Categories : </h2>
+                   <a href="#all"><strong>All Posts</strong></a> /
+                   {% for category in site.categories %}
+                        <a href="#{{ category | first | remove:' ' }}">{{ category | first }}</a> {% if forloop.last %}{% else %}· {% endif %}
+                   {% endfor %}
+            </nav>
+            <br>
+
+        
+   {% for category in site.categories %}
+        <div class="catbloc" id="{{ category | first | remove:' ' }}">
+            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="box"></span> {{ category | first }}</h2><br>
+            
+            <div>
+            <ul>
+              {% for posts in category %}
+                {% for post in posts %}
+                {% if post.url %}
+                <li>
+                    <a href="{{ post.url }}">
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    {{ post.title }}
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </ul>
+            </div>
+        </div>
    {% endfor %}
-	</ul>
-   </div>
+
+
+        <div class="catbloc" id="all">
+            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="list"></span> All posts</h2><br>
+                        
+            <div>
+                <ul>
+                    {% for post in site.posts %}
+                        <li>
+                            <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+                            <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                            {{ post.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
 </div>

@@ -2,6 +2,7 @@
 title: ! 'Au Fil du retour #6 : en route, au Cœur, et ailleurs.'
 layout: post
 published: false
+category: "Au Fil du retour"
 series:
   name: "Au Fil du retour"
   episode: "en route, au Cœur, et ailleurs"

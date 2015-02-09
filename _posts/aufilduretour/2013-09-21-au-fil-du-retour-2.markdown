@@ -3,7 +3,7 @@ layout: post
 published: true
 comments: true
 title: "Au Fil du retour #2 : Non-Euclidien."
-serif: true
+category: "Au Fil du retour"
 series:
   name: "Au Fil du retour"
   episode: "Non-Euclidien."

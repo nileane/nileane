@@ -6,16 +6,13 @@ bodyclass: home
 <section class="article">
     <article>
         <nav class="jumpto smalltitle">
-            <h2 class="smalltitle" style="display: inline-block;">Jump to // </h2>
+            <h2 class="smalltitle" style="display: inline-block;">Jump to : </h2>
             <a href="#mostrecent">
                 <span class="oi" style="margin:0 5px" data-glyph="script"></span>
                 Latest post</a> /
             <a href="#recent">
-                <span class="oi" style="margin:0 5px" data-glyph="script"></span>
-                Recent posts</a> /
-            <a href="#all">
-                <span class="oi" style="margin:0 5px" data-glyph="box"></span>
-                Older posts</a>
+                <span class="oi" style="margin:0 5px" data-glyph="list-rich"></span>
+                Recent posts</a>
         </nav>
         <br><br>
     
@@ -43,7 +40,7 @@ bodyclass: home
 
 <section class="article recent">
     <article>
-            <h2 class="smalltitle" id="recent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Recent posts</h2><br>
+            <h2 class="smalltitle" id="recent"><span class="oi" style="margin-right:12px" data-glyph="list-rich"></span> Recent posts</h2><br>
             
                {% for post in site.posts limit:3 offset:1 %}
                <div>
@@ -58,22 +55,9 @@ bodyclass: home
                {% endfor %}
     </article>
 </section>
-
-<section class="article archives" id="archive">
-    <article>
-            <h2 class="smalltitle" id="all"><span class="oi" style="margin-right:12px" data-glyph="box"></span> Older posts</h2><br>
-            
-            <div>
-            <ul>
-   {% for post in site.posts offset:4 %}
-                <li>
-                    <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
-                    {{ post.title }}
-                    </a>
-                </li>
-   {% endfor %}
-            </ul>
-            </div>
-    </article>
-</section>
+    
+<div class="readnext">
+<a href="/archive#all" title="Archive">
+	<span><span class="oi" id="all" style="margin-right:12px" data-glyph="list"></span> All posts</span>
+	<h1>Navigate through all posts</h1></a>
+</div> 

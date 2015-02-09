@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: "Petites de mes nouvelles #5 : simple remaniement."
+category: "Petites de mes nouvelles"
 series:
   name: "Petites de mes nouvelles"
   episode: "simple remaniement."

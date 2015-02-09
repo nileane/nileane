@@ -3,6 +3,7 @@ layout: post
 published: true
 comments: true
 title: "Petites de mes nouvelles #3 : lorsque je pense tout haut."
+category: "Petites de mes nouvelles"
 series:
   name: "Petites de mes nouvelles"
   episode: "lorsque je pense tout haut."

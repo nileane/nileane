@@ -2,6 +2,7 @@
 title: ! 'Au Fil du retour #4 : le blanc des entrées.'
 layout: post
 published: true
+category: "Au Fil du retour"
 series:
   name: "Au Fil du retour"
   episode: "le blanc des entrées."

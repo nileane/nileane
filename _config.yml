@@ -25,7 +25,7 @@ auto_ids:    true
 
 
 #
-# Schrift template configuration
+# Template configuration
 #
 
 # Enter below your name or pseudo & a short description
@@ -38,16 +38,12 @@ title: Schoewilliam  # Appears in the window title of the browser. Stands alone 
 #    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
 maintitle: Schoewilliam<em style="opacity:.5">.fr</em>
 
-# Enter below a short description that will sit next to your head title.
-#    | {optional}
-maindesc: Open web enthusiast.
-
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
-- text: Home
-  url: /
-  openiconic: home
+- text: Archive
+  url: "/archive/#all"
+  openiconic: list
 - text: Projects
   url: /projects.html
   openiconic: code
