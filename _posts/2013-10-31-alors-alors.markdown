@@ -4,6 +4,7 @@ published: true
 comments: true
 title: Alors alors
 centered: true
+category: Poésie
 ---
 Alors alors  
 Peste la soif de mots  

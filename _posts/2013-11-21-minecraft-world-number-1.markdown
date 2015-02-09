@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-en: true
+category: "in English"
 title: "Minecraft world tour #1 : warmy home."
 ---
 *Minecraft is the only game I play. No kidding, the only one. I've been playing on a few single-player worlds by now. With the 1.7 release that came out just recently, bringing with it a whole new terrain generation, I started from scratch, and set up a small white-listed server to play around with my friends. Let's have a tour, you are my guest.*

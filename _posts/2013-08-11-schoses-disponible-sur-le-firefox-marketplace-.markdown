@@ -3,6 +3,7 @@ layout: post
 published: true
 comments: true
 title: Schoses disponible sur le Firefox Marketplace.
+category: Projects
 ---
 
 ![Schoses](/images/schoses/icon-128.png){: class="align right"}

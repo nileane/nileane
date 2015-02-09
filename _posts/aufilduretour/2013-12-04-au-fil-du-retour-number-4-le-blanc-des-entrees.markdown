@@ -3,11 +3,6 @@ title: ! 'Au Fil du retour #4 : le blanc des entrées.'
 layout: post
 published: true
 category: "Au Fil du retour"
-series:
-  name: "Au Fil du retour"
-  episode: "le blanc des entrées."
-  index: 4
-  url: "/archive/aufilduretour.html"
 ---
 [(…)](/2013/11/03/au-fil-du-retour-number-3-la-musique-doctepo.html)
 

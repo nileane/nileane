@@ -4,15 +4,22 @@
     <hgroup>
     {% if page.link %}
         <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
-    {% elsif page.series %}
-        <h1><a href="{{ page.series.url }}">{{ page.series.name }}</a> #{{ page.series.index }} : {{ page.series.episode }}</h1>
     {% else %}
         <h1>{{ page.title }}</h1>
     {% endif %}
     </hgroup>
 
     
-    <time datetime='{{ post.date }}' class="top">{{ page.date | date: "%-d %B %Y" }}</time>
+    {% if page.category %}
+        <span class="top">Published in <a style="font-weight:normal" href="/archive#{{ page.category | remove:' ' | downcase }}">{{ page.category }}</a></span>
+    {% elsif page.categories %}
+        <span class="top">Published in
+        {% for category in page.categories %}
+             <a style="font-weight:normal" href="/archive#{{ category | remove:' ' | downcase }}">{{ category | capitalize }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+        {% endfor %}
+        </span>
+    {% endif  %}
+    <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{{ page.date | date: "%-d %B %Y" }}</time>
     
     <div id="post"{% if page.link %} class=link{% endif %}>
         {{ content }}

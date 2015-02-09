@@ -5,6 +5,7 @@ comments: true
 title: Papapins
 serif: true
 centered: true
+category: Poésie
 ---
 Oh papapin voilà enfin  
 La vie du sourire de ces confins  

@@ -2,10 +2,7 @@
 layout: post
 published: true
 title: Minisch, mon thème pour Wordpress
-tags:
-- minisch
-- wordpress
-- theme
+category: Projects
 ---
 Il me fallait un thème simple, sobre, clair (très clair), et bien sûr totalement original. Ainsi est né Minisch. Évidemment gratuit, ouvert, et n'est soumis à aucune restriction.
 Faisons-en le tour, dans la joie et la bonne humeur s'il vous plait /o/. Oh et je tâcherai de fournir un bloc-exemple pour chacune des sections, en véritable HTML+CSS (bouh aux captures d'écran).

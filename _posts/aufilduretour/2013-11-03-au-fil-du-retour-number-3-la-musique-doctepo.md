@@ -3,11 +3,6 @@ title: "Au Fil du retour #3 : la Musique d'Octepo."
 layout: post
 published: true
 category: "Au Fil du retour"
-series: 
-  name: "Au Fil du retour"
-  episode: "la Musique d'Octepo."
-  index: 3
-  url: "/archive/aufilduretour.html"
 comments: true
 serif: true
 ---

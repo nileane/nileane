@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-en: true
+category: "in English"
 title: "Clearer."
 ---
 > « Uh, this is black on white. », a friend said.

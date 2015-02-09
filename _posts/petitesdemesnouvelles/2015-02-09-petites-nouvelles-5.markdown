@@ -3,11 +3,6 @@ layout: post
 published: true
 title: "Petites de mes nouvelles #5 : simple remaniement."
 category: "Petites de mes nouvelles"
-series:
-  name: "Petites de mes nouvelles"
-  episode: "simple remaniement."
-  index: 5
-  url: "/archive/petitesdemesnouvelles.html"
 ---
 *(TL;DR) En bref: réorganisation du carnet. Cela inclut, au-delà de l'apparence, des billets chroniques réguliers et une ligne plus stable pour m'exprimer librement sur mon petit espace.*
 

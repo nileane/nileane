@@ -4,6 +4,7 @@ published: true
 comments: true
 serif: true
 title: "Cri à l'acharnement."
+category: Poésie
 ---
 La consistante, constituante de ce vacarme acharné à modéliser le Temps,  
 Pénètre la Constitution d'un *état* malheureux bien constipant.  

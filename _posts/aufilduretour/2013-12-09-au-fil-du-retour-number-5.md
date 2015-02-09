@@ -3,11 +3,6 @@ title: ! 'Au Fil du retour #5 : petite chute dans la Plaine Bleue.'
 layout: post
 published: true
 category: "Au Fil du retour"
-series:
-  name: "Au Fil du retour"
-  episode: "petite chute dans la Plaine Bleue."
-  index: 5
-  url: "/archive/aufilduretour.html"
 ---
 [(...)](/2013/12/04/au-fil-du-retour-number-4-le-blanc-des-entrees.html) *Je passe l’ouverture. Voici Octepo.*
 

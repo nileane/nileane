@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: "Back from MozFest 2014!"
-en: true
+categories: ["in English",Mozilla]
 ---
 *Just got back home from London at [Mozilla Festival 2014](http://2014.mozillafestival.org/) [and a little detour by Paris on the way back home]. It was really nice to meet some of my fellows from the Marketplace Team, and to enjoy with a lot of enthusiastic mozillians.  
 Below are some photos from MozFest, and my little London Tour.*

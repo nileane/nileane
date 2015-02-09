@@ -146,6 +146,7 @@ hr.wide {
 .jumpto .smalltitle {
     margin: 0;
     font-size: 12px;
+    padding: 4px 0;
 }
 .jumpto a {
     display: inline-block;
@@ -418,7 +419,6 @@ blockquote {
 
 .readnext {
     padding: 2.5em 10%;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
     text-align: left;
 }
 .readnext a {

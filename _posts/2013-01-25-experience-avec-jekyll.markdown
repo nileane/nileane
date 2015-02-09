@@ -2,9 +2,7 @@
 layout: post
 published: true
 title: Expérience avec Jekyll
-tags:
-- jekyll
-- carnet
+category: Jekyll
 ---
 On a, il y a quelques jours, métamorphosé cet espace sur le web.  
 Le principal motivateur de cette migration se trouve au cœur même du blog, ainsi que ma manière de le gérer.

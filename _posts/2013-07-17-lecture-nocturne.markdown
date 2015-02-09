@@ -5,6 +5,7 @@ comments: true
 title: "Lecture nocturne."
 centered: true
 serif: true
+category: Poésie
 ---
 Cette nuit fuit la pluie et suit cette poursuite  
 Une poursuite poursuivie du Temps où j'ose lire  

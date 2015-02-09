@@ -3,7 +3,7 @@ layout: post
 published: true
 comments: true
 title: "Mozilla Summit: one week left!"
-en: true
+categories: ["in English",Mozilla]
 ---
 As I [told earlier](/2013/09/04/heading-to-mozilla-summit-brussels.html), I'll be attending the Mozilla Summit 2013 in Brussels ! Very excited since it is only about days now until then.
 

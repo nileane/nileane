@@ -3,7 +3,7 @@ layout: post
 published: true
 comments: false
 title: Heading to the Mozilla Summit 2013
-en: true
+categories: ["in English",Mozilla]
 ---
 ![Mozilla Summit 2013](/images/mozillasummit.png){: class="align right"}
 

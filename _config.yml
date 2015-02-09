@@ -54,6 +54,15 @@ menus:
   url: /about.html
   openiconic: info
   
+  
+defaults:
+ -
+  scope:
+    path: ""
+    type: "posts"
+  values:
+    permalink: /:year/:month/:day/:title.html
+  
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment
 #    | {optional}
@@ -102,9 +111,3 @@ linkoliste:
   url: http://www.sebsauvage.net/rhaa/
 - text: 22decembre
   url: http://www.22decembre.eu/
-
-series:
-- text: Au Fil du retour
-  url: /archive/aufilduretour.html
-- text: Petites de mes nouvelles
-  url: /archive/petitesdemesnouvelles.html

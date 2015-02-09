@@ -4,11 +4,6 @@ published: true
 comments: true
 title: "Petites de mes nouvelles : Boot2Gecko, StatusNet …"
 category: "Petites de mes nouvelles"
-series:
-  name: "Petites de mes nouvelles"
-  episode: "Boot2Gecko, StatusNet …"
-  index: 1
-  url: "/archive/petitesdemesnouvelles.html"
 ---
 *Le ciel est clair, et les petits changements ne se bousculent pas. Maaaais, voilà tout de même une petite mise à jour avant la régularité retrouvée de l'été prochain.*
 

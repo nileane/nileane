@@ -3,7 +3,7 @@ layout: post
 published: true
 comments: true
 title: Back from the Mozilla Summit in Brussels
-en: true
+categories: ["in English",Mozilla]
 ---
 [![A lot of Mozillians](/images/summit2013/together.jpg)](/images/summit2013/together.jpg)
 Never too much Mozillians. Never.
