@@ -42,7 +42,7 @@ maintitle: Schoewilliam<em style="opacity:.5">.fr</em>
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
 - text: Archive
-  url: "/archive/#all"
+  url: /archive
   openiconic: list
 - text: Projects
   url: /projects.html
