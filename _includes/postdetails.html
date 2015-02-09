@@ -9,16 +9,13 @@
     {% endif %}
     </hgroup>
 
-    
-    {% if page.category %}
-        <span class="top">Published in <a style="font-weight:normal" href="/archive#{{ page.category | remove:' ' | downcase }}">{{ page.category }}</a></span>
-    {% elsif page.categories %}
-        <span class="top">Published in
+    {% if page.categories %}
         {% for category in page.categories %}
-             <a style="font-weight:normal" href="/archive#{{ category | remove:' ' | downcase }}">{{ category | capitalize }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+          {% if forloop.first %}<span class="top">Published in{% endif%}
+             <a style="font-weight:normal" href="/archive#{{ category | remove:' ' | downcase }}">{{ category | capitalize }}</a>{% if forloop.last %}.</span>{% else %}, {% endif %}
         {% endfor %}
         </span>
-    {% endif  %}
+    {% endif %}
     <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{{ page.date | date: "%-d %B %Y" }}</time>
     
     <div id="post"{% if page.link %} class=link{% endif %}>
