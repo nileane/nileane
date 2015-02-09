@@ -61,7 +61,7 @@ menus:
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment
 #    | {optional}
-invitationmsg: If you have any reaction, any feedback you would like me to read, please don't hesitate to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
+invitationmsg: If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
 
 nodes:
 - text: diaspora*
