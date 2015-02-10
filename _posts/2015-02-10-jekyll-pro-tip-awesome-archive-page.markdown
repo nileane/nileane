@@ -121,7 +121,7 @@ In other words, to make a section appear, the user has to click the link that po
 
 * **And with a bonus CSS animation**
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/schoewilliam/trbkq2th/5/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/schoewilliam/trbkq2th/6/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 * And for a practical and tangible demo, you can have a look at my [own Archive page](/archive)
 
