@@ -115,7 +115,7 @@ The situation described here is that any element whose class is set to `catbloc`
 
 In other words, to make a section appear, the user has to click the link that points to its anchor.
 
-* **Have a demo**
+* **Have a demo**{: id="demo"}
 
 <iframe width="100%" height="300" src="http://jsfiddle.net/schoewilliam/trbkq2th/3/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
