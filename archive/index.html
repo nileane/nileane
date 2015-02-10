@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Archive
+title: Archives
 role: index
 ---
 
 <div class="archives">
 
             <nav class="jumpto smalltitle">
-                <a href="#all"><span class="oi" style="margin-right:5px" data-glyph="list"></span> <strong>All Posts</strong></a><br>
-                <h2 class="smalltitle" style="display: inline-block;"><span class="oi" style="margin-right:5px" data-glyph="box"></span> Categories : </h2>
+                <a href="#all"><span class="oi" style="margin-right:5px" data-glyph="list"></span> <strong>Tous les billets</strong></a><br>
+                <h2 class="smalltitle" style="display: inline-block;"><span class="oi" style="margin-right:5px" data-glyph="box"></span> Catégories : </h2>
                    {% for category in site.categories %}
                         <a href="#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}{% else %}· {% endif %}
                    {% endfor %}
