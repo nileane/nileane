@@ -7,7 +7,7 @@ layout: null
   	<title>{{ site.title | xml_escape }}</title>
 		<description>Schoewilliam — Billets catégorisés dans "Libre"</description>
 		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/flux.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ site.url }}/libre.xml" rel="self" type="application/rss+xml" />
     {% for post in site.categories.libre %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
