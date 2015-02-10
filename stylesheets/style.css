@@ -219,6 +219,10 @@ hr.wide {
     font-size: 70%;
     letter-spacing: 2px;
 }
+.catbloc .smalltitle {
+    padding-top: 100px;
+    margin-top: -100px;
+}
 .catbloc:target {
     animation: slidedown .5s 1;
        -webkit-animation: slidedown .5s 1;
