@@ -153,6 +153,9 @@ hr.wide {
     letter-spacing: 1px;
     padding: 4px 0;
 }
+.jumpto #englishreader {
+    float:right;
+}
 .smalltitle:target:before {
     content: "→";
     position: absolute;
@@ -468,6 +471,14 @@ blockquote {
   article h1,
   .home article h3 {
     font-size: 2em;
+  }
+  
+  .jumpto #englishreader {
+    float: none;
+  }
+  .jumpto #englishreader:before {
+    content: " / ";
+    color: rgba(0, 0, 0, .8);
   }
 }
 @media (max-width:500px) {

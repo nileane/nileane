@@ -42,16 +42,16 @@ maintitle: Schoewilliam<em style="opacity:.5">.fr</em>
 # Enter below the items of your main menu
 #    | Keep it a small amount. It is designed for a small menu.
 menus:
-- text: Archive
+- text: Archives
   url: /archive
   openiconic: list
-- text: Projects
+- text: Projets
   url: /projects.html
   openiconic: code
-- text: Links
+- text: Liens
   url: /links.html
   openiconic: link-intact
-- text: About
+- text: "À propos"
   url: /about.html
   openiconic: info
   

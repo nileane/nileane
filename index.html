@@ -6,18 +6,21 @@ bodyclass: home
 <section class="article">
     <article>
         <nav class="jumpto smalltitle">
-            <h2 class="smalltitle" style="display: inline-block;">Jump to : </h2>
+            <h2 class="smalltitle" style="display: inline-block;">Aller à : </h2>
             <a href="#mostrecent">
                 <span class="oi" style="margin:0 5px" data-glyph="script"></span>
-                Latest post</a> /
+                Dernier billet</a> /
             <a href="#recent">
                 <span class="oi" style="margin:0 5px" data-glyph="list-rich"></span>
-                Recent posts</a>
+                Billets récents</a>
+            <a href="/archive/#inenglish" id="englishreader">
+                <span class="oi" style="margin:0 5px" data-glyph="globe"></span>
+                English reader ?</a>
         </nav>
         <br><br>
     
         <div>
-            <h2 class="smalltitle" id="mostrecent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Latest post</h2>
+            <h2 class="smalltitle" id="mostrecent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Dernier billet</h2>
             
                {% for post in site.posts limit:1 %}
                 <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
@@ -33,14 +36,14 @@ bodyclass: home
     
     {% for post in site.posts limit:1 %}
     <a href="{{ post.url }}"><div class="readbloc">
-        Read post
+        Lire la suite
     </div></a>
     {% endfor %}
 </section>
 
 <section class="article recent">
     <article>
-            <h2 class="smalltitle" id="recent"><span class="oi" style="margin-right:12px" data-glyph="list-rich"></span> Recent posts</h2><br>
+            <h2 class="smalltitle" id="recent"><span class="oi" style="margin-right:12px" data-glyph="list-rich"></span> Billets récents</h2><br>
             
                {% for post in site.posts limit:3 offset:1 %}
                <div>
@@ -58,6 +61,6 @@ bodyclass: home
     
 <div class="readnext">
 <a href="/archive#all" title="Archive">
-	<span><span class="oi" id="all" style="margin-right:12px" data-glyph="list"></span> All posts</span>
-	<h1>Navigate through all posts</h1></a>
+	<span><span class="oi" id="all" style="margin-right:12px" data-glyph="list"></span> Tous les billets</span>
+	<h1>Naviguer parmi tous les billets publiés</h1></a>
 </div> 
