@@ -3,7 +3,7 @@ layout: post
 published: true
 comments: true
 title: "Petite sélection d'applications pour Firefox OS"
-categories: ["Mozilla","Firefox OS"]
+categories: ["Mozilla","Firefox OS","Libre"]
 ---
 > « Parce qu'il n'y a pas de raison que les gusses de chez Google et leurs clients auxquels ils vendent mes données soient les seuls à savoir tout ce que j'ai pu installer sur mon téléphone pseudo-intelligent : voici ma sélection d'applications pour Android. »
 

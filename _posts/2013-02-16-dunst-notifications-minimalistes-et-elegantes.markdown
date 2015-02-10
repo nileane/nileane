@@ -3,10 +3,7 @@ layout: post
 published: true
 comments: true
 title: ! 'dunst: notifications minimalistes et élégantes'
-tags:
-- dunst
-- notifications
-- config
+category: Libre
 ---
 On a découvert **dunst** récemment, qui est un daemon de notifications qui conviendra aux utilisateurs de Tiling Window Managers — en particulier — car d'un aspect magnifiquement simpliste et agréablement léger.  
 Et lorsque les couleurs sont bien choisies, obtenir de très jolis résultats devient un véritable délice :3. Petite démonstration ?

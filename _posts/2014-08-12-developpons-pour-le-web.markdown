@@ -2,6 +2,7 @@
 layout: post
 published: true
 title: Développons pour le web, pas pour Chrome.
+category: [Libre,"Open Web"]
 ---
 « *Choisissez Firefox maintenant, sinon plus tard vous n’aurez plus le choix* », écrit Robert O'Callahan, développeur Mozillien, dans [un billet](http://robert.ocallahan.org/2014/08/choose-firefox-now-or-later-you-wont.html) qui tente de sensibiliser à propos de l'inquiétante domination de Chrome, toujours plus croissante.  
 

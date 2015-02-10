@@ -6,6 +6,7 @@
 
 # Global
 safe: false
+name: Schoewilliam
 url: http://schoewilliam.fr 
 source:      .
 destination: ./_site
@@ -62,6 +63,7 @@ defaults:
     type: "posts"
   values:
     permalink: /:year/:month/:day/:title.html
+    author: "William Dorffer"
   
 # Enter an invitation message
 #    | It lies right beneath every post to invite your readers to react and comment
