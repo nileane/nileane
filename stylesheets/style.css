@@ -2,7 +2,7 @@
 @import url('../fonts/openiconic/css/open-iconic.css');
 @import url('../fonts/charissil/charissil.css');
 @import url('./isso.css');
-
+@import url('./syntax.css');
 
 body,input {
     font: 20px/1.5 "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
@@ -34,7 +34,7 @@ pre, code {
     background-color: #FAF8F2;
     color: #777;
     border-radius: 2px;
-    font-size: 90%;
+    font-size: 80%;
 }
 
 em em {

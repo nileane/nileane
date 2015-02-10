@@ -6,7 +6,7 @@ category: "Petites de mes nouvelles"
 ---
 *(TL;DR) En bref: réorganisation du carnet. Cela inclut, au-delà de l'apparence, des billets chroniques réguliers et une ligne plus stable pour m'exprimer librement sur mon petit espace.*
 
-Ce carnet représente à la fois d'un moyen de communiquer sur mes projets, mon activité sur les réseaux et dans la vie d'une manière plus large, mais aussi de m'exprimer sur ce qui me tient à cœur, et de publier des écrits de fiction — que j'affectionne beaucoup même s'ils ne se font qu'occasionnels.
+Ce carnet représente à la fois un moyen de communiquer sur mes projets, mon activité sur les réseaux et dans la vie d'une manière plus large, mais aussi de m'exprimer sur ce qui me tient à cœur, et de publier des écrits de fiction — que j'affectionne beaucoup même s'ils ne se font qu'occasionnels.
 
 Puisque les objectifs de cet espace sont aussi multiples, et parce que je voudrais qu'il vive le plus longtemps possible, il me faut le penser afin de parvenir à les remplir.  
 Concrètement, cela implique que je vais désormais me jouer à l'exercice du billet *chronique régulier*. Chacun ayant son but, strict comme libre. J'en compte pour l'instant trois. L'idée est d'avoir ainsi un nouveau billet pour chaque type, au moins mensuellement.
