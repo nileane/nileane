@@ -4,7 +4,7 @@ title: ! 'Adoption du clavier BÉPO : 8 mois après.'
 status: publish
 type: post
 published: true
-category: BÉPO
+categories: [BÉPO,Libre]
 ---
 Il y a 8 mois environ, je parlais de ma décision de [changer radicalement de disposition de clavier](/2011/07/08/adoption-du-clavier-bepo.html). Quel petit fou étais-je ?  
 Il faut savoir que BÉPO est une disposition conçue selon **la méthode Dvorak**. Cette dernière pense et conçoit une disposition de clavier de façon ergonomique et logique ; mais [**le site du projet**](http://bepo.fr/wiki/Accueil){: target="\_blank"} vous en apprendra davantage.
