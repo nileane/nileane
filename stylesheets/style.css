@@ -153,8 +153,15 @@ hr.wide {
     letter-spacing: 1px;
     padding: 4px 0;
 }
-.jumpto #englishreader {
-    float:right;
+#wrapper > .mainlink {
+    padding: .1em 10% 1.6em;
+}
+.mainlink a {
+    color: rgba(255, 255, 255, .6);
+    padding: 10px 0;
+}
+.mainlink a:hover {
+    color: #fff;
 }
 .smalltitle:target:before {
     content: "→";
@@ -237,12 +244,17 @@ hr.wide {
 section.article {
     margin: 0px auto;
     vertical-align: top;
+    overflow: hidden;
     text-align: left;
     padding: 2.5em 10%;
     background-color: #FFF;
     max-width: calc(1000px - 20%);
-    animation: slideup .5s 1;
-        -webkit-animation: slideup .5s 1;
+}
+@media (min-width:670px) {
+    section.article {
+        animation: slideup .5s 1;
+            -webkit-animation: slideup .5s 1;
+    }
 }
 .home section.article {
     margin-bottom: 1.7em;
@@ -264,6 +276,39 @@ article {
     font-weight: 300;
     font-style: italic;
 }
+hgroup.headimg {
+    margin: -2.5em -5em 1.2em;
+    padding: 120px 5em 1em;
+    background-color: #323232;
+    background-position: center;
+    background-size: 110% auto;
+    box-shadow: inset 0 0 0 800px rgba(0, 0, 0, .7);
+    position: relative;
+}
+@media (max-width:670px) {
+    hgroup.headimg {
+        padding: 40px 5em 1em;
+        background-size: auto 100%;
+    }
+}
+hgroup.headimg .credits {
+    font-size: 11px;
+    line-height: 0.9;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 6px;
+    max-width: 60%;
+    right: 6em;
+    text-align: right;
+}
+hgroup.headimg .credits a {
+    color: rgba(255, 255, 255, .3);
+}
+hgroup.headimg .credits .oi {
+    float: right;
+    margin: -1px 0 0 7px;
+}
 article h1,
 .home article h3,
 .home .article.recent h4,
@@ -273,6 +318,16 @@ article h1,
     font-weight: 300;
     color: #121212;
     margin: 20px 5px 35px 0;
+}
+hgroup.headimg .smalltitle {
+    color: #fff;
+}
+hgroup.headimg h1,
+hgroup.headimg a h3 {
+    margin: 40px auto .3em;
+    max-width: 800px;
+    color: #fff;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, .5);
 }
 article h1 a:hover {
     text-decoration:underline;
@@ -307,7 +362,6 @@ article h3 {
     padding: 0.5em 12%;
     position: relative;
     margin: 0px -12% -2.5em;
-    font-style: italic;
 }
 .readbloc:before {
     content: " ";
@@ -448,6 +502,8 @@ blockquote {
     font-size: 180%;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.5);
+    transition: all .2s;
+       -webkit-transition: all .2s;
 }
 .readnext a:hover > h1 {
     color: rgba(255, 255, 255, .9);

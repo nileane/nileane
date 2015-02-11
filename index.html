@@ -5,32 +5,26 @@ bodyclass: home
 ---
 <section class="article">
     <article>
-        <nav class="jumpto smalltitle">
-            <h2 class="smalltitle" style="display: inline-block;">Aller à : </h2>
-            <a href="#mostrecent">
-                <span class="oi" style="margin:0 5px" data-glyph="script"></span>
-                Dernier billet</a> /
-            <a href="#recent">
-                <span class="oi" style="margin:0 5px" data-glyph="list-rich"></span>
-                Billets récents</a>
-            <a href="/archive/#inenglish" id="englishreader">
-                <span class="oi" style="margin:0 5px" data-glyph="globe"></span>
-                English reader ?</a>
-        </nav>
-        <br><br>
-    
         <div>
+          {% for post in site.posts limit:1 %}
+          <hgroup {% if post.headimg_url %}class="headimg" style="background-image: url({{ post.headimg_url }});"{% endif %}>
             <h2 class="smalltitle" id="mostrecent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Dernier billet</h2>
-            
-               {% for post in site.posts limit:1 %}
                 <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
                     <h3>{{ post.title }}</h3>
                 </a>
+                {% if post.headimg_lic %}
+                    {% if post.headimg_lic_url %}
+                        <span class="credits"><span class="oi" data-glyph="image"></span> <a href="{{ post.headimg_lic_url }}">{{ post.headimg_lic }}</a></span>
+                    {% else %}
+                        <span class="credits"><span class="oi" data-glyph="image"></span> {{ post.headimg_lic }}</span>
+                    {% endif %}
+                {% endif %}
+          </hgroup>
                     <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
                     <div id="post">
                         {{ post.content | truncatewords: 90 }}
                     </div>
-               {% endfor %}
+          {% endfor %}
         </div>
     </article>
     
@@ -40,6 +34,10 @@ bodyclass: home
     </div></a>
     {% endfor %}
 </section>
+
+<div class="mainlink">
+<a href="/archive#inenglish" class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="globe"></span>English reader ?</a>
+</div>
 
 <section class="article recent">
     <article>

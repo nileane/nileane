@@ -4,6 +4,9 @@ published: true
 comments: true
 title: Back from the Mozilla Summit in Brussels
 categories: ["in English",Mozilla]
+headimg_url: /images/summit2013/together.jpg
+headimg_lic: Par William Dorffer [CC BY 2.0]
+headimg_lic_url: /images/summit2013/together.jpg
 ---
 [![A lot of Mozillians](/images/summit2013/together.jpg)](/images/summit2013/together.jpg)
 Never too much Mozillians. Never.

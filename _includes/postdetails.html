@@ -1,11 +1,18 @@
 <section class="article {%  if page.centered == true %}centered{% endif %}">
     <article>
 
-    <hgroup>
+    <hgroup {% if page.headimg_url %}class="headimg" style="background-image: url({{ page.headimg_url }});"{% endif %}>
     {% if page.link %}
         <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
     {% else %}
         <h1>{{ page.title }}</h1>
+    {% endif %}
+    {% if page.headimg_lic %}
+        {% if page.headimg_lic_url %}
+            <span class="credits"><span class="oi" data-glyph="image"></span> <a href="{{ page.headimg_lic_url }}">{{ page.headimg_lic }}</a></span>
+        {% else %}
+            <span class="credits"><span class="oi" data-glyph="image"></span> {{ page.headimg_lic }}</span>
+        {% endif %}
     {% endif %}
     </hgroup>
 
@@ -42,7 +49,7 @@
 <div class="readnext">
 {% if page.previous.url %}
 <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">
-	<span><span class="oi" style="margin-right:12px" data-glyph="script"></span> Read next</span>
+	<span><span class="oi" style="margin-right:12px" data-glyph="script"></span> À lire ensuite</span>
 	<h1>{{page.previous.title}}</h1></a>
 {% endif %}
 </div> 

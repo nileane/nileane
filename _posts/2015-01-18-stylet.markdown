@@ -2,6 +2,9 @@
 layout: post
 published: true
 title: "Heureux de mon stylet."
+headimg_url: /images/stylet2.jpg
+headimg_lic: Par William Dorffer [CC BY 2.0]
+headimg_lic_url: /images/stylet2.jpg
 ---
 Cela fait maintenant plusieurs mois que j'ai décidé de gérer ma vie et mes outils universitaires de manière totalement numérique. C'est plutôt simple après tout : une petite instance d'ownCloud pour synchroniser mes fichiers, et un calendrier/agenda, une syntaxe simpliste pour la prise de notes (markdown), et… une tablette. (Eh oui)
 

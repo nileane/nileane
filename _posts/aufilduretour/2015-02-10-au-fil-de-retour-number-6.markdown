@@ -1,5 +1,5 @@
 ---
-title: ! 'Au Fil du retour #6 : en route, au Cœur, et ailleurs.'
+title: 'Au Fil du retour #6 : en route, au Cœur, et ailleurs.'
 layout: post
 published: false
 category: "Au Fil du retour"
