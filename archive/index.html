@@ -9,7 +9,8 @@ role: index
             <nav class="jumpto smalltitle">
                 <a href="#all"><span class="oi" style="margin-right:5px" data-glyph="list"></span> <strong>Tous les billets</strong></a><br>
                 <h2 class="smalltitle" style="display: inline-block;"><span class="oi" style="margin-right:5px" data-glyph="box"></span> Catégories : </h2>
-                   {% for category in site.categories %}
+                   {% assign sortedcats = site.categories | sort %}
+                   {% for category in sortedcats %}
                         <a href="#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}{% else %}· {% endif %}
                    {% endfor %}
             </nav>
