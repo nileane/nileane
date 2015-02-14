@@ -88,7 +88,7 @@ center" style="max-width:33%"}](/images/openwebapps/foxcasts4.png)
 <hr class="wide">
 
 <h2 id="misc" class="smalltitle"><span class="oi" data-glyph="ellipses"></span> Misc</h2>
-* **[ArchWiki Viewer](https://marketplace.firefox.com/app/archwiki-viewer)** — Comme son nom l'indique, elle permet de naviguer dans le wiki très riche d'[Arch linux](http://archlinux.org). Elle a des petites fonctionnalités très sympa comme la possibilité de le télécharger entièrement ou partiellement pour une consultation hors-ligne. De quoi dépanner en cas de réel problème avec sa distribution.
+* **[ArchWiki Viewer](https://marketplace.firefox.com/app/archwiki-viewer)** — Comme son nom l'indique, elle permet de naviguer dans le wiki très riche d'[Arch linux](http://archlinux.org). Elle a des petites fonctionnalités très sympathiques comme la possibilité de le télécharger entièrement ou partiellement pour une consultation hors-ligne. De quoi dépanner en cas de réel problème avec sa distribution.
 
 [![ArchWiki Viewer](/images/openwebapps/archwiki.png){: class="align center" style="max-width:33%"}](/images/openwebapps/archwiki.png)
 
