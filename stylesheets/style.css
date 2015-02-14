@@ -297,7 +297,7 @@ hgroup.headimg {
     background-color: #323232;
     background-position: center;
     background-size: 110% auto;
-    box-shadow: inset 0 0 0 800px rgba(0, 0, 0, .7);
+    box-shadow: inset 0 0 0 800px rgba(0, 0, 0, .6);
     position: relative;
 }
 @media (max-width:670px) {
@@ -342,7 +342,7 @@ hgroup.headimg a h3 {
     margin: 40px auto .3em;
     max-width: 800px;
     color: #fff;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, .5);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
 article h1 a:hover {
     text-decoration:underline;
@@ -429,8 +429,8 @@ article #post iframe {
 #post p {
     margin-bottom: 30px;
 }
-#post a {
-    box-shadow: 0px -4px #FFF inset, 0px -6px #CCC inset;
+#post ul {
+    padding-left: 30px;
 }
 #post a:hover {
     text-decoration: none;
