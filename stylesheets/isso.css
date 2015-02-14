@@ -11,10 +11,11 @@
     font-size: 90% !important;
 }
 #isso-thread h4 {
-    font-size: 14px;
+    font-size: 14px !important;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 500 !important;
     letter-spacing: 3px;
+    margin-bottom: 20px;
 }
 .isso-postbox > .form-wrapper .textarea {
     border-radius: 0 !important;
