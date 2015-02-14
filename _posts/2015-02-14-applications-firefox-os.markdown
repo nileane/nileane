@@ -68,7 +68,7 @@ center" style="max-width:33%"}](/images/openwebapps/foxcasts4.png)
 
 * **[Battery+](https://marketplace.firefox.com/app/battery-2)** — Fort utile pour avoir un œil sur l'utilisation de sa batterie. Sa fonction qui m'est le plus pratique est son estimation du temps d'autonomie restante — de manière globale, ou par type d'activité.
 
-* **[Fichiers](https://marketplace.firefox.com/app/files)** – **Le** gestionnaire des tâches, selon moi, à avoir pour son téléphone sous Firefox OS. Il peut également ouvrir lui-même un certain nombre de formats de fichiers. Son interface est conçue pour très bien s'intégrer au reste de l'OS, et est ainsi plutôt réussie.
+* **[Fichiers](https://marketplace.firefox.com/app/files)** – **Le** gestionnaire des fichiers, selon moi, à avoir pour son téléphone sous Firefox OS. Il peut également ouvrir lui-même un certain nombre de formats de fichiers. Son interface est conçue pour très bien s'intégrer au reste de l'OS, et est ainsi plutôt réussie.
 
 [![Mon dossier Vidéos](/images/openwebapps/fichiers.png){: class="align center" style="width:600px"}](/images/openwebapps/fichiers.png)
 
