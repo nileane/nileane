@@ -50,5 +50,4 @@
 }
 .isso-comment:not(:first-of-type), .isso-follow-up .isso-comment {
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
-    font-size: 90% !important;
 }
