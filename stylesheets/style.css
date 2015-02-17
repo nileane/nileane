@@ -135,16 +135,6 @@ hr.wide {
 #wrapper > nav > a:hover .oi {
     color: rgba(255, 255, 255, .7);
 }
-@media (min-width:770px) {
-    #wrapper > header {
-        display: inline-block;
-        padding-right: 20px;
-    }
-    #wrapper > nav {
-        padding-left: 0;
-        display: inline-block;
-    }
-}
 
 .jumpto {
     background-color: #fafafa;
