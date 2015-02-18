@@ -87,6 +87,7 @@ hr.wide {
 }
 
 #wrapper > header {
+    text-align: center;
     padding: 2.5em 10% 0;
 }
 #wrapper > footer {
@@ -109,6 +110,7 @@ hr.wide {
 #wrapper > nav {
     font-size: 90%;
     padding: 0 10%;
+    text-align: center;
     animation: slideup .5s 1;
         -webkit-animation: slideup .5s 1;
 }
@@ -556,16 +558,6 @@ blockquote {
   .jumpto #englishreader:before {
     content: " / ";
     color: rgba(0, 0, 0, .8);
-  }
-}
-@media (min-width: 800px) {
-  #wrapper > header {
-      padding-right: 0;
-      display: inline-block;
-  }
-  #wrapper > nav {
-      padding-left: 20px;
-      display:inline-block;
   }
 }
 @media (max-width:500px) {
