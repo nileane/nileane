@@ -128,7 +128,7 @@ hr.wide {
 #wrapper > nav .oi {
     vertical-align: bottom;
     display: inline-block;
-    line-height: 1.4;
+    line-height: 1.3;
     color: rgba(255, 255, 255, 0.3);
     transition: all .2s;
     -webkit-transition: all .2s;
