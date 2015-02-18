@@ -102,6 +102,7 @@ hr.wide {
     font-weight: 500;
 }
 #wrapper > header h1 {
+    display: inline-block;
     animation: slidedown .5s 1;
         -webkit-animation: slidedown .5s 1;
 }
@@ -239,6 +240,14 @@ hr.wide {
 .avatar {
     border-radius: 999em;
     box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+}
+header .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    margin-right: 11px;
+    animation: slidedown .5s 1;
+       -webkit-animation: slidedown .5s 1;
 }
 
 
@@ -547,6 +556,16 @@ blockquote {
   .jumpto #englishreader:before {
     content: " / ";
     color: rgba(0, 0, 0, .8);
+  }
+}
+@media (min-width: 800px) {
+  #wrapper > header {
+      padding-right: 0;
+      display: inline-block;
+  }
+  #wrapper > nav {
+      padding-left: 20px;
+      display:inline-block;
   }
 }
 @media (max-width:500px) {
