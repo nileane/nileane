@@ -87,7 +87,6 @@ hr.wide {
 }
 
 #wrapper > header {
-    text-align: center;
     padding: 2.5em 10% 0;
 }
 #wrapper > footer {
@@ -111,7 +110,6 @@ hr.wide {
     font-size: 80%;
     padding: 0 10%;
     position: relative;
-    text-align: center;
     animation: slideup .5s 1;
         -webkit-animation: slideup .5s 1;
 }
