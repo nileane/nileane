@@ -132,6 +132,7 @@ hr.wide {
     line-height: 1.1;
     color: rgba(255, 255, 255, 0.3);
     margin-right: 2px;
+    font-size: 70%;
     transition: all .2s;
     -webkit-transition: all .2s;
 }
