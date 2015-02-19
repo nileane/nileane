@@ -130,14 +130,14 @@ hr.wide {
     vertical-align: middle;
     display: inline-block;
     line-height: 1.1;
-    color: rgba(255, 255, 255, 0.3);
+    color: #fff;
     margin-right: 2px;
     font-size: 70%;
     transition: all .2s;
     -webkit-transition: all .2s;
 }
 #wrapper > nav > a:hover .oi {
-    color: rgba(255, 255, 255, .7);
+    color: #fff;
 }
 
 .jumpto {

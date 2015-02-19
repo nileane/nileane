@@ -44,7 +44,7 @@ maintitle: Schoewilliam
 menus:
 - text: Archives
   url: /archive
-  openiconic: list
+  openiconic: magnifying-glass
 - text: Projets
   url: /projects.html
   openiconic: code
