@@ -145,7 +145,6 @@ hr.wide {
 }
 @media (min-width: 750px) {
 	#wrapper > nav > a {
-	    animation: sapp 2s 1s 1;
 	    opacity: 0;
 	}
 	#wrapper > nav:hover > a {
@@ -155,7 +154,6 @@ hr.wide {
    	    opacity: 0;
 	}
 	.oi.placeholder {
-            animation: sdis 2s 1s 1;
 	    font-size: 65%;
 	    position: absolute;
 	    left: 50%;
@@ -607,34 +605,6 @@ blockquote {
 }
 
 /* ANIMATIONS */
-
-/* Delayed appearance */
-@keyframes sapp {
-   0% { opacity: 0; }
-   15% { opacity: 1; }
-   85% { opacity: 1; }
-   100% { opacity: 0; }
-}
-@-webkit-keyframes sapp {
-   0% { opacity: 0; }
-   15% { opacity: 1; }
-   85% { opacity: 1; }
-   100% { opacity: 0; }
-}
-
-/* Delayed disappearance */
-@keyframes sdis {
-   0% { opacity: 1; }
-   15% { opacity: 0; }
-   85% { opacity: 0; }
-   100% { opacity: 1; }
-}
-@-webkit-keyframes sdis {
-   0% { opacity: 1; }
-   15% { opacity: 0; }
-   85% { opacity: 0; }
-   100% { opacity: 1; }
-}
 
 /* Slide upward */
 @keyframes slideup {
