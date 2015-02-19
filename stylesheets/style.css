@@ -108,7 +108,7 @@ hr.wide {
         -webkit-animation: slidedown .5s 1;
 }
 #wrapper > nav {
-    font-size: 90%;
+    font-size: 80%;
     padding: 0 10%;
     position: relative;
     text-align: center;
@@ -129,45 +129,15 @@ hr.wide {
     color: #fff;
 }
 #wrapper > nav .oi {
-    vertical-align: bottom;
+    vertical-align: middle;
     display: inline-block;
-    line-height: 1.3;
+    line-height: 1.1;
     color: rgba(255, 255, 255, 0.3);
     transition: all .2s;
     -webkit-transition: all .2s;
 }
 #wrapper > nav > a:hover .oi {
     color: rgba(255, 255, 255, .7);
-}
-
-.oi.placeholder {
-	display: none !important;
-}
-@media (min-width: 750px) {
-	#wrapper > nav > a {
-	    opacity: 0;
-	}
-	#wrapper > nav:hover > a {
-	    opacity: 1;
-	}
-	#wrapper > nav:hover .oi.placeholder {
-   	    opacity: 0;
-	}
-	.oi.placeholder {
-	    font-size: 65%;
-	    position: absolute;
-	    left: 50%;
-	    top: 1.2em;
-	    z-index: -1;
-	    width: 30px;
-	    margin-left: -15px;
-	    height: 30px;
-	    line-height: 33px !important;
-	    border-radius: 999em;
-	    background-color: rgba(255, 255, 255, 0.05);
-	    display: block !important;
-	    color: rgba(255, 255, 255, 0.5) !important;
-	}
 }
 
 .jumpto {
@@ -582,7 +552,9 @@ blockquote {
   .home article h3 {
     font-size: 2em;
   }
-  
+  #wrapper > nav {
+    font-size: 90%;
+  }
   .jumpto #englishreader {
     float: none;
   }
