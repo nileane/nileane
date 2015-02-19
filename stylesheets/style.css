@@ -145,7 +145,7 @@ hr.wide {
 }
 @media (min-width: 750px) {
 	#wrapper > nav > a {
-	    animation: sapp 3s 1s 1;
+	    animation: sapp 2s 1s 1;
 	    opacity: 0;
 	}
 	#wrapper > nav:hover > a {
@@ -155,7 +155,7 @@ hr.wide {
    	    opacity: 0;
 	}
 	.oi.placeholder {
-            animation: sdis 3s 1s 1;
+            animation: sdis 2s 1s 1;
 	    font-size: 65%;
 	    position: absolute;
 	    left: 50%;
