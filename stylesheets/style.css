@@ -91,7 +91,7 @@ hr.wide {
     padding: 2.5em 10% 0;
 }
 #wrapper > footer {
-    padding: .5em 10% 2.5em;
+    padding: 2.5em 10%;
 }
 #wrapper > header h1,
 #wrapper > footer h1 {
@@ -413,9 +413,6 @@ pre {
     -moz-hyphens: auto;
     -webkit-hyphens:  auto;
     -ms-hyphens: auto;
-}
-.excerpt {
-    font-style: italic;
 }
 .centered #post {
     text-align: center;
