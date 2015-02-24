@@ -596,7 +596,7 @@ blockquote {
   #wrapper > nav {
     display: block;
     text-align: center;
-    padding: 0 10%;
+    padding: 0 5%;
     font-size: 90%;
     animation: slideup .5s 1;
         -webkit-animation: slideup .5s 1;
