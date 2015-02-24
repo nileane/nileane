@@ -456,8 +456,7 @@ article #post iframe {
 #post p,
 #post ul,
 #post blockquote,
-.excerpt,
-.article.page p {
+.excerpt {
     font-family: "Charis SIL", Bitstream Charter, Georgia, "Fira Sans", serif;
 }
 #post p {
