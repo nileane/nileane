@@ -18,7 +18,7 @@
 
     {% if page.categories %}
         {% for category in page.categories %}
-          {% if forloop.first %}<span class="top">Published in{% endif%}
+          {% if forloop.first %}<span class="top">Publié dans{% endif%}
              <a style="font-weight:normal" href="/archive#{{ category | remove:' ' | downcase }}">{{ category | capitalize }}</a>{% if forloop.last %}.</span>{% else %}, {% endif %}
         {% endfor %}
         </span>
@@ -52,4 +52,4 @@
 	<span><span class="oi" style="margin-right:12px" data-glyph="script"></span> À lire ensuite</span>
 	<h1>{{page.previous.title}}</h1></a>
 {% endif %}
-</div> 
+</div>
