@@ -129,6 +129,8 @@ select.custom:active {
 #wrapper > header {
     display: inline-block;
     padding: 2.5em 3% 1.5em 10%;
+    animation: slidedown .5s 1;
+        -webkit-animation: slidedown .5s 1;
 }
 #wrapper > footer {
     padding: 2.5em 10%;
@@ -144,8 +146,6 @@ select.custom:active {
 }
 #wrapper > header h1 {
     display: inline-block;
-    animation: slidedown .5s 1;
-        -webkit-animation: slidedown .5s 1;
 }
 #wrapper > header > a > img {
     vertical-align: middle;
