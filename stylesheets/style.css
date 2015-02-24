@@ -594,27 +594,20 @@ blockquote {
     padding: 2.5em 10% 0;
   }
   #wrapper > nav {
-    display: inline-block;
+    display: block;
+    text-align: center;
     padding: 0 10%;
     font-size: 90%;
     animation: slideup .5s 1;
         -webkit-animation: slideup .5s 1;
   }
+  #wrapper > nav > a {
+    padding: .9em 10px;
+    margin-right: 6px;
+  }
   #wrapper > header > a > img {
     width: 16px;
     height: auto;
-  }
-}
-@media (max-width:500px) {
-  #wrapper > nav > a:first-of-type {
-    margin-left: 0;
-  }
-  #wrapper > nav > a:nth-of-type(3) {
-    display: none;
-  }
-  #wrapper > nav > a {
-    padding: .9em 10px .9em 0;
-    margin-right: 6px;
   }
 }
 
