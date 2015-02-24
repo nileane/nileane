@@ -303,12 +303,6 @@ section.article {
     background-color: #FFF;
     max-width: calc(1000px - 20%);
 }
-@media (min-width:670px) {
-    section.article {
-        animation: slideup .5s 1;
-            -webkit-animation: slideup .5s 1;
-    }
-}
 .home section.article {
     margin-bottom: 1.7em;
 }
