@@ -163,7 +163,9 @@ select.custom:active {
     display: inline-block;
     margin: 0;
     color: rgba(255, 255, 255, 0.5);
-    padding: .9em 10px;
+    padding: .4em 10px;
+    border-radius: 3px;
+    font-style: italic;
     text-transform: lowercase;
 }
 #wrapper > nav > a:first-of-type {
@@ -171,6 +173,7 @@ select.custom:active {
 }
 #wrapper > nav > a:hover {
     color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .jumpto {
