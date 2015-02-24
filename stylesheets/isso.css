@@ -23,20 +23,18 @@
 }
 .isso-postbox > .form-wrapper > .auth-section .post-action > input {
     padding: calc(0.3em - 1px) 16px !important;
-    border-radius: 999em !important;
-    background-color: #fff !important;
+    border-radius: 3px !important;
     text-transform: uppercase;
     font-weight: 500;
-    color: #346EC5 !important;
-    border-color: #346EC5 !important;
-    transition: all .2s;
+    color: #fff !important;
+    transition: all 0.2s ease 0s;
     font-size: 90% !important;
-    -webkit-transition: all .2s;
-    box-shadow: 0 0 !important;
+    box-shadow: 0px 0px !important;
+    background-color: #1C365F !important;
+    border: 0 !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .post-action > input:hover {
-    border-color: rgba(0, 0, 0, .6);
-    background-color: #fff;
+    background-color: #346EC5 !important ;
     font-size: 90% !important;
     color: #333 !important;
 }
