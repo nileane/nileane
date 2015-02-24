@@ -26,6 +26,11 @@ task :build do
    system "jekyll build"
 end
 
+task :deploy do
+   desc "runs git to pull new code & jekyll to generate _site/"
+   system "git pull && jekyll build"
+end
+
 task :serve do
    desc "runs jekyll server with autoregen enabled"
    system "jekyll serve --watch"
