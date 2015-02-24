@@ -36,7 +36,7 @@
 .isso-postbox > .form-wrapper > .auth-section .post-action > input:hover {
     background-color: #346EC5 !important ;
     font-size: 90% !important;
-    color: #333 !important;
+    color: #fff !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
     box-shadow: 0 1px rgba(0, 0, 0, .05) !important;
