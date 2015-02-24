@@ -44,16 +44,12 @@ maintitle: Schoewilliam
 menus:
 - text: Archives
   url: /archive
-  openiconic: magnifying-glass
 - text: Projets
   url: /projects.html
-  openiconic: code
 - text: Liens
   url: /links.html
-  openiconic: link-intact
 - text: "À propos"
   url: /about.html
-  openiconic: info
   
   
 defaults:

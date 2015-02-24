@@ -6,15 +6,14 @@ role: index
 
 <div class="archives">
 
-            <nav class="jumpto smalltitle">
-                <a href="#all"><span class="oi" style="margin-right:5px" data-glyph="list"></span> <strong>Tous les billets</strong></a><br>
-                <h2 class="smalltitle" style="display: inline-block;"><span class="oi" style="margin-right:5px" data-glyph="box"></span> Catégories : </h2>
-                   {% assign sortedcats = site.categories | sort %}
-                   {% for category in sortedcats %}
-                        <a href="#{{ category | first | remove:' ' }}"><strong>{{ category | first }}</strong></a> {% if forloop.last %}{% else %}· {% endif %}
-                   {% endfor %}
-            </nav>
-            <br>
+    {% assign sortedcats = site.categories | sort %}
+    <select class="custom" name="Catégories" onchange="location = this.options[this.selectedIndex].value;">
+        <option value="#" selected="selected">Catégories</option>
+        {% for category in sortedcats %}
+            <option value="#{{ category | first | remove:' ' }}">{{ category | first }}</option>
+        {% endfor %}
+    </select>
+    <br><br>
 
         
    {% for category in site.categories %}
@@ -40,22 +39,22 @@ role: index
         </div>
    {% endfor %}
 
+</div>
 
-        <div class="catbloc" id="all">
-            <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="list"></span> Tous les billets</h2><br>
-                        
-            <div>
-                <ul>
-                    {% for post in site.posts %}
-                        <li>
-                            <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
-                            <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
-                            {{ post.title }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
-        
+
+<div class="archives" id="all">
+    <h2 class="smalltitle"><span class="oi" style="margin-right:12px" data-glyph="list"></span> Tous les billets</h2><br>
+
+    <div>
+        <ul>
+            {% for post in site.posts %}
+                <li>
+                    <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    {{ post.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>

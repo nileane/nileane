@@ -21,6 +21,9 @@ a {
 a:hover {
     text-decoration: none;
 }
+a:active {
+    outline: 0;
+}
 
 #wrapper {
     max-width: 1000px;
@@ -71,6 +74,43 @@ hr.wide {
 #post hr {
    margin: 50px auto;
 }
+select.custom {
+    margin: 0px;
+    padding: 0.5em 2.9em 0.5em 0.9em;
+    appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
+    letter-spacing: 2px;
+    background: url(/images/iconic/caret-bottom-2x.png) no-repeat 95% center #fafafa;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #222;
+    border-radius: 3px;
+    box-shadow: inset 0 -3px rgba(0, 0, 0, 0.05);
+    transition: background-color .2s;
+      -webkit-transition: background-color .2s;
+    cursor: pointer;
+}
+select.custom > option {
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, .8);
+    border: 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+select.custom:active,
+select.custom:hover {
+    border-color: #346ec5;
+}
+select.custom:active {
+    box-shadow: inset 0 3px rgba(0, 0, 0, .15);
+}
 .label {
    font-size: 80%;
    padding: 2px 8px;
@@ -87,7 +127,8 @@ hr.wide {
 }
 
 #wrapper > header {
-    padding: 2.5em 10% 0;
+    display: inline-block;
+    padding: 2.5em 3% 1.5em 10%;
 }
 #wrapper > footer {
     padding: 2.5em 10%;
@@ -106,37 +147,29 @@ hr.wide {
     animation: slidedown .5s 1;
         -webkit-animation: slidedown .5s 1;
 }
+#wrapper > header > a > img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
 #wrapper > nav {
+    display: inline-block;
     font-size: 80%;
-    padding: 0 10%;
+    padding: 0 10% 0 0;
     position: relative;
-    animation: slideup .5s 1;
-        -webkit-animation: slideup .5s 1;
+    animation: slidedown .5s 1;
+        -webkit-animation: slidedown .5s 1;
 }
 #wrapper > nav > a {
     display: inline-block;
     margin: 0;
     color: rgba(255, 255, 255, 0.5);
     padding: .9em 10px;
+    text-transform: lowercase;
 }
 #wrapper > nav > a:first-of-type {
     margin-left: -10px;
 }
 #wrapper > nav > a:hover {
-    box-shadow: inset 0 -7px #346EC5;
-    color: #fff;
-}
-#wrapper > nav .oi {
-    vertical-align: middle;
-    display: inline-block;
-    line-height: 1.1;
-    color: #fff;
-    margin-right: 2px;
-    font-size: 70%;
-    transition: all .2s;
-    -webkit-transition: all .2s;
-}
-#wrapper > nav > a:hover .oi {
     color: #fff;
 }
 
@@ -228,6 +261,12 @@ hr.wide {
     display: block;
     font-size: 70%;
     letter-spacing: 2px;
+}
+.archives#all {
+    padding: 30px 100px 30px;
+    margin: 30px -100px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #fafafa;
 }
 .catbloc .smalltitle {
     padding-top: 100px;
@@ -543,20 +582,24 @@ blockquote {
   body {
     font-size: 16px;
   }
-
   article h1,
   .home article h3 {
     font-size: 2em;
   }
+  #wrapper > header {
+    display: block;
+    padding: 2.5em 10% 0;
+  }
   #wrapper > nav {
+    display: inline-block;
+    padding: 0 10%;
     font-size: 90%;
+    animation: slideup .5s 1;
+        -webkit-animation: slideup .5s 1;
   }
-  .jumpto #englishreader {
-    float: none;
-  }
-  .jumpto #englishreader:before {
-    content: " / ";
-    color: rgba(0, 0, 0, .8);
+  #wrapper > header > a > img {
+    width: 16px;
+    height: auto;
   }
 }
 @media (max-width:500px) {
@@ -567,7 +610,7 @@ blockquote {
     display: none;
   }
   #wrapper > nav > a {
-    padding: .9em 0;
+    padding: .9em 10px .9em 0;
     margin-right: 6px;
   }
 }

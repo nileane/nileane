@@ -8,7 +8,7 @@ bodyclass: home
         <div>
           {% for post in site.posts limit:1 %}
           <hgroup {% if post.headimg_url %}class="headimg" style="background-image: url({{ post.headimg_url }});"{% endif %}>
-            <h2 class="smalltitle" id="mostrecent"><span class="oi" style="margin-right:12px" data-glyph="script"></span> Dernier billet</h2>
+            <h2 class="smalltitle" id="mostrecent"><span class="oi" style="margin-right:12px" data-glyph="bullhorn"></span> Dernier billet</h2>
                 <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
                     <h3>{{ post.title }}</h3>
                 </a>
@@ -61,4 +61,4 @@ bodyclass: home
 <a href="/archive#all" title="Archive">
 	<span><span class="oi" id="all" style="margin-right:12px" data-glyph="list"></span> Tous les billets</span>
 	<h1>Naviguer parmi tous les billets publiés</h1></a>
-</div> 
+</div>
