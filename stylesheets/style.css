@@ -168,9 +168,6 @@ select.custom:active {
     font-style: italic;
     text-transform: lowercase;
 }
-#wrapper > nav > a:first-of-type {
-    margin-left: -10px;
-}
 #wrapper > nav > a:hover {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
@@ -603,7 +600,6 @@ blockquote {
   }
   #wrapper > nav > a {
     padding: .9em 10px;
-    margin-right: 6px;
   }
   #wrapper > header > a > img {
     width: 16px;
