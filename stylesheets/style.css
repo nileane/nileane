@@ -24,6 +24,13 @@ a:hover {
 a:active {
     outline: 0;
 }
+#post a {
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: underline;
+}
+#post a:hover {
+    color: #000;
+}
 
 #wrapper {
     max-width: 1000px;
@@ -464,10 +471,6 @@ article #post iframe {
 }
 #post ul {
     padding-left: 30px;
-}
-#post a:hover {
-    text-decoration: none;
-    box-shadow: 0px -4px #FFF inset, 0px -6px #444 inset;
 }
 #post a img {
     border: 0 none;

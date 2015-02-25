@@ -1,6 +1,6 @@
 
 #isso-thread {
-    margin: 0 auto 0 !important;
+    margin: 3em auto 0 !important;
     padding: 2em 10% !important;
     text-align: left;
     background-color: #fafafa !important;
@@ -14,29 +14,33 @@
     font-size: 14px !important;
     text-transform: uppercase;
     font-weight: 500 !important;
+    color: rgba(0, 0, 0, 0.8) !important;
     letter-spacing: 3px;
     margin-bottom: 20px;
 }
 .isso-postbox > .form-wrapper .textarea {
-    border-radius: 0 !important;
+    border-radius: 3px !important;
     box-shadow: 0 0 !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+.isso-postbox > .form-wrapper .textarea:focus {
+    border-color: #346EC5 !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .post-action > input {
     padding: calc(0.3em - 1px) 16px !important;
     border-radius: 3px !important;
     text-transform: uppercase;
     font-weight: 500;
-    color: #fff !important;
+    color: #346EC5;
     transition: all 0.2s ease 0s;
     font-size: 90% !important;
-    box-shadow: 0px 0px !important;
-    background-color: #1C365F !important;
-    border: 0 !important;
+    background-color: #fff !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px -3px rgba(0, 0, 0, 0.05) inset !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .post-action > input:hover {
-    background-color: #346EC5 !important ;
-    font-size: 90% !important;
-    color: #fff !important;
+    border-color: #346EC5 !important;
+    color: #346EC5;
 }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
     box-shadow: 0 1px rgba(0, 0, 0, .05) !important;
