@@ -10,7 +10,7 @@ role: index
     <select class="custom" name="Catégories" onchange="location = this.options[this.selectedIndex].value;">
         <option value="#" selected="selected">Catégories</option>
         {% for category in sortedcats %}
-            <option value="#{{ category | first | remove:' ' }}">{{ category | first }}</option>
+            <option value="#{{ category | first | remove:' ' }}">{{ category | first | capitalize }}</option>
         {% endfor %}
     </select>
     <br><br>
