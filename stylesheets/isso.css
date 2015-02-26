@@ -49,3 +49,6 @@
 .isso-comment:not(:first-of-type), .isso-follow-up .isso-comment {
     border-top: 1px solid rgba(0, 0, 0, .05) !important;
 }
+.isso-comment > div.text-wrapper > div.text p {
+    font-family: "Charis SIL", Bitstream Charter, Georgia, "Fira Sans", serif;
+}
