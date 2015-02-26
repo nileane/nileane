@@ -282,8 +282,8 @@ select.custom:active {
     display: inline-block;
 }
 .archives#all {
-    padding: 30px 100px 30px;
-    margin: 30px -100px 0;
+    padding: 30px 100px 50px;
+    margin: 30px -100px -50px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     background-color: #fafafa;
 }
