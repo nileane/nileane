@@ -20,8 +20,6 @@
 }
 .isso-postbox > .form-wrapper .textarea {
     border-radius: 3px !important;
-    box-shadow: 0 0 !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 .isso-postbox > .form-wrapper .textarea:focus {
     border-color: #346EC5 !important;
@@ -45,12 +43,8 @@
     background-color: #111 !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
-    box-shadow: 0 1px rgba(0, 0, 0, .05) !important;
-    border: 0 !important;
-    border-radius: 0 !important;
-    font-style: italic;
-    font-size: 90% !important;
-    background-color: #fafafa !important;
+    font-size: 80% !important;
+    padding: .25em 10px !important;
 }
 .isso-comment:not(:first-of-type), .isso-follow-up .isso-comment {
     border-top: 1px solid rgba(0, 0, 0, .05) !important;

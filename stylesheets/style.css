@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 a {
-    color: #156F8F;
+    color: #346EC5;
     transition: all .2s;
     cursor: pointer;
     text-decoration: none;
@@ -35,7 +35,7 @@ a:active {
     color: rgba(255, 255, 255, .95);
 }
 #post a:hover {
-    color: #000;
+    text-decoration: underline;
 }
 
 #wrapper {
