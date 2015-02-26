@@ -252,7 +252,7 @@ select.custom:active {
 	padding: 0;
 }
 .archives div li > a {
-    display: inline-block;
+    display: block;
     vertical-align: bottom;
     padding: 8px 0;
     text-align: left;
@@ -568,15 +568,9 @@ blockquote {
     margin: 5px 0 15px;
     font-size: 180%;
     font-weight: 300;
-    color: rgba(255, 255, 255, 0.5);
     transition: all .2s;
        -webkit-transition: all .2s;
 }
-.readnext a:hover > h1 {
-    color: rgba(255, 255, 255, .9);
-}
-
-
 
 /* General media queries */
 
