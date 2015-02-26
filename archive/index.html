@@ -48,9 +48,16 @@ role: index
     <div>
         <ul>
             {% for post in site.posts %}
+                {% capture currentmonth %}{{ post.date | date: "%m/%Y" }}{% endcapture %}
+                {% if currentmonth != month %}
+                    {% unless forloop.first %}
+                    </ul><br></li>
+                    {% endunless %}
+                    <li><h2 class="smalltitle">{% include date.html date=post.date mode="month"%}</h2>
+                    <ul>{% capture month %}{{ currentmonth }}{% endcapture %}
+                {% endif %}
                 <li>
-                    <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}"><span>{{ post.date | date: '%-d' }}.</span>
                     {{ post.title }}
                     </a>
                 </li>

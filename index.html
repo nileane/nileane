@@ -20,7 +20,7 @@ bodyclass: home
                     {% endif %}
                 {% endif %}
           </hgroup>
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %} </time>
                     <div id="post">
                         {{ post.content | truncatewords: 90 }}
                     </div>
@@ -48,7 +48,7 @@ bodyclass: home
                     <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}">
                         <h4>{{ post.title }}</h4>
                     </a>
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %} </time>
                     <div class="excerpt">
                         {{ post.excerpt | strip_html | truncatewords: 30 }}
                     </div>

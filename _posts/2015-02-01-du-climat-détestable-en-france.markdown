@@ -6,6 +6,7 @@ comments: true
 headimg_url: /images/wikicommons/Paris_11_janvier_2015_-_Marche_républicaine_05.jpg
 headimg_lic: Par Clément Baillon sur Flickr [CC BY 2.0], via Wikimedia Commons
 headimg_lic_url: http://commons.wikimedia.org/wiki/File%3AParis_11_janvier_2015_-_Marche_r%C3%A9publicaine_05.jpg
+category: "Société"
 ---
 *… semble ressortir une dérive politique qui tend vers l'autoritarisme, à coups de mesures sécuritaires.*
 
