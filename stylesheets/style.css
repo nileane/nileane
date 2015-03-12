@@ -160,42 +160,6 @@ Head & Navigation */
     letter-spacing: 1px;
     padding: 4px 0;
 }
-select.custom {
-    margin: 0px;
-    padding: 0.3em 2.9em 0.2em 0.9em;
-    appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      -ms-appearance: none;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-family: "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
-    letter-spacing: 1px;
-    background: url(/images/iconic/caret-bottom-2x.png) no-repeat 95% center #95a5a6;
-    border: 0;
-    color: #fff;
-    border-radius: 3px;
-    box-shadow: 0 0;
-    transition: all .2s;
-      -webkit-transition: all .2s;
-    cursor: pointer;
-}
-select.custom > option {
-    background-color: #fafafa;
-    color: rgba(0, 0, 0, .8);
-    border: 0;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: normal;
-    letter-spacing: normal;
-}
-select.custom:hover {
-    background-color: #346EC5;
-}
-select.custom:active {
-    background-color: #111;
-}
 .archives p {
 	padding: 20px;
 	text-align: left;
@@ -259,7 +223,75 @@ select.custom:active {
 }
 
 
-/* article */
+/* ----------------------------------------
+Mobile toggle classes */
+@media screen and (min-width:768px) {
+    .mobileon {
+        display: none;
+    }
+}
+@media screen and (max-width:767px) {
+    .mobileoff {
+        display: none;
+    }
+}
+
+
+/* ----------------------------------------
+customised <select> element */
+select.custom {
+    margin: 0px;
+    padding: 0.3em 2.9em 0.2em 0.9em;
+    appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
+    letter-spacing: 1px;
+    background: url(/images/design/iconic/caret-bottom-2x.png) no-repeat right center transparent;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: all .2s;
+      -webkit-transition: all .2s;
+    cursor: pointer;
+}
+select.custom.light {
+    background-color: #95a5a6;
+}
+select.custom.dark {
+    background-color: #233565;
+}
+select.custom.nolabel {
+    background-image: none;
+    padding-right: .9em;
+}
+select.custom > option {
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, .8);
+    border: 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+select.custom:hover {
+    background-color: #346EC5;
+}
+select.custom:active {
+    background-color: #111;
+}
+select.custom > option:first-child {
+    display: none;
+}
+
+
+/* ----------------------------------------
+Article & Main content */
 section {
     margin: 0px auto 1.7em;
     vertical-align: top;
@@ -412,7 +444,7 @@ section.recent.cover .excerpt {
 }
 @media screen and (min-width:768px) {
     section.recent:hover {
-        padding: 3em 10% !important;
+        padding: 3.8em 10% !important;
     }
     section.recent.cover:hover {
         box-shadow: 0 0 0 800px rgba(0, 0, 0, 0.75) inset,
@@ -559,15 +591,11 @@ blockquote {
   }
   #nav {
     display: block;
-    padding: 0 10%;
+    padding: 0 10% 1em;
     font-size: 90%;
     text-align: right;
     animation: slideup .5s 1;
         -webkit-animation: slideup .5s 1;
-  }
-   {
-    padding: .5em 10px;
-    margin: .4em 0;
   }
   #head > a > img {
     width: 16px;
@@ -575,8 +603,12 @@ blockquote {
   }
 }
 @media (max-width: 400px) {
+  #head {
+    text-align: center;
+  }
   #nav {
-    padding: 0 5%;
+    text-align: center;
+    padding: 1em 5%;
   }
   .excerpt {
       display: none;
