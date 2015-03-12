@@ -6,6 +6,7 @@ en:
   continued: "Read post"
   lastpost: "Last post"
   recentposts: "Recent posts"
+  footdisclaimer: "All my posts & contents are licensed under a <a href='http://creativecommons.org/licenses/by/4.0/'>CC BY 4.0 License</a>."
 fr:
   allposts: "Tous les articles"
   archive: "Archives"
@@ -14,3 +15,4 @@ fr:
   continued: "Lire l'article"
   lastpost: "Dernier article"
   recentposts: "Articles récents"
+  footdisclaimer: "Tous mes articles et mon contenu sont sous <a href='http://creativecommons.org/licenses/by/3.0/'>Licence CC BY 4.0</a>."
