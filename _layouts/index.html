@@ -1,0 +1,27 @@
+---
+layout: default
+bodyclass: home
+---
+{% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
+{% for post in posts limit:7 %}
+<a href="{{ post.url }}">
+<section class="recent{% if post.headimg_url %} cover{% endif %}" {% if post.headimg_url %}style="background-image: url({{ post.headimg_url }});"{% endif %}>
+    <div>
+        <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
+        <h2>{{ post.title | replace: '<br>', '' }}</h2>
+        <div class="excerpt">
+            <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
+            {{ post.excerpt | markdownify | strip_html }}
+            <p style="color:#346EC5; text-align:right">{{ site.data.translations[page.lang].continued }} &rarr;</p>
+        </div>
+    </div>
+</section>
+</a>
+{% endfor %}
+
+<div id="readnext">
+    <a href="{% if page.lang == "en" %}/en{% endif %}/archive" title="{{ site.data.translations[page.lang].archive }}">
+	<strong class="smalltitle">{{ site.data.translations[page.lang].archive }}</strong>
+        <h3>{{ site.data.translations[page.lang].archivetip }} &rarr;</h3>
+    </a>
+</div>

@@ -1,24 +1,25 @@
 ---
 layout: default
-lang: fr
 ---
-<section class="article page" {% if page.center %}style="text-align: center;"{% endif %}>
+<section class="article">
 
-<article>
+    <hgroup {% if page.headimg_url %}class="headimg" style="background-image: url({{ page.headimg_url }});"{% endif %}>
+    {% if page.link %}
+        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
+    {% else %}
+        <h1>{{ page.title }}</h1>
+    {% endif %}
+    {% if page.headimg_lic %}
+        {% if page.headimg_lic_url %}
+            <span class="credits"><span class="oi" data-glyph="image"></span> <a href="{{ page.headimg_lic_url }}">{{ page.headimg_lic }}</a></span>
+        {% else %}
+            <span class="credits"><span class="oi" data-glyph="image"></span> {{ page.headimg_lic }}</span>
+        {% endif %}
+    {% endif %}
+    </hgroup>
 
-{% if page.link %}
-<hgroup>
-	<h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;→</h1>
-</hgroup>
-{% elsif page.mainindex %}
-{% else %}
-<hgroup>
-	<h1>{{ page.title }} {% if page.titleen %}<span style="opacity: 0.3;"> {{ page.titleen }}</span>{% endif %}</h1>
-</hgroup>
-{% endif %}
-
-{{ content }}
-
-</article>
+    <div id="post"{% if page.link %} class=link{% endif %}>
+        {{ content }}
+    </div>
 
 </section>

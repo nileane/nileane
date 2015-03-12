@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="FR-fr">
+<html lang="{{ page.lang }}">
   <head>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>
     {% if page.title %}
-	{{ page.title | replace:'&nbsp;',' ' | escape }} - {{ site.title }}
+	{{ page.title | replace:'&nbsp;',' ' | strip_html | escape }} - {{ site.title }}
     {% else %}
 	{{ site.title }}
     {% endif %}
@@ -27,22 +27,41 @@
     <link href="/images/logos/fav-32.png" rel="icon apple-touch-icon" sizes="32x32">
     <link href="/images/logos/fav-64.png" rel="icon apple-touch-icon" sizes="64x64">
     <link href="/images/logos/fav-128.png" rel="icon apple-touch-icon" sizes="128x128">
-    
-    {% if page.styles %}
-    <style type="text/css" media="screen">{{ page.styles }}</style>
-    {% endif %}
   </head>
   
   <body {% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
   
   <div id="wrapper">
-    {% include head.html %}
-    
+    <div id="head"> <!-- Site title -->
+        <a href="/{% if page.lang == "en" %}en{% endif %}">
+            <img src="/images/design/logos/script.png" alt="Logo">
+            <span>{{ site.maintitle }}</span>
+        </a>
+    </div>
+
+    <nav id="nav"> <!-- Navigation menu -->
+        {% for menu in site.data.navigation[page.lang] %}
+            <a href="{{ menu[1].url }}"><span>{{ menu[1].title }}</span></a>
+        {% endfor %}
+        <span class="lang">
+          {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
+          {% for post in posts %}
+            <a href="{{ post.url }}" class="{{ post.lang }}">{{ post.lang }}</a>
+            {% unless forloop.last %}/{% endunless %}
+          {% endfor %}
+        </span>
+    </nav>
+
+
+    <!-- Page content -->
     {{ content }}
 
-    {% include foot.html %}
+
+    <div id="foot" class="smalltitle"> <!-- Foot -->
+        <span style="color:rgba(255, 255, 255, .3)"><a href="/flux.xml"><span class="oi" id="all" style="margin-right:5px" data-glyph="rss"></span> RSS</a> · All posts are licensed under a <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0 License</a></span>
+    </div>
   </div>
   
-  {% include piwik.html %}
+    {% include piwik.html %}
   </body>
 </html>
