@@ -1,0 +1,20 @@
+en:
+  archive:
+    title: "archive"
+    url:   "/en/archive/"
+  projects:
+    title: "projects"
+    url:   "/projects/"
+  about:
+    title: "about"
+    url:   "/about/"
+fr:
+  archive:
+    title: "archives"
+    url:   "/archive/"
+  projects:
+    title: "projets"
+    url:   "/projets/"
+  about:
+    title: "à propos"
+    url:   "/a-propos/"

@@ -1,36 +1,8 @@
-## Configuration file for Jekyll & Schrift template
+## Configuration file
 
-#
-# Jekyll configuration
-#
-
-# Global
-safe: false
 name: Schoewilliam
-url: http://schoewilliam.fr 
-source:      .
-destination: ./_site
-plugins:     ./_plugins
+url: http://schoewilliam.fr
 
-# Server
-port: 4000
-base-url: /
-
-# Build options
-future:      true
-lsi:         false
-highlighter: pygments
-markdown:    kramdown
-permalink:   date
-auto_ids:    true
-
-
-#
-# Template configuration
-#
-
-# Enter below your name or pseudo & a short description
-#    | These don't appear on the website. They are used to set <meta>s
 author: William Dorffer aka. Schoewilliam
 description: Open web enthusiast, non-writer writer, Iceland dreamer.
 title: Schoewilliam  # Appears in the window title of the browser. Stands alone on the homepage, sits beside the post title on post pages.
@@ -39,32 +11,38 @@ title: Schoewilliam  # Appears in the window title of the browser. Stands alone 
 #    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
 maintitle: Schoewilliam
 
-# Enter below the items of your main menu
-#    | Keep it a small amount. It is designed for a small menu.
-menus:
-- text: Archives
-  url: /archive
-- text: Projets
-  url: /projects.html
-- text: Liens
-  url: /links.html
-- text: "À propos"
-  url: /about.html
-  
-  
+
+
+permalink: /:year/:month/:day/:title.html
+
+
+markdown: kramdown
+
+gems:
+  - jekyll-redirect-from
+
 defaults:
- -
-  scope:
-    path: ""
-    type: "posts"
-  values:
-    permalink: /:year/:month/:day/:title.html
-    author: "William Dorffer"
+  -
+    scope:
+      path: ""
+    values:
+      lang: fr
+      layout: default
+  -
+    scope:
+      path: _posts/en
+    values:
+      lang: en
+
+
+
   
-# Enter an invitation message
+
+  
+# Enter an invitation mesage
 #    | It lies right beneath every post to invite your readers to react and comment
 #    | {optional}
-#invitationmsg: If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
+invitationmsg: If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
 
 nodes:
 - text: diaspora*
