@@ -148,6 +148,26 @@ Head & Navigation */
 #nav a:hover {
     color: #fff;
 }
+#nav .lang {
+    margin-right: 1em;
+}
+#nav .lang > a {
+    padding: 0.5em 0.9em;
+    font-size: 12px;
+    background-color: rgb(35, 53, 101);
+    text-transform: uppercase;
+    font-weight: 500;
+    vertical-align: middle;
+    color: #fff;
+    letter-spacing: 1px;
+}
+#nav .lang > a:hover {
+    background-color: #346EC5;
+}
+#nav .lang > a.active {
+    opacity: .5;
+    pointer-events: none;
+}
 .jumpto {
     background-color: #fafafa;
     padding: .7em .9em;

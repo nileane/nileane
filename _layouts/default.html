@@ -46,15 +46,13 @@
                 <option value="{{ menu[1].url }}">{{ menu[1].title }}</option>
             {% endfor %}
         </select>
-        &nbsp;&nbsp;
-        <select class="custom dark" name="Language switcher" onchange="location = this.options[this.selectedIndex].value;">
-            <option value="#" selected="selected">{{ page.lang }}</option>
-            {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in posts %}
-                <option value="{{ post.url }}">{{ post.lang }}</a>
-            {% endfor %}
-        </select>
-        &nbsp;&nbsp;
+
+        <span class="lang">
+        {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
+        {% for post in posts %}
+            <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+        {% endfor %}
+        </span>
 
         <span class="mobileoff">
         {% for menu in site.data.navigation[page.lang] %}

@@ -9,6 +9,7 @@ en:
   leaveacomment: "If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>"
   readnext: "Read next"
   recentposts: "Recent posts"
+  switchlang: "Passer en Français" # This is voluntarily switched out
 fr:
   allposts: "Tous les articles"
   archive: "Archives"
@@ -20,3 +21,4 @@ fr:
   leaveacomment: "Si vous avez des réacions, des conseils que vous voudriez que je lise, n'hésitez pas à <strong>laisser un commentaire</strong>, ou à me contacter : <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>"
   readnext: "À lire aussi"
   recentposts: "Articles récents"
+  switchlang: "Switch to English" # This is voluntarily switched out
