@@ -166,7 +166,6 @@ Head & Navigation */
 }
 #nav .lang > a.active {
     opacity: .5;
-    pointer-events: none;
 }
 .jumpto {
     background-color: #fafafa;
