@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="FR-fr">
+<html lang="{{ page.lang }}">
   <head>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <title>
     {% if page.title %}
-	{{ page.title | replace:'&nbsp;',' ' | escape }} - {{ site.title }}
+	{{ page.title | replace:'&nbsp;',' ' | strip_html | escape }} - {{ site.title }}
     {% else %}
 	{{ site.title }}
     {% endif %}
@@ -23,42 +23,54 @@
     <meta content='initial-scale=1.0' name='viewport'>
 
     <!-- Icons -->
-    <link href="/images/logos/fav-16.png" rel="shortcut icon">
-    <link href="/images/logos/fav-32.png" rel="icon apple-touch-icon" sizes="32x32">
-    <link href="/images/logos/fav-64.png" rel="icon apple-touch-icon" sizes="64x64">
-    <link href="/images/logos/fav-128.png" rel="icon apple-touch-icon" sizes="128x128">
-    
-    {% if page.styles %}
-    <style type="text/css" media="screen">{{ page.styles }}</style>
-    {% endif %}
+    <link href="/images/design/logos/fav-16.png" rel="shortcut icon">
+    <link href="/images/design/logos/fav-32.png" rel="icon apple-touch-icon" sizes="32x32">
+    <link href="/images/design/logos/fav-64.png" rel="icon apple-touch-icon" sizes="64x64">
+    <link href="/images/design/logos/fav-128.png" rel="icon apple-touch-icon" sizes="128x128">
   </head>
   
   <body {% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
   
   <div id="wrapper">
+    <div id="head"> <!-- Site title -->
+        <a href="/{% if page.lang == "en" %}en{% endif %}">
+            <img src="/images/design/logos/script.png" alt="Logo">
+            <span>Schoewilliam</span>
+        </a>
+    </div>
 
-    {% include head.html %}
-    
+    <nav id="nav"> <!-- Navigation menu -->
+        <select class="custom dark mobileon" name="Menu" onchange="location = this.options[this.selectedIndex].value;">
+            <option value="#" selected="selected">Menu</option>
+            {% for menu in site.data.navigation[page.lang] %}
+                <option value="{{ menu[1].url }}">{{ menu[1].title }}</option>
+            {% endfor %}
+        </select>
+
+        <span class="lang">
+        {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
+        {% for post in posts %}
+            <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+        {% endfor %}
+        </span>
+
+        <span class="mobileoff">
+        {% for menu in site.data.navigation[page.lang] %}
+            <a href="{{ menu[1].url }}"><span>{{ menu[1].title }}</span></a>
+        {% endfor %}
+        </span>
+    </nav>
+
+
+    <!-- Page content -->
     {{ content }}
 
-    {% include foot.html %}
 
+    <div id="foot" class="smalltitle"> <!-- Foot -->
+        <span style="color:rgba(255, 255, 255, .3)"><a href="/flux.xml"><span class="oi" id="all" style="margin-right:5px" data-glyph="rss"></span> RSS</a> · {{ site.data.translations[page.lang].footdisclaimer }}</span>
+    </div>
   </div>
   
- <!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u="//piwik.schoewilliam.fr/";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<noscript><p><img src="//piwik.schoewilliam.fr/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
-<!-- End Piwik Code --> 
+    {% include piwik.html %}
   </body>
 </html>

@@ -1,0 +1,70 @@
+---
+layout: default
+---
+<section class="article">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.lang == "fr" %}<div class="archives">
+
+        {% assign sortedcats = site.categories | sort %}
+        <select class="custom light" name="Catégories" onchange="location = this.options[this.selectedIndex].value;">
+            <option value="#" selected="selected">{{ site.data.translations[page.lang].categories }}</option>
+            {% for category in sortedcats %}
+                <option value="#{{ category | first | remove:' ' }}">{{ category | first | capitalize }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+
+
+       {% for category in site.categories %}
+            <div class="catbloc" id="{{ category | first | remove:' ' }}">
+                <strong class="smalltitle">{{ category | first }}</strong><br>
+
+                <div>
+                <ul>
+                  {% for posts in category %}
+                    {% for post in posts %}
+                    {% if post.url %}
+                    <li>
+                        <a href="{{ post.url }}">
+                        <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                        {{ post.title }}
+                        </a>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                </ul>
+                </div>
+            </div>
+       {% endfor %}
+
+    </div>{% endif %}
+
+
+    <div class="archives" id="all">
+        {% if page.lang == "fr" %}<h2>{{ site.data.translations[page.lang].allposts }}</h2><br>{% endif %}
+
+        <div>
+            <ul>
+                {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
+                {% for post in posts %}
+                    {% capture currentmonth %}{{ post.date | date: "%m/%Y" }}{% endcapture %}
+                    {% if currentmonth != month %}
+                        {% unless forloop.first %}
+                        </ul><br></li>
+                        {% endunless %}
+                        <li><strong class="smalltitle">{% include date.html date=post.date mode="month"%}</strong>
+                        <ul>{% capture month %}{{ currentmonth }}{% endcapture %}
+                    {% endif %}
+                    <li>
+                        <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}"><span>{{ post.date | date: '%-d' }}.</span>
+                        {{ post.title | replace: '<br>', '' }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</section>

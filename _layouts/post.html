@@ -1,6 +1,55 @@
 ---
 layout: default
-lang: fr
-bodyclass: post
 ---
-{% include postdetails.html %}
+<section class="article">
+
+    <header {% if page.headimg_url %}class="cover" style="background-image: url({{ page.headimg_url }});"{% endif %}>
+    {% if page.link %}
+        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
+    {% else %}
+        <h1>{{ page.title }}</h1>
+    {% endif %}
+    {% if page.headimg_lic %}
+        {% if page.headimg_lic_url %}
+            <span class="credits"><span class="oi" data-glyph="image"></span> <a href="{{ page.headimg_lic_url }}">{{ page.headimg_lic }}</a></span>
+        {% else %}
+            <span class="credits"><span class="oi" data-glyph="image"></span> {{ page.headimg_lic }}</span>
+        {% endif %}
+    {% endif %}
+    </header>
+
+
+    <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}
+        {% if page.categories %}
+            {% for category in page.categories %}
+              {% if forloop.first %} · Publié dans{% endif%}
+                 <a style="font-weight:normal" href="/archive#{{ category | remove:' ' | downcase }}">{{ category | capitalize }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+            {% endfor %}
+        {% endif %}
+    </time>
+
+    <div id="post"{% if page.link %} class=link{% endif %}>
+        {{ content }}
+    </div>
+
+</section>
+
+{% if page.comments == false %}
+{% else %}
+      <section class="dark">
+          <em><span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> {{ site.data.translations[page.lang].leaveacomment }}</em>
+      </section>
+
+      <script data-isso="//comments.schoewilliam.fr/" data-isso-avatar="false" data-isso-vote="false"
+	  src="//comments.schoewilliam.fr/js/embed.min.js"></script>
+      <section id="isso-thread"></section>
+{% endif %}
+
+
+<div id="readnext">
+{% if page.previous.url %}
+<a href="{{page.previous.url}}" title="{{page.previous.title}}">
+	<strong class="smalltitle">{{ site.data.translations[page.lang].readnext }}</strong>
+	<h3>{{page.previous.title}}</h3></a>
+{% endif %}
+</div>

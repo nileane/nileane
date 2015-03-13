@@ -23,15 +23,15 @@ end
 
 task :build do
    desc "runs jekyll to generate _site/"
-   system "jekyll build"
+   system "bundle exec jekyll build"
 end
 
 task :deploy do
    desc "runs git to pull new code & jekyll to generate _site/"
-   system "git pull && jekyll build"
+   system "git pull && bundle exec jekyll build"
 end
 
 task :serve do
    desc "runs jekyll server with autoregen enabled"
-   system "jekyll serve --watch"
+   system "bundle exec jekyll serve --watch"
 end

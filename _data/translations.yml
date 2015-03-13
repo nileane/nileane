@@ -1,0 +1,24 @@
+en:
+  allposts: "All posts"
+  archive: "Archive"
+  archivetip: "All my posts"
+  categories: "Categories"
+  continued: "Read post"
+  footdisclaimer: "All my posts & contents are licensed under a <a href='http://creativecommons.org/licenses/by/4.0/'>CC BY 4.0 License</a>."
+  lastpost: "Last post"
+  leaveacomment: "If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>"
+  readnext: "Read next"
+  recentposts: "Recent posts"
+  switchlang: "Passer en Français" # This is voluntarily switched out
+fr:
+  allposts: "Tous les articles"
+  archive: "Archives"
+  archivetip: "Tous mes articles"
+  categories: "Catégories"
+  continued: "Lire l'article"
+  footdisclaimer: "Tous mes articles et mon contenu sont sous <a href='http://creativecommons.org/licenses/by/3.0/'>Licence CC BY 4.0</a>."
+  lastpost: "Dernier article"
+  leaveacomment: "Si vous avez des réacions, des conseils que vous voudriez que je lise, n'hésitez pas à <strong>laisser un commentaire</strong>, ou à me contacter : <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>"
+  readnext: "À lire aussi"
+  recentposts: "Articles récents"
+  switchlang: "Switch to English" # This is voluntarily switched out

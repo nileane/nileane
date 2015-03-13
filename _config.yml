@@ -1,70 +1,31 @@
-## Configuration file for Jekyll & Schrift template
+## Configuration file
 
-#
-# Jekyll configuration
-#
-
-# Global
-safe: false
 name: Schoewilliam
-url: http://schoewilliam.fr 
-source:      .
-destination: ./_site
-plugins:     ./_plugins
+url: http://schoewilliam.fr
 
-# Server
-port: 4000
-base-url: /
-
-# Build options
-future:      true
-lsi:         false
-highlighter: pygments
-markdown:    kramdown
-permalink:   date
-auto_ids:    true
-
-
-#
-# Template configuration
-#
-
-# Enter below your name or pseudo & a short description
-#    | These don't appear on the website. They are used to set <meta>s
 author: William Dorffer aka. Schoewilliam
 description: Open web enthusiast, non-writer writer, Iceland dreamer.
-title: Schoewilliam  # Appears in the window title of the browser. Stands alone on the homepage, sits beside the post title on post pages.
+title: Schoewilliam
 
-# Enter below the head title of your weblog/website
-#    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
-maintitle: Schoewilliam
+permalink: /:year/:month/:day/:title.html
+markdown: kramdown
 
-# Enter below the items of your main menu
-#    | Keep it a small amount. It is designed for a small menu.
-menus:
-- text: Archives
-  url: /archive
-- text: Projets
-  url: /projects.html
-- text: Liens
-  url: /links.html
-- text: "À propos"
-  url: /about.html
-  
-  
+gems:
+  - jekyll-redirect-from
+
 defaults:
- -
-  scope:
-    path: ""
-    type: "posts"
-  values:
-    permalink: /:year/:month/:day/:title.html
-    author: "William Dorffer"
-  
-# Enter an invitation message
-#    | It lies right beneath every post to invite your readers to react and comment
-#    | {optional}
-#invitationmsg: If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
+  -
+    scope:
+      path: ""
+    values:
+      lang: fr
+      layout: default
+  -
+    scope:
+      path: _posts/en
+    values:
+      lang: en
+
 
 nodes:
 - text: diaspora*
@@ -75,41 +36,3 @@ nodes:
   url: https://mozillians.org/en-US/u/schoewilliam/
 - text: GNU Social
   url: https://status.vinilox.eu/schoewilliam
-
-blogoliste:
-- text: BlogiGor
-  url: http://id-libre.org/blogigor
-- text: Coreight
-  url: http://coreight.com/
-- text: Ypnose
-  url: http://ywstd.fr/
-- text: fabienwang
-  url: http://fabienwang.eliteheberg.fr
-- text: Identitools
-  url: http://identitools.fr
-- text: Olivier Dossmann
-  url: https://olivier.dossmann.net/blog/
-- text: Postblue
-  url: http://postblue.info
-- text: Vinilox
-  url: http://vinilox.eu
-- text: younishd
-  url: http://younishd.fr/
-
-linkoliste:
-- text: Blog de dada
-  url: http://www.dadall.info/blog/
-- text: Jean Baptiste Favre
-  url: http://www.jbfavre.org/
-- text: Legtux
-  url: http://legtux.org/
-- text: Le Hollandais Volant
-  url: http://lehollandaisvolant.net/
-- text: Planet-Libre
-  url: http://planet-libre.org/
-- text: Ploum
-  url: http://ploum.net/
-- text: Sebsauvage, les trucs qui l'énervent.
-  url: http://www.sebsauvage.net/rhaa/
-- text: 22decembre
-  url: http://www.22decembre.eu/
