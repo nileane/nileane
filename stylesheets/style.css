@@ -238,6 +238,7 @@ Head & Navigation */
     padding-top: 100px;
     margin-top: -100px;
     margin-bottom: 1em;
+    z-index: -1;
 }
 .catbloc:target {
     animation: slidedown .5s 1;
