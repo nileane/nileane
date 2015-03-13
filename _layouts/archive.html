@@ -2,13 +2,9 @@
 layout: default
 ---
 <section class="article">
+    <h1>{{ page.title }}</h1>
 
-    <hgroup>
-        <h1>{{ page.title }}</h1>
-    </hgroup>
-
-
-    <div class="archives">
+    {% if page.lang == "fr" %}<div class="archives">
 
         {% assign sortedcats = site.categories | sort %}
         <select class="custom light" name="Catégories" onchange="location = this.options[this.selectedIndex].value;">
@@ -22,7 +18,7 @@ layout: default
 
        {% for category in site.categories %}
             <div class="catbloc" id="{{ category | first | remove:' ' }}">
-                <h2 class="smalltitle">{{ category | first }}</h2><br>
+                <strong class="smalltitle">{{ category | first }}</strong><br>
 
                 <div>
                 <ul>
@@ -43,11 +39,11 @@ layout: default
             </div>
        {% endfor %}
 
-    </div>
+    </div>{% endif %}
 
 
     <div class="archives" id="all">
-        <h2>{{ site.data.translations[page.lang].allposts }}</h2><br>
+        {% if page.lang == "fr" %}<h2>{{ site.data.translations[page.lang].allposts }}</h2><br>{% endif %}
 
         <div>
             <ul>

@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Introducing Schrift, a Jekyll template designed for prose.
-categories: ["in English",Projects]
+categories: ["Web design",Projects]
 ---
 *I have often tried to design a weblog style that would focus on the content and would still be elegant and nice to look at. I don't pretend I have achieved it yet. But here is my most recent attempt at it. I'm making this template **for Jekyll** **available now**. Please use and hack!*
 

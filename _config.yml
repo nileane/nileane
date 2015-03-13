@@ -5,17 +5,9 @@ url: http://schoewilliam.fr
 
 author: William Dorffer aka. Schoewilliam
 description: Open web enthusiast, non-writer writer, Iceland dreamer.
-title: Schoewilliam  # Appears in the window title of the browser. Stands alone on the homepage, sits beside the post title on post pages.
-
-# Enter below the head title of your weblog/website
-#    | It appears on the main navigation bar. You use <span></span> to nicely fade out some part of it
-maintitle: Schoewilliam
-
-
+title: Schoewilliam
 
 permalink: /:year/:month/:day/:title.html
-
-
 markdown: kramdown
 
 gems:
@@ -35,15 +27,6 @@ defaults:
       lang: en
 
 
-
-  
-
-  
-# Enter an invitation mesage
-#    | It lies right beneath every post to invite your readers to react and comment
-#    | {optional}
-invitationmsg: If you have any reaction, any feedback you would like me to read, feel free to <strong>leave a comment</strong>, please otherwise reach me at <a href=mailto:schoewilliam@schoewilliam.fr>schoewilliam[at]schoewilliam[dot]fr</a>.
-
 nodes:
 - text: diaspora*
   url: https://diaspora-fr.org/u/schoewilliam
@@ -53,41 +36,3 @@ nodes:
   url: https://mozillians.org/en-US/u/schoewilliam/
 - text: GNU Social
   url: https://status.vinilox.eu/schoewilliam
-
-blogoliste:
-- text: BlogiGor
-  url: http://id-libre.org/blogigor
-- text: Coreight
-  url: http://coreight.com/
-- text: Ypnose
-  url: http://ywstd.fr/
-- text: fabienwang
-  url: http://fabienwang.eliteheberg.fr
-- text: Identitools
-  url: http://identitools.fr
-- text: Olivier Dossmann
-  url: https://olivier.dossmann.net/blog/
-- text: Postblue
-  url: http://postblue.info
-- text: Vinilox
-  url: http://vinilox.eu
-- text: younishd
-  url: http://younishd.fr/
-
-linkoliste:
-- text: Blog de dada
-  url: http://www.dadall.info/blog/
-- text: Jean Baptiste Favre
-  url: http://www.jbfavre.org/
-- text: Legtux
-  url: http://legtux.org/
-- text: Le Hollandais Volant
-  url: http://lehollandaisvolant.net/
-- text: Planet-Libre
-  url: http://planet-libre.org/
-- text: Ploum
-  url: http://ploum.net/
-- text: Sebsauvage, les trucs qui l'énervent.
-  url: http://www.sebsauvage.net/rhaa/
-- text: 22decembre
-  url: http://www.22decembre.eu/

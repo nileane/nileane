@@ -2,7 +2,6 @@
 title: How am I supposed to dream ?
 layout: post
 published: true
-category: "in English"
 comments: true
 ---
 One small question… that I ask myself everyday. I feel like tired. And guess something ; I told myself the other day : *"What a shame to feel tired at seventeen…"*

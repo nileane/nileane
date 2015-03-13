@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: "Back from MozFest 2014!"
-categories: ["in English",Mozilla]
+category: Mozilla
 headimg_url: /images/mozfest2014/IMG_0030.jpg
 headimg_lic: Par William Dorffer [CC BY 2.0]
 headimg_lic_url: /images/mozfest2014/IMG_0030.jpg

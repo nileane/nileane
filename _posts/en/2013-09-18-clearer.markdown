@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-category: "in English"
+category: "Web design"
 title: "Clearer."
 ---
 > « Uh, this is black on white. », a friend said.

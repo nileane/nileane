@@ -10,9 +10,8 @@ bodyclass: home
         <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
         <h2>{{ post.title | replace: '<br>', '' }}</h2>
         <div class="excerpt">
-            <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
+            <p><time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time></p>
             <p>{{ post.excerpt | markdownify | strip_html }}</p>
-            <p style="color:#346EC5; text-align:right">{{ site.data.translations[page.lang].continued }} &rarr;</p>
         </div>
     </div>
 </section>

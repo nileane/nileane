@@ -35,17 +35,11 @@
     <div id="head"> <!-- Site title -->
         <a href="/{% if page.lang == "en" %}en{% endif %}">
             <img src="/images/design/logos/script.png" alt="Logo">
-            <span>{{ site.maintitle }}</span>
+            <span>Schoewilliam</span>
         </a>
     </div>
 
     <nav id="nav"> <!-- Navigation menu -->
-        <span class="mobileoff">
-        {% for menu in site.data.navigation[page.lang] %}
-            <a href="{{ menu[1].url }}"><span>{{ menu[1].title }}</span></a>
-        {% endfor %}
-        </span>
-
         <select class="custom dark mobileon" name="Menu" onchange="location = this.options[this.selectedIndex].value;">
             <option value="#" selected="selected">Menu</option>
             {% for menu in site.data.navigation[page.lang] %}
@@ -60,6 +54,13 @@
                 <option value="{{ post.url }}">{{ post.lang }}</a>
             {% endfor %}
         </select>
+        &nbsp;&nbsp;
+
+        <span class="mobileoff">
+        {% for menu in site.data.navigation[page.lang] %}
+            <a href="{{ menu[1].url }}"><span>{{ menu[1].title }}</span></a>
+        {% endfor %}
+        </span>
     </nav>
 
 

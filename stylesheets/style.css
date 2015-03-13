@@ -9,7 +9,8 @@ Fonts */
 input,
 textarea,
 .top,
-select.custom {
+select.custom,
+.smalltitle {
     font-family: "Fira Sans", "Open Sans", "Cantarell", "Droid Sans", Verdana, arial, sans-serif;
     text-rendering: optimizelegibility;
 }
@@ -43,8 +44,14 @@ a:active {
 }
 #nav a,
 #readnext a,
-#foot a {
+#foot a,
+section.dark {
     color: #95A5A6;
+}
+#nav a:hover,
+#readnext a:hover,
+#foot a:hover {
+    color: rgba(255, 255, 255, .9);
 }
 #post a:hover {
     text-decoration: underline;
@@ -97,6 +104,7 @@ hr.wide {
     font-size: 70%;
     text-transform: uppercase;
     letter-spacing: 2px;
+    display: inline-block;
 }
 
 
@@ -106,8 +114,6 @@ Head & Navigation */
 #head {
     display: inline-block;
     padding: 2.5em 3% 1.5em 10%;
-    animation: slidedown .5s 1;
-        -webkit-animation: slidedown .5s 1;
 }
 #foot {
     padding: 2.5em 10%;
@@ -131,8 +137,6 @@ Head & Navigation */
     font-weight: 400;
     padding: 0 10% 0 0;
     position: relative;
-    animation: slidedown .5s 1;
-        -webkit-animation: slidedown .5s 1;
 }
 #nav a {
     display: inline-block;
@@ -202,7 +206,7 @@ Head & Navigation */
     text-align: right;
 }
 .archives h2 {
-    margin-bottom: 0;
+    margin: 0;
 }
 .archives#all {
     padding: 30px 100px 50px;
@@ -213,6 +217,7 @@ Head & Navigation */
 .catbloc .smalltitle {
     padding-top: 100px;
     margin-top: -100px;
+    margin-bottom: 1em;
 }
 .catbloc:target {
     animation: slidedown .5s 1;
@@ -259,6 +264,7 @@ select.custom {
     transition: all .2s;
       -webkit-transition: all .2s;
     cursor: pointer;
+    vertical-align: middle;
 }
 select.custom.light {
     background-color: #95a5a6;
@@ -292,7 +298,7 @@ select.custom > option:first-child {
 
 /* ----------------------------------------
 Article & Main content */
-section {
+section:not(.auth-section) {
     margin: 0px auto 1.7em;
     vertical-align: top;
     overflow: hidden;
@@ -302,12 +308,13 @@ section {
     max-width: calc(1000px - 20%);
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
-.invitation {
-    font-style: italic;
-    text-align: left;
-    padding: 2.5em 10%;
-    border-top: 1px solid rgba(0, 0, 0, .05);
-    background-color: #fafafa;
+section.dark {
+    background-color: transparent;
+    box-shadow: none;
+}
+section.dark a,
+section.dark strong {
+    color: rgba(255, 255, 255, .9);
 }
 .top  {
     display: block;
@@ -394,13 +401,19 @@ section h1 a:hover {
 section h2 {
     font-size: 170%;
     text-align: left;
+    margin: 2em 0 0;
+}
+section h2 .oi {
+    font-size: 70%;
 }
 section h3 {
     font-size: 150%;
     text-align: left;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: -.6em;
 }
 section h2,
-section h3,
 section h4 {
     font-weight: 400;
 }
@@ -508,6 +521,12 @@ iframe {
     display: inline-block;
     margin: 0 -5px 0 0;
 }
+.avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .2);
+}
 
 @media screen and (min-width:700px) {
     .align.right {
@@ -539,11 +558,6 @@ blockquote {
 
 
 /* Readnext footer */
-
-#readnext {
-    padding: 1.5em 10% 1.5em;
-    text-align: left;
-}
 #readnext a {
     display: block;
 }
@@ -558,7 +572,6 @@ blockquote {
 }
 
 /* General media queries */
-
 @media (max-width: 979px) {
   body {
     font-size: 18px;
@@ -594,8 +607,6 @@ blockquote {
     padding: 0 10% 1em;
     font-size: 90%;
     text-align: right;
-    animation: slideup .5s 1;
-        -webkit-animation: slideup .5s 1;
   }
   #head > a > img {
     width: 16px;
