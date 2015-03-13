@@ -164,7 +164,7 @@ Head & Navigation */
 #nav .lang > a:hover {
     background-color: #346EC5;
 }
-#nav .lang > a.active {
+#nav .lang > a:not(.active) {
     opacity: .5;
 }
 .jumpto {
