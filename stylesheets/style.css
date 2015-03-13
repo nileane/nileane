@@ -153,9 +153,8 @@ Head & Navigation */
 }
 #nav .lang > a {
     padding: 0.5em 0.9em;
-    margin: 0 -7px 0 0;
     font-size: 12px;
-    background-color: rgb(35, 53, 101);
+    background-color: rgba(0, 0, 0, 0.2);
     text-transform: uppercase;
     font-weight: 500;
     vertical-align: middle;
