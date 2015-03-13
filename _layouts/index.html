@@ -6,14 +6,12 @@ bodyclass: home
 {% for post in posts limit:7 %}
 <a href="{{ post.url }}">
 <section class="recent{% if post.headimg_url %} cover{% endif %}" {% if post.headimg_url %}style="background-image: url({{ post.headimg_url }});"{% endif %}>
-    <div>
         <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
         <h2>{{ post.title | replace: '<br>', '' }}</h2>
         <div class="excerpt">
-            <p><time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time></p>
+            <p><span class="top">{{ post.title | replace: '<br>', '' }} · <span style="color:#346EC5">{{ site.data.translations[page.lang].continued }} &rarr;</span></span></p>
             <p>{{ post.excerpt | markdownify | strip_html }}</p>
         </div>
-    </div>
 </section>
 </a>
 {% endfor %}

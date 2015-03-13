@@ -423,8 +423,11 @@ section h4 {
 section.recent {
     position: relative;
     overflow: hidden;
-    transition: all .2s;
     background-image: url(/images/design/patterns/14.png);
+}
+section.recent > * {
+    transition: all .3s;
+      -webkit-transition: all .3s;
 }
 section.recent.cover {
     box-shadow: 0 0 0 800px rgba(0, 0, 0, 0.55) inset,
@@ -433,43 +436,54 @@ section.recent.cover {
 section.recent h2 {
     font-size: 2em;
     margin: 0;
-    transition: all .2s;
 }
 section.recent > div {
     margin: 0;
 }
-section.recent .excerpt {
+section.recent:not(.nohov) .excerpt {
     position: absolute;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
-    padding: 1.5em 10%;
+    padding: 1em 10%;
     overflow-y: auto;
     max-width: 100%;
-    transition: all .3s;
-      -webkit-transition: all .3s;
     opacity: 0;
     color: #121212;
+    transform: translate(0, 20%);
+      -webkit-transform: translate(0, 20%);
 }
 section.recent.cover .excerpt {
     color: #fff;
 }
+section.recent:not(.nohov) .excerpt p {
+    overflow: hidden;
+    max-height: 3em;
+    margin-top: .5em;
+}
+section.recent:not(.nohov) .excerpt p:last-of-type:before {
+    content: "…";
+    position: absolute;
+    right: 8%;
+    margin-top: 1.5em;
+}
 @media screen and (min-width:768px) {
-    section.recent:hover {
-        padding: 3.8em 10% !important;
-    }
     section.recent.cover:hover {
         box-shadow: 0 0 0 800px rgba(0, 0, 0, 0.75) inset,
             0 2px 3px rgba(0, 0, 0, 0.2);
     }
-    section.recent:hover h2,
-    section.recent:hover div > time {
+    section.recent:not(.nohov):hover h2,
+    section.recent:not(.nohov):hover > .top {
         opacity: 0;
+        transform: translate(0, 20px);
+          -webkit-transform: translate(0, 20px);
+
     }
-    section.recent:hover .excerpt,
-    section.recent:hover .excerpt > time {
+    section.recent:not(.nohov):hover .excerpt {
         opacity: 1;
+        transform: translate(0);
+          -webkit-transform: translate(0);
     }
 }
 
@@ -621,7 +635,7 @@ blockquote {
     text-align: center;
     padding: 1em 5%;
   }
-  .excerpt {
+  .recent:not(.nohov) .excerpt {
       display: none;
   }
 }
