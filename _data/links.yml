@@ -1,37 +1,16 @@
-blogoliste:
-  text: BlogiGor
-  url: http://id-libre.org/blogigor
-  text: Coreight
-  url: http://coreight.com/
-  text: Ypnose
-  url: http://ywstd.fr/
-  text: fabienwang
-  url: http://fabienwang.eliteheberg.fr
-  text: Identitools
-  url: http://identitools.fr
-  text: Olivier Dossmann
-  url: https://olivier.dossmann.net/blog/
-  text: Postblue
-  url: http://postblue.info
-  text: Vinilox
-  url: http://vinilox.eu
-  text: younishd
-  url: http://younishd.fr/
-
-linkoliste:
-  text: Blog de dada
+- text: Blog de dada
   url: http://www.dadall.info/blog/
-  text: Jean Baptiste Favre
+- text: Jean Baptiste Favre
   url: http://www.jbfavre.org/
-  text: Legtux
+- text: Legtux
   url: http://legtux.org/
-  text: Le Hollandais Volant
+- text: Le Hollandais Volant
   url: http://lehollandaisvolant.net/
-  text: Planet Libre
+- text: Planet Libre
   url: http://planet libre.org/
-  text: Ploum
+- text: Ploum
   url: http://ploum.net/
-  text: Sebsauvage, les trucs qui l'énervent.
+- text: Sebsauvage
   url: http://www.sebsauvage.net/rhaa/
-  text: 22decembre
+- text: 22decembre
   url: http://www.22decembre.eu/
