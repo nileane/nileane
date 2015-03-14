@@ -463,7 +463,7 @@ section.recent:not(.nohov) .excerpt {
       left: 0;
       right: 0;
     padding: 1em 10%;
-    overflow-y: auto;
+    overflow-y: hidden;
     max-width: 100%;
     opacity: 0;
     color: #121212;
