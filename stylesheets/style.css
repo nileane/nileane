@@ -353,6 +353,7 @@ section.dark strong {
     display: inline-block;
     vertical-align: middle;
     margin: 0 1px;
+    font-weight: normal;
 }
 .top a:hover {
     background-color: #346EC5;
