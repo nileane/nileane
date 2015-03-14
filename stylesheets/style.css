@@ -400,9 +400,8 @@ header.cover .credits .oi {
 }
 section h1,
 section.recent h2 {
-    font-size: 3.2em;
+    font-size: 3em;
     line-height: 1.1;
-    font-weight: 300;
     color: #121212;
     margin: 20px 5px 35px 0;
 }
@@ -431,13 +430,8 @@ section h2 .oi {
 section h3 {
     font-size: 150%;
     text-align: left;
-    font-weight: 300;
     font-style: italic;
     margin-bottom: -.6em;
-}
-section h2,
-section h4 {
-    font-weight: 400;
 }
 .home article h3 {
     margin-top: 0;
