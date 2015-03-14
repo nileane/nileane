@@ -99,7 +99,8 @@ hr.wide {
 #post hr {
    margin: 50px auto;
 }
-.smalltitle {
+.smalltitle,
+#isso-thread h4 {
     font-weight: 500;
     font-size: 70%;
     text-transform: uppercase;

@@ -11,9 +11,7 @@
 }
 #isso-thread h4 {
     margin-bottom: 20px;
-    font-weight: 400 !important;
-    text-transform: capitalize;
-    font-style: italic;
+    font-size: 70% !important
 }
 .isso-postbox > .form-wrapper .textarea {
     border-radius: 3px !important;
@@ -41,10 +39,6 @@
     background-color: #111 !important;
 }
 .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
-    font-size: 85% !important;
-    padding: 0.25em 10px !important;
-    background-color: rgb(149, 165, 166) !important;
-    color: rgb(255, 255, 255) !important;
     border: 0px none !important;
     margin-right: 5px !important;
 }
