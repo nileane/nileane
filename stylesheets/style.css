@@ -402,7 +402,7 @@ section h1,
 section.recent h2 {
     font-size: 3em;
     line-height: 1.1;
-    color: #121212;
+    color: rgba(0, 0, 0, 0.8);
     margin: 20px 5px 35px 0;
 }
 .cover h1,
@@ -466,7 +466,7 @@ section.recent:not(.nohov) .excerpt {
     overflow-y: hidden;
     max-width: 100%;
     opacity: 0;
-    color: #121212;
+    color: rgba(0, 0, 0, 0.8);
     transform: translate(0, 20%);
       -webkit-transform: translate(0, 20%);
 }
