@@ -1,10 +1,10 @@
 ---
 layout: post
 published: true
-exacttime: "05:32:00"
+exacttime: "16:00:00"
 title: "Radio Paradise, a multigenre radio supported by its listeners"
 category: "Music"
-headimg_url: "http://upload.wikimedia.org/wikipedia/commons/8/89/Cello_study.jpg"
+headimg_url: "/images/wikicommons/Cello_study.jpg"
 headimg_lic: "By MichaelMaggs (Own work) [CC BY-SA 3.0], via Wikimedia Commons"
 headimg_lic_url: "http://commons.wikimedia.org/wiki/File%3ACello_study.jpg"
 ---
