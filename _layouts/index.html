@@ -13,9 +13,10 @@ bodyclass: home
 
 {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
 {% for post in posts limit:7 %}
-<a href="{{ post.url }}">
-<section class="recent{% if post.headimg_url %} cover{% endif %}" {% if post.headimg_url %}style="background-image: url({{ post.headimg_url }});"{% endif %}>
+<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+<section class="recent{% if post.headimg_url %} cover{% endif %} {% if post.link %}nohov{% endif %}" {% if post.headimg_url %}style="background-image: url({{ post.headimg_url }});"{% endif %}>
         <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}
+            {% unless post.link %}
             {% assign reading_time = post.content | strip_html | number_of_words | append: '.0' | divided_by: 180 %}
             · <span title="{{ site.data.translations[page.lang].readingtime }}">
                 {% if reading_time < 0.5 %}{{ site.data.translations[page.lang].readingtime_short }}
@@ -23,12 +24,19 @@ bodyclass: home
                 {% elsif reading_time >= 1.5 %}<span class="reading-time">{{ reading_time }}</span> min.
                 {% endif %}
               </span>
+            {% endunless %}
         </time>
-        <h2>{{ post.title | replace: '<br>', '' }}</h2>
+        <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#346EC5; font-size:50%;"></span>{% endif %}</h2>
+        {% if post.link %}
+        <div class="excerpt">
+            <em style="color:rgba(0, 0, 0, .2)">{{ post.link }}</em>
+        </div>
+        {% else %}
         <div class="excerpt">
             <p><span class="top">{{ post.title | replace: '<br>', '' }} · <span style="color:#346EC5">{{ site.data.translations[page.lang].continued }} &rarr;</span></span></p>
             <p>{{ post.excerpt | markdownify | strip_html }}</p>
         </div>
+        {% endif %}
 </section>
 </a>
 {% endfor %}

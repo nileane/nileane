@@ -17,6 +17,7 @@ bodyclass: left
     {% endif %}
         <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">
             {% include date.html date=page.date %}
+            {% unless page.link %}
             {% assign reading_time = content | strip_html | number_of_words | append: '.0' | divided_by: 180 %}
             · <span title="{{ site.data.translations[page.lang].readingtime }}">
                 {% if reading_time < 0.5 %}{{ site.data.translations[page.lang].readingtime_short }}
@@ -24,15 +25,17 @@ bodyclass: left
                 {% elsif reading_time >= 1.5 %}<span class="reading-time">{{ reading_time }}</span> min.
                 {% endif %}
               </span>
+            {% endunless %}
         </time>
 </header>
 
+{% unless page.link %}
 <section class="article">
-
     <div id="post"{% if page.link %} class=link{% endif %}>
         {{ content }}
     </div>
 </section>
+{% endunless %}
 
 {% if page.comments == false %}
 {% else %}
