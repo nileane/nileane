@@ -108,14 +108,17 @@ hr.wide {
 #post hr {
    margin: 50px auto;
 }
+.smalltitle {
+    display: inline-block;
+}
 .smalltitle,
 #isso-thread h4 {
     font-weight: 500;
     font-size: 70%;
     text-transform: uppercase;
     letter-spacing: 2px;
-    display: inline-block;
 }
+
 
 
 
