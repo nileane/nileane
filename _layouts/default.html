@@ -2,7 +2,8 @@
 <html lang="{{ page.lang }}">
   <head>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="/flux.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (FR posts)" href="/flux.xml">
+    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (EN posts)" href="/feed.xml">
 
     <meta charset="UTF-8">
     <title>
@@ -29,37 +30,39 @@
     <link href="/images/design/logos/fav-128.png" rel="icon apple-touch-icon" sizes="128x128">
   </head>
   
-  <body {% if page.bodyclass %} class="{{ page.bodyclass }}"{% endif %}>
+  <body class="{% if page.bodyclass %}{{ page.bodyclass }}{% endif %} {% if page.headimg_url %}post{% endif %}">
   
   <div id="wrapper">
-    <div id="head"> <!-- Site title -->
-        <a href="/{% if page.lang == "en" %}en{% endif %}">
-            <img src="/images/design/logos/script.png" alt="Logo">
-            <span>Schoewilliam</span>
-        </a>
-    </div>
+    <div id="topbar" class="nav">
+        <div id="head"> <!-- Site title -->
+            <a href="/{% if page.lang == "en" %}en{% endif %}">
+                <img src="/images/design/logos/script.png" alt="Logo">
+                <span>Schoewilliam</span>
+            </a>
+        </div>
 
-    <nav id="nav"> <!-- Navigation menu -->
-        <select class="custom dark mobileon" name="Menu" onchange="location = this.options[this.selectedIndex].value;">
-            <option value="#" selected="selected">Menu</option>
+        <nav id="nav"> <!-- Navigation menu -->
+            <span class="mobileoff">
             {% for menu in site.data.navigation[page.lang] %}
-                <option value="{{ menu[1].url }}">{{ menu[1].title }}</option>
+                <a href="{{ menu[1].url }}"><span>{{ menu[1].title }}</span></a>
             {% endfor %}
-        </select>
+            </span>
 
-        <span class="lang">
-        {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
-        {% for post in posts %}
-            <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
-        {% endfor %}
-        </span>
+            <span class="lang">
+            {% assign posts=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in posts %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+            {% endfor %}
+            </span>
 
-        <span class="mobileoff">
-        {% for menu in site.data.navigation[page.lang] %}
-            <a href="{{ menu[1].url }}"><span>{{ menu[1].title }}</span></a>
-        {% endfor %}
-        </span>
-    </nav>
+            <select class="custom nolabel mobileon" name="Menu" onchange="location = this.options[this.selectedIndex].value;">
+                <option value="#" selected="selected">Menu</option>
+                {% for menu in site.data.navigation[page.lang] %}
+                    <option value="{{ menu[1].url }}">{{ menu[1].title }}</option>
+                {% endfor %}
+            </select>
+        </nav>
+    </div>
 
 
     <!-- Page content -->
@@ -67,10 +70,13 @@
 
 
     <div id="foot" class="smalltitle"> <!-- Foot -->
-        <span style="color:rgba(255, 255, 255, .3)"><a href="/flux.xml"><span class="oi" id="all" style="margin-right:5px" data-glyph="rss"></span> RSS</a> · {{ site.data.translations[page.lang].footdisclaimer }}</span>
+        <span style="color:rgba(255, 255, 255, .3)"><a href="{% if page.lang =="en" %}/feed.xml{% else %}/flux.xml{% endif %}"><span class="oi" id="all" style="margin-right:5px" data-glyph="rss"></span> RSS</a> · {{ site.data.translations[page.lang].footdisclaimer }}</span>
     </div>
   </div>
-  
+
+    <script src="/scripts/jquery.min.js"></script>
+    <script src="/scripts/scroll-up-bar.js"></script>
+    <script src="/scripts/reading-time.js"></script>
     {% include piwik.html %}
   </body>
 </html>

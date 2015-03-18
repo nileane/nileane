@@ -1,9 +1,8 @@
 ---
 layout: default
+bodyclass: left
 ---
-<section class="article">
-
-    <header {% if page.headimg_url %}class="cover" style="background-image: url({{ page.headimg_url }});"{% endif %}>
+<header {% if page.headimg_url %}class="cover" style="background-image: url({{ page.headimg_url }});"{% endif %}>
     {% if page.link %}
         <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
     {% else %}
@@ -16,40 +15,28 @@ layout: default
             <span class="credits"><span class="oi" data-glyph="image"></span> {{ page.headimg_lic }}</span>
         {% endif %}
     {% endif %}
-    </header>
+        <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">
+            {% include date.html date=page.date %}
+            {% assign reading_time = content | strip_html | number_of_words | append: '.0' | divided_by: 180 %}
+            · <span title="{{ site.data.translations[page.lang].readingtime }}">
+                {% if reading_time < 0.5 %}{{ site.data.translations[page.lang].readingtime_short }}
+                {% elsif reading_time >= 0.5 and reading_time < 1.5 %}1 min.
+                {% elsif reading_time >= 1.5 %}<span class="reading-time">{{ reading_time }}</span> min.
+                {% endif %}
+              </span>
+        </time>
+</header>
 
-
-    <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}
-        {% if page.categories %}
-            {% for category in page.categories %}
-              {% if forloop.first %} · Publié dans{% endif%}
-                 <a href="/archive#{{ category | remove:' ' | downcase }}">{{ category | capitalize }}</a>{% if forloop.last %}.{% else %}, {% endif %}
-            {% endfor %}
-        {% endif %}
-    </time>
+<section class="article">
 
     <div id="post"{% if page.link %} class=link{% endif %}>
         {{ content }}
     </div>
-
 </section>
 
 {% if page.comments == false %}
 {% else %}
-      <section class="dark">
-          <em><span class="oi" data-glyph="chat" style="padding-right: 12px;"></span> {{ site.data.translations[page.lang].leaveacomment }}</em>
-      </section>
-
       <script data-isso="//comments.schoewilliam.fr/" data-isso-avatar="false" data-isso-vote="false"
 	  src="//comments.schoewilliam.fr/js/embed.min.js"></script>
       <section id="isso-thread"></section>
 {% endif %}
-
-
-<div id="readnext">
-{% if page.previous.url %}
-<a href="{{page.previous.url}}" title="{{page.previous.title}}">
-	<strong class="smalltitle">{{ site.data.translations[page.lang].readnext }}</strong>
-	<h3>{{page.previous.title}}</h3></a>
-{% endif %}
-</div>
