@@ -3,7 +3,7 @@ layout: post
 published: true
 exacttime: "11:02:00"
 comments: true
-title: "Sélection d'applications pour <em>Firefox OS</em> #2"
+title: "Sélection d'applications <br>pour <em>Firefox OS</em> #2"
 categories: ["Firefox OS","Libre"]
 headimg_url: /images/ffosclose2.jpg
 headimg_lic: William Dorffer CC BY 4.0
