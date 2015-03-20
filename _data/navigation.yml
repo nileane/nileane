@@ -1,26 +1,26 @@
 en:
   archive:
-    title: "archive"
+    title: "Archive"
     url:   "/en/archive"
   projects:
-    title: "projects"
+    title: "Projects"
     url:   "/projects"
   links:
-    title: "links"
+    title: "Links"
     url:   "/links"
   about:
-    title: "about"
+    title: "About"
     url:   "/about"
 fr:
   archive:
-    title: "archives"
+    title: "Archives"
     url:   "/archive"
   projects:
-    title: "projets"
+    title: "Projets"
     url:   "/projets"
   links:
-    title: "liens"
+    title: "Liens"
     url:   "/liens"
   about:
-    title: "à propos"
+    title: "À propos"
     url:   "/a-propos"
