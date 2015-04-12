@@ -64,7 +64,7 @@ layout: default
                         <ul>{% capture month %}{{ currentmonth }}{% endcapture %}
                     {% endif %}
                     <li>
-                        <a {% if post.serif %}class="serif"{% endif %} href="{{ post.url }}"><span>{{ post.date | date: '%-d' }}.</span>
+                        <a href="{{ post.url }}"><span>{{ post.date | date: '%-d' }}.</span>
                         {{ post.title | replace: '<br>', '' }}
                         </a>
                     </li>

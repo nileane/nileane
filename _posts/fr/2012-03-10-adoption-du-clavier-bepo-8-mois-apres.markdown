@@ -1,8 +1,6 @@
 ---
 layout: post
 title: ! 'Adoption du clavier BÉPO : 8 mois après.'
-status: publish
-type: post
 published: true
 categories: [bépo,Libre]
 ---

@@ -1,12 +1,6 @@
 ---
 layout: post
 title: Somptueux GNOME 3
-tags:
-- fedora
-- GNOME
-- linux
-status: publish
-type: post
 published: true
 ---
 Ils fleurissent tous ces articles sur le web à propos de GNOME 3, et sa nouvelle interface. Et c'est pour ça que je ne la décrirai pas, je te redirige ami lecteur vers [cette page](http://gnome.org) (parmi tant d'autres articles) qui t'en apprendra plus sur cette nouvelle interface.  

@@ -2,10 +2,6 @@
 layout: post
 published: true
 title: "Monsterwm : configuration et joyeusetés"
-tags:
-- config
-- monsterwm
-- tiling
 ---
 Comme j'ai tendance à adorer le renouveau, je me suis mis en tête de tester autre chose que [WMFS](http://localhost:4000/2012/04/14/wmfs-exposition-de-ma-configuration.html), que je n'avais pas quitté depuis mon arrivée sur Archlinux. Un Tiling Window Manager, c'est certain.
 **monsterwm** se présente comme « Tiny and monstrous ! ». Il n'a qu'un seul but : s'occuper de nos fenêtres. C'est ainsi qu'il n'inclut aucune barre d'emblée, et s'avère particulièrement léger.

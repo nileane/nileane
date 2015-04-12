@@ -1,14 +1,6 @@
 ---
 layout: post
 title: Earthquake, un client Twitter pour le terminal.
-tags:
-- application
-- social
-- linux
-- terminal
-- twitter
-status: publish
-type: post
 published: true
 ---
 Dans la série applications coups de cœur, il y a <a href="https://github.com/jugyo/earthquake" title="Le Github de Earthquake" target="_blank">Earthquake <em>(le github pour tout savoir sur son mode d'emploi)</em></a>. Écrit en ruby, ce client Twitter pour le terminal, a tout pour plaire : élégance, fonctionnalités, et fabuleusement pratique.
