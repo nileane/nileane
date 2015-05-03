@@ -2,48 +2,79 @@
 layout: default
 bodyclass: home
 ---
-<header>
-    {% if page.link %}
-        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
-    {% else %}
-        <h1>{{ page.title }}</h1>
-    {% endif %}
-</header>
 
-
-{% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
-{% for post in posts limit:7 %}
-<a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-<section class="recent{% if post.headimg_url %} cover{% endif %} {% if post.link %}nohov{% endif %}" {% if post.headimg_url %}style="background-image: url({{ post.headimg_url }});"{% endif %}>
-        <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}
-            {% unless post.link %}
-            {% assign reading_time = post.content | strip_html | number_of_words | append: '.0' | divided_by: 180 %}
-            · <span title="{{ site.data.translations[page.lang].readingtime }}">
-                {% if reading_time < 0.5 %}{{ site.data.translations[page.lang].readingtime_short }}
-                {% elsif reading_time >= 0.5 and reading_time < 1.5 %}1 min.
-                {% elsif reading_time >= 1.5 %}<span class="reading-time">{{ reading_time }}</span> min.
+<section id="preface">
+    <header>Page 1
+        <span class="permalink">
+            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#preface">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="/{% if page.lang == 'en' %}en/{% endif %}#preface"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
+    <div>
+        <h1>{{ site.data.translations[page.lang].preface }}</h1>
+        <hr class="double small">
+        <div>
+           {% if page.lang == 'en' %}
+            {% for post in site.posts %}
+                {% if post.permalink == "/about/" %}
+                  {{ post.content }}
                 {% endif %}
-              </span>
-            {% endunless %}
-        </time>
-        <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#346EC5; font-size:50%;"></span>{% endif %}</h2>
-        {% if post.link %}
-        <div class="excerpt">
-            <em style="color:rgba(0, 0, 0, .2)">{{ post.link }}</em>
+            {% endfor %}
+           {% else %}
+            {% for post in site.posts %}
+                {% if post.permalink == "/a-propos/" %}
+                  {{ post.content }}
+                {% endif %}
+            {% endfor %}
+           {% endif %}
         </div>
-        {% else %}
-        <div class="excerpt">
-            <p><span class="top">{{ post.title | replace: '<br>', '' }} · <span style="color:#346EC5">{{ site.data.translations[page.lang].continued }} &rarr;</span></span></p>
-            <p>{{ post.excerpt | markdownify | strip_html }}</p>
-        </div>
-        {% endif %}
+    </div>
 </section>
-</a>
-{% endfor %}
 
-<a href="{% if page.lang == "en" %}/en{% endif %}/archive" title="{{ site.data.translations[page.lang].archive }}">
-<section class="recent dark nohov">
-        <span class="top">{{ site.data.translations[page.lang].archive }}</span>
-        <h2>{{ site.data.translations[page.lang].archivetip }} &rarr;</h2>
+<section id="whatido">
+    <header>Page 2
+        <span class="permalink">
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#whatido">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="/{% if page.lang == 'en' %}en/{% endif %}#whatido"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
+
+    <div>
+        <h1>{{ site.data.translations[page.lang].whatido }}</h1>
+        <hr class="double small">
+    </div>
 </section>
-</a>
+
+
+<section id="weblog">
+   <header>Page 3
+        <span class="permalink">
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#weblog">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="/{% if page.lang == 'en' %}en/{% endif %}#weblog"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
+
+    <div>
+        <h1>{{ site.data.translations[page.lang].weblog }}</h1>
+        <hr class="double small">
+
+        <ul class="index">
+            {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
+            {% for post in posts limit:10 %}
+            <li>
+            <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
+                <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
+                <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
+            </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

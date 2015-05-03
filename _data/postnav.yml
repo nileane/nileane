@@ -1,0 +1,8 @@
+en:
+  weblog:
+    title: "<span class=oi data-glyph=list-rich></span> Weblog"
+    url:   "/en/archive"
+fr:
+  weblog:
+    title: "<span class=oi data-glyph=list-rich></span> Carnet"
+    url:   "/archive"

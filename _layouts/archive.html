@@ -1,15 +1,9 @@
 ---
 layout: default
+bodyclass: home
 ---
-<header>
-    {% if page.link %}
-        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
-    {% else %}
-        <h1>{{ page.title }}</h1>
-    {% endif %}
-</header>
 
-<section class="article">
+<section>
     {% if page.lang == "fr" %}<div class="archives">
 
         {% assign sortedcats = site.categories | sort %}
@@ -46,31 +40,27 @@ layout: default
        {% endfor %}
 
     </div>{% endif %}
+</section>
 
 
-    <div class="archives" id="all">
-        {% if page.lang == "fr" %}<h2>{{ site.data.translations[page.lang].allposts }}</h2><br>{% endif %}
+<section>
+    <div>
+        {% if page.lang == "fr" %}
+        <h1>{{ site.data.translations[page.lang].allposts }}</h1>
+        <hr class="double small">
+        {% endif %}
 
-        <div>
-            <ul>
-                {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
-                {% for post in posts %}
-                    {% capture currentmonth %}{{ post.date | date: "%m/%Y" }}{% endcapture %}
-                    {% if currentmonth != month %}
-                        {% unless forloop.first %}
-                        </ul><br></li>
-                        {% endunless %}
-                        <li><strong class="smalltitle">{% include date.html date=post.date mode="month"%}</strong>
-                        <ul>{% capture month %}{{ currentmonth }}{% endcapture %}
-                    {% endif %}
-                    <li>
-                        <a href="{{ post.url }}"><span>{{ post.date | date: '%-d' }}.</span>
-                        {{ post.title | replace: '<br>', '' }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
+        <ul class="index">
+            {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
+            {% for post in posts %}
+            <li>
+            <a href="{{ post.url }}">
+                    <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
+                    <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
+
+             </a>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
-
 </section>

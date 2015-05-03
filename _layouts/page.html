@@ -1,16 +1,26 @@
 ---
 layout: default
+bodyclass: home
 ---
-<header>
-    {% if page.link %}
-        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
-    {% else %}
-        <h1>{{ page.title }}</h1>
-    {% endif %}
-</header>
+<section>
+  <header>
+        {{ page.title }}
+        <span class="permalink">
+            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="{{ page.url }}"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
 
-<section class="article">
-    <div id="post"{% if page.link %} class=link{% endif %}>
+    <div class="post">
+        {% if page.link %}
+            <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
+            <hr class="double small">
+        {% endif %}
+            <h1>{{ page.title }}</h1>
+            <hr class="double small">
         {{ content }}
     </div>
 </section>

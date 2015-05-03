@@ -1,44 +1,30 @@
 ---
 layout: default
-bodyclass: left
 ---
-<header {% if page.headimg_url %}class="cover" style="background-image: url({{ page.headimg_url }});"{% endif %}>
-    {% if page.link %}
-        <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
-    {% else %}
-        <h1>{{ page.title }}</h1>
-    {% endif %}
-    {% if page.headimg_lic %}
-        {% if page.headimg_lic_url %}
-            <span class="credits"><span class="oi" data-glyph="image"></span> <a href="{{ page.headimg_lic_url }}">{{ page.headimg_lic }}</a></span>
-        {% else %}
-            <span class="credits"><span class="oi" data-glyph="image"></span> {{ page.headimg_lic }}</span>
-        {% endif %}
-    {% endif %}
-        <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">
-            {% include date.html date=page.date %}
-            {% unless page.link %}
-            {% assign reading_time = content | strip_html | number_of_words | append: '.0' | divided_by: 180 %}
-            · <span title="{{ site.data.translations[page.lang].readingtime }}">
-                {% if reading_time < 0.5 %}{{ site.data.translations[page.lang].readingtime_short }}
-                {% elsif reading_time >= 0.5 and reading_time < 1.5 %}1 min.
-                {% elsif reading_time >= 1.5 %}<span class="reading-time">{{ reading_time }}</span> min.
-                {% endif %}
-              </span>
-            {% endunless %}
-        </time>
-</header>
+<section>
+  <header>
+        <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
+        <span class="permalink">
+            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="{{ page.url }}"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
 
-{% unless page.link %}
-<section class="article">
-    <div id="post"{% if page.link %} class=link{% endif %}>
+    <div class="post">
+        {% if page.link %}
+            <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
+            <hr class="double small">
+        {% endif %}
         {{ content }}
     </div>
-</section>
-{% endunless %}
 
-{% unless page.comments == false %}
-      <script data-isso="//comments.schoewilliam.fr/" data-isso-avatar="false" data-isso-vote="false"
-	  src="//comments.schoewilliam.fr/js/embed.min.js"></script>
-      <section id="isso-thread"></section>
-{% endunless %}
+    <footer>
+        <span class="oi" data-glyph="tags"></span>
+        {% for category in page.categories %}
+            <a href="/{% if page.lang == "en" %}en/{% endif %}archive#{{ category | remove:' ' }}">{{ category | capitalize }}</a>{% unless forloop.last %}, {% else %}.{% endunless %}
+        {% endfor %}
+    </footer>
+</section>

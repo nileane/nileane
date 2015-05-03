@@ -1,26 +1,26 @@
 en:
-  archive:
-    title: "Archive"
-    url:   "/en/archive"
-  projects:
-    title: "Projects"
-    url:   "/projects"
-  links:
-    title: "Links"
-    url:   "/links"
-  about:
-    title: "About"
-    url:   "/about"
+  preface:
+    title: "Preface <span>P.1</span>"
+    url:   "/en/#preface"
+  whatido:
+    title: "What I do <span>P.2</span>"
+    url:   "/en/#whatido"
+  weblog:
+    title: "Weblog <span>P.3</span>"
+    url:   "/en/#weblog"
+  contact:
+    title: "Contact <span>P.4</span>"
+    url:   "/en/#contact"
 fr:
-  archive:
-    title: "Archives"
-    url:   "/archive"
-  projects:
-    title: "Projets"
-    url:   "/projets"
-  links:
-    title: "Liens"
-    url:   "/liens"
-  about:
-    title: "À propos"
-    url:   "/a-propos"
+  preface:
+    title: "Préface <span>P.1</span>"
+    url:   "/#preface"
+  whatido:
+    title: "Ce que je fais <span>P.2</span>"
+    url:   "/#whatido"
+  weblog:
+    title: "Carnet <span>P.3</span>"
+    url:   "/#weblog"
+  contact:
+    title: "Me Contacter <span>P.4</span>"
+    url:   "/#contact"
