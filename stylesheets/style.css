@@ -67,6 +67,9 @@ header hr {
     width: 220px;
     margin: 2.2em auto;
 }
+.dark hr {
+    opacity: 0.2;
+}
 
 
 /* Headlines */
@@ -78,6 +81,11 @@ h1, h2, h3 {
     margin: 0 0 0.5em;
     line-height: 1;
     color: rgba(0, 0, 0, .7);
+}
+.dark h1,
+.dark h2,
+.dark h3 {
+    color: #fff;
 }
 h1 {
     font-size: 3em;
@@ -107,30 +115,41 @@ body > header {
 @media screen and (max-width: 1000px) {
     body > header {
         width: 100vw;
-        height: 400px;
+        height: auto;
         position: relative;
         background: url(../images/layout/panom.jpg) bottom center / cover #386398;
     }
 }
 body > header .book-title {
-    padding: .5em;
+    padding: .5em 11.14%;
     position: absolute;
     top: 50%; left: 0; right: 0;
     transform: translateY(-50%);
     animation: fadin 1s 1;
     color: #fff;
 }
-@media screen and (min-width:1201px) {
-    body.home > header .book-title {
-        font-size: 130%;
-    }
-}
 body > header h1 {
     margin: 0;
-    font-size: 3em;
+    font-size: 2em;
     vertical-align: middle;
     color: #fff;
     font-weight: 700;
+}
+@media screen and (max-width:1000px) {
+    body > header .book-title {
+        position: static;
+        transform: translate(0);
+        margin: 2em 0 0;
+    }
+}
+@media screen and (min-width:1001px) {
+    body.home > header .book-title {
+        padding: .5em;
+        font-size: 130%;
+    }
+    body > header h1 {
+        font-size: 2.6em;
+    }
 }
 header .serif {
     font-family: "Charis SIL", serif;
@@ -155,6 +174,7 @@ body > header nav {
 @media screen and (max-width: 1000px) {
     body > header nav {
         background-color: transparent;
+        position: static;
     }
 }
 body > header nav a {
@@ -213,7 +233,7 @@ body > header .small-title {
 
 /* Pages */
 body > section {
-    background: url(../images/layout/noise.png) repeat #fff;
+    background: #fff;
     width: 55vw;
     min-height: 100vh;
     margin: 0 0 50px 45vw;
@@ -221,6 +241,9 @@ body > section {
     border-radius: 2px 0 0 2px;
     overflow: hidden;
     position: relative;
+}
+body > section.dark {
+    background-color: #222;
 }
 body > section:last-of-type {
     margin-bottom: 0;
@@ -254,12 +277,23 @@ body > section > footer {
     color: #aaa;
     text-align: left;
 }
+body > section.dark > header,
+body > section.dark > footer {
+    background-color: rgba(0, 0, 0, 0.2);
+}
 body > section > footer {
     bottom: 0; right: 0; left: 0;
     position: absolute;
     height: 55px;
     line-height: 55PX;
     font-size: .9em;
+}
+@media screen and (min-width:1001px) {
+    body > section > footer {
+        position: fixed;
+        left: 45vw;
+        padding: 0 6.14%;
+    }
 }
 body > section > header a,
 body > section > footer a {
@@ -273,7 +307,7 @@ body > section > footer .oi {
     color: #AAA;
     line-height: 1;
     float: right;
-    margin-top: 2ex;
+    margin-top: 1.8ex;
 }
 .permalink a {
     color: #AAA;
@@ -286,7 +320,9 @@ body > section > footer .oi {
 .permalink a.active {
     color: #444;
 }
-
+.dark .permalink a.active {
+    color: #fff;
+}
 
 
 /* Index of posts */
@@ -299,6 +335,9 @@ ul.index {
     text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
+.dark .index li {
+    border-color: rgba(255, 255, 255, 0.05);
+}
 .index li:last-child {
     border-bottom: none;
 }
@@ -308,14 +347,27 @@ ul.index {
     transition: all .5s;
     font-weight: 500;
 }
+.dark .index h2 {
+    color: rgba(197, 197, 197, 0.6);
+}
 .index a:hover h2 {
     color: #333;
+}
+.dark .index a:hover h2 {
+    color: #fff;
 }
 .index time {
     font-size: 1.3rem;
     line-height: 1;
     font-family: "Charis SIL", serif;
+    font-style: italic;
     color: #c5c5c5;
+}
+.dark .index time {
+    color: rgba(197, 197, 197, 0.6);
+}
+.catbloc:not(:target) {
+    display: none;
 }
 
 

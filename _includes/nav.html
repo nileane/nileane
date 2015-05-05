@@ -1,0 +1,23 @@
+<nav>
+   {% if page.bodyclass == "home" %}
+        {% for menu in site.data.navhome[page.lang] %}
+            <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
+        {% endfor %}
+   {% elsif page.bodyclass == "archive" %}
+        {% for menu in site.data.navarchive[page.lang] %}
+            <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
+        {% endfor %}
+   {% else %}
+        {% if page.previous %}
+            <a rel="prev" class="pagination prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}"><span class="oi" data-glyph="chevron-bottom"></span></a>
+        {% endif %}
+
+        {% for menu in site.data.navpost[page.lang] %}
+            <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
+        {% endfor %}
+
+        {% if page.next %}
+            <a rel="next" class="pagination next" title="{{ page.next.title }}" href="{{ page.next.url }}"><span class="oi" data-glyph="chevron-top"></span></a>
+        {% endif %}
+   {% endif %}
+</nav>

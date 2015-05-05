@@ -78,3 +78,22 @@ bodyclass: home
         </ul>
     </div>
 </section>
+
+
+<section id="contact">
+    <header>Page 4
+        <span class="permalink">
+            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#contact">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="/{% if page.lang == 'en' %}en/{% endif %}#contact"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
+    <div>
+        <h1>{{ site.data.translations[page.lang].contact }}</h1>
+        <hr class="double small">
+        <div>
+        </div>
+    </div>
+</section>

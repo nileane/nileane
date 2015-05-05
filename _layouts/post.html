@@ -21,10 +21,13 @@ layout: default
         {{ content }}
     </div>
 
+    {% if page.categories %}
+    {% for category in page.categories %}
+    {% if forloop.first %}
     <footer>
-        <span class="oi" data-glyph="tags"></span>
-        {% for category in page.categories %}
-            <a href="/{% if page.lang == "en" %}en/{% endif %}archive#{{ category | remove:' ' }}">{{ category | capitalize }}</a>{% unless forloop.last %}, {% else %}.{% endunless %}
-        {% endfor %}
-    </footer>
+        <span class="oi" data-glyph="tags"></span>{% endif %}
+        <a href="/{% if page.lang == "en" %}en/{% endif %}archive#{{ category | remove:' ' }}">{{ category | capitalize }}</a>{% unless forloop.last %}, {% else %}
+    </footer>{% endunless %}
+    {% endfor %}
+    {% endif %}
 </section>

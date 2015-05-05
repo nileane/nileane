@@ -30,9 +30,9 @@
         <header>
             <a href="/{% if page.lang == "en" %}en{% endif %}">
                 {% unless page.bodyclass == "home" %}
-                    <span class="small-caps" style="color:#fff"><span style="font-size:.8em" class=oi data-glyph=signpost></span></span> <span class="small-title">Schoewilliam</span>
+                    <span class="small-title">Schoewilliam</span>
                 {% else %}
-                    <span class="small-caps" style="color:#fff">{{ site.data.translations[page.lang].storyof }}</span>
+                    <span class="small-caps" style="color:#fff">William Dorffer</span>
                 {% endunless %}
             </a>
         </header>
@@ -43,26 +43,7 @@
             <hr class="double small">
         </div>
 
-        <nav>
-           {% if page.bodyclass == "home" %}
-            {% for menu in site.data.navigation[page.lang] %}
-                <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
-            {% endfor %}
-           {% else %}
-                {% if page.previous %}
-                    <a rel="prev" class="pagination prev" href="{{ page.previous.url }}"><span class="oi" data-glyph="action-undo"></span></a>
-                {% endif %}
-
-                {% for menu in site.data.postnav[page.lang] %}
-                    <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
-                {% endfor %}
-
-                {% if page.next %}
-                    <a rel="next" class="pagination next" href="{{ page.next.url }}"><span class="oi" data-glyph="action-redo"></span></a>
-                {% endif %}
-           {% endif %}
-
-        </nav>
+        {% include nav.html %}
     </header>
 
 
