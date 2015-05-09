@@ -2,45 +2,8 @@
 layout: default
 bodyclass: archive
 ---
-
-<section id="categories">
-    <header>Page 1
-        <span class="permalink">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#categories">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="{{ page.url }}#categories"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
-
-   {% assign sortedcats = site.categories | sort %}
-   {% for category in sortedcats %}
-        <div class="catbloc" id="{{ category | first | remove:' ' }}">
-            <h1>{{ category | first }}</h1>
-            <hr class="double small">
-
-            <ul class="index">
-              {% for posts in category %}
-                {% for post in posts %}
-                {% if post.url %}
-                <li>
-                    <a href="{{ post.url }}">
-                    <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
-                    </a>
-                </li>
-                {% endif %}
-                {% endfor %}
-              {% endfor %}
-            </ul>
-        </div>
-   {% endfor %}
-</section>
-
-
-<section class="dark" id="allposts">
-    <header>Page 2
+<section id="allposts">
+    <header>1
         <span class="permalink">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
@@ -67,4 +30,45 @@ bodyclass: archive
             {% endfor %}
         </ul>
     </div>
+</section>
+
+
+<section id="categories">
+    <header>2
+        <span class="permalink">
+            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#categories">{{ post.lang }}</a>
+            {% endfor %}
+            <a href="{{ page.url }}#categories"><span class="oi" data-glyph="link-intact"></span></a>
+        </span>
+    </header>
+
+    <div>
+        <h1>{{ site.data.translations[page.lang].categories }}</h1>
+        <hr class="double small">
+    </div>
+
+   {% assign sortedcats = site.categories | sort %}
+   {% for category in sortedcats %}
+        <div class="catbloc" id="{{ category | first | remove:' ' }}">
+            <h2 style="text-align:center">{{ category | first }}</h2>
+            <hr class="double small">
+
+            <ul class="index">
+              {% for posts in category %}
+                {% for post in posts %}
+                {% if post.url %}
+                <li>
+                    <a href="{{ post.url }}">
+                    <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
+                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+              {% endfor %}
+            </ul>
+        </div>
+   {% endfor %}
 </section>

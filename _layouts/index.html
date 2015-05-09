@@ -4,7 +4,7 @@ bodyclass: home
 ---
 
 <section id="preface">
-    <header>Page 1
+    <header>1
         <span class="permalink">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
@@ -35,15 +35,6 @@ bodyclass: home
 </section>
 
 <section id="whatido">
-    <header>Page 2
-        <span class="permalink">
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#whatido">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="/{% if page.lang == 'en' %}en/{% endif %}#whatido"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
-
     <div>
         <h1>{{ site.data.translations[page.lang].whatido }}</h1>
         <hr class="double small">
@@ -52,15 +43,6 @@ bodyclass: home
 
 
 <section id="weblog">
-   <header>Page 3
-        <span class="permalink">
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#weblog">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="/{% if page.lang == 'en' %}en/{% endif %}#weblog"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
-
     <div>
         <h1>{{ site.data.translations[page.lang].weblog }}</h1>
         <hr class="double small">
@@ -81,15 +63,6 @@ bodyclass: home
 
 
 <section id="contact">
-    <header>Page 4
-        <span class="permalink">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#contact">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="/{% if page.lang == 'en' %}en/{% endif %}#contact"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
     <div>
         <h1>{{ site.data.translations[page.lang].contact }}</h1>
         <hr class="double small">

@@ -1,14 +1,14 @@
 en:
-  categories:
-    title: "Categories <span>P.1</span>"
-    url:   "/en/archive/#categories"
   allposts:
-    title: "All Posts <span>P.2</span>"
+    title: "All Posts <span>P.1</span>"
     url:   "/en/archive/#allposts"
-fr:
   categories:
-    title: "Catégories <span>P.1</span>"
-    url:   "/archive/#categories"
+    title: "Categories <span>P.2</span>"
+    url:   "/en/archive/#categories"
+fr:
   allposts:
-    title: "Tous les articles <span>P.2</span>"
+    title: "Tous <span>P.1</span>"
     url:   "/archive/#allposts"
+  categories:
+    title: "Catégories <span>P.2</span>"
+    url:   "/archive/#categories"

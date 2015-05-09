@@ -6,7 +6,7 @@
 
 body {
     font: 13pt "Fira Sans", sans-serif;
-    background: #fff;
+    background: #111;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -16,20 +16,21 @@ body {
 body:before {
     content: " ";
     position: fixed;
-    top: 0; right: 0; bottom: 0; left: 0;
-    width: 300%;
-    background: url(../images/layout/panom.jpg) bottom center / cover #386398;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/layout/foretdebelouve.jpg) center center / cover #386398;
     z-index: -1;
-    transition: opacity .5s;
+    opacity: .5;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:750px) {
     body {
         font-size:10pt;
     }
 }
-@media screen and (min-width:1001px) {
-    body:before {
-        animation: bg-scroll 300s linear infinite;
+@media screen and (min-width:751px) and (max-width:1000px) {
+    body {
+        font-size:12pt;
     }
 }
 p,
@@ -60,7 +61,7 @@ hr {
 hr.small {
     width:100px;
 }
-header hr {
+aside hr {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
 .post hr {
@@ -105,64 +106,146 @@ h1 {
 
 /* Header */
 body > header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    line-height: 3.1em;
+    display: flex;
+    z-index: 2;
+    animation: slidin-bottom 2s 1;
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-weight: 800;
+    font-size: 120%;
+}
+body > header > div {
+    flex: 1 1 50vw;
+    padding: 0 4.2em;
+}
+body > header .left {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .2);
+}
+body > header .right {
+    color: #aaa;
+    font-weight: 500;
+    font-size: 1em;
+    text-align: right;
+    background-color: rgba(245, 245, 245, 0.9);
+    transition: all .3s;
+}
+body.dark > header .right {
+    background-color: rgba(34, 34, 34, 0.9);
+}
+body > header .logo {
+    vertical-align: -0.1ex;
+    margin-right: 0.5ex;
+    width: 1.3ex;
+}
+body > header span[data-glyph="menu"] {
+    margin-top: 0.4ex;
+    display: inline-block;
+    line-height: 2.8em;
+}
+body > header a {
+    color: #aaa;
+    display: inline-block;
+    padding: 0 .2em;
+    vertical-align: middle;
+    cursor: pointer;
+}
+body > header a:hover {
+    color: #333;
+}
+body.dark > header a:hover {
+    color: #fff;
+}
+body > header a.active {
+    color: #444;
+}
+body.dark > header a.active {
+    color: #fff;
+}
+body > header .oi {
+    transform: translateY(2px);
+    display: inline-block;
+}
+body > header nav .pagination {
+    flex: 1 1 50px;
+}
+body > header .sep  {
+    font-weight: 200;
+    color: #ccc;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+body.dark > header .sep {
+    color: #444;
+}
+
+
+
+body > aside {
     color: #fff;
     height: 100vh;
-    width: 45vw;
+    width: 50vw;
     text-align: center;
     position: fixed;
     top: 0; left: 0;
 }
-@media screen and (max-width: 1000px) {
-    body > header {
+@media screen and (max-height:599px) and (max-width:1000px) {
+    body > aside {
         width: 100vw;
-        height: auto;
+        height: 95vh;
         position: relative;
-        background: url(../images/layout/panom.jpg) bottom center / cover #386398;
     }
 }
-body > header .book-title {
-    padding: .5em 11.14%;
-    position: absolute;
-    top: 50%; left: 0; right: 0;
-    transform: translateY(-50%);
-    animation: fadin 1s 1;
-    color: #fff;
+@media screen and (min-height:600px) and (max-width:1000px) {
+    body > aside {
+        width: 100vw;
+        height: 80vh;
+        position: relative;
+    }
 }
-body > header h1 {
+body > aside h1 {
     margin: 0;
     font-size: 2em;
     vertical-align: middle;
     color: #fff;
     font-weight: 700;
 }
-@media screen and (max-width:1000px) {
-    body > header .book-title {
-        position: static;
-        transform: translate(0);
-        margin: 2em 0 0;
+body > aside .book-title {
+    padding: .5em 3em;
+    position: absolute;
+    top: 50%; left: 0; right: 0;
+    transform: translateY(-50%);
+    animation: fadin 1s 1;
+    color: #fff;
+}
+body > aside .book-title small {
+    font-variant: small-caps;
+    text-transform: lowercase;
+    font-size: .9em;
+    display: block;
+    margin: -.4em 0 0;
+    font-weight: 700;
+    color: rgba(255, 255, 255, .3);
+}
+@media screen and (min-width:750px) and (max-width:1000px) {
+    body > aside .book-title {
+        font-size: 150%;
     }
 }
 @media screen and (min-width:1001px) {
-    body.home > header .book-title {
+    body.home > aside .book-title {
         padding: .5em;
         font-size: 130%;
     }
-    body > header h1 {
+    body > aside h1 {
         font-size: 2.6em;
     }
 }
-header .serif {
-    font-family: "Charis SIL", serif;
-    text-transform: none;
-    font-variant: normal;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 110%;
-    color: rgba(255, 255, 255, 0.66);
-    line-height: 1.5;
-    display: block;
-}
-body > header nav {
+body > aside nav {
     display: flex;
     flex-flow: row wrap;
     background-color: rgba(0, 0, 0, 0.25);
@@ -172,12 +255,11 @@ body > header nav {
     animation: slidin-top 2s 1;
 }
 @media screen and (max-width: 1000px) {
-    body > header nav {
+    body > aside nav {
         background-color: transparent;
-        position: static;
     }
 }
-body > header nav a {
+body > aside nav a {
     line-height: 3.1em;
     padding: 0;
     font-size: 1em;
@@ -189,44 +271,37 @@ body > header nav a {
     flex: 1 1 150px;
 }
 @media screen and (max-width: 1000px) {
-    body > header nav a {
+    body > aside nav a {
         font-size: 1.3em;
     }
 }
-body > header nav a span {
+body > aside nav a span:not(.oi) {
     opacity: 0.45;
     font-variant: normal;
     font-size: .8em;
 }
-body > header nav a:hover {
+body > aside nav a .oi {
+    vertical-align: -0.1ex;
+}
+body > aside nav a:hover {
     background-color: rgba(0, 0, 0, .2);
     color: #fff;
 }
-body > header nav a:active {
-    transform: scale(0.8);
+body > aside nav a:active {
     outline: 0;
 }
-body > header nav .pagination {
-    flex: 1 1 50px;
-}
-
-body > header > header {
-    background-color: rgba(0, 0, 0, 0.05);
+body > aside > header {
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 0 11.14%;
     height: 3.1em;
     line-height: 3.1em;
     animation: slidin-bottom 2s 1;
     font-variant: small-caps;
     text-transform: lowercase;
-    font-weight: 500;
-    font-size: 120%;
-}
-body > header .small-caps {
-    opacity: 0.5;
-}
-body > header .small-title {
     color: #fff;
     font-weight: 800;
+    font-size: 120%;
+    text-align: left;
 }
 
 
@@ -234,24 +309,26 @@ body > header .small-title {
 /* Pages */
 body > section {
     background: #fff;
-    width: 55vw;
+    width: 50vw;
     min-height: 100vh;
-    margin: 0 0 50px 45vw;
+    margin: 0 0 15px 50vw;
     font-size: 120%;
-    border-radius: 2px 0 0 2px;
     overflow: hidden;
     position: relative;
+    transition: background-color .3s,
+        color .3s;
 }
-body > section.dark {
-    background-color: #222;
+body.dark > section {
+    color: #bbb;
+    background-color: #121212;
 }
 body > section:last-of-type {
     margin-bottom: 0;
 }
 @media screen and (max-width: 1000px) {
     body > section {
-        width: 100vw;
-        margin: 0 0 50px;
+        width: 95vw;
+        margin: 0 2.5vw 50px;
         min-height: auto;
     }
 }
@@ -263,65 +340,7 @@ body > section:last-of-type {
 body > section > * {
     max-width: 1000px;
     margin: auto;
-    padding: 6em 11.14%;
-}
-body > section > header,
-body > section > footer {
-    padding: 0 11.14%;
-    font-size: 1em;
-    line-height: 3.1em;
-    background-color: rgba(245, 245, 245, 0.9);
-    font-weight: 500;
-    font-variant: small-caps;
-    text-transform: lowercase;
-    color: #aaa;
-    text-align: left;
-}
-body > section.dark > header,
-body > section.dark > footer {
-    background-color: rgba(0, 0, 0, 0.2);
-}
-body > section > footer {
-    bottom: 0; right: 0; left: 0;
-    position: absolute;
-    height: 55px;
-    line-height: 55PX;
-    font-size: .9em;
-}
-@media screen and (min-width:1001px) {
-    body > section > footer {
-        position: fixed;
-        left: 45vw;
-        padding: 0 6.14%;
-    }
-}
-body > section > header a,
-body > section > footer a {
-    color: #aaa;
-}
-body > section > footer .oi {
-    display: inline-block;
-    vertical-align: -.2ex;
-}
-.permalink {
-    color: #AAA;
-    line-height: 1;
-    float: right;
-    margin-top: 1.8ex;
-}
-.permalink a {
-    color: #AAA;
-    margin-left: 17px;
-}
-.permalink .oi {
-    display: inline-block;
-    vertical-align: middle;
-}
-.permalink a.active {
-    color: #444;
-}
-.dark .permalink a.active {
-    color: #fff;
+    padding: 9em 11.14% 6em;
 }
 
 
@@ -366,8 +385,14 @@ ul.index {
 .dark .index time {
     color: rgba(197, 197, 197, 0.6);
 }
-.catbloc:not(:target) {
-    display: none;
+.catbloc {
+    padding: 1em 11.14%;
+}
+.catbloc:first-of-type {
+    padding-top: 6em;
+}
+.catbloc:last-of-type {
+    padding-bottom: 6em;
 }
 
 
@@ -376,9 +401,19 @@ ul.index {
 .post {
     color: #4D4D4D;
 }
+body.dark .post {
+    color: #bbb;
+}
 img,
 iframe {
     max-width:100%;
+}
+.post a {
+    color: #000;
+    text-decoration: underline;
+}
+body.dark .post a {
+    color: #fff;
 }
 .post p {
     margin: 0 0 1.4em;
@@ -449,6 +484,58 @@ blockquote {
     font-weight: 300;
     text-align: center;
     font-size: 130%;
+}
+
+select.custom {
+    margin: 0 auto;
+    padding: 0.3em 2.9em 0.1em 0.9em;
+    appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      -ms-appearance: none;
+    font-size: 70%;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
+    letter-spacing: 1px;
+    background: url(/images/design/iconic/caret-bottom-2x.png) no-repeat right center transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: all .2s;
+      -webkit-transition: all .2s;
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+select.custom.light {
+    background-color: #95a5a6;
+}
+select.custom.dark {
+    background-color: rgba(16, 24, 47, 0.45);
+}
+select.custom.nolabel {
+    background-image: none;
+    padding-right: .9em;
+}
+select.custom > option {
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, .8);
+    border: 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+select.custom:hover {
+    background-color: #222;
+}
+select.custom:active {
+    background-color: #111;
+}
+select.custom > option:first-child {
+    display: none;
 }
 
 

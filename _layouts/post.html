@@ -2,22 +2,14 @@
 layout: default
 ---
 <section>
-  <header>
-        <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
-        <span class="permalink">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="{{ page.url }}"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
 
     <div class="post">
         {% if page.link %}
             <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
             <hr class="double small">
         {% endif %}
+
+        <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
         {{ content }}
     </div>
 

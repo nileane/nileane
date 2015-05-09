@@ -22,29 +22,59 @@
     
     <meta name="author" content="{{ site.author }}">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    {% if page.headimg_url %}
+    <style>
+        body:before {
+            background-image: url({{ page.headimg_url }});
+            opacity: .6;
+        }
+    </style>
+    {% endif %}
   </head>
   
   <body {% if page.bodyclass %}class="{{ page.bodyclass }}"{% endif %}>
   
     <header>
-        <header>
-            <a href="/{% if page.lang == "en" %}en{% endif %}">
+        <div class="left">
+            <a href="/{% if page.lang == "en" %}en{% endif %}" style="color:#fff">
                 {% unless page.bodyclass == "home" %}
-                    <span class="small-title">Schoewilliam</span>
+                    Schoewilliam
                 {% else %}
-                    <span class="small-caps" style="color:#fff">William Dorffer</span>
+                    William Dorffer
                 {% endunless %}
             </a>
-        </header>
+        </div>
+        <div class="right">
+            <a href="#" style="float:left"><span class="oi" data-glyph="menu"></span></a>
+            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
+            {% for post in altlang %}
+                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+            {% endfor %}
+            <span class="sep">|</span>
+            <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="oi" data-glyph="lightbulb"></span></a>
+        </div>
+    </header>
 
+
+    <aside>
         <div class="book-title">
             <hr class="double small">
-            <h1>{% if page.bodyclass == "home" %}Schoewilliam{% else %}{{ page.title }}{% endif %}</h1>
-            <hr class="double small">
+            {% if page.bodyclass == "home" %}
+                <h1>Schoewilliam</h1>
+                <small>Open·Web Designer</small>
+                <hr class="double small">
+            {% elsif page.bodyclass == "archive" %}
+                <h1>{{ page.title }}</h1>
+                <hr class="double small">
+                {% include category_selector.html %}
+            {% else %}
+                <h1>{{ page.title }}</h1>
+                <hr class="double small">
+            {% endif %}
         </div>
 
         {% include nav.html %}
-    </header>
+    </aside>
 
 
     <!-- Page content -->
@@ -52,23 +82,14 @@
 
 
 
-    <script src="/scripts/jquery.min.js"></script>
+    <script src="/js/smoothscroll.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 600);
-                return false;
-              }
-            }
-          });
+        smoothScroll.init({
+            speed: 1000, // Integer. How fast to complete the scroll in milliseconds
         });
     </script>
+    <script src="/js/nightmode.js" type="text/javascript"></script>
+
     {% include piwik.html %}
   </body>
 </html>

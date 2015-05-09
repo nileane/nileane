@@ -1,26 +1,26 @@
 en:
   preface:
-    title: "Preface <span>P.1</span>"
+    title: "<span>1.</span> Preface"
     url:   "/en/#preface"
   whatido:
-    title: "What I do <span>P.2</span>"
+    title: "<span>2.</span> What I do"
     url:   "/en/#whatido"
   weblog:
-    title: "Weblog <span>P.3</span>"
+    title: "<span>3.</span> Weblog"
     url:   "/en/#weblog"
   contact:
-    title: "Contact <span>P.4</span>"
+    title: "<span>4.</span> Contact"
     url:   "/en/#contact"
 fr:
   preface:
-    title: "Préface <span>P.1</span>"
+    title: "<span>1.</span> Préface"
     url:   "/#preface"
   whatido:
-    title: "Ce que je fais <span>P.2</span>"
+    title: "<span>2.</span> Ce que je fais"
     url:   "/#whatido"
   weblog:
-    title: "Carnet <span>P.3</span>"
+    title: "<span>3.</span> Carnet"
     url:   "/#weblog"
   contact:
-    title: "Me Contacter <span>P.4</span>"
+    title: "<span>4.</span> Me Contacter"
     url:   "/#contact"
