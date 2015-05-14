@@ -1,0 +1,26 @@
+en:
+  preface:
+    title: "Preface"
+    url:   "/en/#preface"
+  whatido:
+    title: "What I do"
+    url:   "/en/#whatido"
+  weblog:
+    title: "Weblog"
+    url:   "/en/archive"
+  contact:
+    title: "Contact"
+    url:   "/en/#contact"
+fr:
+  preface:
+    title: "Préface"
+    url:   "/#preface"
+  whatido:
+    title: "Ce que je fais"
+    url:   "/#whatido"
+  weblog:
+    title: "Carnet"
+    url:   "/archive"
+  contact:
+    title: "Contact"
+    url:   "/#contact"

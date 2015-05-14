@@ -36,44 +36,64 @@
   
     <header>
         <div class="left">
-            <a href="/{% if page.lang == "en" %}en{% endif %}" style="color:#fff">
+            <a onclick="document.querySelector('body > aside').classList.toggle('nav-shown');" class="menu"><span class="mega-octicon octicon-three-bars"></span></a>
+            <a href="/{% if page.lang == "en" %}en{% endif %}" style="color:#fff; line-height: 0.65em;">
                 {% unless page.bodyclass == "home" %}
-                    Schoewilliam
+                    Schoe<br>william
                 {% else %}
-                    William Dorffer
                 {% endunless %}
             </a>
         </div>
         <div class="right">
-            <a href="#" style="float:left"><span class="oi" data-glyph="menu"></span></a>
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
                 <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
             {% endfor %}
-            <span class="sep">|</span>
-            <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="oi" data-glyph="lightbulb"></span></a>
+            <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
         </div>
     </header>
 
-
     <aside>
         <div class="book-title">
-            <hr class="double small">
             {% if page.bodyclass == "home" %}
-                <h1>Schoewilliam</h1>
+                <h1>Schoe<br>william</h1>
                 <small>Open·Web Designer</small>
-                <hr class="double small">
             {% elsif page.bodyclass == "archive" %}
                 <h1>{{ page.title }}</h1>
-                <hr class="double small">
                 {% include category_selector.html %}
             {% else %}
                 <h1>{{ page.title }}</h1>
-                <hr class="double small">
             {% endif %}
         </div>
 
         {% include nav.html %}
+
+        <span class="scroll-down mega-octicon octicon-chevron-down"></span>
+
+        <nav id="prevnext">
+           {% if page.bodyclass == "home" or page.bodyclass == "archive" %}
+                <a class="js-prev js-scroll-to prev hidden" href="#">
+                    <span class="mega-octicon octicon-chevron-up"></span>
+                </a>
+                <a class="js-next next" href="#">
+                    <span class="mega-octicon octicon-chevron-down"></span>
+                </a>
+           {% else %}
+
+                {% if page.previous %}
+                    <a rel="prev" class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
+                        <span class="mega-octicon octicon-chevron-down"></span>
+                    </a>
+                {% endif %}
+
+                {% if page.next %}
+                    <a rel="next" class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
+                        <span class="mega-octicon octicon-chevron-up"></span>
+                    </a>
+                {% endif %}
+
+           {% endif %}
+        </nav>
     </aside>
 
 
@@ -82,12 +102,8 @@
 
 
 
-    <script src="/js/smoothscroll.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        smoothScroll.init({
-            speed: 1000, // Integer. How fast to complete the scroll in milliseconds
-        });
-    </script>
+    <script src="/js/jquery.min.js" type="text/javascript"></script>
+    <script src="/js/prev-next-nav.js" type="text/javascript"></script>
     <script src="/js/nightmode.js" type="text/javascript"></script>
 
     {% include piwik.html %}

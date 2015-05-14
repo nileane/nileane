@@ -3,16 +3,7 @@ layout: default
 bodyclass: home
 ---
 
-<section id="preface">
-    <header>1
-        <span class="permalink">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#preface">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="/{% if page.lang == 'en' %}en/{% endif %}#preface"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
+<section id="preface" class="js-list-item js-current-panel">
     <div>
         <h1>{{ site.data.translations[page.lang].preface }}</h1>
         <hr class="double small">
@@ -34,7 +25,7 @@ bodyclass: home
     </div>
 </section>
 
-<section id="whatido">
+<section id="whatido" class="js-list-item">
     <div>
         <h1>{{ site.data.translations[page.lang].whatido }}</h1>
         <hr class="double small">
@@ -42,7 +33,7 @@ bodyclass: home
 </section>
 
 
-<section id="weblog">
+<section id="weblog" class="js-list-item">
     <div>
         <h1>{{ site.data.translations[page.lang].weblog }}</h1>
         <hr class="double small">
@@ -62,7 +53,7 @@ bodyclass: home
 </section>
 
 
-<section id="contact">
+<section id="contact" class="js-list-item">
     <div>
         <h1>{{ site.data.translations[page.lang].contact }}</h1>
         <hr class="double small">

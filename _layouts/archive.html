@@ -2,17 +2,7 @@
 layout: default
 bodyclass: archive
 ---
-<section id="allposts">
-    <header>1
-        <span class="permalink">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#allposts">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="{{ page.url }}#allposts"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
-
+<section id="allposts" class="js-list-item js-current-panel">
     <div>
         <h1>{{ site.data.translations[page.lang].allposts }}</h1>
         <hr class="double small">
@@ -33,17 +23,7 @@ bodyclass: archive
 </section>
 
 
-<section id="categories">
-    <header>2
-        <span class="permalink">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}#categories">{{ post.lang }}</a>
-            {% endfor %}
-            <a href="{{ page.url }}#categories"><span class="oi" data-glyph="link-intact"></span></a>
-        </span>
-    </header>
-
+<section id="categories" class="js-list-item">
     <div>
         <h1>{{ site.data.translations[page.lang].categories }}</h1>
         <hr class="double small">
