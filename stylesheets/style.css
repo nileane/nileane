@@ -22,15 +22,6 @@
  * 10. Animations
  */
 
-/*
- * NOTE about @media queries:
- *
- * @media queries are dispatched in the file, in the sections where they belong, to which they apply.
- * We're trying here to use only 2 breaking point, which are:
- *    > (min-width:750px) or (max-width:749px)
- *    > (min-width:999px) or (max-width:1000px)
- */
-
 
 
 /*
