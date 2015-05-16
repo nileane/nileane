@@ -1,5 +1,6 @@
 <nav id="nav">
     {% for menu in site.data.nav[page.lang] %}
         <a href="{{ menu[1].url }}">{{ menu[1].title }}</a>
+        {% unless forloop.last %}<hr class="double small">{% endunless %}
     {% endfor %}
 </nav>

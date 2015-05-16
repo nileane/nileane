@@ -37,17 +37,16 @@
     <header>
         <div class="left">
             <a onclick="document.querySelector('body > aside').classList.toggle('nav-shown');" class="menu"><span class="mega-octicon octicon-three-bars"></span></a>
-            <a href="/{% if page.lang == "en" %}en{% endif %}" style="color:#fff; line-height: 0.65em;">
+            <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">
                 {% unless page.bodyclass == "home" %}
-                    Schoe<br>william
-                {% else %}
+                    Schoewilliam
                 {% endunless %}
             </a>
         </div>
         <div class="right">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} title="{{ site.data.translations[page.lang].switchlang }}" href="{{ post.url }}">{{ post.lang }}</a>
+                <a {% if page.lang == post.lang %}class="active"{% endif %} href="{{ post.url }}">{{ post.lang }}</a>
             {% endfor %}
             <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
         </div>
@@ -56,11 +55,8 @@
     <aside>
         <div class="book-title">
             {% if page.bodyclass == "home" %}
-                <h1>Schoe<br>william</h1>
+                <h1>Schoewilliam</h1>
                 <small>Open·Web Designer</small>
-            {% elsif page.bodyclass == "archive" %}
-                <h1>{{ page.title }}</h1>
-                {% include category_selector.html %}
             {% else %}
                 <h1>{{ page.title }}</h1>
             {% endif %}

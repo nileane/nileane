@@ -8,7 +8,6 @@ en:
   nextpost: "Next post"
   preface: "Preface"
   previouspost: "Previous post"
-  switchlang: "Passer en Français" # This is voluntarily switched out
   weblog: "Weblog"
   whatido: "What I do"
 fr:
@@ -21,6 +20,5 @@ fr:
   nextpost: "Article suivant"
   preface: "Préface"
   previouspost: "Article précédent"
-  switchlang: "Switch to English" # This is voluntarily switched out
   weblog: "Carnet"
   whatido: "Ce que je fais"

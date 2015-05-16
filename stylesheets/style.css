@@ -1,17 +1,63 @@
+/*
+ * Schoewilliam.fr CSS Style
+ * https://github.com/schoewilliam/schoewilliam.fr
+ * William Dorffer [:schoewilliam]
+ * MIT License
+ */
+
+
+/*
+ * SUMMARY:
+ *
+ * 0. Imports
+ * 1. Body and General declarations
+ * 2. Seperators: <hr>
+ * 3. Headlines: <hn>
+ * 4. Header: body > header
+ * 5. Site Cover: body > aside
+ * 6. Main Navigation: #nav
+ * 7. Pages: body > section
+ * 8. Index of posts
+ * 9. Post Content
+ * 10. Animations
+ */
+
+/*
+ * NOTE about @media queries:
+ *
+ * @media queries are dispatched in the file, in the sections where they belong, to which they apply.
+ * We're trying here to use only 2 breaking point, which are:
+ *    > (min-width:750px) or (max-width:749px)
+ *    > (min-width:999px) or (max-width:1000px)
+ */
+
+
+
+/*
+ * 0. Imports
+ * ----------
+ */
+
 @import url(fonts/Fira/fira.css);
 @import url(fonts/charissil/charissil.css);
 @import url(fonts/octicons/octicons.css);
+@import url(fonts/voltaire/voltaire.css);
 
 
+
+/*
+ * 1. Body and General declarations
+ * --------------------------------
+ */
 
 body {
-    font: 13pt "Fira Sans", sans-serif;
+    font: 13pt "Charis SIL", "PT Serif", sans-serif;
     background: #111;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
-    color: #3A4145;
+    color: #515151;
 }
 body:before {
     content: " ";
@@ -19,18 +65,17 @@ body:before {
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../images/layout/apollo15earth.jpg) center center / cover #386398;
+    background: url(../images/layout/apollo15earth.jpg) center center / cover #222;
     z-index: -1;
     opacity: .8;
 }
 @media screen and (max-width:800px) {
     body {
-        font-size:11pt;
+        font-size: 11pt;
     }
 }
 p,
 .post {
-    font-family: "Charis SIL", serif;
     line-height: 1.6;
 }
 ul {
@@ -39,15 +84,19 @@ ul {
 a {
     color: #376284;
     text-decoration: none;
-    transition: all .3s;
+    -webkit-transition: all .3s;
+            transition: all .3s;
 }
 *:active,*:focus,*:hover {
     outline: 0;
 }
-.octicon,
-.mega-octicon {
-    vertical-align: middle;
-}
+
+
+
+/*
+ * 2. Seperators: <hr>
+ * -------------------
+ */
 
 hr {
     border-top: 1px solid #d4d4d4;
@@ -71,15 +120,18 @@ aside hr {
 }
 
 
-/* Headlines */
+
+/*
+ * 3. Headlines: <hn>
+ * ------------------
+ */
+
 h1, h2, h3, h4 {
-    font-family: "Fira Sans", sans-serif;
+    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", "Cantarell", sans-serif;
 }
 h1, h2, h3 {
     font-weight: 200;
-    font-variant: small-caps;
     font-weight: 700;
-    text-transform: lowercase;
     margin: 0 0 0.5em;
     line-height: 1;
     color: rgba(0, 0, 0, .7);
@@ -90,9 +142,8 @@ h1, h2, h3 {
     color: #fff;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2.8em;
     text-align: center;
-    font-weight: 200;
 }
 .post h2 {
     font-size: 2em;
@@ -106,78 +157,71 @@ h1 {
 
 
 
-/* Header */
+/*
+ * 4. Header: body > header
+ * ------------------------
+ */
+
 body > header {
+    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     position: fixed;
     top: 0; left: 0;
     width: 100%;
     height: 62px;
     line-height: 62px;
     z-index: 2;
-    animation: slidin-bottom 2s 1;
-    font-variant: small-caps;
-    text-transform: lowercase;
-    font-weight: 800;
+    -webkit-animation: slidin-bottom 2s 1;
+            animation: slidin-bottom 2s 1;
+    text-transform: uppercase;
     font-size: 120%;
-    word-spacing: -.5em;
 }
-body > header > div {
+body > header > div { /* inner container */
     padding: 0 5.5%;
     box-sizing: border-box;
     display: inline-block;
     width: 50%;
+    float: left;
     word-spacing: normal;
     vertical-align: top;
 }
-body > header .left {
+body > header .left { /* left section */
     color: #fff;
     background-color: rgba(0, 0, 0, .2);
 }
-body > header .right {
+body > header .right { /* right section */
     color: #aaa;
     font-weight: 500;
     font-size: 1em;
     text-align: right;
     max-width: 750px;
     background-color: rgba(245, 245, 245, 0.9);
-    transition: all .3s;
-}
-body > header .logo {
-    vertical-align: -0.1ex;
-    margin-right: 0.5ex;
-    width: 1.3ex;
-}
-body > header span[data-glyph="menu"] {
-    margin-top: 0.4ex;
-    display: inline-block;
-    line-height: 2.8em;
+    -webkit-transition: all .3s;
+            transition: all .3s;
 }
 body > header a {
-    color: #aaa;
     display: inline-block;
     padding: 0 .2em;
-    vertical-align: middle;
     cursor: pointer;
 }
-body > header a:hover {
+body > header .right a {
+    color: #aaa;
+}
+body > header .right a:hover,
+body > header a.active {
     color: #333;
 }
-body.dark > header a:hover {
-    color: #fff;
-}
-body > header a.active {
-    color: #444;
-}
+body > header .left  a,
+body > header .left  a:hover,
+body.dark > header .right a:hover,
 body.dark > header a.active {
     color: #fff;
+}
+body > header .small-site-title {
+    font-weight: 700;
 }
 body > header .menu {
     color: #fff;
     float: right;
-}
-body > header .menu:hover {
-    color: #fff;
-    transform: rotate(-90deg);
 }
 @media screen and (max-width:1000px) {
     body > header {
@@ -206,86 +250,85 @@ body > header .menu:hover {
 }
 @media screen and (min-width:1001px) {
     body.dark > header .right {
-        background-color: rgba(34, 34, 34, 0.9);
+        background-color: rgba(15, 15, 15, 0.9);
     }
 }
 
 
+
+/*
+ * 5. Site Cover: body > aside
+ * ---------------------------
+ */
+
 body > aside {
+    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     color: #fff;
+    text-transform: uppercase;
     height: 100vh;
-    width: 50vw;
+    width: 50%;
     text-align: center;
     position: fixed;
     top: 0; left: 0;
-    background-color: transparent;
-    transition: all .3s;
+    -webkit-transition: all .3s;
+            transition: all .3s;
 }
 @media screen and (max-width:1000px) {
     body > aside {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         position: relative;
     }
 }
 body > aside h1 {
+    color: #fff;
     margin: 0;
     font-size: 2em;
     vertical-align: middle;
-    color: #fff;
     font-weight: 700;
 }
 body.home > aside h1 {
-    display: inline-block;
-    line-height: 0.75em;
-    text-align: center;
-    font-weight: 200;
     font-size: 2.7em;
-    letter-spacing: 0.3em;
 }
 body > aside .book-title {
-    padding: .5em;
+    padding: .5em 11.14%;
     position: absolute;
     top: 50%; left: 0; right: 0;
-    transform: translateY(-50%);
-    animation: fadin 1s 1;
-    color: #fff;
-    transition: all .3s;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    -webkit-animation: fadin 1s 1;
+            animation: fadin 1s 1;
+    -webkit-transition: all .3s;
+            transition: all .3s;
 }
 .nav-shown .book-title {
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-50%) scale(0.7);
+    -webkit-transform: translate(0, -50%) scale(0.7);
+        -ms-transform: translate(0, -50%) scale(0.7);
+            transform: translate(0, -50%) scale(0.7);
 }
 body > aside .book-title small {
-    font-variant: small-caps;
-    text-transform: lowercase;
-    font-size: .9em;
+    font-size: 1.1em;
     line-height: 1;
     display: block;
     margin: .2em;
-    letter-spacing: .3em;
+    text-align: center;
+    letter-spacing: .2em;
     color: rgba(255, 255, 255, .3);
-}
-@media screen and (max-width:749px) {
-    body > aside .book-title {
-        font-size: 120%;
-    }
-}
-@media screen and (min-width:750px) and (max-width:1000px) {
-    body > aside .book-title {
-        font-size: 150%;
-    }
 }
 @media screen and (min-width:1001px) {
     body.home > aside .book-title {
         padding: .5em;
-        font-size: 130%;
     }
     body > aside h1 {
         font-size: 2.6em;
     }
-    body.home > aside h1 {
+}
+@media screen and (min-width:1201px) {
+    body.home > aside .book-title {
+        font-size: 120%;
     }
 }
 #prevnext {
@@ -294,17 +337,14 @@ body > aside .book-title small {
     bottom: 0;
     width: 100%;
     height: 62px;
+    line-height: 62px;
     padding: 0;
-    animation: slidin-top 2s 1;
+    -webkit-animation: slidin-top 2s 1;
+            animation: slidin-top 2s 1;
 }
 #prevnext a {
-    line-height: 62px;
     width: 39%;
     padding: 0;
-    font-size: 1em;
-    font-weight: 500;
-    font-variant: small-caps;
-    text-transform: lowercase;
     display: block;
     color: rgba(255, 255, 255, 0.7);
 }
@@ -338,28 +378,41 @@ body > aside .book-title small {
         display: none;
     }
 }
+
+
+
+/*
+ * 6. Main Navigation: #nav
+ * ------------------------
+ */
+
 .nav-shown {
     background-color: rgba(0, 0, 0, 0.6);
 }
 #nav {
+    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     pointer-events: none;
     opacity: 0;
     position: absolute;
     top: 50%; left: 0; right: 0;
-    transform: translateY(-50%) scale(1.7);
-    transition: all .3s;
+    -webkit-transform: translateY(-50%) scale(1.7);
+        -ms-transform: translateY(-50%) scale(1.7);
+            transform: translateY(-50%) scale(1.7);
+    -webkit-transition: all .3s;
+            transition: all .3s;
 }
 .nav-shown #nav {
     pointer-events: all;
     opacity: 1;
-    transform: translateY(-50%) scale(1);
+    -webkit-transform: translateY(-50%) scale(1);
+        -ms-transform: translateY(-50%) scale(1);
+            transform: translateY(-50%) scale(1);
 }
 #nav a {
-    font-size: 2em;
-    font-variant: small-caps;
-    text-transform: lowercase;
+    font-size: 1.6em;
+    text-transform: uppercase;
     color: #fff;
-    font-weight: 200;
+    font-weight: 800;
     display: block;
 }
 #nav a:hover {
@@ -368,21 +421,25 @@ body > aside .book-title small {
 
 
 
-/* Pages */
+/*
+ * 7. Pages: body > section
+ * ------------------------
+ */
+
 body > section {
     background: url(/images/layout/noise.png) repeat #fff;
-    width: 50vw;
+    width: 50%;
     max-width: 750px;
     min-height: 100vh;
-    margin: 0 0 15px 50vw;
+    margin: 0 0 15px 50%;
     font-size: 120%;
     overflow: hidden;
     position: relative;
-    transition: background-color .3s,
-        color .3s;
+    -webkit-transition: background-color .3s, color .3s;
+            transition: background-color .3s, color .3s;
 }
 body.dark > section {
-    color: #bbb;
+    color: #888;
     background-color: #121212;
 }
 body > section:last-of-type {
@@ -407,21 +464,29 @@ body > section > * {
         position: absolute;
         bottom: 0.3em;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+                transform: translateX(-50%);
         opacity: 0.5;
     }
 }
 @media screen and (min-width:1001px) {
     body > section:not(:target) {
-        animation: slidin-left 1s 1;
+        -webkit-animation: slidin-left 1s 1;
+                animation: slidin-left 1s 1;
     }
-    .scroll-down  {
+    .scroll-down {
         display: none;
     }
 }
 
 
-/* Index of posts */
+
+/*
+ * 8. Index of posts
+ * -----------------
+ */
+
 ul.index {
     list-style: none;
     padding: 0;
@@ -440,8 +505,8 @@ ul.index {
 .index h2 {
     margin: 0;
     color: #c5c5c5;
-    transition: all .5s;
-    font-weight: 500;
+    -webkit-transition: all .5s;
+            transition: all .5s;
 }
 .dark .index h2 {
     color: rgba(197, 197, 197, 0.6);
@@ -474,7 +539,11 @@ ul.index {
 
 
 
-/* Post content */
+/*
+ * 9. Post Content
+ * ---------------
+ */
+
 body.dark .post {
     color: #bbb;
 }
@@ -498,6 +567,9 @@ body.dark .post a {
     font-size: 90%;
     display: block;
     margin: -2em 0 2em;
+}
+.dark .post time {
+    color: #555;
 }
 .post p {
     margin: 0 0 1.4em;
@@ -530,29 +602,33 @@ body.dark .post a {
         margin: 10px 30px 10px 0;
     }
 }
+em em {
+    font-style: normal;
+}
+pre, code {
+    font-family: "Fira Mono",monospace;
+}
 pre {
     overflow: hidden;
 }
 pre:hover {
     overflow: auto;
 }
-pre, code {
+pre {
     background-color: #242424;
     color: #FFF;
     border-radius: 3px;
     font-size: 80%;
     padding: 1em;
-    font-family: "Fira Mono",monospace;
-}
-em em {
-    font-style: normal;
 }
 code {
-    background-color: #CCC;
-    color: #222;
     padding: 0 .7em;
     font-size: 90%;
     display: inline-block;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    background-color: rgb(34, 34, 34);
+    color: #fff;
 }
 pre code {
    background-color: #242424;
@@ -570,111 +646,108 @@ blockquote {
     font-size: 130%;
 }
 
-select.custom {
-    margin: 0 auto;
-    padding: 0.3em 2.9em 0.1em 0.9em;
-    appearance: none;
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      -ms-appearance: none;
-    font-size: 70%;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-family: "Fira Sans", "Droid Sans", "Open Sans", Verdana, arial, sans-serif;
-    letter-spacing: 1px;
-    background: url(/images/design/iconic/caret-bottom-2x.png) no-repeat right center transparent;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    color: #fff;
-    border-radius: 3px;
-    box-shadow: none;
-    transition: all .2s;
-      -webkit-transition: all .2s;
-    cursor: pointer;
-    position: relative;
-    display: block;
-}
-select.custom.light {
-    background-color: #95a5a6;
-}
-select.custom.dark {
-    background-color: rgba(16, 24, 47, 0.45);
-}
-select.custom.nolabel {
-    background-image: none;
-    padding-right: .9em;
-}
-select.custom > option {
-    background-color: #fafafa;
-    color: rgba(0, 0, 0, .8);
-    border: 0;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: normal;
-    letter-spacing: normal;
-}
-select.custom:hover {
-    background-color: #222;
-}
-select.custom:active {
-    background-color: #111;
-}
-select.custom > option:first-child {
-    display: none;
-}
 
 
+/*
+ * 10. Animations
+ * --------------
+ */
 
-@keyframes bg-scroll {
-    0% {
-        transform: translate(0);
-    }
-    50% {
-        transform: translate(-50%, 0);
-    }
-    100% {
-        transform: translate(0);
-    }
-}
 @keyframes slidin-left {
     from {
-        transform: translate(50%, 0);
+        -webkit-transform: translate(50%, 0);
+                transform: translate(50%, 0);
     }
     to {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}
+@-webkit-keyframes slidin-left {
+    from {
+        -webkit-transform: translate(50%, 0);
+    }
+    to {
+        -webkit-transform: translate(0, 0);
     }
 }
 @keyframes slidin-right {
     from {
-        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+                transform: translate(-50%, 0);
     }
     to {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}
+@-webkit-keyframes slidin-right {
+    from {
+        -webkit-transform: translate(-50%, 0);
+    }
+    to {
+        -webkit-transform: translate(0, 0);
     }
 }
 @keyframes slidin-top {
     0% {
-        transform: translate(0, 100%);
+        -webkit-transform: translate(0, 100%);
+                transform: translate(0, 100%);
     }
     50% {
-        transform: translate(0, 100%);
+        -webkit-transform: translate(0, 100%);
+                transform: translate(0, 100%);
     }
     100% {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+    }
+}
+@-webkit-keyframes slidin-top {
+    0% {
+        -webkit-transform: translate(0, 100%);
+    }
+    50% {
+        -webkit-transform: translate(0, 100%);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
     }
 }
 @keyframes slidin-bottom {
     0% {
-        transform: translate(0, -100%);
+        -webkit-transform: translate(0, -100%);
+                transform: translate(0, -100%);
     }
     50% {
-        transform: translate(0, -100%);
+        -webkit-transform: translate(0, -100%);
+                transform: translate(0, -100%);
     }
     100% {
-        transform: translate(0, 0);
+        -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
     }
 }
-
+@-webkit-keyframes slidin-bottom {
+    0% {
+        -webkit-transform: translate(0, -100%);
+    }
+    50% {
+        -webkit-transform: translate(0, -100%);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+    }
+}
 @keyframes fadin {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadin {
     from {
         opacity: 0;
     }
