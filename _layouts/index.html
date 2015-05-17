@@ -11,6 +11,14 @@ bodyclass: home
             <h1>{{ post.title }}</h1>
             <hr class="double small">
             <div>{{ post.content }}</div>
+            <ul class="index">
+                <li>
+                    <a href="{{ post.url }}">
+                        <h2 class="more"><span class="mega-octicon octicon-plus"></span></h2>
+                        <time>Learn more &amp; Contact</time>
+                    </a>
+                </li>
+            </ul>
         {% endif %}
     {% endfor %}
    {% else %}
@@ -19,23 +27,64 @@ bodyclass: home
             <h1>{{ post.title }}</h1>
             <hr class="double small">
             <div>{{ post.content }}</div>
+            <ul class="index">
+                <li>
+                    <a href="{{ post.url }}">
+                        <h2 class="more"><span class="mega-octicon octicon-plus"></span></h2>
+                        <time>En savoir plus &amp; Contact</time>
+                    </a>
+                </li>
+            </ul>
         {% endif %}
     {% endfor %}
    {% endif %}
     </div>
 </section>
 
-<section id="whatido">
-    <div>
-        <h1>{{ site.data.translations[page.lang].whatido }}</h1>
-        <hr class="double small">
+<section id="projects">
+    <div class="post">
+   {% if page.lang == 'en' %}
+    {% for post in site.posts %}
+        {% if post.permalink == "/projects/" %}
+            <h1>{{ post.title }}</h1>
+            <hr class="double small">
+            <div>{{ post.content }}</div>
+
+            <ul class="index">
+                <li>
+                    <a href="{{ post.url }}">
+                        <h2 class="more"><span class="mega-octicon octicon-plus"></span></h2>
+                        <time>All my works</time>
+                    </a>
+                </li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+   {% else %}
+    {% for post in site.posts %}
+        {% if post.permalink == "/projets/" %}
+            <h1>{{ post.title }}</h1>
+            <hr class="double small">
+            <div>{{ post.content | split:"<!--more-->" | first | markdownify }}</div>
+
+            <ul class="index">
+                <li>
+                    <a href="{{ post.url }}#cssframework">
+                        <h2 class="more"><span class="mega-octicon octicon-plus"></span></h2>
+                        <time>Tous mes projets</time>
+                    </a>
+                </li>
+            </ul>
+        {% endif %}
+    {% endfor %}
+   {% endif %}
     </div>
 </section>
 
 
 <section id="weblog">
     <div>
-        <h1>{{ site.data.translations[page.lang].weblog }}</h1>
+        <h1 style="margin-top:0;">{{ site.data.translations[page.lang].weblog }}</h1>
         <hr class="double small">
 
         <ul class="index">
@@ -56,15 +105,5 @@ bodyclass: home
             </a>
             </li>
         </ul>
-    </div>
-</section>
-
-
-<section id="contact">
-    <div>
-        <h1>{{ site.data.translations[page.lang].contact }}</h1>
-        <hr class="double small">
-        <div>
-        </div>
     </div>
 </section>

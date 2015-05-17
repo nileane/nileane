@@ -104,6 +104,14 @@ aside hr {
 .dark hr {
     opacity: 0.2;
 }
+hr.large {
+    width: 100%;
+    margin: 2em 0 1.5em;
+}
+hr.title {
+    padding: 3em 0px;
+    border-top: 0;
+}
 
 
 
@@ -118,7 +126,6 @@ h1, h2, h3, h4 {
 h1, h2, h3 {
     font-weight: 200;
     font-weight: 700;
-    margin: 0 0 0.5em;
     line-height: 1;
     color: rgba(0, 0, 0, .7);
 }
@@ -131,6 +138,13 @@ h1 {
     font-size: 2.8em;
     text-align: center;
 }
+div.post h1 {
+    padding: 1em 0;
+    margin: 0;
+}
+div.post h1:first-child {
+    padding: 0 0 .5em;
+}
 .post h2 {
     font-size: 2em;
     margin: 2em 0;
@@ -138,10 +152,32 @@ h1 {
 }
 .post h3 {
     font-size: 1.8em;
-    margin: 1em 0;
+    margin: 1.5em 0 1em;
 }
-
-
+h3 em {
+    font-style: normal;
+    opacity: .3;
+}
+hr.title + h1 {
+    margin: -1.8em 0 0 !important;
+    padding: 0 !important;
+    font-size: 1.2em;
+    color: #D4D4D4;
+    text-shadow:
+        3px 0 #fff,
+        -2px 0 #fff,
+        7px 0 #fff,
+        -4px 0 #fff;
+    text-transform: uppercase;
+    letter-spacing: -.05em;
+}
+.dark hr.title + h1 {
+    text-shadow:
+        3px 0 #121212,
+        -2px 0 #121212,
+        7px 0 #121212,
+        -4px 0 #121212;
+}
 
 /*
  * 4. Header: body > header
@@ -336,7 +372,7 @@ body > aside .book-title small {
     width: 100%;
     height: 62px;
     line-height: 62px;
-    padding: 0;
+    padding: 0 11%;
     box-sizing: border-box;
     display:  -webkit-box;
     display: -webkit-flex;
@@ -352,19 +388,7 @@ body > aside .book-title small {
         -ms-flex: 1 1 100px;
             flex: 1 1 100px;
     display: inline-block;
-    color: rgba(255, 255, 255, 0.3);
-}
-#prevnext a:first-child {
-    text-align: left;
-    padding-left: 11%;
-}
-#prevnext .shown {
-    opacity: 1;
-    pointer-events: all;
-}
-#prevnext a:last-child {
-    text-align: right;
-    padding-right: 11%;
+    color: rgba(255, 255, 255, 0.6);
 }
 #prevnext a:hover {
     background-color: rgba(0, 0, 0, .2);
@@ -559,15 +583,14 @@ iframe {
     color: #ccc;
     font-size: 90%;
     display: block;
-    margin: -2em 0 2em;
 }
 .dark .post time {
     color: #555;
 }
-.post a {
+.post p a {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
-.dark .post a {
+.dark .post p a {
     border-color: rgba(255, 255, 255, 0.2);
 }
 .post a:hover {
@@ -659,7 +682,69 @@ blockquote {
     text-align: center;
     font-size: 130%;
 }
-
+.thumbnail-ct {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+}
+.thumbnail {
+    display: inline-block;
+    width: 48%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 48%;
+        -ms-flex: 1 1 48%;
+            flex: 1 1 48%;
+    height: 145px;
+    background-color: #444;
+    margin: .2rem;
+    padding: 0;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+            transition: all .3s;
+    cursor: pointer;
+}
+.thumbnail img {
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 0;
+    opacity: .7;
+    min-height: 100%;
+    -webkit-transition: all .3s;
+            transition: all .3s;
+}
+.thumbnail:not(.align):hover img {
+    opacity: .3;
+}
+.thumbnail p {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.4),
+        0 2px 1px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    padding: .5em;
+    -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+            transform: translateY(50%);
+    -webkit-transition: all .3s;
+            transition: all .3s;
+}
+.thumbnail:hover p {
+    bottom: 50%;
+}
+.thumbnail strong {
+    display: block;
+    line-height: 1;
+}
+.thumbnail.align img {
+    opacity: .9;
+}
 
 
 /*

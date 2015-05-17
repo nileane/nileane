@@ -66,12 +66,11 @@
         <span class="scroll-down mega-octicon octicon-chevron-down"></span>
 
 
-    {% unless page.bodyclass == "page" or page.bodyclass == "archive" %}
         <nav id="prevnext">
-           {% if page.bodyclass == "home" %}
-                <a href="#about">{{ site.data.translations[page.lang].about }}</a>
-                <a href="#weblog">{{ site.data.translations[page.lang].weblog }}</a>
-                <a href="#contact">{{ site.data.translations[page.lang].contact }}</a>
+           {% unless page.bodyclass == "post" %}
+                {% for link in page.navigation %}
+                    <a data-scroll href="{{ link.url }}">{{ link.title }}</a>
+                {% endfor %}
            {% else %}
                 {% if page.previous %}
                     <a rel="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
@@ -84,9 +83,8 @@
                         <span class="mega-octicon octicon-chevron-up"></span>
                     </a>
                 {% endif %}
-           {% endif %}
+           {% endunless %}
         </nav>
-    {% endunless %}
     </aside>
 
 
@@ -96,8 +94,8 @@
 
 
     <script src="/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/prev-next-nav.js" type="text/javascript"></script>
     <script src="/js/nightmode.js" type="text/javascript"></script>
+    <script src="/js/smooth-scroll.js" type="text/javascript"></script>
 
     {% include piwik.html %}
   </body>
