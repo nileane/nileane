@@ -48,11 +48,11 @@ bodyclass: home
         {% if post.permalink == "/projects/" %}
             <h1>{{ post.title }}</h1>
             <hr class="double small">
-            <div>{{ post.content }}</div>
+            <div>{{ post.content | split:"<!--more-->" | first | markdownify }}</div>
 
             <ul class="index">
                 <li>
-                    <a href="{{ post.url }}">
+                    <a href="{{ post.url }}#cssframework">
                         <h2 class="more"><span class="mega-octicon octicon-plus"></span></h2>
                         <time>All my works</time>
                     </a>
@@ -82,9 +82,9 @@ bodyclass: home
 </section>
 
 
-<section id="weblog">
+<section id="blog">
     <div>
-        <h1 style="margin-top:0;">{{ site.data.translations[page.lang].weblog }}</h1>
+        <h1 style="margin-top:0;">Blog</h1>
         <hr class="double small">
 
         <ul class="index">

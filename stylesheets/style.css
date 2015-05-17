@@ -397,11 +397,6 @@ body > aside .book-title small {
 #prevnext a:active {
     outline: 0;
 }
-@media screen and (max-width: 1000px) {
-    #prevnext {
-        display: none;
-    }
-}
 
 
 
@@ -742,10 +737,17 @@ blockquote {
     display: block;
     line-height: 1;
 }
+.thumbnail.align {
+    width: 245px;
+}
 .thumbnail.align img {
     opacity: .9;
 }
-
+@media screen and (max-width: 699px) {
+    .thumbnail.align {
+        display: none
+    }
+}
 
 /*
  * 10. Animations

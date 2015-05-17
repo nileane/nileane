@@ -9,7 +9,6 @@ en:
   moreposts: "All posts"
   nextpost: "Next post"
   previouspost: "Previous post"
-  weblog: "Weblog"
   whatido: "What I do"
 fr:
   about: "À Propos"
@@ -22,5 +21,4 @@ fr:
   moreposts: "Tous les articles"
   nextpost: "Article suivant"
   previouspost: "Article précédent"
-  weblog: "Carnet"
   whatido: "Ce que je fais"

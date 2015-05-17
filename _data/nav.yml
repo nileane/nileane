@@ -1,19 +1,25 @@
 en:
   home:
-    title: "Home"
+    title: "<span class='mega-octicon octicon-home'></span>"
     url:   "/en"
+  projects:
+    title: "Projects"
+    url:   "/projects"
   weblog:
-    title: "Weblog"
+    title: "Blog"
     url:   "/en/archive"
   contact:
     title: "Contact"
     url:   "/en/#contact"
 fr:
   home:
-    title: "Accueil"
+    title: "<span class='mega-octicon octicon-home'></span>"
     url:   "/"
+  projects:
+    title: "Projets"
+    url:   "/projets"
   weblog:
-    title: "Carnet"
+    title: "Blog"
     url:   "/archive"
   contact:
     title: "Contact"
