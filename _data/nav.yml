@@ -1,10 +1,7 @@
 en:
-  preface:
-    title: "Preface"
-    url:   "/en/#preface"
-  whatido:
-    title: "What I do"
-    url:   "/en/#whatido"
+  home:
+    title: "Home"
+    url:   "/en"
   weblog:
     title: "Weblog"
     url:   "/en/archive"
@@ -12,12 +9,9 @@ en:
     title: "Contact"
     url:   "/en/#contact"
 fr:
-  preface:
-    title: "Préface"
-    url:   "/#preface"
-  whatido:
-    title: "Ce que je fais"
-    url:   "/#whatido"
+  home:
+    title: "Accueil"
+    url:   "/"
   weblog:
     title: "Carnet"
     url:   "/archive"

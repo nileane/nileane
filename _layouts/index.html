@@ -3,29 +3,29 @@ layout: default
 bodyclass: home
 ---
 
-<section id="preface" class="js-list-item js-current-panel">
-    <div>
-        <h1>{{ site.data.translations[page.lang].preface }}</h1>
-        <hr class="double small">
-        <div>
-           {% if page.lang == 'en' %}
-            {% for post in site.posts %}
-                {% if post.permalink == "/about/" %}
-                  {{ post.content }}
-                {% endif %}
-            {% endfor %}
-           {% else %}
-            {% for post in site.posts %}
-                {% if post.permalink == "/a-propos/" %}
-                  {{ post.content }}
-                {% endif %}
-            {% endfor %}
-           {% endif %}
-        </div>
+<section id="about">
+    <div class="post">
+   {% if page.lang == 'en' %}
+    {% for post in site.posts %}
+        {% if post.permalink == "/about/" %}
+            <h1>{{ post.title }}</h1>
+            <hr class="double small">
+            <div>{{ post.content }}</div>
+        {% endif %}
+    {% endfor %}
+   {% else %}
+    {% for post in site.posts %}
+        {% if post.permalink == "/a-propos/" %}
+            <h1>{{ post.title }}</h1>
+            <hr class="double small">
+            <div>{{ post.content }}</div>
+        {% endif %}
+    {% endfor %}
+   {% endif %}
     </div>
 </section>
 
-<section id="whatido" class="js-list-item">
+<section id="whatido">
     <div>
         <h1>{{ site.data.translations[page.lang].whatido }}</h1>
         <hr class="double small">
@@ -33,7 +33,7 @@ bodyclass: home
 </section>
 
 
-<section id="weblog" class="js-list-item">
+<section id="weblog">
     <div>
         <h1>{{ site.data.translations[page.lang].weblog }}</h1>
         <hr class="double small">
@@ -42,18 +42,25 @@ bodyclass: home
             {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
             {% for post in posts limit:10 %}
             <li>
-            <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">
-                <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
+            <a href="{{ post.url }}">
+                <h2>{{ post.title | replace: '<br>', '' }}</h2>
                 <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
             </a>
             </li>
             {% endfor %}
+
+            <li>
+            <a href="/{% if page.lang == "en" %}en/{% endif %}archive">
+                <h2 class="more"><span class="mega-octicon octicon-plus"></span></h2>
+                <time>{{ site.data.translations[page.lang].moreposts }}</time>
+            </a>
+            </li>
         </ul>
     </div>
 </section>
 
 
-<section id="contact" class="js-list-item">
+<section id="contact">
     <div>
         <h1>{{ site.data.translations[page.lang].contact }}</h1>
         <hr class="double small">

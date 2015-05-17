@@ -43,7 +43,7 @@
  */
 
 body {
-    font: 13pt "Charis SIL", "PT Serif", sans-serif;
+    font: 13pt "Voltaire", "PT Serif", sans-serif;
     background: #111;
     padding: 0;
     margin: 0;
@@ -74,7 +74,7 @@ ul {
     list-style: outside square;
 }
 a {
-    color: #376284;
+    color: #9094E9;
     text-decoration: none;
     -webkit-transition: all .3s;
             transition: all .3s;
@@ -93,19 +93,13 @@ a {
 hr {
     border-top: 1px solid #d4d4d4;
     height: 4px;
+    width:100px;
     border-right: 0;
     border-left: 0;
     border-bottom: 1px solid #d4d4d4;
 }
-hr.small {
-    width:100px;
-}
 aside hr {
     border-color: rgba(255, 255, 255, 0.2) !important;
-}
-.post hr {
-    width: 220px;
-    margin: 2.2em auto;
 }
 .dark hr {
     opacity: 0.2;
@@ -215,6 +209,12 @@ body > header .menu {
     color: #fff;
     float: right;
 }
+body > header .menu.shown {
+    -webkit-transform: scale(.75);
+        -ms-transform: scale(.75);
+            transform: scale(.75);
+    opacity: .8;
+}
 @media screen and (max-width:1000px) {
     body > header {
         text-align: left;
@@ -229,6 +229,7 @@ body > header .menu {
     }
     body > header .right {
         float: right;
+        margin-top: -2px;
     }
     body > header .menu {
         float: none;
@@ -238,6 +239,11 @@ body > header .menu {
     }
     body > header a.active {
         color: #fff;
+    }
+    body > header .small-site-title {
+        position: absolute;
+        margin-left: 5px;
+        margin-top: -2px;
     }
 }
 @media screen and (min-width:1001px) {
@@ -268,7 +274,7 @@ body > aside {
 @media screen and (max-width:1000px) {
     body > aside {
         width: 100%;
-        height: 100vh;
+        height: 98vh;
         position: relative;
     }
 }
@@ -331,30 +337,32 @@ body > aside .book-title small {
     height: 62px;
     line-height: 62px;
     padding: 0;
+    box-sizing: border-box;
+    display:  -webkit-box;
+    display: -webkit-flex;
+    display:  -ms-flexbox;
+    display:         flex;
     -webkit-animation: slidin-top 2s 1;
             animation: slidin-top 2s 1;
 }
 #prevnext a {
-    width: 39%;
     padding: 0;
-    display: block;
-    color: rgba(255, 255, 255, 0.7);
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100px;
+        -ms-flex: 1 1 100px;
+            flex: 1 1 100px;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.3);
 }
 #prevnext a:first-child {
-    float: left;
     text-align: left;
     padding-left: 11%;
-}
-#prevnext .js-prev.hidden {
-    opacity: 0;
-    pointer-events: none;
 }
 #prevnext .shown {
     opacity: 1;
     pointer-events: all;
 }
 #prevnext a:last-child {
-    float: right;
     text-align: right;
     padding-right: 11%;
 }
@@ -427,8 +435,6 @@ body > section {
     font-size: 120%;
     overflow: hidden;
     position: relative;
-    -webkit-transition: background-color .3s, color .3s;
-            transition: background-color .3s, color .3s;
 }
 body.dark > section {
     color: #888;
@@ -496,7 +502,8 @@ ul.index {
 }
 .index h2 {
     margin: 0;
-    color: #c5c5c5;
+    color: #a5a5a5;
+    font-weight: normal;
     -webkit-transition: all .5s;
             transition: all .5s;
 }
@@ -509,15 +516,17 @@ ul.index {
 .dark .index a:hover h2 {
     color: #fff;
 }
+.index h2.more {
+    -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+            transform: scale(1.5);
+}
 .index time {
     font-size: 1.3rem;
-    line-height: 1;
-    font-family: "Charis SIL", serif;
-    font-style: italic;
-    color: #c5c5c5;
+    color: #d4d4d4;
 }
 .dark .index time {
-    color: rgba(197, 197, 197, 0.6);
+    color: rgba(255, 255, 255, 0.2);
 }
 .catbloc {
     padding: 1em 11.14%;
@@ -546,15 +555,7 @@ img,
 iframe {
     max-width:100%;
 }
-.post a {
-    color: #000;
-    text-decoration: underline;
-}
-body.dark .post a {
-    color: #fff;
-}
 .post time {
-    font-style: italic;
     color: #ccc;
     font-size: 90%;
     display: block;
@@ -563,11 +564,21 @@ body.dark .post a {
 .dark .post time {
     color: #555;
 }
-.post p {
-    margin: 0 0 1.4em;
+.post a {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.dark .post a {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+.post a:hover {
+    border-color: #111;
+    text-decoration: none;
+}
+.dark .post a:hover {
+    border-color: #fff;
 }
 .post a img {
-    border: 0 none;
+    border: 0;
 }
 .post img {
     border-radius: 3px;
@@ -584,6 +595,12 @@ body.dark .post a {
     display: inline-block;
     margin: 0 -5px 0 0;
 }
+.post .avatar {
+    width: 9rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1.2rem;
+}
 @media screen and (min-width:700px) {
     .align.right {
         float: right;
@@ -593,12 +610,17 @@ body.dark .post a {
         float: left;
         margin: 10px 30px 10px 0;
     }
+    .post .avatar {
+        float: right;
+        margin-left: 2rem;
+        margin-bottom: 0;
+    }
 }
 em em {
     font-style: normal;
 }
 pre, code {
-    font-family: "Fira Mono",monospace;
+    font-family: "Fira Mono", monospace;
 }
 pre {
     overflow: hidden;

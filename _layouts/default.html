@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
   <head>
-    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (FR posts)" href="/flux.xml">
-    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (EN posts)" href="/feed.xml">
-
     <meta charset="UTF-8">
     <title>
     {% if page.title %}
-	{{ page.title | replace:'&nbsp;',' ' | strip_html | escape }} - {{ site.title }}
+	       {{ page.title | replace:'&nbsp;',' ' | strip_html | escape }}
+           {% unless page.bodyclass == "home" %}- {{ site.title }} {% endunless %}
     {% else %}
-	{{ site.title }}
+	       {{ site.title }}
     {% endif %}
     </title>
     
@@ -20,13 +17,17 @@
     <meta name="description" content="{{ site.description | escape }}">
     {% endif %}
     
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (FR posts)" href="/flux.xml">
+    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (EN posts)" href="/feed.xml">
+
     <meta name="author" content="{{ site.author }}">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     {% if page.headimg_url %}
     <style>
         body:before {
             background-image: url({{ page.headimg_url }});
-            opacity: .6;
+            opacity: .4;
         }
     </style>
     {% endif %}
@@ -36,12 +37,10 @@
   
     <header>
         <div class="left">
-            <a onclick="document.querySelector('body > aside').classList.toggle('nav-shown');" class="menu"><span class="mega-octicon octicon-three-bars"></span></a>
-            <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">
-                {% unless page.bodyclass == "home" %}
-                    Schoewilliam
-                {% endunless %}
-            </a>
+            <a onclick="document.querySelector('body > aside').classList.toggle('nav-shown'); document.querySelector('.menu').classList.toggle('shown');" class="menu"><span class="mega-octicon octicon-three-bars"></span></a>
+            {% unless page.bodyclass == "home" %}
+            <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">Schoewilliam</a>
+            {% endunless %}
         </div>
         <div class="right">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
@@ -66,30 +65,28 @@
 
         <span class="scroll-down mega-octicon octicon-chevron-down"></span>
 
-        <nav id="prevnext">
-           {% if page.bodyclass == "home" or page.bodyclass == "archive" %}
-                <a class="js-prev js-scroll-to prev hidden" href="#">
-                    <span class="mega-octicon octicon-chevron-up"></span>
-                </a>
-                <a class="js-next next" href="#">
-                    <span class="mega-octicon octicon-chevron-down"></span>
-                </a>
-           {% else %}
 
+    {% unless page.bodyclass == "page" or page.bodyclass == "archive" %}
+        <nav id="prevnext">
+           {% if page.bodyclass == "home" %}
+                <a href="#about">{{ site.data.translations[page.lang].about }}</a>
+                <a href="#weblog">{{ site.data.translations[page.lang].weblog }}</a>
+                <a href="#contact">{{ site.data.translations[page.lang].contact }}</a>
+           {% else %}
                 {% if page.previous %}
-                    <a rel="prev" class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
+                    <a rel="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
                         <span class="mega-octicon octicon-chevron-down"></span>
                     </a>
                 {% endif %}
 
                 {% if page.next %}
-                    <a rel="next" class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
+                    <a rel="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
                         <span class="mega-octicon octicon-chevron-up"></span>
                     </a>
                 {% endif %}
-
            {% endif %}
         </nav>
+    {% endunless %}
     </aside>
 
 

@@ -2,7 +2,7 @@
 layout: default
 bodyclass: archive
 ---
-<section id="allposts" class="js-list-item js-current-panel">
+<section id="allposts">
     <div>
         <h1>{{ site.data.translations[page.lang].allposts }}</h1>
         <hr class="double small">
@@ -12,7 +12,7 @@ bodyclass: archive
             {% for post in posts %}
             <li>
             <a href="{{ post.url }}">
-                    <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
+                    <h2>{{ post.title | replace: '<br>', '' }}</h2>
                     <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
 
              </a>
@@ -23,7 +23,7 @@ bodyclass: archive
 </section>
 
 
-<section id="categories" class="js-list-item">
+<section id="categories">
     <div>
         <h1>{{ site.data.translations[page.lang].categories }}</h1>
         <hr class="double small">
