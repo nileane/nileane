@@ -1,7 +1,7 @@
 en:
-  home:
-    title: "<span class='mega-octicon octicon-home'></span>"
-    url:   "/en"
+  about:
+    title: "About"
+    url:   "/about"
   projects:
     title: "Projects"
     url:   "/projects"
@@ -10,11 +10,11 @@ en:
     url:   "/en/archive"
   contact:
     title: "Contact"
-    url:   "/en/#contact"
+    url:   "/about#contact"
 fr:
-  home:
-    title: "<span class='mega-octicon octicon-home'></span>"
-    url:   "/"
+  about:
+    title: "À Propos"
+    url:   "/a-propos"
   projects:
     title: "Projets"
     url:   "/projets"
@@ -23,4 +23,4 @@ fr:
     url:   "/archive"
   contact:
     title: "Contact"
-    url:   "/#contact"
+    url:   "/a-propos#contact"

@@ -10,7 +10,7 @@ bodyclass: home
         {% if post.permalink == "/about/" %}
             <h1>{{ post.title }}</h1>
             <hr class="double small">
-            <div>{{ post.content }}</div>
+            <div>{{ post.content | split:"<!--more-->" | first | markdownify }}</div>
             <ul class="index">
                 <li>
                     <a href="{{ post.url }}">
@@ -26,7 +26,7 @@ bodyclass: home
         {% if post.permalink == "/a-propos/" %}
             <h1>{{ post.title }}</h1>
             <hr class="double small">
-            <div>{{ post.content }}</div>
+            <div>{{ post.content | split:"<!--more-->" | first | markdownify }}</div>
             <ul class="index">
                 <li>
                     <a href="{{ post.url }}">

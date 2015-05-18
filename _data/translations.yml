@@ -8,6 +8,7 @@ en:
   lights: "Switch the lights ON/OFF"
   moreposts: "All posts"
   nextpost: "Next post"
+  onthispage: "On this page"
   previouspost: "Previous post"
   whatido: "What I do"
 fr:
@@ -20,5 +21,6 @@ fr:
   lights: "Allumer/Éteindre la lumière"
   moreposts: "Tous les articles"
   nextpost: "Article suivant"
+  onthispage: "Sur cette page"
   previouspost: "Article précédent"
   whatido: "Ce que je fais"

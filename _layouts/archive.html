@@ -4,9 +4,6 @@ bodyclass: archive
 ---
 <section id="allposts">
     <div>
-        <h1>{{ site.data.translations[page.lang].allposts }}</h1>
-        <hr class="double small">
-
         <ul class="index">
             {% assign posts=site.posts | where:"lang", page.lang | where:"type", posts %}
             {% for post in posts %}
@@ -24,16 +21,11 @@ bodyclass: archive
 
 
 <section id="categories">
-    <div>
-        <h1>{{ site.data.translations[page.lang].categories }}</h1>
-        <hr class="double small">
-    </div>
-
    {% assign sortedcats = site.categories | sort %}
    {% for category in sortedcats %}
         <div class="catbloc" id="{{ category | first | remove:' ' }}">
-            <h2 style="text-align:center">{{ category | first }}</h2>
-            <hr class="double small">
+            <hr class="large title">
+            <h1>{{ category | first }}</h1>
 
             <ul class="index">
               {% for posts in category %}

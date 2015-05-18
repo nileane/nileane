@@ -1,0 +1,8 @@
+
+{% assign sortedcats = site.categories | sort %}
+<select class="custom light" name="Catégories" onchange="location = this.options[this.selectedIndex].value;">
+    <option value="#" selected="selected">{{ site.data.translations[page.lang].categories }}</option>
+    {% for category in sortedcats %}
+        <option value="#{{ category | first | remove:' ' }}">{{ category | first | capitalize }}</option>
+    {% endfor %}
+</select>

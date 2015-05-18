@@ -112,6 +112,10 @@ hr.title {
     padding: 3em 0px;
     border-top: 0;
 }
+hr.title:first-child {
+    padding-top: 0;
+    margin-top: 0;
+}
 
 
 
@@ -397,6 +401,24 @@ body > aside .book-title small {
 #prevnext a:active {
     outline: 0;
 }
+#prevnext .prev {
+    text-align: left;
+}
+#prevnext .next {
+    text-align: right;
+}
+#prevnext .thispage {
+    position: absolute;
+    line-height: 30px;
+    top: -30px;
+    left: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.2em;
+    font-size: 80%;
+    -webkit-animation: fadin 2s 1;
+            animation: fadin 2s 1;
+}
 
 
 
@@ -521,7 +543,7 @@ ul.index {
 }
 .index h2 {
     margin: 0;
-    color: #a5a5a5;
+    color: rgba(0, 0, 0, 0.7);
     font-weight: normal;
     -webkit-transition: all .5s;
             transition: all .5s;
@@ -556,8 +578,71 @@ ul.index {
 .catbloc:last-of-type {
     padding-bottom: 6em;
 }
-
-
+.selcatbloc {
+    padding: 6em 11.14% 1em;
+    text-align: center;
+}
+select.custom {
+    margin: 0;
+    padding: .5em 2.9em .5em .9em;
+         -moz-appearance: none;
+      -webkit-appearance: none;
+          -ms-appearance: none;
+              appearance: none;
+    font-size: 70%;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: "Voltaire","Roboto Condensed","Fira Sans","Cantarell",sans-serif;
+    letter-spacing: 1px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: #333;
+    border-radius: 3px;
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    cursor: pointer;
+    position: relative;
+}
+.right select.custom {
+    float: left;
+    top: .9em;
+}
+@media screen and (max-width:1000px) {
+    .right select.custom {
+        display: none;
+    }
+}
+.dark select.custom {
+    background-color: #111;
+    border-color: #333;
+    color: #aaa;
+}
+select.custom > option {
+    background-color: #fafafa;
+    color: rgba(0, 0, 0, .8);
+    border: 0;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: normal;
+}
+select.custom:hover {
+    border-color: #888;
+}
+.dark select.custom:hover {
+    border-color: #aaa;
+    color: #fff;
+}
+select.custom:active {
+    background-color: #fff;
+}
+.dark select.custom:active {
+    background-color: #111;
+}
+select.custom > option:first-child {
+    display: none;
+}
 
 /*
  * 9. Post Content

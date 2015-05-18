@@ -11,15 +11,14 @@ bodyclass: post
 
         <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
         {{ content }}
-    </div>
 
-    {% if page.categories %}
-    {% for category in page.categories %}
-    {% if forloop.first %}
-    <footer>
-        <span class="oi" data-glyph="tags"></span>{% endif %}
-        <a href="/{% if page.lang == "en" %}en/{% endif %}archive#{{ category | remove:' ' }}">{{ category | capitalize }}</a>{% unless forloop.last %}, {% else %}
-    </footer>{% endunless %}
-    {% endfor %}
-    {% endif %}
+        <p style="text-align:right;">
+        {% if page.categories %}
+        {% for category in page.categories %}
+            {% if forloop.first %}<span style="float:right; margin-left:.25em;" class="mega-octicon octicon-tag"></span>{% endif %}
+            <a href="/{% if page.lang == "en" %}en/{% endif %}archive#{{ category | remove:' ' }}">{{ category | capitalize }}</a>{% unless forloop.last %}, {% else %}.{% endunless %}
+        {% endfor %}
+        {% endif %}
+        </p>
+    </div>
 </section>
