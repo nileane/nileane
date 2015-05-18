@@ -814,10 +814,15 @@ blockquote {
             transform: translateY(50%);
     -webkit-transition: all .3s;
             transition: all .3s;
+}
+.thumbnail p small {
     opacity: 0;
 }
 .thumbnail:hover p {
     bottom: 50%;
+    opacity: 1;
+}
+.thumbnail:hover p small {
     opacity: 1;
 }
 .thumbnail strong {
