@@ -814,9 +814,11 @@ blockquote {
             transform: translateY(50%);
     -webkit-transition: all .3s;
             transition: all .3s;
+    opacity: 0;
 }
 .thumbnail:hover p {
     bottom: 50%;
+    opacity: 1;
 }
 .thumbnail strong {
     display: block;
