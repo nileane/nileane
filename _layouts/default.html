@@ -66,10 +66,12 @@
 
         <nav id="prevnext">
            {% unless page.bodyclass == "post" %}
+              {% if page.navigation %}
                <span class="thispage">{{ site.data.translations[page.lang].onthispage }}</span>
                 {% for link in page.navigation %}
                     <a data-scroll href="{{ link.url }}">{{ link.title }}</a>
                 {% endfor %}
+              {% endif %}
            {% else %}
                 {% if page.previous %}
                     <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
