@@ -57,7 +57,7 @@ body:before {
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../images/layout/photos/Foxyplusch-cropped.jpg) center center / cover #222;
+    background: url(../images/layout/photos/Foxyplusch-cropped.jpg) left center / cover #222;
     z-index: -1;
     opacity: .8;
 }
