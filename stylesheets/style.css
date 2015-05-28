@@ -57,7 +57,7 @@ body:before {
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../images/layout/photos/Foxyplusch.jpg) center center / cover #222;
+    background: url(../images/layout/photos/Foxyplusch-cropped.jpg) center center / cover #222;
     z-index: -1;
     opacity: .8;
 }
@@ -221,8 +221,8 @@ body > header .right { /* right section */
     text-align: right;
     max-width: 750px;
     background-color: rgba(245, 245, 245, 0.9);
-    -webkit-transition: all .3s;
-            transition: all .3s;
+    -webkit-transition: color .3s;
+            transition: color .3s;
 }
 body > header a {
     display: inline-block;
