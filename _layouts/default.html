@@ -75,13 +75,13 @@
            {% else %}
                 {% if page.previous %}
                     <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
-                        <span class="mega-octicon octicon-chevron-left"></span>
+                        {{ site.data.translations[page.lang].previouspost }}
                     </a>
                 {% endif %}
 
                 {% if page.next %}
                     <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
-                        <span class="mega-octicon octicon-chevron-right"></span>
+                        {{ site.data.translations[page.lang].nextpost }}
                     </a>
                 {% endif %}
            {% endunless %}

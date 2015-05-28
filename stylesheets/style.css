@@ -405,12 +405,6 @@ body > aside .book-title small {
 #prevnext a:active {
     outline: 0;
 }
-#prevnext .prev {
-    text-align: left;
-}
-#prevnext .next {
-    text-align: right;
-}
 #prevnext .thispage {
     position: absolute;
     line-height: 30px;
