@@ -57,7 +57,7 @@ body:before {
     top: 0; left: 0;
     width: 100vw;
     height: 100vh;
-    background: url(../images/layout/photos/apollo15earth.jpg) center center / cover #222;
+    background: url(../images/layout/photos/Foxyplusch.jpg) center center / cover #222;
     z-index: -1;
     opacity: .8;
 }
@@ -74,7 +74,7 @@ ul {
     list-style: outside square;
 }
 a {
-    color: #9094E9;
+    color: #FF8D70;
     text-decoration: none;
     -webkit-transition: all .3s;
             transition: all .3s;
