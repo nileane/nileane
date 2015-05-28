@@ -374,7 +374,6 @@ body > aside .book-title small {
     position: absolute;
     bottom: 0;
     width: 100%;
-    max-width: 900px;
     height: 62px;
     margin: 0 auto;
     left: 0;
@@ -388,6 +387,11 @@ body > aside .book-title small {
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
             animation: slidin-top 2s 1;
+}
+@media screen and (max-width:1000px) {
+    #prevnext {
+        max-width: 900px;
+    }
 }
 #prevnext a {
     padding: 0;
