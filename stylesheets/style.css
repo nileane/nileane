@@ -545,15 +545,6 @@ body > section > * {
         opacity: 0.5;
     }
 }
-@media screen and (min-width:1001px) {
-    body > section:not(:target) {
-        -webkit-animation: slidin-left 1s 1;
-                animation: slidin-left 1s 1;
-    }
-    .scroll-down {
-        display: none;
-    }
-}
 
 
 
