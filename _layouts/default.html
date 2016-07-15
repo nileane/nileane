@@ -38,16 +38,9 @@
   
     <header>
         <div class="left">
-            <a onclick="document.querySelector('body > aside').classList.toggle('nav-shown'); document.querySelector('.menu').classList.toggle('shown');" class="menu"><span class="mega-octicon octicon-three-bars"></span></a>
-            {% unless page.bodyclass == "home" %}
             <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">Schoewilliam</a>
-            {% else %}
-                <a href="http://twitter.com/Schoewilliam" class="social twitter" title="Twitter Profile"></a>
-                <a href="http://github.com/Schoewilliam" class="social github"><span class="mega-octicon octicon-mark-github" title="Github Profile"></span></a>
-            {% endunless %}
         </div>
         <div class="right">
-            {% if page.bodyclass == "archive" %}{% include cat-selector.html %}{% endif %}
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
                 <a {% if page.lang == post.lang %}class="active"{% endif %} href="{{ post.url }}">{{ post.lang }}</a>
@@ -66,17 +59,8 @@
             {% endif %}
         </div>
 
-        {% include nav.html %}
-
+        {% if page.layout == "post" %}
         <nav id="prevnext">
-           {% unless page.bodyclass == "post" %}
-              {% if page.navigation %}
-               <span class="thispage">{{ site.data.translations[page.lang].onthispage }}</span>
-                {% for link in page.navigation %}
-                    <a data-scroll href="{{ link.url }}">{{ link.title }}</a>
-                {% endfor %}
-              {% endif %}
-           {% else %}
                 {% if page.previous %}
                     <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">
                         {{ site.data.translations[page.lang].previouspost }}
@@ -88,8 +72,8 @@
                         {{ site.data.translations[page.lang].nextpost }}
                     </a>
                 {% endif %}
-           {% endunless %}
         </nav>
+        {% endif %}
     </aside>
 
 

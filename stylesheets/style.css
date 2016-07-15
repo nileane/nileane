@@ -54,14 +54,15 @@ body {
 body:before {
     content: " ";
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background: url(../images/layout/photos/apollo15earth.jpg) left center / cover #222;
     z-index: -1;
     opacity: .8;
 }
-@media screen and (max-width:800px) {
+@media screen and (max-width:500px) {
     body {
         font-size: 11pt;
     }
@@ -190,19 +191,20 @@ hr.title + h1 {
 
 body > header {
     font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
+    max-width: 800px;
     height: 62px;
     line-height: 62px;
+    padding: 0 10px;
+    margin: 0 auto;
     z-index: 2;
     -webkit-animation: slidin-bottom 2s 1;
-            animation: slidin-bottom 2s 1;
+    animation: slidin-bottom 2s 1;
     text-transform: uppercase;
     font-size: 120%;
+    box-sizing: border-box;
 }
 body > header > div { /* inner container */
-    padding: 0 5.5%;
+    padding: 0;
     box-sizing: border-box;
     display: inline-block;
     width: 50%;
@@ -212,7 +214,6 @@ body > header > div { /* inner container */
 }
 body > header .left { /* left section */
     color: #fff;
-    background-color: rgba(0, 0, 0, .2);
 }
 body > header .right { /* right section */
     color: #aaa;
@@ -220,7 +221,6 @@ body > header .right { /* right section */
     font-size: 1em;
     text-align: right;
     max-width: 750px;
-    background-color: rgba(245, 245, 245, 0.9);
     -webkit-transition: color .3s;
             transition: color .3s;
 }
@@ -234,20 +234,29 @@ body > header .right a {
 }
 body > header .right a:hover,
 body > header a.active {
-    color: #333;
-}
-body > header .left  a,
-body > header .left  a:hover,
-body.dark > header .right a:hover,
-body.dark > header a.active {
     color: #fff;
+}
+body > header .left a,
+body > header .left a:hover {
+    color: #fff;
+}
+body > header .right .lights {
+    color: rgba(255, 255, 255, .8);
+    text-shadow: 0 0 30px rgba(255, 255, 255, .9);
+}
+body.dark > header .right .lights {
+    -webkit-transform: scale(.7);
+    -ms-transform: scale(.7);
+    transform: scale(.7);
+    color: #000;
+    text-shadow: 0 0 3px rgba(255, 255, 255, .9),
+                 0 0 25px rgba(255, 255, 255, .5);
 }
 body > header .small-site-title {
     font-weight: 700;
 }
 body > header .menu {
     color: #fff;
-    float: right;
 }
 body > header .menu.shown {
     -webkit-transform: scale(.75);
@@ -258,9 +267,6 @@ body > header .menu.shown {
 @media screen and (max-width:1000px) {
     body > header {
         text-align: left;
-        padding: 0 11.14%;
-        box-sizing: border-box;
-        position: absolute;
     }
     body > header > div {
         background: none !important;
@@ -270,9 +276,6 @@ body > header .menu.shown {
     body > header .right {
         float: right;
         margin-top: -2px;
-    }
-    body > header .menu {
-        float: none;
     }
     .home > header .menu {
         margin-right: 12px;
@@ -289,11 +292,6 @@ body > header .menu.shown {
         margin-top: -2px;
     }
 }
-@media screen and (min-width:1001px) {
-    body.dark > header .right {
-        background-color: rgba(15, 15, 15, 0.9);
-    }
-}
 
 
 
@@ -306,20 +304,14 @@ body > aside {
     font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     color: #fff;
     text-transform: uppercase;
-    height: 100vh;
-    width: 50%;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 5rem 0 6rem;
     text-align: center;
-    position: fixed;
-    top: 0; left: 0;
+    position: relative;
     -webkit-transition: all .3s;
-            transition: all .3s;
-}
-@media screen and (max-width:1000px) {
-    body > aside {
-        width: 100%;
-        height: 95vh;
-        position: relative;
-    }
+    transition: all .3s;
 }
 body > aside h1 {
     color: #fff;
@@ -333,22 +325,17 @@ body.home > aside h1 {
 }
 body > aside .book-title {
     padding: .5em 11.14%;
-    position: absolute;
-    top: 50%; left: 0; right: 0;
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
     -webkit-animation: fadin 1s 1;
-            animation: fadin 1s 1;
+    animation: fadin 1s 1;
     -webkit-transition: all .3s;
-            transition: all .3s;
+    transition: all .3s;
 }
 .nav-shown .book-title {
     opacity: 0;
     pointer-events: none;
-    -webkit-transform: translate(0, -50%) scale(0.7);
-        -ms-transform: translate(0, -50%) scale(0.7);
-            transform: translate(0, -50%) scale(0.7);
+    -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
 }
 body > aside .book-title small {
     font-size: 1.1em;
@@ -392,43 +379,27 @@ body > aside .book-title small {
     font-size: 26px;
 }
 #prevnext {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 62px;
+    height: 32px;
     margin: 0 auto;
     left: 0;
     right: 0;
-    line-height: 62px;
-    padding: 0 11%;
+    line-height: 32px;
+    padding: 0;
+    border-radius: 4px 4px 0 0;
     box-sizing: border-box;
     display:  -webkit-box;
     display: -webkit-flex;
     display:  -ms-flexbox;
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
-            animation: slidin-top 2s 1;
-}
-@media screen and (max-width:500px) {
-    .social {
-        display: none;
-    }
-}
-@media screen and (max-width:1000px) {
-    .social {
-        line-height: 58px;
-        height: 58px;
-        -webkit-transform: scale(.8);
-            -ms-transform: scale(.8);
-                transform: scale(.8);
-    }
-    #prevnext {
-        max-width: 900px;
-    }
+    animation: slidin-top 2s 1;
 }
 #prevnext a {
-    padding: 0;
+    padding: 0 2rem;
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 100px;
         -ms-flex: 1 1 100px;
@@ -443,58 +414,24 @@ body > aside .book-title small {
 #prevnext a:active {
     outline: 0;
 }
-#prevnext .thispage {
-    position: absolute;
-    line-height: 30px;
-    top: -30px;
-    left: 0;
-    right: 0;
-    color: rgba(255, 255, 255, 0.3);
-    letter-spacing: 0.2em;
-    font-size: 80%;
-    -webkit-animation: fadin 2s 1;
-            animation: fadin 2s 1;
+#prevnext a.prev {
+    text-align: left;
 }
-
+#prevnext a.prev:before {
+    content: "<"
+}
+#prevnext a.next {
+    text-align: right;
+}
+#prevnext a.next:after {
+    content: ">"
+}
 
 
 /*
  * 6. Main Navigation: #nav
  * ------------------------
  */
-
-.nav-shown {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-#nav {
-    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
-    pointer-events: none;
-    opacity: 0;
-    position: absolute;
-    top: 50%; left: 50%;
-    -webkit-transform: translate(-50%, -50%) scale(1.7);
-        -ms-transform: translate(-50%, -50%) scale(1.7);
-            transform: translate(-50%, -50%) scale(1.7);
-    -webkit-transition: all .3s;
-            transition: all .3s;
-}
-.nav-shown #nav {
-    pointer-events: all;
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%) scale(1);
-        -ms-transform: translate(-50%, -50%) scale(1);
-            transform: translate(-50%, -50%) scale(1);
-}
-#nav a {
-    font-size: 1.6em;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 800;
-    display: block;
-}
-#nav a:hover {
-    color: rgba(255, 255, 255, .5);
-}
 
 
 
@@ -505,10 +442,10 @@ body > aside .book-title small {
 
 body > section {
     background: url(/images/layout/noise.png) repeat #fff;
-    width: 50%;
-    max-width: 750px;
-    min-height: 100vh;
-    margin: 0 0 15px 50%;
+    width: 100%;
+    max-width: 800px;
+    border-radius: 4px;
+    margin: 0 auto 100px;
     font-size: 120%;
     overflow: hidden;
     position: relative;
@@ -517,33 +454,10 @@ body.dark > section {
     color: #888;
     background-color: #121212;
 }
-body > section:last-of-type {
-    margin-bottom: 0;
-}
 body > section > * {
     max-width: 1000px;
     margin: auto;
-    padding: 9em 11.14% 6em;
-}
-@media screen and (max-width: 1000px) {
-    body > section {
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto 50px;
-        min-height: auto;
-    }
-    body > section > * {
-        padding: 6em 11.14%;
-    }
-    .scroll-down  {
-        position: absolute;
-        bottom: 0.3em;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
-        opacity: 0.5;
-    }
+    padding: 5em 11.14% 3rem;
 }
 
 
@@ -595,80 +509,6 @@ ul.index {
 }
 .dark .index time {
     color: rgba(255, 255, 255, 0.2);
-}
-.catbloc {
-    padding: 1em 11.14%;
-}
-.catbloc:first-of-type {
-    padding-top: 6em;
-}
-.catbloc:last-of-type {
-    padding-bottom: 6em;
-}
-.selcatbloc {
-    padding: 6em 11.14% 1em;
-    text-align: center;
-}
-select.custom {
-    margin: 0;
-    padding: .5em 2.9em .5em .9em;
-         -moz-appearance: none;
-      -webkit-appearance: none;
-          -ms-appearance: none;
-              appearance: none;
-    font-size: 70%;
-    text-transform: uppercase;
-    font-weight: 800;
-    font-family: "Voltaire","Roboto Condensed","Fira Sans","Cantarell",sans-serif;
-    letter-spacing: 1px;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, .1);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    color: #333;
-    border-radius: 3px;
-    -webkit-transition: all .2s;
-            transition: all .2s;
-    cursor: pointer;
-    position: relative;
-}
-.right select.custom {
-    float: left;
-    top: .9em;
-}
-@media screen and (max-width:1000px) {
-    .right select.custom {
-        display: none;
-    }
-}
-.dark select.custom {
-    background-color: #111;
-    border-color: #333;
-    color: #aaa;
-}
-select.custom > option {
-    background-color: #fafafa;
-    color: rgba(0, 0, 0, .8);
-    border: 0;
-    text-transform: capitalize;
-    font-size: 14px;
-    font-weight: normal;
-    letter-spacing: normal;
-}
-select.custom:hover {
-    border-color: #888;
-}
-.dark select.custom:hover {
-    border-color: #aaa;
-    color: #fff;
-}
-select.custom:active {
-    background-color: #fff;
-}
-.dark select.custom:active {
-    background-color: #111;
-}
-select.custom > option:first-child {
-    display: none;
 }
 
 /*

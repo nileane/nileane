@@ -1,26 +1,20 @@
 en:
-  about:
-    title: "About"
-    url:   "/about"
+  home:
+    title: "Home"
+    url:   "/en"
   projects:
     title: "Projects"
     url:   "/projects"
-  weblog:
-    title: "Blog"
-    url:   "/en/archive"
   contact:
     title: "Contact"
     url:   "/about#contact"
 fr:
-  about:
-    title: "À Propos"
-    url:   "/a-propos"
+  home:
+    title: "Accueil"
+    url:   "/"
   projects:
     title: "Projets"
     url:   "/projets"
-  weblog:
-    title: "Blog"
-    url:   "/archive"
   contact:
     title: "Contact"
     url:   "/a-propos#contact"

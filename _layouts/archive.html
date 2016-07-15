@@ -18,29 +18,3 @@ bodyclass: archive
         </ul>
     </div>
 </section>
-
-
-<section id="categories">
-   {% assign sortedcats = site.categories | sort %}
-   {% for category in sortedcats %}
-        <div class="catbloc" id="{{ category | first | remove:' ' }}">
-            <hr class="large title">
-            <h1>{{ category | first }}</h1>
-
-            <ul class="index">
-              {% for posts in category %}
-                {% for post in posts %}
-                {% if post.url %}
-                <li>
-                    <a href="{{ post.url }}">
-                    <h2>{{ post.title | replace: '<br>', '' }} {% if post.link %}<span class="oi" data-glyph="external-link" style="color:#888; font-size:50%;"></span>{% endif %}</h2>
-                    <time class="top" datetime='{{ post.date | date: "%Y-%m-%d" }}'>{{ post.date | date: "%-d %B %Y" }}</time>
-                    </a>
-                </li>
-                {% endif %}
-                {% endfor %}
-              {% endfor %}
-            </ul>
-        </div>
-   {% endfor %}
-</section>
