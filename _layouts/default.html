@@ -51,7 +51,7 @@
 
     <aside>
         <div class="book-title">
-            {% if page.bodyclass == "home" %}
+            {% if page.bodyclass %}
                 <h1>Schoewilliam</h1>
                 <small>Open·Web Designer</small>
             {% else %}
@@ -81,7 +81,6 @@
     {{ content }}
 
     <script src="/js/nightmode.js" type="text/javascript"></script>
-    <script src="/js/smooth-scroll.js" type="text/javascript"></script>
 
     {% include piwik.html %}
   </body>
