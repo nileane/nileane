@@ -1,0 +1,73 @@
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-Thin.woff') format('woff'),
+         url('MontserratAlternates-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-UltraLight.woff') format('woff'),
+         url('MontserratAlternates-UltraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-Light.woff') format('woff'),
+         url('MontserratAlternates-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-Regular.woff') format('woff'),
+         url('MontserratAlternates-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-Medium.woff') format('woff'),
+         url('MontserratAlternates-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-SemiBold.woff') format('woff'),
+         url('MontserratAlternates-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-Bold.woff') format('woff'),
+         url('MontserratAlternates-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-ExtraBold.woff') format('woff'),
+         url('MontserratAlternates-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Montserrat Alternates';
+    src: url('MontserratAlternates-ExtraBold.woff') format('woff'),
+         url('MontserratAlternates-ExtraBold.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+

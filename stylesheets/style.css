@@ -28,20 +28,17 @@
  * ----------
  */
 
-@import url(fonts/Fira/fira.css);
 @import url(fonts/octicons/octicons.css);
-@import url(fonts/voltaire/voltaire.css);
+@import url(fonts/Montserrat/Montserrat.css);
+@import url(fonts/Montserrat/MontserratAlternates.css);
 @import url(syntax.css);
-
-
-
 /*
  * 1. Body and General declarations
  * --------------------------------
  */
 
 body {
-    font: 13pt "Voltaire", "PT Serif", sans-serif;
+    font: 10pt "Montserrat Alternates", "Montserrat", sans-serif;
     background: #111;
     padding: 0;
     margin: 0;
@@ -60,11 +57,6 @@ body:before {
     z-index: -1;
     opacity: .3;
     /* transform: rotate(90deg) scale(3); */
-}
-@media screen and (max-width:500px) {
-    body {
-        font-size: 11pt;
-    }
 }
 p,
 .post {
@@ -125,10 +117,10 @@ hr.title:first-child {
  */
 
 h1, h2, h3, h4 {
-    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", "Cantarell", sans-serif;
+    /* font-family: "Voltaire", "Roboto Condensed", "Fira Sans", "Cantarell", sans-serif; */
 }
 h1, h2, h3 {
-    font-weight: 200;
+    font-weight: 400;
     line-height: 1;
     color: rgba(0, 0, 0, .7);
 }
@@ -188,7 +180,7 @@ hr.title + h1 {
  */
 
 body > nav {
-    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
+    /* font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif; */
     max-width: 800px;
     height: 62px;
     line-height: 62px;
@@ -255,7 +247,6 @@ body.dark > nav .lights {
  */
 
 body > header {
-    font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     color: #fff;
     max-width: 800px;
     box-sizing: border-box;
@@ -269,7 +260,7 @@ body > header {
 body > header h1 {
     color: #fff;
     margin: 0;
-    font-size: 2em;
+    font-size: 2.3em;
     vertical-align: middle;
 }
 body.home > aside h1 {
@@ -392,7 +383,6 @@ ul.index {
 }
 .index li {
     padding: 20px 0;
-    text-align: center;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .dark .index li {
@@ -404,9 +394,9 @@ ul.index {
 .index h2 {
     margin: 0;
     color: rgba(0, 0, 0, 0.7);
-    font-weight: normal;
+    /* font-weight: normal; */
     -webkit-transition: all .5s;
-            transition: all .5s;
+    transition: all .5s;
 }
 .dark .index h2 {
     color: rgba(197, 197, 197, 0.6);
@@ -423,7 +413,6 @@ ul.index {
             transform: scale(1.5);
 }
 .index time {
-    font-size: 1.3rem;
     color: #d4d4d4;
 }
 .dark .index time {
@@ -440,6 +429,11 @@ body.dark .post {
 }
 .post {
     color: #4D4D4D;
+    font-family: "Montserrat";
+}
+.highlight {
+    margin: 0;
+    padding: 0;
 }
 img,
 iframe {
@@ -521,8 +515,7 @@ pre {
     background-color: #242424;
     color: #FFF;
     border-radius: 3px;
-    font-size: 80%;
-    padding: 1em;
+    padding: 0 1em;
 }
 code {
     padding: 0 .7em;
