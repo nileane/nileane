@@ -38,7 +38,7 @@
  */
 
 body {
-    font: 10pt "Montserrat Alternates", "Montserrat", sans-serif;
+    font: 10pt "Montserrat Alternates", "Montserrat", Cantarell, Roboto, sans-serif;
     background: #111;
     padding: 0;
     margin: 0;
@@ -188,7 +188,7 @@ body > nav {
     margin: 0 auto;
     z-index: 2;
     -webkit-animation: slidin-bottom 2s 1;
-    animation: slidin-bottom 2s 1;
+            animation: slidin-bottom 2s 1;
     text-transform: uppercase;
     font-size: 120%;
     box-sizing: border-box;
@@ -224,10 +224,13 @@ body > nav a:hover,
 body > nav a.active {
     color: #fff;
 }
+body > nav a.active {
+    pointer-events: none;
+}
 body > nav .lights {
     -webkit-transform: scale(.8);
-    -ms-transform: scale(.8);
-    transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
     color: rgba(255, 255, 255, .8);
 }
 body.dark > nav .lights {
@@ -235,6 +238,16 @@ body.dark > nav .lights {
     text-shadow: 0 0 2px #fff,
        0 0 8px #fff,
        0 0 50px rgba(255, 255, 255, .9);
+}
+body > nav #logo {
+    height: 40px;
+    top: 0;
+    position: absolute;
+    padding: 10px 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
 }
 
 
@@ -253,7 +266,7 @@ body > header {
     text-align: center;
     position: relative;
     -webkit-transition: all .3s;
-    transition: all .3s;
+            transition: all .3s;
 }
 body > header h1 {
     color: #fff;
@@ -267,9 +280,9 @@ body.home > aside h1 {
 body > header .book-title {
     padding: .5em 11.14%;
     -webkit-animation: fadin 1s 1;
-    animation: fadin 1s 1;
+            animation: fadin 1s 1;
     -webkit-transition: all .3s;
-    transition: all .3s;
+            transition: all .3s;
 }
 body > header .book-title small {
     font-size: 1.1em;
@@ -306,18 +319,16 @@ body > header .book-title small {
     border-radius: 4px 4px 0 0;
     box-sizing: border-box;
     box-shadow: 0 3px rgba(0, 0, 0, 0.5);
-    display:  -webkit-box;
-    display: -webkit-flex;
     display:  -ms-flexbox;
+    display: -webkit-flex;
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
     animation: slidin-top 2s 1;
 }
 #prevnext a {
     padding: 0 2rem;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 100px;
         -ms-flex: 1 1 100px;
+    -webkit-flex: 1 1 100px;
             flex: 1 1 100px;
     display: inline-block;
     color: rgba(255, 255, 255, 0.6);
@@ -352,7 +363,8 @@ body > section {
     font-size: 120%;
     overflow: hidden;
     position: relative;
-    transition: all .2s;
+    -webkit-transition: all .2s;
+            transition: all .2s;
 }
 body.dark > section {
     color: #888;
@@ -419,7 +431,7 @@ body.dark .post {
 }
 .post {
     color: #4D4D4D;
-    font-family: "Montserrat";
+    font-family: "Montserrat Alternates", "Montserrat", Cantarell, Roboto, sans-serif;
 }
 .highlight {
     margin: 0;
@@ -532,20 +544,18 @@ blockquote {
     font-size: 130%;
 }
 .thumbnail-ct {
-    display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
             flex-flow: row wrap;
 }
 .thumbnail {
     display: inline-block;
     width: 48%;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 1 48%;
         -ms-flex: 1 1 48%;
+    -webkit-flex: 1 1 48%;
             flex: 1 1 48%;
     height: 145px;
     background-color: #444;
@@ -579,7 +589,7 @@ blockquote {
     margin: 0;
     padding: .5em;
     -webkit-transform: translateY(50%);
-        -ms-transform: translateY(50%);
+            -ms-transform: translateY(50%);
             transform: translateY(50%);
     -webkit-transition: all .3s;
             transition: all .3s;
@@ -617,99 +627,43 @@ blockquote {
 
 @keyframes slidin-left {
     from {
-        -webkit-transform: translate(50%, 0);
-                transform: translate(50%, 0);
+        transform: translate(50%, 0);
     }
     to {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
-}
-@-webkit-keyframes slidin-left {
-    from {
-        -webkit-transform: translate(50%, 0);
-    }
-    to {
-        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 @keyframes slidin-right {
     from {
-        -webkit-transform: translate(-50%, 0);
-                transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
     }
     to {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
-}
-@-webkit-keyframes slidin-right {
-    from {
-        -webkit-transform: translate(-50%, 0);
-    }
-    to {
-        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 @keyframes slidin-top {
     0% {
-        -webkit-transform: translate(0, 100%);
-                transform: translate(0, 100%);
+        transform: translate(0, 100%);
     }
     50% {
-        -webkit-transform: translate(0, 100%);
-                transform: translate(0, 100%);
+        transform: translate(0, 100%);
     }
     100% {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
-}
-@-webkit-keyframes slidin-top {
-    0% {
-        -webkit-transform: translate(0, 100%);
-    }
-    50% {
-        -webkit-transform: translate(0, 100%);
-    }
-    100% {
-        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 @keyframes slidin-bottom {
     0% {
-        -webkit-transform: translate(0, -100%);
-                transform: translate(0, -100%);
+        transform: translate(0, -100%);
     }
     50% {
-        -webkit-transform: translate(0, -100%);
-                transform: translate(0, -100%);
+        transform: translate(0, -100%);
     }
     100% {
-        -webkit-transform: translate(0, 0);
-                transform: translate(0, 0);
-    }
-}
-@-webkit-keyframes slidin-bottom {
-    0% {
-        -webkit-transform: translate(0, -100%);
-    }
-    50% {
-        -webkit-transform: translate(0, -100%);
-    }
-    100% {
-        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
     }
 }
 @keyframes fadin {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-@-webkit-keyframes fadin {
     from {
         opacity: 0;
     }
