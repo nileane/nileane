@@ -38,25 +38,29 @@
   
     <header>
         <div class="left">
-            <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">Schoewilliam</a>
-        </div>
-        <div class="right">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
                 <a {% if page.lang == post.lang %}class="active"{% endif %} href="{{ post.url }}">{{ post.lang }}</a>
             {% endfor %}
+            <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">
+                <img src="/images/layout/logos/nildeala-logo-white.svg" id="logoheader" style="
+                    height: 40px;
+                    top: 0;
+                    position: absolute;
+                    padding: 10px 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);" alt="Nildëala">
+           </a>
+        </div>
+        <div class="right">
             <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
         </div>
     </header>
 
     <aside>
         <div class="book-title">
-            {% if page.bodyclass %}
-                <h1>Schoewilliam</h1>
-                <small>Open·Web Designer</small>
-            {% else %}
-                <h1>{{ page.title }}</h1>
-            {% endif %}
+            <h1>{{ page.title }}</h1>
+            <small>{{ page.desc }}</small>
         </div>
 
         {% if page.layout == "post" %}
