@@ -5,7 +5,7 @@
     <title>
     {% if page.title %}
 	       {{ page.title | replace:'&nbsp;',' ' | strip_html | escape }}
-           {% unless page.bodyclass == "home" %}- {{ site.title }} {% endunless %}
+           {% unless page.layout == "home" %}- {{ site.title }} {% endunless %}
     {% else %}
 	       {{ site.title }}
     {% endif %}
@@ -34,9 +34,9 @@
     {% endif %}
   </head>
   
-  <body {% if page.bodyclass %}class="{{ page.bodyclass }}"{% endif %}>
+  <body>
   
-    <header>
+    <nav>
         <div class="left">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
@@ -55,9 +55,9 @@
         <div class="right">
             <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
         </div>
-    </header>
+    </nav>
 
-    <aside>
+    <header>
         <div class="book-title">
             <h1>{{ page.title }}</h1>
             <small>{{ page.desc }}</small>
@@ -77,8 +77,12 @@
                     </a>
                 {% endif %}
         </nav>
+        {% elsif page.layout == "archive" %}
+        <nav id="prevnext">
+                <a href="/"><span class="octicon octicon-home"></span></a>
+        </nav>
         {% endif %}
-    </aside>
+    </header>
 
 
     <!-- Page content -->

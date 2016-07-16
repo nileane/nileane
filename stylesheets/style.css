@@ -13,8 +13,8 @@
  * 1. Body and General declarations
  * 2. Seperators: <hr>
  * 3. Headlines: <hn>
- * 4. Header: body > header
- * 5. Site Cover: body > aside
+ * 4. Header: body > nav
+ * 5. Site Cover: body > header
  * 7. Pages: body > section
  * 8. Index of posts
  * 9. Post Content
@@ -183,11 +183,11 @@ hr.title + h1 {
 }
 
 /*
- * 4. Header: body > header
+ * 4. Header: body > nav
  * ------------------------
  */
 
-body > header {
+body > nav {
     font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     max-width: 800px;
     height: 62px;
@@ -201,7 +201,7 @@ body > header {
     font-size: 120%;
     box-sizing: border-box;
 }
-body > header > div { /* inner container */
+body > nav > div { /* inner container */
     padding: 0;
     box-sizing: border-box;
     display: inline-block;
@@ -210,48 +210,51 @@ body > header > div { /* inner container */
     word-spacing: normal;
     vertical-align: top;
 }
-body > header .left { /* left section */
+body > nav .left { /* left section */
     color: #fff;
 }
-body > header .right { /* right section */
+body > nav .right { /* right section */
     color: #aaa;
     font-weight: 500;
     font-size: 1em;
     text-align: right;
     max-width: 750px;
 }
-body > header a {
+body > nav a {
     display: inline-block;
     padding: 0 .2em;
     cursor: pointer;
 }
-body > header a {
+body > nav a {
     color: rgba(255, 255, 255, .5);
 }
-body > header a:hover,
-body > header a.active {
+body > nav a:hover,
+body > nav a.active {
     color: #fff;
 }
-body > header .lights {
+body > nav .lights {
+    -webkit-transform: scale(.8);
+    -ms-transform: scale(.8);
+    transform: scale(.8);
     color: rgba(255, 255, 255, .8);
 }
-body.dark > header .lights {
+body.dark > nav .lights {
     -webkit-transform: scale(.7);
     -ms-transform: scale(.7);
     transform: scale(.7);
     color: #000;
-    text-shadow: 0 0 3px rgba(255, 255, 255, .9),
-                 0 0 25px rgba(255, 255, 255, .5);
+    text-shadow: 0 0 8px rgba(255, 255, 255, .9),
+       0 0 50px rgba(255, 255, 255, .9);
 }
 
 
 
 /*
- * 5. Site Cover: body > aside
+ * 5. Site Cover: body > header
  * ---------------------------
  */
 
-body > aside {
+body > header {
     font-family: "Voltaire", "Roboto Condensed", "Fira Sans", sans-serif;
     color: #fff;
     max-width: 800px;
@@ -263,7 +266,7 @@ body > aside {
     -webkit-transition: all .3s;
     transition: all .3s;
 }
-body > aside h1 {
+body > header h1 {
     color: #fff;
     margin: 0;
     font-size: 2em;
@@ -272,21 +275,14 @@ body > aside h1 {
 body.home > aside h1 {
     font-size: 2.7em;
 }
-body > aside .book-title {
+body > header .book-title {
     padding: .5em 11.14%;
     -webkit-animation: fadin 1s 1;
     animation: fadin 1s 1;
     -webkit-transition: all .3s;
     transition: all .3s;
 }
-.nav-shown .book-title {
-    opacity: 0;
-    pointer-events: none;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
-}
-body > aside .book-title small {
+body > header .book-title small {
     font-size: 1.1em;
     line-height: 1;
     display: block;
@@ -298,7 +294,7 @@ body > aside .book-title small {
     body.home > aside .book-title {
         padding: .5em;
     }
-    body > aside h1 {
+    body > header h1 {
         font-size: 2.6em;
     }
 }
