@@ -60,7 +60,11 @@
     <header>
         <div class="book-title">
             <h1>{{ page.title }}</h1>
-            <small>{{ page.desc }}</small>
+            {% if page.desc %}
+                <small>{{ page.desc }}</small>
+            {% elsif page.link %}
+                <small><a href="{{ page.link }}" target="_blank">{{ page.link }}</a> <span class="octicon octicon-link-external"></span></small>
+            {% endif %}
         </div>
 
         {% if page.layout == "post" %}

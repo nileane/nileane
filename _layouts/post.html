@@ -3,11 +3,6 @@ layout: default
 ---
 <section>
     <div class="post">
-        {% if page.link %}
-            <h1><a target=_blank href="{{ page.link | escape }}">{{ page.title }}</a>&nbsp;<span class="oi" data-glyph="external-link" style="font-size:50%;"></span></h1>
-            <hr class="double small">
-        {% endif %}
-
         <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
         {{ content }}
 

@@ -66,7 +66,7 @@ ul {
     list-style: outside square;
 }
 a {
-    color: #70A9FF;
+    color: #ff5252;
     text-decoration: none;
     -webkit-transition: all .3s;
             transition: all .3s;
@@ -231,11 +231,9 @@ body > nav .lights {
     color: rgba(255, 255, 255, .8);
 }
 body.dark > nav .lights {
-    -webkit-transform: scale(.7);
-    -ms-transform: scale(.7);
-    transform: scale(.7);
     color: #000;
-    text-shadow: 0 0 8px rgba(255, 255, 255, .9),
+    text-shadow: 0 0 2px #fff,
+       0 0 8px #fff,
        0 0 50px rgba(255, 255, 255, .9);
 }
 
@@ -307,12 +305,13 @@ body > header .book-title small {
     padding: 0;
     border-radius: 4px 4px 0 0;
     box-sizing: border-box;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.5);
     display:  -webkit-box;
     display: -webkit-flex;
     display:  -ms-flexbox;
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
-            animation: slidin-top 2s 1;
+    animation: slidin-top 2s 1;
 }
 #prevnext a {
     padding: 0 2rem;
@@ -333,14 +332,8 @@ body > header .book-title small {
 #prevnext a.prev {
     text-align: left;
 }
-#prevnext a.prev:before {
-    content: "<"
-}
 #prevnext a.next {
     text-align: right;
-}
-#prevnext a.next:after {
-    content: ">"
 }
 
 
@@ -359,6 +352,7 @@ body > section {
     font-size: 120%;
     overflow: hidden;
     position: relative;
+    transition: all .2s;
 }
 body.dark > section {
     color: #888;
@@ -394,7 +388,6 @@ ul.index {
 .index h2 {
     margin: 0;
     color: rgba(0, 0, 0, 0.7);
-    /* font-weight: normal; */
     -webkit-transition: all .5s;
     transition: all .5s;
 }
@@ -402,18 +395,15 @@ ul.index {
     color: rgba(197, 197, 197, 0.6);
 }
 .index a:hover h2 {
-    color: #333;
+    color: #000;
 }
 .dark .index a:hover h2 {
     color: #fff;
 }
-.index h2.more {
-    -webkit-transform: scale(1.5);
-        -ms-transform: scale(1.5);
-            transform: scale(1.5);
-}
 .index time {
     color: #d4d4d4;
+    -webkit-transition: all .5s;
+    transition: all .5s;
 }
 .dark .index time {
     color: rgba(255, 255, 255, 0.2);
