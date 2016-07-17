@@ -9,6 +9,7 @@ en:
   lights: "Switch the lights ON/OFF"
   nextpost: "Next"
   previouspost: "Previous"
+  previously: "Formerly"
 fr:
   about: "À Propos"
   allposts: "Tous les articles"
@@ -20,3 +21,4 @@ fr:
   lights: "Allumer/Éteindre la lumière"
   nextpost: "Suivant"
   previouspost: "Précédent"
+  previously: "Anciennement"

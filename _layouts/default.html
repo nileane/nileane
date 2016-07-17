@@ -39,7 +39,7 @@
         <div class="left">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
             {% for post in altlang %}
-                <a {% if page.lang == post.lang %}class="active"{% endif %} href="{{ post.url }}">{{ post.lang }}</a>
+                <a class="lang-swt {% if page.lang == post.lang %}active{% endif %}" href="{{ post.url }}">{{ post.lang }}</a>
             {% endfor %}
             {% unless page.layout == "home" %}
             <a href="/{% if page.lang == "en" %}en{% endif %}">
@@ -56,6 +56,7 @@
         <div class="book-title">
             {% if page.layout == "home" %}
                 <h1><img src="/images/layout/logos/nildeala-logo-white.svg" style="height:90px" alt="Nildëala"></h1>
+                <small>{{ site.data.translations[page.lang].previously }} <img src="/images/layout/logos/schoewilliam.png" style="height:16px; vertical-align:top; opacity:.5;"></small>
             {% else %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
@@ -86,7 +87,7 @@
         </nav>
         {% elsif page.layout == "home" %}
         <nav id="prevnext">
-                <a href="/">Lorem Ipsum</a>
+                {% for link in site.data.nav[page.lang] %}<a href="{{ link[1].url }}" title="{{ link[1].title }}">{{ link[1].title }}</a>{% endfor %}
         </nav>
         {% endif %}
     </header>

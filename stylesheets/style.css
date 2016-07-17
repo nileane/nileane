@@ -29,6 +29,7 @@
  */
 
 @import url(fonts/octicons/octicons.css);
+@import url(fonts/social/social.css);
 @import url(fonts/Montserrat/Montserrat.css);
 @import url(fonts/Montserrat/MontserratAlternates.css);
 @import url(syntax.css);
@@ -221,21 +222,36 @@ body > nav .right { /* right section */
 body > nav a {
     display: inline-block;
     padding: 0 .2em;
+    text-transform: lowercase;
     cursor: pointer;
-    color: #fff;
+    color: rgba(255, 255, 255, .6);
 }
 body > nav a:hover,
 body > nav a.active {
     color: #fff;
 }
-body > nav a.active {
-    pointer-events: none;
-    opacity: .5;
+body > nav a.lang-swt {
+    position: relative;
+}
+body > nav a.lang-swt.active:before {
+    content: " ";
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    transition: all .2s;
+    display: block;
+    border-radius: 50%;
+    background-color: #FF5255;
 }
 body > nav .lights {
     -webkit-transform: scale(.8);
-    -ms-transform: scale(.8);
-    transform: scale(.8);
+        -ms-transform: scale(.8);
+            transform: scale(.8);
     vertical-align: middle;
     line-height: .5;
     display: inline-block;
