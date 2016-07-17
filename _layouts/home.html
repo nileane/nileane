@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section>
+    <div class="post">
+        {{ content }}
+    </div>
+</section>
+<nav class="home-nav">
+    {% for link in site.data.nav[page.lang] %}<a href="{{ link[1].url }}" title="{{ link[1].title }}">{{ link[1].title }}</a>{% endfor %}
+</nav>

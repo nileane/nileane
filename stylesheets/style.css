@@ -39,24 +39,17 @@
 
 body {
     font: 10pt "Montserrat Alternates", "Montserrat", Cantarell, Roboto, sans-serif;
-    background: #111;
+    background: #f0f0f0;
     padding: 0;
     margin: 0;
     overflow-x: hidden;
     overflow-y: scroll;
     color: #515151;
+    -webkit-transition: background-color .2s;
+    transition: background-color .2s;
 }
-body:before {
-    content: " ";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: url(../images/layout/photos/wool.jpg) left center / cover #222;
-    z-index: -1;
-    opacity: .3;
-    /* transform: rotate(90deg) scale(3); */
+body.dark {
+    background-color: #111;
 }
 p,
 .post {
@@ -66,10 +59,10 @@ ul {
     list-style: outside square;
 }
 a {
-    color: #ff5252;
+    color: #FF5255;
     text-decoration: none;
     -webkit-transition: all .3s;
-            transition: all .3s;
+    transition: all .3s;
 }
 *:active,*:focus,*:hover {
     outline: 0;
@@ -188,10 +181,23 @@ body > nav {
     margin: 0 auto;
     z-index: 2;
     -webkit-animation: slidin-bottom 2s 1;
-            animation: slidin-bottom 2s 1;
+    animation: slidin-bottom 2s 1;
     text-transform: uppercase;
     font-size: 120%;
     box-sizing: border-box;
+}
+body.home > nav:not(.home-nav) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px;
+    -webkit-animation: fadin 2s 1;
+    animation: fadin 4s 1;
+}
+@media screen and (max-width:500px) {
+    body.home > nav:not(.home-nav) {
+        top: 0;
+    }
 }
 body > nav > div { /* inner container */
     padding: 0;
@@ -216,9 +222,7 @@ body > nav a {
     display: inline-block;
     padding: 0 .2em;
     cursor: pointer;
-}
-body > nav a {
-    color: rgba(255, 255, 255, .5);
+    color: #fff;
 }
 body > nav a:hover,
 body > nav a.active {
@@ -226,11 +230,15 @@ body > nav a.active {
 }
 body > nav a.active {
     pointer-events: none;
+    opacity: .5;
 }
 body > nav .lights {
     -webkit-transform: scale(.8);
-        -ms-transform: scale(.8);
-            transform: scale(.8);
+    -ms-transform: scale(.8);
+    transform: scale(.8);
+    vertical-align: middle;
+    line-height: .5;
+    display: inline-block;
     color: rgba(255, 255, 255, .8);
 }
 body.dark > nav .lights {
@@ -259,14 +267,41 @@ body > nav #logo {
 
 body > header {
     color: #fff;
-    max-width: 800px;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin: 0;
     padding: 5rem 0 6rem;
     text-align: center;
     position: relative;
     -webkit-transition: all .3s;
-            transition: all .3s;
+    transition: all .3s;
+}
+@media screen and (max-width:500px) {
+    body > header {
+        padding: 3rem 0 4rem;
+    }
+}
+body.home > header {
+    padding: 2rem 0 5rem;
+    margin-top: 62px;
+}
+body > header:before,
+body > header:after {
+    content: " ";
+    position: absolute;
+    bottom: -62px;
+    top: -62px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: -1;
+}
+body > header:after {
+    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .3);
+    background: url(../images/layout/photos/wool.jpg) center center / cover transparent;t;
+    opacity: .4;
+}
+body > header:before {
+    background-color: #111;
 }
 body > header h1 {
     color: #fff;
@@ -278,19 +313,21 @@ body.home > aside h1 {
     font-size: 2.7em;
 }
 body > header .book-title {
+    max-width: 800px;
     padding: .5em 11.14%;
-    -webkit-animation: fadin 1s 1;
-            animation: fadin 1s 1;
+    -webkit-animation: fadin 1.2s 1;
+            animation: fadin 1.2s 1;
+    margin: 0 auto;
+    box-sizing: border-box;
     -webkit-transition: all .3s;
-            transition: all .3s;
+    transition: all .3s;
 }
 body > header .book-title small {
     font-size: 1.1em;
-    line-height: 1;
     display: block;
     margin: .2em;
     text-align: center;
-    color: rgba(255, 255, 255, .4);
+    color: rgba(255, 255, 255, .6);
 }
 @media screen and (min-width:1001px) {
     body.home > aside .book-title {
@@ -309,7 +346,7 @@ body > header .book-title small {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     bottom: 0;
-    width: 100%;
+    max-width: 800px;
     height: 32px;
     margin: 0 auto;
     left: 0;
@@ -323,13 +360,13 @@ body > header .book-title small {
     display: -webkit-flex;
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
-    animation: slidin-top 2s 1;
+            animation: slidin-top 2s 1;
 }
 #prevnext a {
     padding: 0 2rem;
-        -ms-flex: 1 1 100px;
+    -ms-flex: 1 1 100px;
     -webkit-flex: 1 1 100px;
-            flex: 1 1 100px;
+    flex: 1 1 100px;
     display: inline-block;
     color: rgba(255, 255, 255, 0.6);
 }
@@ -350,6 +387,59 @@ body > header .book-title small {
 
 
 /*
+ * 6. Home navigation
+ * ------------------
+ */
+
+.home-nav {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: auto;
+    font-size: 100%;
+    line-height: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 0 0 4px 4px;
+    box-sizing: border-box;
+    box-shadow: 0 -3px rgba(255, 255, 255, 0.3);
+    display:  -ms-flexbox;
+    display: -webkit-flex;
+    display:         flex;
+    flex-flow: row wrap;
+    -webkit-animation: slidin-bottom 2s 1;
+            animation: slidin-bottom 2s 1;
+    -webkit-transition: all .2s;
+            transition: all .2s;
+    z-index: 1;
+}
+body.dark .home-nav {
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -3px rgba(0, 0, 0, 0.3);
+}
+.home-nav a {
+    text-transform: none;
+    padding: 0 2rem;
+    -ms-flex: 1 1 100px;
+    -webkit-flex: 1 1 100px;
+    flex: 1 1 100px;
+    display: inline-block;
+    color: #333;
+}
+body.dark .home-nav a {
+    color: rgba(255, 255, 255, 0.6);
+}
+.home-nav a:hover {
+    color: #ff5252;
+    background-color: rgba(0, 0, 0, .02);
+}
+body.dark .home-nav a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+
+/*
  * 7. Pages: body > section
  * ------------------------
  */
@@ -363,6 +453,7 @@ body > section {
     font-size: 120%;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
     -webkit-transition: all .2s;
             transition: all .2s;
 }
@@ -370,10 +461,14 @@ body.dark > section {
     color: #888;
     background-color: #121212;
 }
+body.home > section:first-of-type {
+    margin-bottom: 0;
+    z-index: 2;
+}
 body > section > * {
     max-width: 1000px;
     margin: auto;
-    padding: 4rem 11.14% 3rem;
+    padding: 4rem 11.14%;
 }
 
 
@@ -431,15 +526,15 @@ body.dark .post {
 }
 .post {
     color: #4D4D4D;
-    font-family: "Montserrat Alternates", "Montserrat", Cantarell, Roboto, sans-serif;
-}
-.highlight {
-    margin: 0;
-    padding: 0;
+    font-family: "Montserrat", Cantarell, Roboto, sans-serif;
 }
 img,
 iframe {
     max-width:100%;
+}
+figure {
+    margin: 0;
+    padding: 0;
 }
 .post time {
     color: #ccc;
@@ -486,6 +581,13 @@ iframe {
     display: block;
     margin: 0 auto 1.2rem;
 }
+.home-avatar {
+    width: 90px;
+    -webkit-transform: translate(0, -25%);
+    -ms-transform: translate(0, -25%);
+    transform: translate(0, -25%);
+    border-radius: 50% !important;
+}
 @media screen and (min-width:700px) {
     .align.right {
         float: right;
@@ -500,6 +602,12 @@ iframe {
         margin-left: 2rem;
         margin-bottom: 0;
     }
+    .home-avatar {
+        width: 120px;
+        -webkit-transform: translate(-20%, -25%);
+        -ms-transform: translate(-20%, -25%);
+        transform: translate(-20%, -25%);
+    }
 }
 em em {
     font-style: normal;
@@ -508,16 +616,11 @@ pre, code {
     font-family: "Fira Mono", monospace;
 }
 pre {
-    overflow: hidden;
-}
-pre:hover {
-    overflow: auto;
-}
-pre {
     background-color: #242424;
     color: #FFF;
     border-radius: 3px;
-    padding: 0 1em;
+    padding: 1em;
+    overflow: auto;
 }
 code {
     padding: 0 .7em;
@@ -533,12 +636,15 @@ pre code {
    color: #fff;
    padding: 0;
 }
+pre pre {
+    padding: 0 .5em;
+    margin: 0;
+}
 .lineno {
     opacity: 0.2;
     pointer-events: none;
 }
 blockquote {
-    font-style: italic;
     font-weight: 300;
     text-align: center;
     font-size: 130%;

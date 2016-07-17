@@ -25,16 +25,15 @@
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     {% if page.headimg_url %}
     <style>
-        body:before {
+        body > header:after {
             background-image: url({{ page.headimg_url }});
             background-position: center center;
-            opacity: .4;
         }
     </style>
     {% endif %}
   </head>
   
-  <body>
+  <body {% if page.layout == "home" %}class="home"{% endif %}>
   
     <nav>
         <div class="left">
@@ -42,9 +41,11 @@
             {% for post in altlang %}
                 <a {% if page.lang == post.lang %}class="active"{% endif %} href="{{ post.url }}">{{ post.lang }}</a>
             {% endfor %}
-            <a class="small-site-title" href="/{% if page.lang == "en" %}en{% endif %}">
+            {% unless page.layout == "home" %}
+            <a href="/{% if page.lang == "en" %}en{% endif %}">
                 <img src="/images/layout/logos/nildeala-logo-white.svg" id="logo" alt="Nildëala">
-           </a>
+            </a>
+            {% endunless %}
         </div>
         <div class="right">
             <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
@@ -53,7 +54,11 @@
 
     <header>
         <div class="book-title">
-            <h1>{{ page.title }}</h1>
+            {% if page.layout == "home" %}
+                <h1><img src="/images/layout/logos/nildeala-logo-white.svg" style="height:90px" alt="Nildëala"></h1>
+            {% else %}
+                <h1>{{ page.title }}</h1>
+            {% endif %}
             {% if page.desc %}
                 <small>{{ page.desc }}</small>
             {% elsif page.link %}
@@ -68,7 +73,7 @@
                         {{ site.data.translations[page.lang].previouspost }}
                     </a>
                 {% endif %}
-
+                    <a href="/{% if page.lang == "en" %}en/{% endif %}archive" title="{{ site.data.translations[page.lang].allposts }}"><span class="octicon octicon-book"></span></a>
                 {% if page.next %}
                     <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
                         {{ site.data.translations[page.lang].nextpost }}
@@ -77,7 +82,11 @@
         </nav>
         {% elsif page.layout == "archive" %}
         <nav id="prevnext">
-                <a href="/"><span class="octicon octicon-home"></span></a>
+                <a href="/" title="{{ site.data.translations[page.lang].home }}"><span class="octicon octicon-home"></span></a>
+        </nav>
+        {% elsif page.layout == "home" %}
+        <nav id="prevnext">
+                <a href="/">Lorem Ipsum</a>
         </nav>
         {% endif %}
     </header>

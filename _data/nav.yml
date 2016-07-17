@@ -2,9 +2,9 @@ en:
   home:
     title: "Home"
     url:   "/en"
-  projects:
-    title: "Projects"
-    url:   "/projects"
+  archive:
+    title: "Archive"
+    url:   "/en/archive"
   contact:
     title: "Contact"
     url:   "/about#contact"
@@ -12,9 +12,9 @@ fr:
   home:
     title: "Accueil"
     url:   "/"
-  projects:
-    title: "Projets"
-    url:   "/projets"
+  archive:
+    title: "Archives"
+    url:   "/archive"
   contact:
     title: "Contact"
     url:   "/a-propos#contact"
