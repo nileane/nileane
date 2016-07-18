@@ -73,11 +73,9 @@
                 {% if page.previous %}
                     <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">&lt;</a>
                 {% endif %}
-                    <a href="/{{ page.lang }}/archive" title="{{ site.data.translations[page.lang].allposts }}">&gt;</a>
+                    <a href="/{{ page.lang }}/archive" title="{{ site.data.translations[page.lang].allposts }}">{{ site.data.translations[page.lang].archive }}</a>
                 {% if page.next %}
-                    <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
-                        {{ site.data.translations[page.lang].nextpost }}
-                    </a>
+                    <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">&gt;</a>
                 {% endif %}
         </nav>
         {% elsif page.layout == "archive" %}
