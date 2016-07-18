@@ -1,20 +1,14 @@
 en:
-  home:
-    title: "Home"
-    url:   "/en"
   archive:
     title: "Archive"
     url:   "/en/archive"
-  contact:
-    title: "Contact"
-    url:   "/about#contact"
+  about:
+    title: "More about me"
+    url:   "/en/about"
 fr:
-  home:
-    title: "Accueil"
-    url:   "/"
   archive:
     title: "Archives"
-    url:   "/archive"
-  contact:
-    title: "Contact"
-    url:   "/a-propos#contact"
+    url:   "/fr/archive"
+  about:
+    title: "À propos de moi"
+    url:   "/fr/about"

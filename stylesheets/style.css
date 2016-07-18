@@ -95,7 +95,7 @@ hr.large {
     margin: 2em 0 1.5em;
 }
 hr.title {
-    padding: 3em 0px;
+    padding: 1.2em 0px;
     border-top: 0;
 }
 hr.title:first-child {
@@ -162,10 +162,10 @@ hr.title + h1 {
 }
 .dark hr.title + h1 {
     text-shadow:
-        3px 0 #121212,
-        -2px 0 #121212,
-        7px 0 #121212,
-        -4px 0 #121212;
+        3px 0 #191919,
+        -2px 0 #191919,
+        7px 0 #191919,
+        -4px 0 #191919;
 }
 
 /*
@@ -293,7 +293,7 @@ body > header {
 }
 @media screen and (max-width:500px) {
     body > header {
-        padding: 3rem 0 4rem;
+        padding: 3rem 0 6rem !important;
     }
 }
 body.home > header {
@@ -330,9 +330,9 @@ body.home > aside h1 {
 }
 body > header .book-title {
     max-width: 800px;
-    padding: .5em 11.14%;
+    padding: 0.5em 7.14%;
     -webkit-animation: fadin 1.2s 1;
-            animation: fadin 1.2s 1;
+    animation: fadin 1.2s 1;
     margin: 0 auto;
     box-sizing: border-box;
     -webkit-transition: all .3s;
@@ -363,7 +363,6 @@ body > header .book-title small {
     position: absolute;
     bottom: 0;
     max-width: 800px;
-    height: 32px;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -376,7 +375,7 @@ body > header .book-title small {
     display: -webkit-flex;
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
-            animation: slidin-top 2s 1;
+    animation: slidin-top 2s 1;
 }
 #prevnext a {
     padding: 0 2rem;
@@ -385,6 +384,11 @@ body > header .book-title small {
     flex: 1 1 100px;
     display: inline-block;
     color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (max-width:500px) {
+    #prevnext a {
+        padding: .5rem 2rem;
+    }
 }
 #prevnext a:hover {
     background-color: rgba(0, 0, 0, .2);
@@ -414,23 +418,24 @@ body > header .book-title small {
     font-size: 100%;
     line-height: 32px;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 3rem;
     padding: 0;
     border-radius: 0 0 4px 4px;
     box-sizing: border-box;
-    box-shadow: 0 -3px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 -3px rgba(255, 255, 255, 0.3),
+        0 1px 4px rgba(0, 0, 0, .04);
     display:  -ms-flexbox;
     display: -webkit-flex;
     display:         flex;
     flex-flow: row wrap;
     -webkit-animation: slidin-bottom 2s 1;
-            animation: slidin-bottom 2s 1;
+    animation: slidin-bottom 2s 1;
     -webkit-transition: all .2s;
-            transition: all .2s;
+    transition: all .2s;
     z-index: 1;
 }
 body.dark .home-nav {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 -3px rgba(0, 0, 0, 0.3);
 }
 .home-nav a {
@@ -441,6 +446,11 @@ body.dark .home-nav {
     flex: 1 1 100px;
     display: inline-block;
     color: #333;
+}
+@media screen and (max-width:500px) {
+    .home-nav a {
+        padding: .5rem 2rem;
+    }
 }
 body.dark .home-nav a {
     color: rgba(255, 255, 255, 0.6);
@@ -461,7 +471,7 @@ body.dark .home-nav a:hover {
  */
 
 body > section {
-    background: url(/images/layout/noise.png) repeat #fff;
+    background: #fff;
     width: 100%;
     max-width: 800px;
     border-radius: 4px;
@@ -471,20 +481,21 @@ body > section {
     position: relative;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
     -webkit-transition: all .2s;
-            transition: all .2s;
+    transition: all .2s;
 }
 body.dark > section {
     color: #888;
-    background-color: #121212;
+    background-color: #191919;
 }
-body.home > section:first-of-type {
+body.home > section:first-of-type,
+body.about > section:first-of-type {
     margin-bottom: 0;
     z-index: 2;
 }
 body > section > * {
     max-width: 1000px;
     margin: auto;
-    padding: 4rem 11.14%;
+    padding: 3rem 11.14%;
 }
 
 
@@ -544,6 +555,10 @@ body.dark .post {
     color: #4D4D4D;
     font-family: "Montserrat", Cantarell, Roboto, sans-serif;
 }
+body.home .post {
+    padding-top: 2.2rem;
+    padding-bottom: 2.1rem;
+}
 img,
 iframe {
     max-width:100%;
@@ -591,13 +606,8 @@ figure {
     display: inline-block;
     margin: 0 -5px 0 0;
 }
-.post .avatar {
-    width: 9rem;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 1.2rem;
-}
-.home-avatar {
+
+.avatar {
     width: 90px;
     -webkit-transform: translate(0, -25%);
     -ms-transform: translate(0, -25%);
@@ -616,13 +626,13 @@ figure {
     .post .avatar {
         float: right;
         margin-left: 2rem;
-        margin-bottom: 0;
+        margin-bottom: 3rem;
     }
-    .home-avatar {
+    .avatar {
         width: 120px;
-        -webkit-transform: translate(-20%, -25%);
-        -ms-transform: translate(-20%, -25%);
-        transform: translate(-20%, -25%);
+        -webkit-transform: translate(10%, 5%);
+        -ms-transform: translate(10%, 5%);
+        transform: translate(10%, 5%);
     }
 }
 em em {

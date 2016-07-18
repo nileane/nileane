@@ -23,6 +23,7 @@
 
     <meta name="author" content="{{ site.author }}">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <link rel="icon" type="image/png" href="/images/layout/logos/fav.png">
     {% if page.headimg_url %}
     <style>
         body > header:after {
@@ -33,7 +34,7 @@
     {% endif %}
   </head>
   
-  <body {% if page.layout == "home" %}class="home"{% endif %}>
+  <body {% if page.layout %}class="{{ page.layout }}"{% endif %}>
   
     <nav>
         <div class="left">
@@ -74,7 +75,7 @@
                         {{ site.data.translations[page.lang].previouspost }}
                     </a>
                 {% endif %}
-                    <a href="/{% if page.lang == "en" %}en/{% endif %}archive" title="{{ site.data.translations[page.lang].allposts }}"><span class="octicon octicon-book"></span></a>
+                    <a href="/{% if page.lang == "en" %}en/{% endif %}archive" title="{{ site.data.translations[page.lang].allposts }}">{{ site.data.translations[page.lang].archive }}</a>
                 {% if page.next %}
                     <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">
                         {{ site.data.translations[page.lang].nextpost }}
@@ -85,7 +86,7 @@
         <nav id="prevnext">
                 <a href="/" title="{{ site.data.translations[page.lang].home }}"><span class="octicon octicon-home"></span></a>
         </nav>
-        {% elsif page.layout == "home" %}
+        {% else %}
         <nav id="prevnext">
                 {% for link in site.data.nav[page.lang] %}<a href="{{ link[1].url }}" title="{{ link[1].title }}">{{ link[1].title }}</a>{% endfor %}
         </nav>

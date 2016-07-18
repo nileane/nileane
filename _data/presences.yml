@@ -1,7 +1,9 @@
 
 - title: "<span class=icon-twitter></span> Twitter"
-  url:   ""
+  url:   "https://twitter.com/Nildeala"
 - title: "<span class=icon-medium></span> Medium"
-  url:   ""
+  url:   "https://medium.com/@Nildeala"
 - title: "<span class=icon-github></span> Github"
-  url:   ""
+  url:   "https://github.com/Nildeala"
+- title: "<span class=icon-mail2></span> Email"
+  url:   "mailto:contact@nildeala.fr"

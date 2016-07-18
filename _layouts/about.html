@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section>
+    <div class="post">
+        {{ content }}
+    </div>
+</section>
+<nav class="home-nav">
+    {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+</nav>

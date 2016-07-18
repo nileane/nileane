@@ -1,11 +1,11 @@
 ## Configuration file
 
-name: Schoewilliam
-url: http://schoewilliam.fr
+name: Nildëala
+url: http://nildëala.fr
 
-author: William Dorffer aka. Schoewilliam
-description: Open web enthusiast, non-writer writer, Iceland dreamer.
-title: Schoewilliam
+author: William Dorffer aka. Nildëala
+description: Open web enthusiast. Geography Student. Ocassional web designer. I like trains.
+title: Nildëala
 
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
@@ -24,14 +24,3 @@ defaults:
       path: _posts/en
     values:
       lang: en
-
-
-nodes:
-- text: diaspora*
-  url: https://diaspora-fr.org/u/schoewilliam
-- text: Github
-  url: https://github.com/Schoewilliam
-- text: Mozillians
-  url: https://mozillians.org/en-US/u/schoewilliam/
-- text: GNU Social
-  url: https://status.vinilox.eu/schoewilliam
