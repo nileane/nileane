@@ -3,12 +3,12 @@ en:
     title: "Archive"
     url:   "/en/archive"
   about:
-    title: "More about me"
+    title: "About"
     url:   "/en/about"
 fr:
   archive:
     title: "Archives"
     url:   "/fr/archive"
   about:
-    title: "À propos de moi"
+    title: "À propos"
     url:   "/fr/about"
