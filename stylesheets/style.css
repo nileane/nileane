@@ -440,9 +440,9 @@ body.dark .home-nav {
 }
 .home-nav a {
     text-transform: none;
-    padding: 0 2rem;
-    -ms-flex: 1 1 100px;
-    -webkit-flex: 1 1 100px;
+    padding: 0 1rem;
+    -ms-flex: 1 1 80px;
+    -webkit-flex: 1 1 80px;
     flex: 1 1 100px;
     display: inline-block;
     color: #333;

@@ -1,13 +1,13 @@
 en:
   archive:
-    title: "Archive"
+    title: "Blog"
     url:   "/en/archive"
   about:
     title: "About"
     url:   "/en/about"
 fr:
   archive:
-    title: "Archives"
+    title: "Blog"
     url:   "/fr/archive"
   about:
     title: "À propos"
