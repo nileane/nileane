@@ -1,7 +1,7 @@
 en:
   about: "About"
   allposts: "All posts"
-  archive: "Archive"
+  archive: "Blog"
   contact: "Contact"
   home: "Home"
   lights: "Switch the lights ON/OFF"
@@ -11,7 +11,7 @@ en:
 fr:
   about: "À Propos"
   allposts: "Tous les articles"
-  archive: "Archives"
+  archive: "Blog"
   contact: "Me Contacter"
   home: "Accueil"
   lights: "Allumer/Éteindre la lumière"
