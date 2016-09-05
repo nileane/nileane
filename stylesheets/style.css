@@ -33,6 +33,7 @@
 @import url(fonts/Montserrat/Montserrat.css);
 @import url(fonts/Montserrat/MontserratAlternates.css);
 @import url(syntax.css);
+
 /*
  * 1. Body and General declarations
  * --------------------------------
@@ -67,6 +68,11 @@ a {
 }
 *:active,*:focus,*:hover {
     outline: 0;
+}
+@media screen and (max-width:500px) {
+    body {
+        font-size: 9pt;
+    }
 }
 
 
@@ -374,25 +380,28 @@ body > header .book-title small {
     border-radius: 4px 4px 0 0;
     box-sizing: border-box;
     box-shadow: 0 3px rgba(0, 0, 0, 0.5);
+    display: flex;
     display:  -ms-flexbox;
     display: -webkit-flex;
-    display:         flex;
-    -webkit-animation: slidin-top 2s 1;
-    animation: slidin-top 2s 1;
     overflow: hidden;
+}
+body.home #prevnext,
+body.post #prevnext {
+    animation: slidin-top 2s 1;
+    -webkit-animation: slidin-top 2s 1;
 }
 #prevnext a {
     padding: 0 2rem;
-    -ms-flex: 1 1 100px;
-    -webkit-flex: 1 1 100px;
     flex: 1 1 100px;
+    -webkit-flex: 1 1 100px;
+    -ms-flex: 1 1 100px;
     display: inline-block;
     color: rgba(255, 255, 255, .7);
     position: relative;
 }
 @media screen and (max-width:500px) {
     #prevnext a {
-        padding: .5rem 2rem;
+        padding: .5rem;
     }
 }
 #prevnext a:hover {
@@ -535,6 +544,7 @@ ul.index {
 }
 .index li {
     padding: 20px 0;
+    position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .dark .index li {
@@ -542,6 +552,15 @@ ul.index {
 }
 .index li:last-child {
     border-bottom: none;
+}
+.lang-indicator {
+    position: absolute;
+    top: 30px;
+    left: -45px;
+    text-align: right;
+    display: block;
+    opacity: .4;
+    width: 30px;
 }
 .index h2 {
     margin: 0;

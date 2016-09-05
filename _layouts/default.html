@@ -18,8 +18,9 @@
     {% endif %}
     
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (FR posts)" href="/flux.xml">
-    <link rel="alternate" type="application/rss+xml" title="Schoewilliam.fr RSS (EN posts)" href="/feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (all posts)" href="/rss/all.xml">
+    <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (FR posts)" href="/rss/fr.xml">
+    <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (EN posts)" href="/rss/en.xml">
 
     <meta name="author" content="{{ site.author }}">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
@@ -58,8 +59,8 @@
     <header>
         <div class="book-title">
             {% if page.layout == "home" %}
-                <h1><img src="/images/layout/logos/nildeala-logo-white.svg" style="height:90px" alt="Nildëala"></h1>
-                <small>{{ site.data.translations[page.lang].previously }} <img src="/images/layout/logos/schoewilliam.png" style="height:16px; vertical-align:top; opacity:.5;"> <a href="https://medium.com/@Nildeala/its-about-my-new-nickname-and-about-my-gender-perhaps-8d032c71ecce#.ole13vovw" target="_blank"><strong>*</strong></a> </small>
+                <h1><img src="/images/layout/logos/nildeala-logo-white.svg" style="height:80px" alt="Nildëala"></h1>
+                <small>{{ site.data.translations[page.lang].previously }} <img src="/images/layout/logos/schoewilliam.png" style="height:16px; vertical-align:top; opacity:.5;"> <a href="/2016/09/05/nildeala-name.html"><strong>*</strong></a> </small>
             {% else %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
@@ -80,11 +81,11 @@
         {% else %}
         <nav id="prevnext">
                 {% if page.previous %}
-                    <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}"><span class=icon-arrow-left></span></a>
+                    <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}"><span class=icon-arrow-left2></span></a>
                 {% endif %}
                     <a href="/{{ page.lang }}/archive" title="{{ site.data.translations[page.lang].allposts }}">{{ site.data.translations[page.lang].archive }}</a>
                 {% if page.next %}
-                    <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}"><span class=icon-arrow-right></span></a>
+                    <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}"><span class=icon-arrow-right2></span></a>
                 {% endif %}
         </nav>
         {% endunless %}
