@@ -226,6 +226,9 @@ body > nav a {
     cursor: pointer;
     color: rgba(255, 255, 255, .6);
 }
+body > nav:not(.home-nav) a {
+    text-shadow: 0 0 5px #000;
+}
 body > nav a:hover,
 body > nav a.active {
     color: #fff;
@@ -376,6 +379,7 @@ body > header .book-title small {
     display:         flex;
     -webkit-animation: slidin-top 2s 1;
     animation: slidin-top 2s 1;
+    overflow: hidden;
 }
 #prevnext a {
     padding: 0 2rem;
@@ -383,7 +387,7 @@ body > header .book-title small {
     -webkit-flex: 1 1 100px;
     flex: 1 1 100px;
     display: inline-block;
-    color: rgba(255, 255, 255, 0.6);
+    color: #fff;
 }
 @media screen and (max-width:500px) {
     #prevnext a {
@@ -391,7 +395,7 @@ body > header .book-title small {
     }
 }
 #prevnext a:hover {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: #000;
     color: #fff;
 }
 #prevnext a:active {
