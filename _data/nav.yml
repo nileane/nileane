@@ -1,11 +1,17 @@
 en:
+  home:
+    title: "In Short"
+    url:   "/en"
   archive:
     title: "Blog"
     url:   "/en/archive"
   about:
-    title: "About"
+    title: "About me"
     url:   "/en/about"
 fr:
+  home:
+    title: "En Bref"
+    url:   "/"
   archive:
     title: "Blog"
     url:   "/fr/archive"
