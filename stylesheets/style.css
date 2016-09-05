@@ -427,12 +427,6 @@ body > header .book-title small {
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
 }
-#prevnext a.prev {
-    text-align: left;
-}
-#prevnext a.next {
-    text-align: right;
-}
 
 
 
