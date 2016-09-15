@@ -11,7 +11,7 @@
     </title>
     
     {% if page.layout == "post" %}
-    <meta name="description" content="{{ post.content | strip_html | truncatewords: 50 | escape }}">
+    <meta name="description" content="{{ page.content | strip_html | truncatewords: 50 | escape }}">
     {% else %}
     <meta name="description" content="{{ site.description | escape }}">
     {% endif %}
