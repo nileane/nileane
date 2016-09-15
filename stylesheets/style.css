@@ -584,6 +584,12 @@ ul.index {
 .dark .index h2 {
     color: rgba(197, 197, 197, 0.6);
 }
+.index a:visited h2 {
+    color:#aaa;
+}
+.dark .index a:visited h2 {
+    color:#666;
+}
 .index a:hover h2 {
     color: #000;
 }
