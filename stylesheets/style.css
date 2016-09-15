@@ -542,6 +542,10 @@ body.dark > section {
     color: #888;
     background-color: #191919;
 }
+body.dark > section.howtoreact {
+    background: none;
+    box-shadow: none;
+}
 body.home > section:first-of-type,
 body.about > section:first-of-type {
     margin-bottom: 0;
