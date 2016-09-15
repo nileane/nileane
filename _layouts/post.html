@@ -6,13 +6,13 @@ layout: default
         <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
         {{ content }}
 
-        <p style="text-align:right;">
+        <!--<p style="text-align:right;">
         {% if page.categories %}
         {% for category in page.categories %}
             {% if forloop.first %}<span style="float:right; margin-left:.25em;" class="mega-octicon octicon-tag"></span>{% endif %}
             {{ category | capitalize }}{% unless forloop.last %}, {% else %}.{% endunless %}
         {% endfor %}
         {% endif %}
-        </p>
+        </p>-->
     </div>
 </section>

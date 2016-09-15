@@ -54,8 +54,12 @@ body.dark {
     background-color: #111;
 }
 p,
-.post {
+section .post {
     line-height: 1.6;
+}
+section .post small {
+    line-height: 1.2;
+    opacity: .8;
 }
 ul {
     list-style: outside square;
@@ -83,12 +87,14 @@ a {
  */
 
 hr {
-    border-top: 1px solid #d4d4d4;
+    border-top: 1px solid #dedede;
     height: 4px;
-    width:100px;
+    width: 30%;
+    max-width: 150px;
+    margin: 2em auto;
     border-right: 0;
     border-left: 0;
-    border-bottom: 1px solid #d4d4d4;
+    border-bottom: 1px solid #dedede;
 }
 aside hr {
     border-color: rgba(255, 255, 255, 0.2) !important;
@@ -354,6 +360,14 @@ body > header .book-title small {
     text-align: center;
     color: rgba(255, 255, 255, .6);
 }
+body > header .book-title small a {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 80%;
+    overflow: hidden;
+}
 @media screen and (min-width:1001px) {
     body.home > aside .book-title {
         padding: .5em;
@@ -597,6 +611,9 @@ body.dark .post {
     color: #4D4D4D;
     font-family: "Montserrat", Cantarell, Roboto, sans-serif;
 }
+body.post .post {
+    text-align: justify;
+}
 body.home .post {
     padding-top: 2.2rem;
     padding-bottom: 2.1rem;
@@ -714,8 +731,11 @@ pre pre {
 }
 blockquote {
     font-weight: 300;
-    text-align: center;
-    font-size: 130%;
+    font-size: 115%;
+    margin: 1.8em 1em 1.8em 0;
+    border-left: 2px solid #FF5255;
+    padding-left: 1em;
+    text-align: left;
 }
 .thumbnail-ct {
     display: -ms-flexbox;

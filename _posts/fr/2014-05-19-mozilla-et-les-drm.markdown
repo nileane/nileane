@@ -6,8 +6,8 @@ title: Mozilla et les DRM
 link: http://leomca.github.io/2014/05/15/Mozilla-and-DRM.html
 categories: ["Mozilla","Libre"]
 ---
-*Je vois et je lis beaucoup de billets, de messages, de cris et également d'applaudissements quant à [cette affaire](https://hacks.mozilla.org/2014/05/reconciling-mozillas-mission-and-w3c-eme/). J'ai mis plusieurs dizaines d'heures avant de pouvoir me forger un véritable avis.  
-Tout compte fait, je vous propose ci-dessous une traduction d'[un billet](http://leomca.github.io/2014/05/15/Mozilla-and-DRM.html) de [Leo McArdle](http://leomca.github.io/) sur le sujet.*
+<small>Je vois et je lis beaucoup de billets, de messages, de cris et également d'applaudissements quant à [cette affaire](https://hacks.mozilla.org/2014/05/reconciling-mozillas-mission-and-w3c-eme/). J'ai mis plusieurs dizaines d'heures avant de pouvoir me forger un véritable avis.  
+Tout compte fait, je vous propose ci-dessous une traduction d'[un billet](http://leomca.github.io/2014/05/15/Mozilla-and-DRM.html) de [Leo McArdle](http://leomca.github.io/) sur le sujet.</small>
 
 ---
 
