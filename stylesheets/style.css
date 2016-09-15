@@ -534,6 +534,10 @@ body > section {
 body > section:last-of-type {
     margin-bottom: 100px;
 }
+body > section.howtoreact {
+    background: none;
+    box-shadow: none;
+}
 body.dark > section {
     color: #888;
     background-color: #191919;
