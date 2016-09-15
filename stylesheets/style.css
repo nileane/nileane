@@ -104,6 +104,7 @@ aside hr {
 }
 hr.large {
     width: 100%;
+    max-width: 100%;
     margin: 2em 0 1.5em;
 }
 hr.title {
