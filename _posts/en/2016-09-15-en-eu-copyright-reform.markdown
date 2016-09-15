@@ -1,7 +1,7 @@
 ---
 layout: post
 published: true
-comments: true
+comments: false
 title: The Web is in danger, copyright reform can break the Internet.
 link: http://blog.elnino.si/post/150440175422/the-web-is-in-danger-copyright-reform-can-break
 categories: ["Mozilla","Copyright","European Union"]

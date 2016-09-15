@@ -2,6 +2,7 @@
 title: "Jekyll pro tip: how to design an awesome Archive page."
 layout: post
 published: true
+comments: true
 category: Jekyll
 headimg_url: /images/wikicommons/1024px-Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg
 headimg_lic: "Par Chicago : National Prtg. & Engr. Co. Modifications by Papa Lima Whiskey [CC BY-SA 3.0], via Wikimedia Commons"

@@ -523,13 +523,16 @@ body > section {
     width: 100%;
     max-width: 800px;
     border-radius: 4px;
-    margin: 0 auto 100px;
+    margin: 0 auto 50px;
     font-size: 120%;
     overflow: hidden;
     position: relative;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
     -webkit-transition: all .2s;
     transition: all .2s;
+}
+body > section:last-of-type {
+    margin-bottom: 100px;
 }
 body.dark > section {
     color: #888;

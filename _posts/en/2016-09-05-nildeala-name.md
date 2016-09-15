@@ -1,6 +1,7 @@
 ---
 layout: post
 published: true
+comments: false
 exacttime: "11:00:00"
 title: "I chose a new nickname to better deal with my gender identity struggle."
 desc: "Perhaps."
