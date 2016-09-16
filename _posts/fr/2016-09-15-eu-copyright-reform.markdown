@@ -13,7 +13,7 @@ categories: ["Mozilla","Copyright","European Union"]
 
 Cela fait des décennies et des décennies que des lois sur le droit d'auteur (*copyright*) sont en vigueur.
 
-Petite retrospective historique : la première Révolution Industrielle était basée sur l'eau et la vapeur pour mécaniser la production. La deuxième se fondait sur l'électricité, qui permit la production de masse. La troisième se fondait elle sur l'électronique connecté, et les technologies d'information pour automatiser la production. Aujourd'hui nous vivons dans la « *quatrième Révolution industrielle* », que l'on appelle aussi la *Révolution numérique*.
+Petite retrospective historique : la première Révolution Industrielle était basée sur l'eau et la vapeur pour mécaniser la production. La deuxième se fondait sur l'électricité, qui permit la production de masse. La troisième se fondait elle sur l'électronique connectée, et les technologies d'information pour automatiser la production. Aujourd'hui nous vivons dans la « *quatrième Révolution industrielle* », que l'on appelle aussi la *Révolution numérique*.
 
 ![Navigating the next industrial revolution - timeline](/images/copyright/historic.png){: class="align center"}
 
@@ -67,7 +67,7 @@ Les utilisateurs d'Internet et les entreprises devraient pouvoir partager des li
 
 > Les liens sont essentiels à la liberté d'expression en ligne, et les experts nous avertissent de l'évidence : censurer des liens viendrait à casser le Web tel que l'on le connait.
 
-Les règles de la Commission incluent des méthodes chères et invasives pour surveiller et filtrer le contenu des utilisateurs. Cela signifie censurer certains de vos contenus favoris, qui pourrait littéralement disparaître des moteurs de recherche et du Web. Non seuls les utilisateur de l'UE seront impactés, mais bien tous les utilisateurs du monde.
+Les règles de la Commission incluent des méthodes chères et invasives pour surveiller et filtrer le contenu des utilisateurs. Cela signifie censurer certains de vos contenus favoris, qui pourraient littéralement disparaître des moteurs de recherche et du Web. Non seuls les utilisateurs de l'UE seront impactés, mais bien tous les utilisateurs du monde.
 
 ### Vous trouvez ça encore plus absurde ?
 
