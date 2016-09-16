@@ -80,10 +80,14 @@
         <nav id="prevnext">
                 {% if page.previous %}
                     <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}"><span class=icon-arrow-left2></span></a>
+                {% else %}
+                    <a class="none" href="#"></a>
                 {% endif %}
                     <a href="/{{ page.lang }}/archive" title="{{ site.data.translations[page.lang].allposts }}">{{ site.data.translations[page.lang].archive }}</a>
                 {% if page.next %}
                     <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}"><span class=icon-arrow-right2></span></a>
+                {% else %}
+                    <a class="none" href="#"></a>
                 {% endif %}
         </nav>
         {% endunless %}
