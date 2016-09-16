@@ -127,8 +127,6 @@ In other words, to make a section appear, the user has to click the link that po
 
 <iframe width="100%" height="300" src="https://jsfiddle.net/schoewilliam/trbkq2th/6/embedded/result,html,css/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-* And for a practical and tangible demo, you can have a look at my [own Archive page](/archive)
-
 ## Done
 
 I like this layout a lot. I think this is both great functionality and great UX at a really low cost.
