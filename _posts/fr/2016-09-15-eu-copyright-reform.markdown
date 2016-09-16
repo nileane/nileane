@@ -9,7 +9,7 @@ categories: ["Mozilla","Copyright","European Union"]
 ---
 <small>Il y a trois jours, Mozilla, sous la plume de sa directrice des affaires juridiques et commerciales, Denelle Dixon-Thayer, a jugé « [inadaptée](https://blog.mozilla.org/press-fr/2016/09/14/reforme-des-droits-dauteurs-dans-lunion-europeenne-une-proposition-non-adaptee/) » la proposition de la Commission européenne pour une réforme du droit d’auteur dans l’Union. Il est encore temps d’agir.</small>
 
-<small>Voici ma traduction d’[un billet](http://blog.elnino.si/post/150440175422/the-web-is-in-danger-copyright-reform-can-break) de mon ami **Nino Vranešič**, Mozilla Rep et bénévole slovène. Il était présent, le week-end dernier, à Berlin où lui, moi et d'autres Mozilliens européens ont pu discuter de cette réforme et des moyens d’action, après une présentation depuis Bruxelles de Raegan MacDonald de l’équipe Net Policy de Mozilla.</small>
+<small>Voici ma traduction d’[un billet](http://blog.elnino.si/post/150440175422/the-web-is-in-danger-copyright-reform-can-break) de mon ami **Nino Vranešič**, Mozilla Rep et bénévole slovène. Il était présent, le week-end dernier à Berlin, où lui, moi et d'autres Mozilliens européens ont pu discuter de cette réforme et des moyens d’action, après une présentation depuis Bruxelles de Raegan MacDonald de l’équipe Net Policy de Mozilla.</small>
 
 ---
 
