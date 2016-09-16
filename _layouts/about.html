@@ -9,3 +9,12 @@ layout: default
 <nav class="home-nav">
     {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
 </nav>
+
+<section>
+    <div class="post">
+        <p>
+        <strong>{{ site.data.translations[page.lang].friends }}</strong><br>
+        {% for link in site.data.friends %}<a href="{{ link.url }}" title="{{ link.text }}">{{ link.text }}</a>{% if forloop.last %}{% else %} · {% endif %}{% endfor %}
+        </p>
+    </div>
+</section>

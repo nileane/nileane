@@ -8,6 +8,7 @@ en:
   nextpost: "Next"
   previouspost: "Previous"
   previously: "Formerly"
+  friends: "Some of my friends:"
 fr:
   about: "À Propos"
   allposts: "Tous les articles"
@@ -18,3 +19,4 @@ fr:
   nextpost: "Suivant"
   previouspost: "Précédent"
   previously: "Anciennement"
+  friends: "Quelques uns de mes ami(e)s :"
