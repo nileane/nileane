@@ -593,8 +593,6 @@ ul.index {
 .index h2 {
     margin: 0;
     color: rgba(0, 0, 0, 0.7);
-    -webkit-transition: all .5s;
-    transition: all .5s;
 }
 .dark .index h2 {
     color: rgba(197, 197, 197, 0.6);
