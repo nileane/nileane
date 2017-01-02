@@ -9,13 +9,13 @@
 	       {{ site.title }}
     {% endif %}
     </title>
-    
+
     {% if page.layout == "post" %}
     <meta name="description" content="{{ page.content | strip_html | truncatewords: 50 | escape }}">
     {% else %}
     <meta name="description" content="{{ site.description | escape }}">
     {% endif %}
-    
+
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
     <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (all posts)" href="/rss/all.xml">
     <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (FR posts)" href="/rss/fr.xml">
@@ -23,7 +23,6 @@
 
     <meta name="author" content="{{ site.author }}">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="icon" type="image/png" href="/images/layout/logos/fav.png">
     {% if page.headimg_url %}
@@ -35,9 +34,9 @@
     </style>
     {% endif %}
   </head>
-  
+
   <body {% if page.layout %}class="{{ page.layout }}"{% endif %}>
-  
+
     <nav>
         <div class="left">
             {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
