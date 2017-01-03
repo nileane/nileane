@@ -39,9 +39,11 @@
 
     <nav>
         <div class="left">
-            {% assign altlang=site.posts | where:"date", page.date | sort: 'path' %}
-            {% for post in altlang %}
+            <!-- {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %} -->
+            {% for post in site.posts %}
+              {% if post.date == page.date %}
                 <a class="lang-swt {% if page.lang == post.lang %}active{% endif %}" href="{{ post.url }}">{{ post.lang }}</a>
+              {% endif %}
             {% endfor %}
             {% unless page.layout == "home" %}
             <a href="/{% if page.lang == "en" %}en{% endif %}">

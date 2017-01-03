@@ -4,8 +4,9 @@ layout: default
 <section id="allposts">
     <div>
         <ul class="index">
-            {% assign posts=site.posts | where:"type", posts %}
-            {% for post in posts %}
+            <!-- {% assign posts = site.posts | where:'type', post %} -->
+            {% for post in site.posts %}
+            <!-- {% unless post.type == "pages" %} -->
             <li>
             <a href="{{ post.url }}">
                     <h2>{{ post.title | replace: '<br>', '' }}</h2>
@@ -13,6 +14,7 @@ layout: default
                     <span class="lang-indicator">{{ post.lang }}</span>
              </a>
             </li>
+            <!-- {% endunless %} -->
             {% endfor %}
         </ul>
     </div>
