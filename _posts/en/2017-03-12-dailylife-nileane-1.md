@@ -17,4 +17,4 @@ Getting a “Madame” from a stranger gives me a smile, and hope.
 
 Actually, this rediscovery is mostly about how I’m rediscovering the way to look at myself. There are those days when I just cry seeing myself in the mirror. But then, there are also those other days when I’m so happy to be able to like what I’m seeing. So happy that I take pictures and share them with those who love me.
 
-I began to need to express all these things again. Thank you to those who love me. And then, just as well, just as well. thanks to myself.
+I began to need to express all these things again. Thank you to those who love me. And then, just as well, thanks to myself.
