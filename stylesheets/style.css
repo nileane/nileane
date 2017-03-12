@@ -537,7 +537,7 @@ body > section {
 body > section:last-of-type {
     margin-bottom: 100px;
 }
-body > section.howtoreact {
+body > section.faded {
     background: none;
     box-shadow: none;
 }
@@ -545,7 +545,7 @@ body.dark > section {
     color: #888;
     background-color: #191919;
 }
-body.dark > section.howtoreact {
+body.dark > section.faded {
     background: none;
     box-shadow: none;
 }
@@ -594,14 +594,27 @@ ul.index {
     margin: 0;
     color: rgba(0, 0, 0, 0.7);
 }
+.home-post .index h2 {
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 130%;
+}
 .dark .index h2 {
     color: rgba(197, 197, 197, 0.6);
 }
-.index a:visited h2 {
-    color:#aaa;
+.index h2.year {
+  text-align: center;
+  font-size: 110%;
+  font-weight: bold;
+  margin-top: 50px;
 }
-.dark .index a:visited h2 {
-    color:#666;
+.index li.year:first-child {
+  display: none;
+}
+*:not(.home-post) > .index a:visited h2 {
+  color:#aaa;
+}
+.dark *:not(.home-post) > .index a:visited h2 {
+  color:#666;
 }
 .index a:hover h2 {
     color: #000;
@@ -616,6 +629,17 @@ ul.index {
 }
 .dark .index time {
     color: rgba(255, 255, 255, 0.2);
+}
+.home-post {
+    padding-top: 0;
+    padding-bottom: 0;
+    max-width: calc(800px - 11.14%);
+}
+.home-post time {
+  color: #c6c6c6
+}
+.dark .home-post time {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /*

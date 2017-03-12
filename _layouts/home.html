@@ -9,3 +9,19 @@ layout: default
 <nav class="home-nav">
     {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
 </nav>
+
+<section class="faded">
+  <div class="home-post">
+    <ul class="index">
+      {% for post in site.posts limit:1 %}
+        <li>
+        <a href="{{ post.url }}">
+                <h2>{{ post.title | replace: '<br>', '' }}</h2>
+                <time datetime='{{ post.date | date: "%Y-%m-%d" }}'><span style="color:#FF5255">{{ site.data.translations[page.lang].lastpost }}</span> · {% include date.html date=post.date %}</time>
+                <span class="lang-indicator">{{ post.lang }}</span>
+         </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
