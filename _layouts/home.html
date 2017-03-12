@@ -10,10 +10,11 @@ layout: default
     {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
 </nav>
 
-<section class="faded">
+<section>
   <div class="home-post">
     <ul class="index">
-      {% for post in site.posts limit:1 %}
+      {% assign posts = site.posts | where: "lang", page.lang %}
+      {% for post in posts limit:1 %}
         <li>
         <a href="{{ post.url }}">
                 <h2>{{ post.title | replace: '<br>', '' }}</h2>
