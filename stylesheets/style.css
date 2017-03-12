@@ -592,10 +592,10 @@ ul.index {
 }
 .index h2 {
     margin: 0;
-    color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.55);
+    transition: all .2s;
 }
 .home-post .index h2 {
-    color: rgba(0, 0, 0, 0.55);
     font-size: 130%;
 }
 .dark .index h2 {
@@ -609,12 +609,6 @@ ul.index {
 }
 .index li.year:first-child {
   display: none;
-}
-*:not(.home-post) > .index a:visited h2 {
-  color:#aaa;
-}
-.dark *:not(.home-post) > .index a:visited h2 {
-  color:#666;
 }
 .index a:hover h2 {
     color: #000;
