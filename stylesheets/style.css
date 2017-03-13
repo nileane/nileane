@@ -610,6 +610,9 @@ ul.index {
 .index li.year:first-child {
   display: none;
 }
+.index li.year:last-child {
+  display: none;
+}
 .index a:hover h2 {
     color: #000;
 }
