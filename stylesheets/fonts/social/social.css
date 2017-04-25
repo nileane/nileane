@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?kgajdg');
-  src:  url('fonts/icomoon.eot?kgajdg#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?kgajdg') format('truetype'),
-    url('fonts/icomoon.woff?kgajdg') format('woff'),
-    url('fonts/icomoon.svg?kgajdg#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?q37q7c');
+  src:  url('fonts/icomoon.eot?q37q7c#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q37q7c') format('truetype'),
+    url('fonts/icomoon.woff?q37q7c') format('woff'),
+    url('fonts/icomoon.svg?q37q7c#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,9 @@
 
 .icon-mail2:before {
   content: "\ea84";
+}
+.icon-instagram:before {
+  content: "\ea92";
 }
 .icon-telegram:before {
   content: "\ea95";
