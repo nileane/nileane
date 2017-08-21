@@ -10,8 +10,6 @@ title: Nildëala
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
 
-gems:
-
 defaults:
   -
     scope:
