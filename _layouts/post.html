@@ -4,6 +4,12 @@ layout: default
 <section>
     <div class="post">
         <time datetime='{{ page.date | date: "%-d %B %Y" }}' class="top">{% include date.html date=page.date %}</time>
+        {% if page.headimg_url %}
+        <figure class="classic_headimg">
+            <img src="{{ page.headimg_url }}">
+        </figure>
+        {% endif %}
+
         {{ content }}
 
         <!--<p style="text-align:right;">

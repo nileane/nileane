@@ -580,9 +580,6 @@ body.about > section:first-of-type {
 body > section > * {
     max-width: 1000px;
     margin: auto;
-    padding: 3rem 11.14%;
-}
-body.archive > section > * {
     padding: 3rem 9%;
 }
 
@@ -762,6 +759,12 @@ figure {
 .dark .post time {
     color: #555;
 }
+.post figure.classic_headimg {
+    height: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    margin: .5rem 0;
+}
 .post p a {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
@@ -813,7 +816,7 @@ figure {
         transform: translate(10%, 5%);
     }
 }
-@media screen and (min-width:500px) {
+@media screen and (min-width:400px) {
     .align.right {
         float: right;
         margin: 10px 0 10px 30px;

@@ -10,6 +10,7 @@ When I was writing here [last time, in March 2017](/2017/03/12/dailylife-nileane
 
 Since last time, my name change was approved, and I began the long task of making sure that this change would be reflected with any organisations and agencies that know me. It's a long exhausting process. Sometimes, it's the opportunity to discover discriminatory or humiliating behaviours. But it's also an opportunity to feel satisfied after having checked every one of the many boxes in the list of entities to contact.
 
+
 Since last time, I've met new people and my friendships have grown stronger. Everyday, my body is becoming more *my* body. I believe that this life journey, this Niléane I've always needed and who is slowly settling down, is forging something new inside me. I believe it is a certain form of self-confidence. I can trust my ability to cope, I can trust my own presence.
 
 Then, I realise, I can take pictures of myself and actually like what I'm seeing.
