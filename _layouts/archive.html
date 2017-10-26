@@ -1,32 +1,38 @@
 ---
 layout: default
 ---
+{% assign posts = site.posts | where: "lang", page.lang %}
+{% for post in posts limit:3 %}
+<section class="archive-post">
+    <a href="{{ post.url }}">
+    <div class="index">
+        {% unless post.type == "pages" %}
+        <div>
+            <h2>{{ post.title | replace: '<br>', '' }}</h2>
+            <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
+        </div>
+        <div class="excerpt">{{ post.excerpt | strip_html }}
+        <strong style="color:#FF5255;">···</strong></div>
+        {% endunless %}
+    </div>
+    </a>
+</section>
+
+{% endfor %}
+
 <section id="allposts">
     <div>
         <ul class="index">
-            {% for post in site.posts %}
-
-            {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-            {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-
-            {% if forloop.first %}
-            <li class="year"><h2 class="year" id="{{ this_year }}-ref">{{this_year}}</h2></li>
-            {% endif %}
+            {% assign posts = site.posts | where: "lang", page.lang %}
+            {% for post in posts offset: 3 %}
 
             {% unless post.type == "pages" %}
-            <li>
+            <li class="{{ post.lang }}-post">
             <a href="{{ post.url }}">
                     <h2>{{ post.title | replace: '<br>', '' }}</h2>
                     <time datetime='{{ post.date | date: "%Y-%m-%d" }}'>{% include date.html date=post.date %}</time>
-                    <span class="lang-indicator">{{ post.lang }}</span>
              </a>
             </li>
-            {% endunless %}
-
-            {% unless forloop.last %}
-                {% if this_year != next_year %}
-                <li class="year"><h2 class="year" id="{{ next_year }}-ref">{{next_year}}</h2></li>
-                {% endif %}
             {% endunless %}
 
             {% endfor %}

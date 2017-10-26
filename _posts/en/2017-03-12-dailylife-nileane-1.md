@@ -2,7 +2,7 @@
 layout: post
 published: true
 comments: true
-title: "The daily life of a Niléane #1: coming-out, name, and HRT. All sorts of beginnings."
+title: "Daily life of a Niléane #1: coming-out, name, and HRT. All sorts of beginnings."
 desc: "My name is Niléane. Nice to meet you."
 categories: ["Personal","Trans"]
 ---

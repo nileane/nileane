@@ -1,11 +1,29 @@
 ---
 layout: default
+home-post: "false"
 ---
+
+{% unless layout.home-post == "false" %}
+<section class="home-post">
+   {% assign posts = site.posts | where: "lang", page.lang %}
+   {% for post in posts limit:1 %}
+    <a href="{{ post.url }}">
+    <div class="index">
+     <h2>{{ post.title | replace: '<br>', '' }}</h2>
+     <time datetime='{{ post.date | date: "%Y-%m-%d" }}'><span style="color:#FF5255">{{ site.data.translations[page.lang].lastpost }}</span> · {% include date.html date=post.date %}</time>
+   </div>
+   </a>
+   {% endfor %}
+ </section>
+{% endunless %}
+
 <section>
     <div class="post">
         {{ content }}
     </div>
 </section>
-<nav class="home-nav">
-    {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
-</nav>
+
+
+ <nav class="home-nav">
+     {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+ </nav>

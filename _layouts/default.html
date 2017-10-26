@@ -39,6 +39,7 @@
 
     <nav>
         <div class="left">
+            <span class="lang-swt-wr">
             <!-- {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %} -->
             {% for post in site.posts %}
               {% if post.date == page.date %}
@@ -50,6 +51,7 @@
                 <img src="/images/layout/logos/nildeala-logo-white.svg" id="logo" alt="Nildëala">
             </a>
             {% endunless %}
+            </span>
         </div>
         <div class="right">
             <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
@@ -59,7 +61,7 @@
     <header>
         <div class="book-title">
             {% if page.layout == "home" %}
-                <h1><img src="/images/layout/logos/nildeala-logo-white.svg" style="height:80px" alt="Nildëala"></h1>
+                <h1><img src="/images/layout/logos/nildeala-logo-white.svg" alt="Nildëala"></h1>
             {% else %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
@@ -70,28 +72,12 @@
             {% endif %}
         </div>
 
-        {% unless page.layout == "post" %}
         <nav id="prevnext">
                 {% for link in site.data.nav[page.lang] %}
                     {% assign activeurl = link[1].url | append:'/' %}
                     <a href="{{ link[1].url }}" {% if page.url == activeurl %}class="active"{% elsif page.layout == link[0] %}class="active"{% endif %} title="{{ link[1].title }}">{{ link[1].title }}</a>
                 {% endfor %}
         </nav>
-        {% else %}
-        <nav id="prevnext">
-                {% if page.previous %}
-                    <a class="prev" title="{{ page.previous.title }}" href="{{ page.previous.url }}">{{ site.data.translations[page.lang].previouspost }}</a>
-                {% else %}
-                    <a class="none" href="#"></a>
-                {% endif %}
-                    <a href="/{{ page.lang }}/archive" title="{{ site.data.translations[page.lang].allposts }}">{{ site.data.translations[page.lang].archive }}</a>
-                {% if page.next %}
-                    <a class="next" title="{{ page.next.title }}" href="{{ page.next.url }}">{{ site.data.translations[page.lang].nextpost }}</a>
-                {% else %}
-                    <a class="none" href="#"></a>
-                {% endif %}
-        </nav>
-        {% endunless %}
     </header>
 
 
