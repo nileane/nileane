@@ -733,7 +733,7 @@ body.dark .archive-post a .index .excerpt {
  */
 
 body.dark .post {
-    color: #bbb;
+    color: #a1a1a1;
 }
 .post {
     color: #4D4D4D;
@@ -772,6 +772,7 @@ figure {
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 .dark .post p a {
+    color: #fff;
     border-color: rgba(255, 255, 255, 0.2);
 }
 .post a:hover {
