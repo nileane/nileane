@@ -17,9 +17,9 @@
     {% endif %}
 
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
-    <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (all posts)" href="/rss/all.xml">
-    <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (FR posts)" href="/rss/fr.xml">
-    <link rel="alternate" type="application/rss+xml" title="Nildeala.fr RSS (EN posts)" href="/rss/en.xml">
+    <link rel="alternate" type="application/rss+xml" title="Nileane.fr RSS (all posts)" href="/rss/all.xml">
+    <link rel="alternate" type="application/rss+xml" title="Nileane.fr RSS (FR posts)" href="/rss/fr.xml">
+    <link rel="alternate" type="application/rss+xml" title="Nileane.fr RSS (EN posts)" href="/rss/en.xml">
 
     <meta name="author" content="{{ site.author }}">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
@@ -53,7 +53,7 @@
             {% endfor %}
             {% unless page.layout == "home" %}
             <a href="/{% if page.lang == "en" %}en{% endif %}">
-                <img src="/images/layout/logos/nildeala-logo-white.svg" id="logo" alt="Nildëala">
+                <img src="/images/layout/logos/nileane-logo-white.svg" id="logo" alt="Niléane">
             </a>
             {% endunless %}
             </span>
@@ -66,7 +66,7 @@
     <header>
         <div class="book-title">
             {% if page.layout == "home" %}
-                <h1><img src="/images/layout/logos/nildeala-logo-white.svg" alt="Nildëala"></h1>
+                <h1><img src="/images/layout/logos/nileane-logo-white.svg" alt="Niléane"></h1>
             {% else %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
@@ -89,9 +89,8 @@
     <!-- Page content -->
     {{ content }}
 
-    
+
     <script src="/js/nightmode.js" type="text/javascript"></script>
 
-    {% include piwik.html %}
   </body>
 </html>

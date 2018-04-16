@@ -1,7 +1,7 @@
 /*
- * Schoewilliam.fr CSS Style
- * https://github.com/schoewilliam/schoewilliam.fr
- * William Dorffer [:schoewilliam]
+ * nileane.fr CSS Style
+ * https://github.com/nileane/nileane.fr
+ * Niléane Dorffer
  * MIT License
  */
 
@@ -283,10 +283,10 @@ body.dark > nav .lights {
        0 0 50px rgba(255, 255, 255, .9);
 }
 body > nav #logo {
-    height: 40px;
+    height: 50px;
     top: 0;
     position: absolute;
-    padding: 10px 0;
+    padding: 5px 0;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
@@ -335,7 +335,7 @@ body > header:after {
 }
 body > header:after {
     box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .3);
-    background: url(../images/layout/photos/trempette.jpg) center center / cover transparent;
+    background: url(../images/layout/photos/deviancealafenetre.jpg) top center / cover transparent;
     opacity: .5;
 }
 body > header:before {
@@ -352,7 +352,7 @@ body.home > aside h1 {
 }
 body > header .book-title {
     max-width: 800px;
-    padding: 0.5em 7.14%;
+    padding: 0 7.14%;
     -webkit-animation: fadin 1.2s 1;
     animation: fadin 1.2s 1;
     margin: 0 auto;
@@ -376,12 +376,12 @@ body > header .book-title small a {
     overflow: hidden;
 }
 body > header .book-title img {
-    height: 80px;
+    height: 90px;
 }
 
 @media screen and (max-width:500px) {
     body > header .book-title img {
-        height: 60px;
+        height: 70px;
     }
 }
 @media screen and (min-width:1001px) {

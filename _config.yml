@@ -1,11 +1,11 @@
 ## Configuration file
 
-name: Nildëala
-url: http://nildëala.fr
+name: Niléane
+url: http://nileane.fr
 
 author: Niléane Dorffer
-description: Open web enthusiast. Geography Student. I like trains and Human beings. But mostly trains.
-title: Nildëala
+description: Open web enthusiast. Geography Student. I'm a trans girl who likes trains and Human beings. But mostly trains.
+title: Niléane
 
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
