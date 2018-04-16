@@ -338,6 +338,9 @@ body > header:after {
     background: url(../images/layout/photos/deviancealafenetre.jpg) top center / cover transparent;
     opacity: .5;
 }
+body.dark > header:after {
+    opacity: .3;
+}
 body > header:before {
     background-color: #111;
 }
