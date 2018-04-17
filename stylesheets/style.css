@@ -498,7 +498,7 @@ body.post #prevnext a:nth-child(2):before {
     display:  -ms-flexbox;
     display: -webkit-flex;
     display:         flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     -webkit-animation: slidin-bottom 2s 1;
     animation: slidin-bottom 2s 1;
     -webkit-transition: all .2s;
