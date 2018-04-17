@@ -1,9 +1,9 @@
 
-- title: "<span class=icon-twitter></span> Twitter"
+- title: "<span class=icon-twitter></span> <span class=title>Twitter</span>"
   url:   "https://twitter.com/Nildeala"
-- title: "<span class=icon-instagram></span> Instagram"
+- title: "<span class=icon-instagram></span> <span class=title>Instagram</span>"
   url:   "https://instagram.com/Nildeala"
-- title: "<span class=icon-github></span> Github"
+- title: "<span class=icon-github></span> <span class=title>Github</span>"
   url:   "https://github.com/Nildeala"
-- title: "<span class=icon-mail2></span> Email"
+- title: "<span class=icon-mail2></span> <span class=title>Email</span>"
   url:   "mailto:contact@nildeala.fr"

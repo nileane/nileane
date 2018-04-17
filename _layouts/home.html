@@ -25,5 +25,5 @@ home-post: "false"
 
 
  <nav class="home-nav">
-     {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
+     {% for link in site.data.presences %}<a href="{{ link.url }}" title="{{ link.title | strip_html }}">{{ link.title }}</a>{% endfor %}
  </nav>

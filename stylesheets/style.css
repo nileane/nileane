@@ -514,13 +514,17 @@ body.dark .home-nav {
     padding: 0 1rem;
     -ms-flex: 1 1 80px;
     -webkit-flex: 1 1 80px;
-    flex: 1 1 100px;
+    flex: 1 1 80px;
     display: inline-block;
     color: #333;
 }
 @media screen and (max-width:500px) {
     .home-nav a {
-        padding: .5rem 2rem;
+        padding: .2rem 0;
+        font-size: 120%;
+    }
+    .home-nav a .title {
+        display: none;
     }
 }
 body.dark .home-nav a {
@@ -820,7 +824,7 @@ figure {
         transform: translate(10%, 5%);
     }
 }
-@media screen and (min-width:400px) {
+@media screen and (min-width:500px) {
     .align.right {
         float: right;
         margin: 10px 0 10px 30px;
