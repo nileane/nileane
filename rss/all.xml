@@ -7,7 +7,7 @@ layout: null
 		<title>{{ site.name | xml_escape }}</title>
 		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
 		<link>{{ site.url }}</link>
-		<atom:link href="{{ site.url }}/flux.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ site.url }}/rss/all.xml" rel="self" type="application/rss+xml" />
 		{% for post in site.posts %}
 			<item>
 				<title>{{ post.title | xml_escape }}</title>
@@ -15,7 +15,7 @@ layout: null
 					<dc:creator>{{ post.author.name | xml_escape }}</dc:creator>
 				{% endif %}
                     <description>{{ post.content | xml_escape }}</description>
-				<pubDate>{{ post.date | date: "%a, %d %b %Y" }} {{ post.exacttime }} {{ post.date | date: "%z" }}</pubDate>
+				<pubDate>{{ post.date | date: "%a, %d %b %Y" }} 12:00:00 {{ post.date | date: "%z" }}</pubDate>
 				<link>{{ site.url }}{{ post.url }}</link>
 				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
 			</item>
