@@ -249,6 +249,7 @@ body > nav a.active {
 body > nav a.lang-swt {
     position: relative;
     font-weight: bold;
+    padding: 0 .5rem;
 }
 body > nav a.lang-swt.active:before {
     content: " ";
