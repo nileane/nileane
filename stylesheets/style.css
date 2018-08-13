@@ -303,6 +303,8 @@ body > nav #logo {
 
 body > header {
     color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.46),
+        0 0 20px rgba(0, 0, 0, .5);
     box-sizing: border-box;
     margin: 0;
     padding: 5rem 0 6rem;
@@ -369,6 +371,7 @@ body > header .book-title small {
     display: block;
     margin: .2em;
     text-align: center;
+    text-shadow: rgb(204, 204, 204);
     color: rgba(255, 255, 255, .6);
 }
 body > header .book-title small a {
