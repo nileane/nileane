@@ -371,8 +371,7 @@ body > header .book-title small {
     display: block;
     margin: .2em;
     text-align: center;
-    text-shadow: rgb(204, 204, 204);
-    color: rgba(255, 255, 255, .6);
+    color: #CCC;
 }
 body > header .book-title small a {
     text-overflow: ellipsis;
