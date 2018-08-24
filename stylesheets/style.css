@@ -65,7 +65,7 @@ ul {
     list-style: outside square;
 }
 a {
-    color: #FF5255;
+    color: #716cff;
     text-decoration: none;
     -webkit-transition: all .3s;
     transition: all .3s;
@@ -246,12 +246,12 @@ body > nav a:hover,
 body > nav a.active {
     color: #fff;
 }
-body > nav a.lang-swt {
+body > nav a.swt {
     position: relative;
     font-weight: bold;
     padding: 0 .5rem;
 }
-body > nav a.lang-swt.active:before {
+body > nav a.swt.active:before {
     content: " ";
     width: 5px;
     height: 5px;
@@ -264,7 +264,7 @@ body > nav a.lang-swt.active:before {
     transition: all .2s;
     display: block;
     border-radius: 50%;
-    background-color: #FF5255;
+    background-color: #716cff;
 }
 body > nav .lights {
     -webkit-transform: rotate(180deg) scale(.8);
@@ -338,15 +338,14 @@ body > header:after {
     z-index: -1;
 }
 body > header:after {
-    box-shadow: inset 0 -2px 3px rgba(0, 0, 0, .3);
-    background: url(../images/layout/photos/deviancealafenetre.jpg) top center / cover transparent;
-    opacity: .5;
+    background: url(/images/layout/photos/deviancealafenetre-alt.jpg) top center / cover transparent;
+    opacity: .6;
 }
 body.dark > header:after {
     opacity: .3;
 }
 body > header:before {
-    background-color: #111;
+    background: #111;
 }
 body > header h1 {
     color: #fff;
@@ -372,6 +371,7 @@ body > header .book-title small {
     display: block;
     margin: .2em;
     text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.46);
     color: #CCC;
 }
 body > header .book-title small a {
@@ -406,7 +406,7 @@ body > header .book-title img {
     }
 }
 #prevnext {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
     bottom: 0;
     max-width: 800px;
@@ -461,7 +461,7 @@ body.post #prevnext a:nth-child(2) {
     vertical-align: middle;
     transition: all .2s;
     border-radius: 50%;
-    background-color: #FF5255;
+    background-color: #716cff;
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -536,7 +536,7 @@ body.dark .home-nav a {
     color: rgba(255, 255, 255, 0.6);
 }
 .home-nav a:hover {
-    color: #ff5252;
+    color: #716cff;
     background-color: rgba(0, 0, 0, .02);
 }
 body.dark .home-nav a:hover {
@@ -843,7 +843,7 @@ figure {
         margin-bottom: 3rem !important;
     }
     .avatar {
-        width: 120px;
+        width: 130px;
     }
 }
 
@@ -886,7 +886,7 @@ blockquote {
     font-weight: 300;
     font-size: 115%;
     margin: 1.8em 1em 1.8em 0;
-    border-left: 2px solid #FF5255;
+    border-left: 2px solid #716cff;
     padding-left: 1em;
     text-align: left;
 }
