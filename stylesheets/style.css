@@ -372,9 +372,10 @@ body > header .book-title small {
     margin: .2em;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.46);
-    color: #CCC;
+    color: #fff;
 }
 body > header .book-title small a {
+    color: #fff;
     text-overflow: ellipsis;
     white-space: nowrap;
     display: inline-block;
