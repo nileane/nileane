@@ -264,7 +264,7 @@ body > nav a.swt.active:before {
     transition: all .2s;
     display: block;
     border-radius: 50%;
-    background-color: #716cff;
+    background-color: #fff;
 }
 body > nav .lights {
     -webkit-transform: rotate(180deg) scale(.8);
@@ -463,7 +463,7 @@ body.post #prevnext a:nth-child(2) {
     vertical-align: middle;
     transition: all .2s;
     border-radius: 50%;
-    background-color: #716cff;
+    background-color: #fff;
     position: absolute;
     left: 50%;
     bottom: 0;
