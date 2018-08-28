@@ -444,8 +444,9 @@ body.post #prevnext {
         padding: 0;
     }
 }
-#prevnext a:hover {
-    background-color: rgba(0, 0, 0, .75);
+#prevnext a:hover,
+#prevnext a:active {
+    background-color: rgba(0, 0, 0, .4);
     color: #fff;
 }
 #prevnext a:active {
