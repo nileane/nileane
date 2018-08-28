@@ -750,7 +750,7 @@ body.dark .post {
     font-family: "Montserrat", Cantarell, Roboto, sans-serif;
 }
 body.post .post {
-    text-align: justify;
+    text-align: left;
 }
 body.home .post {
     padding-top: 2.2rem;
