@@ -339,7 +339,7 @@ body > header:after {
 }
 body > header:after {
     background: url(/images/layout/photos/deviancealafenetre.jpg) top center / cover transparent;
-    opacity: .65;
+    opacity: .45;
 }
 body.dark > header:after {
     opacity: .3;
