@@ -320,7 +320,7 @@ body.home > header {
 }
 @media screen and (max-width:500px) {
     body > header {
-        padding: 3rem 0 6rem !important;
+        padding: 3rem 0 5rem !important;
     }
     body.home > header {
         margin-top: 20px;
@@ -440,7 +440,8 @@ body.post #prevnext {
 }
 @media screen and (max-width:500px) {
     #prevnext a {
-        padding: .5rem;
+        line-height: 38px;
+        padding: 0;
     }
 }
 #prevnext a:hover {
