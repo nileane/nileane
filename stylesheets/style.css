@@ -338,8 +338,9 @@ body > header:after {
     z-index: -1;
 }
 body > header:after {
-    background: url(/images/layout/photos/deviancealafenetre.jpg) top center / cover transparent;
-    opacity: .45;
+    /* background: url(/images/layout/photos/deviancealafenetre.jpg) top center / cover transparent; */
+    background-color: #716cff;
+    opacity: .6;
 }
 body.dark > header:after {
     opacity: .3;
