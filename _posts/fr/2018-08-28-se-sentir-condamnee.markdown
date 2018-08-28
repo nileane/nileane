@@ -3,10 +3,11 @@ layout: post
 published: true
 title: "Se sentir condamnée."
 ---
-
-Je ne serai jamais entièrement considérée comme une femme. Je me sens condamnée.
+Je me sens au moins tous les jours condamnée. Ceci est un résumé de ma pensée lorsque cela se produit.
 
 ---
+
+Je ne serai jamais entièrement considérée comme une femme. Je me sens condamnée.
 
 Je serai toujours dans une situation financière précaire. Je me sens condamnée.
 
