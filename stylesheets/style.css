@@ -343,7 +343,7 @@ body > header:after {
     opacity: .6;
 }
 body.dark > header:after {
-    opacity: .3;
+    /* opacity: .3; */
 }
 body > header:before {
     background: #111;
