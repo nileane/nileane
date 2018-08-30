@@ -239,8 +239,6 @@ body > nav a {
     color: rgba(255, 255, 255, .6);
 }
 body > nav:not(.home-nav) a {
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.46),
-        0 0 20px rgba(0, 0, 0, .5);
 }
 body > nav a:hover,
 body > nav a.active {
@@ -292,7 +290,6 @@ body > nav #logo {
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.46)) drop-shadow(0 0 20px rgba(0, 0, 0, .5));
 }
 
 
@@ -304,8 +301,6 @@ body > nav #logo {
 
 body > header {
     color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.46),
-        0 0 20px rgba(0, 0, 0, .5);
     box-sizing: border-box;
     margin: 0;
     padding: 5rem 0 6rem;
@@ -386,7 +381,6 @@ body > header .book-title small a {
 }
 body > header .book-title img {
     height: 90px;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.46)) drop-shadow(0 0 20px rgba(0, 0, 0, .5));
 }
 
 @media screen and (max-width:500px) {
