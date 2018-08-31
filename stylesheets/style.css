@@ -189,7 +189,7 @@ hr.title + h1 {
 
 body > nav {
     max-width: 656px;
-    height: 60px;
+    height: 75px;
     padding: 0;
     margin: 0 auto;
     position: relative;
@@ -294,10 +294,13 @@ body > header {
     color: #fff;
     box-sizing: border-box;
     margin: 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
     position: relative;
     -webkit-transition: all .3s;
     transition: all .3s;
+}
+.post header {
+    padding-top: 4em;
 }
 @media screen and (max-width:800px) {
     body > header {
@@ -311,7 +314,7 @@ body > header:after {
     content: " ";
     position: absolute;
     bottom: -50px;
-    top: -90px;
+    top: -120px;
     left: 0;
     right: 0;
     width: 100%;
@@ -439,12 +442,11 @@ body > section.faded {
 }
 #signature {
     width: 80px;
-    margin: 0 auto 1rem;
+    margin: 0 0 1rem;
     display: block;
 }
 @media screen and (min-width:800px) {
     #signature {
-        display: none;
     }
 }
 body.home > section.home-post {

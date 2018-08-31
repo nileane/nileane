@@ -62,7 +62,7 @@
     <header>
         <div class="book-title">
             {% if page.layout == "home" or page.layout == "archive" or page.layout == "about" %}
-                <h1><img src="/images/layout/logos/nileane-logo-white.svg" alt="Niléane"></h1>
+                <h1><a href="/{% if page.lang == "en" %}en{% endif %}"><img src="/images/layout/logos/nileane-logo-white.svg" alt="Niléane"></a></h1>
             {% else %}
                 <h1>{{ page.title }}</h1>
             {% endif %}
