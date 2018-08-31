@@ -1,13 +1,14 @@
 # Source for Nileane.fr
-## Powered by Github Pages and Jekyll
+## Powered by GitHub Pages and Jekyll
 
 To build, make sure you have Bundler installed:
 ```
 gem install bundler
 ```
 
-Install needed dependencies by running:
+Install needed dependencies by running in the reposity folder:
 ```
+cd nileane.fr/
 bundle install
 ```
 
