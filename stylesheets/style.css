@@ -243,6 +243,7 @@ nav .language {
     margin-left: 5px;
     border: 2px solid rgba(255, 255, 255, .8);
     display: flex;
+    transition: all .2s;
 }
 nav .language:hover {
     background-color: #ff706b;
@@ -250,8 +251,19 @@ nav .language:hover {
 nav .language a {
     border: none;
 }
+nav .language a:hover {
+    background-color: transparent;
+}
 nav .language a.active {
     pointer-events: none;
+}
+nav .language a:last-child:not(.active) {
+    margin-left: -30px;
+    padding-left: 40px;
+}
+nav .language a:first-child:not(.active) {
+    margin-right: -30px;
+    padding-right: 40px;
 }
 
 @media screen and (max-width:800px) {
@@ -263,7 +275,7 @@ nav .language a.active {
         position: absolute;
         right: 0;
     }
-    nav .menu {
+    .home nav .menu {
         width: 100%;
         right: 50%;
         transform: translate(50%, 0);
@@ -399,6 +411,7 @@ body > header .book-title img {
     padding: 0;
     flex: 1 1 80px;
     display: inline-block;
+    border-radius: 30px;
     color: #333;
 }
 @media screen and (max-width:500px) {
@@ -416,8 +429,8 @@ body > header .book-title img {
     }
 }
 .socials a:hover {
-    color: #ff706b;
-    background-color: rgba(0, 0, 0, .02);
+    color: #111;
+    background-color: #fff;
 }
 
 
