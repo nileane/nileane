@@ -43,23 +43,27 @@
   <body {% if page.layout %}class="{{ page.layout }}"{% endif %}>
 
     <nav>
-        <div class="left">
-            <span class="swt-wr">
-            <!-- {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %} -->
-            {% for post in site.posts %}
-              {% if post.date == page.date %}
-                <a class="swt {% if page.lang == post.lang %}active{% endif %}" href="{{ post.url }}">{{ post.lang }}</a>
-              {% endif %}
-            {% endfor %}
+        <div>
             {% unless page.layout == "home" %}
             <a href="/{% if page.lang == "en" %}en{% endif %}">
                 <img src="/images/layout/logos/nileane-logo-white.svg" id="logo" alt="Niléane">
             </a>
             {% endunless %}
-            </span>
         </div>
-        <div class="right">
-            <a title="{{ site.data.translations[page.lang].lights }}" class="lights"><span class="mega-octicon octicon-light-bulb"></span></a>
+        
+        <div class="menu">
+            {% for link in site.data.nav[page.lang] %}
+                {% assign activeurl = link[1].url | append:'/' %}
+                <a href="{{ link[1].url }}" {% if page.url == activeurl %}class="active"{% elsif page.layout == link[0] %}class="active"{% endif %} title="{{ link[1].title }}">{{ link[1].title }}</a>
+            {% endfor %}
+            {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %}
+            <span class="language">
+                {% for post in site.posts %}
+                  {% if post.date == page.date %}
+                    <a class="swt {% if page.lang == post.lang %}active{% endif %}" href="{{ post.url }}">{{ post.lang }}</a>
+                  {% endif %}
+                {% endfor %}
+            </span>
         </div>
     </nav>
 
@@ -76,21 +80,9 @@
                 <small><a href="{{ page.link }}" target="_blank">{{ page.link }}</a> <span class="octicon octicon-link-external"></span></small>
             {% endif %}
         </div>
-
-        <nav id="prevnext">
-                {% for link in site.data.nav[page.lang] %}
-                    {% assign activeurl = link[1].url | append:'/' %}
-                    <a href="{{ link[1].url }}" {% if page.url == activeurl %}class="active"{% elsif page.layout == link[0] %}class="active"{% endif %} title="{{ link[1].title }}">{{ link[1].title }}</a>
-                {% endfor %}
-        </nav>
     </header>
 
-
-    <!-- Page content -->
     {{ content }}
-
-
-    <script src="/js/nightmode.js" type="text/javascript"></script>
 
   </body>
 </html>

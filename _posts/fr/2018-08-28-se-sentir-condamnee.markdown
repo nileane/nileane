@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Se sentir condamnée."
 ---
 Je me sens au moins tous les jours condamnée. Ceci est un résumé de ma pensée lorsque cela se produit.
