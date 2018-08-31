@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Petites de mes nouvelles #5 : simple remaniement."
 category: "Petites de mes nouvelles"
 ---
