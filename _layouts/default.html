@@ -43,14 +43,6 @@
   <body {% if page.layout %}class="{{ page.layout }}"{% endif %}>
 
     <nav>
-        <div>
-            {% unless page.layout == "home" %}
-            <a href="/{% if page.lang == "en" %}en{% endif %}">
-                <img src="/images/layout/logos/nileane-logo-white.svg" id="logo" alt="Niléane">
-            </a>
-            {% endunless %}
-        </div>
-        
         <div class="menu">
             {% for link in site.data.nav[page.lang] %}
                 {% assign activeurl = link[1].url | append:'/' %}
@@ -69,7 +61,7 @@
 
     <header>
         <div class="book-title">
-            {% if page.layout == "home" %}
+            {% if page.layout == "home" or page.layout == "archive" or page.layout == "about" %}
                 <h1><img src="/images/layout/logos/nileane-logo-white.svg" alt="Niléane"></h1>
             {% else %}
                 <h1>{{ page.title }}</h1>

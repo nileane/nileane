@@ -232,12 +232,6 @@ nav .menu a:hover {
     color: rgba(255, 255, 255, .8);
 }
 
-nav #logo {
-    width: 75px;
-    padding: 0;
-    max-width: none;
-    transform: translate(0, 10px);
-}
 nav .language {
     border-radius: 30px;
     margin-left: 5px;
@@ -275,27 +269,17 @@ nav .language a:first-child:not(.active) {
         position: absolute;
         right: 0;
     }
-    .home nav .menu {
-        width: 100%;
-        right: 50%;
-        transform: translate(50%, 0);
-    }
-    nav #logo {
-        transform: translate(0, 10px);
-    }
     nav .language {
         position: absolute;
         right: -5px;
         top: 30px;
         transform: scale(.8);
     }
-    .home nav .language {
-        right: 0;
-        top: 0;
-    }
 }
 @media screen and (min-width:801px) {
-    .home nav .menu {
+    .home nav .menu,
+    .archive nav .menu,
+    .about nav .menu {
         top: 155px
     }
 }
@@ -319,9 +303,6 @@ body > header {
     body > header {
         margin-top: 30px;
         padding: 1rem 9% 2rem !important;
-    }
-    .home header h1 {
-        text-align: center;
     }
 
 }
