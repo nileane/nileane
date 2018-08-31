@@ -31,7 +31,6 @@
 @import url(fonts/octicons/octicons.css);
 @import url(fonts/social/social.css);
 @import url(fonts/Montserrat/Montserrat.css);
-@import url(fonts/Montserrat/MontserratAlternates.css);
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
 @import url(syntax.css);
 
@@ -41,7 +40,7 @@
  */
 
 body {
-    font: 10pt "Montserrat Alternates", "Montserrat", Cantarell, Roboto, sans-serif;
+    font: 10pt "Montserrat", Cantarell, Roboto, sans-serif;
     background: #f0f0f0;
     padding: 0;
     margin: 0;
