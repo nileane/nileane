@@ -6,7 +6,7 @@ To build, make sure you have Bundler installed:
 gem install bundler
 ```
 
-Install needed dependencies by running in the reposity folder:
+Install needed dependencies:
 ```
 cd nileane.fr/
 bundle install
