@@ -50,9 +50,6 @@ body {
     -webkit-transition: background-color .2s;
     transition: background-color .2s;
 }
-body.dark {
-    background-color: #111;
-}
 p,
 section .post {
     line-height: 1.6;
@@ -99,9 +96,6 @@ hr {
 aside hr {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
-.dark hr {
-    opacity: 0.2;
-}
 hr.large {
     width: 100%;
     max-width: 100%;
@@ -130,11 +124,6 @@ h1, h2, h3 {
     font-weight: 400;
     line-height: 1;
     color: rgba(0, 0, 0, .7);
-}
-.dark h1,
-.dark h2,
-.dark h3 {
-    color: #fff;
 }
 h1 {
     font-size: 2.8em;
@@ -172,13 +161,6 @@ hr.title + h1 {
         -4px 0 #fff;
     text-transform: uppercase;
     letter-spacing: -.05em;
-}
-.dark hr.title + h1 {
-    text-shadow:
-        3px 0 #191919,
-        -2px 0 #191919,
-        7px 0 #191919,
-        -4px 0 #191919;
 }
 
 /*
@@ -490,9 +472,6 @@ body.home section.archive-post {
 .archive-post .index > div {
     flex: 1 1 40%;
 }
-.dark .index li {
-    border-color: rgba(255, 255, 255, 0.05);
-}
 .index li:last-child {
     border-bottom: none;
 }
@@ -518,9 +497,6 @@ html[lang=en] .index li.fr-post a > *:not(.lang-indicator) {
 .home-post .index h2 {
     font-size: 130%;
 }
-.dark .index h2 {
-    color: rgba(197, 197, 197, 0.9);
-}
 .index h2.year {
   text-align: center;
   font-size: 110%;
@@ -536,14 +512,6 @@ html[lang=en] .index li.fr-post a > *:not(.lang-indicator) {
 .index a:hover h2 {
     color: #000;
 }
-.dark .index a:hover h2 {
-    color: #fff;
-}
-.index time {
-}
-.dark .index time {
-    color: rgba(255, 255, 255, 0.4);
-}
 section.home-post > a,
 section.archive-post > a {
     padding-top: 0;
@@ -555,12 +523,6 @@ section.home-post:hover {
     box-shadow:
         0 1px 4px rgba(0, 0, 0, 0.04),
         0 0 0 3px rgba(0, 0, 0, 0.14) !important;
-}
-.dark section.archive-post:hover,
-.dark section.home-post:hover {
-    box-shadow:
-        0 1px 4px rgba(0, 0, 0, 0.04),
-        0 0 0 3px rgba(255, 255, 255, 0.1) !important;
 }
 section.home-post > a {
     padding-top: 24px;
@@ -578,17 +540,11 @@ section.archive-post > a {
 section.home-post time {
     color: #c6c6c6;
 }
-.dark section.home-post time {
-    color: rgba(255, 255, 255, 0.3);
-}
 
 .archive-post a .index .excerpt {
     color: rgba(0, 0, 0, 0.55);
     position: relative;
     font-size: 85%;
-}
-body.dark .archive-post a .index .excerpt {
-    color: rgba(197, 197, 197, 0.9);
 }
 
 @media screen and (min-width:500px) {
@@ -611,9 +567,6 @@ body.dark .archive-post a .index .excerpt {
  * ---------------
  */
 
-body.dark .post {
-    color: #a1a1a1;
-}
 .post {
     color: #4D4D4D;
     font-family: "Montserrat", Cantarell, Roboto, sans-serif;
@@ -638,9 +591,6 @@ figure {
     font-size: 90%;
     display: block;
 }
-.dark .post time {
-    color: #555;
-}
 .post figure.classic_headimg {
     height: 0;
     overflow: hidden;
@@ -653,9 +603,6 @@ figure {
 section .post a:hover {
     border-color: #111;
     text-decoration: none;
-}
-.dark .post a:hover {
-    border-color: #fff;
 }
 .post a img {
     border: 0;
