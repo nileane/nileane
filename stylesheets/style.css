@@ -263,6 +263,11 @@ nav .language a.active {
         position: absolute;
         right: 0;
     }
+    nav .menu {
+        width: 100%;
+        right: 50%;
+        transform: translate(50%, 0);
+    }
     nav #logo {
         transform: translate(0, 10px);
     }
@@ -272,8 +277,12 @@ nav .language a.active {
         top: 30px;
         transform: scale(.8);
     }
+    .home nav .language {
+        right: 0;
+        top: 0;
+    }
 }
-@media screen and (min-width:800px) {
+@media screen and (min-width:801px) {
     .home nav .menu {
         top: 155px
     }
@@ -298,9 +307,6 @@ body > header {
     body > header {
         margin-top: 30px;
         padding: 1rem 9% 2rem !important;
-    }
-    .home header {
-        margin-top: 0;
     }
     .home header h1 {
         text-align: center;
@@ -376,46 +382,40 @@ body > header .book-title img {
  * ------------------
  */
 
-.home-nav {
+.socials {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.3);
     height: auto;
     font-size: 100%;
     line-height: 32px;
-    max-width: 800px;
-    margin: 0 auto 3rem;
+    max-width: 656px;
+    margin: 3rem auto;
     padding: 0;
-    border-radius: 0 0 4px 4px;
     box-sizing: border-box;
-    box-shadow: 0 -3px rgba(255, 255, 255, 0.3),
-        0 1px 4px rgba(0, 0, 0, .04);
     display: flex;
-    flex-flow: row;
-    animation: slidin-bottom 2s 1;
-    transition: all .2s;
-    z-index: 1;
+    flex-flow: row nowrap;
 }
-body.dark .home-nav {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 -3px rgba(0, 0, 0, 0.3);
-}
-.home-nav a {
+.socials a {
     text-transform: none;
-    padding: 0 1rem;
+    padding: 0;
     flex: 1 1 80px;
     display: inline-block;
     color: #333;
 }
 @media screen and (max-width:500px) {
-    .home-nav a {
+    .socials a {
         padding: .2rem 0;
-        font-size: 120%;
+        font-size: 130%;
     }
-    .home-nav a .title {
+    .socials a .title {
         display: none;
     }
 }
-.home-nav a:hover {
+@media screen and (max-width:800px) {
+    .socials {
+        padding: 0 9%;
+    }
+}
+.socials a:hover {
     color: #ff706b;
     background-color: rgba(0, 0, 0, .02);
 }
