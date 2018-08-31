@@ -217,24 +217,24 @@ nav .menu a {
     max-width: 90px;
     border-radius: 30px;
     border: 2px solid transparent;
-    color: rgba(255, 255, 255, .8);
+    color: white;
 }
 nav .menu a.active,
 nav .menu a.active:hover,
 .post nav .menu > a:nth-of-type(2),
 .post nav .menu > a:nth-of-type(2):hover {
-    background-color: rgba(255, 255, 255, .8);
+    background-color: white;
     color: #333;
 }
 nav .menu a:hover {
     background-color: #ff706b;
-    color: rgba(255, 255, 255, .8);
+    color: white;
 }
 
 nav .language {
     border-radius: 30px;
     margin-left: 5px;
-    border: 2px solid rgba(255, 255, 255, .8);
+    border: 2px solid white;
     display: flex;
     transition: all .2s;
 }
