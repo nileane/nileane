@@ -196,6 +196,7 @@ nav .menu {
 nav .menu a {
     line-height: 1.5;
     padding: 2px 10px;
+    margin: 0 2.5px;
     max-width: 90px;
     border-radius: 30px;
     border: 2px solid transparent;
@@ -217,6 +218,7 @@ nav .language {
     border-radius: 30px;
     margin-left: 5px;
     border: 2px solid transparent;
+    margin: 0 2.5px;
     background-color: rgba(0, 0, 0, .4);
     display: flex;
     transition: all .2s;
@@ -226,6 +228,7 @@ nav .language:hover {
 }
 nav .language a {
     border: none;
+    margin: 0;
 }
 nav .language a:hover {
     background-color: transparent;
