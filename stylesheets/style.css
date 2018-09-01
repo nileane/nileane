@@ -408,9 +408,9 @@ body > section {
     background: #fff;
     width: 100%;
     max-width: 800px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin: 0 auto 20px;
-    font-size: 120%;
+    font-size: 12pt;
     overflow: hidden;
     position: relative;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
@@ -490,11 +490,17 @@ html[lang=en] .index li.fr-post a > *:not(.lang-indicator) {
 }
 .index h2 {
     margin: 0;
+    font-size: 1.3em;
     color: rgba(0, 0, 0, 0.55);
     transition: all .2s;
 }
 .home-post .index h2 {
     font-size: 130%;
+}
+.index time {
+    font-size: .9em;
+    margin-top: 10px;
+    display: inline-block;
 }
 .index h2.year {
   text-align: center;
@@ -543,7 +549,7 @@ section.home-post time {
 .archive-post a .index .excerpt {
     color: rgba(0, 0, 0, 0.55);
     position: relative;
-    font-size: 85%;
+    margin: 1rem 0 0;
 }
 
 @media screen and (min-width:500px) {
@@ -553,6 +559,7 @@ section.home-post time {
     }
     .archive-post a .index .excerpt {
         padding-left: 20px;
+        margin-top: 0;
     }
 
 }
@@ -568,7 +575,6 @@ section.home-post time {
 
 .post {
     color: #4D4D4D;
-    font-family: "Montserrat", Cantarell, Roboto, sans-serif;
 }
 body.post .post {
     text-align: left;
@@ -585,6 +591,10 @@ figure {
     margin: 0;
     padding: 0;
 }
+body:not(.home) div.post,
+.archive-post a .index .excerpt {
+    font-family: "PT Sans", sans-serif;
+}
 .post time {
     color: #ccc;
     font-size: 90%;
@@ -597,7 +607,8 @@ figure {
     margin: .5rem 0;
 }
 div.post a {
-    color: #8e8e8e;
+    color: #4D4D4D;
+    font-weight: bold;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
 div.post a:hover {
@@ -631,7 +642,7 @@ div.post a:hover {
 @media screen and (min-width:260px) {
     .post .avatar {
         float: right;
-        margin-left: 1rem;
+        margin-left: .5rem;
         margin-bottom: 1rem;
     }
     .avatar {
@@ -649,6 +660,7 @@ div.post a:hover {
     }
     .post .avatar {
         transform: translate(-8%, -15%);
+        margin-bottom: 2rem;
     }
     .avatar {
         width: 120px;
