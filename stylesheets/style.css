@@ -192,6 +192,7 @@ nav .menu {
     text-transform: lowercase;
     white-space: nowrap;
     text-overflow: clip;
+    animation: fadin 1.2s 1;
 }
 nav .menu a {
     line-height: 1.5;
@@ -216,7 +217,8 @@ nav .menu a:hover {
 nav .language {
     border-radius: 30px;
     margin-left: 5px;
-    border: 2px solid white;
+    border: 2px solid transparent;
+    background-color: rgba(0, 0, 0, .3);
     display: flex;
     transition: all .2s;
 }
@@ -321,11 +323,9 @@ body.home > aside h1 {
 body > header .book-title {
     max-width: 656px;
     padding: 0;
-    -webkit-animation: fadin 1.2s 1;
     animation: fadin 1.2s 1;
     margin: 0 auto;
     box-sizing: border-box;
-    -webkit-transition: all .3s;
     transition: all .3s;
 }
 body > header .book-title small {
@@ -414,7 +414,6 @@ body > section {
     overflow: hidden;
     position: relative;
     box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-    -webkit-transition: all .2s;
     transition: all .2s;
 }
 body > section.faded {
@@ -798,13 +797,16 @@ blockquote {
 }
 @keyframes slidin-top {
     0% {
-        transform: translate(0, 100%);
+        transform: translate(0, 30px);
+        opacity: 0;
     }
     50% {
-        transform: translate(0, 100%);
+        transform: translate(0, 30px);
+        opacity: 0;
     }
     100% {
         transform: translate(0, 0);
+        opacity: 1;
     }
 }
 @keyframes slidin-bottom {
@@ -819,10 +821,13 @@ blockquote {
     }
 }
 @keyframes fadin {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    50% {
+        opacity: 0;
+    }
+    100% {
         opacity: 1;
     }
 }
