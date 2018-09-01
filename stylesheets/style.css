@@ -596,10 +596,11 @@ figure {
     border-radius: 3px;
     margin: .5rem 0;
 }
-.post p a {
+div.post a {
+    color: #8e8e8e;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
-section .post a:hover {
+div.post a:hover {
     border-color: #111;
     text-decoration: none;
 }
