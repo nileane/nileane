@@ -123,7 +123,7 @@ h1, h2, h3, h4 {
 h1, h2, h3 {
     font-weight: 400;
     line-height: 1;
-    color: rgba(0, 0, 0, .7);
+    color: #4D4D4D;
 }
 h1 {
     font-size: 2.8em;
@@ -495,7 +495,6 @@ html[lang=en] .index li.fr-post a > *:not(.lang-indicator) {
 .index h2 {
     margin: 0;
     font-size: 1.3em;
-    color: rgba(0, 0, 0, 0.55);
     transition: all .2s;
 }
 .home-post .index h2 {
@@ -552,6 +551,7 @@ section.home-post time {
 
 .archive-post a .index .excerpt {
     color: rgba(0, 0, 0, 0.55);
+    font-size: 90%;
     position: relative;
     margin: 1rem 0 0;
 }
