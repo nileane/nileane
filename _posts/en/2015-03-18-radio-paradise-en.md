@@ -8,7 +8,7 @@ headimg_url: "/images/wikicommons/Cello_study.jpg"
 headimg_lic: "By MichaelMaggs (Own work) [CC BY-SA 3.0], via Wikimedia Commons"
 headimg_lic_url: "http://commons.wikimedia.org/wiki/File%3ACello_study.jpg"
 ---
-*Today, I decided to support [an online radio](http://radioparadise.com) that I've been listening to for several months already. Here's me writing a small introduction, and sharing a project I enjoy every day.*
+Today, I decided to support [an online radio](http://radioparadise.com) that I've been listening to for several months already. Here's me writing a small introduction, and sharing a project I enjoy every day.
 
 When I listen to music, I often just play my whole music library on shuffle mode, and let it run for hours. Whether it is in the background or I am actively listening to it. Not controlling which specific music I want to play allows me to endessly rediscover my library, which can only grow over time.
 

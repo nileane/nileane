@@ -8,7 +8,7 @@ headimg_url: "/images/wikicommons/Cello_study.jpg"
 headimg_lic: "By MichaelMaggs (Own work) [CC BY-SA 3.0], via Wikimedia Commons"
 headimg_lic_url: "http://commons.wikimedia.org/wiki/File%3ACello_study.jpg"
 ---
-*J'ai aujourd'hui décidé de soutenir [une radio](http://radioparadise.com) en ligne que j'écoute déjà depuis plusieurs mois. Petite présentation et partage de ce projet que j'apprécie tous les jours.*
+J'ai aujourd'hui décidé de soutenir [une radio](http://radioparadise.com) en ligne que j'écoute déjà depuis plusieurs mois. Petite présentation et partage de ce projet que j'apprécie tous les jours.
 
 Quand j'écoute de la musique, le plus souvent, je lance la lecture de ma discothèque de manière aléatoire, et je la laisse tourner pendant des heures, que ce soit en arrière-plan ou pour de l'écoute active. Ne pas contrôler précisément ce que j'écoute me permet de redécouvrir sans cesse ma discothèque, qui ne peut que grandir au fil du temps.
 

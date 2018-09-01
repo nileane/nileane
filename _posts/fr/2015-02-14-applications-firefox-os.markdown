@@ -9,9 +9,9 @@ headimg_url: /images/ffosclose2.jpg
 headimg_lic: William Dorffer CC BY 4.0
 headimg_lic_url: /images/ffosclose2.jpg
 ---
-*Parce que je trouve moi-même ce genre de billets fort pratiques, je réitère l'exercice qui [avait déjà pas mal plu](/2014/05/14/liste-d-applications-pour-firefox-os.html) d'une sélection personnelle d'applications pour Firefox OS. Je les ai pour la plupart utilisées, ou les ai simplement croisées et testées. Voici donc celles qui méritent selon-moi d'être partagées.*
+Parce que je trouve moi-même ce genre de billets fort pratiques, je réitère l'exercice qui [avait déjà pas mal plu](/2014/05/14/liste-d-applications-pour-firefox-os.html) d'une sélection personnelle d'applications pour Firefox OS. Je les ai pour la plupart utilisées, ou les ai simplement croisées et testées. Voici donc celles qui méritent selon-moi d'être partagées.
 
-Elles sont ci-dessous groupées dans ces catégories et dans cet ordre: *Jeux, Musique & Divertissement, Utilitaires, Productives*, et *Misc*.  
+Elles sont ci-dessous groupées dans ces catégories et dans cet ordre: Jeux, Musique & Divertissement, Utilitaires, Productives*, et Misc.  
 Si je publie dans quelques temps une nouvelle sélection, je tâcherai de garder ce même tri pour une bonne homogénéité, même s'il est possible que je les ajuste en fonction des applications que j'aurai à présenter.
 
 
@@ -36,12 +36,12 @@ Petit sommaire :
 [![Game about Squares](/images/openwebapps/gameaboutsquares.png){: class="align center" style="width:600px"}](/images/openwebapps/gameaboutsquares.png)
 
 
- 
+
 
 ## Musique et Divertissement
 **[Foxcasts](https://marketplace.firefox.com/app/foxcasts)** — Je ne suis pas un très gros consommateur de Podcasts. Mais il y en a quelques uns auxquels je suis très habitué. Cette application est parfaite autant pour un petit consommateur comme moi, comme pour un grand assidu de podcasts. Elle inclut la découverte, le téléchargement pour l'écoute hors-ligne, l'écoute en streaming, et son interface est très claire et bien conçue.
 
-[![Vue du lecteur](/images/openwebapps/foxcasts4.png){: class="align 
+[![Vue du lecteur](/images/openwebapps/foxcasts4.png){: class="align
 center" style="max-width:32.2%"}](/images/openwebapps/foxcasts4.png)
 
 **[Rdio](https://marketplace.firefox.com/app/rdio)** – J'utilise depuis peu le service de musique Rdio. Je ne m'étendrai pas sur les avantages d'un tel service ni sur mon choix (ce serait peut-être le sujet d'un autre billet). Mais en tout cas, celui-ci contrairement aux autres existant dispose d'un avantage de poids : il a une application officielle disponible sur le Firefox Marketplace ! Malgré quelques bugs peu gênants, elle est à l'image du service lui-même : élégant, simple mais très fonctionnel.
@@ -52,7 +52,7 @@ center" style="max-width:32.2%"}](/images/openwebapps/foxcasts4.png)
 
 **[eBook](https://marketplace.firefox.com/app/ebook/)** — Celle-ci fait partie de celles que je n'ai que testées. Mais cela n'est que parce que lire sur mon téléphone ne me tente pas tant. L'application est toutefois particulièrement jolie, et rend la lecture et la découverte d'ebooks agréable. À essayer donc
 
- 
+
 
 ## Utilitaires
 **[PasswordMaker](https://marketplace.firefox.com/app/passwordmaker)** — J'ai la vieille habitude de vouloir me créer des mots de passe tordus et uniques pour chaque service sur le web. Cette application répond parfaitement à ce besoin et rend cela très simple. Et à vrai dire, elle m'est devenue indispensable. Extrêmement pratique. La gestion de différents profils est parfaite, ainsi que le sont les paramètres de chiffrement. Je vous la recommande très chaleureusement.
@@ -67,7 +67,7 @@ center" style="max-width:32.2%"}](/images/openwebapps/foxcasts4.png)
 
 [![Mon dossier Vidéos](/images/openwebapps/fichiers.png){: class="align center" style="width:600px"}](/images/openwebapps/fichiers.png)
 
- 
+
 
 ## Productives
 **[Firetext](https://marketplace.firefox.com/app/firetext)** — Un traitement de texte de poche idéal. Si je m'en sers pour prendre quelques notes ci et là, il est tout équipé pour réaliser quelques documents plus complexes. Je le suivrai de près pour voir ce qu'il deviendra lorsque Firefox OS équipera des appareils à de plus grands écrans.
@@ -80,7 +80,7 @@ center" style="max-width:32.2%"}](/images/openwebapps/foxcasts4.png)
 [![On crée une nouvelle tache en tirant vers le bas](/images/openwebapps/awesometasks2.png){: class="align inline" style="max-width:32.2%"}](/images/openwebapps/awesometasks2.png)
 [![En tirant encore davantage vers le bas, on revient vers la liste de toutes les listes.](/images/openwebapps/awesometasks3.png){: class="align inline" style="max-width:32.2%"}](/images/openwebapps/awesometasks3.png)
 
- 
+
 
 ## Misc
 **[ArchWiki Viewer](https://marketplace.firefox.com/app/archwiki-viewer)** — Comme son nom l'indique, elle permet de naviguer dans le wiki très riche d'[Arch linux](http://archlinux.org). Elle a des petites fonctionnalités très sympathiques comme la possibilité de le télécharger entièrement ou partiellement pour une consultation hors-ligne. De quoi dépanner en cas de réel problème avec sa distribution.
@@ -91,7 +91,7 @@ center" style="max-width:32.2%"}](/images/openwebapps/foxcasts4.png)
 **[SpendToday](https://marketplace.firefox.com/app/spendtoday)** — Une app de gestion de budget. Elle se distingue dans sa faculté de *conseil*. Par exemple, pour chaque nouveau jour qui s'approche de la fin du mois, elle affichera un budget disponible plus faible afin de prévenir toute dépense qui serait pas très raisonnable. Je m'en sers de temps à autre pour mon budget loisirs, notamment.
 
 
- 
+
 
 C'est à peu près tout pour cette fois !  
 À voir aussi : [ma précédente sélection d'applications pour Firefox OS](/2014/05/14/liste-d-applications-pour-firefox-os.html)
