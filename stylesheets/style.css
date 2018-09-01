@@ -218,7 +218,7 @@ nav .language {
     border-radius: 30px;
     margin-left: 5px;
     border: 2px solid transparent;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .4);
     display: flex;
     transition: all .2s;
 }
@@ -370,6 +370,7 @@ body > header .book-title img {
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
+    animation: fadin 1.2s 1;
 }
 .socials a {
     text-transform: none;
