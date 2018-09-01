@@ -2,11 +2,8 @@
 layout: default
 friends-list: "false"
 ---
-<section>
-    <div class="post">
-        {{ content }}
-    </div>
-</section>
+{{ content }}
+
 <nav class="socials">
     {% for link in site.data.presences %}<a href="{{ link.url }}">{{ link.title }}</a>{% endfor %}
 </nav>

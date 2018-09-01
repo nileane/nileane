@@ -440,8 +440,7 @@ body.home > section.home-post {
     background-color: #f8f8f8;
     z-index: 3;
 }
-body.home > section,
-body.about > section:first-of-type {
+body.home > section {
     margin-bottom: 0;
     z-index: 2;
 }
@@ -596,7 +595,7 @@ figure {
     margin: 0;
     padding: 0;
 }
-body:not(.home) div.post,
+body:not(.home,.about) div.post,
 .archive-post a .index .excerpt {
     font-family: "PT Sans", sans-serif;
 }
