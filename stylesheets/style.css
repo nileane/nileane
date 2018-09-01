@@ -425,6 +425,11 @@ body > section.faded {
     margin: 0 0 1rem;
     display: block;
 }
+@media screen and (max-width:325px) {
+    body > section {
+        font-size: 10pt;
+    }
+}
 @media screen and (min-width:800px) {
     #signature {
     }
@@ -642,11 +647,16 @@ div.post a:hover {
 @media screen and (min-width:260px) {
     .post .avatar {
         float: right;
-        margin-left: .5rem;
+        margin-left: 0;
         margin-bottom: 1rem;
     }
     .avatar {
         transform: translate(10%, 5%);
+    }
+}
+@media screen and (min-width:330px) {
+    .post .avatar {
+        margin-left: .5rem;
     }
 }
 @media screen and (min-width:500px) {
