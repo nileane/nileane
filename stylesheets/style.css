@@ -192,7 +192,6 @@ nav .menu {
     text-transform: lowercase;
     white-space: nowrap;
     text-overflow: clip;
-    animation: fadin 1.2s 1;
 }
 nav .menu a {
     line-height: 1.5;
@@ -323,7 +322,6 @@ body.home > aside h1 {
 body > header .book-title {
     max-width: 656px;
     padding: 0;
-    animation: fadin 1.2s 1;
     margin: 0 auto;
     box-sizing: border-box;
     transition: all .3s;
@@ -370,7 +368,6 @@ body > header .book-title img {
     box-sizing: border-box;
     display: flex;
     flex-flow: row nowrap;
-    animation: fadin 1.2s 1;
 }
 .socials a {
     text-transform: none;
