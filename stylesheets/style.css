@@ -130,19 +130,18 @@ h1 {
     text-align: center;
 }
 div.post h1 {
-    padding: 1em 0;
-    margin: 0;
+    font-size: 2em;
+    margin: 2em 0 1em;
 }
 div.post h1:first-child {
-    padding: 0 0 .5em;
+    margin: 0 0 .5em;
 }
 .post h2 {
-    font-size: 2em;
-    margin: 2em 0;
-    text-align: center;
+    font-size: 1.8em;
+    margin: 2em 0 1em;
 }
 .post h3 {
-    font-size: 1.8em;
+    font-size: 1.5em;
     margin: 1.5em 0 1em;
 }
 h3 em {
