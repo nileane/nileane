@@ -434,13 +434,7 @@ body > section.faded {
     #signature {
     }
 }
-body.home > section.home-post {
-    margin-bottom: -10px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
-    background-color: #f8f8f8;
-    z-index: 3;
-}
-body.home > section {
+body.home > section:last-of-type {
     margin-bottom: 0;
     z-index: 2;
 }
@@ -465,9 +459,6 @@ ul.index {
     padding: 20px 0;
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-body.home section.archive-post {
-    margin-bottom: 4rem;
 }
 .archive-post .index {
     padding: 20px 0;
@@ -497,9 +488,6 @@ html[lang=en] .index li.fr-post a > *:not(.lang-indicator) {
     font-size: 1.3em;
     transition: all .2s;
 }
-.home-post .index h2 {
-    font-size: 130%;
-}
 .index time {
     font-size: .9em;
     margin-top: 10px;
@@ -520,22 +508,15 @@ html[lang=en] .index li.fr-post a > *:not(.lang-indicator) {
 .index a:hover h2 {
     color: #000;
 }
-section.home-post > a,
 section.archive-post > a {
     padding-top: 0;
     padding-bottom: 0;
     max-width: calc(800px - 11.14%);
 }
-section.archive-post:hover,
-section.home-post:hover {
+section.archive-post:hover {
     box-shadow:
         0 1px 4px rgba(0, 0, 0, 0.04),
         0 0 0 3px rgba(0, 0, 0, 0.14) !important;
-}
-section.home-post > a {
-    padding-top: 24px;
-    padding-bottom: 20px;
-    display: block;
 }
 section.archive-post {
     margin-bottom: 20px;
@@ -544,9 +525,6 @@ section.archive-post > a {
     display: block;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-section.home-post time {
-    color: #c6c6c6;
 }
 
 .archive-post a .index .excerpt {

@@ -1,28 +1,32 @@
 ---
 layout: default
-home-post: "false"
+home-post: "true"
 ---
-
-{% unless layout.home-post == "false" %}
-<section class="home-post">
-   {% assign posts = site.posts | where: "lang", page.lang %}
-   {% for post in posts limit:1 %}
-    <a href="{{ post.url }}">
-    <div class="index">
-     <h2>{{ post.title | replace: '<br>', '' }}</h2>
-     <time datetime='{{ post.date | date: "%Y-%m-%d" }}'><span style="color:#FF5255">{{ site.data.translations[page.lang].lastpost }}</span> · {% include date.html date=post.date %}</time>
-   </div>
-   </a>
-   {% endfor %}
- </section>
-{% endunless %}
-
 <section>
     <div class="post">
         {{ content }}
     </div>
 </section>
 
+{% unless layout.home-post == "false" %}
+{% assign posts = site.posts | where: "lang", page.lang %}
+{% for post in posts limit:1 %}
+<section class="archive-post">
+    <a href="{{ post.url }}">
+    <div class="index">
+        {% unless post.type == "pages" %}
+        <div>
+            <h2>{{ post.title | replace: '<br>', '' }}</h2>
+            <time datetime='{{ post.date | date: "%Y-%m-%d" }}'><span style="color:#4D4D4D; font-weight:bold">{{ site.data.translations[page.lang].lastpost }} •</span> {% include date.html date=post.date %}</time>
+        </div>
+        <div class="excerpt">{{ post.excerpt | strip_html }}
+        <strong style="color: #ff706b;">···</strong></div>
+        {% endunless %}
+    </div>
+    </a>
+</section>
+{% endfor %}
+{% endunless %}
 
 <nav class="socials">
      {% for link in site.data.presences %}<a href="{{ link.url }}" title="{{ link.title | strip_html }}">{{ link.title }}</a>{% endfor %}
