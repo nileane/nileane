@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<title>
+{% if page.title %}
+       {{ page.title | replace:'&nbsp;',' ' | strip_html | escape }} {% unless page.layout == "home" %} • {{ site.title }} {% endunless %}
+{% else %}
+       {{ site.title }}
+{% endif %}
+</title>
+
+{% if page.description %}
+    <meta name="description" content="{{ page.description | strip_html | escape }}">
+{% else %}
+    <meta name="description" content="{{ page.excerpt | strip_html | escape }}">
+{% endif %}
+
+<meta name="author" content="{{ site.author }}">
+<meta property="og:site_name" content="{{ site.title }}" />
+<meta property="og:locale" content="{{ page.lang }}">
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+
+{% feed_meta %}
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<link href="/images/layout/logos/fav.png" rel="icon" type="image/png">
+<link href="/images/layout/logos/Nileane-Chibi-byJessBoooworth-120x120.png" rel="apple-touch-icon">
+<link href="/images/layout/logos/Nileane-Chibi-byJessBoooworth-180x180.png" rel="apple-touch-icon" sizes="180x180">
+<link href="/images/layout/logos/Nileane-Chibi-byJessBoooworth-192x192.png" rel="icon" sizes="192x192">
+<link href="/images/layout/logos/Nileane-Chibi-byJessBoooworth-400x400.png" rel="icon">
+
+{% if page.headimg_url %}
+<style>
+    body > header:after {
+        background-image: url({{ page.headimg_url }});
+        background-position: center center;
+    }
+</style>
+{% endif %}

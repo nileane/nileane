@@ -4,11 +4,14 @@ name: Niléane
 url: https://nileane.fr
 
 author: Niléane Dorffer
-description: Open web enthusiast. Geography Student. I'm a trans girl who likes trains and Human beings. But mostly trains.
+description: Student in Geography & Urban Planning. In favor of an open web, and sometimes web designer. I’m a trans woman with a bunch of cute curls on my head.
 title: Niléane
 
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
+
+plugins:
+  - jekyll-feed
 
 defaults:
   -
