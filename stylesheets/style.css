@@ -309,7 +309,7 @@ body > header:after {
     opacity: .3;
 }
 body > header:before {
-    background: rgb(53, 43, 46);
+    background: rgb(36, 30, 32);
 }
 body > header h1 {
     color: #fff;
