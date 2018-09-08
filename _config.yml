@@ -1,11 +1,11 @@
 ## Configuration file
 
-name: Niléane
+name: Nileane
 url: https://nileane.fr
 
 author: Niléane Dorffer
 description: Student in Geography & Urban Planning. In favor of an open web, and sometimes web designer. I’m a trans woman with a bunch of cute curls on my head.
-title: Niléane
+title: Nileane
 
 permalink: /:year/:month/:day/:title.html
 markdown: kramdown
