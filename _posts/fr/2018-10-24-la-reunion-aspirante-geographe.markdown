@@ -1,10 +1,14 @@
 ---
 layout: post
-published: false
+published: true
 title: "Grandir à La Réunion fit de moi une aspirante géographe."
 ---
-Que pensent la plupart des gens lorsqu’ils entendent parler de La Réunion ? Il s’avère qu’une quantité d’entre eux ne pensent à rien, tout simplement parce qu’ils ignorent son existence. On peut donc commencer par mettre les choses au clair : La Réunion est une île française dans l’Océan Indien, à l’Est de Madagascar, et juste à côté de l’île Maurice.
+Que pensent la plupart des gens lorsqu’ils entendent parler de La Réunion ? Il s’avère qu’une quantité d’entre eux ne pensent à rien, tout simplement parce qu’ils ignorent son existence.
+
+On peut donc commencer par mettre les choses au clair : La Réunion est une île française dans l’Océan Indien, à l’Est de Madagascar, et juste à côté de l’île Maurice.
+
 Concernant ceux qui en ont déjà entendu parler, je crois qu’ils penseraient sûrement aux plages et aux forêts tropicales, au temps constamment ensoleillé, ou à tout autre stéréotype sur les îles tropicales. Il s’avère que tout cela s’applique bel et bien à La Réunion.
+
 J’ai passé presque toute mon enfance sur cette île. À tel point que je ne pourrais m’identifier autrement qu’en tant que fille réunionnaise.
 Cela a véritablement forgé mon affinité avec les différents domaines de la géographie. Ci-dessous, quelques éléments qui peuvent l’expliquer.
 
@@ -20,7 +24,7 @@ Le premier fut une impressionnante autoroute, _La Route des Tamarins_, qui permi
 Le deuxième fut un ambitieux projet de tram-train qui devait connecter l’ensemble des agglomerations côtières. Il fut annulé aussitôt qu’un parti de droite put obtenir la majorité à l’assemblée régionale.
 Le troisième sort tout droit de l’une de ces nouvelles qui mentionnent les infrastructures titanesques perfusées par l’économie chinoise. Je parle de _La Nouvelle Route du Littoral_, une autoroute entièrement perchée au-dessus de l’océan sur ses 12 kilomètres (elle a l’air d’un projet fou, vraiment).
 
-Pourquoi cette folie routière ? La Réunion compte plus de 320 000 ménages, mais plus de 340 000 voitures. Plus d'un quart des ménages possèdent plus d'une voiture en son sein.
+Pourquoi cette folie routière ? La Réunion compte plus de 320 000 ménages, mais plus de 340 000 voitures. Plus d'un quart des ménages possèdent au moins 2 voitures en son sein.
 Des voitures de partout. Les transports en commun sont virtuellement inexistants. Chaque parent doit en avoir une, et chacun de leurs enfants majeurs en a également besoin. Puis l’un des 2 parents peut aussi en posséder une de plus, pour le fun.
 
 Construire toujours plus de routes — toujours plus larges — pour accueillir toujours plus de voitures. Ceci même lorsqu’accueillir toujours de voitures signifie qu’on va devoir construire plus de routes. Un joli cercle vicieux.

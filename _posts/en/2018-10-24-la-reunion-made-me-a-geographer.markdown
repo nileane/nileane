@@ -3,9 +3,10 @@ layout: post
 published: true
 title: "Growing up in La Réunion made me an aspiring Geographer."
 ---
-# Growing up in La Réunion made me an aspiring Geographer.
 What do most people think of when they hear about La Réunion? As it turns out, a big amount of them don’t think of anything, simply because they ignore its existence. So let’s clear that up first: La Réunion is a French island in the Indian Ocean, East of Madagascar and next door to Mauritius Island.
+
 Regarding those who have heard about it, my guess they would think of white beaches, tropical forests, nice weather all year long, and other usual tropical island stereotypes. These of course apply to La Réunion.
+
 I spent almost all of my childhood there. So much that I simply won’t quit identifying myself as a Reunionese girl.
 This has definitely shaped my affinity with the various fields of research that Geography covers. Here’s a few reasons why.
 
@@ -21,7 +22,7 @@ First was a brand new highway, _La Route des Tamarins_, cutting in half the trav
 Second was an ambitious train network to connect all the coastal cities together — that was canceled as soon as a right-wing party was elected to the local government.
 Third simply looks like one of those crazy bridges the Chinese build, _La Nouvelle Route du Littoral_, a highway completely perched on a 12-kilometer long bridge over the ocean (seriously, look it up, it looks crazy).
 
-What’s with the road craziness? La Réunion has over 320 000 households, but over 340 000 cars. More than a quarter of Reunionese households own more than one car.
+What’s with the road craziness? La Réunion has over 320 000 households, but over 340 000 cars. More than a quarter of Reunionese households own at least 2 cars.
 There you go. Cars everywhere. Public Transit virtually absent. Both parents need one each, and each of their child of age needs one too. Also, one parent might actually have a spare car as well, just for fun.
 
 Building more roads — bigger roads — to accommodate more cars, even though more cars means we will need more roads. What a vicious circle.
