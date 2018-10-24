@@ -40,6 +40,7 @@ Who the hell are we? There is no simple answer. And I want to understand. I of c
 
 ## It’s all about Humans.
 Growing up on this tiny volcano in the ocean has helped me realise that Geography is all about Humans. The way we move around. The way we shape our landscapes more than it shapes our societies. The importance of culture in space — physical and political.
+
 - - - -
 
-Note : I could have added many more factors regarding La Réunion, such as its unique ecosystem and the challenges to protect it. But I have tried here to mention the issues that have struck me the most as a Reunionese child, and now an aspiring geographer.
+I could have added many more factors regarding La Réunion, such as its unique ecosystem and the challenges to protect it. But I have tried here to mention the issues that have struck me the most as a Reunionese child, and now an aspiring geographer.

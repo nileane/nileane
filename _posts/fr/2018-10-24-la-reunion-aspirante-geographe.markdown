@@ -45,4 +45,4 @@ Grandir sur un _petit_ volcan dans l’océan m’a permis de réaliser que la g
 
 - - - -
 
-Note : J’aurais pu mentionner beaucoup plus de facteurs concernant La Réunion, par exemple son unique écosystème et les défis à affronter pour le protéger. Mais j’ai ici tenté de mentionner avant tout ceux qui m’avait le plus frappée en tant que petite enfant réunionnaise, désormais devenue aspirante géographe.
+J’aurais pu mentionner beaucoup plus de facteurs concernant La Réunion, par exemple son unique écosystème et les défis à affronter pour le protéger. Mais j’ai ici tenté de mentionner avant tout ceux qui m’avait le plus frappée en tant que petite enfant réunionnaise, désormais devenue aspirante géographe.
