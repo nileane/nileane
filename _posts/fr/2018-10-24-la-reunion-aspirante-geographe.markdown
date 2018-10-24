@@ -40,7 +40,7 @@ Cela va bien sûr dépendre de la personne à qui l’on va poser cette question
 
 Qui sommes-nous bordel ? Il n’y a pas de réponse simple, et j’aimerais comprendre. J’ai bien sûr des opinions et des idées — mais j’adorerais mener ma propre réflexion sur la question.
 
-## C’est une question d’humanité
+## C’est une question d’humanité.
 Grandir sur un _petit_ volcan dans l’océan m’a permis de réaliser que la géographie concerne avant tout les êtres humains : la manière dont ils se déplacent — la tendance de leurs sociétés à forger leur environnement (davantage que leur environnement ne les forge) — ainsi que l’importance de leurs cultures dans l’espace physique et politique.
 
 - - - -
