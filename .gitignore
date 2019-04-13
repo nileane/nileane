@@ -2,5 +2,3 @@ _site/
 *~
 *.sqlite
 Gemfile.lock
-.bundle/config
-vendor/
