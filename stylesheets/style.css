@@ -261,10 +261,12 @@ nav .language a:first-child:not(.active) {
     }
 }
 @media screen and (min-width:801px) {
-    .home nav .menu,
-    .archive nav .menu,
-    .about nav .menu {
-        top: 155px
+    nav .menu {
+        left: 0;
+    }
+    nav .language {
+        position: absolute;
+        right: 0;
     }
 }
 
@@ -317,6 +319,9 @@ body > header h1 {
     font-size: 2em;
     text-align: left;
     vertical-align: middle;
+}
+body:not(.post) > header h1 {
+    text-align: center;
 }
 body.home > aside h1 {
     font-size: 2.7em;
