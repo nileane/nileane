@@ -11,17 +11,9 @@ layout: default
         {% endif %}
 
         {{ content }}
-
-        <!--<p style="text-align:right;">
-        {% if page.categories %}
-        {% for category in page.categories %}
-            {% if forloop.first %}<span style="float:right; margin-left:.25em;" class="mega-octicon octicon-tag"></span>{% endif %}
-            {{ category | capitalize }}{% unless forloop.last %}, {% else %}.{% endunless %}
-        {% endfor %}
-        {% endif %}
-        </p>-->
     </div>
 </section>
+
 <section class="faded">
     <div class="post" style="padding-top:0">
        <a href="/{% if page.lang == "en" %}en{% endif %}"><img src="/images/layout/logos/nileane-logo-black.svg" alt="Niléane" id="signature"></a>
