@@ -117,9 +117,6 @@ hr.title:first-child {
  * ------------------
  */
 
-h1, h2, h3, h4 {
-    /* font-family: "Voltaire", "Roboto Condensed", "Fira Sans", "Cantarell", sans-serif; */
-}
 h1, h2, h3 {
     font-weight: 400;
     line-height: 1;
