@@ -248,7 +248,7 @@ nav .language a:first-child:not(.active) {
     }
     nav .menu {
         position: absolute;
-        right: 0;
+        left: 0;
     }
     nav .language {
         position: absolute;
