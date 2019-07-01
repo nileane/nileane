@@ -34,6 +34,25 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i');
 @import url(syntax.css);
 
+
+:root {
+    color-scheme: light dark;
+    --bg-body-color: #f0f0f0;
+    --bg-section-color: #ffffff;
+    --fg-post-color: #4d4d4d;
+    --fg-link-color: #4d4d4d;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body-color: #111111;
+        --bg-section-color: #2c2a27;
+        --fg-post-color: #cccccc;
+        --fg-link-color: #ff706b;
+    }
+}
+
+
 /*
  * 1. Body and General declarations
  * --------------------------------
@@ -41,7 +60,7 @@
 
 body {
     font: 10pt "Montserrat", Cantarell, Roboto, sans-serif;
-    background: #f0f0f0;
+    background: var(--bg-body-color);
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -120,7 +139,7 @@ hr.title:first-child {
 h1, h2, h3 {
     font-weight: 400;
     line-height: 1;
-    color: #4D4D4D;
+    color: var(--fg-post-color);
 }
 h1 {
     font-size: 2.8em;
@@ -379,7 +398,7 @@ body > header .book-title img {
     flex: 1 1 80px;
     display: inline-block;
     border-radius: 30px;
-    color: #333;
+    color: var(--fg-post-color);
 }
 @media screen and (max-width:500px) {
     .socials a {
@@ -407,7 +426,7 @@ body > header .book-title img {
  */
 
 body > section {
-    background: #fff;
+    background: var(--bg-section-color);
     width: 100%;
     max-width: 800px;
     border-radius: 6px;
@@ -558,7 +577,7 @@ section.archive-post > a {
  */
 
 .post {
-    color: #4D4D4D;
+    color: var(--fg-post-color);
 }
 body.post .post {
     text-align: left;
@@ -591,7 +610,7 @@ body:not(.home,.about) div.post,
     margin: .5rem 0;
 }
 div.post a {
-    color: #4D4D4D;
+    color: var(--fg-link-color);
     font-weight: bold;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
