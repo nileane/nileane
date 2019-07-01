@@ -402,6 +402,9 @@ body > header .book-title img {
     border-radius: 30px;
     color: var(--fg-post-color);
 }
+.socials span {
+    margin-right: 5px;
+}
 @media screen and (max-width:500px) {
     .socials a {
         padding: .2rem 0;
