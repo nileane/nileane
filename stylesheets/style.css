@@ -602,7 +602,7 @@ figure {
     margin: 0;
     padding: 0;
 }
-body:not(.home,.about) div.post,
+.post div.post,
 .archive-post a .index .excerpt {
     font-family: "PT Sans", sans-serif;
 }
