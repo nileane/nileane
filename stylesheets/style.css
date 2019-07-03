@@ -52,6 +52,9 @@
         --fg-link-color: #ff706b;
         --special-hover-color: #ffffff;
     }
+    #signature {
+        filter: invert(1);
+    }
 }
 
 
