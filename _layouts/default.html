@@ -28,11 +28,10 @@
             {% if page.layout == "home" or page.layout == "archive" or page.layout == "about" %}
                 <h1><a href="/{% if page.lang == "en" %}en{% endif %}"><img src="/images/layout/logos/nileane-logo-white.svg" alt="Niléane"></a></h1>
             {% else %}
+                <small><time datetime='{{ page.date | date_to_xmlschema }}' class="top">{% include date.html date=page.date %}</time></small>
                 <h1>{{ page.title }}</h1>
             {% endif %}
-            {% if page.desc %}
-                <small>{{ page.desc }}</small>
-            {% elsif page.link %}
+            {% if page.link %}
                 <small><a href="{{ page.link }}" target="_blank">{{ page.link }}</a> <span class="octicon octicon-link-external"></span></small>
             {% endif %}
         </div>
