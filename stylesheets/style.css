@@ -144,6 +144,7 @@ hr.title:first-child {
 h1, h2, h3 {
     font-weight: 400;
     line-height: 1;
+    font-family: "Montserrat", sans-serif;
     color: var(--fg-post-color);
 }
 h1 {
