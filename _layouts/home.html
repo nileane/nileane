@@ -17,7 +17,7 @@ home-post: "false"
         {% unless post.type == "pages" %}
         <div>
             <h2>{{ post.title | replace: '<br>', '' }}</h2>
-            <time datetime='{{ post.date | date_to_xmlschema }}'><span style="color:#4D4D4D; font-weight:bold">{{ site.data.translations[page.lang].lastpost }} •</span> {% include date.html date=post.date %}</time>
+            <time datetime='{{ post.date | date_to_xmlschema }}'><span style="font-weight:bold">{{ site.data.translations[page.lang].lastpost }} •</span> {% include date.html date=post.date %}</time>
         </div>
         <div class="excerpt">{{ post.excerpt | strip_html }}
         <strong style="color: #ff706b;">···</strong></div>
