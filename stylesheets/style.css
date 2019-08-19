@@ -42,6 +42,7 @@
     --fg-post-color: #4d4d4d;
     --fg-link-color: #4d4d4d;
     --special-hover-color: #000000;
+    --border-color: #dedede;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,6 +52,7 @@
         --fg-post-color: #cccccc;
         --fg-link-color: #ff706b;
         --special-hover-color: #ffffff;
+        --border-color: #1e1e1e;
     }
     #signature {
         filter: invert(1);
@@ -107,16 +109,15 @@ a {
  * -------------------
  */
 
-hr {
-    border-top: 1px solid #dedede;
-    height: 4px;
-    width: 30%;
-    max-width: 150px;
-    margin: 2em auto;
-    border-right: 0;
-    border-left: 0;
-    border-bottom: 1px solid #dedede;
-}
+ hr {
+     border: 0;
+     height: 4px;
+     width: 30%;
+     max-width: 200px;
+     background-color: var(--border-color);
+     border-radius: 4px;
+     margin: 2em auto;
+ }
 aside hr {
     border-color: rgba(255, 255, 255, 0.2) !important;
 }
