@@ -8,11 +8,11 @@
 
     <nav>
         <div class="menu">
-            {% for link in site.data.nav[page.lang] %}
+            <!-- {% for link in site.data.nav[page.lang] %}
                 {% assign activeurl = link[1].url | append:'/' %}
                 <a href="{{ link[1].url }}" {% if page.url == activeurl %}class="active"{% elsif page.layout == link[0] %}class="active"{% endif %} title="{{ link[1].title }}">{{ link[1].title }}</a>
             {% endfor %}
-            {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %}
+            {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %} -->
             <span class="language">
                 {% for post in site.posts %}
                   {% if post.date == page.date %}
