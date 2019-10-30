@@ -278,6 +278,12 @@ nav .language a:first-child:not(.active) {
     }
     nav .language {
         position: absolute;
+        right: 50%;
+        top: 10px;
+        transform: translateX(50%);
+    }
+    .post nav .language {
+        position: absolute;
         right: -5px;
         top: 30px;
         transform: scale(.8);
