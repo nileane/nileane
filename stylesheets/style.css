@@ -54,9 +54,6 @@
         --special-hover-color: #ffffff;
         --border-color: #1e1e1e;
     }
-    #signature {
-        filter: invert(1);
-    }
 }
 
 
@@ -289,6 +286,7 @@ nav .language a:first-child:not(.active) {
     width: 80px;
     margin: 0 0 1rem;
     display: block;
+    filter: invert(1);
 }
 
 @media screen and (max-width:800px) {
