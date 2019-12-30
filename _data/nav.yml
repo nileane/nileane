@@ -1,8 +1,14 @@
 en:
+  home:
+     title: "Profile"
+     url:   "/en"
   archive:
     title: "Blog"
     url:   "/en/archive"
 fr:
+  home:
+     title: "Profil"
+     url:   "/"
   archive:
     title: "Blog"
     url:   "/fr/archive"

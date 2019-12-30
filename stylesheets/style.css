@@ -200,6 +200,9 @@ body > nav {
     text-transform: uppercase;
     box-sizing: border-box;
 }
+body.post > nav {
+    height: 90px;
+}
 body > nav > div {
     padding: 0;
     box-sizing: border-box;
@@ -210,10 +213,12 @@ nav .menu {
     position: absolute;
     right: 0;
     top: 25px;
-    display: flex;
     text-transform: lowercase;
     white-space: nowrap;
     text-overflow: clip;
+}
+.post nav .menu {
+    top: 50px;
 }
 nav .menu a {
     line-height: 1.5;
@@ -236,14 +241,20 @@ nav .menu a:hover {
     color: white;
 }
 
-nav .language {
+nav .language,
+nav .menu-items {
     border-radius: 30px;
     margin-left: 5px;
     border: 2px solid transparent;
     margin: 0 2.5px;
+    float: right;
     background-color: #000;
     display: flex;
     transition: all .2s;
+}
+nav .menu-items {
+    background-color: transparent;
+    float: left;
 }
 nav .language:hover {
     background-color: #ff706b;
@@ -267,6 +278,19 @@ nav .language a:first-child:not(.active) {
     padding-right: 40px;
 }
 
+#signature-link {
+    float: left;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#signature {
+    width: 80px;
+    margin: 0 0 1rem;
+    display: block;
+}
+
 @media screen and (max-width:800px) {
     body > nav {
         max-width: 100%;
@@ -277,16 +301,13 @@ nav .language a:first-child:not(.active) {
         left: 0;
     }
     nav .language {
-        position: absolute;
-        right: 50%;
-        top: 10px;
-        transform: translateX(50%);
     }
     .post nav .language {
-        position: absolute;
-        right: -5px;
-        top: 30px;
-        transform: scale(.8);
+        right: 20px;
+    }
+    #signature-link {
+        left: 0;
+        transform: translate(0) scale(.8);
     }
 }
 @media screen and (min-width:801px) {
@@ -460,20 +481,13 @@ body > section.faded {
     background: none;
     box-shadow: none;
 }
-#signature {
-    width: 80px;
-    margin: 0 0 1rem;
-    display: block;
-}
+
 @media screen and (max-width:325px) {
     body > section {
         font-size: 10pt;
     }
 }
-@media screen and (min-width:800px) {
-    #signature {
-    }
-}
+
 body.home > section:last-of-type {
     margin-bottom: 0;
     z-index: 2;
