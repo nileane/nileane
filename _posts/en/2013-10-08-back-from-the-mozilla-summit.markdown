@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: Back from the Mozilla Summit in Brussels
 category: Mozilla

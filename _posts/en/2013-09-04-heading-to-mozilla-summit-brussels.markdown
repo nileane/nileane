@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: false
 title: Heading to the Mozilla Summit 2013
 category: Mozilla
