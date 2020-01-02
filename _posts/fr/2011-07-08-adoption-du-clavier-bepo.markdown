@@ -2,6 +2,7 @@
 layout: post
 title: Adoption du clavier BÉPO
 categories: [bépo,Libre]
+published: false
 ---
 On connait bien sûr la disposition de clavier standard francophone AZERTY. Celui-ci contient la plupart des caractères essentiels à l'écriture d'un Français correct (dans une très certaine limite). Eh bien mon ami, sache qu'il en existe d'autres qui ne manquent pas d'avantages, dont la [disposition BÉPO](http://bepo.fr/wiki/Accueil). Et c'est à partir de ce moment que je prends le rôle de promoteur non-corrompu.
 

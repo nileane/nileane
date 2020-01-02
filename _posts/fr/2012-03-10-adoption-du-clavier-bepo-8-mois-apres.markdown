@@ -1,7 +1,7 @@
 ---
 layout: post
 title: ! 'Adoption du clavier BÉPO : 8 mois après.'
-published: true
+published: false
 categories: [bépo,Libre]
 ---
 Il y a 8 mois environ, je parlais de ma décision de [changer radicalement de disposition de clavier](/2011/07/08/adoption-du-clavier-bepo.html). Quel petit fou étais-je ?  

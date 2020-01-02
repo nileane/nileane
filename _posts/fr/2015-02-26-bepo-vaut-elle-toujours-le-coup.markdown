@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 exacttime: "05:32:00"
 title: La disposition BÉPO vaut-elle toujours le coup ?
 categories: ["bépo","Libre"]

@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: « Je ne savais pas qu'on avait de tels barjots dans ce lycée. »
 column: true
