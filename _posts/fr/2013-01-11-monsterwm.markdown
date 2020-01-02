@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Monsterwm : configuration et joyeusetés"
 ---
 Comme j'ai tendance à adorer le renouveau, je me suis mis en tête de tester autre chose que [WMFS](http://localhost:4000/2012/04/14/wmfs-exposition-de-ma-configuration.html), que je n'avais pas quitté depuis mon arrivée sur Archlinux. Un Tiling Window Manager, c'est certain.

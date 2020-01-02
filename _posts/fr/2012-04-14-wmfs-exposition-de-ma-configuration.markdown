@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'WMFS2 : ma configuration'
-published: true
+published: false
 ---
 WMFS, est un tiling window manager très simple à configurer, au point qu'on n'ait en général qu'à personnaliser le schéma de couleurs. Le plus gros du boulot se situera principalement autour des statusbars. On s'attardera d'ailleurs sur ces dernières dans la seconde partie de ce billet.
 

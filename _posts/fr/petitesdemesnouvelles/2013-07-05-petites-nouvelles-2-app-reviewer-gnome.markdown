@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Petites de mes nouvelles #2 : retour à GNOME, app reviewer, du beau CSS."
 category: "Petites de mes nouvelles"

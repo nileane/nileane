@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Petites de mes nouvelles : Boot2Gecko, StatusNet …"
 category: "Petites de mes nouvelles"
