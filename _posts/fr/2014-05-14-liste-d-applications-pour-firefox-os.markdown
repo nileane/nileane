@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Sélection d'applications pour Firefox OS #1"
 categories: ["Firefox OS","Libre"]

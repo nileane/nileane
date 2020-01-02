@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Quotidien d’une Niléane #1 : coming-out, prénom, et THS. Autant de commencements."
 desc: "Je m'appelle Niléane. Enchantée."

@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "MPD, mon copain pour la musique."
 column: true
