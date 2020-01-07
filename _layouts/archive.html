@@ -3,18 +3,19 @@ layout: default
 ---
 {% assign posts = site.posts | where: "lang", page.lang %}
 {% for post in posts %}
-<section class="archive-post">
-    <a href="{{ post.url }}">
-    <div class="index">
-        {% unless post.type == "pages" %}
-        <div>
-            <h2>{{ post.title | replace: '<br>', '' }}</h2>
-            <time datetime='{{ post.date | date_to_xmlschema }}'>{% include date.html date=post.date %}</time>
+    {% unless post.type == "pages" %}
+    <section class="archive-post">
+        <a href="{{ post.url }}">
+        <div class="index">
+            <div>
+                <h2>{{ post.title | replace: '<br>', '' }}</h2>
+                <time datetime='{{ post.date | date_to_xmlschema }}'>{% include date.html date=post.date %}</time>
+            </div>
+            <div class="excerpt">{{ post.excerpt | strip_html }}
+            <strong style="color: #ff706b;">···</strong></div>
+
         </div>
-        <div class="excerpt">{{ post.excerpt | strip_html }}
-        <strong style="color: #ff706b;">···</strong></div>
-        {% endunless %}
-    </div>
-    </a>
-</section>
+        </a>
+    </section>
+    {% endunless %}
 {% endfor %}
