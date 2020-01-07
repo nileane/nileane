@@ -2,7 +2,11 @@
 layout: default
 ---
 {% assign posts = site.posts | where: "lang", page.lang %}
+<<<<<<< HEAD
 {% for post in posts %}
+=======
+{% for post in posts limit:1 %}
+>>>>>>> 91f89d071b678a9517cbe1bb9d4913f40cfc1213
 <section class="archive-post">
     <a href="{{ post.url }}">
     <div class="index">
@@ -18,3 +22,26 @@ layout: default
     </a>
 </section>
 {% endfor %}
+<<<<<<< HEAD
+=======
+
+<section id="allposts">
+    <div>
+        <ul class="index">
+            {% assign posts = site.posts | where: "lang", page.lang %}
+            {% for post in posts offset: 1 %}
+
+            {% unless post.type == "pages" %}
+            <li class="{{ post.lang }}-post">
+            <a href="{{ post.url }}">
+                    <h2>{{ post.title | replace: '<br>', '' }}</h2>
+                    <time datetime='{{ post.date | date_to_xmlschema }}'>{% include date.html date=post.date %}</time>
+            </a>
+            </li>
+            {% endunless %}
+
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+>>>>>>> 91f89d071b678a9517cbe1bb9d4913f40cfc1213

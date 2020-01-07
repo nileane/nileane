@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 exacttime: "11:02:00"
 comments: true
 title: "Sélection d'applications pour Firefox OS #2"

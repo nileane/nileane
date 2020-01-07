@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Growing up in La Réunion made me an aspiring Geographer."
 ---
 What do most people think of when they hear about La Réunion? As it turns out, a big amount of them don’t think of anything, simply because they ignore its existence. So let’s clear that up first: La Réunion is a French island in the Indian Ocean, East of Madagascar and next door to Mauritius Island.

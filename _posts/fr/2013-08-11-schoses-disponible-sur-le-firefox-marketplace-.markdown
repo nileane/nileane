@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: Schoses disponible sur le Firefox Marketplace.
 category: Projects

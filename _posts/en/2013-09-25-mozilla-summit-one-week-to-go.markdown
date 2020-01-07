@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Mozilla Summit: one week left!"
 category: Mozilla

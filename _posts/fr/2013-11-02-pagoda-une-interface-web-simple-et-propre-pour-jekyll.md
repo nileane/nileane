@@ -1,7 +1,7 @@
 ---
 title: Pagoda, une interface web simple et propre pour Jekyll
 layout: post
-published: true
+published: false
 link: https://github.com/alagu/pagoda
 comments: true
 category: Jekyll

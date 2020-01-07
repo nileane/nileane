@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Quant aux open web apps, petit bilan d'expérience."
 categories: [Libre,"Open Web","Projects"]

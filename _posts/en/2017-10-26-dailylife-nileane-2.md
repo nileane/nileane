@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Daily life of a Niléane #2: new confidence and hassles."
 headimg_url: "/images/ongles_brillants.jpg"

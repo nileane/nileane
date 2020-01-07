@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Somptueux GNOME 3
-published: true
+published: false
 ---
 Ils fleurissent tous ces articles sur le web à propos de GNOME 3, et sa nouvelle interface. Et c'est pour ça que je ne la décrirai pas, je te redirige ami lecteur vers [cette page](http://gnome.org) (parmi tant d'autres articles) qui t'en apprendra plus sur cette nouvelle interface.  
 Cela fait maintenant presque 1 mois que je me forge mon humble et ridicule avis.  

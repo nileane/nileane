@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Introducing Schrift, a Jekyll template designed for prose.
 categories: ["Web design",Projects]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Développons pour le web, pas pour Chrome.
 category: [Libre,"Open Web"]
 ---

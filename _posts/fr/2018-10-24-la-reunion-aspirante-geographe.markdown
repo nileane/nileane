@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Grandir à La Réunion fit de moi une aspirante géographe."
 ---
 Que pensent la plupart des gens lorsqu’ils entendent parler de La Réunion ? Il s’avère qu’une quantité d’entre eux ne pensent à rien, tout simplement parce qu’ils ignorent son existence.

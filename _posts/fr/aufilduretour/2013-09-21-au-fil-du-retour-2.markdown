@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: "Au Fil du retour #2 : Non-Euclidien."
 category: "Au Fil du retour"

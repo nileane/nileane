@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 comments: true
 title: Schmusic, résultat d'une petite heure d'ennui.
 category: "Musique"

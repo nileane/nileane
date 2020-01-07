@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Petites de mes nouvelles #4 : vers Lyon !"
 category: "Petites de mes nouvelles"
 ---

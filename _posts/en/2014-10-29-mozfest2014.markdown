@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: "Back from MozFest 2014!"
 category: Mozilla
 headimg_url: /images/mozfest2014/IMG_0030.jpg
