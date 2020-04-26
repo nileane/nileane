@@ -1,6 +1,6 @@
 # Site settings
-title_left    : "Nilean"
-title_right   : "e" # default: ""
+title_left    : "Niléane"
+title_right   : "" # default: ""
 description   : "Geography, Design & Tech"
 keywords      : "geography, lgbt, design, tech"
 url           : https://nileane.fr # site url
@@ -20,44 +20,9 @@ highlighter : rouge
 source      : ./
 destination : ./_site
 
-# Sass configuration
-sass:
-  sass_dir  : assets/scss
-  style     : compressed # expanded
-
 # Author settings
 author:
   name     : "Niléane"
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-  - bourbon
-  - jekyll-paginate
-
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
-
-exclude:
-  - "gulp"
-  - "node_modules"
-  - "bower"
-  - "bower_components"
-  - "config.rb"
-  - "src"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - ".rvmrc"
-  - ".rbenv-version"
-  - "package.json"
-  - "gulpfile.js"
-  - "README.md"
-  - "Rakefile"
-  - "changelog.md"
-  - "script"
-  - "vendor"
-  - "thinkspace.gemspec"
