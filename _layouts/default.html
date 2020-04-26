@@ -1,51 +1,16 @@
+---
+layout: compress
+published: true
+---
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
-  <head>
-      {% include head.html %}
-  </head>
-
-  <body {% if page.layout %}class="{{ page.layout }}"{% endif %}>
-
-    <nav>
-        <div class="menu">
-        {% if page.layout == "home" or page.layout == "archive" or page.layout == "about" %}
-            <span class="menu-items">
-            {% for link in site.data.nav[page.lang] %}
-                {% assign activeurl = link[1].url | append:'/' %}
-                <a href="{{ link[1].url }}" {% if page.url == activeurl %}class="active"{% elsif page.layout == link[0] %}class="active"{% endif %} title="{{ link[1].title }}">{{ link[1].title }}</a>
-            {% endfor %}
-            {% assign altlang = site.posts | where:"date", page.date | sort: 'path' %}
-            </span>
-        {% endif %}
-            <span class="language">
-                {% for post in site.posts %}
-                  {% if post.date == page.date %}
-                    <a class="swt {% if page.lang == post.lang %}active{% endif %}" href="{{ post.url }}">{{ post.lang }}</a>
-                  {% endif %}
-                {% endfor %}
-            </span>
-        </div>
-        {% unless page.layout == "home" or page.layout == "archive" or page.layout == "about" %}
-        <a href="/{% if page.lang == "en" %}en{% endif %}" id="signature-link"><img src="/images/layout/logos/nileane-logo-black.svg" alt="Niléane" id="signature"></a>
-        {% endunless %}
-
-    </nav>
-
-    <header>
-        <div class="book-title">
-            {% if page.layout == "home" or page.layout == "archive" or page.layout == "about" %}
-                <h1><a href="/{% if page.lang == "en" %}en{% endif %}"><img src="/images/layout/logos/nileane-logo-white.svg" alt="Niléane"></a></h1>
-            {% else %}
-                <small><time datetime='{{ page.date | date_to_xmlschema }}' class="top">{% include date.html date=page.date %}</time></small>
-                <h1>{{ page.title }}</h1>
-            {% endif %}
-            {% if page.link %}
-                <small><a href="{{ page.link }}" target="_blank">{{ page.link }}</a> <span class="octicon octicon-link-external"></span></small>
-            {% endif %}
-        </div>
-    </header>
-
-    {{ content }}
-
+<html>
+  {% include head.html %}
+  <body>
+    <main class="wrapper">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </main>
+    {% include foot.html %}
   </body>
 </html>

@@ -1,27 +1,63 @@
-## Configuration file
+# Site settings
+title_left    : "Nilean"
+title_right   : "e" # default: ""
+description   : "Geography, Design & Tech"
+keywords      : "geography, lgbt, design, tech"
+url           : https://nileane.fr # site url
+baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "" # image uri like logo/cover image for site seo
 
-name: Nileane
-url: https://nileane.fr
+twitter_username  : "nildeala"
+comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+disqus_shortname  : ""
+postshare_enabled : false
 
-author: Niléane Dorffer
-description: Student in Geography & Urban Planning. In favor of an open web, and sometimes web designer. I’m a trans woman with a bunch of cute curls on my head.
-title: Nileane
+# Build settings
+permalink   : /:year/:month/:day/:title.html
+markdown    : kramdown
+highlighter : rouge
 
-permalink: /:year/:month/:day/:title.html
-markdown: kramdown
+source      : ./
+destination : ./_site
+
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+# Author settings
+author:
+  name     : "Niléane"
 
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
 
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      lang: fr
-      layout: default
-  -
-    scope:
-      path: _posts/en
-    values:
-      lang: en
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
+
+exclude:
+  - "gulp"
+  - "node_modules"
+  - "bower"
+  - "bower_components"
+  - "config.rb"
+  - "src"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "package.json"
+  - "gulpfile.js"
+  - "README.md"
+  - "Rakefile"
+  - "changelog.md"
+  - "script"
+  - "vendor"
+  - "thinkspace.gemspec"
