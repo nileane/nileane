@@ -261,6 +261,10 @@ a {
     transition:color 150ms ease
 }
 
+.linkitem {
+  display: inline-block;
+}
+
 
 hr {
     border-bottom: 1px solid #ccc;
