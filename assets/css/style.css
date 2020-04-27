@@ -369,6 +369,31 @@ body {
     background-position: 0 0, 30px 30px;
 }
 
+/*
+ * Accessible navigation shortcuts, to skip through content
+ * Inspired by the MDN's keyboard navigation
+ */
+#skip-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -20rem;
+    width: 100%;
+    z-index: 1001;
+}
+
+#skip-nav a {
+    background: #fff;
+    left: 1rem;
+    padding: 1rem;
+    position: absolute;
+}
+
+#skip-nav a:focus {
+    top: 21rem;
+}
+
 
 .wrapper {
     padding-top: 20vh;
