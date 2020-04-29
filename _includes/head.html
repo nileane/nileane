@@ -21,34 +21,10 @@
 
   <title>{{ page_title }}</title>
 
-  {% assign page_description = '' %}
-  {% capture page_description %}
-      {% if page.description %}
-          {{ page.description | strip_html | strip | rstrip | strip_newlines | truncate: 160 }}
-      {% else %}
-          {{ site.description }}
-      {% endif %}
-      {%if paginator and paginator.page != 1 %} - {{ paginator.page }} {% endif %}
-      {%if page.slug == 'category' %} Category: {{ page.title }}{% endif %}
-      {%if page.slug == 'tag' %} Tag: {{ page.title }}{% endif %}
-  {% endcapture %}
-
-  {% capture page_description %}
-      {{ page_description | strip | rstrip | lstrip | escape | strip_newlines }}
-  {% endcapture %}
-
-  <meta name="description" content="{{ page_description }}">
+  <meta name="description" content="{{ site.description }}">
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
 
-  {% assign page_image = '' %}
-  {% capture page_image %}
-      {% if page.cover %}
-          {{ page.cover | prepend: site.baseurl | prepend: site.url }}
-      {% else %}
-          {{ site.cover | prepend: site.baseurl | prepend: site.url }}
-      {% endif %}
-  {% endcapture %}
-  {% capture page_image %}{{ page_image | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
+  {% assign page_image = '/images/logos/nileane-favicon-192px.png' %}
 
   <!-- generics -->
   <link rel="icon" type="image/svg+xml" href="/images/logos/nileane-favicon.svg">
@@ -60,7 +36,7 @@
   <link rel="icon" href="/images/logos/nileane-favicon-400px.png" sizes="400x400">
 
   <!-- Android -->
-  <link rel="shortcut icon" sizes="196x196" href=“/images/logos/nileane-favicon-196px.png">
+  <link rel="shortcut icon" sizes="196x196" href="/images/logos/nileane-favicon-196px.png">
 
   <!-- iOS -->
   <link rel="apple-touch-icon" href="/images/logos/nileane-favicon-120px.png" sizes="120x120">
@@ -80,18 +56,18 @@
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:image" content="{{ page_image }}">
-  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:description" content="{{ site.description }}">
   <meta property="og:site_name" content="{{ site.author.name }}">
   <meta property="og:locale" content="en_US">
 
   <!-- Social: Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="{{ site.twitter_username }}">
   <meta name="twitter:title" content="{{ page_title }}">
-  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:description" content="{{ site.description }}">
   <meta name="twitter:image:src" content="{{ page_image }}">
 
-  <!-- Canonical link tag -->
+  <!-- Canonical link tag -->x 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title_left }}{{ site.title_right }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
