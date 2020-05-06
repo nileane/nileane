@@ -69,7 +69,7 @@
 
   <!-- Canonical link tag -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title_left }}{{ site.title_right }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title_left }}{{ site.title_right }}" href="/feed.xml">
 
   <!-- rel prev and next -->
   {% if paginator.previous_page %}
@@ -79,5 +79,5 @@
     <link rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}">
   {% endif %}
 
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
