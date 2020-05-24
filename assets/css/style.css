@@ -366,6 +366,12 @@ body {
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
 }
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
 
 /*
  * Accessible navigation shortcuts, to skip through content
@@ -477,6 +483,11 @@ hr {
       margin-top: -3em;
       height: 90px;
     }
+}
+@media screen and (prefers-color-scheme: light) {
+  #logo {
+    filter: invert(1);
+  }
 }
 
 .nav {
@@ -595,6 +606,11 @@ hr {
     display: block;
     font-size: .75rem;
     color:lightgray
+}
+@media screen and (prefers-color-scheme: light) {
+  .site-footer, .site-footer small {
+    color: #000;
+  }
 }
 
 .site-footer .block {
