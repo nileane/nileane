@@ -362,9 +362,7 @@ html, body {
 }
 
 body {
-    background-color:#001;
-    background-image: radial-gradient(#444 2%, transparent 2%),
-                      radial-gradient(#444 2%, transparent 2%);
+    background-color: #000;
     background-size: 60px 60px;
     background-position: 0 0, 30px 30px;
 }
