@@ -407,12 +407,6 @@ body {
       padding-top: 22vh;
   }
 }
-@media screen and (min-width:800px) and (min-height:800px) {
-    .wrapper {
-        padding-top: 60vh;
-        transform: translate(0, -30vh);
-    }
-}
 
 hr {
     border-top: none;
