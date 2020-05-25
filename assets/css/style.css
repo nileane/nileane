@@ -504,9 +504,9 @@ hr {
     position: absolute;
     left: 0;
     top: 0;
-    width: 54px;
-    height: 54px;
-    margin: -2px 0 0 -2px;
+    width: 53px;
+    height: 53px;
+    margin: -1.5px 0 0 -1.5px;
     z-index: -1;
     border-radius: 50%;
     background: linear-gradient(to right, #D87D46, #6761DF);
@@ -546,7 +546,7 @@ hr {
 .line {
     position: relative;
     margin-top: 1.5em;
-    height: .1rem;
+    height: 1.5px;
     background-image: linear-gradient(to right, #D87D46, #6761DF);
     animation: 3s line cubic-bezier(0, 0, 0, 1) 1;
 }
