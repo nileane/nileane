@@ -484,7 +484,7 @@ hr {
 }
 
 #contact {
-    max-width: 450px;
+    max-width: 390px;
 }
 @media screen and (max-width:449px) {
     #contact {
