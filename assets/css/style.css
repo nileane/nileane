@@ -240,6 +240,10 @@ p {
     margin:0 0 .75em
 }
 
+section.intro {
+    letter-spacing: -.07rem;
+}
+
 p.lead {
     font-weight:300
 }
