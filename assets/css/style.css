@@ -508,6 +508,16 @@ hr {
     z-index: -1;
     border-radius: 50%;
     background: linear-gradient(to right, #D87D46, #6761DF);
+    animation: shimmer ease-out 2s 1;
+}
+@keyframes shimmer {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(720deg);
+
+    }
 }
 #avatar-img {
     width: 50px;
