@@ -509,7 +509,14 @@ hr {
     }
     to {
         transform: rotate(720deg);
-
+    }
+}
+@keyframes smolshimmer {
+    from {
+        transform: scale(.85) rotate(0);
+    }
+    to {
+        transform: scale(.85) rotate(720deg);
     }
 }
 @keyframes antishimmer {
@@ -518,7 +525,6 @@ hr {
     }
     to {
         transform: rotate(-720deg);
-
     }
 }
 #avatar-img {
@@ -532,7 +538,8 @@ hr {
     #avatar-wrapper {
         float: right;
         margin: .8em 0 0 1.2em;
-        transform: scale(.8);
+        transform: scale(.85);
+        animation: smolshimmer ease-out 2s 1;
     }
 }
 @media screen and (min-width:450px) {
