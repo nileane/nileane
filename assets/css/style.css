@@ -494,20 +494,13 @@ hr {
 
 #avatar-wrapper {
     float: left;
+    height: 54px;
+    width: 54px;
+    padding: 2px;
     margin: 1.3em 1.2em 0 0;
-    position: relative;
-}
-#avatar-wrapper:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 53px;
-    height: 53px;
-    margin: -1.5px 0 0 -1.5px;
-    z-index: -1;
     border-radius: 50%;
     background: linear-gradient(to right, #D87D46, #6761DF);
+    position: relative;
     animation: shimmer ease-out 2s 1;
 }
 @keyframes shimmer {
@@ -519,11 +512,21 @@ hr {
 
     }
 }
+@keyframes antishimmer {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(-720deg);
+
+    }
+}
 #avatar-img {
     width: 50px;
     border: 4px solid #000;
     background: #000;
     border-radius: 50%;
+    animation: antishimmer ease-out 2s 1;
 }
 @media screen and (max-width:449px) {
     #avatar-wrapper {
@@ -554,9 +557,10 @@ hr {
 .line {
     position: relative;
     margin-top: 1.5em;
-    height: 1.5px;
+    height: 2px;
     background-image: linear-gradient(to right, #D87D46, #6761DF);
     animation: 3s line cubic-bezier(0, 0, 0, 1) 1;
+    border-radius: 2px;
 }
 
 @keyframes line {
