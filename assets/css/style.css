@@ -417,6 +417,11 @@ body {
         transform: translate(0);
     }
 }
+@media screen and (max-width:350px) {
+    .wrapper {
+        padding: 2em 0;
+    }
+}
 
 hr {
     border-top: none;
@@ -486,7 +491,7 @@ hr {
 }
 
 #logo {
-    margin-top: 0;
+    margin-bottom: -5px;
     height: 40px;
 }
 
@@ -502,7 +507,6 @@ hr {
 }
 @media screen and (min-width:350px) {
     #logo {
-      margin-top: 0;
       height: 50px;
     }
 }
@@ -527,6 +531,11 @@ hr {
     background-image: linear-gradient(to right, #D87D46, #6761DF);
     animation: 3s line cubic-bezier(0, 0, 0, 1) 1;
     border-radius: 2px;
+}
+@media screen and (max-width:350px) {
+    .line {
+        margin: 1.2em auto 1.2em;
+    }
 }
 
 @keyframes line {
