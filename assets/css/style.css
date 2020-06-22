@@ -242,18 +242,22 @@ p {
 
 
 p.lead {
-    font-weight:300
+    font-weight: 300;
+    font-size: 1.625rem;
 }
-
-@media screen and (min-width:450px) {
+@media screen and (max-width:350px) {
     p.lead {
-        font-size: 1.375rem;
+        font-size: 1.325rem;
+    }
+    #contact {
+        font-size: 80%;
     }
 }
 
 a.presence {
     display: inline-block;
     font-weight: bold;
+    margin: 0 2px;
 }
 
 a {
@@ -401,12 +405,17 @@ body {
 
 
 .wrapper {
-    padding-top: 20vh;
+    position: absolute;
+    padding: 3em 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 100%;
 }
-@media screen and (min-width:450px) {
-  .wrapper {
-      padding-top: 22vh;
-  }
+@media screen and (max-height:600px) {
+    .wrapper {
+        position: static;
+        transform: translate(0);
+    }
 }
 
 hr {
@@ -417,11 +426,12 @@ hr {
 }
 
 .container {
-    padding: 2.5em;
+    padding: 2em;
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
-    font-weight:normal
+    max-width: 450px;
+    font-weight: normal;
+    text-align: center;
 }
 
 
@@ -476,72 +486,24 @@ hr {
 }
 
 #logo {
-  margin-top: -2em;
-  height: 70px;
-}
-
-#contact {
-}
-@media screen and (max-width:449px) {
-    #contact {
-      font-size: 80%;
-    }
+    margin-top: 0;
+    height: 40px;
 }
 
 #avatar-wrapper {
-    float: left;
-    height: 54px;
-    width: 54px;
-    padding: 2px;
-    margin: 1.3em 1.2em 0 0;
+    margin: 1.2em 1.2em 1.2em;
     border-radius: 50%;
-    background: linear-gradient(to right, #D87D46, #6761DF);
     position: relative;
-    animation: shimmer ease-out 2s 1;
-}
-@keyframes shimmer {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(720deg);
-    }
-}
-@keyframes smolshimmer {
-    from {
-        transform: scale(.85) rotate(0);
-    }
-    to {
-        transform: scale(.85) rotate(720deg);
-    }
-}
-@keyframes antishimmer {
-    from {
-        transform: rotate(0);
-    }
-    to {
-        transform: rotate(-720deg);
-    }
 }
 #avatar-img {
     width: 50px;
-    border: 4px solid #000;
     background: #000;
     border-radius: 50%;
-    animation: antishimmer ease-out 2s 1;
 }
-@media screen and (max-width:449px) {
-    #avatar-wrapper {
-        float: right;
-        margin: .8em 0 0 1.2em;
-        transform: scale(.85);
-        animation: smolshimmer ease-out 2s 1;
-    }
-}
-@media screen and (min-width:450px) {
+@media screen and (min-width:350px) {
     #logo {
-      margin-top: -3em;
-      height: 90px;
+      margin-top: 0;
+      height: 50px;
     }
 }
 @media screen and (prefers-color-scheme: light) {
@@ -559,8 +521,9 @@ hr {
 
 .line {
     position: relative;
-    margin-top: 1.5em;
-    height: 2px;
+    margin: 1.5em auto 1.5em;
+    height: 3px;
+    max-width: 250px;
     background-image: linear-gradient(to right, #D87D46, #6761DF);
     animation: 3s line cubic-bezier(0, 0, 0, 1) 1;
     border-radius: 2px;
@@ -568,10 +531,10 @@ hr {
 
 @keyframes line {
   from {
-    width: 1%;
+    max-width: 1%;
   }
   to {
-    width: 100%;
+    max-width: 250px;
   }
 }
 
@@ -662,8 +625,9 @@ hr {
 }
 
 .site-footer {
-    padding:1.5em 0;
+    padding: 0;
     color: #c7c7c7;
+    text-align: center;
 }
 
 .site-footer small {
