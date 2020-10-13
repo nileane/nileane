@@ -26,3 +26,10 @@ author:
 
 plugins:
   - jekyll-feed
+
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
