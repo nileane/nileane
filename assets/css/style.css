@@ -721,7 +721,7 @@ hr {
 @media screen and (max-width:500px) {
   .presences {
       position: absolute;
-      top: 40px;
+      top: 60px;
       right: 40px;
   }
 }
