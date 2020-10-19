@@ -342,25 +342,26 @@ body {
   }
 }
 body.home {
-    background-color: #333;
+    background-color: #000;
+}
+body.home:after {
+    content: " ";
     background-image: url(/images/photos/abstract.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 @media screen and (prefers-color-scheme: dark) {
-  body.home:after {
-      content: " ";
-      background-color: #000;
-      opacity: .6;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -1;
-  }
+    body.home:after {
+      opacity: .4;
+    }
 }
 
 /*
@@ -465,7 +466,7 @@ body.home {
 }
 @keyframes foldingin {
     from {
-      transform: rotate(8deg) scale(2.8);
+      transform: rotate(8deg) scale(5);
     }
     to {
       transform: rotate(0) scale(1);
