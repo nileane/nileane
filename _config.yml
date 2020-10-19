@@ -1,7 +1,7 @@
 # Site settings
 title_left    : "Niléane"
 title_right   : "" # default: ""
-description   : "Activist & tech enthusiast"
+description   : "Designer et Militante"
 keywords      : "geography, lgbt, design, tech"
 url           : https://nileane.fr # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank

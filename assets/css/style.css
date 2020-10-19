@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,800;0,900;1,400;1,500;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap');
 @import url('/assets/icons/css/all.css');
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -36,40 +37,6 @@ table {
     border-spacing:0
 }
 
-.button {
-    appearance: none;
-    background-color: #000;
-    border: 0;
-    border-radius: .52em;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Fira Sans", monospace;
-    font-size: 1em;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 600;
-    line-height: 1;
-    padding: .75em 1.5em;
-    text-decoration: none;
-    transition: background-color 150ms ease;
-    user-select: none;
-    vertical-align: middle;
-    white-space:nowrap
-}
-
-.button:hover, .button:focus {
-    background-color: #000;
-    color:#fff
-}
-
-.button:disabled {
-    cursor: not-allowed;
-    opacity:0.5
-}
-
-.button:disabled:hover {
-    background-color:#000
-}
 
 fieldset {
     background-color: #f5f5f5;
@@ -202,7 +169,6 @@ tr, td, th {
 }
 
 body {
-    color: #fff;
     font-family: "Fira Sans", monospace;
     font-size: 1em;
     line-height:1.5
@@ -237,20 +203,22 @@ h5, h6 {
 }
 
 p {
-    margin:0 0 .75em
 }
 
 
 p.lead {
     font-weight: 300;
-    font-size: 1.625rem;
+    font-size: 1.7rem;
+    line-height: 1.2;
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:500px) {
     p.lead {
-        font-size: 1.325rem;
+        font-size: 1.65rem;
     }
-    #contact {
-        font-size: 80%;
+}
+@media screen and (max-width:375px) {
+    p.lead {
+        font-size: 1.4rem;
     }
 }
 
@@ -346,21 +314,17 @@ ul, ol, dl {
     box-sizing:border-box
 }
 
-html, body {
-    width: 100%;
-    height:100%
-}
 
-.clearfix, .site-footer, .post {
+.clearfix, .presences, .post {
     * zoom:1
 }
 
-.clearfix:before, .site-footer:before, .post:before {
+.clearfix:before, .presences:before, .post:before {
     content: " ";
     display:table
 }
 
-.clearfix:after, .site-footer:after, .post:after {
+.clearfix:after, .presences:after, .post:after {
     content: " ";
     display: table;
     clear:both
@@ -377,6 +341,27 @@ body {
     color: #000;
   }
 }
+body.home {
+    background-color: #333;
+    background-image: url(/images/photos/abstract.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+@media screen and (prefers-color-scheme: dark) {
+  body.home:after {
+      content: " ";
+      background-color: #000;
+      opacity: .6;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+  }
+}
 
 /*
  * Accessible navigation shortcuts, to skip through content
@@ -387,7 +372,7 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: -20rem;
+    top: -30rem;
     width: 100%;
     z-index: 1001;
 }
@@ -403,23 +388,113 @@ body {
     top: 21rem;
 }
 
-
 .wrapper {
-    position: absolute;
-    padding: 3em 0;
-    top: 50%;
-    transform: translate(0, -50%);
-    width: 100%;
+    position: relative;
+    height: 400px;
+    padding: 70px;
+    margin: 20vh 10vw 25px;
+    overflow: hidden;
+    background-image: linear-gradient(130deg, #ffffff 42.86%, #ebebeb 42.86%, #ebebeb 50%, #ffffff 50%, #ffffff 92.86%, #ebebeb 92.86%, #ebebeb 100%);
+    background-size: 9.14px 10.89px;
+    max-width: 380px;
+    font-family: "Fira Code", monospace;
+    box-shadow: inset 0 180px 0 #170d3c;
 }
-@media screen and (max-height:600px) {
+@media screen and (max-width:500px) {
     .wrapper {
-        position: static;
-        transform: translate(0);
+        padding: 40px;
+        height: 350px;
     }
 }
-@media screen and (max-width:350px) {
-    .wrapper {
-        padding: 2em 0;
+
+.paper.top {
+    height: 40px;
+    background: #8a7dfa;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+.paper.bottom {
+    height: 40px;
+    background: #000;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+}
+
+.paper.left {
+    width: 40px;
+    background: #cccccc9e;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+    left: 0;
+}
+.paper.right {
+    width: 40px;
+    background: #4b0b519e;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+    right: 0;
+}
+@media screen and (prefers-color-scheme: dark) {
+    .paper.top {
+      background-color: #28206f;
+    }
+    .paper.left {
+      background-color: #2121219e;
+    }
+}
+@media screen and (max-width:500px) {
+  .paper.left, .paper.right {
+    width: 20px;
+  }
+  .paper.top, .paper.bottom {
+    height: 20px;
+  }
+}
+.paper {
+  animation: foldingin 1s 1;
+}
+@keyframes foldingin {
+    from {
+      transform: rotate(8deg) scale(2.8);
+    }
+    to {
+      transform: rotate(0) scale(1);
+    }
+}
+
+.links {
+    margin: 25px 10vw 10vh;
+    padding: 0 70px;
+    font-family: "Fira Code", monospace;
+    font-weight: bold;
+    max-width: 380px;
+    color: #fff;
+}
+.links a {
+    padding: .7rem 1rem;
+    margin-left: -1rem;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+}
+.links a:hover {
+    background-color: #fff;
+    color: #000;
+}
+@media screen and (max-width:500px) {
+    .links {
+      padding: 0 40px;
+      font-size: 80%;
     }
 }
 
@@ -431,12 +506,11 @@ hr {
 }
 
 .container {
-    padding: 2em;
+    padding: 0;
     margin-left: auto;
     margin-right: auto;
-    max-width: 450px;
     font-weight: normal;
-    text-align: center;
+    text-align: left;
 }
 
 
@@ -448,7 +522,7 @@ hr {
     float:right
 }
 
-.link, .site-footer a, .pagination .prev, .pagination .next, .post-link, .post a, .page a, .navbar a, .intro a {
+.link, .presences a, .pagination .prev, .pagination .next, .post-link, .post a, .page a, .navbar a, .intro a {
     color: #8a7dfa;
     padding-bottom: .05em;
     border-bottom: 2px solid transparent;
@@ -457,23 +531,35 @@ hr {
     transition:border 300ms linear
 }
 
-.link:hover, .site-footer a:hover, .pagination .prev:hover, .pagination .next:hover, .post-link:hover, .post a:hover, .page a:hover, .navbar a:hover, .intro a:hover, .link:focus, .site-footer a:focus, .pagination .prev:focus, .pagination .next:focus, .post-link:focus, .post a:focus, .page a:focus, .navbar a:focus, .intro a:focus, .link:active, .site-footer a:active, .pagination .prev:active, .pagination .next:active, .post-link:active, .post a:active, .page a:active, .navbar a:active, .intro a:active {
-    border-bottom:2px solid #8a7dfa
+.link:hover, .presences a:hover, .pagination .prev:hover, .pagination .next:hover, .post-link:hover, .post a:hover, .page a:hover, .navbar a:hover, .intro a:hover, .link:focus, .presences a:focus, .pagination .prev:focus, .pagination .next:focus, .post-link:focus, .post a:focus, .page a:focus, .navbar a:focus, .intro a:focus, .link:active, .presences a:active, .pagination .prev:active, .pagination .next:active, .post-link:active, .post a:active, .page a:active, .navbar a:active, .intro a:active {
+    border-bottom:2px solid #8a7dfa;
 }
 
 .site-header {
     margin-bottom: .75em;
-    min-height:80px
+    min-height:80px;
+    position: relative;
+}
+
+.intro {
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    left: 70px;
+}
+
+@media screen and (max-width:500px) {
+  .intro {
+    bottom: 40px;
+    right: 40px;
+    left: 40px;
+  }
 }
 
 .intro .author-name {
     display: inline-block;
     padding: 0 .2em;
     background:#f2f2f2
-}
-
-.intro .container {
-    padding-bottom:0
 }
 
 .logo {
@@ -510,14 +596,7 @@ hr {
       height: 50px;
     }
 }
-@media screen and (prefers-color-scheme: light) {
-  #logo {
-    filter: invert(1);
-  }
-  #avatar-img {
-      border-color: #fff;
-  }
-}
+
 
 .nav {
     min-height:64px
@@ -633,25 +712,29 @@ hr {
     margin:1.5em 0
 }
 
-.site-footer {
-    padding: 0;
-    color: #c7c7c7;
-    text-align: center;
+.presences {
+    position: absolute;
+    top: 70px;
+    right: 70px
 }
-
-.site-footer small {
+@media screen and (max-width:500px) {
+  .presences {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+  }
+}
+.presences small {
     display: block;
     font-size: .75rem;
     color:lightgray
 }
-@media screen and (prefers-color-scheme: light) {
-  .site-footer, .site-footer small {
-    color: #000;
-  }
-}
 
-.site-footer .block {
+.presences .block {
     display:block
+}
+#contact {
+  text-align: right;
 }
 
 .video-container {
