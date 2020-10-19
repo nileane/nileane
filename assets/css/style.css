@@ -398,7 +398,7 @@ body.home {
     background-size: 9.14px 10.89px;
     max-width: 380px;
     font-family: "Fira Code", monospace;
-    box-shadow: inset 0 180px 0 #170d3c;
+    box-shadow: inset 0 180px 0 #2b0d3c;
 }
 @media screen and (max-width:500px) {
     .wrapper {
@@ -409,7 +409,7 @@ body.home {
 
 .paper.top {
     height: 40px;
-    background: #8a7dfa;
+    background: #4b206f;
     position: absolute;
     right: 0;
     z-index: 2;
@@ -446,7 +446,7 @@ body.home {
 }
 @media screen and (prefers-color-scheme: dark) {
     .paper.top {
-      background-color: #28206f;
+      background-color: #4b206f;
     }
     .paper.left {
       background-color: #2121219e;
@@ -486,6 +486,7 @@ body.home {
     background-color: #000;
     color: #fff;
     display: inline-block;
+    transition: all .2s;
 }
 .links a:hover {
     background-color: #fff;
@@ -523,7 +524,7 @@ hr {
 }
 
 .link, .presences a, .pagination .prev, .pagination .next, .post-link, .post a, .page a, .navbar a, .intro a {
-    color: #8a7dfa;
+    color: #b07dfa;
     padding-bottom: .05em;
     border-bottom: 2px solid transparent;
     -webkit-transition: border 300ms linear;
@@ -532,7 +533,7 @@ hr {
 }
 
 .link:hover, .presences a:hover, .pagination .prev:hover, .pagination .next:hover, .post-link:hover, .post a:hover, .page a:hover, .navbar a:hover, .intro a:hover, .link:focus, .presences a:focus, .pagination .prev:focus, .pagination .next:focus, .post-link:focus, .post a:focus, .page a:focus, .navbar a:focus, .intro a:focus, .link:active, .presences a:active, .pagination .prev:active, .pagination .next:active, .post-link:active, .post a:active, .page a:active, .navbar a:active, .intro a:active {
-    border-bottom:2px solid #8a7dfa;
+    border-bottom:2px solid #b07dfa;
 }
 
 .site-header {
