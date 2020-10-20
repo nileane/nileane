@@ -2,7 +2,7 @@
 title_left    : "Niléane"
 title_right   : "" # default: ""
 description   : "Designer et Militante"
-keywords      : "geography, lgbt, design, tech"
+keywords      : "designer, tech, activiste, militante, nileane"
 url           : https://nileane.fr # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
@@ -26,10 +26,3 @@ author:
 
 plugins:
   - jekyll-feed
-
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
