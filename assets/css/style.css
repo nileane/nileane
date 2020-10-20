@@ -781,6 +781,11 @@ hr {
   .presences a {
       height: calc(160px / 3);
       padding: 1.1rem .8rem 1rem 0;
+      font-size: 85%;
+  }
+}
+@media screen and (max-width:350px) {
+  .presences a {
       font-size: 75%;
   }
 }
