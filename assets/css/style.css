@@ -480,6 +480,7 @@ body.home:after {
     font-weight: bold;
     max-width: 380px;
     color: #fff;
+    text-shadow: 0 0 20px #000, 0 0 10px #000;
 }
 .links a {
     padding: .7rem 1rem;
@@ -488,6 +489,8 @@ body.home:after {
     color: #fff;
     display: inline-block;
     transition: all .2s;
+    text-shadow: none;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
 }
 .links a:hover {
     background-color: #fff;
