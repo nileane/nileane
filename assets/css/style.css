@@ -218,12 +218,6 @@ p.lead {
     }
 }
 
-a.presence {
-    display: inline-block;
-    font-weight: bold;
-    margin: 0 2px;
-}
-
 a {
     color: #000;
     text-decoration: none;
@@ -401,6 +395,14 @@ body.home:after {
     .wrapper {
         padding: 40px;
         height: 350px;
+        margin-top: 15vh;
+    }
+}
+@media screen and (max-width:350px) {
+    .wrapper {
+        padding: 40px;
+        height: 350px;
+        margin-top: 10vh;
     }
 }
 
@@ -486,7 +488,7 @@ body.home:after {
     display: inline-block;
     transition: all .2s;
     text-shadow: none;
-    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 5px #4b206f4f;
 }
 .links a:hover {
     background-color: #fff;
@@ -715,15 +717,9 @@ hr {
 
 .presences {
     position: absolute;
-    top: 70px;
-    right: 70px
-}
-@media screen and (max-width:500px) {
-  .presences {
-      position: absolute;
-      top: 60px;
-      right: 40px;
-  }
+    top: 40px;
+    right: 40px;
+    left: 40px;
 }
 .presences small {
     display: block;
@@ -734,8 +730,71 @@ hr {
 .presences .block {
     display:block
 }
-#contact {
-  text-align: right;
+.presences .container {
+    display: grid;
+    text-align: right;
+    grid-template-columns: repeat(2, 1fr);
+}
+.presences a {
+    display: block;
+    font-weight: bold;
+    margin: 0;
+    height: calc(140px / 3);
+    background: rgba(255, 255, 255, 0.03);
+    padding: .8rem 1.4rem .8rem 0;
+    border: 0 none;
+    font-size: 90%;
+    transition: .2s all;
+    animation: 1.4s fadingin 1;
+}
+.presences a:hover {
+    background-color: #000 !important;
+    color: #fff;
+    border: 0 none;
+}
+.presences a:last-of-type {
+    grid-area: 3 / 2;
+}
+.presences a:nth-child(1),
+.presences a:nth-child(5) {
+    background: rgba(255, 255, 255, 0.01);
+}
+.presences a:nth-child(2),
+.presences a:nth-child(6) {
+    background: rgba(255, 255, 255, 0.08);
+}
+.presences a:nth-child(3) {
+    background: rgba(255, 255, 255, 0.07);
+}
+@media screen and (max-width:500px) {
+  .presences {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      left: 20px;
+      height: 160px;
+  }
+  .presences a {
+      height: calc(160px / 3);
+      padding: 1.1rem .8rem 1rem 0;
+      font-size: 85%;
+  }
+}
+@media screen and (max-width:350px) {
+  .presences a {
+      font-size: 75%;
+  }
+}
+@keyframes fadingin {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
 }
 
 .video-container {
