@@ -1,0 +1,28 @@
+@media print {
+  html { font-size: 11pt; }
+
+  body, .dark body {
+    background: none;
+    color: #222;
+    padding: unset;
+    margin: unset;
+    max-width: unset;
+  }
+
+  .dark .avi { stroke: #222; }
+  .hero { display: block; }
+  .footer { text-align: initial; }
+  #twilight { display: none; }
+
+  a, .dark a {
+    box-shadow: none;
+    color: blue;
+  }
+
+  a[href]:after {
+    content: ' (' attr(href) ')';
+    color: #222;
+    font-size: 75%;
+    font-weight: 400;
+  }
+}
