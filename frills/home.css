@@ -59,7 +59,7 @@ p {
 
 .hero {
   display: table-cell;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 5.5rem);
   vertical-align: middle;
 }
 
