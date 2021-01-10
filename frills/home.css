@@ -16,15 +16,22 @@ a {
   box-shadow: inset 0 -.4em #ccc;
   transition: .2s box-shadow;
 }
-a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
+a:hover, a:focus, .1pct:hover { box-shadow: inset 0 -.5em #b383da; }
+
+.1pct {
+  box-shadow: inset 0 -.4em #c8b3da;
+}
 
 @media screen and (prefers-color-scheme: dark) {
   body {
     background: black;
     color: #f7f7f7;
   }
+  
   a { box-shadow: inset 0 -.4em #555; }
   a:hover, a:focus { box-shadow: inset 0 -.5em #5d357d; }
+  
+  .1pct { box-shadow: inset 0 -.4em #5d357d; }
 }
 
 /* Main formatting */
