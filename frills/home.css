@@ -16,11 +16,12 @@ a {
   box-shadow: inset 0 -.4em #ccc;
   transition: .2s box-shadow;
 }
-a:hover, a:focus, .1pct:hover { box-shadow: inset 0 -.5em #b383da; }
+a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
 
-.1pct {
+a.podcast {
   box-shadow: inset 0 -.4em #c8b3da;
 }
+a.podcast:hover { box-shadow: inset 0 -.5em #b383da; }
 
 @media screen and (prefers-color-scheme: dark) {
   body {
@@ -31,7 +32,8 @@ a:hover, a:focus, .1pct:hover { box-shadow: inset 0 -.5em #b383da; }
   a { box-shadow: inset 0 -.4em #555; }
   a:hover, a:focus { box-shadow: inset 0 -.5em #5d357d; }
   
-  .1pct { box-shadow: inset 0 -.4em #5d357d; }
+  a.podcast { box-shadow: inset 0 -.4em #7c6192; }
+  a.podcast:hover { box-shadow: inset 0 -.5em #5d357d; }
 }
 
 /* Main formatting */
