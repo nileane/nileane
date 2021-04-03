@@ -136,7 +136,7 @@ p {
 .buttons > a {
   border-radius: 3px;
   padding: .15rem 1rem;
-  border: 1px solid rgba(221, 221, 221);
+  border: 1px solid rgb(204, 204, 204);
   transform: rotate(-2deg);
   box-shadow: rgb(204, 204, 204) 2px 4px;
   display: inline-block;
