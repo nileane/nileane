@@ -151,7 +151,7 @@ p {
   box-shadow: #b383da 4px 6px;
 }
 @media screen and (prefers-color-scheme: dark) {
-    .buttons > a { border-color: #555; box-shadow: #333 2px 4px;}
+    .buttons > a { border-color: #555; box-shadow: #555 2px 4px;}
 }
 
 /* Animations */
