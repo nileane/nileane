@@ -149,6 +149,7 @@ p {
 .buttons > a:hover {
   border-color: #b383da;
   box-shadow: #b383da 4px 6px;
+  transform: translateX(-2px) translateY(-2px);
 }
 @media screen and (prefers-color-scheme: dark) {
     .buttons > a { border-color: #555; box-shadow: #555 2px 4px;}
