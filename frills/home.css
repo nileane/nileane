@@ -135,7 +135,7 @@ p {
 .buttons > a {
   border-radius: 3px;
   padding: .15rem 1rem;
-  border: 1px solid rgba(221, 221, 221);
+  border: 1px solid rgb(204, 204, 204);
   transform: rotate(-2deg);
   box-shadow: rgb(204, 204, 204) 2px 4px;
   display: inline-block;
@@ -148,9 +148,10 @@ p {
 .buttons > a:hover {
   border-color: #b383da;
   box-shadow: #b383da 4px 6px;
+  transform: rotate(-2deg) translateX(-2px) translateY(-2px);
 }
 @media screen and (prefers-color-scheme: dark) {
-    .buttons > a { border-color: #555; box-shadow: #333 2px 4px;}
+    .buttons > a { border-color: #555; box-shadow: #555 2px 4px;}
 }
 
 /* Animations */
