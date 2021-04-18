@@ -175,14 +175,12 @@ p {
   }
 }
 
-.selfie { animation: .2s ease-in both fade; }
-footer, .emoji1, .emoji2, .emoji3 { animation: .2s ease-in .2s both fade; }
+.emoji1, .emoji2, .emoji3 { animation: .2s ease-in .2s both fade; }
 .emoji2 { animation-delay: .6s; }
 .emoji3 {
   transform: rotateZ(90deg);
   animation-delay: 1s;
 }
-footer { animation-delay: 1.2s; }
 
 @media (prefers-reduced-motion) {
   .emoji {
