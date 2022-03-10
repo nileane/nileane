@@ -56,7 +56,7 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 1.5em 2em;
+  padding: 1.5em 2em 0;
   max-width: 20em;
 }
 @media screen and (max-width:700px) {
@@ -75,9 +75,15 @@ h1 small {
   font-size: 90%;
   font-weight: normal;
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:500px) {
   h1 {
     font-size: 2.2rem;
+  }
+  h1 a {
+    display: inline-block
+  }
+  h1 a::before {
+    bottom: -4px;
   }
 }
 
@@ -87,7 +93,7 @@ p {
 
 .footer {
   font-size: 80%;
-  margin-top: 3.5rem;
+  margin-top: 2.3rem;
   text-align: center;
 }
 
@@ -119,6 +125,12 @@ p {
   margin: -.4rem auto 1.4rem;
   display: block;
 }
+@media screen and (max-width:500px) {
+  .selfie {
+    width: 100px;
+    height: 100px;
+  }
+}
 
 .emojitalk {
   text-align: center;
@@ -128,10 +140,11 @@ p {
   height: 45px;
   display: inline-block;
   margin-bottom: -.1em;
+  filter: hue-rotate(185deg) saturate(.7);
 }
-@media screen and (max-width:350px) {
+@media screen and (max-width:500px) {
   .emoji {
-    height: 40px;
+    height: 35px;
   }
 }
 
