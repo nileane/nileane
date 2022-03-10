@@ -14,7 +14,7 @@ a {
 }
 
 a::before {
-    background: #d0a9ef;
+    background: #ddcceb;
     border-radius: 5px;
     content: "";
     height: 0.4em;
@@ -30,11 +30,6 @@ a:hover::before,
 a:focus::before {
   transform: rotateZ(-2deg) scaleY(2) translateY(-0.2em);
 }
-
-a.podcast {
-  box-shadow: inset 0 -.4em #c8b3da;
-}
-a.podcast:hover { box-shadow: inset 0 -.5em #b383da; }
 
 @media screen and (prefers-color-scheme: dark) {
   body {
@@ -138,29 +133,8 @@ p {
   }
 }
 
-.buttons {
-  margin-left: -0.2rem;
-}
-.buttons > a {
-  border-radius: 3px;
-  padding: .15rem 1rem;
-  border: 1px solid rgb(204, 204, 204);
-  transform: rotate(-2deg);
-  box-shadow: rgb(204, 204, 204) 2px 4px;
-  display: inline-block;
-  transition: all .2s;
-}
-.buttons > a:not(:last-child) {
-  margin-bottom: 1rem;
-  margin-right: 1rem;
-}
-.buttons > a:hover {
-  border-color: #b383da;
-  box-shadow: #b383da 4px 6px;
-  transform: rotate(-2deg) translateX(-2px) translateY(-2px);
-}
-@media screen and (prefers-color-scheme: dark) {
-    .buttons > a { border-color: #555; box-shadow: #555 2px 4px;}
+.bio {
+  text-align: center;
 }
 
 /* Animations */
