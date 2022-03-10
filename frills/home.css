@@ -29,8 +29,8 @@ a::before {
 }
 a:hover::before,
 a:focus::before {
-  background: #ccb5df;
-  transform: rotateZ(-2deg) scaleY(2) translateY(-0.2em);
+    background: #ccb5df;
+    transform: rotateZ(-2deg) scaleY(2) translateY(-0.2em);
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -62,13 +62,8 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 1.5em 2em 0;
+  padding: 0 2em;
   max-width: 20em;
-}
-@media screen and (max-width:700px) {
-  body {
-    padding-top: 5rem;
-  }
 }
 
 h1 {
@@ -107,7 +102,9 @@ p {
 
 .hero {
   display: table-cell;
-  height: calc(100vh - 5.5rem);
+  height: 100vh;
+  padding: 2rem 0;
+  box-sizing: border-box;
   vertical-align: middle;
 }
 
