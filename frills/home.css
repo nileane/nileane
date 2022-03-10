@@ -140,7 +140,6 @@ p {
   height: 45px;
   display: inline-block;
   margin-bottom: -.1em;
-  filter: hue-rotate(185deg) saturate(.7);
 }
 @media screen and (max-width:500px) {
   .emoji {
