@@ -10,10 +10,26 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-  box-shadow: inset 0 -.4em #ccc;
   transition: .2s box-shadow;
 }
-a:hover, a:focus { box-shadow: inset 0 -.5em #b383da; }
+
+a::before {
+    background: #d0a9ef;
+    border-radius: 5px;
+    content: "";
+    height: 0.4em;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    transform: rotateZ(-2deg);
+    transition: transform 0.2s;
+    z-index: -1;
+}
+a:hover::before,
+a:focus::before {
+  transform: rotateZ(-2deg) scaleY(2) translateY(-0.2em);
+}
 
 a.podcast {
   box-shadow: inset 0 -.4em #c8b3da;
@@ -53,6 +69,7 @@ body {
 }
 
 h1 {
+  text-align: center;
   margin: 0 0 1.5rem;
   line-height: 1;
   font-size: 2.5rem;
@@ -74,15 +91,7 @@ p {
 .footer {
   font-size: 75%;
   margin-top: 3.5rem;
-  text-align: right;
-}
-@media screen and (min-height:600px) and (min-width:600px) {
-  .footer {
-    position: absolute;
-    right: 2em;
-    bottom: 2em;
-    min-width: 12rem;
-  }
+  text-align: center;
 }
 
 /* Decorations */
@@ -107,15 +116,15 @@ p {
 }
 
 .selfie {
-  float: right;
-  width: 60px;
-  height: 60px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  margin: -.5rem 0 0 1rem;
+  margin: -.4rem auto 1.4rem;
   display: block;
 }
 
 .emojitalk {
+  text-align: center;
   margin: 1.2rem auto;
 }
 .emoji {
