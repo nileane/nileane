@@ -78,7 +78,7 @@ h1 small {
 }
 @media screen and (max-width:500px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   h1 a {
     display: inline-block
@@ -101,7 +101,9 @@ p {
 /* Decorations */
 
 .hero {
-  display: table-cell;
+  display: grid;
+  align-items: center;
+  justify-items: center; 
   height: 100vh;
   padding: 2rem 0;
   box-sizing: border-box;
@@ -125,7 +127,7 @@ p {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  margin: -.4rem auto 1.4rem;
+  margin: 0 auto 1.8rem;
   display: block;
 }
 @media screen and (max-width:500px) {
@@ -175,8 +177,8 @@ p {
   }
 }
 
-.emoji1, .emoji2, .emoji3 { animation: .2s ease-in .2s both fade; }
-.emoji2 { animation-delay: .6s; }
+.emoji1, .emoji2, .emoji3 { animation: .6s ease-in .2s both fade; }
+.emoji2 { animation-delay: .2s; }
 .emoji3 {
   transform: rotateZ(90deg);
   animation-delay: 1s;
