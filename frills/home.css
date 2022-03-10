@@ -177,8 +177,8 @@ p {
   }
 }
 
-.emoji1, .emoji2, .emoji3 { animation: .6s ease-in .2s both fade; }
-.emoji2 { animation-delay: .2s; }
+.emoji1, .emoji2, .emoji3 { animation: .2s ease-in .2s both fade; }
+.emoji2 { animation-delay: .6s; }
 .emoji3 {
   transform: rotateZ(90deg);
   animation-delay: 1s;
