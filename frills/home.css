@@ -93,9 +93,12 @@ p {
 }
 
 .footer {
-  font-size: 80%;
+  font-size: 90%;
   margin-top: 2.3rem;
   text-align: center;
+}
+.footer a {
+  font-weight: bold;
 }
 
 /* Decorations */
