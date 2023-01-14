@@ -93,12 +93,16 @@ p {
 }
 
 .footer {
-  font-size: 90%;
   margin-top: 2.3rem;
   text-align: center;
 }
 .footer a {
   font-weight: bold;
+}
+@media screen and (max-width:500px) {
+  footer {
+    font-size: 90%;
+  }
 }
 
 /* Decorations */
