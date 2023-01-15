@@ -93,7 +93,6 @@ p {
 }
 
 .footer {
-  margin-top: 2.3rem;
   text-align: center;
 }
 .footer a {
@@ -131,8 +130,8 @@ p {
 }
 
 .selfie {
-  width: 130px;
-  height: 130px;
+  width: 115px;
+  height: 115px;
   border-radius: 50%;
   margin: 0 auto 1.8rem;
   display: block;
