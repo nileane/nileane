@@ -6,7 +6,7 @@ I'm a trans podcaster and activist. I'm also the founder and co-host for [Un Pod
 
 You can find me online:
 
-- <a rel="me" href="https://eldritch.cafe/@nileane">Mastodon</a>
+- <a rel="me" href="https://nileane.fr/@nileane">Mastodon</a>
 - [Twitter](https://twitter.com/nildeala)
 - [Telegram](https://t.me/nileane)
 - [e-mail](mailto:contact@nileane.fr)
