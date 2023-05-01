@@ -15,7 +15,7 @@ a {
 }
 
 a::before {
-    background: #ddcceb;
+    background: rgb(255, 217, 173);
     border-radius: 5px;
     content: "";
     height: 0.4em;
@@ -29,7 +29,7 @@ a::before {
 }
 a:hover::before,
 a:focus::before {
-    background: #ccb5df;
+    background: rgb(255, 217, 173);
     transform: rotateZ(-2deg) scaleY(2) translateY(-0.2em);
 }
 
