@@ -1,7 +1,7 @@
-# Hi 💛 I'm [Niléane](https://nileane.fr/@nileane).
+# Hi, I'm [Niléane](https://nileane.fr/@nileane). 💛
+I'm a French-Réunionnese nerd & activist, and sometimes I make things.
 
-<img class="emoji emoji1" src="frills/emoji/trans.png" alt="🏳️‍⚧️" height="42"><img class="emoji emoji2" src="frills/emoji/victory.png" alt="✌️" height="42"><img class="emoji emoji3" src="frills/emoji/pencil.png" alt="✏️" height="42">
-
+Find me online:
 - <a rel="me" href="https://nileane.fr/@nileane">Mastodon</a>
 - [Twitter](https://twitter.com/nildeala)
 - [Telegram](https://t.me/nileane)
