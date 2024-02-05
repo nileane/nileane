@@ -95,6 +95,7 @@ p {
 .footer {
   text-align: center;
   margin-bottom: 1em;
+  font-size: 95%;
 }
 .footer a {
   font-weight: bold;
