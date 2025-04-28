@@ -45,7 +45,7 @@ html {
 
 body {
   margin: 0 auto;
-  padding: 0 2em;
+  padding: 0 3em;
   max-width: 18em;
 }
 
@@ -138,7 +138,13 @@ hr {
 
 .signature  {
   float: right;
-  transform: rotate(-2deg) translate(-30px, -30px);
+  transform: rotate(-2deg) translate(30px, -30px);
+}
+@media screen and (max-width:560px) {
+  .signature {
+    transform: rotate(-2deg) translate(0, -30px);
+  }
+  
 }
 
 /* Animations */
